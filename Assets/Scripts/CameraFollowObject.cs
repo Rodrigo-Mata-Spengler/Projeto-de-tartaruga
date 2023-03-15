@@ -8,7 +8,7 @@ public class CameraFollowObject : MonoBehaviour
     [SerializeField] private Transform PlayerTransform;
 
     [Header("Flip rotation stats")]
-    [SerializeField] private float FlipYRotationTime = -0.5f;
+    [SerializeField] private float FlipYRotationTime = 0.5f;
 
     private CharacterController2D PlayerCharacterController;
 
@@ -25,9 +25,12 @@ public class CameraFollowObject : MonoBehaviour
     private void Update()
     {
         transform.position = PlayerTransform.position;
+        
+
     }
     public void CallTurn()
     {
+        
         LeanTween.rotateY(gameObject, DetermineEndRotation(), FlipYRotationTime).setEaseInOutSine();
     }
 
@@ -37,11 +40,11 @@ public class CameraFollowObject : MonoBehaviour
 
         if(_isFacingRight)
         {
-            return 100f;
+            return 0f;
         }
         else
         {
-            return 0f;
+            return 180f;
         }
     }
 }

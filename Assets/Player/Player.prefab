@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6748649182909457862}
   - component: {fileID: 6748649182909457867}
   - component: {fileID: 6748649182909457866}
-  - component: {fileID: 6748649182909457865}
-  - component: {fileID: 6748649182909457864}
+  - component: {fileID: 1622245420}
+  - component: {fileID: 1622245427}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -133,7 +133,9 @@ MonoBehaviour:
     m_Bits: 64
   m_GroundCheck: {fileID: 6748649183191431199}
   m_CeilingCheck: {fileID: 6748649184814360201}
-  m_CrouchDisableCollider: {fileID: 6748649182909457864}
+  m_CrouchDisableCollider: {fileID: 0}
+  m_FacingRight: 1
+  CameraFollowGO: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -157,8 +159,29 @@ MonoBehaviour:
   jump: 0
   crouch: 0
   OnAir: 0
---- !u!61 &6748649182909457865
-BoxCollider2D:
+--- !u!95 &1622245420
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748649182909457857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7165fb5128e2789419c2dbabc7044769, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &1622245427
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -170,35 +193,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0005719662, y: -0.009073615}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8792119, y: 0.97468686}
-  m_EdgeRadius: 0
---- !u!58 &6748649182909457864
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6748649182909457857}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.009073496, y: -0.55348754}
-  serializedVersion: 2
-  m_Radius: 0.44651246
+  m_Offset: {x: 0, y: -0.25}
+  m_Size: {x: 1.17, y: 1.5}
+  m_Direction: 0
 --- !u!1 &6748649183191431198
 GameObject:
   m_ObjectHideFlags: 0

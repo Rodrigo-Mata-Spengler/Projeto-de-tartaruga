@@ -25,6 +25,8 @@ public class CharacterController2D : MonoBehaviour
     private CameraFollowObject CameraFollowObject;
     [SerializeField] private GameObject CameraFollowGO;
 
+    private float _fallSpeedYDampingChangeThreshold;
+
 
 
     [Header("Events")]
@@ -54,6 +56,28 @@ public class CharacterController2D : MonoBehaviour
     private void Start()
     {
         CameraFollowObject = CameraFollowGO.GetComponent<CameraFollowObject>();
+
+        _fallSpeedYDampingChangeThreshold = CameraManager.Instance._fallSpeedYDapingChangeThreshold;
+    }
+
+    private void Update()
+    {
+        //if we are falling past a certain speed threshold
+        if(m_Rigidbody2D.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)
+        {
+            CameraManager.Instance.LerpYDamping(true);
+
+            Debug.Log("Rigidbody" + m_Rigidbody2D.velocity.y);
+            Debug.Log("fall Speed" + _fallSpeedYDampingChangeThreshold);
+        }
+        //if we are standing still ro moving up
+        if(m_Rigidbody2D.velocity.y >= 0f &&!CameraManager.Instance.IsLerpingYDamping&&CameraManager.Instance.LerpedFromPlayerFalling)
+        {
+            //reset so it can be called again
+            CameraManager.Instance.LerpedFromPlayerFalling = false;
+
+            CameraManager.Instance.LerpYDamping(false);
+        }
     }
 
     private void FixedUpdate()
