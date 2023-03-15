@@ -16,8 +16,15 @@ public class CharacterController2D : MonoBehaviour
     private bool m_Grounded;            // Whether or not the player is grounded.
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
     private Rigidbody2D m_Rigidbody2D;
-    private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    public bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
+
+
+
+    [Header("Camera Stuff")]
+    private CameraFollowObject CameraFollowObject;
+    [SerializeField] private GameObject CameraFollowGO;
+
 
 
     [Header("Events")]
@@ -31,6 +38,8 @@ public class CharacterController2D : MonoBehaviour
     public BoolEvent OnCrouchEvent;
     private bool m_wasCrouching = false;
 
+
+
     private void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -40,6 +49,11 @@ public class CharacterController2D : MonoBehaviour
 
         if (OnCrouchEvent == null)
             OnCrouchEvent = new BoolEvent();
+    }
+
+    private void Start()
+    {
+        CameraFollowObject = CameraFollowGO.GetComponent<CameraFollowObject>();
     }
 
     private void FixedUpdate()
@@ -116,13 +130,13 @@ public class CharacterController2D : MonoBehaviour
             if (move > 0 && !m_FacingRight)
             {
                 // ... flip the player.
-                Flip();
+                Turn();
             }
             // Otherwise if the input is moving the player left and the player is facing right...
             else if (move < 0 && m_FacingRight)
             {
                 // ... flip the player.
-                Flip();
+                Turn();
             }
         }
         // If the player should jump...
@@ -137,15 +151,29 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
-
-    private void Flip()
+    private void Turn()
     {
+        // Rotaciona a partir da rotação do y
         // Switch the way the player is labelled as facing.
-        m_FacingRight = !m_FacingRight;
+        if (m_FacingRight)
+        {
+            Vector3 rotator = new Vector3(transform.rotation.x, 180f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotator);
+            m_FacingRight = !m_FacingRight;
 
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+            //turn the camera follow object
+            CameraFollowObject.CallTurn();
+        }
+        else 
+        {
+            Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotator);
+            m_FacingRight = !m_FacingRight;
+
+            //turn the camera follow object
+            CameraFollowObject.CallTurn();
+        }
     }
+
+     
 }
