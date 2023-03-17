@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        Debug.LogWarning(jump);
+     // Debug.LogWarning(jump);
     }
 
     private void FixedUpdate()

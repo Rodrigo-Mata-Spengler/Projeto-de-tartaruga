@@ -51,10 +51,16 @@ public class CameraManager : MonoBehaviour
         //Set the YDamping amount so it's based on the inspector value
         _normYpanAmount = _framingTransposer.m_YDamping;
 
+        
+
         //Set the starting position of the trackedobject offset
         _startingTrackedObjectOffset = _framingTransposer.m_TrackedObjectOffset;
     }
 
+    private void Update()
+    {
+        Debug.Log(_normYpanAmount);
+    }
 
     #region Lerp the Y Damping
 
@@ -81,6 +87,7 @@ public class CameraManager : MonoBehaviour
         else
         {
             endDampAmount = _normYpanAmount;
+            Debug.Log("voltei");
         }
 
         //lerp the pan amount
@@ -154,44 +161,6 @@ public class CameraManager : MonoBehaviour
             _framingTransposer.m_TrackedObjectOffset= panLerp;
 
             yield return null;
-        }
-    }
-
-    #endregion
-
-    #region Swap Cameras
-
-    public void SwapCameras(CinemachineVirtualCamera cameraFromLeft, CinemachineVirtualCamera cameraFromRight, Vector2 triggerExitDirection)
-    {
-        if(_currentCamera == cameraFromLeft && triggerExitDirection.x > 0f)
-        {
-            //activate the new camera
-            cameraFromRight.enabled = true;
-
-            //deactivate the old camera
-
-            cameraFromLeft.enabled = false;
-
-            //set the new cameraas the current camera
-            _currentCamera = cameraFromRight;
-
-            //update our composer varible
-            _framingTransposer = _currentCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
-        }
-        else if (_currentCamera == cameraFromRight && triggerExitDirection.x < 0f)
-        {
-            //activate the new camera
-            cameraFromLeft.enabled = true;
-
-            //deactivate the old camera
-
-            cameraFromRight.enabled = false; 
-
-            //set the new cameraas the current camera
-            _currentCamera = cameraFromRight;
-
-            //update our composer varible
-            _framingTransposer = _currentCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         }
     }
 

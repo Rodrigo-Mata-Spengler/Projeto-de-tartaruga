@@ -31,14 +31,7 @@ public class CameraControlTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
-            Vector2 exitDirection = (other.transform.position - _coll.bounds.center).normalized;
-
-            if(customInspectorObjects.swapCameras && customInspectorObjects.cameraOnLeft != null && customInspectorObjects.cameraOnRight != null)
-            {
-                //swap cameras
-                CameraManager.Instance.SwapCameras(customInspectorObjects.cameraOnLeft, customInspectorObjects.cameraOnRight, exitDirection);
-            }
+            
 
             if (customInspectorObjects.panCameraOnContact)
             {
@@ -53,11 +46,8 @@ public class CameraControlTrigger : MonoBehaviour
 
 public class CustomInspectorObjects
 {
-    public bool swapCameras = false;
+ 
     public bool panCameraOnContact = false;
-
-    [HideInInspector] public CinemachineVirtualCamera cameraOnLeft;
-    [HideInInspector] public CinemachineVirtualCamera cameraOnRight;
 
     [HideInInspector] public PanDirection panDirection;
     [HideInInspector] public float panDistance = 3f;
@@ -87,15 +77,6 @@ public class MyScriptEditor : Editor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-
-        if (cameraControlTrigger.customInspectorObjects.swapCameras)
-        {
-            cameraControlTrigger.customInspectorObjects.cameraOnLeft = EditorGUILayout.ObjectField("Camera on left", cameraControlTrigger.customInspectorObjects.cameraOnLeft,
-                typeof(CinemachineVirtualCamera), true) as CinemachineVirtualCamera;
-
-            cameraControlTrigger.customInspectorObjects.cameraOnRight = EditorGUILayout.ObjectField("Camera on right", cameraControlTrigger.customInspectorObjects.cameraOnRight,
-                typeof(CinemachineVirtualCamera), true) as CinemachineVirtualCamera;
-        }
 
         if (cameraControlTrigger.customInspectorObjects.panCameraOnContact)
         {

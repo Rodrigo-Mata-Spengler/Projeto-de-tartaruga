@@ -67,8 +67,7 @@ public class CharacterController2D : MonoBehaviour
         {
             CameraManager.Instance.LerpYDamping(true);
 
-            Debug.Log("Rigidbody" + m_Rigidbody2D.velocity.y);
-            Debug.Log("fall Speed" + _fallSpeedYDampingChangeThreshold);
+
         }
         //if we are standing still ro moving up
         if(m_Rigidbody2D.velocity.y >= 0f &&!CameraManager.Instance.IsLerpingYDamping&&CameraManager.Instance.LerpedFromPlayerFalling)
