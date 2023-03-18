@@ -29,6 +29,8 @@ public class CameraManager : MonoBehaviour
 
     private Vector2 _startingTrackedObjectOffset;
 
+    private CameraControlTrigger CameraControlTrigger;
+
     private void Awake()
     {
         if(Instance == null)
@@ -59,7 +61,7 @@ public class CameraManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_normYpanAmount);
+        //Debug.Log(_normYpanAmount);
     }
 
     #region Lerp the Y Damping
@@ -87,7 +89,7 @@ public class CameraManager : MonoBehaviour
         else
         {
             endDampAmount = _normYpanAmount;
-            Debug.Log("voltei");
+           // Debug.Log("voltei");
         }
 
         //lerp the pan amount
@@ -118,6 +120,8 @@ public class CameraManager : MonoBehaviour
         Vector2 endPos = Vector2.zero;
         Vector2 startingPos= Vector2.zero;
 
+
+        Debug.Log(panToStartingPos);
         //handle pan fromm trigger
         if(!panToStartingPos)
         {
@@ -142,18 +146,22 @@ public class CameraManager : MonoBehaviour
 
             endPos += startingPos;
 
-        }
+            
 
+        }
         //handle the pan back to starting position
         else
         {
             startingPos = _framingTransposer.m_TrackedObjectOffset;
             endPos = _startingTrackedObjectOffset;
+
+
+
         }
 
         //handle the actual panning of the camera
         float elapsedTime = 0f;
-        while(elapsedTime< panDistance)
+        while(elapsedTime< panTime)
         {
             elapsedTime += Time.deltaTime;
 
@@ -161,6 +169,7 @@ public class CameraManager : MonoBehaviour
             _framingTransposer.m_TrackedObjectOffset= panLerp;
 
             yield return null;
+
         }
     }
 

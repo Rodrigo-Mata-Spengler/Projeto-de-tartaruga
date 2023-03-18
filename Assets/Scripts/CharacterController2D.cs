@@ -13,9 +13,9 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-    private bool m_Grounded;            // Whether or not the player is grounded.
+    [HideInInspector] public bool m_Grounded;            // Whether or not the player is grounded.
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
-    private Rigidbody2D m_Rigidbody2D;
+    [HideInInspector]public Rigidbody2D m_Rigidbody2D;
     public bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
 
@@ -42,6 +42,7 @@ public class CharacterController2D : MonoBehaviour
 
 
 
+
     private void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -62,8 +63,9 @@ public class CharacterController2D : MonoBehaviour
 
     private void Update()
     {
+
         //if we are falling past a certain speed threshold
-        if(m_Rigidbody2D.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)
+        if (m_Rigidbody2D.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)
         {
             CameraManager.Instance.LerpYDamping(true);
 
@@ -77,6 +79,10 @@ public class CharacterController2D : MonoBehaviour
 
             CameraManager.Instance.LerpYDamping(false);
         }
+
+        
+
+
     }
 
     private void FixedUpdate()
@@ -99,7 +105,7 @@ public class CharacterController2D : MonoBehaviour
     }
 
 
-    public void Move(float move, bool crouch, float jump, bool OnAir)
+    public void Move(float move, bool crouch, float jumpVel)
     {
         // If crouching, check to see if the character can stand up
         if (!crouch)
@@ -162,16 +168,8 @@ public class CharacterController2D : MonoBehaviour
                 Turn();
             }
         }
-        // If the player should jump...
-        if (m_Grounded && OnAir ) 
-        {
-            
-            // Add a vertical force to the player.
-            m_Grounded = false;
-            m_Rigidbody2D.AddForce(new Vector2(0f, (m_JumpForce * jump)));
 
             
-        }
     }
 
     private void Turn()
