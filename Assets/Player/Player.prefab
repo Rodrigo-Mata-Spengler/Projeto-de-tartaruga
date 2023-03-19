@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6748649182909457866}
   - component: {fileID: 1622245420}
   - component: {fileID: 1622245427}
+  - component: {fileID: 1622245416}
+  - component: {fileID: 1622245417}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -134,6 +136,8 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 6748649183191431199}
   m_CeilingCheck: {fileID: 6748649184814360201}
   m_CrouchDisableCollider: {fileID: 0}
+  m_Grounded: 0
+  m_Rigidbody2D: {fileID: 0}
   m_FacingRight: 1
   CameraFollowGO: {fileID: 0}
   OnLandEvent:
@@ -155,10 +159,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterController2D: {fileID: 6748649182909457867}
+  m_Rigidbody2D: {fileID: 0}
+  m_Grounded: 0
   RunSpeed: 40
-  jump: 0
   crouch: 0
   OnAir: 0
+  _yVelJumpRealeasedMod: 2
+  jumpVel: 20
 --- !u!95 &1622245420
 Animator:
   serializedVersion: 5
@@ -196,6 +203,36 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   m_Size: {x: 1.17, y: 1.5}
   m_Direction: 0
+--- !u!114 &1622245416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748649182909457857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c250ad87223213c4dae12afcf1779e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxEstamina: 30
+  EstaminaSlider: {fileID: 0}
+  CurrentEstamina: 0
+--- !u!114 &1622245417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748649182909457857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959a9c8d7489f6247a357a8057351a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  HealthSlider: {fileID: 0}
+  CurrentHealth: 0
 --- !u!1 &6748649183191431198
 GameObject:
   m_ObjectHideFlags: 0

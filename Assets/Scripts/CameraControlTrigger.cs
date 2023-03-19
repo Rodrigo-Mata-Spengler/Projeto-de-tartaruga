@@ -8,7 +8,6 @@ using System.Threading;
 public class CameraControlTrigger : MonoBehaviour
 {
     public CustomInspectorObjects customInspectorObjects;
-
     private Collider2D _coll;
 
 
@@ -19,7 +18,7 @@ public class CameraControlTrigger : MonoBehaviour
     public Transform Target;
 
 
-    public bool Down = false;
+    [HideInInspector]public bool Down = false;
 
     private void Start()
     {

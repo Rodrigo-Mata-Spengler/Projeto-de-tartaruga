@@ -30,8 +30,6 @@ public class CharacterController2D : MonoBehaviour
 
 
     [Header("Events")]
-    [Space]
-
     public UnityEvent OnLandEvent;
 
     [System.Serializable]
