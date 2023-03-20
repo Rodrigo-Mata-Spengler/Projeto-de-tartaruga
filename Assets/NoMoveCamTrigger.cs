@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NoYTigger : MonoBehaviour
+public class NoMoveCamTrigger : MonoBehaviour
 {
-
     [Header("Box Cast Variables")]
     public Vector3 Area;
     public bool Detected = false;
@@ -13,24 +12,20 @@ public class NoYTigger : MonoBehaviour
     public Transform Target;
 
 
+
+    public Transform CameraFollowObject;
+    private CameraFollowObject CameraFollowObjectScript;
+
     [Header("render camera")]
     public CinemachineVirtualCamera CinemachineCamera;
     private CinemachineFramingTransposer FramingTransposer;
+    [SerializeField] private CinemachineConfiner2D CinemachineConfiner2D;
 
     [Header("distancia que a camera vai se mover, para cima ou baixo")]
     public float CameraYMov;
 
 
-    [Header("normal camera values")]
-    private float NormSoftZoneHeight = 0.35f;
-    private float NormDeadZoneHeight = 0;
-    private float NormScreenY = 0.5f;
 
-    
-    [Header("No y camera values")]
-    private float YSoftZoneHeight = 2f;
-    private float YDeadZoneHeight = 2f;
-    private float YScreenY;
 
     public float DesireLerpDuration = 3f;
     public float LerpElapsedTime;
@@ -40,12 +35,15 @@ public class NoYTigger : MonoBehaviour
     private AnimationCurve curve;
 
 
-    
+
 
     private void Start()
     {
-        YScreenY += CameraYMov;
+   
         FramingTransposer = CinemachineCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+
+
+        CameraFollowObjectScript = CameraFollowObject.GetComponent<CameraFollowObject>();
     }
     public void Update()
     {
@@ -53,7 +51,7 @@ public class NoYTigger : MonoBehaviour
 
         direction = targetPos - (Vector2)transform.position;
 
-        RaycastHit2D BoxInfo = Physics2D.BoxCast(transform.position,Area,0f, direction);
+        RaycastHit2D BoxInfo = Physics2D.BoxCast(transform.position, Area, 0f, direction);
 
         //checa se o player entrou no quadrado 
         if (BoxInfo.collider.gameObject.tag == "Player")
@@ -61,11 +59,11 @@ public class NoYTigger : MonoBehaviour
             Detected = true;
             Debug.DrawLine(transform.position, targetPos);
 
-            if(LerpElapsedTime < DesireLerpDuration)
+            if (LerpElapsedTime < DesireLerpDuration)
             {
                 Lerp();
             }
-            
+
 
         }
         else if (BoxInfo.collider.gameObject.tag != "Player" && Detected == true)
@@ -74,12 +72,12 @@ public class NoYTigger : MonoBehaviour
             {
                 UnLerp();
             }
-            
-                
-            
-           
-            
-           
+
+
+
+
+
+
         }
     }
 
@@ -91,52 +89,52 @@ public class NoYTigger : MonoBehaviour
 
     private void Lerp()
     {
+        CameraFollowObjectScript.FollowPlayer = false;
+
+        CameraFollowObjectScript.enabled = false;
         UnlerpElapsedTime = 0;
 
-       
-        
-            LerpElapsedTime += Time.deltaTime;
 
-            float percentageComplete = LerpElapsedTime / DesireLerpDuration;
+        LerpElapsedTime += Time.deltaTime;
 
-            
+        float percentageComplete = LerpElapsedTime / DesireLerpDuration;
 
-            FramingTransposer.m_SoftZoneHeight = Mathf.Lerp(NormSoftZoneHeight, YSoftZoneHeight, percentageComplete);
 
-            FramingTransposer.m_DeadZoneHeight = Mathf.Lerp(NormDeadZoneHeight, YDeadZoneHeight, percentageComplete);
+        CameraFollowObject.position = Vector3.Lerp(CameraFollowObject.position, transform.position, curve.Evaluate(percentageComplete));
 
-            FramingTransposer.m_ScreenY = Mathf.Lerp(NormScreenY, YScreenY, percentageComplete);
-        
 
-     
+
+        FramingTransposer.m_TrackedObjectOffset =new Vector3 (0f, 0f, 0f);
+        FramingTransposer.m_TargetMovementOnly = false;
+        CinemachineConfiner2D.enabled = false;
+
+        LerpElapsedTime += Time.deltaTime;
+
+
     }
 
     private void UnLerp()
     {
         LerpElapsedTime = 0f;
+   
 
         if (Detected == true)
         {
+
+            CameraFollowObjectScript.enabled = true;
+
+            CameraFollowObjectScript.Lerp();
+
             UnlerpElapsedTime += Time.deltaTime;
 
             float percentageComplete = UnlerpElapsedTime / DesireLerpDuration;
 
-            FramingTransposer.m_SoftZoneHeight = Mathf.Lerp(YSoftZoneHeight, NormSoftZoneHeight, percentageComplete);
-
-            FramingTransposer.m_DeadZoneHeight = Mathf.Lerp(YDeadZoneHeight, NormDeadZoneHeight, percentageComplete);
-
-            FramingTransposer.m_ScreenY = Mathf.Lerp(YScreenY, NormScreenY, percentageComplete);
-
-            
-        
+            FramingTransposer.m_TrackedObjectOffset = new Vector3(1f, 0f, 0f);
+            FramingTransposer.m_TargetMovementOnly = true;
+            CinemachineConfiner2D.enabled = false;
         }
-        
-        
+
+
 
     }
 }
-
-
-
-
-

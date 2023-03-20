@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class CameraFollowObject : MonoBehaviour
@@ -15,16 +16,34 @@ public class CameraFollowObject : MonoBehaviour
     private bool _isFacingRight;
 
 
+    public float DesireLerpDuration = 3f;
+    public float LerpElapsedTime;
+
+
+    [SerializeField]
+    private AnimationCurve curve;
+
+    public bool FollowPlayer;
+
+    private void Start()
+    {
+        
+    }
     private void Awake()
     {
         PlayerCharacterController = PlayerTransform.GetComponent<CharacterController2D>();
 
         _isFacingRight = PlayerCharacterController.m_FacingRight;
+        transform.position = PlayerTransform.position;
     }
 
     private void Update()
     {
-        transform.position = PlayerTransform.position;
+        if(FollowPlayer)
+        {
+            transform.position = PlayerTransform.position;
+        }
+        
         
 
     }
@@ -46,5 +65,26 @@ public class CameraFollowObject : MonoBehaviour
         {
             return 180f;
         }
+    }
+
+
+    public void Lerp()
+    {
+        
+        LerpElapsedTime += Time.deltaTime;
+
+        float percentageComplete = LerpElapsedTime / DesireLerpDuration;
+
+
+        transform.position = Vector3.Lerp(transform.position, PlayerTransform.position, curve.Evaluate(percentageComplete));
+
+        if (LerpElapsedTime > DesireLerpDuration)
+        {
+            FollowPlayer = true;
+
+            
+            
+        }
+        
     }
 }
