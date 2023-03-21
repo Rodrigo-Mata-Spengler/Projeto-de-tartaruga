@@ -92,14 +92,10 @@ public class NoYTigger : MonoBehaviour
     private void Lerp()
     {
         UnlerpElapsedTime = 0;
-
-       
         
             LerpElapsedTime += Time.deltaTime;
 
             float percentageComplete = LerpElapsedTime / DesireLerpDuration;
-
-            
 
             FramingTransposer.m_SoftZoneHeight = Mathf.Lerp(NormSoftZoneHeight, YSoftZoneHeight, percentageComplete);
 
@@ -107,8 +103,6 @@ public class NoYTigger : MonoBehaviour
 
             FramingTransposer.m_ScreenY = Mathf.Lerp(NormScreenY, YScreenY, percentageComplete);
         
-
-     
     }
 
     private void UnLerp()

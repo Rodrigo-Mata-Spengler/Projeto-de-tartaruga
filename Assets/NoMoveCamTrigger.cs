@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NoMoveCamTrigger : MonoBehaviour
@@ -10,8 +11,6 @@ public class NoMoveCamTrigger : MonoBehaviour
     public bool Detected = false;
     Vector2 direction;
     public Transform Target;
-
-
 
     public Transform CameraFollowObject;
     private CameraFollowObject CameraFollowObjectScript;
@@ -27,7 +26,7 @@ public class NoMoveCamTrigger : MonoBehaviour
 
 
 
-    public float DesireLerpDuration = 3f;
+    public float DesireLerpDuration = 3;
     public float LerpElapsedTime;
     public float UnlerpElapsedTime;
 
@@ -68,14 +67,13 @@ public class NoMoveCamTrigger : MonoBehaviour
         }
         else if (BoxInfo.collider.gameObject.tag != "Player" && Detected == true)
         {
-            if (UnlerpElapsedTime < DesireLerpDuration)
+            if (CameraFollowObjectScript.LerpElapsedTime <= CameraFollowObjectScript.DesireLerpDuration)
             {
                 UnLerp();
+                CameraFollowObjectScript.Lerp();
+
+                
             }
-
-
-
-
 
 
         }
@@ -93,6 +91,7 @@ public class NoMoveCamTrigger : MonoBehaviour
 
         CameraFollowObjectScript.enabled = false;
         UnlerpElapsedTime = 0;
+        CameraFollowObjectScript.LerpElapsedTime = 0f;
 
 
         LerpElapsedTime += Time.deltaTime;
@@ -101,8 +100,6 @@ public class NoMoveCamTrigger : MonoBehaviour
 
 
         CameraFollowObject.position = Vector3.Lerp(CameraFollowObject.position, transform.position, curve.Evaluate(percentageComplete));
-
-
 
         FramingTransposer.m_TrackedObjectOffset =new Vector3 (0f, 0f, 0f);
         FramingTransposer.m_TargetMovementOnly = false;
@@ -123,18 +120,26 @@ public class NoMoveCamTrigger : MonoBehaviour
 
             CameraFollowObjectScript.enabled = true;
 
-            CameraFollowObjectScript.Lerp();
-
             UnlerpElapsedTime += Time.deltaTime;
 
             float percentageComplete = UnlerpElapsedTime / DesireLerpDuration;
 
             FramingTransposer.m_TrackedObjectOffset = new Vector3(1f, 0f, 0f);
             FramingTransposer.m_TargetMovementOnly = true;
-            CinemachineConfiner2D.enabled = false;
+            CinemachineConfiner2D.enabled = true;
+
+            //StartCoroutine(DetectedFalse(CameraFollowObjectScript.DesireLerpDuration));
+            //StopCoroutine(DetectedFalse(0));
         }
 
+    }
 
+    IEnumerator DetectedFalse(float DesireLerpDuration)
+    {
+        yield return new WaitForSeconds(DesireLerpDuration);
+        Debug.Log("player saiu");
+        Detected = false;
 
+        
     }
 }

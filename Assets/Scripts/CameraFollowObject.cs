@@ -16,7 +16,7 @@ public class CameraFollowObject : MonoBehaviour
     private bool _isFacingRight;
 
 
-    public float DesireLerpDuration = 3f;
+    public float DesireLerpDuration = 3;
     public float LerpElapsedTime;
 
 
@@ -24,6 +24,8 @@ public class CameraFollowObject : MonoBehaviour
     private AnimationCurve curve;
 
     public bool FollowPlayer;
+
+
 
     private void Start()
     {
@@ -75,15 +77,11 @@ public class CameraFollowObject : MonoBehaviour
 
         float percentageComplete = LerpElapsedTime / DesireLerpDuration;
 
-
         transform.position = Vector3.Lerp(transform.position, PlayerTransform.position, curve.Evaluate(percentageComplete));
 
-        if (LerpElapsedTime > DesireLerpDuration)
+        if (percentageComplete >= DesireLerpDuration)
         {
             FollowPlayer = true;
-
-            
-            
         }
         
     }

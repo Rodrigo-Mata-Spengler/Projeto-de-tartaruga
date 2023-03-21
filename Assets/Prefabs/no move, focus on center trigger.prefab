@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1852217479358734423
+--- !u!1 &7246871499337836752
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1852217479358734417}
-  - component: {fileID: 1894520950}
+  - component: {fileID: 7246871499337836758}
+  - component: {fileID: 9018012677327768733}
   m_Layer: 0
-  m_Name: NoYTrigger
+  m_Name: no move, focus on center trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1852217479358734417
+--- !u!4 &7246871499337836758
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852217479358734423}
+  m_GameObject: {fileID: 7246871499337836752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 71.65672, y: 3.1796608, z: -0.14145312}
+  m_LocalPosition: {x: -28.29, y: -2.87, z: -0.14145312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1894520950
+--- !u!114 &9018012677327768733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852217479358734423}
+  m_GameObject: {fileID: 7246871499337836752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937336d5561a1de48a760bddfb837c2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e7176cf2ff52ce46a4831f01c52eb82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 29.16, y: 8, z: 0}
+  Area: {x: 14.21, y: 10.9, z: 0}
   Detected: 0
   Target: {fileID: 0}
+  CameraFollowObject: {fileID: 0}
   CinemachineCamera: {fileID: 0}
-  CameraYMov: -0.1
-  DesireLerpDuration: 12.2
+  CinemachineConfiner2D: {fileID: 0}
+  CameraYMov: 0
+  DesireLerpDuration: 43.94
   LerpElapsedTime: 0
   UnlerpElapsedTime: 0
   curve:
@@ -58,20 +60,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 1.9496856
+      outSlope: 1.9496856
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.15
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 0.14480035
+      outSlope: 0.14480035
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.17916667
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
