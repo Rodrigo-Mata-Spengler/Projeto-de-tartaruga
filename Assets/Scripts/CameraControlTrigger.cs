@@ -12,7 +12,7 @@ public class CameraControlTrigger : MonoBehaviour
 
 
     [Header("BoxCast")]
-    public Vector3 Area;
+    public Vector2 Area;
     public bool Detected = false;
     Vector2 direction;
     public Transform Target;
@@ -42,6 +42,8 @@ public class CameraControlTrigger : MonoBehaviour
         //checa se o player entrou no quadrado e leva a camera para baixo
         if (BoxInfo.collider.gameObject.tag == "Player")
         {
+
+
             Detected = true;
             Debug.DrawLine(transform.position, targetPos);
 
@@ -55,16 +57,19 @@ public class CameraControlTrigger : MonoBehaviour
 
         }
         //volta a camera para a posição inicial
-        else if(Detected == true)
+        if (BoxInfo.collider.gameObject.tag != "Player" && Detected == true)
         {
-
             if (customInspectorObjects.panCameraOnContact)
             {
-                //pan the camera
-                CameraManager.Instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, true);
-                Detected = false;
+               CameraManager.Instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, true);
+
+                StartCoroutine(UnlerEdge(customInspectorObjects.panTime));
             }
+
         }
+    
+            //pan the camera
+
     }
 
     //desenha o quadrado
@@ -74,6 +79,13 @@ public class CameraControlTrigger : MonoBehaviour
     
     }
 
+    IEnumerator UnlerEdge(float customInspectorObjectspanTime)
+    {
+        yield return new WaitForSeconds(customInspectorObjectspanTime);
+        Detected = false;
+    }
+
+    /*
     #region old detection
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -101,8 +113,9 @@ public class CameraControlTrigger : MonoBehaviour
         }
     }
     #endregion
+    */
 }
-
+    
 [System.Serializable]
 
 public class CustomInspectorObjects
@@ -147,7 +160,7 @@ public class MyScriptEditor : Editor
             cameraControlTrigger.customInspectorObjects.panTime = EditorGUILayout.FloatField("Pan Time", cameraControlTrigger.customInspectorObjects.panTime);
 
         }
-        
+
         if (GUI.changed)
         {
             EditorUtility.SetDirty(cameraControlTrigger);

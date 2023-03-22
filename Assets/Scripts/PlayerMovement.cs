@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public bool OnAir = false;
 
 
-    [Header("JumpVariables")]
+    [Header("jump")]
     private bool jumpInput;
     private bool jumpInputReleased;
     public float _yVelJumpRealeasedMod = 2f;

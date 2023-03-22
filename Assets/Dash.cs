@@ -11,6 +11,8 @@ public class Dash : MonoBehaviour
     [HideInInspector]
     public Rigidbody2D rb;
 
+    public KeyCode DashKey;
+
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -21,14 +23,21 @@ public class Dash : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetAxis("Dash") > 0f && characterController.m_FacingRight)
+        if(Input.GetButtonDown("Dash"))
         {
-            rb.velocity = new Vector2(DashForce ,1);
+            if(characterController.m_FacingRight)
+            {
+                rb.velocity = new Vector2(DashForce, 1);
+            }
+
+            if (!characterController.m_FacingRight)
+            {
+                rb.velocity = new Vector2((DashForce * -1), 1);
+            }
+
+
         }
-        if(Input.GetAxis("Dash") > 0f && !characterController.m_FacingRight)
-        {
-            rb.velocity = new Vector2((DashForce * -1), 1);
-        }
+
     }
 
 

@@ -119,9 +119,7 @@ public class CameraManager : MonoBehaviour
     {
         Vector2 endPos = Vector2.zero;
         Vector2 startingPos= Vector2.zero;
-
-
-        Debug.Log(panToStartingPos);
+      
         //handle pan fromm trigger
         if(!panToStartingPos)
         {
@@ -154,19 +152,15 @@ public class CameraManager : MonoBehaviour
         {
             startingPos = _framingTransposer.m_TrackedObjectOffset;
             endPos = _startingTrackedObjectOffset;
-
-
-
         }
-
         //handle the actual panning of the camera
         float elapsedTime = 0f;
-        while(elapsedTime< panTime)
+        while(elapsedTime < panTime)
         {
             elapsedTime += Time.deltaTime;
 
             Vector3 panLerp = Vector3.Lerp(startingPos,endPos, (elapsedTime/ panTime));
-            _framingTransposer.m_TrackedObjectOffset= panLerp;
+            _framingTransposer.m_TrackedObjectOffset = panLerp;
 
             yield return null;
 

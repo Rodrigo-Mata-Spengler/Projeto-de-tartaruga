@@ -74,12 +74,7 @@ public class NoYTigger : MonoBehaviour
             {
                 UnLerp();
             }
-            
-                
-            
-           
-            
-           
+
         }
     }
 
