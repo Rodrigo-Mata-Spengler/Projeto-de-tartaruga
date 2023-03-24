@@ -28,8 +28,8 @@ public class NoYTigger : MonoBehaviour
 
     
     [Header("No y camera values")]
-    private float YSoftZoneHeight = 2f;
-    private float YDeadZoneHeight = 2f;
+    private float YSoftZoneHeight = 1.5f;
+    private float YDeadZoneHeight = 1.5f;
     private float YScreenY;
 
     public float DesireLerpDuration = 3f;
@@ -53,7 +53,7 @@ public class NoYTigger : MonoBehaviour
 
         direction = targetPos - (Vector2)transform.position;
 
-        RaycastHit2D BoxInfo = Physics2D.BoxCast(transform.position,Area,0f, direction);
+        RaycastHit2D BoxInfo = Physics2D.BoxCast(gameObject.GetComponent<Renderer>().bounds.center,Area,0f, Area);
 
         //checa se o player entrou no quadrado 
         if (BoxInfo.collider.gameObject.tag == "Player")
@@ -80,7 +80,7 @@ public class NoYTigger : MonoBehaviour
 
     public void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireCube(transform.position, Area);
+        Gizmos.DrawWireCube(gameObject.GetComponent<Renderer>().bounds.center, Area);
 
     }
 

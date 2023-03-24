@@ -24,8 +24,6 @@ public class NoMoveCamTrigger : MonoBehaviour
     public float CameraYMov;
 
 
-
-
     public float DesireLerpDuration = 3;
     public float LerpElapsedTime;
     public float UnlerpElapsedTime;
@@ -50,7 +48,7 @@ public class NoMoveCamTrigger : MonoBehaviour
 
         direction = targetPos - (Vector2)transform.position;
 
-        RaycastHit2D BoxInfo = Physics2D.BoxCast(transform.position, Area, 0f, direction);
+        RaycastHit2D BoxInfo = Physics2D.BoxCast(gameObject.GetComponent<Renderer>().bounds.center, Area, 0f, Area);
 
         //checa se o player entrou no quadrado 
         if (BoxInfo.collider.gameObject.tag == "Player")
@@ -81,7 +79,7 @@ public class NoMoveCamTrigger : MonoBehaviour
 
     public void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireCube(transform.position, Area);
+        Gizmos.DrawWireCube(gameObject.GetComponent<Renderer>().bounds.center, Area);
 
     }
 
@@ -103,7 +101,7 @@ public class NoMoveCamTrigger : MonoBehaviour
 
         FramingTransposer.m_TrackedObjectOffset =new Vector3 (0f, 0f, 0f);
         FramingTransposer.m_TargetMovementOnly = false;
-        CinemachineConfiner2D.enabled = false;
+        //CinemachineConfiner2D.enabled = false;
 
         LerpElapsedTime += Time.deltaTime;
 
@@ -126,7 +124,7 @@ public class NoMoveCamTrigger : MonoBehaviour
 
             FramingTransposer.m_TrackedObjectOffset = new Vector3(1f, 0f, 0f);
             FramingTransposer.m_TargetMovementOnly = true;
-            CinemachineConfiner2D.enabled = true;
+            //CinemachineConfiner2D.enabled = true;
 
             //StartCoroutine(DetectedFalse(CameraFollowObjectScript.DesireLerpDuration));
             //StopCoroutine(DetectedFalse(0));

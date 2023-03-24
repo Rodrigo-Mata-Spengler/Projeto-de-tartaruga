@@ -4,41 +4,85 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-    public float DashForce;
+    public float dashTime = 0.1f;
+    public float m_DashDist;
+    private float _currentDashTime = 0f;
+    private bool _isDashing = false;
+    public bool canDash;
+    private Vector2 _dashStart, _dashEnd;
 
-    private CharacterController2D characterController;
 
-    [HideInInspector]
-    public Rigidbody2D rb;
+    private CharacterController2D characterController2D;
+    private bool Grounded;
+    private bool facingRight;
 
-    public KeyCode DashKey;
+    private TrailRenderer trailRender;
 
     private void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
-        characterController = this.GetComponent<CharacterController2D>();
-      
+        characterController2D = this.GetComponent<CharacterController2D>();
+        trailRender = this.GetComponent<TrailRenderer>();
     }
 
-
-    private void Update()
+    void Update()
     {
-        if(Input.GetButtonDown("Dash"))
+        Grounded = characterController2D.m_Grounded;
+        facingRight = characterController2D.m_FacingRight;
+
+        if (Input.GetButtonDown("Dash") && canDash == true)
         {
-            if(characterController.m_FacingRight)
+            if (_isDashing == false && facingRight)
             {
-                rb.velocity = new Vector2(DashForce, 1);
+                // dash starts
+                _isDashing = true;
+                _currentDashTime = 0;
+                _dashStart = transform.position;
+                _dashEnd = new Vector2(_dashStart.x + m_DashDist, _dashStart.y);
+                
             }
 
-            if (!characterController.m_FacingRight)
+            if (_isDashing == false && !facingRight)
             {
-                rb.velocity = new Vector2((DashForce * -1), 1);
+                // dash starts
+                _isDashing = true;
+                _currentDashTime = 0;
+                _dashStart = transform.position;
+                _dashEnd = new Vector2(_dashStart.x - m_DashDist, _dashStart.y);
             }
+            trailRender.emitting= true;
+        }
 
+        if (_isDashing)
+        {
+
+            canDash = false;
+            // incrementing time
+            _currentDashTime += Time.deltaTime;
+
+            // a value between 0 and 1
+            float perc = Mathf.Clamp01(_currentDashTime / dashTime);
+
+            // updating position
+            transform.position = Vector2.Lerp(_dashStart, _dashEnd, perc);
+
+            if (_currentDashTime >= dashTime)
+            {
+                // dash finished
+
+                transform.position = _dashEnd;
+                trailRender.emitting= false;
+                _isDashing = false;
+
+            }
 
         }
 
+
+        if(Grounded)
+        {
+            canDash = true;
+            
+        }
+
     }
-
-
 }
