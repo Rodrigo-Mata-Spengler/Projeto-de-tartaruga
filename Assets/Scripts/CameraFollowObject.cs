@@ -79,7 +79,7 @@ public class CameraFollowObject : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, PlayerTransform.position, curve.Evaluate(percentageComplete));
 
-        if (percentageComplete >= DesireLerpDuration)
+        if (LerpElapsedTime >= 5f)
         {
             FollowPlayer = true;
         }

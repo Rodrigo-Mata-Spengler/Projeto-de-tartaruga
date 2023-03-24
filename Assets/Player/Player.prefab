@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 1.09, y: 1.34}
+  Area: {x: 1.23, y: 1.29}
   Detected: 0
 --- !u!212 &665321757
 SpriteRenderer:
@@ -88,15 +88,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300004, guid: cea2c9bf87b0c4dfdafb697a3ff00959, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.42, y: 0.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1386716082
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 1.09, y: 1.34}
+  Area: {x: 1.23, y: 1.29}
   Detected: 0
 --- !u!212 &1386716084
 SpriteRenderer:
@@ -187,15 +187,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300004, guid: cea2c9bf87b0c4dfdafb697a3ff00959, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.42, y: 0.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2001907970
@@ -224,7 +224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001907970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.548, y: -0.17, z: 0}
+  m_LocalPosition: {x: 1.566, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 1.34, y: 1.09}
+  Area: {x: 1.23, y: 1.29}
   Detected: 0
 --- !u!212 &2001907973
 SpriteRenderer:
@@ -286,15 +286,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300004, guid: cea2c9bf87b0c4dfdafb697a3ff00959, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.42, y: 0.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6748649182909457857
@@ -468,7 +468,7 @@ MonoBehaviour:
   crouch: 0
   OnAir: 0
   _yVelJumpRealeasedMod: 2
-  jumpVel: 20
+  jumpVel: 15
   JumpTimes: 0
   JumpReleasedTimes: 0
   AtaqueHitBox: {fileID: 2001907970}
@@ -665,6 +665,7 @@ MonoBehaviour:
   dashTime: 0.15
   m_DashDist: 3
   canDash: 0
+  _yVelJumpRealeasedMod: 3.05
 --- !u!1 &6748649183191431198
 GameObject:
   m_ObjectHideFlags: 0

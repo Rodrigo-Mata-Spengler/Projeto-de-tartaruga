@@ -11,6 +11,8 @@ public class Dash : MonoBehaviour
     public bool canDash;
     private Vector2 _dashStart, _dashEnd;
 
+    private Rigidbody2D rb;
+    public float _yVelJumpRealeasedMod = 2f;
 
     private CharacterController2D characterController2D;
     private bool Grounded;
@@ -22,6 +24,8 @@ public class Dash : MonoBehaviour
     {
         characterController2D = this.GetComponent<CharacterController2D>();
         trailRender = this.GetComponent<TrailRenderer>();
+
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -68,7 +72,7 @@ public class Dash : MonoBehaviour
             if (_currentDashTime >= dashTime)
             {
                 // dash finished
-
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.x / _yVelJumpRealeasedMod);
                 transform.position = _dashEnd;
                 trailRender.emitting= false;
                 _isDashing = false;
