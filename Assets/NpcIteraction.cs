@@ -29,7 +29,7 @@ public class NpcIteraction : MonoBehaviour
     public bool playerDetected = false;
     private bool hadConversation = false;
     private bool havingConversation = false;
-
+    private bool nextFrase = false;
 
     private void Start()
     {
@@ -38,45 +38,46 @@ public class NpcIteraction : MonoBehaviour
     
     private void Update()
     {
-        if(playerDetected && Input.GetButtonDown("Fire3") && havingConversation == false)
+        NextLineAndStop();
+    }
+
+    private void NextLineAndStop()
+    {
+        if (playerDetected && Input.GetButtonDown("Fire3") && havingConversation == false)
         {
             conversationObj.SetActive(true);
             ContinueStory();
             Debug.Log("apaguei");
             havingConversation = true;
         }
-        if(havingConversation && Input.GetButtonDown("Fire3") && textLocation <=NpcWords.Length)
+        if (Input.GetButtonDown("Fire1") && textLocation < NpcWords.Length && nextFrase == true)
         {
             textLocation += 1;
             ContinueStory();
         }
-        if(havingConversation && textLocation == NpcWords.Length)
+        if (havingConversation && textLocation == NpcWords.Length)
         {
             conversationObj.SetActive(false);
 
             havingConversation = false;
         }
-        
+        if (Input.GetKey(KeyCode.Escape) || textLocation == NpcWords.Length)
+        {
+            conversationObj.SetActive(false);
+        }
     }
-    /*
-    private Coroutine displayLineCoroutine()
-    {
-        return ;
-    }
-    */
     private void ContinueStory()
     {
-        while(endText) 
-        {
-            StartCoroutine(DisplayLine(NpcWords[textLocation]));
+
+        StartCoroutine(DisplayLine(NpcWords[textLocation]));
             
-        }
+       
        
     }
 
     private IEnumerator DisplayLine(string line)
     {
-        endText= false;
+        nextFrase = false;
         //empty the dialogue text
         conversationText.text = "";
 
@@ -85,8 +86,15 @@ public class NpcIteraction : MonoBehaviour
         {
             conversationText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
+
+            if (Input.GetAxis("Fire1")>0.4f)
+            {
+                conversationText.text = line;
+                nextFrase = true;
+                break;
+            }
         }
-        endText = true;
+        nextFrase= true;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -101,12 +109,8 @@ public class NpcIteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerDetected = false;
-        }
-        if (hadConversation)
-        {
             conversationObj.SetActive(false);
         }
-
 
     }
 }
