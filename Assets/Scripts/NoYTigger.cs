@@ -7,40 +7,38 @@ public class NoYTigger : MonoBehaviour
 {
 
     [Header("Box Cast Variables")]
-    public Vector3 Area;
-    public bool Detected = false;
-    Vector2 direction;
-    public Transform Target;
+    public Vector3 Area;//trigger area
+    public bool Detected = false;// detecte if a enemy was inside
+    public Transform Target; // Player transform
+     Vector2 direction;
 
 
     [Header("render camera")]
-    public CinemachineVirtualCamera CinemachineCamera;
-    private CinemachineFramingTransposer FramingTransposer;
+    public CinemachineVirtualCamera CinemachineCamera; // cinemachine camera
+    private CinemachineFramingTransposer FramingTransposer; 
 
     [Header("distancia que a camera vai se mover, para cima ou baixo")]
-    public float CameraYMov;
+    public float CameraYMov; // distance that the camera go up or down
 
 
-    [Header("normal camera values")]
+    [Header("normal camera values")] // the normal values of the camera
     private float NormSoftZoneHeight = 0.35f;
     private float NormDeadZoneHeight = 0;
     private float NormScreenY = 0.5f;
 
     
-    [Header("No y camera values")]
+    [Header("No y camera values")]// the values when enter the no Y area
     private float YSoftZoneHeight = 1.5f;
     private float YDeadZoneHeight = 1.5f;
     private float YScreenY;
 
-    public float DesireLerpDuration = 3f;
-    public float LerpElapsedTime;
-    public float UnlerpElapsedTime;
+
+    public float DesireLerpDuration = 3f;//the duration of the lerp
+    public float LerpElapsedTime; // the current duration of the lerp
+    public float UnlerpElapsedTime; // the current duration of the Unlerp
 
     [SerializeField]
     private AnimationCurve curve;
-
-
-    
 
     private void Start()
     {
@@ -53,14 +51,16 @@ public class NoYTigger : MonoBehaviour
 
         direction = targetPos - (Vector2)transform.position;
 
+        //creates the box cast(trigger)
         RaycastHit2D BoxInfo = Physics2D.BoxCast(gameObject.GetComponent<Renderer>().bounds.center,Area,0f, Area);
 
-        //checa se o player entrou no quadrado 
+        //checks if the player is inside the area
         if (BoxInfo.collider.gameObject.tag == "Player")
         {
             Detected = true;
             Debug.DrawLine(transform.position, targetPos);
 
+            //do the lerp
             if(LerpElapsedTime < DesireLerpDuration)
             {
                 Lerp();
@@ -68,8 +68,10 @@ public class NoYTigger : MonoBehaviour
             
 
         }
+        //checks if the player is out of the area
         else if (BoxInfo.collider.gameObject.tag != "Player" && Detected == true)
         {
+            //go back to the normal values of the camera
             if (UnlerpElapsedTime < DesireLerpDuration)
             {
                 UnLerp();
@@ -80,12 +82,14 @@ public class NoYTigger : MonoBehaviour
 
     public void OnDrawGizmosSelected()
     {
+        //Draw the box on unity
         Gizmos.DrawWireCube(gameObject.GetComponent<Renderer>().bounds.center, Area);
 
     }
 
     private void Lerp()
     {
+        //Lerp the values from normal to no Y movment values
         UnlerpElapsedTime = 0;
         
             LerpElapsedTime += Time.deltaTime;
@@ -102,6 +106,7 @@ public class NoYTigger : MonoBehaviour
 
     private void UnLerp()
     {
+        //Lerp the values from no Y movment values to normal values
         LerpElapsedTime = 0f;
 
         if (Detected == true)
@@ -116,11 +121,7 @@ public class NoYTigger : MonoBehaviour
 
             FramingTransposer.m_ScreenY = Mathf.Lerp(YScreenY, NormScreenY, percentageComplete);
 
-            
-        
         }
-        
-        
 
     }
 }

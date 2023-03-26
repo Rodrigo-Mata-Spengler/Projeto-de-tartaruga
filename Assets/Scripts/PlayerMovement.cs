@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Rigidbody2D m_Rigidbody2D;
     [HideInInspector]public bool m_Grounded;
 
-    public float RunSpeed = 40f;
+    public float RunSpeed = 40f; // speed velocity
     [HideInInspector]public float HorizontalMove = 0f;
 
     public bool crouch = false;
@@ -18,13 +18,13 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("jump")]
-    public float _yVelJumpRealeasedMod = 2f;
-    public float jumpVel = 20f;
+    public float _yVelJumpRealeasedMod = 2f; //variable to smooth when falling
+    public float jumpVel = 20f; //jump velocity
 
     private bool jumpInput;
     private bool jumpInputReleased;
 
-    [SerializeField]private int JumpTimes = 0;
+    [SerializeField]private int JumpTimes = 0; 
     [SerializeField] private int JumpReleasedTimes = 0;
 
     [Header("Ataque")]
@@ -32,7 +32,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject AtaqueUpHitBox;
     public GameObject AtaqueDownHitBox;
     public float AttackTimeAmount;
-
+    [HideInInspector] public bool AttackEnd = true;
+    
     private TrailRenderer trailRender;
     private void Start()
     {
@@ -67,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         jumpInput = Input.GetButtonDown("Jump");
         jumpInputReleased = Input.GetButtonUp("Jump");
 
+        //checks if player is on ground and pressed the jump input
         if (m_Grounded && jumpInput)
         {
             JumpReleasedTimes = 0;
@@ -77,13 +79,14 @@ public class PlayerMovement : MonoBehaviour
             trailRender.emitting = true;
 
         }
+        // if he released fall smoothly
         if (jumpInputReleased && m_Rigidbody2D.velocity.y > 0)
         {
             JumpReleasedTimes += 1;
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_Rigidbody2D.velocity.x / _yVelJumpRealeasedMod);
             trailRender.emitting = false;
         }
-        //Do de second jump
+        //Do the second jump
         if (jumpInput && JumpReleasedTimes == 1)
         {
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
@@ -93,28 +96,42 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Attack()
     {
-        //enables the attack hitbox
-        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") == 0)
+        //enables the attack hitbox to right and left
+        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") == 0 && AttackEnd)
         {
+            AttackEnd= false;
             AtaqueHitBox.SetActive(true);
+            AtaqueHitBox.GetComponent<Ataque>().right = true;
+
             StartCoroutine(AttackTime(AttackTimeAmount,AtaqueHitBox));
         }
-        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") > 0) 
+        //enables the up hitBox
+        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") > 0 && AttackEnd) 
         {
+            AttackEnd = false;
             AtaqueUpHitBox.SetActive(true);
+            AtaqueUpHitBox.GetComponent<Ataque>().down = true; 
+
             StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
+
         }
-        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") < 0 && !m_Grounded)
+        //enables the bottom hitBox
+        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") < 0 && !m_Grounded && AttackEnd) 
         {
+            AttackEnd = false;
             AtaqueDownHitBox.SetActive(true);
+            AtaqueDownHitBox.GetComponent<Ataque>().up= true;
+ 
             StartCoroutine(AttackTime(AttackTimeAmount,AtaqueDownHitBox));
         }
 
     }
+    //disable the current enabled hitbox
     IEnumerator AttackTime(float AttackTimeAmount, GameObject HitBox)
     {
         yield return new WaitForSeconds(AttackTimeAmount);
         HitBox.SetActive(false);
+        AttackEnd = true;
     }
 
     /*public void Crouch()

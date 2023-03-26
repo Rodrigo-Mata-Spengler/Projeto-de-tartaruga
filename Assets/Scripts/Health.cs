@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float MaxHealth;
+    public float MaxHealth; // the maximum of life
 
     [SerializeField] private Slider HealthSlider;
 
     [Header("Current health")]
-    public float CurrentHealth;
+    public float CurrentHealth; // current life
 
 
     private void Start()

@@ -25,12 +25,6 @@ public class CameraFollowObject : MonoBehaviour
 
     public bool FollowPlayer;
 
-
-
-    private void Start()
-    {
-        
-    }
     private void Awake()
     {
         PlayerCharacterController = PlayerTransform.GetComponent<CharacterController2D>();
@@ -41,35 +35,36 @@ public class CameraFollowObject : MonoBehaviour
 
     private void Update()
     {
+        //make the object follow the player if he's not on a no move area
         if(FollowPlayer)
         {
             transform.position = PlayerTransform.position;
         }
-        
-        
 
     }
     public void CallTurn()
     {
-        
+        //smooth when falling
         LeanTween.rotateY(gameObject, DetermineEndRotation(), FlipYRotationTime).setEaseInOutSine();
     }
 
     private float DetermineEndRotation()
     {
+        //rotates with the player
         _isFacingRight = !_isFacingRight;
-
+        //to right
         if(_isFacingRight)
         {
             return 0f;
         }
+        //to left
         else
         {
             return 180f;
         }
     }
 
-
+    //method to make the object follow player after leaving a no move area
     public void Lerp()
     {
         

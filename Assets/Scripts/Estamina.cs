@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Estamina : MonoBehaviour
 {
-    public float MaxEstamina;
+    public float MaxEstamina; // the maximum of stamina
 
     [SerializeField] private Slider EstaminaSlider;
 

@@ -31,6 +31,13 @@ public class CameraManager : MonoBehaviour
 
     private CameraControlTrigger CameraControlTrigger;
 
+
+    [Header("Look up and Down")]
+    public float LerpAmount;
+    public float LerpTimeDuration;
+    public float currentTimeOfLerp;
+
+
     private void Awake()
     {
         if(Instance == null)
@@ -52,18 +59,14 @@ public class CameraManager : MonoBehaviour
 
         //Set the YDamping amount so it's based on the inspector value
         _normYpanAmount = _framingTransposer.m_YDamping;
-
-        
-
         //Set the starting position of the trackedobject offset
         _startingTrackedObjectOffset = _framingTransposer.m_TrackedObjectOffset;
-    }
 
+    }
     private void Update()
     {
-        //Debug.Log(_normYpanAmount);
-    }
 
+    }
     #region Lerp the Y Damping
 
     public void LerpYDamping(bool IsPlayerFalling)

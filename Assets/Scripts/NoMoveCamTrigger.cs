@@ -7,10 +7,10 @@ using UnityEngine;
 public class NoMoveCamTrigger : MonoBehaviour
 {
     [Header("Box Cast Variables")]
-    public Vector3 Area;
-    public bool Detected = false;
+    public Vector3 Area;//trigger area
+    public bool Detected = false;// detecte if a enemy was inside
     Vector2 direction;
-    public Transform Target;
+    public Transform Target;// Player transform
 
     public Transform CameraFollowObject;
     private CameraFollowObject CameraFollowObjectScript;
@@ -21,18 +21,15 @@ public class NoMoveCamTrigger : MonoBehaviour
     [SerializeField] private CinemachineConfiner2D CinemachineConfiner2D;
 
     [Header("distancia que a camera vai se mover, para cima ou baixo")]
-    public float CameraYMov;
+    public float CameraYMov;// distance that the camera go up or down
 
 
-    public float DesireLerpDuration = 3;
-    public float LerpElapsedTime;
-    public float UnlerpElapsedTime;
+    public float DesireLerpDuration = 3;//the duration of the lerp
+    public float LerpElapsedTime;// the current duration of the lerp
+    public float UnlerpElapsedTime;// the current duration of the Unlerp
 
     [SerializeField]
     private AnimationCurve curve;
-
-
-
 
     private void Start()
     {
@@ -48,14 +45,15 @@ public class NoMoveCamTrigger : MonoBehaviour
 
         direction = targetPos - (Vector2)transform.position;
 
+        //creates the box cast(trigger)
         RaycastHit2D BoxInfo = Physics2D.BoxCast(gameObject.GetComponent<Renderer>().bounds.center, Area, 0f, Area);
 
-        //checa se o player entrou no quadrado 
+        //checks if the player is inside the area
         if (BoxInfo.collider.gameObject.tag == "Player")
         {
             Detected = true;
             Debug.DrawLine(transform.position, targetPos);
-
+            //do the lerp
             if (LerpElapsedTime < DesireLerpDuration)
             {
                 Lerp();
@@ -63,11 +61,14 @@ public class NoMoveCamTrigger : MonoBehaviour
 
 
         }
+        //checks if the player is out of the area
         else if (BoxInfo.collider.gameObject.tag != "Player" && Detected == true)
         {
+            //do tthe unLerp
             if (CameraFollowObjectScript.LerpElapsedTime <= CameraFollowObjectScript.DesireLerpDuration)
             {
                 UnLerp();
+                //makes the camera follow object start to follow the player again
                 CameraFollowObjectScript.Lerp();
 
                 
@@ -79,12 +80,14 @@ public class NoMoveCamTrigger : MonoBehaviour
 
     public void OnDrawGizmosSelected()
     {
+        //Draw the box on unity
         Gizmos.DrawWireCube(gameObject.GetComponent<Renderer>().bounds.center, Area);
 
     }
 
     private void Lerp()
     {
+        //makes the camera follow object go to the center of the area and changes some values
         CameraFollowObjectScript.FollowPlayer = false;
 
         CameraFollowObjectScript.enabled = false;
@@ -112,7 +115,7 @@ public class NoMoveCamTrigger : MonoBehaviour
     {
         LerpElapsedTime = 0f;
    
-
+        //change back the values to normal
         if (Detected == true)
         {
 
@@ -132,12 +135,4 @@ public class NoMoveCamTrigger : MonoBehaviour
 
     }
 
-    IEnumerator DetectedFalse(float DesireLerpDuration)
-    {
-        yield return new WaitForSeconds(DesireLerpDuration);
-        Debug.Log("player saiu");
-        Detected = false;
-
-        
-    }
 }

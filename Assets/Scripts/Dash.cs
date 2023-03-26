@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-    public float dashTime = 0.1f;
-    public float m_DashDist;
-    private float _currentDashTime = 0f;
+    public float dashTime = 0.1f;//Time of the dash
+    public float m_DashDist;//the distance of dash
+    private float _currentDashTime = 0f;//time when player is dashing
     private bool _isDashing = false;
     public bool canDash;
     private Vector2 _dashStart, _dashEnd;
 
     private Rigidbody2D rb;
-    public float _yVelJumpRealeasedMod = 2f;
+    public float _yVelJumpRealeasedMod = 2f;//variable to smooth the fall after dash
 
     private CharacterController2D characterController2D;
     private bool Grounded;
     private bool facingRight;
 
-    private TrailRenderer trailRender;
+    private TrailRenderer trailRender;//tail effect
 
     private void Start()
     {
@@ -33,8 +33,10 @@ public class Dash : MonoBehaviour
         Grounded = characterController2D.m_Grounded;
         facingRight = characterController2D.m_FacingRight;
 
+        //Checks the input
         if (Input.GetButtonDown("Dash") && canDash == true)
         {
+            //dash to right
             if (_isDashing == false && facingRight)
             {
                 // dash starts
@@ -44,7 +46,7 @@ public class Dash : MonoBehaviour
                 _dashEnd = new Vector2(_dashStart.x + m_DashDist, _dashStart.y);
                 
             }
-
+            //dash to left
             if (_isDashing == false && !facingRight)
             {
                 // dash starts
@@ -55,7 +57,7 @@ public class Dash : MonoBehaviour
             }
             trailRender.emitting= true;
         }
-
+        //stop the dash
         if (_isDashing)
         {
 

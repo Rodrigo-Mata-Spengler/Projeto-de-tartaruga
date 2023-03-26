@@ -172,7 +172,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Turn()
     {
-        // Rotaciona a partir da rotação do y
+        // Rotaciona a partir do y
         // Switch the way the player is labelled as facing.
         if (m_FacingRight)
         {

@@ -11,14 +11,15 @@ public class CameraControlTrigger : MonoBehaviour
     private Collider2D _coll;
 
 
-    [Header("BoxCast")]
-    public Vector2 Area;
-    public bool Detected = false;
+    //Edge detection
+    [Header("BoxCast, Edge detection")]
+    public Vector2 Area;//trigger area
+    public bool Detected = false;// detecte if a enemy was inside
     Vector2 direction;
-    public Transform Target;
+    public Transform Target;// Player transform
 
 
-    [HideInInspector]public bool Down = false;
+    [HideInInspector]public bool Down = false; // the direction the camera should go
 
     private void Start()
     {
@@ -37,28 +38,26 @@ public class CameraControlTrigger : MonoBehaviour
 
         direction = targetPos - (Vector2)transform.position;
 
+        //creates the box cast(trigger)
         RaycastHit2D BoxInfo = Physics2D.BoxCast(transform.position, Area, 0f, direction);
 
-        //checa se o player entrou no quadrado e leva a camera para baixo
+        //checks if the player is inside the area
         if (BoxInfo.collider.gameObject.tag == "Player")
         {
-
-
             Detected = true;
             Debug.DrawLine(transform.position, targetPos);
 
             if (customInspectorObjects.panCameraOnContact )
             {
-                //pan the camera
-                CameraManager.Instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, false);
-
-                
+                //pan the camera to the desire direction
+                CameraManager.Instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, false);   
             }
 
         }
-        //volta a camera para a posição inicial
+        //checks if the player is out of the area
         if (BoxInfo.collider.gameObject.tag != "Player" && Detected == true)
         {
+            //return the camera to the normal position 
             if (customInspectorObjects.panCameraOnContact)
             {
                CameraManager.Instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, true);
@@ -75,8 +74,8 @@ public class CameraControlTrigger : MonoBehaviour
     //desenha o quadrado
     public void OnDrawGizmosSelected()
     {
+        //Draw the box on unity
         Gizmos.DrawWireCube(transform.position, Area);
-    
     }
 
     IEnumerator UnlerEdge(float customInspectorObjectspanTime)
@@ -120,6 +119,7 @@ public class CameraControlTrigger : MonoBehaviour
 
 public class CustomInspectorObjects
 {
+    //Lerp the camera values
  
     public bool panCameraOnContact = false;
 
@@ -148,6 +148,7 @@ public class MyScriptEditor : Editor
 
     }
 
+    /*
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -167,4 +168,5 @@ public class MyScriptEditor : Editor
         }
 
     }
+    */
 }
