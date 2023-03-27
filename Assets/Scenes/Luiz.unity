@@ -129879,9 +129879,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 1693734898}
     m_Modifications:
     - target: {fileID: 252179266, guid: 4c6571932516017488eb84810c9ef171, type: 3}
+      propertyPath: m_Damping
+      value: 3.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 252179266, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1400843379}
+    - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.297607
+      objectReference: {fileID: 0}
+    - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6956482
+      objectReference: {fileID: 0}
     - target: {fileID: 185684928366850470, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -130272,9 +130284,53 @@ PrefabInstance:
       value: Camera Follow Object
       objectReference: {fileID: 0}
     - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: heightAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: MaxWindowSize
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: heightAmount.y
+      value: 2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
       propertyPath: PlayerTransform
       value: 
       objectReference: {fileID: 1622245415}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: CinemachineConfiner2D
+      value: 
+      objectReference: {fileID: 1480924767}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: LerpElapsedTimeUpAndDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: LerpTimeDurationUpAndDown
+      value: 4.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: curveUpAndDown.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: curveUpAndDown.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: curveUpAndDown.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: curveUpAndDown.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
+      propertyPath: curveUpAndDown.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7624317329481810101, guid: 5bff933fff579c8408239a0436557da9, type: 3}
       propertyPath: m_RootOrder
       value: 0
