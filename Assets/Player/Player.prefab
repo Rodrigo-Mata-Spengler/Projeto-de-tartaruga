@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665321755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.009, y: 1.291, z: 0}
+  m_LocalPosition: {x: 0.009, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,8 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 1.23, y: 1.29}
+  Area: {x: 1.12, y: 2.42}
   Detected: 0
+  rb: {fileID: 6748649182909457862}
+  up: 0
+  down: 0
+  right: 0
+  impulseForce: 1000
 --- !u!212 &665321757
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125,7 +130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386716082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.003, y: -1.759, z: 0}
+  m_LocalPosition: {x: -0.003, y: -2.294, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -144,8 +149,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 1.23, y: 1.29}
+  Area: {x: 1.13, y: 2.51}
   Detected: 0
+  rb: {fileID: 6748649182909457862}
+  up: 0
+  down: 0
+  right: 0
+  impulseForce: 1000
 --- !u!212 &1386716084
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -224,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001907970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.566, y: -0.17, z: 0}
+  m_LocalPosition: {x: 2.24, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,8 +253,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 1.23, y: 1.29}
+  Area: {x: 2.59, y: 1.02}
   Detected: 0
+  rb: {fileID: 6748649182909457862}
+  up: 0
+  down: 0
+  right: 0
+  impulseForce: 1000
 --- !u!212 &2001907973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -475,6 +490,7 @@ MonoBehaviour:
   AtaqueUpHitBox: {fileID: 665321755}
   AtaqueDownHitBox: {fileID: 1386716082}
   AttackTimeAmount: 0.22
+  AttackEnd: 1
 --- !u!95 &1622245420
 Animator:
   serializedVersion: 5
