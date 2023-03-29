@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum PuzzleGenius { desativado, mostrandoPadrao, esperandoInput, acertou, errou};
+enum PuzzleGenius { desativado, mostrandoPadrao, esperandoInput, verificando, acertou, errou};
 public class GeniusControler : MonoBehaviour
 {
     [Header("interação")]
     [SerializeField] private PuzzleGenius status = PuzzleGenius.desativado;
-    private bool jogoIniciado = false;
     private bool playerIn = false;
 
     [Header("Blocos")]
@@ -21,10 +20,9 @@ public class GeniusControler : MonoBehaviour
     [SerializeField] private int tamanhoSequencia;
     [SerializeField] private int sequenciaAtual = 1;
     private int sequenciaSuporte = 0;
+    private bool tocandoSequencia = false;
 
     [SerializeField] private float tempoSequencia;
-    private float tempoProxima;
-    private bool tempusando = false;
 
     [Header("seuqncia player")]
     [SerializeField] private int[] sequenciaPlayer;
@@ -39,33 +37,44 @@ public class GeniusControler : MonoBehaviour
     {
         sequencia = new int[tamanhoSequencia];
         sequenciaPlayer = new int[tamanhoSequencia];
+        sequenciaAtual = 1;
     }
 
     private void Update()// a mudar
     {
-
-        switch (status)
-        {
-            case PuzzleGenius.mostrandoPadrao:
-                PlaySequencia();
-                break;
-            case PuzzleGenius.esperandoInput:
-                break;
-            case PuzzleGenius.errou:
-                break;
-            case PuzzleGenius.acertou:
-                break;
-        }
-
-
         if (Input.GetButtonDown("Interacao") && status == PuzzleGenius.desativado && playerIn)
         {
             CriarSequencia();
 
             this.GetComponent<SpriteRenderer>().color = Color.green;
             status = PuzzleGenius.mostrandoPadrao;
-            tempoProxima = Time.time + tempoSequencia;
         }
+
+
+        switch (status)
+        {
+            case PuzzleGenius.mostrandoPadrao:
+                
+                if (!tocandoSequencia)
+                {
+                    StartCoroutine(PlaySequencia());
+                }
+                
+                break;
+            case PuzzleGenius.esperandoInput:
+                StopCoroutine(PlaySequencia());
+                PermitirInteracao();
+                break;
+            case PuzzleGenius.errou:
+                break;
+            case PuzzleGenius.acertou:
+                break;
+            case PuzzleGenius.verificando:
+                BloquearInteracao();
+                TomarDecisao();
+                break;
+        }
+       
     }
 
     // iniciar o puzzle interagindo com o main
@@ -88,63 +97,49 @@ public class GeniusControler : MonoBehaviour
     }
 
     // mostrar sequencia em partes, começando com um character, e acresentando mais um conforme o jogo caminha
-    private void PlaySequencia()
+    private IEnumerator PlaySequencia()
     {
-        if (tempoProxima <= Time.time)
+        sequenciaSuporte = 0;
+        while (sequenciaSuporte < sequenciaAtual)
         {
-            if (tempusando == false && sequenciaSuporte <= sequenciaAtual)
+            tocandoSequencia = true;
+            yield return new WaitForSeconds(2);
+            switch (sequencia[sequenciaSuporte])
             {
-                tempoProxima = Time.time + tempoSequencia;
-                switch (sequencia[sequenciaSuporte])
-                {
-                    case 1:
-                        bloco1.GetComponent<SpriteRenderer>().color = Color.blue;
-                        tempusando = true;
-                        break;
-                    case 2:
-                        bloco2.GetComponent<SpriteRenderer>().color = Color.red;
-                        tempusando = true;
-                        break;
-                    case 3:
-                        bloco3.GetComponent<SpriteRenderer>().color = Color.yellow;
-                        tempusando = true;
-                        break;
-                    case 4:
-                        bloco4.GetComponent<SpriteRenderer>().color = Color.magenta;
-                        tempusando = true;
-                        break;
-                }
-                sequenciaSuporte++;
-
+                case 1:
+                    bloco1.GetComponent<SpriteRenderer>().color = Color.blue;
+                    break;
+                case 2:
+                    bloco2.GetComponent<SpriteRenderer>().color = Color.red;
+                    break;
+                case 3:
+                    bloco3.GetComponent<SpriteRenderer>().color = Color.yellow;
+                    break;
+                case 4:
+                    bloco4.GetComponent<SpriteRenderer>().color = Color.magenta;
+                    break;
             }
-            else if (tempusando == true)
-            {
-                tempoProxima = Time.time + .5f;
-                bloco1.GetComponent<SpriteRenderer>().color = Color.white;
+            sequenciaSuporte++;
+            yield return new WaitForSeconds(tempoSequencia);
 
-                bloco2.GetComponent<SpriteRenderer>().color = Color.white;
+            BlocosDefault();
 
-                bloco3.GetComponent<SpriteRenderer>().color = Color.white;
-
-                bloco4.GetComponent<SpriteRenderer>().color = Color.white;
-                tempusando = false;
-
-            }
-
-            /*if (sequenciaSuporte >= sequenciaAtual)
-            {
-                bloco1.GetComponent<SpriteRenderer>().color = Color.white;
-
-                bloco2.GetComponent<SpriteRenderer>().color = Color.white;
-
-                bloco3.GetComponent<SpriteRenderer>().color = Color.white;
-
-                bloco4.GetComponent<SpriteRenderer>().color = Color.white;
-
-                status = PuzzleGenius.esperandoInput;
-                sequenciaPlayer = new int[tamanhoSequencia];
-            }*/
+            yield return new WaitForSeconds(.5f);
         }
+        status = PuzzleGenius.esperandoInput;
+        tocandoSequencia = false;
+        yield break;
+    }
+
+    private void BlocosDefault()
+    {
+        bloco1.GetComponent<SpriteRenderer>().color = Color.white;
+
+        bloco2.GetComponent<SpriteRenderer>().color = Color.white;
+
+        bloco3.GetComponent<SpriteRenderer>().color = Color.white;
+
+        bloco4.GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     // recebe sequencia do player
@@ -159,14 +154,30 @@ public class GeniusControler : MonoBehaviour
         }
         else
         {
-            bloco1.GetComponent<SpriteRenderer>().color = Color.white;
-
-            bloco2.GetComponent<SpriteRenderer>().color = Color.white;
-
-            bloco3.GetComponent<SpriteRenderer>().color = Color.white;
-
-            bloco4.GetComponent<SpriteRenderer>().color = Color.white;
+            BlocosDefault();
         }
+
+        if (playersequancia >= sequenciaAtual)
+        {
+            Debug.Log(playersequancia);
+            Debug.Log(sequenciaAtual);
+            status = PuzzleGenius.verificando;
+        }
+    }
+
+    private void PermitirInteracao()
+    {
+        bloco1.GetComponent<InteragirObjeto>().permitirInteracao = true;
+        bloco2.GetComponent<InteragirObjeto>().permitirInteracao = true;
+        bloco3.GetComponent<InteragirObjeto>().permitirInteracao = true;
+        bloco4.GetComponent<InteragirObjeto>().permitirInteracao = true;
+    }
+    private void BloquearInteracao()
+    {
+        bloco1.GetComponent<InteragirObjeto>().permitirInteracao = false;
+        bloco2.GetComponent<InteragirObjeto>().permitirInteracao = false;
+        bloco3.GetComponent<InteragirObjeto>().permitirInteracao = false;
+        bloco4.GetComponent<InteragirObjeto>().permitirInteracao = false;
     }
 
     // verifica se a sequencia esta certa
@@ -184,23 +195,36 @@ public class GeniusControler : MonoBehaviour
     }
 
     // recebe verificação e toma a descisão 
+
+    private void TomarDecisao()
+    {
+        if (VerificarSequencia())
+        {
+            AcertouSequencia();
+        }
+        else
+        {
+            ErrouSequencia();
+        }
+    }
     // caso erre, é a secção do jogo acaba
     private void ErrouSequencia()
     {
+        status = PuzzleGenius.errou;
         this.GetComponent<SpriteRenderer>().color = Color.red;
 
         sequencia = new int[tamanhoSequencia];
         sequenciaPlayer = new int[tamanhoSequencia];
 
         sequenciaSuporte = 0;
-        sequenciaAtual = 0;
-
-        jogoIniciado = true;
+        sequenciaAtual = 1;
+        playersequancia = 0;
     }
 
     // caso acerte, segue para proxima sequencia ou completa o jogo
     private void AcertouSequencia()
     {
+        status = PuzzleGenius.acertou;
         if (sequenciaAtual == sequencia.Length)
         {
             //terminou o puzzle
@@ -208,8 +232,13 @@ public class GeniusControler : MonoBehaviour
         else
         {
             sequenciaAtual++;
+            sequenciaSuporte = 0;
+            playersequancia = 0;
+            sequenciaPlayer = new int[tamanhoSequencia];
+            BlocosDefault();
+            status = PuzzleGenius.mostrandoPadrao;
+
         }
+
     }
-
-
 }

@@ -13,9 +13,11 @@ public class InteragirObjeto : MonoBehaviour
 
     private bool PlayerIn = false;
 
+    public bool permitirInteracao = false;
+
     private void Update()
     {
-        if (Input.GetButton("Interacao") && PlayerIn)
+        if (Input.GetButton("Interacao") && PlayerIn && permitirInteracao)
         {
             ctrl.InteracaoObjeto(numeroBloco);
 
