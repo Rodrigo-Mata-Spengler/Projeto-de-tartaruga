@@ -260,6 +260,9 @@ MonoBehaviour:
   _fallPanAmount: 0.25
   _fallYPanTime: 0.35
   _fallSpeedYDapingChangeThreshold: -10
+  LerpAmount: 4.84
+  LerpTimeDuration: 1
+  currentTimeOfLerp: 0
 --- !u!1 &185684928551927804
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BoundingShape2D: {fileID: 0}
-  m_Damping: 2
+  m_Damping: 3.73
   m_MaxWindowSize: 9
 --- !u!1 &3333052557775095780
 GameObject:

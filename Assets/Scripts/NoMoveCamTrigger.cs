@@ -8,7 +8,7 @@ public class NoMoveCamTrigger : MonoBehaviour
 {
     [Header("Box Cast Variables")]
     public Vector3 Area;//trigger area
-    public bool Detected = false;// detecte if a enemy was inside
+    public bool Detected = false;// detecte if playe was inside
     Vector2 direction;
     public Transform Target;// Player transform
 
