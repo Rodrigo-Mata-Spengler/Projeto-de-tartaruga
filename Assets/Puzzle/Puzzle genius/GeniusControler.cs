@@ -8,6 +8,7 @@ public class GeniusControler : MonoBehaviour
     [Header("interação")]
     [SerializeField] private PuzzleGenius status = PuzzleGenius.desativado;
     private bool jogoIniciado = false;
+    private bool playerIn = false;
 
     [Header("Blocos")]
     [SerializeField] private GameObject bloco1;
@@ -55,12 +56,9 @@ public class GeniusControler : MonoBehaviour
             case PuzzleGenius.acertou:
                 break;
         }
-    }
 
-    // iniciar o puzzle interagindo com o main
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (Input.GetButtonDown("Interacao") && status == PuzzleGenius.desativado)
+
+        if (Input.GetButtonDown("Interacao") && status == PuzzleGenius.desativado && playerIn)
         {
             CriarSequencia();
 
@@ -68,6 +66,16 @@ public class GeniusControler : MonoBehaviour
             status = PuzzleGenius.mostrandoPadrao;
             tempoProxima = Time.time + tempoSequencia;
         }
+    }
+
+    // iniciar o puzzle interagindo com o main
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        playerIn = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        playerIn = false;
     }
 
     // criar sequencia a ser seguida

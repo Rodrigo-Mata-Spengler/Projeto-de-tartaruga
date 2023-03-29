@@ -11,13 +11,24 @@ public class InteragirObjeto : MonoBehaviour
 
     [SerializeField] private Color cor;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private bool PlayerIn = false;
+
+    private void Update()
     {
-        if (Input.GetButton("Interacao"))
+        if (Input.GetButton("Interacao") && PlayerIn)
         {
             ctrl.InteracaoObjeto(numeroBloco);
 
             this.GetComponent<SpriteRenderer>().color = cor;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        PlayerIn = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        PlayerIn = false;
     }
 }
