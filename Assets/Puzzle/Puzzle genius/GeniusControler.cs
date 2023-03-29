@@ -31,7 +31,7 @@ public class GeniusControler : MonoBehaviour
     private float tempoEsperavariavel = 0;
 
 
-    [SerializeField] private bool teste = false;
+    [SerializeField] public bool jogoFinalizado = false;
 
     private void Start()
     {
@@ -67,8 +67,6 @@ public class GeniusControler : MonoBehaviour
                 break;
             case PuzzleGenius.errou:
                 break;
-            case PuzzleGenius.acertou:
-                break;
             case PuzzleGenius.verificando:
                 BloquearInteracao();
                 TomarDecisao();
@@ -103,7 +101,7 @@ public class GeniusControler : MonoBehaviour
         while (sequenciaSuporte < sequenciaAtual)
         {
             tocandoSequencia = true;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             switch (sequencia[sequenciaSuporte])
             {
                 case 1:
@@ -211,6 +209,7 @@ public class GeniusControler : MonoBehaviour
     private void ErrouSequencia()
     {
         status = PuzzleGenius.errou;
+        BlocosDefault();
         this.GetComponent<SpriteRenderer>().color = Color.red;
 
         sequencia = new int[tamanhoSequencia];
@@ -219,6 +218,7 @@ public class GeniusControler : MonoBehaviour
         sequenciaSuporte = 0;
         sequenciaAtual = 1;
         playersequancia = 0;
+        status = PuzzleGenius.desativado;
     }
 
     // caso acerte, segue para proxima sequencia ou completa o jogo
@@ -227,7 +227,14 @@ public class GeniusControler : MonoBehaviour
         status = PuzzleGenius.acertou;
         if (sequenciaAtual == sequencia.Length)
         {
-            //terminou o puzzle
+            this.GetComponent<SpriteRenderer>().color = Color.blue;
+
+            bloco1.GetComponent<SpriteRenderer>().color = Color.blue;
+            bloco2.GetComponent<SpriteRenderer>().color = Color.red;
+            bloco3.GetComponent<SpriteRenderer>().color = Color.yellow;
+            bloco4.GetComponent<SpriteRenderer>().color = Color.magenta;
+
+            jogoFinalizado = true;
         }
         else
         {
