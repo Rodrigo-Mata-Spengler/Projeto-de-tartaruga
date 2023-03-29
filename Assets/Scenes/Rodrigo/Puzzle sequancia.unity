@@ -173,7 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ctrl: {fileID: 1407249098}
   numeroBloco: 1
-  cor: {r: 0, g: 0.18928123, b: 1, a: 1}
 --- !u!1 &1026469917 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7341361220054283110, guid: 7fb16390a8d6eb64ba46ba0245510357, type: 3}
@@ -219,7 +218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ctrl: {fileID: 1407249098}
   numeroBloco: 4
-  cor: {r: 1, g: 0, b: 0.80399513, a: 1}
 --- !u!1001 &1259796612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,18 +340,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c675651e6a57bf4c8c1af1b96a641b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: 0
   bloco1: {fileID: 935397180}
   bloco2: {fileID: 1671632682}
   bloco3: {fileID: 2092660339}
   bloco4: {fileID: 1026469917}
   sequencia: 
   tamanhoSequencia: 6
-  sequenciaAtual: 0
   tempoSequencia: 3
   sequenciaPlayer: 
   tempoEspera: 0.2
   teste: 0
+  temptemp: 0
 --- !u!61 &1407249100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -425,7 +422,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ctrl: {fileID: 1407249098}
   numeroBloco: 2
-  cor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1854648949
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ctrl: {fileID: 1407249098}
   numeroBloco: 3
-  cor: {r: 0.9827944, g: 1, b: 0, a: 1}
 --- !u!1 &2097083198
 GameObject:
   m_ObjectHideFlags: 0

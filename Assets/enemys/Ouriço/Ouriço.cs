@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Status {dormente,ameacado,atacar,dormindo};
+enum Puzzle {dormente,ameacado,atacar,dormindo};
 public class Ouriço : MonoBehaviour
 {
     [Header("Perimetro")]
@@ -27,14 +27,14 @@ public class Ouriço : MonoBehaviour
 
     [Header("Status Ouriço")]
     [SerializeField] private bool status = true;
-    [SerializeField] private Status modo;
+    [SerializeField] private Puzzle modo;
 
     //set up do ouriço
     private void Start()
     {
         ouricoRenderer.color = Color.blue;
         perimetro.radius = raioPerimetro;
-        modo = Status.dormente;
+        modo = Puzzle.dormente;
     }
     private void Update()
     {
@@ -44,17 +44,17 @@ public class Ouriço : MonoBehaviour
             if (distancia >= raioPerimetro)
             {
                 ouricoRenderer.color = Color.blue;
-                modo = Status.dormente;
+                modo = Puzzle.dormente;
             }
             else if (distancia < raioExplosao)
             {
                 Explosao();
-                modo = Status.atacar;
+                modo = Puzzle.atacar;
             }
             else if (distancia < raioPerimetro && distancia > raioExplosao)
             {
                 OuricoBlink();
-                modo = Status.ameacado;
+                modo = Puzzle.ameacado;
             }
         }
     }
@@ -114,6 +114,6 @@ public class Ouriço : MonoBehaviour
     private void OuricoTurnOff()
     {
         status = false;
-        modo = Status.dormindo;
+        modo = Puzzle.dormindo;
     }
 }
