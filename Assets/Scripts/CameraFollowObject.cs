@@ -7,7 +7,9 @@ using UnityEngine;
 public class CameraFollowObject : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform PlayerTransform;
+    [SerializeField] public GameObject PlayerObj;
+    [HideInInspector] public PlayerMovement PlayerMovmentScript;
+    public bool PlayerOnAir;
 
     [Header("Flip rotation stats")]
     [SerializeField] private float FlipYRotationTime = 0.5f;
@@ -36,28 +38,33 @@ public class CameraFollowObject : MonoBehaviour
 
     private float currentY;
 
+    private void Start()
+    {
+        PlayerMovmentScript = PlayerObj.GetComponent<PlayerMovement>();
+    }
     private void Awake()
     {
-        PlayerCharacterController = PlayerTransform.GetComponent<CharacterController2D>();
+        PlayerCharacterController = PlayerObj.GetComponent<CharacterController2D>();
 
         _isFacingRight = PlayerCharacterController.m_FacingRight;
-        transform.position = PlayerTransform.position;
+        transform.position = PlayerObj.transform.position;
     }
 
     private void Update()
     {
+        PlayerOnAir = PlayerMovmentScript.OnAir;
         //make the object follow the player if he's not on a no move area
         if(FollowPlayer)
         {
-            transform.position = PlayerTransform.position;
+            transform.position = PlayerObj.transform.position;
             currentY = transform.position.y;
         }
 
-        if (Input.GetAxis("Vertical") >0f  && PlayerCharacterController.m_Grounded && LerpElapsedTimeUpAndDown < LerpTimeDurationUpAndDown)
+        if (Input.GetAxis("Vertical") >0f  && PlayerCharacterController.m_Grounded && LerpElapsedTimeUpAndDown < LerpTimeDurationUpAndDown && Input.GetAxis("Horizontal") == 0f)
         {
             LerpUp(currentY);
         }
-        if (Input.GetAxis("Vertical") < 0f  && PlayerCharacterController.m_Grounded && LerpElapsedTimeUpAndDown < LerpTimeDurationUpAndDown)
+        if (Input.GetAxis("Vertical") < 0f  && PlayerCharacterController.m_Grounded && LerpElapsedTimeUpAndDown < LerpTimeDurationUpAndDown && Input.GetAxis("Horizontal") == 0f)
         {
             LerpDown(currentY);
         }
@@ -132,7 +139,7 @@ public class CameraFollowObject : MonoBehaviour
 
         float percentageComplete = LerpElapsedTime / DesireLerpDuration;
 
-        transform.position = Vector3.Lerp(transform.position, PlayerTransform.position, curve.Evaluate(percentageComplete));
+        transform.position = Vector3.Lerp(transform.position, PlayerObj.transform.position, curve.Evaluate(percentageComplete));
 
         if (LerpElapsedTime >= 5f)
         {

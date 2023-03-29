@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 1;
             trailRender.emitting = true;
-
+            
         }
         // if he released fall smoothly
         if (jumpInputReleased && m_Rigidbody2D.velocity.y > 0)
@@ -92,6 +92,14 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 2;
             trailRender.emitting = true;
+        }
+        if(m_Grounded)
+        {
+            OnAir = false;
+        }
+        else
+        {
+            OnAir = true;
         }
     }
     public void Attack()

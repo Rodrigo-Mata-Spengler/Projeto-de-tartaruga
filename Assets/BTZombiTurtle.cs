@@ -11,6 +11,9 @@ public class BTZombiTurtle : MonoBehaviour
     Vector2 direction;
     public LayerMask PlayerLayer;
 
+    [Header("LookAt")]
+    public Transform PlayerTransform;
+    public bool lookAt;
     private void Start()
     {
         StartCoroutine(FindTargetsWithDelay(0.01f));
@@ -33,7 +36,19 @@ public class BTZombiTurtle : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             AreaToAwakeEnemy();
+
+            if(lookAt)
+            {
+                LookAtPlayer();
+            }
         }
+    }
+    public void LookAtPlayer()
+    {
+        Vector3 look = transform.InverseTransformPoint(PlayerTransform.position);
+        float angle = Mathf.Atan2(0f,look.x)*Mathf.Rad2Deg;
+
+        transform.Rotate(0f,angle,0f);
     }
     public void AreaToAwakeEnemy()
     {
@@ -46,7 +61,7 @@ public class BTZombiTurtle : MonoBehaviour
         if (CircleInfo.collider.CompareTag("Player"))
         {
             PlayerClose = true;
-            
+            lookAt = true;
 
         }
     }
