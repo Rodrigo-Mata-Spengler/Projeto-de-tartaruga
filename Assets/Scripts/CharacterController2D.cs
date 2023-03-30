@@ -19,7 +19,7 @@ public class CharacterController2D : MonoBehaviour
     public bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
 
-
+    
 
     [Header("Camera Stuff")]
     private CameraFollowObject CameraFollowObject;
@@ -39,8 +39,9 @@ public class CharacterController2D : MonoBehaviour
     private bool m_wasCrouching = false;
 
 
-
-
+    //Wall slide
+    private bool IsWallSliding;
+    private float WallSlideSpeed;
     private void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -105,6 +106,13 @@ public class CharacterController2D : MonoBehaviour
 
     public void Move(float move, bool crouch, float jumpVel)
     {
+        if (IsWallSliding)
+        {
+            if (m_Rigidbody2D.velocity.y < -WallSlideSpeed)
+            {
+                m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -WallSlideSpeed);
+            }
+        }
         // If crouching, check to see if the character can stand up
         if (!crouch)
         {

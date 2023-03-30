@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ddc7411b053ad48b9c9daf3778d2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerTransform: {fileID: 0}
+  PlayerObj: {fileID: 0}
+  PlayerMovmentScript: {fileID: 0}
+  PlayerOnAir: 0
+  PlayerMoving: 0
   FlipYRotationTime: 0.5
   DesireLerpDuration: 7
   LerpElapsedTime: 0
@@ -76,6 +79,7 @@ MonoBehaviour:
   FollowPlayer: 1
   heightAmount: 5
   LookedUpOrDown: 0
+  CanLookUporDown: 0
   LerpTimeDurationUpAndDown: 4.21
   LerpElapsedTimeUpAndDown: 0
   curveUpAndDown:
@@ -84,8 +88,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -93,8 +97,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0

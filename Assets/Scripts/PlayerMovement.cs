@@ -33,7 +33,17 @@ public class PlayerMovement : MonoBehaviour
     public GameObject AtaqueDownHitBox;
     public float AttackTimeAmount;
     [HideInInspector] public bool AttackEnd = true;
-    
+
+    [HideInInspector] public bool moving = false; // variable to player lookUporDown
+
+    [Header("Wall walk")]
+    public Transform wallCheck;
+    public float WallCheckDistance;
+    public LayerMask WhatIsGround;
+    public bool IsTouchingWall;
+    public bool IsWallSliding;
+    public float WallSlideSpeed;
+
     private TrailRenderer trailRender;
     private void Start()
     {
@@ -45,23 +55,61 @@ public class PlayerMovement : MonoBehaviour
     {
         HorizontalMove = Input.GetAxis("Horizontal") * RunSpeed;
 
+        if(HorizontalMove == 0f)
+        { 
+            moving= false;
+        }
+        if(HorizontalMove != 0f)
+        {
+            moving= true;
+        }
         m_Grounded = CharacterController2D.m_Grounded;
 
+        CheckSurroundings();
+        CheckWallSliding();
+        if (IsWallSliding)
+        {
+            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -WallSlideSpeed);
 
+        }
         jump();
 
         Attack();
 
-
         // Debug.LogWarning(jump);
     }
 
+    public void CheckSurroundings()
+    {
+        IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, WallCheckDistance, WhatIsGround);
+
+    }
+    private void CheckWallSliding()
+    {
+        
+        if (IsTouchingWall && !CharacterController2D.m_Grounded && m_Rigidbody2D.velocity.y < 0 && HorizontalMove != 0)
+        {
+            IsWallSliding = true;
+            
+        }
+        if(!IsTouchingWall)
+        {
+            IsWallSliding = false;
+        }
+
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + WallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+    }
     private void FixedUpdate()
     {
         CharacterController2D.Move(HorizontalMove * Time.fixedDeltaTime, false, jumpVel);
       
     }
 
+    
     public void jump()
     {
         //jump
@@ -69,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         jumpInputReleased = Input.GetButtonUp("Jump");
 
         //checks if player is on ground and pressed the jump input
-        if (m_Grounded && jumpInput)
+        if (m_Grounded && jumpInput && !IsWallSliding)
         {
             JumpReleasedTimes = 0;
             // Add a vertical force to the player.
@@ -87,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
             trailRender.emitting = false;
         }
         //Do the second jump
-        if (jumpInput && JumpReleasedTimes == 1)
+        if (jumpInput && JumpReleasedTimes == 1 && !IsWallSliding)
         {
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 2;

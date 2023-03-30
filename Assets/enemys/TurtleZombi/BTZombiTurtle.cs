@@ -7,20 +7,27 @@ public class BTZombiTurtle : MonoBehaviour
 {
     [Header("Circle Cast Variables")]
     public float radius;//trigger area
-    public bool PlayerClose = false;// detecte if a Player was inside
+    public bool AwakeWhenPlayerClose = false;// detecte if a Player was inside
     Vector2 direction;
     public LayerMask PlayerLayer;
 
     [Header("LookAt")]
-    public Transform PlayerTransform;
+    public GameObject PlayerTransform;
+    public float ChaseSpeed;
+    [Space]
     public bool lookAt;
+    public bool AttackPlayer;
+    public bool Chase;
     private void Start()
     {
         StartCoroutine(FindTargetsWithDelay(0.01f));
 
-        BTsequence Sequence1 = new BTsequence();
+        BTsequence Sequence2 = new BTsequence();
+        Sequence2.children.Add(new ChasePlayer());
 
+        BTsequence Sequence1 = new BTsequence();
         Sequence1.children.Add(new IsPlayerCloseOrOnGround());
+        Sequence1.children.Add(Sequence2);
 
         BehaviorTree bt = GetComponent<BehaviorTree>();
         bt.root = Sequence1;
@@ -45,10 +52,14 @@ public class BTZombiTurtle : MonoBehaviour
     }
     public void LookAtPlayer()
     {
-        Vector3 look = transform.InverseTransformPoint(PlayerTransform.position);
+        Vector3 look = transform.InverseTransformPoint(PlayerTransform.transform.position);
         float angle = Mathf.Atan2(0f,look.x)*Mathf.Rad2Deg;
 
         transform.Rotate(0f,angle,0f);
+    }
+    public void AttackPlayerMethod()
+    {
+
     }
     public void AreaToAwakeEnemy()
     {
@@ -58,11 +69,23 @@ public class BTZombiTurtle : MonoBehaviour
         RaycastHit2D CircleInfo = Physics2D.CircleCast(gameObject.GetComponent<Renderer>().bounds.center, radius, direction);
 
         //checks if the player is inside the area
-        if (CircleInfo.collider.CompareTag("Player"))
+        if (CircleInfo.collider.CompareTag("Player") && !AwakeWhenPlayerClose)
         {
-            PlayerClose = true;
+            AwakeWhenPlayerClose = true;
             lookAt = true;
 
+        }
+        if(CircleInfo.collider.gameObject.tag =="Player" && AwakeWhenPlayerClose)
+        {
+
+            AttackPlayer = true;
+            AttackPlayerMethod();
+            Chase = false;
+        }
+        if(CircleInfo.collider.gameObject.tag != "Player" && AwakeWhenPlayerClose && AttackPlayer == true)
+        {
+            Chase = true;
+            AttackPlayer = false;
         }
     }
     public void OnDrawGizmosSelected()

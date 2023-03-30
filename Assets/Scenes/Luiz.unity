@@ -117119,7 +117119,7 @@ GameObject:
   - component: {fileID: 1534872625}
   - component: {fileID: 1534872624}
   - component: {fileID: 1534872623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy(tARTARUGA ESQUELETO)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -117231,13 +117231,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95842cc188569f345a4a62c1989d0158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 4.66
-  PlayerClose: 0
+  radius: 3.77
+  AwakeWhenPlayerClose: 0
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 8
-  PlayerTransform: {fileID: 1622245415}
+  PlayerTransform: {fileID: 822085981}
+  ChaseSpeed: 5.72
   lookAt: 0
+  AttackPlayer: 0
+  Chase: 0
 --- !u!50 &1534872624
 Rigidbody2D:
   serializedVersion: 4
@@ -129739,11 +129742,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -406.1
+      value: -508.8
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -370.7
+      value: -366.2
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -129802,10 +129805,6 @@ PrefabInstance:
       propertyPath: PlayerObj
       value: 
       objectReference: {fileID: 822085981}
-    - target: {fileID: 7624317329481810100, guid: 5bff933fff579c8408239a0436557da9, type: 3}
-      propertyPath: PlayerTransform
-      value: 
-      objectReference: {fileID: 1534872622}
     - target: {fileID: 7624317329481810101, guid: 5bff933fff579c8408239a0436557da9, type: 3}
       propertyPath: m_RootOrder
       value: 0

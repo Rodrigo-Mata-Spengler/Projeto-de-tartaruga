@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class IsPlayerCloseOrOnGround : BTnode
@@ -10,11 +11,14 @@ public class IsPlayerCloseOrOnGround : BTnode
         Print();
 
         GameObject npc = bt.gameObject;
-        bool PlayerDetected = bt.GetComponent<BTZombiTurtle>().PlayerClose;
+        bool Awake = bt.GetComponent<BTZombiTurtle>().AwakeWhenPlayerClose;
+        bool chase = bt.GetComponent<BTZombiTurtle>().Chase;
+        bool Attack = bt.GetComponent<BTZombiTurtle>().AttackPlayer;
 
-        if(PlayerDetected)
+        if(Awake)
         {
             status = Status.SUCCESS;
+  
         }
         else
         {
