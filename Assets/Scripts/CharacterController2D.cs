@@ -18,8 +18,9 @@ public class CharacterController2D : MonoBehaviour
     [HideInInspector]public Rigidbody2D m_Rigidbody2D;
     public bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
+    [HideInInspector]public int facingDirection = 1;
 
-    
+
 
     [Header("Camera Stuff")]
     private CameraFollowObject CameraFollowObject;
@@ -190,13 +191,14 @@ public class CharacterController2D : MonoBehaviour
 
             //turn the camera follow object
             CameraFollowObject.CallTurn();
+            facingDirection = -1;
         }
         else 
         {
             Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
             transform.rotation = Quaternion.Euler(rotator);
             m_FacingRight = !m_FacingRight;
-
+            facingDirection = 1;
             //turn the camera follow object
             CameraFollowObject.CallTurn();
         }
