@@ -336,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021795255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.279, z: 0}
+  m_LocalPosition: {x: 0.104, y: -0.475, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -488,6 +488,7 @@ MonoBehaviour:
   m_Grounded: 0
   m_Rigidbody2D: {fileID: 0}
   m_FacingRight: 1
+  facingDirection: 0
   CameraFollowGO: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
@@ -532,6 +533,8 @@ MonoBehaviour:
   IsTouchingWall: 0
   IsWallSliding: 0
   WallSlideSpeed: 2.49
+  wallJumpForce: 10
+  wallJumpDirection: {x: 1, y: 1.8}
 --- !u!95 &1622245420
 Animator:
   serializedVersion: 5
