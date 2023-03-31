@@ -129747,9 +129747,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1693734898}
     m_Modifications:
+    - target: {fileID: 665321755, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 665321756, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 665321756, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 665321756, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 665321757, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 665321757, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6509804
+      objectReference: {fileID: 0}
     - target: {fileID: 665321758, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: EnemyimpulseForce
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386716082, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386716083, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386716083, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 18.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386716084, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1386716084, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6509804
       objectReference: {fileID: 0}
     - target: {fileID: 1386716085, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: EnemyimpulseForce
@@ -129759,9 +129803,33 @@ PrefabInstance:
       propertyPath: lifeBar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2001907970, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001907971, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 18.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001907971, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001907971, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.29
+      objectReference: {fileID: 0}
     - target: {fileID: 2001907972, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: EnemyimpulseForce
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001907973, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2001907973, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6509804
       objectReference: {fileID: 0}
     - target: {fileID: 2021795256, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -129781,11 +129849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -508.8
+      value: -507.99
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -366.2
+      value: -366.31
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.z
