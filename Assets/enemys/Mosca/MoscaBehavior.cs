@@ -27,6 +27,16 @@ public class MoscaBehavior : MonoBehaviour
     [SerializeField] private string playerTag;
     private Transform player;
 
+    [Header("Ataque kamikase")]
+    [SerializeField] private float alturaAtaque = 0;
+    private Vector3 cordenadaAlturaAtaque;
+    [SerializeField] private float velocidadeAtaque;
+    [SerializeField] private float velocidadesubida;
+    [SerializeField] private Vector3 miraAtaque;
+
+    [SerializeField] private float TempoEsperaAtaque = 0;
+    private float tempoAtaque = 0;
+
     private void Start()
     {
         centroOriginal = transform.position;
@@ -45,8 +55,10 @@ public class MoscaBehavior : MonoBehaviour
                 MoscaPatrulha();
                 break;
             case MoscaStatus.alerta:
+                AlturaAtaqueMosca();
                 break;
             case MoscaStatus.kamikase:
+                AtaqueMosca();
                 break;
             case MoscaStatus.tonto:
                 break;
@@ -115,11 +127,45 @@ public class MoscaBehavior : MonoBehaviour
         if (collision.CompareTag(playerTag))
         {
             player = collision.transform;
+            CriaCordenadaAtaque();
         }
     }
 
+    //mosca sobe a uma altura para atacar
+    private void CriaCordenadaAtaque()
+    {
+        cordenadaAlturaAtaque = new Vector3(transform.position.x,transform.position.y + alturaAtaque,0);
+    }
+    private void AlturaAtaqueMosca()
+    {
+        if (transform.position.Equals(cordenadaAlturaAtaque))
+        {
+            status = MoscaStatus.kamikase;
+            tempoAtaque = Time.time + TempoEsperaAtaque;
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, cordenadaAlturaAtaque, velocidadesubida * Time.deltaTime);
+        }
+    }
 
     //mosca se atira em direção ao player
+    private void AtaqueMosca()
+    {
+        if (tempoAtaque < Time.time)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, miraAtaque, velocidadeAtaque * Time.deltaTime);
+        }
+        else
+        {
+            miraAtaque = player.position;
+        }
+
+        if (transform.position.Equals(miraAtaque))
+        {
+            status = MoscaStatus.tonto;
+        }
+    }
     //apos acertar o player mosca fica tonta
     //apos alguns segundos mosca volta ao normal
     //mosca avua para cima um pouco
