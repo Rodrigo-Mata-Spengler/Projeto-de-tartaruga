@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjetilOrico : MonoBehaviour
 {
     [SerializeField] private string playerTag;
-    [SerializeField] private float Dano;
+    [SerializeField] private int Dano;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

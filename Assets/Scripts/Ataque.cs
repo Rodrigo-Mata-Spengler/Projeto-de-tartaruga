@@ -11,46 +11,59 @@ public class Ataque : MonoBehaviour
 
     [HideInInspector] public bool up, down, right;
     public float impulseForce;
+    public float EnemyimpulseForce;
+    private int HitIndex = 0;
 
     private void Update()
     {
         //creates the box cast(trigger)
        RaycastHit2D BoxInfo = Physics2D.BoxCast(gameObject.GetComponent<Renderer>().bounds.center, Area, 0f, Area);
 
-       //checks if hit a enemy
-      if (BoxInfo.collider.gameObject.tag == "Enemy")
-      {
-              Detected = true;
-             // Debug.DrawLine(transform.position, targetPos);
+          if (BoxInfo.collider.gameObject.tag == "Enemy")
+          {
+                if(HitIndex == 0)
+                {
+                    BoxInfo.transform.GetComponent<EnemyHealth>().Damage(30f);
+                    HitIndex= 1;
+                }
+          
+          }
+            //checks if hit a enemy
+          if (BoxInfo.collider.gameObject.tag == "Enemy")
+          {
+                 Detected = true;
 
-             //BoxInfo.transform.gameObject.LifeDamage();
-
-            //disable/destroy enemy (to change)
-            //BoxInfo.transform.gameObject.SetActive(false);
-
-            if(up)
+            if (up)
             {
-               rb.AddForce(transform.up * impulseForce);
+                rb.AddForce(transform.up * impulseForce);
+
                 up = false;
             }
-            if(down)
+            if (down)
             {
                 rb.AddForce(transform.up * -impulseForce);
                 down = false;
             }
-            if(right)
+            if (right)
             {
                 rb.AddForce(transform.right * -impulseForce);
+                BoxInfo.transform.GetComponent<Rigidbody2D>().AddForce(transform.right * EnemyimpulseForce);
                 right = false;
+            }
+            else if(!right)
+            {
+                BoxInfo.transform.gameObject.GetComponent<BTZombiTurtle>().Chase = true;
+                BoxInfo.transform.GetComponent<Rigidbody2D>().AddForce(BoxInfo.transform.right * 0f);
             }
 
 
-
-      }
-      else
-      {
-         Detected= false;
-      }
+          }
+          else
+          {
+             
+             Detected = false;
+             HitIndex= 0;
+          }
             
         
     }
