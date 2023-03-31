@@ -30,7 +30,7 @@ public class Health : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Damage(-1);
+            Damage(1);
         }
     }
 
