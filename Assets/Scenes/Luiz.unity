@@ -117119,6 +117119,7 @@ GameObject:
   - component: {fileID: 1534872625}
   - component: {fileID: 1534872624}
   - component: {fileID: 1534872623}
+  - component: {fileID: 1534872626}
   m_Layer: 8
   m_Name: Enemy(tARTARUGA ESQUELETO)
   m_TagString: Enemy
@@ -117274,6 +117275,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5080ac38580523244a3c6b1514ebc10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1534872626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534872619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3b4687d64a750468849053279f5f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 200
+  currentHealth: 0
 --- !u!1 &1558354455
 GameObject:
   m_ObjectHideFlags: 0
@@ -129732,6 +129747,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1693734898}
     m_Modifications:
+    - target: {fileID: 665321758, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: EnemyimpulseForce
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386716085, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: EnemyimpulseForce
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: lifeBar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001907972, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: EnemyimpulseForce
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 2021795256, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.104
