@@ -18,6 +18,7 @@ public class MenuPause : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pausePanel.SetActive(false);
+        Time.timeScale = 1;
     }
     private void Update()
     {

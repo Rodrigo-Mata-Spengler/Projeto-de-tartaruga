@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuzzleSequanciaMain : MonoBehaviour
 {
     [SerializeField] private GameObject[] blocos;
-    [SerializeReference]private bool puzzleFeito = false;
+    [SerializeReference]public bool puzzleFeito = false;
 
     private void Update()
     {
