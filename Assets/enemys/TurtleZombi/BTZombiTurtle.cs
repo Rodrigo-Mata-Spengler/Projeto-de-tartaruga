@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BTZombiTurtle : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    [Space]
     [Header("Circle Cast Variables")]
     public float radius;//trigger area
     public bool AwakeWhenPlayerClose = false;// detecte if a Player was inside
@@ -18,8 +20,15 @@ public class BTZombiTurtle : MonoBehaviour
     public bool lookAt;
     public bool AttackPlayer;
     public bool Chase;
+
+    [Space]
+    [Header("Hit feedback")]
+    public bool wasHit = false;
+    public float impulseForce;
+    public float secondsToDisable;
     private void Start()
     {
+        rb= this.GetComponent<Rigidbody2D>();  
         StartCoroutine(FindTargetsWithDelay(0.01f));
 
         BTsequence Sequence2 = new BTsequence();
@@ -48,7 +57,17 @@ public class BTZombiTurtle : MonoBehaviour
             {
                 LookAtPlayer();
             }
+            if(wasHit)
+            {
+                rb.AddForce((transform.right * -1) * impulseForce);
+                StartCoroutine(DisableHitFeedback(secondsToDisable));
+            }
         }
+    }
+    private IEnumerator DisableHitFeedback(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        wasHit = false;
     }
     public void LookAtPlayer()
     {

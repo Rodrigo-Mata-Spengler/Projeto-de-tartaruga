@@ -47,21 +47,13 @@ public class Ataque : MonoBehaviour
             if (right)
             {
                 rb.AddForce(transform.right * -impulseForce);
-                BoxInfo.transform.GetComponent<Rigidbody2D>().AddForce(transform.right * EnemyimpulseForce);
+                BoxInfo.transform.GetComponent<BTZombiTurtle>().wasHit = true;
                 right = false;
             }
-            else if(!right)
-            {
-                BoxInfo.transform.gameObject.GetComponent<BTZombiTurtle>().Chase = true;
-                BoxInfo.transform.GetComponent<Rigidbody2D>().AddForce(BoxInfo.transform.right * 0f);
-            }
-
-
           }
           else
           {
-             
-             Detected = false;
+            Detected = false;
              HitIndex= 0;
           }
             

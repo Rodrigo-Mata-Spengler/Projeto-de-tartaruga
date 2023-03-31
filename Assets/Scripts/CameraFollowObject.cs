@@ -57,6 +57,7 @@ public class CameraFollowObject : MonoBehaviour
         PlayerOnAir = PlayerMovmentScript.OnAir;
         PlayerMoving = PlayerMovmentScript.moving;
 
+        /*
         CanLookUporDown = true;
         if (Input.GetAxis("Vertical") > 0.9f && CanLookUporDown && Input.GetAxis("Horizontal") * 40 == 0f )
         {
@@ -81,6 +82,7 @@ public class CameraFollowObject : MonoBehaviour
         {
             CanLookUporDown = false;
         }
+        */
         //make the object follow the player if he's not on a no move area
         if(FollowPlayer)
         {

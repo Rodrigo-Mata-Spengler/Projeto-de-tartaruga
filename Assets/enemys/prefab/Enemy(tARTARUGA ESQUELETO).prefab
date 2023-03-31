@@ -170,6 +170,9 @@ MonoBehaviour:
   lookAt: 0
   AttackPlayer: 0
   Chase: 0
+  wasHit: 0
+  impulseForce: 60
+  secondsToDisable: 0.15
 --- !u!114 &167771294725654406
 MonoBehaviour:
   m_ObjectHideFlags: 0
