@@ -23,6 +23,7 @@ public class NpcIteraction : MonoBehaviour
     [SerializeField]private float typingSpeed = 0.04f;// the typing speed
     private bool endText = true;
     public int textLocation = 0;// get whi  ch one of the paragraphs or enabled
+    public bool StartTyping;
 
     [Header("Trigger")]
     private BoxCollider2D trigger; // the box collider trigger
@@ -44,24 +45,24 @@ public class NpcIteraction : MonoBehaviour
     private void NextLineAndStop()
     {
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Fire3") && havingConversation == false)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false)
         {
             conversationObj.SetActive(true);
             ContinueStory();
-            Debug.Log("apaguei");
+           // Debug.Log("apaguei");
             havingConversation = true;
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (Input.GetButtonDown("Fire1") && textLocation < NpcWords.Length && nextFrase == true)
+        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
         {
             textLocation += 1;
             ContinueStory();
+            
         }
         //if paragraph were over than disable the UI interaction obj
         if (havingConversation && textLocation == NpcWords.Length)
         {
             conversationObj.SetActive(false);
-
             havingConversation = false;
         }
         // if player press the esc disable the UI interaction obj
@@ -86,19 +87,27 @@ public class NpcIteraction : MonoBehaviour
         //display each letter one at a time
         foreach(char letter in line.ToCharArray())
         {
+            StartCoroutine(StartTypingDelay());
             conversationText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
 
             //if Player press the button it will display the entire paragraph and stop writing letter by letter
-            if (Input.GetAxis("Fire1")>0.4f)
+            if (Input.GetAxis("Interacao") > 0.9f && StartTyping)
             {
                 conversationText.text = line;
+                StartTyping = false;
                 nextFrase = true;
                 break;
             }
         }
+        
         nextFrase= true;
 
+    }
+    private IEnumerator StartTypingDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        StartTyping = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
