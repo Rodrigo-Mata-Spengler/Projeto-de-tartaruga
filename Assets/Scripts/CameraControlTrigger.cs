@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-using UnityEditor;
 using System.Threading;
 
 public class CameraControlTrigger : MonoBehaviour
 {
     public CustomInspectorObjects customInspectorObjects;
     private Collider2D _coll;
-
 
     //Edge detection
     [Header("BoxCast, Edge detection")]
@@ -134,39 +132,4 @@ public enum PanDirection
     Down,
     Left,
     Right
-}
-
-[CustomEditor(typeof(CameraControlTrigger))]
-
-public class MyScriptEditor : Editor
-{
-    CameraControlTrigger cameraControlTrigger;
-
-    private void OnEnable()
-    {
-        cameraControlTrigger = (CameraControlTrigger)target;
-
-    }
-
-    /*
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-
-        if (cameraControlTrigger.customInspectorObjects.panCameraOnContact)
-        {
-            cameraControlTrigger.customInspectorObjects.panDirection = (PanDirection)EditorGUILayout.EnumPopup("Camera Pan Direction",cameraControlTrigger.customInspectorObjects.panDirection);
-
-            cameraControlTrigger.customInspectorObjects.panDistance = EditorGUILayout.FloatField("Pan Distance", cameraControlTrigger.customInspectorObjects.panDistance);
-            cameraControlTrigger.customInspectorObjects.panTime = EditorGUILayout.FloatField("Pan Time", cameraControlTrigger.customInspectorObjects.panTime);
-
-        }
-
-        if (GUI.changed)
-        {
-            EditorUtility.SetDirty(cameraControlTrigger);
-        }
-
-    }
-    */
 }
