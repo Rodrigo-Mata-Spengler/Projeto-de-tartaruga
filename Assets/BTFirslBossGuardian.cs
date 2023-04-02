@@ -36,6 +36,7 @@ public class BTFirslBossGuardian : MonoBehaviour
     public float AttackDuration;
     [Space]
     [HideInInspector]public int AttackOrJumpPorcentage;
+    public float jumpHeight;
     
     private void Start()
     {
@@ -50,6 +51,7 @@ public class BTFirslBossGuardian : MonoBehaviour
 
         BTsequence Sequence1 = new BTsequence();
         Sequence1.children.Add(new JumpOrChase());
+        Sequence1.children.Add(new JumpAtPlayer());
         Sequence1.children.Add(Selector2);
 
         BehaviorTree bt = GetComponent<BehaviorTree>();
@@ -58,7 +60,12 @@ public class BTFirslBossGuardian : MonoBehaviour
         StartCoroutine(bt.Execute());
     }
 
+    public void JumpAtPlayer()
+    {
+        float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
 
+        rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+    }
 
     IEnumerator FindTargetsWithDelay(float delay)
     {
