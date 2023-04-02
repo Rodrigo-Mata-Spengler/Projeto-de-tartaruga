@@ -14,7 +14,7 @@ public class BTZombiTurtle : MonoBehaviour
     public LayerMask PlayerLayer;
 
     [Header("LookAt")]
-    public GameObject PlayerTransform;
+    [HideInInspector]public GameObject PlayerTransform;
     public float ChaseSpeed;
     [Space]
     public bool lookAt;
@@ -28,15 +28,13 @@ public class BTZombiTurtle : MonoBehaviour
     public float secondsToDisable;
     private void Start()
     {
+        PlayerTransform = GameObject.FindGameObjectWithTag("Player");
         rb= this.GetComponent<Rigidbody2D>();  
         StartCoroutine(FindTargetsWithDelay(0.01f));
 
-        BTsequence Sequence2 = new BTsequence();
-        Sequence2.children.Add(new ChasePlayer());
-
         BTsequence Sequence1 = new BTsequence();
         Sequence1.children.Add(new IsPlayerCloseOrOnGround());
-        Sequence1.children.Add(Sequence2);
+        Sequence1.children.Add(new ChasePlayer());
 
         BehaviorTree bt = GetComponent<BehaviorTree>();
         bt.root = Sequence1;
