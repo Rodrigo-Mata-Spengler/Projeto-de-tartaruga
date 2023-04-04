@@ -33,23 +33,23 @@ public class Ataque : MonoBehaviour
           {
                  Detected = true;
 
-            if (up)
-            {
-                rb.AddForce(transform.up * impulseForce);
+                if (up)
+                {
+                    rb.AddForce(transform.up * impulseForce);
 
-                up = false;
-            }
-            if (down)
-            {
-                rb.AddForce(transform.up * -impulseForce);
-                down = false;
-            }
-            if (right)
-            {
-                rb.AddForce(transform.right * -impulseForce);
-                BoxInfo.transform.GetComponent<BTZombiTurtle>().wasHit = true;
-                right = false;
-            }
+                    up = false;
+                }
+                if (down)
+                {
+                    rb.AddForce(transform.up * -impulseForce);
+                    down = false;
+                }
+                if (right)
+                {
+                    rb.AddForce(transform.right * -impulseForce);
+                    BoxInfo.transform.GetComponent<BTZombiTurtle>().wasHit = true;
+                    right = false;
+                }
           }
           else
           {
