@@ -37,6 +37,10 @@ public class MoscaBehavior : MonoBehaviour
     [SerializeField] private float TempoEsperaAtaque = 0;
     private float tempoAtaque = 0;
 
+    [Header("Mosca Tonta")]
+    [SerializeField] private float tempoEsperaTonta = 0;
+    private float tempoTonta = 0;
+
     private void Start()
     {
         centroOriginal = transform.position;
@@ -61,6 +65,7 @@ public class MoscaBehavior : MonoBehaviour
                 AtaqueMosca();
                 break;
             case MoscaStatus.tonto:
+                MoscaTonta();
                 break;
             case MoscaStatus.recuperacao:
                 break;
@@ -109,7 +114,7 @@ public class MoscaBehavior : MonoBehaviour
 
         //desenha area na qual a mosca pode voar em patrulha
         Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(centroOriginal,new Vector3(maxX - minX,maxY - minY,0));
+        Gizmos.DrawWireCube(centroOriginal,new Vector3(limiteMax.position.x -limiteMin.position.x, limiteMax.position.y - limiteMin.position.y, 0));
     }
 
     private void MoverMoscaPatrulha()
@@ -164,10 +169,19 @@ public class MoscaBehavior : MonoBehaviour
         if (transform.position.Equals(miraAtaque))
         {
             status = MoscaStatus.tonto;
+            tempoTonta = Time.time + tempoEsperaTonta;
         }
     }
     //apos acertar o player mosca fica tonta
     //apos alguns segundos mosca volta ao normal
     //mosca avua para cima um pouco
     //mosca se atira de player de novo
+    private void MoscaTonta()
+    {
+        if (tempoTonta < Time.time)
+        {
+            status = MoscaStatus.alerta;
+        }
+    }
+    
 }
