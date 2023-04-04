@@ -77,7 +77,8 @@ public class GuardianBehavior : MonoBehaviour
             StartCoroutine(DisableHitFeedback(secondsToDisable));
         }
         CircleTrigger();
-        DoActions();
+
+        LookAtPlayer();
 
         switch (status)
         {
@@ -90,43 +91,16 @@ public class GuardianBehavior : MonoBehaviour
                 break;
 
             case GuardianStatus.Attack:
-                 StartCoroutine(AttackPlayer(WaitToAttackTime));
+                if(!Attacked)
+                {
+                    StartCoroutine(AttackPlayer(WaitToAttackTime));
+                }
                 break;
 
             case GuardianStatus.DisableAttack:
                 StartCoroutine(DisableAttack(AttackDuration));
                 break;
-
-
         }
-    }
-    private void DoActions()
-    {
-
-         LookAtPlayer();
-        if (status == GuardianStatus.desativado)
-        {
-            Porcentage();
-            
-
-        }
-        if (AttackOrJumpPorcentage > 0 && AttackOrJumpPorcentage < 31)
-        {
-            status = GuardianStatus.Jump;
-        }
-        if (AttackOrJumpPorcentage > 30 && AttackOrJumpPorcentage < 101)
-        {
-            status = GuardianStatus.Chase;
-        }
-        if (PlayerClose)
-        {
-            status = GuardianStatus.Attack;
-        }
-        if(Attacked)
-        {
-            status = GuardianStatus.DisableAttack;
-        }
-
     }
 
     private int Porcentage()
@@ -134,6 +108,7 @@ public class GuardianBehavior : MonoBehaviour
         AttackOrJumpPorcentage = Random.Range(0, 100);
         Debug.Log("euuuuu");
         return AttackOrJumpPorcentage;
+
     }
     private void FixedUpdate()
     {
@@ -164,20 +139,27 @@ public class GuardianBehavior : MonoBehaviour
     public IEnumerator DisableAttack( float AttackDuration)
     {
         yield return new WaitForSeconds(AttackDuration);
-        status = GuardianStatus.desativado;
         Attacked = false;
         AttackTrigger.SetActive(false);
+        status = GuardianStatus.desativado;
 
     }
     public void JumpAtPlayer()
     {
-        float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
         if (m_Grounded)
         {
+            float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
             rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
-            status = GuardianStatus.desativado;
+            jump = true;
+
         }
-        
+        else
+        {
+            rb.AddForce(new Vector2(0f, 0f));
+        }
+        status = GuardianStatus.desativado;
+
+
     }
     public void ChasePlayer()
     {
@@ -185,10 +167,14 @@ public class GuardianBehavior : MonoBehaviour
     }
     public void LookAtPlayer()
     {
-        Vector3 look = transform.InverseTransformPoint(PlayerTransform.transform.position);
-        float angle = Mathf.Atan2(0f, look.x) * Mathf.Rad2Deg;
+        if(status == GuardianStatus.desativado || status == GuardianStatus.Chase)
+        {
+            Vector3 look = transform.InverseTransformPoint(PlayerTransform.transform.position);
+            float angle = Mathf.Atan2(0f, look.x) * Mathf.Rad2Deg;
 
-        transform.Rotate(0f, angle, 0f);
+            transform.Rotate(0f, angle, 0f);
+        }
+
     }
     public void CircleTrigger()
     {
@@ -201,7 +187,6 @@ public class GuardianBehavior : MonoBehaviour
         if (CircleInfo.collider.CompareTag("Player") && !PlayerClose)
         {
             PlayerClose = true;
-
         }
         if (CircleInfo.collider.gameObject.tag != "Player" && PlayerClose)
         {

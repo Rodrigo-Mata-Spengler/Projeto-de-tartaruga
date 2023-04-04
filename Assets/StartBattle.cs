@@ -11,7 +11,6 @@ public class StartBattle : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-
             Boss.enabled = true;
             this.gameObject.SetActive(false);
         }

@@ -1,0 +1,1905 @@
+fileFormatVersion: 2
+guid: 328751b2954d4c94da5bdb1a7a599393
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 167
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tiles_prontos_teste_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7337117eb54e30f4a9198644307e4653
+      internalID: -1285429055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a447c482df5aa0443a23e8408f530e74
+      internalID: -1737445592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b906391adbd82349872432263b5282b
+      internalID: -387848718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ca5dae49cfdcf48acab48024474e27
+      internalID: 1297280861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa91bf2e797b6a4eb11bf22af56af6f
+      internalID: -1152764801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_5
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152ccb7f8ef6de94da5d609812816a37
+      internalID: 715445517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_6
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f70471b6a93cf3488b88aef37c1e6fb
+      internalID: 1627082740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_7
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3965ec79b89eb44a4a64a97eab8b20
+      internalID: -1880010064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_8
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1333.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27b0dfc9c2c8034e8c037955843d354
+      internalID: -497608068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5246e845cbfe56341b65f60b691e20c6
+      internalID: 850721790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_10
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff1ea49e983d244fb977f560387412a
+      internalID: -1994975857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_11
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadcdd4583e2b794b8338ff3624c8bfe
+      internalID: 906797347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_12
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c184dd957a951f4d949dc448a5516f1
+      internalID: -907653896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_13
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1651e9025c5fcaa45ad60d5570182f29
+      internalID: 2082287054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_14
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac94b731e7620bb4ca7e714d38294dc2
+      internalID: 974512291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_15
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0adc0475123c94d90217e9c3ae6bac
+      internalID: -1188286344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_16
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d8c0ba2a612524c8fb7018ed7d4fc0
+      internalID: 377836108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_17
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1167.3334
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101c3c02cc7e4ba4fab6ec545b200748
+      internalID: 998146895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eea126e88449004faf4e3cb546c2ee8
+      internalID: 609730952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_19
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974d565204010424a9430c66dfb29220
+      internalID: 720437250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_20
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb584dbe3312424aaa65cef813c601e
+      internalID: 1300450653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_21
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2b2f358e450424589912344ddc1ebf
+      internalID: 2128814644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_22
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e692ce6c71636f4bad677867e549dcb
+      internalID: 1454041962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_23
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf60a9333b83ee47bd18249042d5fbc
+      internalID: 1966230586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_24
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4143d4dfbb137694eaed6beb5588a507
+      internalID: -584505556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_25
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9044bf1d457bc7e4cbd8535f0e03ba96
+      internalID: 1602763965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_26
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1001.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7310af559b45960489023884d8d4e4c4
+      internalID: 1844452135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba00c3bf50980844843ae685e766938
+      internalID: 1516359856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_28
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb911427c3e75547a2068d5d0104c6f
+      internalID: 2086030350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_29
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79e3b7536e634a4d9370573fe52534f
+      internalID: -1076406289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_30
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f78ac2532e28da448da95e497b871a5
+      internalID: -2025371111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_31
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b01d828939de2645bcc464903afb5c0
+      internalID: -954989187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_32
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1987173aa315d984abb5b3da5583d687
+      internalID: -718188456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_33
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eebc04a179054a5489961862a678f285
+      internalID: -1192680581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_34
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0316013845c9aac4f9105dbbb641b6ea
+      internalID: 1390328612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_35
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 835.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132c6d1f21f08e74da6164b18c34b301
+      internalID: -768086914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd837a8bb23fb5d4e8c52a5a52f64c81
+      internalID: -691441420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_37
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148e27db69af25a43b6cc9cf0ea82f87
+      internalID: 470800732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_38
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca3882a54f0adc4a9cb78a660fd6453
+      internalID: 546406859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_39
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516e0340ad39b414b90157060f249bd6
+      internalID: 842867508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_40
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec06d65e7794474389e50c09c0ad850
+      internalID: -877368231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_41
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98693a0c7a29e846a7c354cec4d4232
+      internalID: 1973465717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_42
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766a4074c168dbc47b8f8fa3e3a1f7cc
+      internalID: -146190110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_43
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84938fd2fc5cf83499f7c6888aee94bf
+      internalID: 1634841874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_44
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 669.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88dfb645043cb24686bee1ccdb968de
+      internalID: 1974976315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd322c3fd48f0e48acf955ee4afffba
+      internalID: 329292707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_46
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed5384cca5eff34998d1c426e04d566
+      internalID: 1833034740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_47
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e988635ddc80f48409fdbc3bd2ede902
+      internalID: 160041342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_48
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827233796ae9890469a56838d93cf182
+      internalID: -2057842979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_49
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf279a42f267e004f87cc2e875c56112
+      internalID: -916956924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_50
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8b11255e72acd45ae57cb9b6d18555
+      internalID: 793135059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_51
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7018f8b10c398084191c8ad4142dfc37
+      internalID: 965031607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_52
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86113f5d3f55f324c85a19ea1e1598e4
+      internalID: -967773514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_53
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 503.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebd718ba01b43e40ac0b5d3179778b5
+      internalID: -1721531069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94d052da5377d845b403bcf96730ee5
+      internalID: 2090130860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_55
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c4529661b659341bf7b59459f36cc9
+      internalID: -1668997181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_56
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c7cffa49257c84a805337afd8a679a
+      internalID: 959585328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_57
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490facabb13644b4fb838aa522018b44
+      internalID: 378712094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_58
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92eda443cfa683479844a343ffcc3a9
+      internalID: 944920599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_59
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a3f3c69b57e3e48a0bb13e993563e5
+      internalID: 1112830582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_60
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8188dac2714e8438162e15b323251e
+      internalID: -2050928426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_61
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e867450ae03254344a0926f6c63de18f
+      internalID: 1580334112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_62
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 337.3333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da08258b68329664fb63bf0d345086ae
+      internalID: -23951153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6c6a53ea1da384794567d2638d3af7
+      internalID: 977834038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_64
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223b4bb4898feb544a112d3b4f5bcda4
+      internalID: -662735502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_65
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aba23b5d38fbdf4e929ee3e27fc1f01
+      internalID: 70004285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_66
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561ee0a7ffb30354797dc8bf68be491a
+      internalID: -193613285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_67
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acf78f2c16278d40ab0d71646e60bc1
+      internalID: -1624567376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_68
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3767bc3cc7a77ea4b81c5f695fb9d8ea
+      internalID: -1733319903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_69
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7a4725c51b5c045b210ad3b212256a
+      internalID: 267876200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_70
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444992d89222a3e4dade7301f1e78816
+      internalID: -7719525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_71
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 171.33333
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9589bbc55ccf43b45810faebb52e9ea5
+      internalID: -1124531366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cd2f0dd6d982940868afed1fd05a82
+      internalID: 2020896330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_73
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b5baf0c5c0120478e3acdb86518ff3
+      internalID: -384364562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_74
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f67fc5577e6724bb8b99b4147bca7e
+      internalID: 2119724439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_75
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3399ac863f912d940b127c96d2a418b1
+      internalID: 1863167225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_76
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37a1532f645a9b4bb01e45897d1bbb6
+      internalID: -849989981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_77
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1244719c34777448c6632f8b0be549
+      internalID: 2010034833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_78
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89312d05061e8074d84bb2a3f71a4d39
+      internalID: -906779890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_79
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d7e7853c285af4ca2e06cd40e61857
+      internalID: 72009908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_prontos_teste_80
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 5.3333282
+        width: 166.66667
+        height: 166.66667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f60174ceff1124d8cf1a50e50a4700
+      internalID: -1775518855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tiles_prontos_teste_0: -1285429055
+      tiles_prontos_teste_1: -1737445592
+      tiles_prontos_teste_10: -1994975857
+      tiles_prontos_teste_11: 906797347
+      tiles_prontos_teste_12: -907653896
+      tiles_prontos_teste_13: 2082287054
+      tiles_prontos_teste_14: 974512291
+      tiles_prontos_teste_15: -1188286344
+      tiles_prontos_teste_16: 377836108
+      tiles_prontos_teste_17: 998146895
+      tiles_prontos_teste_18: 609730952
+      tiles_prontos_teste_19: 720437250
+      tiles_prontos_teste_2: -387848718
+      tiles_prontos_teste_20: 1300450653
+      tiles_prontos_teste_21: 2128814644
+      tiles_prontos_teste_22: 1454041962
+      tiles_prontos_teste_23: 1966230586
+      tiles_prontos_teste_24: -584505556
+      tiles_prontos_teste_25: 1602763965
+      tiles_prontos_teste_26: 1844452135
+      tiles_prontos_teste_27: 1516359856
+      tiles_prontos_teste_28: 2086030350
+      tiles_prontos_teste_29: -1076406289
+      tiles_prontos_teste_3: 1297280861
+      tiles_prontos_teste_30: -2025371111
+      tiles_prontos_teste_31: -954989187
+      tiles_prontos_teste_32: -718188456
+      tiles_prontos_teste_33: -1192680581
+      tiles_prontos_teste_34: 1390328612
+      tiles_prontos_teste_35: -768086914
+      tiles_prontos_teste_36: -691441420
+      tiles_prontos_teste_37: 470800732
+      tiles_prontos_teste_38: 546406859
+      tiles_prontos_teste_39: 842867508
+      tiles_prontos_teste_4: -1152764801
+      tiles_prontos_teste_40: -877368231
+      tiles_prontos_teste_41: 1973465717
+      tiles_prontos_teste_42: -146190110
+      tiles_prontos_teste_43: 1634841874
+      tiles_prontos_teste_44: 1974976315
+      tiles_prontos_teste_45: 329292707
+      tiles_prontos_teste_46: 1833034740
+      tiles_prontos_teste_47: 160041342
+      tiles_prontos_teste_48: -2057842979
+      tiles_prontos_teste_49: -916956924
+      tiles_prontos_teste_5: 715445517
+      tiles_prontos_teste_50: 793135059
+      tiles_prontos_teste_51: 965031607
+      tiles_prontos_teste_52: -967773514
+      tiles_prontos_teste_53: -1721531069
+      tiles_prontos_teste_54: 2090130860
+      tiles_prontos_teste_55: -1668997181
+      tiles_prontos_teste_56: 959585328
+      tiles_prontos_teste_57: 378712094
+      tiles_prontos_teste_58: 944920599
+      tiles_prontos_teste_59: 1112830582
+      tiles_prontos_teste_6: 1627082740
+      tiles_prontos_teste_60: -2050928426
+      tiles_prontos_teste_61: 1580334112
+      tiles_prontos_teste_62: -23951153
+      tiles_prontos_teste_63: 977834038
+      tiles_prontos_teste_64: -662735502
+      tiles_prontos_teste_65: 70004285
+      tiles_prontos_teste_66: -193613285
+      tiles_prontos_teste_67: -1624567376
+      tiles_prontos_teste_68: -1733319903
+      tiles_prontos_teste_69: 267876200
+      tiles_prontos_teste_7: -1880010064
+      tiles_prontos_teste_70: -7719525
+      tiles_prontos_teste_71: -1124531366
+      tiles_prontos_teste_72: 2020896330
+      tiles_prontos_teste_73: -384364562
+      tiles_prontos_teste_74: 2119724439
+      tiles_prontos_teste_75: 1863167225
+      tiles_prontos_teste_76: -849989981
+      tiles_prontos_teste_77: 2010034833
+      tiles_prontos_teste_78: -906779890
+      tiles_prontos_teste_79: 72009908
+      tiles_prontos_teste_8: -497608068
+      tiles_prontos_teste_80: -1775518855
+      tiles_prontos_teste_9: 850721790
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
