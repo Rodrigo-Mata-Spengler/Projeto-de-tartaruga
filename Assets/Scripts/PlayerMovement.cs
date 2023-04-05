@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject AtaqueUpHitBox;
     public GameObject AtaqueDownHitBox;
     public float AttackTimeAmount;
-    [HideInInspector] public bool AttackEnd = true;
+    public bool AttackEnd = true;
 
     [HideInInspector] public bool moving = false; // variable to player lookUporDown
 
@@ -88,8 +88,11 @@ public class PlayerMovement : MonoBehaviour
             jump();
         }
         
-
-        Attack();
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Attack();
+        }
+        
 
         // Debug.LogWarning(jump);
     }
@@ -137,8 +140,6 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = Vector2.one;
         canMove = true;
     }
-
-    
     public void jump()
     {
         //jump
@@ -190,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
     public void Attack()
     {
         //enables the attack hitbox to right and left
-        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") == 0 && AttackEnd)
+        if (Input.GetAxis("Vertical") == 0)
         {
             AttackEnd= false;
             AtaqueHitBox.SetActive(true);
@@ -199,7 +200,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(AttackTime(AttackTimeAmount,AtaqueHitBox));
         }
         //enables the up hitBox
-        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") > 0 && AttackEnd) 
+        if (Input.GetAxis("Vertical") > 0) 
         {
             AttackEnd = false;
             AtaqueUpHitBox.SetActive(true);
@@ -209,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
         //enables the bottom hitBox
-        if (Input.GetButtonDown("Fire1") && Input.GetAxis("Vertical") < 0 && !m_Grounded && AttackEnd) 
+        if (Input.GetAxis("Vertical") < 0 && !m_Grounded ) 
         {
             AttackEnd = false;
             AtaqueDownHitBox.SetActive(true);

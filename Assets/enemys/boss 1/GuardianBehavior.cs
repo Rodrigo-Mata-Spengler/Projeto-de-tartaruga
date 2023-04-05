@@ -33,12 +33,6 @@ public class GuardianBehavior : MonoBehaviour
     public bool jump;
 
     [Space]
-    [Header("Hit feedback")]
-    public bool wasHit = false;
-    public float impulseForce;
-    public float secondsToDisable;
-
-    [Space]
     [Header("Attack")]
     public GameObject AttackTrigger;
     public bool Attacked = false;
@@ -71,14 +65,14 @@ public class GuardianBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (wasHit)
-        {
-            rb.AddForce((transform.right * -1) * impulseForce);
-            StartCoroutine(DisableHitFeedback(secondsToDisable));
-        }
         CircleTrigger();
 
         LookAtPlayer();
+
+        if(PlayerClose)
+        {
+            status = GuardianStatus.Attack;
+        }
 
         switch (status)
         {
@@ -97,9 +91,13 @@ public class GuardianBehavior : MonoBehaviour
                 }
                 break;
 
-            case GuardianStatus.DisableAttack:
-                StartCoroutine(DisableAttack(AttackDuration));
-                break;
+           // case GuardianStatus.DisableAttack:
+                //StartCoroutine(DisableAttack(AttackDuration));
+               // break;
+        }
+        if(Attacked)
+        {
+            StartCoroutine(DisableAttack(AttackDuration));
         }
     }
 
@@ -139,9 +137,10 @@ public class GuardianBehavior : MonoBehaviour
     public IEnumerator DisableAttack( float AttackDuration)
     {
         yield return new WaitForSeconds(AttackDuration);
-        Attacked = false;
         AttackTrigger.SetActive(false);
+        yield return new WaitForSeconds(5f);
         status = GuardianStatus.desativado;
+        Attacked = false;
 
     }
     public void JumpAtPlayer()
@@ -167,7 +166,7 @@ public class GuardianBehavior : MonoBehaviour
     }
     public void LookAtPlayer()
     {
-        if(status == GuardianStatus.desativado || status == GuardianStatus.Chase)
+        if(status == GuardianStatus.desativado && Attacked == false || status == GuardianStatus.Chase && Attacked == false)
         {
             Vector3 look = transform.InverseTransformPoint(PlayerTransform.transform.position);
             float angle = Mathf.Atan2(0f, look.x) * Mathf.Rad2Deg;
@@ -193,12 +192,6 @@ public class GuardianBehavior : MonoBehaviour
             PlayerClose = false;
             status = GuardianStatus.desativado;
         }
-    }
-    private IEnumerator DisableHitFeedback(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        wasHit = false;
-        status = GuardianStatus.desativado;
     }
 
     public void OnDrawGizmosSelected()

@@ -20,12 +20,6 @@ public class BTZombiTurtle : MonoBehaviour
     public bool lookAt;
     public bool AttackPlayer;
     public bool Chase;
-
-    [Space]
-    [Header("Hit feedback")]
-    public bool wasHit = false;
-    public float impulseForce;
-    public float secondsToDisable;
     private void Start()
     {
         PlayerTransform = GameObject.FindGameObjectWithTag("Player");
@@ -55,17 +49,7 @@ public class BTZombiTurtle : MonoBehaviour
             {
                 LookAtPlayer();
             }
-            if(wasHit)
-            {
-                rb.AddForce((transform.right * -1) * impulseForce);
-                StartCoroutine(DisableHitFeedback(secondsToDisable));
-            }
         }
-    }
-    private IEnumerator DisableHitFeedback(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        wasHit = false;
     }
     public void LookAtPlayer()
     {

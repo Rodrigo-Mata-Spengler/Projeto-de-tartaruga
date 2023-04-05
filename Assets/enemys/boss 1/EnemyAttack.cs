@@ -26,7 +26,8 @@ public class EnemyAttack : MonoBehaviour
             {
                 BoxInfo.transform.GetComponent<Health>().Damage(Damage);
                 HitIndex = 1;
-                rb.AddForce(transform.right * -impulseForce);
+                //rb.AddForce(transform.right * -impulseForce);
+                BoxInfo.transform.GetComponent<PlayerHitFeedback>().wasHit = true;
             }
 
         }

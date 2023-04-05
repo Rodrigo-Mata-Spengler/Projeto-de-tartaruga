@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 6566133214988035724}
   - component: {fileID: 5287758271197617117}
   - component: {fileID: 5287758271197617120}
+  - component: {fileID: 5027656796105154529}
   m_Layer: 8
   m_Name: boss1
   m_TagString: Enemy
@@ -176,11 +177,11 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 3
+  m_LinearDrag: 0.6
+  m_AngularDrag: 0.05
+  m_GravityScale: 4
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -223,11 +224,8 @@ MonoBehaviour:
   Chase: 0
   ChaseSpeed: 6.07
   AttackOrJumpPorcentage: 0
-  jumpHeight: 7.57
+  jumpHeight: 34.2
   jump: 0
-  wasHit: 0
-  impulseForce: 0.21
-  secondsToDisable: 0.06
   AttackTrigger: {fileID: 6566133215279601597}
   Attacked: 0
   WaitToAttackTime: 0.36
@@ -254,6 +252,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 800
   currentHealth: 0
+--- !u!114 &5027656796105154529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484018159787737982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasHit: 0
+  impulseForce: 10
+  secondsToDisable: 0.1
 --- !u!1 &6566133213932611492
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +363,7 @@ GameObject:
   - component: {fileID: 6566133215279601594}
   - component: {fileID: 53501527}
   m_Layer: 8
-  m_Name: AtaqueHitBox
+  m_Name: AtaqueHitBoxEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566133215279601597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.24, y: -0.29, z: 0}
+  m_LocalPosition: {x: 1.72, y: -0.29, z: 0}
   m_LocalScale: {x: 18.51, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

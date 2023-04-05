@@ -47,7 +47,7 @@ public class Ataque : MonoBehaviour
                 if (right)
                 {
                     rb.AddForce(transform.right * -impulseForce);
-                    BoxInfo.transform.GetComponent<BTZombiTurtle>().wasHit = true;
+                    BoxInfo.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
                     right = false;
                 }
           }
