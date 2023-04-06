@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-enum GuardianStatus { desativado, Attack, DisableAttack, Jump };
+enum GuardianStatus { desativado, Attack, DisableAttack, Jump, CheckPlayerDistance };
 public class GuardianBehavior : MonoBehaviour
 {
     [Header("Status")]
@@ -16,7 +16,7 @@ public class GuardianBehavior : MonoBehaviour
     private Rigidbody2D rb;
     [Space]
     public bool PlayerClose = false;// detecte if a Player was inside
-
+    public bool lookingRight = false;
 
     [Header("LookAt")]
     [HideInInspector] public GameObject PlayerTransform;
@@ -25,15 +25,17 @@ public class GuardianBehavior : MonoBehaviour
     [Header("Jump")]
     public float jumpHeight;
     public bool jumped;
-    public float LandJumpCoolDown;
+    public float TempoPular = 0;
+    [SerializeField] private float tempoParaPular;
 
     [Space]
     [Header("Attack")]
     public GameObject AttackTrigger;
     public bool Attacked = false;
-    public float WaitToAttackTime;
-    public float AttackDuration;
-    public float CoolDownToNextAttack;
+    public float AttackImpulse;
+
+    [SerializeField] private float DuracaoDeAtaque= 0;
+    public float tempoDeAtaque = 0f;
 
     [Header("Ground")]
     [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
@@ -41,10 +43,11 @@ public class GuardianBehavior : MonoBehaviour
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     public bool m_Grounded;            // Whether or not the player is grounded.
 
-    [Header("Events")]
-    public UnityEvent OnLandEvent;
 
-   
+    [HideInInspector]public UnityEvent OnLandEvent;
+
+    public float tempoTonto = 0;
+    [SerializeField] private float TempoEsperaTonto = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -64,30 +67,52 @@ public class GuardianBehavior : MonoBehaviour
 
         switch (status)
         {
+            case GuardianStatus.desativado:
+                Tonto();
+                break;
+
+            case GuardianStatus.CheckPlayerDistance:
+                PlayerDistance();
+                break;
 
             case GuardianStatus.Jump:
                 JumpAtPlayer();
                 break;
 
             case GuardianStatus.Attack:
-                if(!Attacked)
-                {
-                    //StartCoroutine(AttackPlayer(WaitToAttackTime));
-                }
-                break;
-            case GuardianStatus.DisableAttack:
-                StartCoroutine(DisableAttack(AttackDuration, CoolDownToNextAttack));
+                AttackPlayer();
                 break;
 
-            case GuardianStatus.desativado:
-                break;
         }
 
         LookAtPlayer();
 
 
     }
+    private void PlayerDistance()
+    {
+        if(PlayerClose)
+        {
+            status = GuardianStatus.Attack;
+            tempoDeAtaque = 0;
 
+            if(lookingRight)
+            {
+                rb.AddForce(new Vector2(AttackImpulse, transform.position.y), ForceMode2D.Impulse);
+            }
+            if(!lookingRight)
+            {
+                rb.AddForce(new Vector2(-AttackImpulse, transform.position.y), ForceMode2D.Impulse);
+            }
+
+
+        }
+        else
+        {
+            status = GuardianStatus.Jump;
+            TempoPular = 0;
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -107,33 +132,67 @@ public class GuardianBehavior : MonoBehaviour
             }
         }
     }
-
-    public IEnumerator DisableAttack( float AttackDuration, float CoolDownToDesactivated)
+    public void AttackPlayer()
     {
-        AttackTrigger.SetActive(false);
-        yield return new WaitForSeconds(CoolDownToDesactivated);
-        status = GuardianStatus.desativado;
-        Attacked = false;
+        tempoDeAtaque += Time.deltaTime;
 
+        if(tempoDeAtaque < DuracaoDeAtaque)
+        {
+            AttackTrigger.SetActive(true);
+            Attacked = true;
+   
+        }
+        else
+        {
+            Attacked= false;
+            AttackTrigger.SetActive(false);
+            tempoTonto = 0;
+            status = GuardianStatus.desativado;
+        }
+
+
+    }
+    private void Tonto()
+    {
+        tempoTonto += Time.deltaTime;
+        if (tempoTonto< TempoEsperaTonto)
+        {
+            Debug.Log("Aquii");
+            
+        }
+        else
+        {
+            status = GuardianStatus.CheckPlayerDistance;
+            Debug.Log("eu");
+        }
     }
     public void JumpAtPlayer()
     {
-        if (m_Grounded && !jumped)
+        TempoPular += Time.deltaTime;
+        if (TempoPular < tempoParaPular)
         {
-            float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
-            rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
-            jumped = true;
+
 
         }
-    }
-    public IEnumerator DisableJump(float jumpCoolDown)
-    {
-        yield return new WaitForSeconds(jumpCoolDown);
+        else if(jumped ==false)
+        {
+            float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
+            if(m_Grounded)
+            {
+                rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+                jumped = true;
+            }
 
-        status = GuardianStatus.desativado;
-        jumped = false;
 
+        }
 
+        if(m_Grounded && jumped)
+        {
+            TempoPular = 0;
+            status = GuardianStatus.desativado;
+            tempoTonto = 0;
+            jumped= false;
+        }
     }
 
     public void LookAtPlayer()
@@ -144,6 +203,12 @@ public class GuardianBehavior : MonoBehaviour
             float angle = Mathf.Atan2(0f, look.x) * Mathf.Rad2Deg;
 
             transform.Rotate(0f, angle, 0f);
+
+            lookingRight = false;
+        }
+        else
+        {
+            lookingRight = true;
         }
 
     }
