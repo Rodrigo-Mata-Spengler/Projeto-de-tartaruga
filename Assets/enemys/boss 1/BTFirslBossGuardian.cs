@@ -1,71 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BTFirslBossGuardian : MonoBehaviour
 {
+    [Header("Ground")]
+    [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
+    [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
+    const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+    public bool m_Grounded;            // Whether or not the player is grounded.
+
+    [Header("Events")]
+    public UnityEvent OnLandEvent;
+
     private Rigidbody2D rb;
-    [Space]
-    [Header("Circle Cast Variables")]
-    public float radius;//trigger area
     public bool PlayerClose = false;// detecte if a Player was inside
-    Vector2 direction;
-    public LayerMask PlayerLayer;
-    public bool JumpInPlayer = false;
 
     [Header("LookAt")]
     [HideInInspector] public GameObject PlayerTransform;
-    public float ChaseSpeed;
     [Space]
     public bool lookAt;
-    public bool AttackPlayer;
-    public bool Chase;
-    public bool jump;
 
-    [Space]
-    [Header("Hit feedback")]
-    public bool wasHit = false;
-    public float impulseForce;
-    public float secondsToDisable;
-
+  
     [Space]
     [Header("Attack")]
+    public bool AttackPlayer;
     public GameObject AttackTrigger;
-    public float TimeToAttackwhileClose;
+    public float AttackDelay;
     public bool Attacked = false;
     public float AttackDuration;
+    public bool Attacking = false;  
+
     [Space]
-    [HideInInspector]public int AttackOrJumpPorcentage;
+    [Header("Jump")]
     public float jumpHeight;
-    
+    public float jumpAgainTime;
+    public bool jumped = false;
+    public float JumpDelay;
+    public bool WaitToJumpAgain = false;
+
+
+
     private void Start()
     {
+    
         PlayerTransform = GameObject.FindGameObjectWithTag("Player");
         rb = this.GetComponent<Rigidbody2D>();
+
         StartCoroutine(FindTargetsWithDelay(0.01f));
 
+        BTselector Selector1 = new BTselector();
+        Selector1.children.Add(new JumpAtPlayer());
+        Selector1.children.Add(new AttackPlayer());
 
-        //BTselector Selector2 = new BTselector();
-        //Selector2.children.Add(new PlayerClose());
-        //Selector2.children.Add(new ChasePlayerFirsBoss());
-
-        BTsequence Sequence1 = new BTsequence();
-        Sequence1.children.Add(new JumpOrChase());
-        Sequence1.children.Add(new JumpAtPlayer());
-        //Sequence1.children.Add(Selector2);
-        //Sequence1.children.Add(new AttackPlayer());
 
         BehaviorTree bt = GetComponent<BehaviorTree>();
-        bt.root = Sequence1;
+        bt.root = Selector1;
 
         StartCoroutine(bt.Execute());
-    }
-
-    public void JumpAtPlayer()
-    {
-        float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
-
-        rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
     }
 
     IEnumerator FindTargetsWithDelay(float delay)
@@ -73,32 +66,47 @@ public class BTFirslBossGuardian : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(delay);
-            AreaToAwakeEnemy();
-
+            
             if (lookAt)
             {
                 LookAtPlayer();
             }
-            if (wasHit)
+            if (Attacked)
             {
-                rb.AddForce((transform.right * -1) * impulseForce);
-                StartCoroutine(DisableHitFeedback(secondsToDisable));
+                StartCoroutine(Attack(AttackDelay));
             }
-            if(Attacked)
+            else if(Attacking) 
             {
                 StartCoroutine(DisableAttackTrigger(AttackDuration));
             }
-            if(PlayerClose == false && Chase == false && JumpInPlayer)
+            if(jumped)
             {
-                AttackOrJumpPorcentage = Random.Range(0,100);
+                StartCoroutine(Jump(JumpDelay));
+            }
+            else if(WaitToJumpAgain)
+            {
+                StartCoroutine(CanJumpAgainDelay(jumpAgainTime));
             }
 
         }
     }
-    private IEnumerator DisableHitFeedback(float seconds)
+    private void FixedUpdate()
     {
-        yield return new WaitForSeconds(seconds);
-        wasHit = false;
+        bool wasGrounded = m_Grounded;
+        m_Grounded = false;
+
+        // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
+        // This can be done using layers instead but Sample Assets will not overwrite your project settings.
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject)
+            {
+                m_Grounded = true;
+                if (!wasGrounded)
+                    OnLandEvent.Invoke();
+            }
+        }
     }
     public void LookAtPlayer()
     {
@@ -107,43 +115,36 @@ public class BTFirslBossGuardian : MonoBehaviour
 
         transform.Rotate(0f, angle, 0f);
     }
+    public IEnumerator Attack(float AttackDelay)
+    {
+        Attacked = false;
+        yield return new WaitForSeconds(AttackDelay);
+        AttackTrigger.SetActive(true);
+        Attacking= true;
+
+    }
+    private IEnumerator CanJumpAgainDelay(float JumpAgainTime)
+    {
+        yield return new WaitForSeconds(JumpAgainTime);
+        jumped= false;
+        WaitToJumpAgain = false;
+    }
     public IEnumerator DisableAttackTrigger(float AttackDuration)
     {
         yield return new WaitForSeconds(AttackDuration);
         Attacked = false;
+        Attacking = false;
         AttackTrigger.SetActive(false);
+
     }
-    public void AreaToAwakeEnemy()
+    public IEnumerator Jump(float JumpDelay)
     {
-        direction = Vector2.zero;
-
-        //creates the box cast(trigger)
-        RaycastHit2D CircleInfo = Physics2D.CircleCast(gameObject.GetComponent<Renderer>().bounds.center, radius, direction);
-
-        //checks if the player is inside the area
-        if (CircleInfo.collider.CompareTag("Player") && !PlayerClose)
-        {
-            PlayerClose = true;
-            lookAt = true;
-
-        }
-        if (CircleInfo.collider.gameObject.tag == "Player" && PlayerClose)
-        {
-
-            AttackPlayer = true;
-            Chase = false;
-            JumpInPlayer = false;
-        }
-        if (CircleInfo.collider.gameObject.tag != "Player" && PlayerClose && AttackPlayer == true)
-        {
-            Chase = true;
-            AttackPlayer = false;
-        }
-    }
-    public void OnDrawGizmosSelected()
-    {
-        //Draw the box on unity
-        Gizmos.DrawWireSphere(gameObject.GetComponent<Renderer>().bounds.center, radius);
+        jumped = false;
+        yield return new WaitForSeconds(JumpDelay);
+        float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
+        rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+        WaitToJumpAgain = true;
+        
 
     }
 }

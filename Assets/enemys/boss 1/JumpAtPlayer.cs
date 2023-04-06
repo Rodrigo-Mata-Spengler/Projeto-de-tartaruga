@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class JumpAtPlayer : BTnode
@@ -9,21 +10,24 @@ public class JumpAtPlayer : BTnode
         status = Status.RUNNING;
         Print();
 
-        bool jumpInPlayer = bt.GetComponent<BTFirslBossGuardian>().JumpInPlayer = true;
-        bool Chase = bt.GetComponent<BTFirslBossGuardian>().Chase = true;
+        bool PlayerClose = bt.GetComponent<BTFirslBossGuardian>().PlayerClose;
+        bool Attacked = bt.GetComponent<BTFirslBossGuardian>().Attacked;
+        bool grounded = bt.GetComponent<BTFirslBossGuardian>().m_Grounded;
 
-        if (jumpInPlayer)
+        if (!PlayerClose && !Attacked && grounded )
         {
             //do the jump
-            bt.GetComponent<BTFirslBossGuardian>().JumpAtPlayer();
+            bt.GetComponent<BTFirslBossGuardian>().jumped = true;
             status = Status.SUCCESS;
+            yield break;
 
         }
-        if (Chase)
+        else
         {
-            status = Status.SUCCESS;
+            status = Status.FAILURE;
+            yield break;
         }
+
         Print();
-        yield break;
     }
 }

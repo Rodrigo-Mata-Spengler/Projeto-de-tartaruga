@@ -9,26 +9,27 @@ public class AttackPlayer : BTnode
         status = Status.RUNNING;
         Print();
 
-        GameObject AttackTrigger = bt.GetComponent<BTFirslBossGuardian>().AttackTrigger;
         bool PlayerClose = bt.GetComponent<BTFirslBossGuardian>().PlayerClose;
-        float TimeToAttack = bt.GetComponent<BTFirslBossGuardian>().TimeToAttackwhileClose;
         bool Attacked = bt.GetComponent<BTFirslBossGuardian>().Attacked;
+        bool grounded = bt.GetComponent<BTFirslBossGuardian>().m_Grounded;
+        float AttackDelay = bt.GetComponent<BTFirslBossGuardian>().AttackDelay;
+        bool jumped = bt.GetComponent<BTFirslBossGuardian>().jumped;
 
 
-        while (PlayerClose && Attacked == false)
+        if (PlayerClose && Attacked == false && grounded && !jumped)
         {
-            WaitToAttack(TimeToAttack);
-            AttackTrigger.SetActive(true);
+            bt.GetComponent<BTFirslBossGuardian>().Attacked = true;
             status = Status.SUCCESS;
-
+            yield break;
+        }
+        else
+        {
+            status = Status.FAILURE;
+            yield break;
         }
 
 
         Print();
-        yield break;
-    }
-    IEnumerator WaitToAttack(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
+
     }
 }
