@@ -5,12 +5,7 @@ using UnityEngine;
 
 public class NoYTigger : MonoBehaviour
 {
-
-    [Header("Box Cast Variables")]
-    public Vector3 Area;//trigger area
     public bool Detected = false;// detecte if a enemy was inside
-    public Transform Target; // Player transform
-     Vector2 direction;
 
 
     [Header("render camera")]
@@ -45,46 +40,39 @@ public class NoYTigger : MonoBehaviour
         YScreenY += CameraYMov;
         FramingTransposer = CinemachineCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
     }
-    public void Update()
+    private void Update()
     {
-        Vector2 targetPos = Target.position;
-
-        direction = targetPos - (Vector2)transform.position;
-
-        //creates the box cast(trigger)
-        RaycastHit2D BoxInfo = Physics2D.BoxCast(gameObject.GetComponent<Renderer>().bounds.center,Area,0f, Area);
-
-        //checks if the player is inside the area
-        if (BoxInfo.collider.gameObject.tag == "Player")
+        if(Detected)
         {
-            Detected = true;
-            Debug.DrawLine(transform.position, targetPos);
-
             //do the lerp
-            if(LerpElapsedTime < DesireLerpDuration)
+            if (LerpElapsedTime < DesireLerpDuration)
             {
                 Lerp();
             }
-            
 
         }
-        //checks if the player is out of the area
-        else if (BoxInfo.collider.gameObject.tag != "Player" && Detected == true)
+        if(!Detected)
         {
-            //go back to the normal values of the camera
             if (UnlerpElapsedTime < DesireLerpDuration)
             {
                 UnLerp();
             }
-
         }
     }
-
-    public void OnDrawGizmosSelected()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        //Draw the box on unity
-        Gizmos.DrawWireCube(gameObject.GetComponent<Renderer>().bounds.center, Area);
+        if (collision.CompareTag("Player"))
+        {
 
+            Detected = false;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Detected = true;
+        }
     }
 
     private void Lerp()
@@ -109,19 +97,15 @@ public class NoYTigger : MonoBehaviour
         //Lerp the values from no Y movment values to normal values
         LerpElapsedTime = 0f;
 
-        if (Detected == true)
-        {
-            UnlerpElapsedTime += Time.deltaTime;
+        UnlerpElapsedTime += Time.deltaTime;
 
-            float percentageComplete = UnlerpElapsedTime / DesireLerpDuration;
+        float percentageComplete = UnlerpElapsedTime / DesireLerpDuration;
 
-            FramingTransposer.m_SoftZoneHeight = Mathf.Lerp(YSoftZoneHeight, NormSoftZoneHeight, percentageComplete);
+        FramingTransposer.m_SoftZoneHeight = Mathf.Lerp(YSoftZoneHeight, NormSoftZoneHeight, percentageComplete);
 
-            FramingTransposer.m_DeadZoneHeight = Mathf.Lerp(YDeadZoneHeight, NormDeadZoneHeight, percentageComplete);
+        FramingTransposer.m_DeadZoneHeight = Mathf.Lerp(YDeadZoneHeight, NormDeadZoneHeight, percentageComplete);
 
-            FramingTransposer.m_ScreenY = Mathf.Lerp(YScreenY, NormScreenY, percentageComplete);
-
-        }
+        FramingTransposer.m_ScreenY = Mathf.Lerp(YScreenY, NormScreenY, percentageComplete);
 
     }
 }

@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1383954268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383954269}
+  - component: {fileID: 1383954271}
+  - component: {fileID: 1383954270}
+  m_Layer: 8
+  m_Name: playerCloseTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1383954269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383954268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 484018159787737978}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1383954271
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383954268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7.01
+--- !u!114 &1383954270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383954268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4bc831aeb4b764292e5c53c5a5b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossBehaviourScript: {fileID: 5287758271197617117}
 --- !u!1 &1426845998
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +171,7 @@ Transform:
   - {fileID: 6566133215279601596}
   - {fileID: 6566133213932611491}
   - {fileID: 1426845999}
+  - {fileID: 1383954269}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -215,21 +278,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   status: 5
   StartFight: 0
-  radius: 4.04
   PlayerClose: 0
-  PlayerLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  lookingRight: 0
   PlayerTransform: {fileID: 0}
-  Chase: 0
-  ChaseSpeed: 6.07
-  AttackOrJumpPorcentage: 0
-  jumpHeight: 34.2
-  jump: 0
+  jumpHeight: 20
+  jumped: 0
+  TempoPular: 0
+  tempoParaPular: 1
   AttackTrigger: {fileID: 6566133215279601597}
   Attacked: 0
-  WaitToAttackTime: 0.36
-  AttackDuration: 0.12
+  AttackImpulse: 30
+  DuracaoDeAtaque: 2.28
+  tempoDeAtaque: 0
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -238,6 +298,8 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
+  tempoTonto: 0
+  TempoEsperaTonto: 1
 --- !u!114 &5287758271197617120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566133215279601597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.72, y: -0.29, z: 0}
+  m_LocalPosition: {x: 0.57, y: -0.07, z: 0}
   m_LocalScale: {x: 18.51, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fa976a4fe6a714892fe318dcf8b809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 2.59, y: 1.02}
+  Area: {x: 4.22, y: 3.29}
   Detected: 0
   rb: {fileID: 484018159787737977}
   impulseForce: 400

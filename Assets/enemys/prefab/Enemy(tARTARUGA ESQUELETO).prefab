@@ -15,13 +15,14 @@ GameObject:
   - component: {fileID: 167771294725654404}
   - component: {fileID: 167771294725654427}
   - component: {fileID: 167771294725654406}
+  - component: {fileID: 1534872629}
   m_Layer: 8
   m_Name: Enemy(tARTARUGA ESQUELETO)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &167771294725654426
 Transform:
   m_ObjectHideFlags: 0
@@ -160,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95842cc188569f345a4a62c1989d0158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3.77
+  radius: 3.34
   AwakeWhenPlayerClose: 0
   PlayerLayer:
     serializedVersion: 2
@@ -170,9 +171,6 @@ MonoBehaviour:
   lookAt: 0
   AttackPlayer: 0
   Chase: 0
-  wasHit: 0
-  impulseForce: 60
-  secondsToDisable: 0.15
 --- !u!114 &167771294725654406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,3 +185,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 200
   currentHealth: 0
+--- !u!114 &1534872629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167771294725654431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasHit: 0
+  impulseForce: 60
+  secondsToDisable: 0.15

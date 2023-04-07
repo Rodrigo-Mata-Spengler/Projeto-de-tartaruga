@@ -35,6 +35,7 @@ public class CameraFollowObject : MonoBehaviour
     public bool CanLookUporDown = false;
     public float LerpTimeDurationUpAndDown = 3f;
     public float LerpElapsedTimeUpAndDown = 0f;
+    public bool StopLerp = false;
     [SerializeField]
     private AnimationCurve curveUpAndDown;
 
@@ -152,10 +153,12 @@ public class CameraFollowObject : MonoBehaviour
 
         float percentageComplete = LerpElapsedTime / DesireLerpDuration;
 
-        transform.position = Vector3.Lerp(transform.position, PlayerObj.transform.position, curve.Evaluate(percentageComplete));
+        transform.position = Vector3.Lerp(transform.position, PlayerObj.transform.position, percentageComplete);
 
-        if (LerpElapsedTime >= 1f)
+        if (LerpElapsedTime >1.5f)
         {
+            this.GetComponent<CameraFollowObject>().enabled = true;
+            StopLerp = true;
             FollowPlayer = true;
             LookedUpOrDown = false;
             PlayerMovmentScript.enabled = true;
