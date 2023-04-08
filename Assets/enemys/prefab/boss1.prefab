@@ -424,13 +424,14 @@ GameObject:
   - component: {fileID: 6566133215279601596}
   - component: {fileID: 6566133215279601594}
   - component: {fileID: 53501527}
+  - component: {fileID: 1547352175}
   m_Layer: 8
   m_Name: AtaqueHitBoxEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6566133215279601596
 Transform:
   m_ObjectHideFlags: 0
@@ -510,9 +511,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fa976a4fe6a714892fe318dcf8b809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 4.22, y: 3.29}
   Detected: 0
   rb: {fileID: 484018159787737977}
   impulseForce: 400
   EnemyimpulseForce: 400
   Damage: 0
+--- !u!61 &1547352175
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6566133215279601597}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.058296364, y: 0.027056787}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.42, y: 0.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.11744516, y: 0.2797079}
+  m_EdgeRadius: 0

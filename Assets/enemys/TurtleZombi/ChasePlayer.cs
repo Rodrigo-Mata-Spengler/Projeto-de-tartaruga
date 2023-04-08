@@ -9,27 +9,26 @@ public class ChasePlayer : BTnode
     {
         status = Status.RUNNING;
         Print();
-
         GameObject Player = bt.GetComponent<BTZombiTurtle>().PlayerTransform;
         float ChaseSpeed = bt.GetComponent<BTZombiTurtle>().ChaseSpeed;
-        bool Chase = bt.GetComponent<BTZombiTurtle>().Chase;
-        bool Attack = bt.GetComponent<BTZombiTurtle>().AttackPlayer;
+        bool PlayerClose = bt.GetComponent<BTZombiTurtle>().PlayerClose;
 
-        if (Attack)
-        {
-            status = Status.SUCCESS;
-            
-        }
-        while (Chase && Attack == false)
-        {
 
+        while (!PlayerClose)
+        {
+            bt.GetComponent<BTZombiTurtle>().lookAt = true;
             bt.transform.position = Vector2.MoveTowards(bt.transform.position, Player.transform.position, ChaseSpeed * Time.deltaTime);
-            Debug.LogWarning("aquii");
 
+            if (bt.GetComponent<BTZombiTurtle>().PlayerClose)   
+            {
+                status = Status.SUCCESS;
+                Debug.LogWarning("aquii");
+                break;
+                
+            }
+            
             yield return null;
         }
-    
-
 
         Print();
         yield break;
