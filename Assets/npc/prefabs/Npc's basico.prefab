@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7869436001391705309}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -402.41684, y: -371.6726, z: 3.1333656}
   m_LocalScale: {x: 5.6757, y: 5.6757, z: 5.6757}
   m_ConstrainProportionsScale: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   - Your body is beggin...
   typingSpeed: 0.04
   textLocation: 0
+  StartTyping: 0
   playerDetected: 0
 --- !u!61 &7869436001391705895
 BoxCollider2D:

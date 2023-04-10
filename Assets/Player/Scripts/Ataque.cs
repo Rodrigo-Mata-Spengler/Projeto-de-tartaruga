@@ -54,6 +54,7 @@ public class Ataque : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             Detected = true;

@@ -286,8 +286,9 @@ MonoBehaviour:
   TempoPular: 0
   tempoParaPular: 1
   AttackTrigger: {fileID: 6566133215279601597}
+  AttackCollider: {fileID: 1547352175}
   Attacked: 0
-  AttackImpulse: 30
+  AttackImpulse: 10
   DuracaoDeAtaque: 2.28
   tempoDeAtaque: 0
   m_WhatIsGround:
@@ -299,7 +300,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   tempoTonto: 0
-  TempoEsperaTonto: 1
+  TempoEsperaTonto: 1.39
 --- !u!114 &5287758271197617120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wasHit: 0
-  impulseForce: 10
   secondsToDisable: 0.1
 --- !u!1 &6566133213932611492
 GameObject:
@@ -431,7 +431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6566133215279601596
 Transform:
   m_ObjectHideFlags: 0
@@ -513,9 +513,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Detected: 0
   rb: {fileID: 484018159787737977}
-  impulseForce: 400
-  EnemyimpulseForce: 400
-  Damage: 0
+  impulseForce: 0
+  ImpulseForceOnPlayer: 500
+  Damage: 1
 --- !u!61 &1547352175
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 665321756}
   - component: {fileID: 665321758}
   - component: {fileID: 665321757}
+  - component: {fileID: 6748649184531703271}
   m_Layer: 3
   m_Name: AtaqueUpHitBox
   m_TagString: Untagged
@@ -45,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 1.12, y: 2.42}
   Detected: 0
   rb: {fileID: 6748649182909457862}
+  DamageAmount: 0
   up: 0
   down: 0
   right: 0
@@ -105,6 +106,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6748649184531703271
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665321755}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.005429402, y: 0.003879957}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.42, y: 0.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.26045138, y: 0.112330884}
+  m_EdgeRadius: 0
 --- !u!1 &1386716082
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +143,7 @@ GameObject:
   - component: {fileID: 1386716083}
   - component: {fileID: 1386716085}
   - component: {fileID: 1386716084}
+  - component: {fileID: 6748649184531703270}
   m_Layer: 3
   m_Name: AtaqueDownHitBox
   m_TagString: Untagged
@@ -150,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 1.13, y: 2.51}
   Detected: 0
   rb: {fileID: 6748649182909457862}
+  DamageAmount: 0
   up: 0
   down: 0
   right: 0
@@ -210,6 +238,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6748649184531703270
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386716082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.006770283, y: 0.0127384085}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.42, y: 0.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2466551, y: 0.11020428}
+  m_EdgeRadius: 0
 --- !u!1 &2001907970
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +275,7 @@ GameObject:
   - component: {fileID: 2001907971}
   - component: {fileID: 2001907972}
   - component: {fileID: 2001907973}
+  - component: {fileID: 6748649184531703272}
   m_Layer: 3
   m_Name: AtaqueHitBox
   m_TagString: Untagged
@@ -255,9 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Area: {x: 2.59, y: 1.02}
   Detected: 0
   rb: {fileID: 6748649182909457862}
+  DamageAmount: 10
   up: 0
   down: 0
   right: 0
@@ -315,6 +370,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6748649184531703272
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001907970}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0054622367, y: -0.0015203878}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.42, y: 0.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.12607786, y: 0.22993551}
+  m_EdgeRadius: 0
 --- !u!1 &2021795255
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +447,7 @@ GameObject:
   - component: {fileID: 2011585483}
   - component: {fileID: 2011585474}
   - component: {fileID: 1622245426}
+  - component: {fileID: 8033661058447654777}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -571,7 +653,7 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.027168274, y: -0.033439398}
   m_Size: {x: 1.0381927, y: 1.9899564}
@@ -603,8 +685,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959a9c8d7489f6247a357a8057351a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthSlider: {fileID: 0}
   lifeBar: 5
+  lifeImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!96 &2011585483
 TrailRenderer:
   serializedVersion: 2
@@ -742,8 +829,121 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wasHit: 0
-  impulseForce: 60
-  secondsToDisable: 0.1
+  secondsToDisable: 0.15
+--- !u!114 &8033661058447654777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748649182909457857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd438dd108a0f284aa931a2da434f1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: -1
+    m_ImpulseShape: 4
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.5141509
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.1748681
+        value: 0.01638324
+        inSlope: -0.035536733
+        outSlope: -0.035536733
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33100185
+        outWeight: 0.20733938
+      - serializedVersion: 3
+        time: 0.49879873
+        value: 0.8316942
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.78696537
+        value: 0.28114408
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9299633
+        value: 0.5750935
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.5117925
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.15
+    m_ImpulseType: 1
+    m_DissipationRate: 1
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 88.3
+    m_PropagationSpeed: 345.24
+  m_DefaultVelocity: {x: 0.2, y: 0.6, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_UseImpactDirection: 1
+  m_ScaleImpactWithMass: 0
+  m_ScaleImpactWithSpeed: 0
 --- !u!1 &6748649183191431198
 GameObject:
   m_ObjectHideFlags: 0

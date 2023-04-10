@@ -31,8 +31,10 @@ public class GuardianBehavior : MonoBehaviour
     [Space]
     [Header("Attack")]
     public GameObject AttackTrigger;
+    [SerializeField] private BoxCollider2D AttackCollider;
     public bool Attacked = false;
     public float AttackImpulse;
+
 
     [SerializeField] private float DuracaoDeAtaque= 0;
     public float tempoDeAtaque = 0f;
@@ -95,8 +97,9 @@ public class GuardianBehavior : MonoBehaviour
         {
             status = GuardianStatus.Attack;
             tempoDeAtaque = 0;
+            AttackCollider.enabled = true;
 
-            if(lookingRight)
+            if (lookingRight)
             {
                 rb.AddForce(new Vector2(AttackImpulse, transform.position.y), ForceMode2D.Impulse);
             }
@@ -140,6 +143,7 @@ public class GuardianBehavior : MonoBehaviour
         {
             AttackTrigger.SetActive(true);
             Attacked = true;
+            
    
         }
         else
@@ -204,6 +208,10 @@ public class GuardianBehavior : MonoBehaviour
 
             transform.Rotate(0f, angle, 0f);
 
+            
+        }
+        if (transform.eulerAngles.y > 100)
+        {
             lookingRight = false;
         }
         else

@@ -8,7 +8,7 @@ public class PlayerHitFeedback : MonoBehaviour
     [Space]
     [Header("Hit feedback")]
     public bool wasHit = false;
-    public float impulseForce;
+
     public float secondsToDisable;
 
     private void Start()
@@ -19,7 +19,6 @@ public class PlayerHitFeedback : MonoBehaviour
     {
         if (wasHit)
         {
-            rb.AddForce((transform.right * -1) * impulseForce);
             StartCoroutine(DisableHitFeedback(secondsToDisable));
         }
     }

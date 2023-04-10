@@ -50,7 +50,7 @@ MonoBehaviour:
   PlayerOnAir: 0
   PlayerMoving: 0
   FlipYRotationTime: 0.5
-  DesireLerpDuration: 7
+  DesireLerpDuration: 30
   LerpElapsedTime: 0
   curve:
     serializedVersion: 2
@@ -82,6 +82,7 @@ MonoBehaviour:
   CanLookUporDown: 0
   LerpTimeDurationUpAndDown: 4.21
   LerpElapsedTimeUpAndDown: 0
+  StopLerp: 0
   curveUpAndDown:
     serializedVersion: 2
     m_Curve:

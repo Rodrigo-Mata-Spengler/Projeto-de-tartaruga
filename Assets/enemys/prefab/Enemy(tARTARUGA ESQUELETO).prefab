@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.24
+  m_Radius: 1.33
 --- !u!114 &975788407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,8 +89,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001878696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1252, y: 0.0024, z: 0}
-  m_LocalScale: {x: 4.195464, y: 11.755586, z: 1.3712}
+  m_LocalPosition: {x: 1.1712, y: 0.0024, z: 0}
+  m_LocalScale: {x: 5.9604955, y: 11.755586, z: 1.3712}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 167771294725654426}
@@ -161,10 +161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Detected: 0
-  rb: {fileID: 0}
-  impulseForce: 400
-  EnemyimpulseForce: 400
-  Damage: 0
+  rb: {fileID: 167771294725654404}
+  impulseForce: 10
+  ImpulseForceOnPlayer: 500
+  Damage: 1
 --- !u!61 &1001878698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0006361082, y: 0.0005385503}
+  m_Offset: {x: 0.027698532, y: 0.0005385503}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -189,7 +189,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15872778, y: 0.1334671}
+  m_Size: {x: 0.21539706, y: 0.1334671}
   m_EdgeRadius: 0
 --- !u!1 &167771294725654431
 GameObject:
@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &167771294725654426
 Transform:
   m_ObjectHideFlags: 0
@@ -354,12 +354,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95842cc188569f345a4a62c1989d0158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   PlayerClose: 0
+  lookingRight: 0
   PlayerTransform: {fileID: 0}
   ChaseSpeed: 5.72
-  lookAt: 0
-  WaitTimeToAttack: 0
-  AttackDuration: 0
+  lookAt: 1
+  CloseTrigger: {fileID: 975788405}
+  AttackHitBoxEnemy: {fileID: 1001878696}
+  WaitTimeToAttack: 1.83
+  AttackDuration: 0.38
 --- !u!114 &167771294725654406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,7 +371,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167771294725654431}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec3b4687d64a750468849053279f5f6c, type: 3}
   m_Name: 
@@ -381,11 +385,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167771294725654431}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wasHit: 0
-  impulseForce: 20
   secondsToDisable: 0.15
