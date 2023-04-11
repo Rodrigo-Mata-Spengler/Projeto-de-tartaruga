@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-enum GuardianStatus { desativado, Attack, DisableAttack, Jump, CheckPlayerDistance };
+enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer, JumpAtEdge ,Dash, CheckPlayerDistance };
 public class GuardianBehavior : MonoBehaviour
 {
     [Header("Status")]
@@ -19,7 +19,7 @@ public class GuardianBehavior : MonoBehaviour
     public bool lookingRight = false;
 
     [Header("LookAt")]
-    [HideInInspector] public GameObject PlayerTransform;
+    [HideInInspector] public GameObject PlayerObj;
     [Space]
 
     [Header("Jump")]
@@ -46,15 +46,24 @@ public class GuardianBehavior : MonoBehaviour
     public bool m_Grounded;            // Whether or not the player is grounded.
 
 
+    [Header("Dash")]
+    private int EdgeIndex;
+    [SerializeField] private GameObject[] EdgeRooms;
+    [SerializeField] private bool dash = false;
+    public float CurrentTimeDash = 0;
+    [SerializeField] private float TimeToDoDash;
+    public float DashImpulse;
+
     [HideInInspector]public UnityEvent OnLandEvent;
 
+    [Header("Tonto")]
     public float tempoTonto = 0;
     [SerializeField] private float TempoEsperaTonto = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerTransform = GameObject.FindGameObjectWithTag("Player");
+        PlayerObj = GameObject.FindGameObjectWithTag("Player");
         rb = this.GetComponent<Rigidbody2D>();
 
     }
@@ -77,13 +86,21 @@ public class GuardianBehavior : MonoBehaviour
                 PlayerDistance();
                 break;
 
-            case GuardianStatus.Jump:
+            /*case GuardianStatus.JumpAtPlayer:
                 JumpAtPlayer();
+                break;*/
+
+            case GuardianStatus.JumpAtEdge:
+                JumpAtEdge();
                 break;
 
-            case GuardianStatus.Attack:
-                AttackPlayer();
+            case GuardianStatus.Dash:
+                Dash();
                 break;
+
+                /*case GuardianStatus.Attack:
+                    AttackPlayer();
+                    break;*/
 
         }
 
@@ -93,6 +110,7 @@ public class GuardianBehavior : MonoBehaviour
     }
     private void PlayerDistance()
     {
+        
         if(PlayerClose)
         {
             status = GuardianStatus.Attack;
@@ -103,18 +121,20 @@ public class GuardianBehavior : MonoBehaviour
             {
                 rb.AddForce(new Vector2(AttackImpulse, transform.position.y), ForceMode2D.Impulse);
             }
-            if(!lookingRight)
+            if (!lookingRight)
             {
                 rb.AddForce(new Vector2(-AttackImpulse, transform.position.y), ForceMode2D.Impulse);
             }
-
-
         }
         else
         {
-            status = GuardianStatus.Jump;
+            EdgeIndex = Random.Range(0, 2);
+            Debug.Log(EdgeIndex);
+            status = GuardianStatus.JumpAtPlayer;
             TempoPular = 0;
         }
+        
+
     }
 
     private void FixedUpdate()
@@ -153,57 +173,102 @@ public class GuardianBehavior : MonoBehaviour
             tempoTonto = 0;
             status = GuardianStatus.desativado;
         }
-
-
     }
     private void Tonto()
     {
         tempoTonto += Time.deltaTime;
         if (tempoTonto< TempoEsperaTonto)
         {
-            Debug.Log("Aquii");
             
         }
         else
         {
             status = GuardianStatus.CheckPlayerDistance;
-            Debug.Log("eu");
+
         }
     }
-    public void JumpAtPlayer()
+    public void JumpAtPlayer(GameObject Landpoint)
     {
         TempoPular += Time.deltaTime;
         if (TempoPular < tempoParaPular)
         {
 
-
         }
         else if(jumped ==false)
         {
-            float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
+            float distanceFromPlayer = PlayerObj.transform.position.x - transform.position.x;
             if(m_Grounded)
             {
                 rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
-                jumped = true;
+                jumped = true;               
             }
-
-
         }
 
-        if(m_Grounded && jumped)
+        if (m_Grounded && jumped)
         {
             TempoPular = 0;
             status = GuardianStatus.desativado;
             tempoTonto = 0;
-            jumped= false;
+            jumped = false;
+
+        }
+
+    }
+    public void JumpAtEdge()
+    {
+        float tempoParaChecar = 0;
+
+        TempoPular += Time.deltaTime;
+        if (TempoPular < tempoParaPular)
+        {
+
+        }
+        else if (jumped == false)
+        {
+            float distanceFromPlayer = EdgeRooms[EdgeIndex].transform.position.x - transform.position.x;
+            if (m_Grounded)
+            {
+                rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+                jumped = true;
+                tempoParaChecar += Time.deltaTime;
+            }
+        }
+        if (m_Grounded && jumped && tempoParaChecar > 1f)
+        {
+            status = GuardianStatus.Dash;
+            tempoTonto = 0;
+            jumped = false;
+            tempoParaChecar = 0;
+        }
+
+    }
+    private void Dash()
+    {
+        CurrentTimeDash += Time.deltaTime;
+
+        if(CurrentTimeDash < TimeToDoDash)
+        {
+            AttackTrigger.SetActive(true);
+            if (lookingRight)
+            {
+                rb.AddForce(new Vector2(DashImpulse, transform.position.y), ForceMode2D.Impulse);
+            }
+            if (!lookingRight)
+            {
+                rb.AddForce(new Vector2(-DashImpulse, transform.position.y), ForceMode2D.Impulse);
+            }
+        }
+        if(CurrentTimeDash >= TimeToDoDash) 
+        {
+            status = GuardianStatus.desativado;
+            dash = false;
         }
     }
-
     public void LookAtPlayer()
     {
         if(status == GuardianStatus.desativado && Attacked == false || Attacked == false)
         {
-            Vector3 look = transform.InverseTransformPoint(PlayerTransform.transform.position);
+            Vector3 look = transform.InverseTransformPoint(PlayerObj.transform.position);
             float angle = Mathf.Atan2(0f, look.x) * Mathf.Rad2Deg;
 
             transform.Rotate(0f, angle, 0f);
