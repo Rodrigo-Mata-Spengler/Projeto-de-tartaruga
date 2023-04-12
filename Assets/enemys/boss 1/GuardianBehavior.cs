@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-enum GuardianStatus { desativado, Chase, Attack, DisableAttack, Jump };
+enum GuardianStatus { desativado, Attack, DisableAttack, Jump };
 public class GuardianBehavior : MonoBehaviour
 {
     [Header("Status")]
@@ -14,23 +15,17 @@ public class GuardianBehavior : MonoBehaviour
 
     private Rigidbody2D rb;
     [Space]
-    [Header("Circle Cast Variables")]
-    public float radius;//trigger area
     public bool PlayerClose = false;// detecte if a Player was inside
-    Vector2 direction;
-    public LayerMask PlayerLayer;
+
 
     [Header("LookAt")]
     [HideInInspector] public GameObject PlayerTransform;
     [Space]
 
-    [Header("Chase")]
-    public bool Chase;
-    public float ChaseSpeed;
-    public int AttackOrJumpPorcentage;
     [Header("Jump")]
     public float jumpHeight;
-    public bool jump;
+    public bool jumped;
+    public float LandJumpCoolDown;
 
     [Space]
     [Header("Attack")]
@@ -38,6 +33,7 @@ public class GuardianBehavior : MonoBehaviour
     public bool Attacked = false;
     public float WaitToAttackTime;
     public float AttackDuration;
+    public float CoolDownToNextAttack;
 
     [Header("Ground")]
     [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
@@ -65,20 +61,9 @@ public class GuardianBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CircleTrigger();
-
-        LookAtPlayer();
-
-        if(PlayerClose)
-        {
-            status = GuardianStatus.Attack;
-        }
 
         switch (status)
         {
-            case GuardianStatus.Chase:
-                ChasePlayer();
-                break;
 
             case GuardianStatus.Jump:
                 JumpAtPlayer();
@@ -87,27 +72,23 @@ public class GuardianBehavior : MonoBehaviour
             case GuardianStatus.Attack:
                 if(!Attacked)
                 {
-                    StartCoroutine(AttackPlayer(WaitToAttackTime));
+                    //StartCoroutine(AttackPlayer(WaitToAttackTime));
                 }
                 break;
+            case GuardianStatus.DisableAttack:
+                StartCoroutine(DisableAttack(AttackDuration, CoolDownToNextAttack));
+                break;
 
-           // case GuardianStatus.DisableAttack:
-                //StartCoroutine(DisableAttack(AttackDuration));
-               // break;
+            case GuardianStatus.desativado:
+                break;
         }
-        if(Attacked)
-        {
-            StartCoroutine(DisableAttack(AttackDuration));
-        }
+
+        LookAtPlayer();
+
+
     }
 
-    private int Porcentage()
-    {
-        AttackOrJumpPorcentage = Random.Range(0, 100);
-        Debug.Log("euuuuu");
-        return AttackOrJumpPorcentage;
 
-    }
     private void FixedUpdate()
     {
         bool wasGrounded = m_Grounded;
@@ -126,47 +107,38 @@ public class GuardianBehavior : MonoBehaviour
             }
         }
     }
-    public IEnumerator AttackPlayer(float WaitToAttack)
-    {
-        yield return new WaitForSeconds(WaitToAttack);
-        AttackTrigger.SetActive(true);
-        Attacked = true;
-        status = GuardianStatus.DisableAttack;
 
-    }
-    public IEnumerator DisableAttack( float AttackDuration)
+    public IEnumerator DisableAttack( float AttackDuration, float CoolDownToDesactivated)
     {
-        yield return new WaitForSeconds(AttackDuration);
         AttackTrigger.SetActive(false);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(CoolDownToDesactivated);
         status = GuardianStatus.desativado;
         Attacked = false;
 
     }
     public void JumpAtPlayer()
     {
-        if (m_Grounded)
+        if (m_Grounded && !jumped)
         {
             float distanceFromPlayer = PlayerTransform.transform.position.x - transform.position.x;
             rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
-            jump = true;
+            jumped = true;
 
         }
-        else
-        {
-            rb.AddForce(new Vector2(0f, 0f));
-        }
-        status = GuardianStatus.desativado;
-
-
     }
-    public void ChasePlayer()
+    public IEnumerator DisableJump(float jumpCoolDown)
     {
-        transform.position = Vector2.MoveTowards(transform.position, PlayerTransform.transform.position, ChaseSpeed * Time.deltaTime);
+        yield return new WaitForSeconds(jumpCoolDown);
+
+        status = GuardianStatus.desativado;
+        jumped = false;
+
+
     }
+
     public void LookAtPlayer()
     {
-        if(status == GuardianStatus.desativado && Attacked == false || status == GuardianStatus.Chase && Attacked == false)
+        if(status == GuardianStatus.desativado && Attacked == false || Attacked == false)
         {
             Vector3 look = transform.InverseTransformPoint(PlayerTransform.transform.position);
             float angle = Mathf.Atan2(0f, look.x) * Mathf.Rad2Deg;
@@ -175,29 +147,5 @@ public class GuardianBehavior : MonoBehaviour
         }
 
     }
-    public void CircleTrigger()
-    {
-        direction = Vector2.zero;
 
-        //creates the box cast(trigger)
-        RaycastHit2D CircleInfo = Physics2D.CircleCast(gameObject.GetComponent<Renderer>().bounds.center, radius, direction);
-
-        //checks if the player is inside the area
-        if (CircleInfo.collider.CompareTag("Player") && !PlayerClose)
-        {
-            PlayerClose = true;
-        }
-        if (CircleInfo.collider.gameObject.tag != "Player" && PlayerClose)
-        {
-            PlayerClose = false;
-            status = GuardianStatus.desativado;
-        }
-    }
-
-    public void OnDrawGizmosSelected()
-    {
-        //Draw the box on unity
-        Gizmos.DrawWireSphere(gameObject.GetComponent<Renderer>().bounds.center, radius);
-
-    }
 }
