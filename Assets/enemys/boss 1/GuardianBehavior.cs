@@ -7,6 +7,8 @@ using UnityEngine.Events;
 enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer, JumpAtEdge ,Dash, CheckPlayerDistance };
 public class GuardianBehavior : MonoBehaviour
 {
+    private EnemyHealth EnemyHealth;
+
     [Header("Status")]
     [SerializeField] private GuardianStatus status = GuardianStatus.desativado;
 
@@ -18,8 +20,11 @@ public class GuardianBehavior : MonoBehaviour
     public bool PlayerClose = false;// detecte if a Player was inside
     public bool lookingRight = false;
 
+    [SerializeField]private bool ActionChosed = false;
+
     [Header("LookAt")]
     [HideInInspector] public GameObject PlayerObj;
+    private bool Look = true;
     [Space]
 
     [Header("Jump")]
@@ -50,6 +55,7 @@ public class GuardianBehavior : MonoBehaviour
     private int EdgeIndex;
     [SerializeField] private GameObject[] EdgeRooms;
     [SerializeField] private bool dash = false;
+    private bool dashed = false;
     public float CurrentTimeDash = 0;
     [SerializeField] private float TimeToDoDash;
     public float DashImpulse;
@@ -65,6 +71,7 @@ public class GuardianBehavior : MonoBehaviour
     {
         PlayerObj = GameObject.FindGameObjectWithTag("Player");
         rb = this.GetComponent<Rigidbody2D>();
+        EnemyHealth = this.GetComponent<EnemyHealth>();
 
     }
 
@@ -86,9 +93,9 @@ public class GuardianBehavior : MonoBehaviour
                 PlayerDistance();
                 break;
 
-            /*case GuardianStatus.JumpAtPlayer:
+            case GuardianStatus.JumpAtPlayer:
                 JumpAtPlayer();
-                break;*/
+                break;
 
             case GuardianStatus.JumpAtEdge:
                 JumpAtEdge();
@@ -98,42 +105,69 @@ public class GuardianBehavior : MonoBehaviour
                 Dash();
                 break;
 
-                /*case GuardianStatus.Attack:
-                    AttackPlayer();
-                    break;*/
+             case GuardianStatus.Attack:
+                 AttackPlayer();
+                 break;
 
         }
 
-        LookAtPlayer();
+
+         LookAtPlayer();
+        
+        
 
 
     }
     private void PlayerDistance()
     {
-        
-        if(PlayerClose)
+        if(EnemyHealth.currentHealth > EnemyHealth.MaxHealth/2)
         {
-            status = GuardianStatus.Attack;
-            tempoDeAtaque = 0;
-            AttackCollider.enabled = true;
-
-            if (lookingRight)
+            if (PlayerClose)
             {
-                rb.AddForce(new Vector2(AttackImpulse, transform.position.y), ForceMode2D.Impulse);
+                status = GuardianStatus.Attack;
+                tempoDeAtaque = 0;
+                AttackCollider.enabled = true;
             }
-            if (!lookingRight)
+            else
             {
-                rb.AddForce(new Vector2(-AttackImpulse, transform.position.y), ForceMode2D.Impulse);
+                status = GuardianStatus.JumpAtPlayer;
+                TempoPular = 0;
             }
         }
         else
         {
-            EdgeIndex = Random.Range(0, 2);
-            Debug.Log(EdgeIndex);
-            status = GuardianStatus.JumpAtPlayer;
-            TempoPular = 0;
+            
+            if (!PlayerClose)
+            {
+                
+                int i = Random.Range(0, 101);
+                Debug.Log(i);
+
+                if (i >= 0 && i < 50)
+                {
+                    status = GuardianStatus.JumpAtPlayer;
+                    TempoPular = 0;
+                    ActionChosed = true;
+                }
+                else
+                {
+                    EdgeIndex = Random.Range(0, 2);
+                    Debug.Log(EdgeIndex);
+                    status = GuardianStatus.JumpAtEdge;
+                    TempoPular = 0;
+                    ActionChosed = true;
+                }
+            }
+            if(PlayerClose)
+            {
+                status = GuardianStatus.Attack;
+                tempoDeAtaque = 0;
+                AttackCollider.enabled = true;
+
+                ActionChosed = false;
+            }
+
         }
-        
 
     }
 
@@ -161,6 +195,16 @@ public class GuardianBehavior : MonoBehaviour
 
         if(tempoDeAtaque < DuracaoDeAtaque)
         {
+            if (lookingRight)
+            {
+                //rb.AddForce(new Vector2(AttackImpulse, transform.position.y), ForceMode2D.Impulse);
+                rb.velocity = new Vector2(AttackImpulse, 0f);
+            }
+            if (!lookingRight)
+            {
+                //rb.AddForce(new Vector2(-AttackImpulse, transform.position.y), ForceMode2D.Impulse);
+                rb.velocity = new Vector2(-AttackImpulse, 0f);
+            }
             AttackTrigger.SetActive(true);
             Attacked = true;
             
@@ -177,18 +221,23 @@ public class GuardianBehavior : MonoBehaviour
     private void Tonto()
     {
         tempoTonto += Time.deltaTime;
-        if (tempoTonto< TempoEsperaTonto)
+        if (tempoTonto < TempoEsperaTonto)
         {
-            
+                
+        }
+        else if (dash && tempoTonto > TempoEsperaTonto)
+        {
+            Dash();
         }
         else
         {
             status = GuardianStatus.CheckPlayerDistance;
-
+            
         }
     }
-    public void JumpAtPlayer(GameObject Landpoint)
+    public void JumpAtPlayer()
     {
+        Look = false;
         TempoPular += Time.deltaTime;
         if (TempoPular < tempoParaPular)
         {
@@ -204,6 +253,7 @@ public class GuardianBehavior : MonoBehaviour
             }
         }
 
+        
         if (m_Grounded && jumped)
         {
             TempoPular = 0;
@@ -212,12 +262,10 @@ public class GuardianBehavior : MonoBehaviour
             jumped = false;
 
         }
-
+        
     }
     public void JumpAtEdge()
     {
-        float tempoParaChecar = 0;
-
         TempoPular += Time.deltaTime;
         if (TempoPular < tempoParaPular)
         {
@@ -230,23 +278,30 @@ public class GuardianBehavior : MonoBehaviour
             {
                 rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
                 jumped = true;
-                tempoParaChecar += Time.deltaTime;
             }
         }
-        if (m_Grounded && jumped && tempoParaChecar > 1f)
+
+        if (m_Grounded == true && jumped == true)
         {
-            status = GuardianStatus.Dash;
+            CurrentTimeDash = 0;
+            TempoPular = 0;
+            status = GuardianStatus.desativado;
             tempoTonto = 0;
             jumped = false;
-            tempoParaChecar = 0;
+            dash = true;
         }
 
     }
     private void Dash()
     {
+  
         CurrentTimeDash += Time.deltaTime;
-
-        if(CurrentTimeDash < TimeToDoDash)
+        
+        if(CurrentTimeDash >= TimeToDoDash)
+        {
+            
+        }
+        else if(dashed == false)
         {
             AttackTrigger.SetActive(true);
             if (lookingRight)
@@ -257,11 +312,15 @@ public class GuardianBehavior : MonoBehaviour
             {
                 rb.AddForce(new Vector2(-DashImpulse, transform.position.y), ForceMode2D.Impulse);
             }
+            dashed = true;
         }
-        if(CurrentTimeDash >= TimeToDoDash) 
+        else if(dashed)
         {
+            tempoTonto = 0;
             status = GuardianStatus.desativado;
             dash = false;
+            dashed = false;
+            AttackTrigger.SetActive(false);
         }
     }
     public void LookAtPlayer()
