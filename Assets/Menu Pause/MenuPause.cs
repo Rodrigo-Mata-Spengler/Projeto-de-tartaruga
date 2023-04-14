@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MenuPause : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class MenuPause : MonoBehaviour
 
     [Header("Menu Pause")]
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject InventoryPanel;
 
     [Header("Botão Menu Principal")]
     [SerializeField] private string nomeMenu;
+
+    public GameObject PauseFirstButton, OptionsFirstButton, OptionsCloseButton, primeiroItem;
 
     private void Start()
     {
@@ -24,38 +28,50 @@ public class MenuPause : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SisPause();
+            SisPause(pausePanel);
+            ///clear selected object
+            EventSystem.current.SetSelectedGameObject(null);
+            ///set a new selected object
+            EventSystem.current.SetSelectedGameObject(PauseFirstButton);
+        }
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            SisPause(InventoryPanel);
+            ///clear selected object
+            EventSystem.current.SetSelectedGameObject(null);
+            ///set a new selected object
+            EventSystem.current.SetSelectedGameObject(primeiroItem);
         }
     }
     //ao clicar esc vai ao menu de pause
-    private void Pausar()
+    private void Pausar(GameObject PanelToDisable)
     {
         Time.timeScale = 0;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        pausePanel.SetActive(true);
+       /// Cursor.lockState = CursorLockMode.None;
+        ///Cursor.visible = true;
+        PanelToDisable.SetActive(true);
         isPaused = true;
     }
 
     //ao clicar esc de novo ou no botão sai do menu de pause
-    public void DesPausar()
+    public void DesPausar(GameObject PanelToDisable)
     {
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        pausePanel.SetActive(false);
+        PanelToDisable.SetActive(false);
         isPaused = false;
     }
 
-    private void SisPause()
+    private void SisPause(GameObject Panel)
     {
         if (isPaused)
         {
-            DesPausar();
+            DesPausar(Panel);
         }
         else
         {
-            Pausar();
+            Pausar(Panel);
         }
     }
 
