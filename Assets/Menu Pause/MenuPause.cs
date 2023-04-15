@@ -15,7 +15,11 @@ public class MenuPause : MonoBehaviour
     [Header("Botão Menu Principal")]
     [SerializeField] private string nomeMenu;
 
-    public GameObject PauseFirstButton, OptionsFirstButton, OptionsCloseButton, primeiroItem;
+    [Header("UIKeyboard move")]
+    public GameObject PauseFirstButton;
+    public GameObject OptionsFirstButton;
+    public GameObject OptionsCloseButton;
+    public GameObject primeiroItem;
 
     private void Start()
     {
@@ -41,6 +45,7 @@ public class MenuPause : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             ///set a new selected object
             EventSystem.current.SetSelectedGameObject(primeiroItem);
+            
         }
     }
     //ao clicar esc vai ao menu de pause

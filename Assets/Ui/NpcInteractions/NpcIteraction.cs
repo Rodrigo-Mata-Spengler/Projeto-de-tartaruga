@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI; 
 
 public class NpcIteraction : MonoBehaviour
@@ -9,9 +10,6 @@ public class NpcIteraction : MonoBehaviour
     [Header("On UI elements")]
     [SerializeField] GameObject conversationObj; //the obj that contains the text object and pannels
     [SerializeField] TextMeshProUGUI conversationText;// the obj that contains the text component
-    [Space]
-    [SerializeField] GameObject storeObj;//the obj that contains the text object and pannels
-    [SerializeField] TextMeshProUGUI storeText;// the obj that contains the text component
 
     [Header("The text")]
     [Space]
@@ -30,6 +28,12 @@ public class NpcIteraction : MonoBehaviour
     public bool playerDetected = false; //variable to player detection
     private bool havingConversation = false; // variable to see if the paragraph is still been writing
     private bool nextFrase = false;//variable that checks if the player can go to the next paragraph
+
+    [Header("Store")]
+    public bool IsStore;
+    [SerializeField] GameObject StoreObj;
+    private bool OnStore = false;
+    [SerializeField] private GameObject StoreButton;
 
     private void Start()
     {
@@ -64,11 +68,24 @@ public class NpcIteraction : MonoBehaviour
         {
             conversationObj.SetActive(false);
             havingConversation = false;
+
+            ///checks if his have a store, if it does disply the store panel
+            if(IsStore)
+            {
+                StoreObj.SetActive(true);
+                OnStore = true;
+
+
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(StoreButton);
+            }
         }
+
         // if player press the esc disable the UI interaction obj
-        if (Input.GetKey(KeyCode.Escape) || textLocation == NpcWords.Length)
+        if (Input.GetKey(KeyCode.Escape) /* || textLocation == NpcWords.Length*/)
         {
-            conversationObj.SetActive(false);
+            conversationObj.SetActive(false); 
+
         }
     }
     //method that run the courotine
