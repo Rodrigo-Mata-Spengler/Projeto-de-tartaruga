@@ -30,10 +30,10 @@ public class NpcIteraction : MonoBehaviour
     private bool nextFrase = false;//variable that checks if the player can go to the next paragraph
 
     [Header("Store")]
-    public bool IsStore;
-    [SerializeField] GameObject StoreObj;
-    private bool OnStore = false;
-    [SerializeField] private GameObject StoreButton;
+    public bool IsStore; ///if the npc have a store
+    [SerializeField] GameObject StoreObj;///The store panel 
+    private bool OnStore = false; /// Check's if is already on story
+    [SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
 
     private void Start()
     {
@@ -69,7 +69,7 @@ public class NpcIteraction : MonoBehaviour
             conversationObj.SetActive(false);
             havingConversation = false;
 
-            ///checks if his have a store, if it does disply the store panel
+            ///checks if his have a store, if it does display the store panel
             if(IsStore)
             {
                 StoreObj.SetActive(true);

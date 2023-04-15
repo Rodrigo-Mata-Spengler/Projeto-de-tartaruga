@@ -13,7 +13,7 @@ public class GuardianBehavior : MonoBehaviour
     [SerializeField] private GuardianStatus status = GuardianStatus.desativado;
 
     [Header("StartFight")]
-    public bool StartFight = false;
+    public bool StartFight = false;/// if player has enter the battle field
 
     private Rigidbody2D rb;
     [Space]
@@ -30,8 +30,8 @@ public class GuardianBehavior : MonoBehaviour
     [Header("Jump")]
     public float jumpHeight;
     public bool jumped;
-    public float TempoPular = 0;
-    [SerializeField] private float tempoParaPular;
+    public float TempoPular = 0; ///the current time to wait for the jump
+    [SerializeField] private float tempoParaPular; /// delay to jump
 
     [Space]
     [Header("Attack")]
@@ -39,10 +39,8 @@ public class GuardianBehavior : MonoBehaviour
     [SerializeField] private BoxCollider2D AttackCollider;
     public bool Attacked = false;
     public float AttackImpulse;
-
-
-    [SerializeField] private float DuracaoDeAtaque= 0;
-    public float tempoDeAtaque = 0f;
+    [SerializeField] private float DuracaoDeAtaque= 0; ///Attack duration
+    public float tempoDeAtaque = 0f;///the current time to wait disable the attack trigger
 
     [Header("Ground")]
     [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
@@ -52,19 +50,19 @@ public class GuardianBehavior : MonoBehaviour
 
 
     [Header("Dash")]
-    private int EdgeIndex;
-    [SerializeField] private GameObject[] EdgeRooms;
+    private int EdgeIndex; /// Int variable to decide witch of the Edge points he should go
+    [SerializeField] private GameObject[] EdgeRooms;///Array to get the transform from the edge points
     [SerializeField] private bool dash = false;
     private bool dashed = false;
-    public float CurrentTimeDash = 0;
-    [SerializeField] private float TimeToDoDash;
+    public float CurrentTimeDash = 0;///the current time to wait to dash
+    [SerializeField] private float TimeToDoDash;/// Delay to dash
     public float DashImpulse;
 
     [HideInInspector]public UnityEvent OnLandEvent;
 
     [Header("Tonto")]
-    public float tempoTonto = 0;
-    [SerializeField] private float TempoEsperaTonto = 0;
+    public float tempoTonto = 0;///current time that is waitting to do a action
+    [SerializeField] private float TempoEsperaTonto = 0; /// Amount of time to wait for the next action
 
     // Start is called before the first frame update
     void Start()
@@ -120,26 +118,29 @@ public class GuardianBehavior : MonoBehaviour
     }
     private void PlayerDistance()
     {
+        ///Check if enemy is not half of life
         if(EnemyHealth.currentHealth > EnemyHealth.MaxHealth/2)
         {
+            /// if close Attack
             if (PlayerClose)
             {
                 status = GuardianStatus.Attack;
                 tempoDeAtaque = 0;
                 AttackCollider.enabled = true;
             }
+            /// jump at player
             else
             {
                 status = GuardianStatus.JumpAtPlayer;
                 TempoPular = 0;
             }
         }
-        else
+        else///if enemy is half of life
         {
             
             if (!PlayerClose)
             {
-                
+                ///random choose from jump on player or do the dash
                 int i = Random.Range(0, 101);
                 Debug.Log(i);
 
@@ -153,7 +154,7 @@ public class GuardianBehavior : MonoBehaviour
                 {
                     EdgeIndex = Random.Range(0, 2);
                     Debug.Log(EdgeIndex);
-                    status = GuardianStatus.JumpAtEdge;
+                    status = GuardianStatus.JumpAtEdge;///do the dash
                     TempoPular = 0;
                     ActionChosed = true;
                 }
@@ -220,12 +221,13 @@ public class GuardianBehavior : MonoBehaviour
     }
     private void Tonto()
     {
+        ///the enemy will wait a time after conclude a action
         tempoTonto += Time.deltaTime;
         if (tempoTonto < TempoEsperaTonto)
         {
                 
         }
-        else if (dash && tempoTonto > TempoEsperaTonto)
+        else if (dash && tempoTonto > TempoEsperaTonto)/// check if enemy have jumped to edge, if have do the dash
         {
             Dash();
         }
@@ -239,7 +241,7 @@ public class GuardianBehavior : MonoBehaviour
     {
         Look = false;
         TempoPular += Time.deltaTime;
-        if (TempoPular < tempoParaPular)
+        if (TempoPular < tempoParaPular)/// do nothing while time to jump haven't pass yet
         {
 
         }
@@ -253,7 +255,7 @@ public class GuardianBehavior : MonoBehaviour
             }
         }
 
-        
+        /// if enemy hit's the ground go to wait time
         if (m_Grounded && jumped)
         {
             TempoPular = 0;
@@ -267,7 +269,7 @@ public class GuardianBehavior : MonoBehaviour
     public void JumpAtEdge()
     {
         TempoPular += Time.deltaTime;
-        if (TempoPular < tempoParaPular)
+        if (TempoPular < tempoParaPular)/// do nothing while time to jumpAtEdge haven't pass yet
         {
 
         }
@@ -280,7 +282,7 @@ public class GuardianBehavior : MonoBehaviour
                 jumped = true;
             }
         }
-
+        /// if enemy hit's the ground go to wait time
         if (m_Grounded == true && jumped == true)
         {
             CurrentTimeDash = 0;
@@ -297,9 +299,9 @@ public class GuardianBehavior : MonoBehaviour
   
         CurrentTimeDash += Time.deltaTime;
         
-        if(CurrentTimeDash >= TimeToDoDash)
+        if(CurrentTimeDash >= TimeToDoDash)/// do nothing while time to dash haven't pass yet
         {
-            
+
         }
         else if(dashed == false)
         {
@@ -314,7 +316,7 @@ public class GuardianBehavior : MonoBehaviour
             }
             dashed = true;
         }
-        else if(dashed)
+        else if(dashed)  /// if enemy did the dash go to wait time
         {
             tempoTonto = 0;
             status = GuardianStatus.desativado;

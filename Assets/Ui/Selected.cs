@@ -13,6 +13,7 @@ public class Selected : MonoBehaviour, ISelectHandler, IDeselectHandler
         Debug.Log(this.gameObject.name + " was selected");
         itemScript.enabled = true;
     }
+    //Do this when the UI object is deselected
     public void OnDeselect(BaseEventData eventData)
     {
         itemScript.enabled = false;

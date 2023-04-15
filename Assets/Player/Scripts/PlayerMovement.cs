@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using System.Threading;
+using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool jumpInput;
     private bool jumpInputReleased;
+    public bool haveDoubleJump = false;
 
     [SerializeField]private int JumpTimes = 0; 
     [SerializeField] private int JumpReleasedTimes = 0;
@@ -31,22 +35,23 @@ public class PlayerMovement : MonoBehaviour
     public GameObject AtaqueHitBox;
     public GameObject AtaqueUpHitBox;
     public GameObject AtaqueDownHitBox;
-    public float AttackTimeAmount;
+    public float AttackTimeAmount;///The time that the attack will be enabled
     public bool AttackEnd = true;
 
     [HideInInspector] public bool moving = false; // variable to player lookUporDown
 
-    [Header("Wall walk")]
-    public Transform wallCheck;
-    public float WallCheckDistance;
-    public LayerMask WhatIsGround;
-    public bool IsTouchingWall;
-    public bool IsWallSliding;
-    public float WallSlideSpeed;
 
+    [Header("Wall Jump")]
+    public bool haveWallJump = false;
+    public Transform wallCheck;/// get's a transform of a child from the player and to do a raycast
+    public float WallCheckDistance;/// the size of the ray
+    public LayerMask WhatIsGround;
+    public bool IsTouchingWall = false;
+    public bool IsWallSliding;
+    public float WallSlideSpeed;///the speed the the player will slide down while grabbing the wall and not moving 
     [Space]
-    public float wallJumpForce;
-    public Vector2 wallJumpDirection;
+    public float wallJumpForce; 
+    public Vector2 wallJumpDirection; ///the direction that the player will go while on wall
     private int facingDirection;
 
     private TrailRenderer trailRender;
@@ -60,11 +65,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        m_Grounded = CharacterController2D.m_Grounded;
         jumpInput = Input.GetButtonDown("Jump");
         jumpInputReleased = Input.GetButtonUp("Jump");
         HorizontalMove = Input.GetAxis("Horizontal") * RunSpeed;
         facingDirection = CharacterController2D.facingDirection;
 
+        ///check if the player is moving
         if(HorizontalMove == 0f)
         { 
             moving= false;
@@ -73,32 +80,38 @@ public class PlayerMovement : MonoBehaviour
         {
             moving= true;
         }
-        m_Grounded = CharacterController2D.m_Grounded;
+
+        if (jumpInput || jumpInputReleased)
+        {
+            jump();
+        }
 
         CheckSurroundings();
         CheckWallSliding();
-
+        ///check if the player have the ability to wall jump
+        ///Check's id the player is slifing
         if (IsWallSliding)
         {
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -WallSlideSpeed);
 
         }
-        if(jumpInput || jumpInputReleased)
-        {
-            jump();
-        }
-        
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Attack();
         }
-        
 
+
+
+        if (m_Grounded && OnAir)
+        {
+            OnAir = false;
+        }
         // Debug.LogWarning(jump);
     }
 
     public void CheckSurroundings()
     {
+        /// Creates the raycast for the walljump
         IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, WallCheckDistance, WhatIsGround);
 
     }
@@ -118,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
+        /// draw the wall jump ray cast
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + WallCheckDistance, wallCheck.position.y, wallCheck.position.z));
     }
@@ -127,8 +141,6 @@ public class PlayerMovement : MonoBehaviour
         {
             CharacterController2D.Move(HorizontalMove * Time.fixedDeltaTime, false, jumpVel);
         }
-        
-      
     }
     IEnumerator StopMove()
     {
@@ -145,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
         //jump
 
         //checks if player is on ground and pressed the jump input
-        if (m_Grounded && jumpInput &&!IsTouchingWall)
+        if (m_Grounded && jumpInput && !IsTouchingWall)
         {
             JumpReleasedTimes = 0;
             // Add a vertical force to the player.
@@ -163,14 +175,15 @@ public class PlayerMovement : MonoBehaviour
             trailRender.emitting = false;
         }
         //Do the second jump
-        if (jumpInput && JumpReleasedTimes == 1 && !IsTouchingWall)
+        if (jumpInput && JumpReleasedTimes == 1 && !IsTouchingWall && haveDoubleJump) 
         {
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 2;
             trailRender.emitting = true;
         }
-        if(IsTouchingWall && jumpInput)
+        if(IsTouchingWall && jumpInput && haveWallJump)
         {
+            IsWallSliding = false;
             //m_Rigidbody2D.velocity = new Vector2(wallJumpForce * wallJumpDirection.x * -facingDirection, jumpVel);
             trailRender.emitting = true;
             Vector2 force = new Vector2(wallJumpForce * wallJumpDirection.x *-facingDirection, wallJumpForce * wallJumpDirection.y);
@@ -239,4 +252,25 @@ public class PlayerMovement : MonoBehaviour
             crouch = false;
         }
     }*/
+}
+
+[CustomEditor(typeof(PlayerMovement))]
+public class MyScriptEditor : Editor
+{
+    PlayerMovement playermovment;
+
+    private void OnEnable()
+    {
+        playermovment = (PlayerMovement)target;
+    }
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+    }
+}
+[System.Serializable]
+
+public class WallJump
+{
+
 }
