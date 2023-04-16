@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
+
+enum SellItem { Nothing ,SeaWeedMoreHealth, Armor, Potions };
+enum NpcJob { Witch, Farmer, Ferreiro, none };
 public class NpcIteraction : MonoBehaviour
 {
     [Header("On UI elements")]
@@ -29,16 +32,29 @@ public class NpcIteraction : MonoBehaviour
     private bool havingConversation = false; // variable to see if the paragraph is still been writing
     private bool nextFrase = false;//variable that checks if the player can go to the next paragraph
 
+
+    [Header("What item Sell")]
+    [SerializeField] private SellItem itemToSell = SellItem.Nothing;
+    [SerializeField] private NpcJob NpcJob = NpcJob.none;
+
     [Header("Store")]
     public bool IsStore; ///if the npc have a store
     [SerializeField] GameObject StoreObj;///The store panel 
     private bool OnStore = false; /// Check's if is already on story
     [SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
 
+
+    private ItensInventory PlayerInventory;
+    private Health PlayerHealth;
+    private GameObject Player;
     private void Start()
     {
         //get's the trigger component
        trigger = this.GetComponent<BoxCollider2D>();
+
+        Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerHealth = Player.GetComponent<Health>();
+        PlayerInventory = Player.GetComponent<ItensInventory>();
     }
     
     private void Update()
@@ -64,7 +80,7 @@ public class NpcIteraction : MonoBehaviour
             
         }
         //if paragraph were over than disable the UI interaction obj
-        if (havingConversation && textLocation == NpcWords.Length)
+        if (havingConversation && textLocation >= NpcWords.Length)
         {
             conversationObj.SetActive(false);
             havingConversation = false;
@@ -72,6 +88,21 @@ public class NpcIteraction : MonoBehaviour
             ///checks if his have a store, if it does display the store panel
             if(IsStore)
             {
+                switch (NpcJob)
+                {
+                    case NpcJob.Ferreiro:
+                       
+                        break;
+
+                    case NpcJob.Farmer:
+
+                        break;
+
+                    case NpcJob.Witch:
+
+                        break;
+                }
+
                 StoreObj.SetActive(true);
                 OnStore = true;
 
@@ -143,6 +174,11 @@ public class NpcIteraction : MonoBehaviour
             //disable the interaction UI
             conversationObj.SetActive(false);
         }
+
+    }
+
+    public void SellTheItem()
+    {
 
     }
 }

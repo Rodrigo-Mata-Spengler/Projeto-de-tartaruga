@@ -31,6 +31,22 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
+
+        if(Input.GetAxis("Curar")> 0)
+        {
+            CurrenTime += Time.deltaTime;
+            if (currentLife < maxLife && HealSeaweed > 0 && CurrenTime >= TimeToHeal)
+            {
+                GiveHealth(1);
+                HealSeaweed -= 1;
+                CurrenTime = 0;
+
+                if (currentLife == maxLife)
+                {
+                    
+                }
+            }
+        }
         if (DoDamage)
         {
             Damage(1);
@@ -63,6 +79,6 @@ public class Health : MonoBehaviour
     public void GiveHealth(int GiveHealthAmount)
     {
         currentLife += GiveHealthAmount;
-        lifeImages[currentLife].gameObject.SetActive(true);
+        lifeImages[(currentLife - 1)].gameObject.SetActive(true);
     }
 }
