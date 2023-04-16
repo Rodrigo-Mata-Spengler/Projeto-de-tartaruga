@@ -100,21 +100,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationObj: {fileID: 0}
   conversationText: {fileID: 0}
-  storeObj: {fileID: 0}
-  storeText: {fileID: 0}
   NpcWords:
-  - 'Hello Gorgeous!! '
-  - How would you like to ride home in a real cowboy?
-  - I've got a six pack of cold ones all nice.
-  - 'And my roomies are out all night. '
-  - So you can screen my name as loud as you need to, sugar!!!
-  - Hey sexy lady
-  - ' I like you flow.'
-  - Your body is beggin...
+  - Euuuu
+  - Quero
+  - vc assim
   typingSpeed: 0.04
   textLocation: 0
   StartTyping: 0
   playerDetected: 0
+  IsStore: 1
+  StoreObj: {fileID: 0}
+  StoreButton: {fileID: 0}
 --- !u!61 &7869436001391705895
 BoxCollider2D:
   m_ObjectHideFlags: 0
