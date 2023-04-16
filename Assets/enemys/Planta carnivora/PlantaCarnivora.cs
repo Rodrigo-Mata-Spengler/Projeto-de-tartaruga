@@ -107,24 +107,16 @@ public class PlantaCarnivora : MonoBehaviour
 
     private void PosAtaque()
     {
-        if(Vector3.Distance(cabeca.transform.position, player.transform.position) > distanciaMaximaAtaque)
-        {
-            posAtaque.x = posOriginal.x + distanciaMaximaAtaque;
-            posAtaque.y = posOriginal.y + distanciaMaximaAtaque;
-            posAtaque.z = 0;
-            //não funciona
-        }
-        else
-        {
-            posAtaque.x = player.transform.position.x;
-            posAtaque.y = player.transform.position.y;
-            posAtaque.z = 0;
-        }
+        posAtaque.x = player.transform.position.x;
+        posAtaque.y = player.transform.position.y;
+        posAtaque.z = 0;
+
+        posAtaque = Vector3.ClampMagnitude(posAtaque,distanciaMaximaAtaque);
     }
 
     private void PlantaAtaque()
     {
-        cabeca.transform.position = Vector3.MoveTowards(cabeca.transform.position, posAtaque, velocidadeAtaque * Time.deltaTime);
+        cabeca.transform.position = Vector3.MoveTowards(cabeca.transform.position, transform.InverseTransformPoint(posAtaque), velocidadeAtaque * Time.deltaTime);
 
         if (velocidadeAtaquetempo < Time.time)
         {
