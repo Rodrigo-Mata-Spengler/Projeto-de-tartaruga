@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 
 
-public class ChoseNpc : MonoBehaviour
+public class FindNpc : MonoBehaviour
 {
     private GameObject Farmer;
     private GameObject Witch;

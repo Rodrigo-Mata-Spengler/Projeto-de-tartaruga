@@ -39,9 +39,11 @@ public class NpcIteraction : MonoBehaviour
 
     [Header("Store")]
     public bool IsStore; ///if the npc have a store
-    [SerializeField] GameObject StoreObj;///The store panel 
+    [SerializeField] GameObject StoreFerreiro;///The blacksmith store panel 
+    [SerializeField] GameObject StoreWitch;///The Witch store panel 
+    [SerializeField] GameObject StoreFarmer;///The Farmer store panel 
     private bool OnStore = false; /// Check's if is already on story
-    [SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
+    //[SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
 
 
     private ItensInventory PlayerInventory;
@@ -88,27 +90,34 @@ public class NpcIteraction : MonoBehaviour
             ///checks if his have a store, if it does display the store panel
             if(IsStore)
             {
+                
                 switch (NpcJob)
                 {
                     case NpcJob.Ferreiro:
-                       
+                       StoreFerreiro.SetActive(true);
+                        EventSystem.current.SetSelectedGameObject(null);
+                        EventSystem.current.SetSelectedGameObject(StoreFerreiro.transform.GetChild(7).gameObject);
                         break;
 
                     case NpcJob.Farmer:
-
+                        StoreFarmer.SetActive(true);
+                        EventSystem.current.SetSelectedGameObject(null);
+                        EventSystem.current.SetSelectedGameObject(StoreFarmer.transform.GetChild(7).gameObject);
                         break;
 
                     case NpcJob.Witch:
-
+                        StoreWitch.SetActive(true);
+                        EventSystem.current.SetSelectedGameObject(null);
+                        EventSystem.current.SetSelectedGameObject(StoreWitch.transform.GetChild(7).gameObject);
                         break;
                 }
 
-                StoreObj.SetActive(true);
+                
                 OnStore = true;
 
 
-                EventSystem.current.SetSelectedGameObject(null);
-                EventSystem.current.SetSelectedGameObject(StoreButton);
+               
+                
             }
         }
 

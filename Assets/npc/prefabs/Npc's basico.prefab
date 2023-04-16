@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7869436001391705895}
   m_Layer: 0
   m_Name: Npc's basico
-  m_TagString: Untagged
+  m_TagString: Farmer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,13 +104,16 @@ MonoBehaviour:
   - Euuuu
   - Quero
   - vc assim
-  typingSpeed: 0.04
+  typingSpeed: 0.02
   textLocation: 0
   StartTyping: 0
   playerDetected: 0
+  itemToSell: 1
+  NpcJob: 1
   IsStore: 1
-  StoreObj: {fileID: 0}
-  StoreButton: {fileID: 0}
+  StoreFerreiro: {fileID: 0}
+  StoreWitch: {fileID: 0}
+  StoreFarmer: {fileID: 0}
 --- !u!61 &7869436001391705895
 BoxCollider2D:
   m_ObjectHideFlags: 0
