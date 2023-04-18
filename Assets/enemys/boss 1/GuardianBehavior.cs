@@ -13,7 +13,7 @@ public class GuardianBehavior : MonoBehaviour
     [SerializeField] private GuardianStatus status = GuardianStatus.desativado;
 
     [Header("StartFight")]
-    public bool StartFight = false;/// if player has enter the battle field
+    public bool StartFight = false;//if player has enter the battle field
 
     private Rigidbody2D rb;
     [Space]
@@ -39,30 +39,30 @@ public class GuardianBehavior : MonoBehaviour
     [SerializeField] private BoxCollider2D AttackCollider;
     public bool Attacked = false;
     public float AttackImpulse;
-    [SerializeField] private float DuracaoDeAtaque= 0; ///Attack duration
-    public float tempoDeAtaque = 0f;///the current time to wait disable the attack trigger
+    [SerializeField] private float DuracaoDeAtaque= 0; //Attack duration
+    public float tempoDeAtaque = 0f;//the current time to wait disable the attack trigger
 
     [Header("Ground")]
-    [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
-    [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
+    [SerializeField] private LayerMask m_WhatIsGround;  // A mask determining what is ground to the character
+    [SerializeField] private Transform m_GroundCheck; // A position marking where to check if the player is grounded.
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     public bool m_Grounded;            // Whether or not the player is grounded.
 
 
     [Header("Dash")]
-    private int EdgeIndex; /// Int variable to decide witch of the Edge points he should go
-    [SerializeField] private GameObject[] EdgeRooms;///Array to get the transform from the edge points
+    private int EdgeIndex; // Int variable to decide witch of the Edge points he should go
+    [SerializeField] private GameObject[] EdgeRooms;//Array to get the transform from the edge points
     [SerializeField] private bool dash = false;
     private bool dashed = false;
-    public float CurrentTimeDash = 0;///the current time to wait to dash
-    [SerializeField] private float TimeToDoDash;/// Delay to dash
+    public float CurrentTimeDash = 0;//the current time to wait to dash
+    [SerializeField] private float TimeToDoDash;// Delay to dash
     public float DashImpulse;
 
     [HideInInspector]public UnityEvent OnLandEvent;
 
     [Header("Tonto")]
-    public float tempoTonto = 0;///current time that is waitting to do a action
-    [SerializeField] private float TempoEsperaTonto = 0; /// Amount of time to wait for the next action
+    public float tempoTonto = 0;//current time that is waitting to do a action
+    [SerializeField] private float TempoEsperaTonto = 0; // Amount of time to wait for the next action
 
     // Start is called before the first frame update
     void Start()
@@ -299,7 +299,7 @@ public class GuardianBehavior : MonoBehaviour
   
         CurrentTimeDash += Time.deltaTime;
         
-        if(CurrentTimeDash >= TimeToDoDash)/// do nothing while time to dash haven't pass yet
+        if(CurrentTimeDash >= TimeToDoDash)// do nothing while time to dash haven't pass yet
         {
 
         }

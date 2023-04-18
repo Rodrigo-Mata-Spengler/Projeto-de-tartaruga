@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ItensInventory : MonoBehaviour
 {
-    public int conchas;
-    public int coral;
-    public int calcio;
-    public int ossos;
+    public int conchas;//Shells
+    public int coral; //coral
+    public int calcio; //calcium
+    public int ossos; // bones
 }

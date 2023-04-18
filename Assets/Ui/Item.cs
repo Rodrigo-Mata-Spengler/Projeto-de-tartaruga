@@ -20,8 +20,5 @@ public class Item : MonoBehaviour
         ItemNameText.text = ItemName;
         ItemDescriptionText.text = ItemDesciption;
     }
-    private void Start()
-    {
-        
-    }
+
 }
