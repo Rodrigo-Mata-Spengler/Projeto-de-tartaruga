@@ -157,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
         //jump
 
         //checks if player is on ground and pressed the jump input
-        if (m_Grounded && jumpInput && !IsTouchingWall)
+        if (m_Grounded && jumpInput)
         {
             JumpReleasedTimes = 0;
             // Add a vertical force to the player.
