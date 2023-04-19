@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34756187, g: 0.9150943, b: 0.22877358, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   itemToSell: 3
   NpcJob: 0
   IsStore: 1
+  Cost: 0
+  Cost2: 0
   StoreFerreiro: {fileID: 0}
   StoreWitch: {fileID: 0}
   StoreFarmer: {fileID: 0}
