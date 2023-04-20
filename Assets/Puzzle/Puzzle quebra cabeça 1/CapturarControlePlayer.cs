@@ -9,29 +9,38 @@ public class CapturarControlePlayer : MonoBehaviour
     [SerializeField] private PuzzleQuadrado puzzle;
     private GameObject player;
     private bool isPlay = false;
+    [SerializeField]private float tempo = 0;
+    private float tempotemp = 0;
+
 
     private void Start()
     {
         botaoFlutuante.SetActive(false);
-        //puzzle.enabled = false;
+        puzzle.enabled = false;
     }
     private void Update()
     {
-        if (podeUsar && Input.GetButton("Interacao"))
+        if (podeUsar && Input.GetButton("Interacao") && tempotemp < Time.time)
         {
             if (isPlay == false)
             {
-                //puzzle.enabled = true;
+                puzzle.enabled = true;
                 player.GetComponent<PlayerMovement>().enabled = false;
 
                 isPlay = true;
+                botaoFlutuante.SetActive(false);
+
+                tempotemp = Time.time + tempo;
             }
             else
             {
-               // puzzle.enabled = false;
+                puzzle.enabled = false;
                 player.GetComponent<PlayerMovement>().enabled = true;
 
                 isPlay = false;
+                botaoFlutuante.SetActive(true);
+
+                tempotemp = Time.time + tempo;
             }
         }
     }
