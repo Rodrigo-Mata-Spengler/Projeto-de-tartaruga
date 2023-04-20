@@ -23,11 +23,13 @@ public class PuzzleQuadrado : MonoBehaviour
         }
     }
 
+
+    //embaralhar as peças
     private void RandomizePeca()
     {
 
     }
-    //embaralhar as peças
+
     //definir qual peça estará faltando
     //caso o player movimente as peças usando wasd o puzzle reagi de acordo
     //toda vez que o player movimenhta uma peça, veifica se o puzzle esta correto
