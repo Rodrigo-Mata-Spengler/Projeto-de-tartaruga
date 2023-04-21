@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class PuzzleQuadrado : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("peças do puzzle")]
+    [SerializeField] private GameObject[] pecasPuzzle;
+    private Vector3[] pecasPosicaoOriginal;
+    private int[] posiRandom;
+    
+
+    private void Start()
     {
-        
+        LocPeca();    
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LocPeca()
     {
-        
+        for (int i = 0; i < pecasPuzzle.Length; i++)
+        {
+            pecasPosicaoOriginal[i] = pecasPuzzle[i].transform.position;
+        }
     }
+
+
+    //embaralhar as peças
+    private void RandomizePeca()
+    {
+
+    }
+
+    //definir qual peça estará faltando
+    //caso o player movimente as peças usando wasd o puzzle reagi de acordo
+    //toda vez que o player movimenhta uma peça, veifica se o puzzle esta correto
 }
