@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
-using System.Threading;
-using UnityEditor;
+
 
 public class CameraControlTrigger : MonoBehaviour
 {
@@ -20,7 +17,7 @@ public class CameraControlTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             Detected = true;
 
@@ -43,30 +40,15 @@ public class CameraControlTrigger : MonoBehaviour
             }
         }
     }
-   
+
     IEnumerator UnlerEdge(float customInspectorObjectspanTime)
     {
         yield return new WaitForSeconds(customInspectorObjectspanTime);
         Detected = false;
     }
-
-  [ CustomEditor(typeof(CameraControlTrigger))]
-    public class MyScriptEditor: Editor
-    {
-        CameraControlTrigger  cameraControlTrigger;
-
-        private void OnEnable()
-        {
-            cameraControlTrigger= (CameraControlTrigger)target;
-        }
-        public override void OnInspectorGUI()
-        {
-            DrawDefaultInspector();
-        }
-    }
 }
-[System.Serializable]
 
+[System.Serializable]
 public class CustomInspectorObjects
 {
     //Lerp the camera values

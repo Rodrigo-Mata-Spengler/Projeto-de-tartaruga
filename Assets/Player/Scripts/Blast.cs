@@ -8,12 +8,13 @@ public class Blast : MonoBehaviour
     public GameObject BlastPrefab;
 
     public float FireRate = 15f;
-    private float NextTimeToFire = 0f;
+    public float NextTimeToFire = 0f;
 
     private void Update()
     {
         if(Input.GetButtonDown("Blast") && Time.time >= NextTimeToFire)
         {
+           
             NextTimeToFire = Time.time + 1f / FireRate;
             Debug.Log("shoot");
             Shoot();

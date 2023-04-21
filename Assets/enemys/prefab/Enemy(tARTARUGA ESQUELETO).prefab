@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &167771294725654426
 Transform:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   lookAt: 1
   CloseTrigger: {fileID: 975788405}
   AttackHitBoxEnemy: {fileID: 1001878696}
-  WaitTimeToAttack: 1.83
+  WaitTimeToAttack: 0.5
   AttackDuration: 0.38
 --- !u!114 &167771294725654406
 MonoBehaviour:
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3b4687d64a750468849053279f5f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 200
+  MaxHealth: 30
   currentHealth: 0
 --- !u!114 &1534872629
 MonoBehaviour:

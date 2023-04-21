@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 185684926705666230}
   - component: {fileID: 185684926705666235}
   - component: {fileID: 1308012796}
+  - component: {fileID: 654992539}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -73,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185684926705666231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.304565, y: 1.707367, z: -8.19358}
+  m_LocalPosition: {x: 11.84198, y: 0.77545166, z: -8.19358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -177,6 +178,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb06a6a10662654e9522223bd3c98e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &654992539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185684926705666231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &185684927088650052
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185684928551927804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.7751465, y: 1.7128296, z: -8.19358}
+  m_LocalPosition: {x: 11.84198, y: 0.77545166, z: -8.19358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -406,7 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BoundingShape2D: {fileID: 0}
-  m_Damping: 3.73
+  m_Damping: 4.33
   m_MaxWindowSize: 7
 --- !u!114 &1480924769
 MonoBehaviour:

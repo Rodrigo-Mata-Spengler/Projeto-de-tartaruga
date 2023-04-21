@@ -1,9 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro.EditorUtilities;
-using Unity.VisualScripting;
 using UnityEngine;
-using System.Threading;
 using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
@@ -254,23 +250,4 @@ public class PlayerMovement : MonoBehaviour
     }*/
 }
 
-[CustomEditor(typeof(PlayerMovement))]
-public class MyScriptEditor : Editor
-{
-    PlayerMovement playermovment;
 
-    private void OnEnable()
-    {
-        playermovment = (PlayerMovement)target;
-    }
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-    }
-}
-[System.Serializable]
-
-public class WallJump
-{
-
-}
