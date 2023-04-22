@@ -233,6 +233,8 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator AttackTime(float AttackTimeAmount, GameObject HitBox)
     {
         yield return new WaitForSeconds(AttackTimeAmount);
+        HitBox.GetComponent<Ataque>().Detected = false;
+        HitBox.GetComponent<Ataque>().HitIndex = 0;
         HitBox.SetActive(false);
         AttackEnd = true;
     }

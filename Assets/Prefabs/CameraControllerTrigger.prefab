@@ -46,13 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f5b5a23ef7427409384e6d2d02c0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customInspectorObjects:
-    panCameraOnContact: 1
-    panDirection: 0
-    panDistance: 2.57
-    panTime: 0.63
   Detected: 0
-  Down: 0
+  panCameraOnContact: 1
+  panDirection: 1
+  panDistance: 3
+  panTime: 0.5
 --- !u!212 &2135044669
 SpriteRenderer:
   m_ObjectHideFlags: 0

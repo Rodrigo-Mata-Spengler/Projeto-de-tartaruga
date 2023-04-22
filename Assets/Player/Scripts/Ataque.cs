@@ -12,7 +12,7 @@ public class Ataque : MonoBehaviour
     [HideInInspector] public bool up, down, right;
     public float impulseForce;
     public float EnemyimpulseForce;
-    private int HitIndex = 0;
+    [HideInInspector]public int HitIndex = 0;
 
     private void Update()
     {
@@ -41,12 +41,6 @@ public class Ataque : MonoBehaviour
                 right = false;
             }
         }
-        else
-        {
-            Detected = false;
-            HitIndex = 0;
-        }
-
 
     }
     //Draw the box on unity

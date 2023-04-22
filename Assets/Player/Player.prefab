@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 665321758}
   - component: {fileID: 665321757}
   - component: {fileID: 6748649184531703271}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: AtaqueUpHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,12 +82,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Detected: 0
   rb: {fileID: 6748649182909457862}
-  DamageAmount: 0
+  DamageAmount: 10
   up: 0
   down: 0
   right: 0
-  impulseForce: 1000
+  impulseForce: 300
   EnemyimpulseForce: 400
+  HitIndex: 0
 --- !u!212 &665321757
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4991,7 +4992,7 @@ GameObject:
   - component: {fileID: 1386716085}
   - component: {fileID: 1386716084}
   - component: {fileID: 6748649184531703270}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: AtaqueDownHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5027,12 +5028,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Detected: 0
   rb: {fileID: 6748649182909457862}
-  DamageAmount: 0
+  DamageAmount: 10
   up: 0
   down: 0
   right: 0
-  impulseForce: 1000
+  impulseForce: 300
   EnemyimpulseForce: 400
+  HitIndex: 0
 --- !u!212 &1386716084
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10076,7 +10078,7 @@ GameObject:
   - component: {fileID: 2001907972}
   - component: {fileID: 2001907973}
   - component: {fileID: 6748649184531703272}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: AtaqueHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10118,6 +10120,7 @@ MonoBehaviour:
   right: 0
   impulseForce: 300
   EnemyimpulseForce: 400
+  HitIndex: 0
 --- !u!212 &2001907973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10376,7 +10379,7 @@ MonoBehaviour:
   m_CrouchDisableCollider: {fileID: 0}
   m_Grounded: 0
   m_Rigidbody2D: {fileID: 0}
-  m_FacingRight: 0
+  m_FacingRight: 1
   facingDirection: 0
   CameraFollowGO: {fileID: 0}
   OnLandEvent:
@@ -10749,7 +10752,7 @@ MonoBehaviour:
   m_DefaultVelocity: {x: 0.2, y: 0.6, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 264
+    m_Bits: 0
   m_IgnoreTag: Farmer
   m_UseImpactDirection: 1
   m_ScaleImpactWithMass: 0
