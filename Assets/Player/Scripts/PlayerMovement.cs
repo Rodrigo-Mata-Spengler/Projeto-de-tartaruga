@@ -4,6 +4,7 @@ using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     [Header("Movment")]
     public CharacterController2D CharacterController2D;
     [HideInInspector] public Rigidbody2D m_Rigidbody2D;
@@ -202,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
         //enables the attack hitbox to right and left
         if (Input.GetAxis("Vertical") == 0)
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
             AttackEnd= false;
             AtaqueHitBox.SetActive(true);
             AtaqueHitBox.GetComponent<Ataque>().right = true;
@@ -211,6 +213,7 @@ public class PlayerMovement : MonoBehaviour
         //enables the up hitBox
         if (Input.GetAxis("Vertical") > 0) 
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
             AttackEnd = false;
             AtaqueUpHitBox.SetActive(true);
             AtaqueUpHitBox.GetComponent<Ataque>().down = true; 
@@ -221,6 +224,7 @@ public class PlayerMovement : MonoBehaviour
         //enables the bottom hitBox
         if (Input.GetAxis("Vertical") < 0 && !m_Grounded ) 
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
             AttackEnd = false;
             AtaqueDownHitBox.SetActive(true);
             AtaqueDownHitBox.GetComponent<Ataque>().up= true;
