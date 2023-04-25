@@ -5,6 +5,10 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Player SFX")]
+    [field: SerializeField] public EventReference PlayerFootstep { get; private set; }
+
+
     [field: Header ("Coin SFX")]
     [field: SerializeField] public EventReference AttackSound { get; private set; }
 

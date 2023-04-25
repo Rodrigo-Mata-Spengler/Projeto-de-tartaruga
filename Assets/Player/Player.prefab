@@ -5032,7 +5032,7 @@ MonoBehaviour:
   up: 0
   down: 0
   right: 0
-  impulseForce: 300
+  impulseForce: 700
   EnemyimpulseForce: 400
   HitIndex: 0
 --- !u!212 &1386716084
@@ -10400,13 +10400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003948e474aa3f84cb15880a7f97d834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackSound:
-    Guid:
-      Data1: 352314375
-      Data2: 1328271712
-      Data3: -825620061
-      Data4: -224759394
-    Path: event:/Attack
   CharacterController2D: {fileID: 6748649182909457867}
   m_Rigidbody2D: {fileID: 0}
   m_Grounded: 0
@@ -10416,7 +10409,7 @@ MonoBehaviour:
   OnAir: 0
   _yVelJumpRealeasedMod: 2
   jumpVel: 16.7
-  haveDoubleJump: 1
+  haveDoubleJump: 0
   JumpTimes: 0
   JumpReleasedTimes: 0
   AtaqueHitBox: {fileID: 2001907970}
@@ -10425,7 +10418,7 @@ MonoBehaviour:
   AttackTimeAmount: 0.18
   AttackEnd: 1
   moving: 0
-  haveWallJump: 1
+  haveWallJump: 0
   wallCheck: {fileID: 2021795256}
   WallCheckDistance: 0.55
   WhatIsGround:
@@ -10627,7 +10620,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6748649182909457857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b693594e52517f740a4291ea3f7c10d7, type: 3}
   m_Name: 
@@ -10787,7 +10780,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6748649182909457857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4387b24403ea841a951c9a438b6e6e, type: 3}
   m_Name: 

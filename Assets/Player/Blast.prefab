@@ -101,6 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7101811666152327745}
   speed: 16.52
+  Detected: 0
+  EnemyimpulseForce: 400
+  HitIndex: 0
+  DamageAmount: 5
 --- !u!58 &3851145629442167610
 CircleCollider2D:
   m_ObjectHideFlags: 0
