@@ -2,43 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum StatusPlanta { dormindo, atacando, recuo, esperando};
+enum StatusPlanta { dormindo, atacando, esperando};
 public class PlantaCarnivora : MonoBehaviour
 {
-    [Header("Status Planta")]
+    [Header("Status")]
     [SerializeField] private StatusPlanta status;
 
-    [Header("Corpo Planta")]
-    [SerializeField] private GameObject cabeca;
-    private Vector3 posOriginal;
-
-    [Header("detecção player")]
-    [SerializeField] private GameObject player;
+    [Header("player detection")]
     [SerializeField] private string playerTag;
-    [SerializeField] private float areaDeteccao = 0;
-    [SerializeField]private CircleCollider2D colisorDeteccao;
+    [SerializeField] private float detectionRadius = 0;
+    private CircleCollider2D collider;
+    private GameObject player;
 
-    [Header("Recuo")]
-    [SerializeField] private Vector3 distanciaRecuo;
-    private Vector3 recuoPos;
-    [SerializeField] private float tempoRecuo = 0;
-    private float velocidadeTempoRecuo = 0;
+    [Header("Planta Flip")]
+    [SerializeField] private float anguloVirada = 180;
 
-    [Header("Ataque")]
-    [SerializeField] private float distanciaMaximaAtaque = 0;
-    private Vector3 posAtaque;
-    [SerializeField] private float tempoEspera = 0;
-    private float tempoEsperaProximo = 0;
-    [SerializeField] private float velocidadeAtaque = 0;
-    private float velocidadeAtaquetempo = 0;
-    [SerializeField] private float quantidadeAtaques = 0;
-    private float quantidadeAtaqueAtual = 0;
+    [Header("ataque")]
+    [SerializeField] private GameObject colliderAtaque;
+    [SerializeField] private float ataqueDistancia = 0;
+    [SerializeField] private float tempAtaque = 0;
+    private float proximoAtaque = 0;
+    private bool atacando = false;
+    [SerializeField] private float tempDuracaoAtaque = 0;
 
     private void Start()
     {
-        posOriginal = cabeca.transform.position;
-        colisorDeteccao.radius = areaDeteccao;
+        collider = GetComponent<CircleCollider2D>();
+        collider.radius = detectionRadius;
         status = StatusPlanta.dormindo;
+        colliderAtaque.SetActive(false);
     }
 
     private void Update()
@@ -46,21 +38,19 @@ public class PlantaCarnivora : MonoBehaviour
         switch (status)
         {
             case StatusPlanta.dormindo:
-                IfPlayer();
+                PlayerDetected();
                 break;
             case StatusPlanta.atacando:
-                PlantaAtaque();
-                break;
-            case StatusPlanta.recuo:
-                PlantaRecuo();
+                Ataque();
                 break;
             case StatusPlanta.esperando:
-                EsperaAtaque();
+                PlantaPreparar();
+                PlantaAtaque();
                 break;
         }
     }
 
-    //esperar detectar o player
+    //procura pelo player
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(playerTag))
@@ -68,76 +58,45 @@ public class PlantaCarnivora : MonoBehaviour
             player = collision.gameObject;
         }
     }
-
-    //detectando o player ela entra em modo de ataque 
-    private void IfPlayer()
+    private void PlayerDetected()
     {
         if (player)
         {
             status = StatusPlanta.esperando;
-            tempoEsperaProximo = Time.time + tempoEspera;
         }
     }
 
-    //Espera um tempo até atacar de novo
-    private void EsperaAtaque()
+    //se achar o player, vira na direção a qual ele esta
+    private void PlantaPreparar()
     {
-        if (tempoEsperaProximo < Time.time)
-        {
-            recuoPos.x = cabeca.transform.position.x - distanciaRecuo.x;
-            recuoPos.y = cabeca.transform.position.y - distanciaRecuo.y;
-            recuoPos.z = 0;
-            status = StatusPlanta.recuo;
-            velocidadeTempoRecuo = Time.time + tempoRecuo;
-        }
+        Vector3 look = transform.InverseTransformPoint(player.transform.position);
+        float angle = Mathf.Atan2(0f, look.x) * Mathf.Rad2Deg;
+
+        transform.Rotate(0f, angle, 0f);
     }
 
-    //em modo te ataque ela tenta atacar o player varias vezez consecutivas
-    private void PlantaRecuo()
-    {
-        cabeca.transform.position = Vector3.MoveTowards(cabeca.transform.position, recuoPos, tempoRecuo * Time.deltaTime);
-
-        if (velocidadeTempoRecuo < Time.time)
-        {
-            status = StatusPlanta.atacando;
-
-            velocidadeAtaquetempo = velocidadeAtaque + Time.time;
-        }
-    }
-
-    private void PosAtaque()
-    {
-        posAtaque.x = player.transform.position.x;
-        posAtaque.y = player.transform.position.y;
-        posAtaque.z = 0;
-
-        posAtaque = Vector3.ClampMagnitude(posAtaque,distanciaMaximaAtaque);
-    }
-
+    //se o player chegar muito proximo a planta ataca
     private void PlantaAtaque()
     {
-        cabeca.transform.position = Vector3.MoveTowards(cabeca.transform.position, transform.InverseTransformPoint(posAtaque), velocidadeAtaque * Time.deltaTime);
-
-        if (velocidadeAtaquetempo < Time.time)
+        if (Vector3.Distance(transform.position, player.transform.position) <= ataqueDistancia)
         {
-            if (quantidadeAtaqueAtual < quantidadeAtaques)
-            {
-                PosAtaque();
-                recuoPos.x = cabeca.transform.position.x - distanciaRecuo.x;
-                recuoPos.y = cabeca.transform.position.y - distanciaRecuo.y;
-                recuoPos.z = 0;
-                status = StatusPlanta.recuo;
-                velocidadeTempoRecuo = Time.time + tempoRecuo;
-                quantidadeAtaqueAtual++;
-            }
-            else
-            {
-                quantidadeAtaqueAtual = 0;
-                player = null;
-                status = StatusPlanta.dormindo;
-            }
+            status = StatusPlanta.atacando;
         }
     }
-
-    //depois desses ataques ela volta a dormir esperando detectar o player de novo
+    //planta espera para proximo ataque
+    private void Ataque()
+    {
+        if (proximoAtaque < Time.time && atacando == false)
+        {
+            proximoAtaque = Time.time + tempDuracaoAtaque;
+            colliderAtaque.SetActive(true);
+            atacando = true;
+        }
+        else if(proximoAtaque < Time.time && atacando ==true)
+        {
+            proximoAtaque = Time.time + tempAtaque;
+            colliderAtaque.SetActive(false);
+            atacando = false;
+        }
+    }
 }
