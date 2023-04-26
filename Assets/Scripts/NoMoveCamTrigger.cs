@@ -27,13 +27,14 @@ public class NoMoveCamTrigger : MonoBehaviour
     [SerializeField]
     private AnimationCurve curve;
 
+    private CharacterController2D characterController2D;
+
     private void Start()
     {
    
         FramingTransposer = CinemachineCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
-
-
         CameraFollowObjectScript = CameraFollowObject.GetComponent<CameraFollowObject>();
+        characterController2D = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController2D>();
     }
     public void Update()
     {
@@ -65,7 +66,7 @@ public class NoMoveCamTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-
+            
             Detected = false;
         }
     }
@@ -73,6 +74,7 @@ public class NoMoveCamTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            characterController2D.turn = false;
             Detected = true;
         }
     }

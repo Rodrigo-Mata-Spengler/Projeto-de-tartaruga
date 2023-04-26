@@ -41,9 +41,11 @@ public class CameraFollowObject : MonoBehaviour
 
     private float currentY;
 
+    private CharacterController2D characterController2D;
     private void Start()
     {
         PlayerMovmentScript = PlayerObj.GetComponent<PlayerMovement>();
+        characterController2D = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController2D>();
     }
     private void Awake()
     {
@@ -162,6 +164,8 @@ public class CameraFollowObject : MonoBehaviour
             FollowPlayer = true;
             LookedUpOrDown = false;
             PlayerMovmentScript.enabled = true;
+            //enables the camera to lerp in a forwarder distance in the horizontal  
+            characterController2D.turn = true;
         }
         
     }

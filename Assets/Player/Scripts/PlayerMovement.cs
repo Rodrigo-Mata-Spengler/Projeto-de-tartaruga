@@ -178,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
             JumpTimes = 2;
             trailRender.emitting = true;
         }
-        if(IsTouchingWall && jumpInput && haveWallJump)
+        if(IsTouchingWall && jumpInput && haveWallJump && !m_Grounded)
         {
             IsWallSliding = false;
             //m_Rigidbody2D.velocity = new Vector2(wallJumpForce * wallJumpDirection.x * -facingDirection, jumpVel);

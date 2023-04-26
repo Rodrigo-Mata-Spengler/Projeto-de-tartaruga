@@ -25,6 +25,7 @@ public class CharacterController2D : MonoBehaviour
     [Header("Camera Stuff")]
     private CameraFollowObject CameraFollowObject;
     [SerializeField] private GameObject CameraFollowGO;
+    [HideInInspector] public bool turn = true;
 
     private float _fallSpeedYDampingChangeThreshold;
 
@@ -193,7 +194,11 @@ public class CharacterController2D : MonoBehaviour
             m_FacingRight = !m_FacingRight;
 
             //turn the camera follow object
-            CameraFollowObject.CallTurn();
+            if(turn)
+            {
+                CameraFollowObject.CallTurn();
+            }
+            
             facingDirection = -1;
         }
         else 
@@ -203,7 +208,11 @@ public class CharacterController2D : MonoBehaviour
             m_FacingRight = !m_FacingRight;
             facingDirection = 1;
             //turn the camera follow object
-            CameraFollowObject.CallTurn();
+            if(turn)
+            {
+                CameraFollowObject.CallTurn();
+            }
+            
         }
     }
 
