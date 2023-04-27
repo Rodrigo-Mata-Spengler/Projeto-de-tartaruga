@@ -10253,6 +10253,7 @@ GameObject:
   - component: {fileID: 8033661058447654777}
   - component: {fileID: 150301066082676034}
   - component: {fileID: 764544940252387656}
+  - component: {fileID: 5035070706264374406}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -10382,6 +10383,7 @@ MonoBehaviour:
   m_FacingRight: 1
   facingDirection: 0
   CameraFollowGO: {fileID: 0}
+  turn: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10504,6 +10506,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  lifeImageToEnable: []
+  haveArmor: 0
   DoDamage: 0
 --- !u!96 &2011585483
 TrailRenderer:
@@ -10789,6 +10793,19 @@ MonoBehaviour:
   BlastPrefab: {fileID: 941138472815516733, guid: bc7a8de1cbeebea4c86e07cd68c8e6eb, type: 3}
   FireRate: 1
   NextTimeToFire: 0
+--- !u!114 &5035070706264374406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748649182909457857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e55c3c1b81b12740a7dd5468798cadf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenaAtual: 
 --- !u!1 &6748649183191431198
 GameObject:
   m_ObjectHideFlags: 0
