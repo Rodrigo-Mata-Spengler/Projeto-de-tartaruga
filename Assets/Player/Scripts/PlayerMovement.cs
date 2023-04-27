@@ -126,6 +126,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+    public void AtivarCheat()
+    {
+        haveWallJump = true;
+        haveDoubleJump = true;
+    }
     private void OnDrawGizmos()
     {
         /// draw the wall jump ray cast
