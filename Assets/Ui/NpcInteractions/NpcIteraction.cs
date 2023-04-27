@@ -199,6 +199,7 @@ public class NpcIteraction : MonoBehaviour
             PlayerInventory.calcio -= Cost;
             PlayerHealth.maxLife *= 2;
             PlayerHealth.currentLife = PlayerHealth.maxLife;
+            PlayerHealth.haveArmor = true;
 
             StoreFerreiro.SetActive(false);
         }

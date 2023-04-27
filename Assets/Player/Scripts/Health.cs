@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
     public float TimeToHeal = 1.5f;
     [SerializeField] private GameObject[]lifeImages;
 
+    [SerializeField] private GameObject[] lifeImageToEnable;
+    public bool haveArmor = false;
     private CinemachineImpulseSource impulseSource;
 
     public bool DoDamage = false;
@@ -47,6 +49,21 @@ public class Health : MonoBehaviour
                 }
             }
         }
+        if(haveArmor)
+        {
+            for(int i = 0; i <= lifeImageToEnable.Length; i++)
+            {
+                lifeImageToEnable[i].SetActive(true);
+
+                lifeImages[i + 5] = lifeImageToEnable[i];
+                if(i == lifeImageToEnable.Length - 1)
+                {
+                    haveArmor = false;
+                    break;
+                }
+            }
+            
+        }
         if (DoDamage)
         {
             Damage(1);
@@ -73,6 +90,7 @@ public class Health : MonoBehaviour
         CameraShakeManager.instance.CameraShake(impulseSource);
         currentLife -= GiveDamageAmount;
         lifeImages[currentLife].gameObject.SetActive(false);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
     }
 
     //give heath
