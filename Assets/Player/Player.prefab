@@ -10223,7 +10223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021795255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.104, y: 0.393, z: 0}
+  m_LocalPosition: {x: 0.104, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10419,7 +10419,10 @@ MonoBehaviour:
   AtaqueDownHitBox: {fileID: 1386716082}
   AttackTimeAmount: 0.18
   AttackEnd: 1
+  AtaqueRate: 2
+  NextTimeToAtaque: 0
   moving: 0
+  AtaqueInput: 0
   haveWallJump: 0
   wallCheck: {fileID: 2021795256}
   WallCheckDistance: 0.55
@@ -10463,7 +10466,7 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.027168274, y: -0.033439398}
   m_Size: {x: 1.0381927, y: 1.9899564}

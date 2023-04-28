@@ -75,12 +75,14 @@ public class Health : MonoBehaviour
             Debug.Log("morreu");
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
             Damage(1);
-            rb.AddForce(transform.up * 800);
+            rb.velocity = new Vector2(transform.position.x, 15f);
+
         }
     }
 
@@ -91,6 +93,7 @@ public class Health : MonoBehaviour
         currentLife -= GiveDamageAmount;
         lifeImages[currentLife].gameObject.SetActive(false);
         AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
+        
     }
 
     //give heath
