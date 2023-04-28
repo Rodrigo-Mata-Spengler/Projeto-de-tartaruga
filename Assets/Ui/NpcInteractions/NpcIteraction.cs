@@ -72,6 +72,8 @@ public class NpcIteraction : MonoBehaviour
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false)
         {
+            StartTyping = false;
+            StopAllCoroutines();
             conversationObj.SetActive(true);
             ContinueStory();
            // Debug.Log("apaguei");
@@ -80,6 +82,8 @@ public class NpcIteraction : MonoBehaviour
         //if player press the interaction button and the paragraph was over, go to the next paragraph
         if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
         {
+            StopAllCoroutines();
+            StartTyping = false;
             textLocation += 1;
             ContinueStory();
             
@@ -136,6 +140,7 @@ public class NpcIteraction : MonoBehaviour
     private void ContinueStory()
     {
         StartCoroutine(DisplayLine(NpcWords[textLocation]));
+
     }
 
     //separate the string into chars and write one by one
@@ -167,7 +172,7 @@ public class NpcIteraction : MonoBehaviour
     }
     private IEnumerator StartTypingDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         StartTyping = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)

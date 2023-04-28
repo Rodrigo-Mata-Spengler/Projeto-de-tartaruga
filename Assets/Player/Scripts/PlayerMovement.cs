@@ -34,9 +34,12 @@ public class PlayerMovement : MonoBehaviour
     public GameObject AtaqueDownHitBox;
     public float AttackTimeAmount;///The time that the attack will be enabled
     public bool AttackEnd = true;
+    [Space]
+    public float AtaqueRate = 15f;
+    public float NextTimeToAtaque = 0f;
 
     [HideInInspector] public bool moving = false; // variable to player lookUporDown
-
+    [HideInInspector] public bool AtaqueInput;
 
     [Header("Wall Jump")]
     public bool haveWallJump = false;
@@ -67,9 +70,10 @@ public class PlayerMovement : MonoBehaviour
         jumpInputReleased = Input.GetButtonUp("Jump");
         HorizontalMove = Input.GetAxis("Horizontal") * RunSpeed;
         facingDirection = CharacterController2D.facingDirection;
+        AtaqueInput = Input.GetButtonDown("Fire1");
 
         ///check if the player is moving
-        if(HorizontalMove == 0f)
+        if (HorizontalMove == 0f)
         { 
             moving= false;
         }
@@ -83,6 +87,15 @@ public class PlayerMovement : MonoBehaviour
             jump();
         }
 
+        if (m_Grounded)
+        {
+            OnAir = false;
+        }
+        else
+        {
+            OnAir = true;
+        }
+
         CheckSurroundings();
         CheckWallSliding();
         ///check if the player have the ability to wall jump
@@ -92,17 +105,13 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -WallSlideSpeed);
 
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (AtaqueInput && Time.time > NextTimeToAtaque)
         {
-            Attack();
+           
+           NextTimeToAtaque = Time.time + 1 / AtaqueRate;
+           Attack();
         }
 
-
-
-        if (m_Grounded && OnAir)
-        {
-            OnAir = false;
-        }
         // Debug.LogWarning(jump);
     }
 
@@ -194,17 +203,11 @@ public class PlayerMovement : MonoBehaviour
 
             m_Rigidbody2D.AddForce(force, ForceMode2D.Impulse);
         }
-        if(m_Grounded)
-        {
-            OnAir = false;
-        }
-        else
-        {
-            OnAir = true;
-        }
+
     }
     public void Attack()
     {
+        m_Rigidbody2D.velocity = Vector2.one;
         //enables the attack hitbox to right and left
         if (Input.GetAxis("Vertical") == 0)
         {
