@@ -5,7 +5,7 @@
 			<value>Som Area Isolada</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2eca3bdc-1fcd-4bf3-a29d-0dc80bd6a946}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{6ccc4ffe-a092-4a62-96d3-d4bcb4d6fc8e}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{eef3c9b7-96c4-42cb-b3c0-7f811973dbe0}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{1452e17a-514a-4105-bfd2-e47abd5eaee6}">
@@ -79,7 +82,11 @@
 			<destination>{1452e17a-514a-4105-bfd2-e47abd5eaee6}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{b32d7060-82c3-4540-8a22-96740a5a9259}" />
+	<object class="MultiSound" id="{b32d7060-82c3-4540-8a22-96740a5a9259}">
+		<relationship name="sounds">
+			<destination>{073cfbab-06a8-4d8d-9c11-d786d0114204}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{88a8ca68-739f-4b68-897c-8e47bb20d012}">
 		<relationship name="effects">
 			<destination>{0e269e92-39fe-45cd-9a83-a63d325a656f}</destination>
@@ -92,6 +99,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e90847b7-d82e-46ab-8d27-cf918ac46b07}" />
+	<object class="SingleSound" id="{073cfbab-06a8-4d8d-9c11-d786d0114204}">
+		<relationship name="audioFile">
+			<destination>{99e24e80-50f4-4dc8-b609-0c9a49476bc8}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{0e269e92-39fe-45cd-9a83-a63d325a656f}" />
 	<object class="MixerBusFader" id="{efeff120-9ee1-4c64-9d9d-b997c742d82b}" />
 </objects>
