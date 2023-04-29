@@ -33,7 +33,8 @@ public class MenuPause : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !panelOpen)
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SisPause(pausePanel);
             ///clear selected object
@@ -42,7 +43,7 @@ public class MenuPause : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(PauseFirstButton);
             
         }
-        if(Input.GetKeyDown(KeyCode.I) && !panelOpen)
+        if(Input.GetKeyDown(KeyCode.I) )
         {
             SisPause(InventoryPanel);
             ///clear selected object
@@ -76,11 +77,11 @@ public class MenuPause : MonoBehaviour
 
     private void SisPause(GameObject Panel)
     {
-        if (isPaused)
+        if (isPaused && panelOpen)
         {
             DesPausar(Panel);
         }
-        else
+        else if(!panelOpen)
         {
             Pausar(Panel);
         }

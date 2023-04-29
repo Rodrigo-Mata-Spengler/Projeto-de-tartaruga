@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3070024224765397549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.11, y: 0.09, z: 0}
+  m_LocalPosition: {x: 10.25, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -221,3 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransportPosition: {fileID: 3070024224765397548}
+  TeleportTimeCoolDown: 0.5
+  TeleportTime: 0
+  RespawnTimeCoolDown: 0.5
+  RespawnTime: 0
