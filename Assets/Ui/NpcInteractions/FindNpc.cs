@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 public class FindNpc : MonoBehaviour
 {
-    private GameObject Farmer; // Npc Farmer GameObject
-    private GameObject Witch;  // Npc Witch GameObject
-    private GameObject Ferreiro;  // Npc Blacsmith GameObject
+    public GameObject Farmer; // Npc Farmer GameObject
+    public GameObject Witch;  // Npc Witch GameObject
+    public GameObject Ferreiro;  // Npc Blacsmith GameObject
 
     public int Cost; // The Amount of the item (depending witch npc the item will be different) the player needs to be able to buy/trade
     public TextMeshProUGUI costText; // the text on the UI

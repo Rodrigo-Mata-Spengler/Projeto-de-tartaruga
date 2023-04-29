@@ -251,15 +251,18 @@ public class GuardianBehavior : MonoBehaviour
         
         if (tempoTonto < TempoEsperaTonto)
         {
-                
+            
         }
         else if (dash && tempoTonto > TempoEsperaTonto)/// check if enemy have jumped to edge, if have do the dash
         {
+            rb.velocity = Vector2.zero;
             TempoPular = 0;
-            Dash();
+            status = GuardianStatus.Dash;
+            //Dash();
         }
         else
         {
+            rb.velocity = Vector2.zero;
             TempoPular = 0;
             jumped = false;
             status = GuardianStatus.CheckPlayerDistance;

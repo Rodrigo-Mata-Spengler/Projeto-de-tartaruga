@@ -11,20 +11,26 @@ public class PlayerHitFeedback : MonoBehaviour
 
     public float secondsToDisable;
 
+    private Health PlayerHealth;
+
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        PlayerHealth = gameObject.GetComponent<Health>();
     }
     private void Update()
     {
         if (wasHit)
         {
+            PlayerHealth.enabled= false; //Disables the Player Health script
             StartCoroutine(DisableHitFeedback(secondsToDisable));
         }
     }
     private IEnumerator DisableHitFeedback(float seconds)
     {
+        
         yield return new WaitForSeconds(seconds);
         wasHit = false;
+        PlayerHealth.enabled = true;//Enables the Player Health script
     }
 }

@@ -47,10 +47,12 @@ public class NpcIteraction : MonoBehaviour
     [SerializeField] GameObject StoreFarmer;//The Farmer store panel 
     private bool OnStore = false; // Check's if is already on story
     //[SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
+    private bool inputPressed = false;
 
     private ItensInventory PlayerInventory; // Variable to get Player Inventory
     private Health PlayerHealth; // Variable to get Player Health
     private GameObject Player; // Player GameObjet
+    private MenuPause CanvasMenuPause;
 
     private void Start()
     {
@@ -60,6 +62,7 @@ public class NpcIteraction : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         PlayerHealth = Player.GetComponent<Health>();
         PlayerInventory = Player.GetComponent<ItensInventory>();
+        CanvasMenuPause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
     }
     
     private void Update()
@@ -69,9 +72,18 @@ public class NpcIteraction : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false)
+        if(Input.GetButtonDown("Interacao"))
         {
+            inputPressed = true;
+        }
+        //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && !CanvasMenuPause.panelOpen)
+        {
+            
+            CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
+            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+
             StartTyping = false;
             StopAllCoroutines();
             conversationObj.SetActive(true);
@@ -89,50 +101,54 @@ public class NpcIteraction : MonoBehaviour
             
         }
         //if paragraph were over than disable the UI interaction obj
-        if (havingConversation && textLocation >= NpcWords.Length)
+        else if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
         {
             conversationObj.SetActive(false);
-            havingConversation = false;
-
             ///checks if his have a store, if it does display the store panel
-            if(IsStore)
+            if (IsStore)
             {
-             
+                EventSystem.current.SetSelectedGameObject(null);
                 switch (NpcJob)// depending on the what function the npc have will appear he's store panel 
                 {
                     case NpcJob.Ferreiro:
-                       StoreFerreiro.SetActive(true);
-                        EventSystem.current.SetSelectedGameObject(null);
-                        EventSystem.current.SetSelectedGameObject(StoreFerreiro.transform.GetChild(7).gameObject);
+                        StoreFerreiro.SetActive(true);
+                        EventSystem.current.SetSelectedGameObject(StoreFerreiro.transform.GetChild(6).gameObject);
                         Cost = StoreFerreiro.GetComponent<FindNpc>().Cost;
+                        
                         break;
 
                     case NpcJob.Farmer:
                         StoreFarmer.SetActive(true);
-                        EventSystem.current.SetSelectedGameObject(null);
-                        EventSystem.current.SetSelectedGameObject(StoreFarmer.transform.GetChild(7).gameObject);
+                        EventSystem.current.SetSelectedGameObject(StoreFarmer.transform.GetChild(6).gameObject);
                         Cost = StoreFarmer.GetComponent<FindNpc>().Cost;
+                        
                         break;
 
                     case NpcJob.Witch:
                         StoreWitch.SetActive(true);
-                        EventSystem.current.SetSelectedGameObject(null);
-                        EventSystem.current.SetSelectedGameObject(StoreWitch.transform.GetChild(7).gameObject);
+                        EventSystem.current.SetSelectedGameObject(StoreWitch.transform.GetChild(6).gameObject);
                         Cost = StoreWitch.GetComponent<FindNpc>().Cost;
                         Cost2 = StoreWitch.GetComponent<FindNpc>().Cost2;
-
+                        
                         break;
                 }
 
                 OnStore = true;
  
             }
+            else
+            {
+                CanvasMenuPause.panelOpen = false;
+                Player.GetComponent<PlayerMovement>().enabled = true;
+                havingConversation = false;
+            }
         }
 
         // if player press the esc disable the UI interaction obj
         if (Input.GetKey(KeyCode.Escape) /* || textLocation == NpcWords.Length*/)
         {
-            conversationObj.SetActive(false); 
+            conversationObj.SetActive(false);
+            Player.GetComponent<PlayerMovement>().enabled = true;
 
         }
     }
@@ -206,7 +222,8 @@ public class NpcIteraction : MonoBehaviour
             PlayerHealth.currentLife = PlayerHealth.maxLife;
             PlayerHealth.haveArmor = true;
 
-            StoreFerreiro.SetActive(false);
+            Player.GetComponent<PlayerMovement>().enabled = true;
+            inputPressed = false;
         }
 
     }
@@ -218,7 +235,8 @@ public class NpcIteraction : MonoBehaviour
             PlayerHealth.maxLife += 1;
             PlayerHealth.currentLife = PlayerHealth.maxLife;
 
-            StoreFarmer.SetActive(false);
+            Player.GetComponent<PlayerMovement>().enabled = true;
+            inputPressed = false;
             ///give more mana
         }
 
@@ -231,7 +249,9 @@ public class NpcIteraction : MonoBehaviour
             PlayerInventory.conchas -= Cost;
             PlayerInventory.coral -= Cost2;
 
-            StoreWitch.SetActive(false);
+            Player.GetComponent<PlayerMovement>().enabled = true;
+
+            inputPressed = false;
         }
 
     }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3084456316168892138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boos guardian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,6 +103,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3084456316168892138}
     m_Modifications:
+    - target: {fileID: 1383954268, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383954271, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_Radius
+      value: 5.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547352175, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_Size.x
+      value: 0.069345035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547352175, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_Size.y
+      value: 0.17298397
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547352175, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0342463
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547352175, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.008782133
+      objectReference: {fileID: 0}
+    - target: {fileID: 484018159787737977, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 484018159787737977, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 484018159787737977, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 484018159787737978, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -156,6 +192,34 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: jumped
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: jumpHeight
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: DashImpulse
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: TimeToDoDash
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: tempoParaPular
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: TempoEsperaTonto
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: TempoEsperaNorteado
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: EdgeRooms.Array.data[0]
       value: 
       objectReference: {fileID: 4626377713692866299}
@@ -163,6 +227,14 @@ PrefabInstance:
       propertyPath: EdgeRooms.Array.data[1]
       value: 
       objectReference: {fileID: 4626377712356443928}
+    - target: {fileID: 6566133213932611490, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566133213932611491, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.92
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f89e47239efa95d4398337cd98148309, type: 3}
 --- !u!4 &672679174877475095 stripped

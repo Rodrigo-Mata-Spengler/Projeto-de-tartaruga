@@ -7,10 +7,13 @@ using UnityEngine.EventSystems;
 public class MenuPause : MonoBehaviour
 {
     private bool isPaused = false;
+    
 
     [Header("Menu Pause")]
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject InventoryPanel;
+
+    public bool panelOpen = false;
 
     [Header("Botão Menu Principal")]
     [SerializeField] private string nomeMenu;
@@ -30,15 +33,16 @@ public class MenuPause : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !panelOpen)
         {
             SisPause(pausePanel);
             ///clear selected object
             EventSystem.current.SetSelectedGameObject(null);
             ///set a new selected object
             EventSystem.current.SetSelectedGameObject(PauseFirstButton);
+            
         }
-        if(Input.GetKeyDown(KeyCode.I))
+        if(Input.GetKeyDown(KeyCode.I) && !panelOpen)
         {
             SisPause(InventoryPanel);
             ///clear selected object
@@ -56,6 +60,7 @@ public class MenuPause : MonoBehaviour
         ///Cursor.visible = true;
         PanelToDisable.SetActive(true);
         isPaused = true;
+        panelOpen = true;
     }
 
     //ao clicar esc de novo ou no botão sai do menu de pause
@@ -66,6 +71,7 @@ public class MenuPause : MonoBehaviour
         Cursor.visible = false;
         PanelToDisable.SetActive(false);
         isPaused = false;
+        panelOpen = false;
     }
 
     private void SisPause(GameObject Panel)

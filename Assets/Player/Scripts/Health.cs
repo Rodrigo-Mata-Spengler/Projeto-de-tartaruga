@@ -21,6 +21,8 @@ public class Health : MonoBehaviour
     public bool haveArmor = false;
     private CinemachineImpulseSource impulseSource;
 
+    private PlayerHitFeedback PlayerHitFeedbackScript;
+
     public bool DoDamage = false;
     private void Start()
     {
@@ -29,6 +31,8 @@ public class Health : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         impulseSource = GetComponent<CinemachineImpulseSource>();
+
+        PlayerHitFeedbackScript = gameObject.GetComponent<PlayerHitFeedback>();
     }
 
     private void Update()
@@ -80,8 +84,9 @@ public class Health : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            rb.velocity = Vector2.zero;
             Damage(1);
-            rb.velocity = new Vector2(transform.position.x, 15f);
+            rb.velocity = new Vector2(transform.position.y, 15f);
 
         }
     }
@@ -89,10 +94,12 @@ public class Health : MonoBehaviour
     // Do damage
     public void Damage(int GiveDamageAmount)
     {
+
         CameraShakeManager.instance.CameraShake(impulseSource);
         currentLife -= GiveDamageAmount;
         lifeImages[currentLife].gameObject.SetActive(false);
         AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
+        PlayerHitFeedbackScript.wasHit= true; //Pass the feedback that the player was hit, so the Health can be disble and enabled after a amount of time
         
     }
 
