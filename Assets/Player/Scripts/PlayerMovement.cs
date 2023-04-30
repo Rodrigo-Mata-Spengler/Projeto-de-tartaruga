@@ -4,11 +4,13 @@ using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Animator m_Animator;
 
     [Header("Movment")]
     public CharacterController2D CharacterController2D;
     [HideInInspector] public Rigidbody2D m_Rigidbody2D;
     [HideInInspector]public bool m_Grounded;
+    private float RunAnimator;
 
     public float RunSpeed = 40f; // speed velocity
     [HideInInspector]public float HorizontalMove = 0f;
@@ -61,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
     {
         m_Rigidbody2D = CharacterController2D.m_Rigidbody2D;
         trailRender = this.GetComponent<TrailRenderer>();
+
+        m_Animator = this.GetComponent<Animator>();
     }
 
     private void Update()
@@ -68,7 +72,10 @@ public class PlayerMovement : MonoBehaviour
         m_Grounded = CharacterController2D.m_Grounded;
         jumpInput = Input.GetButtonDown("Jump");
         jumpInputReleased = Input.GetButtonUp("Jump");
+
         HorizontalMove = Input.GetAxis("Horizontal") * RunSpeed;
+        m_Animator.SetFloat("Run", HorizontalMove);//pass the value to the animator
+
         facingDirection = CharacterController2D.facingDirection;
         AtaqueInput = Input.GetButtonDown("Fire1");
 

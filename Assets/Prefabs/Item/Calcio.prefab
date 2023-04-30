@@ -146,7 +146,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.028579712, y: -0.4751094}
+  m_Offset: {x: 0.028579712, y: -0.5022871}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -157,7 +157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5999069, y: 0.049781203}
+  m_Size: {x: 0.5999069, y: 0.104136586}
   m_EdgeRadius: 0
 --- !u!1 &3216016358514967152
 GameObject:
@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 3216016358514967157}
   - component: {fileID: 3216016358514967154}
   - component: {fileID: 3216016358514967155}
+  - component: {fileID: 4856399947965355695}
   m_Layer: 0
   m_Name: Calcio
   m_TagString: Calcio
@@ -207,7 +208,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016075134, y: 0.18575701}
+  m_Offset: {x: 0.03193474, y: 0.18575701}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -218,7 +219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.189331, y: 0.77137583}
+  m_Size: {x: 0.61611557, y: 0.77137583}
   m_EdgeRadius: 0
 --- !u!50 &3216016358514967155
 Rigidbody2D:
@@ -241,3 +242,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4856399947965355695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3216016358514967152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b22c3df29026f74aaa6f71ac499b085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceY: 2

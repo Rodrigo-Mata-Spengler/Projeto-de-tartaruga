@@ -10324,12 +10324,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8e2749ac562b56243a3d465ecd88f0fc, type: 3}
+  m_Sprite: {fileID: 865064457, guid: 9b1dd1f9ad70e0c44ba53c32f65f04ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.7424586, y: 0.998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10442,7 +10442,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6748649182909457857}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7165fb5128e2789419c2dbabc7044769, type: 2}
   m_CullingMode: 0
@@ -10468,8 +10468,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.027168274, y: -0.033439398}
-  m_Size: {x: 1.0381927, y: 1.9899564}
+  m_Offset: {x: -0.027168274, y: 0.02266395}
+  m_Size: {x: 1.0381927, y: 1.8777497}
   m_Direction: 0
 --- !u!114 &1622245416
 MonoBehaviour:
@@ -10780,6 +10780,7 @@ MonoBehaviour:
   coral: 30
   calcio: 30
   ossos: 30
+  MaxAmount: 10
 --- !u!114 &764544940252387656
 MonoBehaviour:
   m_ObjectHideFlags: 0
