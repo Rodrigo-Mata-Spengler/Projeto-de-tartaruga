@@ -7,10 +7,12 @@ public class SaveStatue : MonoBehaviour
     [SerializeField] private string player;
     private bool interacao;
     private GameObject playerGO;
+    private SpriteRenderer rend;
 
     private void Start()
     {
         interacao = false;
+        rend = gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -18,6 +20,7 @@ public class SaveStatue : MonoBehaviour
         if (Input.GetButton("Interacao")  && interacao)
         {
             SaveSystem.SavePlayer(playerGO);
+            rend.color = Color.green;
         }
     }
 
@@ -28,6 +31,7 @@ public class SaveStatue : MonoBehaviour
         {
             interacao = true;
             playerGO = collision.gameObject;
+            rend.color = Color.red;
         }
     }
 
@@ -37,6 +41,7 @@ public class SaveStatue : MonoBehaviour
         {
             interacao = false;
             playerGO = null;
+            rend.color = Color.white;
         }
     }
 }
