@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3084456316168892138
 Transform:
   m_ObjectHideFlags: 0
@@ -95,6 +95,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3084456316168892138}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4687293678179900146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3715050969447028436}
+  m_Layer: 8
+  m_Name: DropItemPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3715050969447028436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687293678179900146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.764, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 672679174877475095}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1144554044700979821
 PrefabInstance:
@@ -227,6 +258,14 @@ PrefabInstance:
       propertyPath: EdgeRooms.Array.data[1]
       value: 
       objectReference: {fileID: 4626377712356443928}
+    - target: {fileID: 5287758271197617120, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: DropItemPoint
+      value: 
+      objectReference: {fileID: 3715050969447028436}
+    - target: {fileID: 5287758271197617120, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: TimeToDestroyDelay
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 5287758271197617120, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: ItensPrefabs.Array.size
       value: 4

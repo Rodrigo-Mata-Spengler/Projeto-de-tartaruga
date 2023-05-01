@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &809462501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809462502}
+  - component: {fileID: 809462504}
+  - component: {fileID: 809462503}
+  m_Layer: 9
+  m_Name: PuzzlRoda (checa se puzzle esta certo)
+  m_TagString: PuzzleRoda
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809462502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809462501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.31, y: 4.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5626022082540711865}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &809462504
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809462501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.51160717, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5007153, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &809462503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809462501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97085713ab4145b408d0d3be40265c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CirclesRight: 0
+  locked: 1
+  DoorToOpen: {fileID: 0}
 --- !u!1 &5626022081732788011
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +104,7 @@ Transform:
   m_Children:
   - {fileID: 3062916677271745964}
   m_Father: {fileID: 5626022082540711865}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5626022081827716598
 GameObject:
@@ -292,6 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5626022081850331645}
   - component: {fileID: 5626022081850331646}
+  - component: {fileID: 370622274}
   m_Layer: 0
   m_Name: circulo sprite 2
   m_TagString: Untagged
@@ -366,6 +441,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &370622274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626022081850331644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82656f5ad3eb2f4d9f876835a252e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Distance: 4
+  PuzzleLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  PuzzleRodaManager: {fileID: 809462503}
 --- !u!1 &5626022081851287809
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5626022081949475517}
   - component: {fileID: 5626022081949475518}
+  - component: {fileID: 42149718}
   m_Layer: 0
   m_Name: circulo sprite 4
   m_TagString: Untagged
@@ -483,6 +576,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &42149718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626022081949475516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82656f5ad3eb2f4d9f876835a252e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Distance: 4
+  PuzzleLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  PuzzleRodaManager: {fileID: 809462503}
 --- !u!1 &5626022082002385670
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +711,7 @@ Transform:
   - {fileID: 5626022081851287810}
   - {fileID: 5626022081828553584}
   m_Father: {fileID: 5626022082540711865}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5626022082147203183
 GameObject:
@@ -826,11 +936,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5626022082540711864}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -18.080002, y: 3.6099997, z: 0.39246723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 809462502}
   - {fileID: 5626022083758663275}
   - {fileID: 5626022081732788004}
   - {fileID: 5626022082072791551}
@@ -980,6 +1091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5626022082790044161}
   - component: {fileID: 5626022082790044162}
+  - component: {fileID: 1607741126}
   m_Layer: 0
   m_Name: circulo sprite 3
   m_TagString: Untagged
@@ -1054,6 +1166,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1607741126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626022082790044160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82656f5ad3eb2f4d9f876835a252e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Distance: 4
+  PuzzleLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  PuzzleRodaManager: {fileID: 809462503}
 --- !u!1 &5626022082904576756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,6 +1543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5626022083508719611}
   - component: {fileID: 5626022083508719604}
+  - component: {fileID: 633944278}
   m_Layer: 0
   m_Name: circulo sprite1
   m_TagString: Untagged
@@ -1488,6 +1618,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &633944278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626022083508719610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82656f5ad3eb2f4d9f876835a252e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Distance: 4
+  PuzzleLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  PuzzleRodaManager: {fileID: 809462503}
 --- !u!1 &5626022083548845171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1734,7 @@ Transform:
   - {fileID: 5626022082904576757}
   - {fileID: 5626022081831729449}
   m_Father: {fileID: 5626022082540711865}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5626022082929876346
 PrefabInstance:

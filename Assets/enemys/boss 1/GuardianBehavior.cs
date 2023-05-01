@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer, JumpAtEdge ,Dash, CheckPlayerDistance, Norteado };
+enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer, JumpAtEdge ,Dash, CheckPlayerDistance, Norteado, Morto };
 public class GuardianBehavior : MonoBehaviour
 {
     private EnemyHealth EnemyHealth;
@@ -69,7 +69,6 @@ public class GuardianBehavior : MonoBehaviour
     public float tempoNorteado = 0;//current time that is waitting to do a action
     [SerializeField] private float TempoEsperaNorteado= 0; // Amount of time to wait for the next action
 
-
     private float LifePorcentage;
 
     // Start is called before the first frame update
@@ -93,6 +92,10 @@ public class GuardianBehavior : MonoBehaviour
 
         switch (status)
         {
+            case GuardianStatus.Morto:
+                morto();
+                break;
+
             case GuardianStatus.desativado:
                 Tonto();
                 break;
@@ -123,7 +126,20 @@ public class GuardianBehavior : MonoBehaviour
 
         }
          LookAtPlayer();
+
+        if(EnemyHealth.currentHealth <= 0)
+        {
+            status = GuardianStatus.Morto;
+        }
        
+    }
+    private void morto()
+    {
+        PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true; // activated the have magic trident in player movment
+        PlayerObj.GetComponent<PlayerMovement>().AtaqueHitBox.GetComponent<Ataque>().HaveMagicTrident = true; // activated the have magic trident in the Attack obj
+        PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBox.GetComponent<Ataque>().HaveMagicTrident = true;
+        PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBox.GetComponent<Ataque>().HaveMagicTrident = true;
+
     }
     private void PlayerDistance()
     {
