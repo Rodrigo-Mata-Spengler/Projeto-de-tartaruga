@@ -5,7 +5,7 @@
 			<value>Praia</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{773c02d3-0aa7-40e0-9303-157e817c9cab}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{608b1b7a-f545-4f77-82f8-46b770e60f60}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{c2d91d7d-ee3a-4665-be5c-a88339219dac}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{fcef2ae6-0a78-4c42-9129-5c2b8e9d03f2}">
@@ -79,7 +82,11 @@
 			<destination>{fcef2ae6-0a78-4c42-9129-5c2b8e9d03f2}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{df3685a0-26f3-4860-99d0-404969ce3451}" />
+	<object class="MultiSound" id="{df3685a0-26f3-4860-99d0-404969ce3451}">
+		<relationship name="sounds">
+			<destination>{00e791d1-20e7-4728-8721-e18f535f6edf}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{275477c1-fd85-4800-8c3e-4ceca85aca49}">
 		<relationship name="effects">
 			<destination>{76bf03ce-a237-407b-83f9-61037eebd37b}</destination>
@@ -92,6 +99,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2f3007cb-67c3-4677-93cc-392dad29db40}" />
+	<object class="SingleSound" id="{00e791d1-20e7-4728-8721-e18f535f6edf}">
+		<relationship name="audioFile">
+			<destination>{37943d90-1e73-4a9f-bfc8-04acb1c21069}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{76bf03ce-a237-407b-83f9-61037eebd37b}" />
 	<object class="MixerBusFader" id="{74fb110f-ec2b-49ab-8f92-3e5d19098f48}" />
 </objects>
