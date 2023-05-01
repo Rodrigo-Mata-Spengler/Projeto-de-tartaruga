@@ -54,4 +54,9 @@ public class MainMEnu : MonoBehaviour
 
         }
     }
+
+    public void SairDoJogo()
+    {
+        Application.Quit();
+    }
 }
