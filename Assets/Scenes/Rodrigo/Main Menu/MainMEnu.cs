@@ -21,6 +21,11 @@ public class MainMEnu : MonoBehaviour
         path = Application.persistentDataPath + "/PlayerData.cpd";
     }
 
+    private void Update()
+    {
+        TemUmSave();
+    }
+
     private void TemUmSave()
     {
         if (File.Exists(path))
@@ -48,5 +53,10 @@ public class MainMEnu : MonoBehaviour
             SceneManager.LoadScene(data.scenaAtual);
 
         }
+    }
+
+    public void SairDoJogo()
+    {
+        Application.Quit();
     }
 }
