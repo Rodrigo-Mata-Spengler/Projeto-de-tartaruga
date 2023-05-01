@@ -4,6 +4,9 @@ using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    [SerializeField] public bool HaveMagicTrident = false;
+    [Space]
     private Animator m_Animator;
 
     [Header("Movment")]

@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
     private float TimeToDestroy = 0f;
     private bool Droped = false;
 
-    [SerializeField]private int itemDropNumber; // the position of a item drop in the array
+    private int itemDropNumber; // the position of a item drop in the array
     private void Start()
     {
         currentHealth = MaxHealth;

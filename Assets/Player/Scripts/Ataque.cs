@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Ataque : MonoBehaviour
 {
+    [HideInInspector]public bool HaveMagicTrident =false;
+
     public bool Detected = false; // detecte if a enemy was inside
     public Rigidbody2D rb;
 
-    public float DamageAmount;
+    public float SimpleTridentDamageAmount;
+    public float MagicTridentDamageAmount;
 
     [HideInInspector] public bool up, down, right;
     public float impulseForce;
@@ -46,11 +49,18 @@ public class Ataque : MonoBehaviour
     //Draw the box on unity
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") && !HaveMagicTrident)
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
-            collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
+            collision.transform.GetComponent<EnemyHealth>().Damage(SimpleTridentDamageAmount);
+            Detected = true;
+        }
+        if(collision.CompareTag("Enemy") && HaveMagicTrident)
+        {
+            collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
+            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<EnemyHealth>().Damage(MagicTridentDamageAmount);
             Detected = true;
         }
         
