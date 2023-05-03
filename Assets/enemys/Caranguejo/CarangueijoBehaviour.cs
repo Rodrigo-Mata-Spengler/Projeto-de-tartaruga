@@ -6,8 +6,8 @@ enum CarangueijoStatus {dormindo, caindo, espera, pulando};
 public class CarangueijoBehaviour : MonoBehaviour
 {
     [Header("espera queda player")]
-    [SerializeField] public bool dectPlayer = false;
-
+    
+    
     
 
     //espera o player passar por baixo 
