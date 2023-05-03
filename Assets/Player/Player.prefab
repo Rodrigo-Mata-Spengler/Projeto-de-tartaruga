@@ -80,9 +80,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HaveMagicTrident: 0
   Detected: 0
   rb: {fileID: 6748649182909457862}
-  DamageAmount: 10
+  SimpleTridentDamageAmount: 0
+  MagicTridentDamageAmount: 0
   up: 0
   down: 0
   right: 0
@@ -5026,9 +5028,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HaveMagicTrident: 0
   Detected: 0
   rb: {fileID: 6748649182909457862}
-  DamageAmount: 10
+  SimpleTridentDamageAmount: 0
+  MagicTridentDamageAmount: 0
   up: 0
   down: 0
   right: 0
@@ -10112,9 +10116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f331d8a6e5221a439cf682bb11a08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HaveMagicTrident: 0
   Detected: 0
   rb: {fileID: 6748649182909457862}
-  DamageAmount: 10
+  SimpleTridentDamageAmount: 0
+  MagicTridentDamageAmount: 0
   up: 0
   down: 0
   right: 0
@@ -10324,7 +10330,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 865064457, guid: 9b1dd1f9ad70e0c44ba53c32f65f04ba, type: 3}
+  m_Sprite: {fileID: -1699870417, guid: bd0404bae233a5c439300fa5fd19caee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10402,6 +10408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003948e474aa3f84cb15880a7f97d834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HaveMagicTrident: 0
   CharacterController2D: {fileID: 6748649182909457867}
   m_Rigidbody2D: {fileID: 0}
   m_Grounded: 0

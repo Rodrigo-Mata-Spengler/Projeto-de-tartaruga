@@ -100,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
         if (m_Grounded)
         {
             OnAir = false;
+            
         }
         else
         {
@@ -186,7 +187,9 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 1;
             trailRender.emitting = true;
-            
+
+            m_Animator.SetBool("Pulo", jumpInput);
+
         }
         // if he released fall smoothly
         if (jumpInputReleased && m_Rigidbody2D.velocity.y > 0 && !IsTouchingWall)
@@ -194,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
             JumpReleasedTimes += 1;
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_Rigidbody2D.velocity.x / _yVelJumpRealeasedMod);
             trailRender.emitting = false;
+            m_Animator.SetBool("Pulo", jumpInput);
         }
         //Do the second jump
         if (jumpInput && JumpReleasedTimes == 1 && !IsTouchingWall && haveDoubleJump) 
@@ -201,6 +205,7 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 2;
             trailRender.emitting = true;
+            m_Animator.SetBool("Pulo", jumpInput);
         }
         if(IsTouchingWall && jumpInput && haveWallJump && !m_Grounded)
         {
@@ -212,6 +217,7 @@ public class PlayerMovement : MonoBehaviour
             //m_Rigidbody2D.velocity = Vector2.zero;
 
             m_Rigidbody2D.AddForce(force, ForceMode2D.Impulse);
+            m_Animator.SetBool("Pulo", jumpInput);
         }
 
     }
@@ -226,6 +232,23 @@ public class PlayerMovement : MonoBehaviour
             AtaqueHitBox.SetActive(true);
             AtaqueHitBox.GetComponent<Ataque>().right = true;
 
+            m_Animator.SetBool("Ataque normal", true);
+
+            //Ataque animation
+            if(m_Animator.GetInteger("Ataque normal index") == 0)
+            {
+                m_Animator.SetInteger("Ataque normal index", 1);
+            }
+            
+            else if (m_Animator.GetInteger("Ataque normal index") == 1)
+            {
+                m_Animator.SetInteger("Ataque normal index", 2);
+            }
+            else if (m_Animator.GetInteger("Ataque normal index") == 2)
+            {
+                m_Animator.SetInteger("Ataque normal index", 0);
+            }
+            
             StartCoroutine(AttackTime(AttackTimeAmount,AtaqueHitBox));
         }
         //enables the up hitBox
@@ -234,8 +257,9 @@ public class PlayerMovement : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
             AttackEnd = false;
             AtaqueUpHitBox.SetActive(true);
-            AtaqueUpHitBox.GetComponent<Ataque>().down = true; 
+            AtaqueUpHitBox.GetComponent<Ataque>().down = true;
 
+            m_Animator.SetBool("Ataque cima", true);
             StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
 
         }
@@ -246,7 +270,8 @@ public class PlayerMovement : MonoBehaviour
             AttackEnd = false;
             AtaqueDownHitBox.SetActive(true);
             AtaqueDownHitBox.GetComponent<Ataque>().up= true;
- 
+
+            m_Animator.SetBool("Ataque baixo", true);
             StartCoroutine(AttackTime(AttackTimeAmount,AtaqueDownHitBox));
         }
 
@@ -259,6 +284,13 @@ public class PlayerMovement : MonoBehaviour
         HitBox.GetComponent<Ataque>().HitIndex = 0;
         HitBox.SetActive(false);
         AttackEnd = true;
+
+        m_Animator.SetBool("Ataque baixo", false);
+        m_Animator.SetBool("Ataque cima", false);
+
+        m_Animator.SetBool("Ataque normal", false);
+
+
     }
 
     /*public void Crouch()
