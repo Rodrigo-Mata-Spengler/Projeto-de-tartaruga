@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
+    private Animator m_Animator;
+
     public float dashTime = 0.1f;//Time of the dash
     public float m_DashDist;//the distance of dash
     private float _currentDashTime = 0f;//time when player is dashing
@@ -26,6 +28,8 @@ public class Dash : MonoBehaviour
         trailRender = this.GetComponent<TrailRenderer>();
 
         rb = this.GetComponent<Rigidbody2D>();
+
+        m_Animator = this.GetComponent<Animator>();
     }
 
     void Update()
@@ -44,6 +48,8 @@ public class Dash : MonoBehaviour
                 _currentDashTime = 0;
                 _dashStart = transform.position;
                 _dashEnd = new Vector2(_dashStart.x + m_DashDist, _dashStart.y);
+
+                m_Animator.SetBool("Dash", true);
                 
             }
             //dash to left
@@ -54,6 +60,7 @@ public class Dash : MonoBehaviour
                 _currentDashTime = 0;
                 _dashStart = transform.position;
                 _dashEnd = new Vector2(_dashStart.x - m_DashDist, _dashStart.y);
+                m_Animator.SetBool("Dash", true);
             }
             trailRender.emitting= true;
         }
@@ -78,6 +85,7 @@ public class Dash : MonoBehaviour
                 transform.position = _dashEnd;
                 trailRender.emitting= false;
                 _isDashing = false;
+                m_Animator.SetBool("Dash", false);
 
             }
 
