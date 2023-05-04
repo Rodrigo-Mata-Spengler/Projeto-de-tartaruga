@@ -6,9 +6,10 @@ enum CarangueijoStatus {dormindo, caindo, espera, pulando};
 public class CarangueijoBehaviour : MonoBehaviour
 {
     [Header("espera queda player")]
-    
-    
-    
+    public float coloqueiAquiPorqueEstavadandoErroASSLuiz;
+
+
+
 
     //espera o player passar por baixo 
     //caso o plyer passe por baixo ele se atira diretamente para baixo
