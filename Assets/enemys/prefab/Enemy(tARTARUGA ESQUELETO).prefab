@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &975788406
 Transform:
   m_ObjectHideFlags: 0
@@ -232,12 +232,13 @@ GameObject:
   m_Component:
   - component: {fileID: 167771294725654426}
   - component: {fileID: 167771294725654425}
-  - component: {fileID: 167771294725654424}
   - component: {fileID: 167771294725654405}
   - component: {fileID: 167771294725654404}
   - component: {fileID: 167771294725654427}
   - component: {fileID: 167771294725654406}
   - component: {fileID: 1534872629}
+  - component: {fileID: 6838523111758516718}
+  - component: {fileID: 467076860110243205}
   m_Layer: 8
   m_Name: Enemy(tARTARUGA ESQUELETO)
   m_TagString: Enemy
@@ -304,8 +305,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 320f4eb52e227b446830a1f6fd691fca, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1864803614, guid: 5ae2b9c9b5a48eb4c9b99d1c8d71cac7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -315,32 +316,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &167771294725654424
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167771294725654431}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.14376071}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.7112374}
-  m_EdgeRadius: 0
 --- !u!114 &167771294725654405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95842cc188569f345a4a62c1989d0158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 0}
   rb: {fileID: 0}
   PlayerClose: 0
   lookingRight: 0
@@ -417,7 +393,6 @@ MonoBehaviour:
   - {fileID: 8182488497596834137, guid: 95f3c38df6386bb4f9944b39f48f9a35, type: 3}
   - {fileID: 845562266373629971, guid: bd405c68b2fdb344ba6f1679eb3943ae, type: 3}
   TimeToDestroyDelay: 10
-  itemDropNumber: 0
 --- !u!114 &1534872629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,3 +407,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.15
+--- !u!95 &6838523111758516718
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167771294725654431}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bfa93edba0c196c4e809d7750bf1e3ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &467076860110243205
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167771294725654431}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.051939964, y: -0.04960513}
+  m_Size: {x: 0.97395515, y: 1.7408836}
+  m_Direction: 0

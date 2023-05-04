@@ -19,6 +19,7 @@ public class Attack : BTnode
 
         while (currentTime  < AttackDuration)
         {
+            bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Bater", true);
             currentTime += Time.deltaTime;
             bt.GetComponent<BTZombiTurtle>().AttackHitBoxEnemy.SetActive(true);
 
@@ -27,6 +28,7 @@ public class Attack : BTnode
             bt.GetComponent<BTZombiTurtle>().lookAt = false;
             if (currentTime > AttackDuration)
             {
+                bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Bater", false);
                 bt.GetComponent<BTZombiTurtle>().CloseTrigger.SetActive(true);
                 bt.GetComponent<BTZombiTurtle>().AttackHitBoxEnemy.SetActive(false);
                 status = Status.SUCCESS;

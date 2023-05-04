@@ -16,11 +16,13 @@ public class ChasePlayer : BTnode
 
         while (!PlayerClose)
         {
+            bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Correr", true);
             bt.GetComponent<BTZombiTurtle>().lookAt = true;
             bt.transform.position = Vector2.MoveTowards(bt.transform.position, Player.transform.position, ChaseSpeed * Time.deltaTime);
 
             if (bt.GetComponent<BTZombiTurtle>().PlayerClose)   
             {
+                bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Correr", false);
                 status = Status.SUCCESS;
                 Debug.LogWarning("aquii");
                 break;

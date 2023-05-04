@@ -100,11 +100,20 @@ public class PlayerMovement : MonoBehaviour
         if (m_Grounded)
         {
             OnAir = false;
-            
+            m_Animator.SetBool("Fall", false);
+
         }
         else
         {
             OnAir = true;
+           
+
+        }
+
+        if(OnAir &&  m_Rigidbody2D.velocity.y > 0)
+        {
+            m_Animator.SetBool("Fall", true);
+            m_Animator.SetBool("Pulo", false) ;
         }
 
         CheckSurroundings();
@@ -188,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
             JumpTimes = 1;
             trailRender.emitting = true;
 
-            m_Animator.SetBool("Pulo", jumpInput);
+            m_Animator.SetBool("Pulo", true);
 
         }
         // if he released fall smoothly
@@ -197,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
             JumpReleasedTimes += 1;
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_Rigidbody2D.velocity.x / _yVelJumpRealeasedMod);
             trailRender.emitting = false;
-            m_Animator.SetBool("Pulo", jumpInput);
+            m_Animator.SetBool("Pulo", false);
         }
         //Do the second jump
         if (jumpInput && JumpReleasedTimes == 1 && !IsTouchingWall && haveDoubleJump) 
@@ -205,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 2;
             trailRender.emitting = true;
-            m_Animator.SetBool("Pulo", jumpInput);
+            m_Animator.SetBool("Pulo", true);
         }
         if(IsTouchingWall && jumpInput && haveWallJump && !m_Grounded)
         {
@@ -217,7 +226,7 @@ public class PlayerMovement : MonoBehaviour
             //m_Rigidbody2D.velocity = Vector2.zero;
 
             m_Rigidbody2D.AddForce(force, ForceMode2D.Impulse);
-            m_Animator.SetBool("Pulo", jumpInput);
+            m_Animator.SetBool("Pulo", true);
         }
 
     }

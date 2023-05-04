@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BTZombiTurtle : MonoBehaviour
 {
+    [HideInInspector]public Animator m_Animator;
     [HideInInspector]public Rigidbody2D rb;
     [Space]
 
@@ -25,6 +26,7 @@ public class BTZombiTurtle : MonoBehaviour
 
     private void Start()
     {
+        m_Animator = this.GetComponent<Animator>();
         PlayerTransform = GameObject.FindGameObjectWithTag("Player");
         rb= this.GetComponent<Rigidbody2D>();  
         StartCoroutine(FindTargetsWithDelay(0.01f));
