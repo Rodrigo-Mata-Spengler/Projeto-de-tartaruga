@@ -246,7 +246,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (m_Animator.GetInteger("Ataque normal index") == 2)
             {
-                m_Animator.SetInteger("Ataque normal index", 0);
+                m_Animator.SetInteger("Ataque normal index", 1);
             }
             
             StartCoroutine(AttackTime(AttackTimeAmount,AtaqueHitBox));
