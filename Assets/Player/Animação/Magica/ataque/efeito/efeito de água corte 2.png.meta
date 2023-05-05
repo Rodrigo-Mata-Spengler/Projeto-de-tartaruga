@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8e59891ebf4a664f9a52abb3e70f271
+guid: 4ebdf41539c13cb4881d0b2b942c5e44
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 660
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pulo inicial corte 1_0
+      name: "efeito de \xE1gua corte 2_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2500
-        height: 2500
+        width: 4000
+        height: 4000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc77b0436fae0d041876eb615a532bea
-      internalID: -2073152286
+      spriteID: e91b4c5e05427924087581b34d773802
+      internalID: -478016622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pulo inicial corte 1_1
+      name: "efeito de \xE1gua corte 2_1"
       rect:
         serializedVersion: 2
-        x: 2500
+        x: 4000
         y: 0
-        width: 2500
-        height: 2500
+        width: 4000
+        height: 4000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be0f1f4a49ba3034d869599224af6c4f
-      internalID: -658679736
+      spriteID: 03cb2b04a6a292a45b27a5b12c32b8db
+      internalID: 1421481977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pulo inicial corte 1_2
+      name: "efeito de \xE1gua corte 2_2"
       rect:
         serializedVersion: 2
-        x: 5000
+        x: 8000
         y: 0
-        width: 2500
-        height: 2500
+        width: 4000
+        height: 4000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,29 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb1dc5d566e6979449cbb9208d17fe51
-      internalID: 271999173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pulo inicial corte 1_3
-      rect:
-        serializedVersion: 2
-        x: 7500
-        y: 0
-        width: 2500
-        height: 2500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5613241fbc4850b46a6e06a32f79b83f
-      internalID: -1077380858
+      spriteID: ed8850e48fb30554d80840c3b094603d
+      internalID: 1075227300
       vertices: []
       indices: 
       edges: []
@@ -199,10 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pulo inicial corte 1_0: -2073152286
-      pulo inicial corte 1_1: -658679736
-      pulo inicial corte 1_2: 271999173
-      pulo inicial corte 1_3: -1077380858
+      "efeito de \xE1gua corte 2_0": -478016622
+      "efeito de \xE1gua corte 2_1": 1421481977
+      "efeito de \xE1gua corte 2_2": 1075227300
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

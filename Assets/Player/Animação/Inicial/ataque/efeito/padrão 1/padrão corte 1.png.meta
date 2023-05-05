@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5004b531545c85438d3123063bb2a5a
+guid: ab344492152749e42a02419a4278eb91
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 630
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pulo inicial corte 2_0
+      name: "padr\xE3o corte 1_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2500
-        height: 2500
+        width: 3000
+        height: 3000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83070178515ebbc49b3287d8d17f9882
-      internalID: 1660665869
+      spriteID: f7af385fd1a92ae4ca11299ba383aef6
+      internalID: -1093315512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pulo inicial corte 2_1
+      name: "padr\xE3o corte 1_1"
       rect:
         serializedVersion: 2
-        x: 2500
+        x: 3000
         y: 0
-        width: 2500
-        height: 2500
+        width: 3000
+        height: 3000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,29 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 681e40b18130ee24c949cc3a579e77ab
-      internalID: -1836277457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pulo inicial corte 2_2
-      rect:
-        serializedVersion: 2
-        x: 5000
-        y: 0
-        width: 2500
-        height: 2500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf882011e9b10084a9a25ef027d64b7d
-      internalID: -353672391
+      spriteID: 39ebfdc1a5caa5a4189f4961a9fe49b6
+      internalID: 835212722
       vertices: []
       indices: 
       edges: []
@@ -178,9 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pulo inicial corte 2_0: 1660665869
-      pulo inicial corte 2_1: -1836277457
-      pulo inicial corte 2_2: -353672391
+      "padr\xE3o corte 1_0": -1093315512
+      "padr\xE3o corte 1_1": 835212722
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

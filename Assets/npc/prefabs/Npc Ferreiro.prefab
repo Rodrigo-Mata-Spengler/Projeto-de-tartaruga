@@ -127,8 +127,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5373455301330540759}
   - component: {fileID: 5373455301330540758}
-  - component: {fileID: 5373455301330540752}
   - component: {fileID: 5373455301330540753}
+  - component: {fileID: 7869436001575737635}
   m_Layer: 0
   m_Name: Npc Ferreiro
   m_TagString: Ferreiro
@@ -204,41 +204,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5373455301330540752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5373455301330541355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4ba81162686004aa1f58c518590463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationObj: {fileID: 0}
-  conversationText: {fileID: 0}
-  NpcWords:
-  - Sou o ferreiro
-  - Gosto de armadura, principalmente mulheres com armaduras
-  - "Vc j\xE1 ouviu falar da Kayle????"
-  - "Ela pode parecer nazista mas n\xE3o \xE9?"
-  - vamos jogar um lolzinho???
-  - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  typingSpeed: 0.02
-  textLocation: 0
-  StartTyping: 0
-  playerDetected: 0
-  itemToSell: 2
-  NpcJob: 2
-  IsStore: 1
-  Cost: 0
-  Cost2: 0
-  StoreFerreiro: {fileID: 0}
-  StoreWitch: {fileID: 0}
-  StoreFarmer: {fileID: 0}
 --- !u!61 &5373455301330540753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,6 +230,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &7869436001575737635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5373455301330541355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba45b7242a25504590a0e8b206e8add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationObj: {fileID: 0}
+  conversationText: {fileID: 0}
+  NpcWords:
+  - 'Cadete, como foi o treinamento?! '
+  - Espero que o tridente esteja sendo de bom uso.
+  - "Infelizmente pela falta de min\xE9rio n\xE3o vou conseguir completar sua armadura"
+  - "Se voc\xEA chegar a ach\xE1-los traga os a mim. "
+  - "Por\xE9m acho muito dif\xEDcil, j\xE1 vasculhei a vila inteira deis que o \xFAltimo
+    acabou e n\xE3o achei nada."
+  - "Talvez fora da vila ainda tenha bastante, por\xE9m dizem que \xE9 muito perigoso
+    e aqueles que tentaram nunca retornaram."
+  typingSpeed: 0.02
+  textLocation: 0
+  StartTyping: 0
+  playerDetected: 0
+  Cost: 0a000000
+  IsStore: 1
+  StoreFerreiro: {fileID: 0}
 --- !u!1 &6695516038752398603
 GameObject:
   m_ObjectHideFlags: 0

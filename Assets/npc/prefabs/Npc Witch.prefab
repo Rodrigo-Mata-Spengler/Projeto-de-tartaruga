@@ -211,8 +211,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7854020169226348047}
   - component: {fileID: 7854020169226348046}
-  - component: {fileID: 7854020169226348040}
   - component: {fileID: 7854020169226348041}
+  - component: {fileID: 7869436001506505369}
   m_Layer: 0
   m_Name: Npc Witch
   m_TagString: Witch
@@ -288,36 +288,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7854020169226348040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7854020169226348019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4ba81162686004aa1f58c518590463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationObj: {fileID: 0}
-  conversationText: {fileID: 0}
-  NpcWords:
-  - Euuuu
-  - Quero
-  - vc assim
-  typingSpeed: 0.02
-  textLocation: 0
-  StartTyping: 0
-  playerDetected: 0
-  itemToSell: 3
-  NpcJob: 0
-  IsStore: 1
-  Cost: 0
-  Cost2: 0
-  StoreFerreiro: {fileID: 0}
-  StoreWitch: {fileID: 0}
-  StoreFarmer: {fileID: 0}
 --- !u!61 &7854020169226348041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -344,3 +314,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &7869436001506505369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854020169226348019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c650a7bee0942349ba06e9401e917e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationObj: {fileID: 0}
+  conversationText: {fileID: 0}
+  NpcWords:
+  - "O que quer aqui Tartaruga? J\xE1 falei que n\xE3o vou mais ajud\xE1-los com
+    seus problemas."
+  - 'Sai daqui antes que eu me irrite. '
+  - "Voc\xEA de novo!?"
+  - Hum.
+  - "Ok, eu posso te ajudar, mas para isso voc\xEA vai ter que me dar alguma coisa
+    em troca"
+  - Estou precisando de uns ingredientes especiais para um projeto pessoal.
+  - "Se voc\xEA os trouxer para mim eu te ajudo com alguma coisa."
+  typingSpeed: 0.02
+  textLocation: 0
+  StartTyping: 0
+  playerDetected: 0
+  Cost: 1400000004000000
+  IsStore: 1
+  StoreBruxa: {fileID: 0}

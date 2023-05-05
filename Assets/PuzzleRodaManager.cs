@@ -7,7 +7,11 @@ public class PuzzleRodaManager : MonoBehaviour
     public int CirclesRight = 0;
     public bool locked = true;
 
-    [SerializeField] private GameObject DoorToOpen;
+    private bool DoOnce = false;
+
+    public Transform DropItemTransform;
+    //[SerializeField] private GameObject DoorToOpen;
+    [SerializeField] private GameObject ItemToDrop;
     private void Update()
     {
         if(CirclesRight == 4 && locked)
@@ -15,9 +19,11 @@ public class PuzzleRodaManager : MonoBehaviour
             locked= false;
         }
 
-        if(!locked)
+        if(!locked && DoOnce == false)
         {
-            DoorToOpen.SetActive(false);
+            //DoorToOpen.SetActive(false);
+            Instantiate(ItemToDrop, DropItemTransform.position, DropItemTransform.rotation);
+            DoOnce = true;
         }
     }
 

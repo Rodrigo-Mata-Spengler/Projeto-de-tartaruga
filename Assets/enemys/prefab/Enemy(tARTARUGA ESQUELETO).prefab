@@ -305,7 +305,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1864803614, guid: 5ae2b9c9b5a48eb4c9b99d1c8d71cac7, type: 3}
+  m_Sprite: {fileID: -1391875571, guid: e69adda92b52fa542a009463ba533bf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -388,8 +388,6 @@ MonoBehaviour:
   currentHealth: 0
   DropItemPoint: {fileID: 1802452943}
   ItensPrefabs:
-  - {fileID: 3216016358514967152, guid: 7adc0efd09a834047877c27f10ed6f67, type: 3}
-  - {fileID: 3558725743607025275, guid: 72d39d21c12c80742a52345f2377fcde, type: 3}
   - {fileID: 8182488497596834137, guid: 95f3c38df6386bb4f9944b39f48f9a35, type: 3}
   - {fileID: 845562266373629971, guid: bd405c68b2fdb344ba6f1679eb3943ae, type: 3}
   TimeToDestroyDelay: 10

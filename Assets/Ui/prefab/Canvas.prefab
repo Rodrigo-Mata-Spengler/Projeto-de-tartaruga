@@ -991,7 +991,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NpcIteraction, Assembly-CSharp
+        m_TargetAssemblyTypeName: Fazendeiro, Assembly-CSharp
         m_MethodName: FarmerSell
         m_Mode: 1
         m_Arguments:
@@ -1013,7 +1013,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &557231867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1352,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &624180206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624180207}
   - component: {fileID: 624180209}
-  - component: {fileID: 624180210}
+  - component: {fileID: 4065659}
   m_Layer: 5
   m_Name: Store Farmer
   m_TagString: Untagged
@@ -1406,7 +1418,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624180206}
   m_CullTransparentMesh: 1
---- !u!114 &624180210
+--- !u!114 &4065659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1415,16 +1427,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 624180206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33662d18fd09c4b4bbd5a2ef7195468d, type: 3}
+  m_Script: {fileID: 11500000, guid: 430eb934f40611a4f8af91942586480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Farmer: {fileID: 0}
-  Witch: {fileID: 0}
-  Ferreiro: {fileID: 0}
-  Cost: 0
+  Fazendeiro: {fileID: 0}
   costText: {fileID: 1858933712}
-  Cost2: 0
-  cost2Text: {fileID: 0}
 --- !u!1 &670710797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,7 +2322,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NpcIteraction, Assembly-CSharp
+        m_TargetAssemblyTypeName: Bruxa, Assembly-CSharp
         m_MethodName: WitchSell
         m_Mode: 1
         m_Arguments:
@@ -2350,7 +2357,7 @@ GameObject:
   - component: {fileID: 915482475}
   - component: {fileID: 915482474}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelFarmer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2878,7 +2885,7 @@ GameObject:
   - component: {fileID: 1114772637}
   - component: {fileID: 1114772636}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelWitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3255,7 +3262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1346067609}
   - component: {fileID: 1346067611}
-  - component: {fileID: 1346067612}
+  - component: {fileID: 494382792}
   m_Layer: 5
   m_Name: Store Witch
   m_TagString: Untagged
@@ -3301,7 +3308,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346067608}
   m_CullTransparentMesh: 1
---- !u!114 &1346067612
+--- !u!114 &494382792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3310,15 +3317,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1346067608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33662d18fd09c4b4bbd5a2ef7195468d, type: 3}
+  m_Script: {fileID: 11500000, guid: f3aad5e5ed3b9864fa74ffd2c9100055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Farmer: {fileID: 0}
   Witch: {fileID: 0}
-  Ferreiro: {fileID: 0}
-  Cost: 2
   costText: {fileID: 2114869442}
-  Cost2: 10
   cost2Text: {fileID: 179904710}
 --- !u!1 &1379344593
 GameObject:
@@ -4433,7 +4436,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &2114869440
 GameObject:
   m_ObjectHideFlags: 0
@@ -8332,7 +8335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505023966264146129}
   - component: {fileID: 1505023966264146128}
-  - component: {fileID: 563655458}
+  - component: {fileID: 185315893}
   m_Layer: 5
   m_Name: Store Ferreiro
   m_TagString: Untagged
@@ -8376,7 +8379,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505023966264146130}
   m_CullTransparentMesh: 1
---- !u!114 &563655458
+--- !u!114 &185315893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8385,16 +8388,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1505023966264146130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33662d18fd09c4b4bbd5a2ef7195468d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a23cde8ae365f2478b7d700d8934eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Farmer: {fileID: 0}
-  Witch: {fileID: 0}
   Ferreiro: {fileID: 0}
-  Cost: 10
   costText: {fileID: 1505023966421765836}
-  Cost2: 0
-  cost2Text: {fileID: 0}
 --- !u!1 &1505023966266548784
 GameObject:
   m_ObjectHideFlags: 0
@@ -8861,7 +8859,7 @@ GameObject:
   - component: {fileID: 1505023966365241509}
   - component: {fileID: 1505023966365241510}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelFerreiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9183,7 +9181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NpcIteraction, Assembly-CSharp
+        m_TargetAssemblyTypeName: Ferreiro, Assembly-CSharp
         m_MethodName: FerreiroSell
         m_Mode: 1
         m_Arguments:
@@ -9576,7 +9574,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.24703789, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

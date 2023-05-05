@@ -70521,7 +70521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -368.14
+      value: -368.65
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70606,6 +70606,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 003948e474aa3f84cb15880a7f97d834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &593354631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+  m_PrefabInstance: {fileID: 593354619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593354622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959a9c8d7489f6247a357a8057351a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &612227486
@@ -72513,6 +72524,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 809462502, guid: 019770dc9a8201b4ba3fc57a4c51d69e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 809462502, guid: 019770dc9a8201b4ba3fc57a4c51d69e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 809462503, guid: 019770dc9a8201b4ba3fc57a4c51d69e, type: 3}
+      propertyPath: ItemToDrop
+      value: 
+      objectReference: {fileID: 3558725743607025275, guid: 72d39d21c12c80742a52345f2377fcde, type: 3}
+    - target: {fileID: 979274030, guid: 019770dc9a8201b4ba3fc57a4c51d69e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3690083647951376871, guid: 019770dc9a8201b4ba3fc57a4c51d69e, type: 3}
       propertyPath: CinemachineCamera
       value: 
@@ -73430,11 +73457,11 @@ PrefabInstance:
       objectReference: {fileID: 717278168}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.433136
+      value: 17.430908
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.444397
+      value: 4.4446716
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: far clip plane
@@ -75956,6 +75983,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17082672, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 17082672, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 573694091, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -75969,17 +76004,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 593354625}
     - target: {fileID: 573694091, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 573694091, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 573694091, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: AtivarCheat
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 593354631}
     - target: {fileID: 1505023965602174944, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -77114,6 +77141,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 373812220}
     m_Modifications:
+    - target: {fileID: 6374330168111400686, guid: e9200136ee847bc429b3e14287084bde, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705309, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: m_Name
       value: Npc's basico
@@ -77180,7 +77211,7 @@ PrefabInstance:
       objectReference: {fileID: 1889457353}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: NpcWords.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: NpcWords.Array.data[0]

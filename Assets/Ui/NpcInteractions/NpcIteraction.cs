@@ -6,8 +6,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-
-enum SellItem { Nothing ,SeaWeedMoreHealth, Armor, Potions };
 enum NpcJob { Witch, Farmer, Ferreiro, none };
 public class NpcIteraction : MonoBehaviour
 {
@@ -34,25 +32,13 @@ public class NpcIteraction : MonoBehaviour
     private bool nextFrase = false;//variable that checks if the player can go to the next paragraph
 
 
-    [Header("What item Sell")]
-    [SerializeField] private SellItem itemToSell = SellItem.Nothing;
-    [SerializeField] private NpcJob NpcJob = NpcJob.none;
-
-    [Header("Store")]
-    public bool IsStore; ///if the npc have a store
-    [HideInInspector]public int Cost;
-    [HideInInspector] public int Cost2;
-    [SerializeField] GameObject StoreFerreiro;//The blacksmith store panel 
-    [SerializeField] GameObject StoreWitch;//The Witch store panel 
-    [SerializeField] GameObject StoreFarmer;//The Farmer store panel 
-    private bool OnStore = false; // Check's if is already on story
     //[SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
     private bool inputPressed = false;
 
-    private ItensInventory PlayerInventory; // Variable to get Player Inventory
-    private Health PlayerHealth; // Variable to get Player Health
     private GameObject Player; // Player GameObjet
     private MenuPause CanvasMenuPause;
+
+    private GameObject InputFeedBack;
 
     private void Start()
     {
@@ -60,13 +46,13 @@ public class NpcIteraction : MonoBehaviour
        trigger = this.GetComponent<BoxCollider2D>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
-        PlayerHealth = Player.GetComponent<Health>();
-        PlayerInventory = Player.GetComponent<ItensInventory>();
-        CanvasMenuPause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
+
+        InputFeedBack = gameObject.transform.GetChild(0).gameObject;
     }
     
     private void Update()
     {
+
         NextLineAndStop();
     }
 
@@ -77,12 +63,12 @@ public class NpcIteraction : MonoBehaviour
             inputPressed = true;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && !CanvasMenuPause.panelOpen)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false )
         {
             
-            CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
+            //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
 
             StartTyping = false;
             StopAllCoroutines();
@@ -105,43 +91,11 @@ public class NpcIteraction : MonoBehaviour
         {
             conversationObj.SetActive(false);
             ///checks if his have a store, if it does display the store panel
-            if (IsStore)
-            {
-                EventSystem.current.SetSelectedGameObject(null);
-                switch (NpcJob)// depending on the what function the npc have will appear he's store panel 
-                {
-                    case NpcJob.Ferreiro:
-                        StoreFerreiro.SetActive(true);
-                        EventSystem.current.SetSelectedGameObject(StoreFerreiro.transform.GetChild(6).gameObject);
-                        Cost = StoreFerreiro.GetComponent<FindNpc>().Cost;
-                        
-                        break;
+            CanvasMenuPause.panelOpen = false;
+            Player.GetComponent<PlayerMovement>().enabled = true;
+            havingConversation = false;
+            StopAllCoroutines();
 
-                    case NpcJob.Farmer:
-                        StoreFarmer.SetActive(true);
-                        EventSystem.current.SetSelectedGameObject(StoreFarmer.transform.GetChild(6).gameObject);
-                        Cost = StoreFarmer.GetComponent<FindNpc>().Cost;
-                        
-                        break;
-
-                    case NpcJob.Witch:
-                        StoreWitch.SetActive(true);
-                        EventSystem.current.SetSelectedGameObject(StoreWitch.transform.GetChild(6).gameObject);
-                        Cost = StoreWitch.GetComponent<FindNpc>().Cost;
-                        Cost2 = StoreWitch.GetComponent<FindNpc>().Cost2;
-                        
-                        break;
-                }
-
-                OnStore = true;
- 
-            }
-            else
-            {
-                CanvasMenuPause.panelOpen = false;
-                Player.GetComponent<PlayerMovement>().enabled = true;
-                havingConversation = false;
-            }
         }
 
         // if player press the esc disable the UI interaction obj
@@ -149,7 +103,6 @@ public class NpcIteraction : MonoBehaviour
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
-
         }
     }
     //method that run the courotine
@@ -197,6 +150,7 @@ public class NpcIteraction : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             playerDetected= true;
+            InputFeedBack.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -207,52 +161,9 @@ public class NpcIteraction : MonoBehaviour
             playerDetected = false;
             //disable the interaction UI
             conversationObj.SetActive(false);
+            InputFeedBack.SetActive(false);
         }
 
     }
 
-    //Function when player press yes on the pannel
-    public void FerreiroSell()
-    {
-        if(PlayerInventory.calcio >= Cost) //if Player have the enough calcio to buy the item
-        {
-            ///ativar animação de armadura
-            PlayerInventory.calcio -= Cost;
-            PlayerHealth.maxLife *= 2;
-            PlayerHealth.currentLife = PlayerHealth.maxLife;
-            PlayerHealth.haveArmor = true;
-
-            Player.GetComponent<PlayerMovement>().enabled = true;
-            inputPressed = false;
-        }
-
-    }
-    public void FarmerSell() //if Player have the enough bones to buy the item
-    {
-        if (PlayerInventory.ossos >= Cost)
-        {
-            PlayerInventory.ossos -= Cost;
-            PlayerHealth.maxLife += 1;
-            PlayerHealth.currentLife = PlayerHealth.maxLife;
-
-            Player.GetComponent<PlayerMovement>().enabled = true;
-            inputPressed = false;
-            ///give more mana
-        }
-
-    }
-    public void WitchSell() //if Player have the enough Shells and corals to buy the item
-    {
-        if (PlayerInventory.conchas >= Cost && PlayerInventory.coral >= Cost2)
-        {
-            ///ativar animação de armadura
-            PlayerInventory.conchas -= Cost;
-            PlayerInventory.coral -= Cost2;
-
-            Player.GetComponent<PlayerMovement>().enabled = true;
-
-            inputPressed = false;
-        }
-
-    }
 }

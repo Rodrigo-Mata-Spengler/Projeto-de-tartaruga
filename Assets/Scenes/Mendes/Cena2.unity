@@ -194,14 +194,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534874569}
     m_Modifications:
+    - target: {fileID: 1099819544390734267, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5373455301330540752, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: StoreWitch
       value: 
-      objectReference: {fileID: 120666410}
+      objectReference: {fileID: 0}
     - target: {fileID: 5373455301330540752, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: StoreFarmer
       value: 
-      objectReference: {fileID: 120666409}
+      objectReference: {fileID: 0}
     - target: {fileID: 5373455301330540752, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: StoreFerreiro
       value: 
@@ -214,6 +218,10 @@ PrefabInstance:
       propertyPath: conversationText
       value: 
       objectReference: {fileID: 120666412}
+    - target: {fileID: 5373455301330540752, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: NpcWords.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5373455301330540752, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: NpcWords.Array.data[0]
       value: 'Cadete, como foi o treinamento?! '
@@ -235,6 +243,14 @@ PrefabInstance:
     - target: {fileID: 5373455301330540752, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: NpcWords.Array.data[4]
       value: "Se voc\xEA chegar a ach\xE1-los traga os a mim."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373455301330540758, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373455301330540758, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1888708261
       objectReference: {fileID: 0}
     - target: {fileID: 5373455301330540759, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: m_RootOrder
@@ -284,6 +300,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Npc Ferreiro
       objectReference: {fileID: 0}
+    - target: {fileID: 7869436001575737635, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: StoreFerreiro
+      value: 
+      objectReference: {fileID: 120666411}
+    - target: {fileID: 7869436001575737635, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: conversationObj
+      value: 
+      objectReference: {fileID: 120666413}
+    - target: {fileID: 7869436001575737635, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: conversationText
+      value: 
+      objectReference: {fileID: 120666412}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
 --- !u!4 &43928624 stripped
@@ -291,17 +319,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5373455301330540759, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
   m_PrefabInstance: {fileID: 43928623}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &43928625 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5373455301330540752, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
-  m_PrefabInstance: {fileID: 43928623}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4ba81162686004aa1f58c518590463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &60319838
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 4881963360200759347, guid: f16846cb447974749af89925bc122dd3, type: 3}
       propertyPath: StoreWitch
       value: 
-      objectReference: {fileID: 120666410}
+      objectReference: {fileID: 0}
     - target: {fileID: 4881963360200759347, guid: f16846cb447974749af89925bc122dd3, type: 3}
       propertyPath: StoreFarmer
       value: 
@@ -544,7 +561,7 @@ PrefabInstance:
     - target: {fileID: 4881963360200759347, guid: f16846cb447974749af89925bc122dd3, type: 3}
       propertyPath: StoreFerreiro
       value: 
-      objectReference: {fileID: 120666411}
+      objectReference: {fileID: 0}
     - target: {fileID: 4881963360200759347, guid: f16846cb447974749af89925bc122dd3, type: 3}
       propertyPath: conversationObj
       value: 
@@ -620,10 +637,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4881963360200759349, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881963360200759349, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1888708261
+      objectReference: {fileID: 0}
     - target: {fileID: 4881963360200760264, guid: f16846cb447974749af89925bc122dd3, type: 3}
       propertyPath: m_Name
       value: Npc Farmer
       objectReference: {fileID: 0}
+    - target: {fileID: 4964146057491262748, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869436001141976389, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: StoreFazendeiro
+      value: 
+      objectReference: {fileID: 120666409}
+    - target: {fileID: 7869436001141976389, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: conversationObj
+      value: 
+      objectReference: {fileID: 120666413}
+    - target: {fileID: 7869436001141976389, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: conversationText
+      value: 
+      objectReference: {fileID: 120666412}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f16846cb447974749af89925bc122dd3, type: 3}
 --- !u!4 &70744989 stripped
@@ -631,17 +672,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4881963360200759348, guid: f16846cb447974749af89925bc122dd3, type: 3}
   m_PrefabInstance: {fileID: 70744988}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &70744990 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4881963360200759347, guid: f16846cb447974749af89925bc122dd3, type: 3}
-  m_PrefabInstance: {fileID: 70744988}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4ba81162686004aa1f58c518590463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &94775411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -649,10 +679,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1856002187}
     m_Modifications:
+    - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: EstaminaSlider
+      value: 
+      objectReference: {fileID: 642101027}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: HealImages.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: lifeImages.Array.size
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: HealImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 1734556928}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: HealImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 341487503}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: HealImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 729041254}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: HealImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 541316840}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: HealImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 303835870}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: HealImages.Array.data[5]
+      value: 
+      objectReference: {fileID: 767711861}
     - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: lifeImages.Array.data[0]
       value: 
@@ -701,9 +767,17 @@ PrefabInstance:
       propertyPath: lifeImageToEnable.Array.data[4]
       value: 
       objectReference: {fileID: 1379344593}
+    - target: {fileID: 1622245427, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457857, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748649182909457860, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_RootOrder
@@ -790,7 +864,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 94775411}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94775414}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b693594e52517f740a4291ea3f7c10d7, type: 3}
   m_Name: 
@@ -844,6 +918,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534874569}
     m_Modifications:
+    - target: {fileID: 2700642125660941213, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7854020169226348019, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
       propertyPath: m_Name
       value: Npc Witch
@@ -855,11 +933,11 @@ PrefabInstance:
     - target: {fileID: 7854020169226348040, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
       propertyPath: StoreFarmer
       value: 
-      objectReference: {fileID: 120666409}
+      objectReference: {fileID: 0}
     - target: {fileID: 7854020169226348040, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
       propertyPath: StoreFerreiro
       value: 
-      objectReference: {fileID: 120666411}
+      objectReference: {fileID: 0}
     - target: {fileID: 7854020169226348040, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
       propertyPath: conversationObj
       value: 
@@ -888,6 +966,14 @@ PrefabInstance:
     - target: {fileID: 7854020169226348040, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
       propertyPath: NpcWords.Array.data[3]
       value: Talvez uma outra hora jovem tartaruga.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854020169226348046, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854020169226348046, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1888708261
       objectReference: {fileID: 0}
     - target: {fileID: 7854020169226348047, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
       propertyPath: m_RootOrder
@@ -933,6 +1019,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7869436001506505369, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
+      propertyPath: StoreBruxa
+      value: 
+      objectReference: {fileID: 120666410}
+    - target: {fileID: 7869436001506505369, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
+      propertyPath: conversationObj
+      value: 
+      objectReference: {fileID: 120666413}
+    - target: {fileID: 7869436001506505369, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
+      propertyPath: conversationText
+      value: 
+      objectReference: {fileID: 120666412}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
 --- !u!4 &128663252 stripped
@@ -940,17 +1038,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7854020169226348047, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
   m_PrefabInstance: {fileID: 128663251}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &128663253 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7854020169226348040, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
-  m_PrefabInstance: {fileID: 128663251}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4ba81162686004aa1f58c518590463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!213 &130161539
 Sprite:
   m_ObjectHideFlags: 0
@@ -1277,6 +1364,11 @@ Transform:
   m_Father: {fileID: 1110137747}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &303835870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1085852463, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 2084335609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!213 &305389438
 Sprite:
   m_ObjectHideFlags: 0
@@ -1576,6 +1668,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &341487503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 670710797, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 2084335609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &346752417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,6 +2600,11 @@ Transform:
   m_Father: {fileID: 1096972946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &541316840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1335084760, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 2084335609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &557231867 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 557231867, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
@@ -2653,9 +2755,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534874569}
     m_Modifications:
+    - target: {fileID: 6374330168111400686, guid: e9200136ee847bc429b3e14287084bde, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705309, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: m_Name
       value: Npc's basico
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869436001391705888, guid: e9200136ee847bc429b3e14287084bde, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869436001391705888, guid: e9200136ee847bc429b3e14287084bde, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1888708261
       objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: m_RootOrder
@@ -2704,15 +2818,15 @@ PrefabInstance:
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: StoreWitch
       value: 
-      objectReference: {fileID: 120666410}
+      objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: StoreFarmer
       value: 
-      objectReference: {fileID: 120666409}
+      objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: StoreFerreiro
       value: 
-      objectReference: {fileID: 120666411}
+      objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: conversationObj
       value: 
@@ -2727,26 +2841,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: NpcWords.Array.data[0]
-      value: "Caros habitantes, devemos nos preparar para o dia em que o mal chegue
-        at\xE9 n\xF3s novamente."
+      value: "Caros habitantes, O dia da nossa destrui\xE7\xE3o est\xE1 cada vez
+        mais pr\xF3ximo."
       objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: NpcWords.Array.data[1]
-      value: "A for\xE7a do nosso guardi\xE3o j\xE1 n\xE3o est\xE1 t\xE3o forte assim."
+      value: "A for\xE7a que nos protegia est\xE1 na beira do colapso."
       objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: NpcWords.Array.data[2]
-      value: "\xC9 s\xF3 quest\xE3o de tempo at\xE9 que as criaturas invadam nossa
-        vila e destruam tudo o que constru\xEDmos."
+      value: "\xC9 s\xF3 quest\xE3o de tempo at\xE9 que nossa vila seja invadida
+        e destru\xEDda."
       objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: NpcWords.Array.data[3]
-      value: "\xC9 s\xF3 quest\xE3o de tempo at\xE9 que as criaturas invadam nossa
-        vila e destruam tudo o que constru\xEDmos."
+      value: "Pensem em seus familiares amigos, \xE9 isso que querem para eles?"
       objectReference: {fileID: 0}
     - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
       propertyPath: NpcWords.Array.data[4]
-      value: Devemos permanecer juntos para que possamos sobreviver novamente.
+      value: Devemos fazer algo imediatamente antes que seja tarde demais.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9200136ee847bc429b3e14287084bde, type: 3}
@@ -2999,6 +3112,17 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+--- !u!114 &642101027 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1037111709, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 2084335609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &654992536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3351,6 +3475,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7624317329481810101, guid: 5bff933fff579c8408239a0436557da9, type: 3}
   m_PrefabInstance: {fileID: 713330309}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &729041254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 380935731, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 2084335609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &765590331
 GameObject:
   m_ObjectHideFlags: 0
@@ -3417,6 +3546,11 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!1 &767711861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 38168375, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 2084335609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &774852094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11968,6 +12102,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1734556928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 563964526, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 2084335609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1742259048
 GameObject:
   m_ObjectHideFlags: 0
@@ -104578,10 +104717,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17082672, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 17082672, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 540156645, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 70744990}
+      objectReference: {fileID: 0}
     - target: {fileID: 573694091, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -104597,7 +104744,7 @@ PrefabInstance:
     - target: {fileID: 879191814, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 128663253}
+      objectReference: {fileID: 0}
     - target: {fileID: 1505023965602174944, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -104693,7 +104840,7 @@ PrefabInstance:
     - target: {fileID: 1505023966450069521, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 43928625}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
 --- !u!1 &2084335610 stripped

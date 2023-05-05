@@ -77,11 +77,11 @@ public class MenuPause : MonoBehaviour
 
     private void SisPause(GameObject Panel)
     {
-        if (isPaused && panelOpen)
+        if (isPaused)
         {
             DesPausar(Panel);
         }
-        else if(!panelOpen)
+        else
         {
             Pausar(Panel);
         }

@@ -94,8 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4881963360200759348}
   - component: {fileID: 4881963360200759349}
-  - component: {fileID: 4881963360200759347}
   - component: {fileID: 4881963360200759346}
+  - component: {fileID: 7869436001141976389}
   m_Layer: 0
   m_Name: Npc Farmer
   m_TagString: Farmer
@@ -171,36 +171,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4881963360200759347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4881963360200760264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4ba81162686004aa1f58c518590463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationObj: {fileID: 0}
-  conversationText: {fileID: 0}
-  NpcWords:
-  - Euuuu
-  - Quero
-  - vc assim
-  typingSpeed: 0.02
-  textLocation: 0
-  StartTyping: 0
-  playerDetected: 0
-  itemToSell: 1
-  NpcJob: 1
-  IsStore: 1
-  Cost: 0
-  Cost2: 0
-  StoreFerreiro: {fileID: 0}
-  StoreWitch: {fileID: 0}
-  StoreFarmer: {fileID: 0}
 --- !u!61 &4881963360200759346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -227,6 +197,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &7869436001141976389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4881963360200760264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a84c7b71c05a248bdf54766516e1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationObj: {fileID: 0}
+  conversationText: {fileID: 0}
+  NpcWords:
+  - "Ol\xE1, Jovem."
+  - "Est\xE1 interessado nas algas que cultivo?"
+  - "Eu andei estudando e acredito que podem ser bem diferentes dos outros alimentos
+    que possu\xEDmos."
+  - "Essas s\xE3o mais fortes, poderosas..."
+  - "Infelizmente falta algo a mais para aperfei\xE7o\xE1-la."
+  - Ossos.
+  - "Se voc\xEA achar alguns por a\xED traga para mim e te darei umas algas em troca."
+  typingSpeed: 0.02
+  textLocation: 0
+  StartTyping: 0
+  playerDetected: 0
+  Cost: 1e000000
+  IsStore: 1
+  StoreFazendeiro: {fileID: 0}
 --- !u!1 &4964146057491262748
 GameObject:
   m_ObjectHideFlags: 0
