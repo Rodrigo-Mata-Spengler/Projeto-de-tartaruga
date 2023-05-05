@@ -15,6 +15,11 @@ public class MenuPause : MonoBehaviour
 
     public bool panelOpen = false;
 
+    [Header("Menu Morte")]
+    [SerializeField] private GameObject deathPanel;
+    private bool mortePanel = false;
+    private bool doOnce = false;
+
     [Header("Botão Menu Principal")]
     [SerializeField] private string nomeMenu;
 
@@ -23,6 +28,7 @@ public class MenuPause : MonoBehaviour
     public GameObject OptionsFirstButton;
     public GameObject OptionsCloseButton;
     public GameObject primeiroItem;
+    public GameObject ultimoSave;
 
     private void Start()
     {
@@ -30,11 +36,13 @@ public class MenuPause : MonoBehaviour
         Cursor.visible = false;
         pausePanel.SetActive(false);
         Time.timeScale = 1;
+        deathPanel.SetActive(false);
+        mortePanel = false;
     }
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && mortePanel == false)
         {
             SisPause(pausePanel);
             ///clear selected object
@@ -43,7 +51,7 @@ public class MenuPause : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(PauseFirstButton);
             
         }
-        if(Input.GetKeyDown(KeyCode.I) )
+        if(Input.GetKeyDown(KeyCode.I) && mortePanel == false)
         {
             SisPause(InventoryPanel);
             ///clear selected object
@@ -97,5 +105,31 @@ public class MenuPause : MonoBehaviour
     public void SairJogo()
     {
         Application.Quit();
+    }
+
+    public void PlayerMorreu()
+    {
+        if (doOnce == false)
+        {
+            Time.timeScale = 0;
+            deathPanel.SetActive(true);
+            mortePanel = true;
+
+            EventSystem.current.SetSelectedGameObject(null);
+
+            EventSystem.current.SetSelectedGameObject(ultimoSave);
+            doOnce = true;
+        }
+    }
+
+    public void UltimoSave()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        if (data != null)
+        {
+
+            Time.timeScale = 1;
+            SceneManager.LoadScene(data.scenaAtual);
+        }
     }
 }
