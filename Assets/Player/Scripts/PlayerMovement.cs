@@ -62,12 +62,16 @@ public class PlayerMovement : MonoBehaviour
     private TrailRenderer trailRender;
 
     private bool canMove = true;
+
+    private Estamina estaminaScript;
     private void Start()
     {
         m_Rigidbody2D = CharacterController2D.m_Rigidbody2D;
         trailRender = this.GetComponent<TrailRenderer>();
 
         m_Animator = this.GetComponent<Animator>();
+
+        estaminaScript=this.GetComponent<Estamina>();
     }
 
     private void Update()

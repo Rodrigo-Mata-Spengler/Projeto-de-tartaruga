@@ -16,6 +16,8 @@ public class Estamina : MonoBehaviour
     private void Start()
     {
         CurrentEstamina = MaxEstamina;
+        EstaminaSlider.maxValue = MaxEstamina;
+        EstaminaSlider.value = MaxEstamina;
     }
 
 

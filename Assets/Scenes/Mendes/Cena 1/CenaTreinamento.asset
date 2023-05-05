@@ -314,16 +314,16 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.52124643
+          time: 0.6253521
           value: 1
-          inSlope: 0
-          outSlope: 0
+          inSlope: -0.08502956
+          outSlope: -0.08502956
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.66005665
+          time: 0.69295776
           value: 0
           inSlope: 0
           outSlope: 0
@@ -414,13 +414,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.206, g: 0.18365094, b: 0.18365094, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 0.41099998, g: 0.41099998, b: 0.41099998, a: 1}
+    m_Value: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   balance:
     m_OverrideState: 1
-    m_Value: 6
+    m_Value: 100
 --- !u!114 &670587036399734140
 MonoBehaviour:
   m_ObjectHideFlags: 3

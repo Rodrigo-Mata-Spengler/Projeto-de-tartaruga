@@ -22,6 +22,9 @@ public class Dash : MonoBehaviour
 
     private TrailRenderer trailRender;//tail effect
 
+    [Header("Estamina")]
+    public int EstaminaDamage;
+    private Estamina estaminaScript;
     private void Start()
     {
         characterController2D = this.GetComponent<CharacterController2D>();
@@ -30,6 +33,8 @@ public class Dash : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
 
         m_Animator = this.GetComponent<Animator>();
+
+        estaminaScript = this.GetComponent<Estamina>();
     }
 
     void Update()
@@ -50,7 +55,7 @@ public class Dash : MonoBehaviour
                 _dashEnd = new Vector2(_dashStart.x + m_DashDist, _dashStart.y);
 
                 m_Animator.SetBool("Dash", true);
-                
+                estaminaScript.Damage(EstaminaDamage);
             }
             //dash to left
             if (_isDashing == false && !facingRight)
@@ -61,6 +66,7 @@ public class Dash : MonoBehaviour
                 _dashStart = transform.position;
                 _dashEnd = new Vector2(_dashStart.x - m_DashDist, _dashStart.y);
                 m_Animator.SetBool("Dash", true);
+                estaminaScript.Damage(EstaminaDamage);
             }
             trailRender.emitting= true;
         }

@@ -10,6 +10,14 @@ public class Blast : MonoBehaviour
     public float FireRate = 15f;
     public float NextTimeToFire = 0f;
 
+    [Header("Estamina")]
+    public int EstaminaDamage;
+    private Estamina estaminaScript;
+
+    private void Start()
+    {
+        estaminaScript = this.GetComponent<Estamina>();
+    }
     private void Update()
     {
         if(Input.GetButtonDown("Blast") && Time.time >= NextTimeToFire)
@@ -23,5 +31,6 @@ public class Blast : MonoBehaviour
     private void Shoot()
     {
         Instantiate(BlastPrefab, ShootPoint.position, ShootPoint.rotation);
+        estaminaScript.Damage(EstaminaDamage);
     }
 }
