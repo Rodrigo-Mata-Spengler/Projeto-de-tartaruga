@@ -650,6 +650,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1856002187}
     m_Modifications:
     - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 1621111642}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: lifeImages.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -790,7 +794,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 94775411}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94775414}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b693594e52517f740a4291ea3f7c10d7, type: 3}
   m_Name: 
@@ -6213,6 +6217,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1621111642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1177410580, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 2084335609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635da84a316b863459ff0e38d9cd2727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1649240191
 GameObject:
   m_ObjectHideFlags: 0
@@ -104578,6 +104593,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17082672, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 17082672, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 540156645, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
