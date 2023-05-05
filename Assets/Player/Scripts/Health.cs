@@ -33,6 +33,8 @@ public class Health : MonoBehaviour
     public float TimeToHeal = 1.5f;
 
     [SerializeField] private GameObject[] HealImages;
+
+    [SerializeField] private MenuPause pause;
     private void Start()
     {
         currentLife = maxLife;
@@ -86,7 +88,8 @@ public class Health : MonoBehaviour
 
         if(currentLife <= 0f)
         {
-            Debug.Log("morreu");
+            //Rodrigo Time !!!!!!
+            pause.PlayerMorreu();
         }
     }
 
