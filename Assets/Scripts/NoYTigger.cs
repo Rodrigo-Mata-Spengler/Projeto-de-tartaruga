@@ -35,6 +35,7 @@ public class NoYTigger : MonoBehaviour
     [SerializeField]
     private AnimationCurve curve;
 
+    private bool runOne = false;
     private void Start()
     {
         YScreenY += CameraYMov;
@@ -48,10 +49,11 @@ public class NoYTigger : MonoBehaviour
             if (LerpElapsedTime < DesireLerpDuration)
             {
                 Lerp();
+                runOne= true;
             }
 
         }
-        if(!Detected)
+        if(!Detected && runOne == true)
         {
             if (UnlerpElapsedTime < DesireLerpDuration)
             {

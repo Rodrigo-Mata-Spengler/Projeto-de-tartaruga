@@ -4,17 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
 using Unity.VisualScripting;
+using UnityEngine.VFX;
 
 public class Health : MonoBehaviour
 {
+
     private Rigidbody2D rb;
 
+    [Header("Health")]
     public int maxLife;
     public int currentLife;
-    public int HealSeaweed;
-
-    public float CurrenTime = 0f;
-    public float TimeToHeal = 1.5f;
     [SerializeField] private GameObject[]lifeImages;
 
     [SerializeField] private GameObject[] lifeImageToEnable;
@@ -24,6 +23,16 @@ public class Health : MonoBehaviour
     private PlayerHitFeedback PlayerHitFeedbackScript;
 
     public bool DoDamage = false;
+
+    public VisualEffect DamageEffect;
+
+    [Header("heal")]
+    public int HealSeaweed;
+
+    public float CurrenTime = 0f;
+    public float TimeToHeal = 1.5f;
+
+    [SerializeField] private GameObject[] HealImages;
     private void Start()
     {
         currentLife = maxLife;
@@ -46,12 +55,13 @@ public class Health : MonoBehaviour
                 GiveHealth(1);
                 HealSeaweed -= 1;
                 CurrenTime = 0;
+                HealImages[HealSeaweed].SetActive(false);
 
-                if (currentLife == maxLife)
-                {
-                    
-                }
             }
+        }
+        if(Input.GetButtonUp("Curar"))
+        {
+            CurrenTime = 0;
         }
         if(haveArmor)
         {
@@ -100,6 +110,7 @@ public class Health : MonoBehaviour
         lifeImages[currentLife].gameObject.SetActive(false);
         AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
         PlayerHitFeedbackScript.wasHit= true; //Pass the feedback that the player was hit, so the Health can be disble and enabled after a amount of time
+        DamageEffect.Play();
         
     }
 
@@ -108,5 +119,6 @@ public class Health : MonoBehaviour
     {
         currentLife += GiveHealthAmount;
         lifeImages[(currentLife - 1)].gameObject.SetActive(true);
+        
     }
 }
