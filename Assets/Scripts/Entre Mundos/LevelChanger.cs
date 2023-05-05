@@ -13,9 +13,11 @@ public class LevelChanger : MonoBehaviour
 
     private void Start()
     {
-        if (conetion == Conections.activeConetion)
+        if (conetion == Conections.activeConetion && Conections.wasConetion)
         {
             player.transform.position = spawnPoint.position;
+
+            Conections.wasConetion = false;
         }
     }
 
@@ -25,6 +27,7 @@ public class LevelChanger : MonoBehaviour
         {
             Conections.activeConetion = conetion;
             SceneManager.LoadScene(targetSceneName);
+            Conections.wasConetion = true;
         }
     }
 }
