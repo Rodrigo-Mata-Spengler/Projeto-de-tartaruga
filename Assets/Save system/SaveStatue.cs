@@ -8,6 +8,9 @@ public class SaveStatue : MonoBehaviour
     private bool interacao;
     private GameObject playerGO;
     private SpriteRenderer rend;
+    public Sprite EstatuaAcessa;
+    public Animator Vaso1;
+    public Animator Vaso2;
 
     private void Start()
     {
@@ -20,7 +23,10 @@ public class SaveStatue : MonoBehaviour
         if (Input.GetButton("Interacao")  && interacao)
         {
             SaveSystem.SavePlayer(playerGO);
-            rend.color = Color.green;
+            this.GetComponent<SpriteRenderer>().sprite = EstatuaAcessa;
+            Vaso1.SetBool("Salvo", true);
+            Vaso2.SetBool("Salvo", true);
+            //rend.color = Color.green;
         }
     }
 
@@ -31,11 +37,11 @@ public class SaveStatue : MonoBehaviour
         {
             interacao = true;
             playerGO = collision.gameObject;
-            rend.color = Color.red;
+            //rend.color = Color.red;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    /*private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag(player))
         {
@@ -43,5 +49,5 @@ public class SaveStatue : MonoBehaviour
             playerGO = null;
             rend.color = Color.white;
         }
-    }
+    }*/
 }
