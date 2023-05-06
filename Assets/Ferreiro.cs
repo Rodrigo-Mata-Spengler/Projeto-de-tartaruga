@@ -76,7 +76,8 @@ public class Ferreiro : MonoBehaviour
 
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
 
             StartTyping = false;
             StopAllCoroutines();
@@ -86,8 +87,9 @@ public class Ferreiro : MonoBehaviour
             havingConversation = true;
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
+        if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
         {
+            conversationObj.SetActive(true);
             StopAllCoroutines();
             StartTyping = false;
             textLocation += 1;
@@ -103,7 +105,7 @@ public class Ferreiro : MonoBehaviour
             {
                 EventSystem.current.SetSelectedGameObject(null);
                 StoreFerreiro.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(StoreFerreiro.transform.GetChild(6).gameObject);
+                EventSystem.current.SetSelectedGameObject(StoreFerreiro.GetComponent<FerreiroStore>().SelectedButton);
                 
                 OnStore = true;
 
@@ -113,6 +115,7 @@ public class Ferreiro : MonoBehaviour
                 CanvasMenuPause.panelOpen = false;
                 Player.GetComponent<PlayerMovement>().enabled = true;
                 havingConversation = false;
+                Player.GetComponent<Animator>().enabled = true;
             }
         }
 
@@ -121,6 +124,7 @@ public class Ferreiro : MonoBehaviour
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<Animator>().enabled = true;
 
         }
     }
@@ -200,6 +204,17 @@ public class Ferreiro : MonoBehaviour
             inputPressed = false;
             OnStore = false;
         }
+        else
+        {
 
+        }
+
+    }
+    public void FerreiroDontSell() //if Player have the enough Shells and corals to buy the item
+    {
+        Player.GetComponent<PlayerMovement>().enabled = true;
+        inputPressed = false;
+        Player.GetComponent<Animator>().enabled = true;
+        StoreFerreiro.SetActive(false);
     }
 }

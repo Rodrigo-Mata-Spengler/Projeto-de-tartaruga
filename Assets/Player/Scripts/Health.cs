@@ -35,6 +35,8 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject[] HealImages;
 
     [SerializeField] private MenuPause pause;
+
+    [SerializeField] private Slider HealthSlider;
     private void Start()
     {
         currentLife = maxLife;

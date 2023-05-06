@@ -12,7 +12,7 @@ public class BruxaStore : MonoBehaviour
     private int Cost2;// The Amount of the second item (depending witch npc the item will be different) the player needs to be able to buy/trade
     public TextMeshProUGUI cost2Text; // the text on the UI
 
-
+    public GameObject SelectedButton;
 
     private void Awake()
     {

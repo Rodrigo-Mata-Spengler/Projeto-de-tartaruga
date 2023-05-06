@@ -75,7 +75,8 @@ public class Fazendeiro : MonoBehaviour
 
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
 
             StartTyping = false;
             StopAllCoroutines();
@@ -85,8 +86,9 @@ public class Fazendeiro : MonoBehaviour
             havingConversation = true;
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
+        if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
         {
+            conversationObj.SetActive(true);
             StopAllCoroutines();
             StartTyping = false;
             textLocation += 1;
@@ -102,7 +104,7 @@ public class Fazendeiro : MonoBehaviour
             {
                 EventSystem.current.SetSelectedGameObject(null);
                 StoreFazendeiro.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(StoreFazendeiro.transform.GetChild(6).gameObject);
+                EventSystem.current.SetSelectedGameObject(StoreFazendeiro.GetComponent<FazendeiroStore>().SelectedButton);
 
                 OnStore = true;
 
@@ -112,6 +114,7 @@ public class Fazendeiro : MonoBehaviour
                 CanvasMenuPause.panelOpen = false;
                 Player.GetComponent<PlayerMovement>().enabled = true;
                 havingConversation = false;
+                Player.GetComponent<Animator>().enabled = true;
             }
         }
 
@@ -120,7 +123,7 @@ public class Fazendeiro : MonoBehaviour
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
-
+            Player.GetComponent<Animator>().enabled = true;
         }
     }
     //method that run the courotine
@@ -195,6 +198,18 @@ public class Fazendeiro : MonoBehaviour
             inputPressed = false;
             ///give more mana
         }
+        else
+        {
+
+        }
+
+    }
+    public void FzendeiroDontSell() //if Player have the enough Shells and corals to buy the item
+    {
+        Player.GetComponent<PlayerMovement>().enabled = true;
+        inputPressed = false;
+        Player.GetComponent<Animator>().enabled = true;
+        StoreFazendeiro.SetActive(false);
 
     }
 }

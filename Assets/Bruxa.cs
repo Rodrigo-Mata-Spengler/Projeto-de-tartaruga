@@ -71,12 +71,13 @@ public class Bruxa : MonoBehaviour
             inputPressed = true;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2)
         {
-
+            
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled= false;
 
             StartTyping = false;
             StopAllCoroutines();
@@ -85,8 +86,24 @@ public class Bruxa : MonoBehaviour
             // Debug.Log("apaguei");
             havingConversation = true;
         }
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Player.GetComponent<PlayerMovement>().HaveMagicTrident)
+        {
+            conversationObj.SetActive(true);
+            //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
+            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
+
+            textLocation = 3;
+            StartTyping = false;
+            StopAllCoroutines();
+            conversationObj.SetActive(true);
+            ContinueStory();
+            // Debug.Log("apaguei");
+            havingConversation = true;
+        }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
+        if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
         {
             StopAllCoroutines();
             StartTyping = false;
@@ -95,32 +112,36 @@ public class Bruxa : MonoBehaviour
 
         }
         //if paragraph were over than disable the UI interaction obj
-        else if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
+        else if (havingConversation && textLocation == 2 && inputPressed)
         {
             conversationObj.SetActive(false);
             ///checks if his have a store, if it does display the store panel
+            CanvasMenuPause.panelOpen = false;
+            Player.GetComponent<PlayerMovement>().enabled = true;
+            havingConversation = false;
+            Player.GetComponent<Animator>().enabled = true;
+
+        }
+        else if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
+        {
             if (IsStore && OnStore == false)
             {
+                conversationObj.SetActive(false);
                 EventSystem.current.SetSelectedGameObject(null);
                 StoreBruxa.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(StoreBruxa.transform.GetChild(6).gameObject);
+                EventSystem.current.SetSelectedGameObject(StoreBruxa.GetComponent<BruxaStore>().SelectedButton);
 
                 OnStore = true;
 
             }
-            else
-            {
-                CanvasMenuPause.panelOpen = false;
-                Player.GetComponent<PlayerMovement>().enabled = true;
-                havingConversation = false;
-            }
         }
 
-        // if player press the esc disable the UI interaction obj
+            // if player press the esc disable the UI interaction obj
         if (Input.GetKey(KeyCode.Escape) /* || textLocation == NpcWords.Length*/)
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<Animator>().enabled = true;
 
         }
     }
@@ -198,7 +219,19 @@ public class Bruxa : MonoBehaviour
             Player.GetComponent<PlayerMovement>().enabled = true;
 
             inputPressed = false;
+            Player.GetComponent<Animator>().enabled = true;
+        }
+        else
+        {
+            //Display not enough money
         }
 
+    }
+    public void WitchDontSell() //if Player have the enough Shells and corals to buy the item
+    {
+        Player.GetComponent<PlayerMovement>().enabled = true;
+        inputPressed = false;
+        Player.GetComponent<Animator>().enabled = true;
+        StoreBruxa.SetActive(false);
     }
 }

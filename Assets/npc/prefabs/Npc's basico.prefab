@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8147642237414846333
 Transform:
   m_ObjectHideFlags: 0
@@ -310,13 +310,6 @@ MonoBehaviour:
   textLocation: 0
   StartTyping: 0
   playerDetected: 0
-  NpcJob: 3
-  IsStore: 0
-  Cost: 0
-  Cost2: 0
-  StoreFerreiro: {fileID: 0}
-  StoreWitch: {fileID: 0}
-  StoreFarmer: {fileID: 0}
 --- !u!61 &7869436001391705895
 BoxCollider2D:
   m_ObjectHideFlags: 0

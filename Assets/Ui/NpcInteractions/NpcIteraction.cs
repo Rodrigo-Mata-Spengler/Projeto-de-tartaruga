@@ -84,14 +84,14 @@ public class NpcIteraction : MonoBehaviour
             StartTyping = false;
             textLocation += 1;
             ContinueStory();
-            
+            Debug.Log("aquiii");
         }
         //if paragraph were over than disable the UI interaction obj
-        else if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
+        if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
         {
             conversationObj.SetActive(false);
             ///checks if his have a store, if it does display the store panel
-            CanvasMenuPause.panelOpen = false;
+            //CanvasMenuPause.panelOpen = false;
             Player.GetComponent<PlayerMovement>().enabled = true;
             havingConversation = false;
             StopAllCoroutines();
