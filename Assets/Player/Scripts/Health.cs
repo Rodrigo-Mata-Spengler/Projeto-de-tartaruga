@@ -67,6 +67,7 @@ public class Health : MonoBehaviour
         {
             CurrenTime = 0;
         }
+        /*
         if(haveArmor)
         {
             for(int i = 0; i <= lifeImageToEnable.Length; i++)
@@ -82,6 +83,7 @@ public class Health : MonoBehaviour
             }
             
         }
+        */
         if (DoDamage)
         {
             Damage(1);
@@ -112,10 +114,11 @@ public class Health : MonoBehaviour
 
         CameraShakeManager.instance.CameraShake(impulseSource);
         currentLife -= GiveDamageAmount;
-        lifeImages[currentLife].gameObject.SetActive(false);
         AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
         PlayerHitFeedbackScript.wasHit= true; //Pass the feedback that the player was hit, so the Health can be disble and enabled after a amount of time
         DamageEffect.Play();
+
+        HealthSlider.value -= 5;
         
     }
 
@@ -123,7 +126,6 @@ public class Health : MonoBehaviour
     public void GiveHealth(int GiveHealthAmount)
     {
         currentLife += GiveHealthAmount;
-        lifeImages[(currentLife - 1)].gameObject.SetActive(true);
-        
+        HealthSlider.value += 5;
     }
 }

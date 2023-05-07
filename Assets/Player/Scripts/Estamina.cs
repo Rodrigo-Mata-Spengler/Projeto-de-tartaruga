@@ -26,11 +26,13 @@ public class Estamina : MonoBehaviour
     public void Damage(float GiveEstaminaDamageAmount)
     {
         CurrentEstamina -= GiveEstaminaDamageAmount;
+        EstaminaSlider.value -= 5;
     }
 
     //give Estamina
     public void GiveHealth(float GiveEstaminaAmount)
     {
         CurrentEstamina += GiveEstaminaAmount;
+        EstaminaSlider.value += 5;
     }
 }
