@@ -14,9 +14,8 @@ public class Health : MonoBehaviour
     [Header("Health")]
     public int maxLife;
     public int currentLife;
-    [SerializeField] private GameObject[]lifeImages;
+    [SerializeField] private GameObject lifeImages;
 
-    [SerializeField] private GameObject[] lifeImageToEnable;
     public bool haveArmor = false;
     private CinemachineImpulseSource impulseSource;
 

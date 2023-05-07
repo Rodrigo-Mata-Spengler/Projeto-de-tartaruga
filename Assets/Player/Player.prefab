@@ -15685,23 +15685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 5
   currentLife: 0
-  lifeImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lifeImageToEnable:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  lifeImages: {fileID: 0}
   haveArmor: 0
   DoDamage: 0
   DamageEffect: {fileID: 1049977915}

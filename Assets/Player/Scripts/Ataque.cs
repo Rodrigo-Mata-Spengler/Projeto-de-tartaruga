@@ -49,14 +49,39 @@ public class Ataque : MonoBehaviour
     //Draw the box on unity
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") && !HaveMagicTrident)
+        if (collision.CompareTag("Zombi") && !HaveMagicTrident)
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoZombi, collision.transform.position);
+            Detected = true;
+        }
+        if (collision.CompareTag("Guardiao") && !HaveMagicTrident)
+        {
+            collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
+            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoGuardiao, collision.transform.position);
+            Detected = true;
+        }
+        if (collision.CompareTag("Mosca") && !HaveMagicTrident)
+        {
+            //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
+            //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoMosca, collision.transform.position);
+            Detected = true;
+        }
+        if (collision.CompareTag("Planta") && !HaveMagicTrident)
+        {
+            //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
+            //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoPlanta, collision.transform.position);
             Detected = true;
         }
 
-        
+
     }
 }

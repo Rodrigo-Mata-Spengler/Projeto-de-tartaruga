@@ -274,8 +274,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1406662473
-  m_SortingLayer: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
   m_Color: {r: 0.45209846, g: 0.3033108, b: 0.9056604, a: 1}
@@ -303,9 +303,9 @@ MonoBehaviour:
   conversationObj: {fileID: 0}
   conversationText: {fileID: 0}
   NpcWords:
-  - Euuuu
-  - Quero
-  - vc assim
+  - "Cadete, voc\xEA fez muito bem hoje."
+  - "Voc\xEA ir\xE1 se tornar um \xF3timo protetor para nossa vila."
+  - "Mas por hoje \xE9 s\xF3, volte para a vila e descanse."
   typingSpeed: 0.02
   textLocation: 0
   StartTyping: 0

@@ -62,7 +62,7 @@ public class Espinho : MonoBehaviour
             TeleportTime = Time.time + TeleportTimeCoolDown;
             Player = collision.gameObject;
             Player.GetComponent<Health>().Damage(1);
-            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.position.y, 5f);
+            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0.5f, 15f);
             Player.GetComponent<PlayerMovement>().enabled = false;
             Detected= true;
             animationEspinho.Play("espinhoAnimatio");

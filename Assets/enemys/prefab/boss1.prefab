@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 5027656796105154529}
   m_Layer: 8
   m_Name: boss1
-  m_TagString: Enemy
+  m_TagString: Guardiao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,6 +309,8 @@ MonoBehaviour:
       m_Calls: []
   tempoTonto: 0
   TempoEsperaTonto: 3
+  tempoNorteado: 0
+  TempoEsperaNorteado: 0
 --- !u!114 &5287758271197617120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +325,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 800
   currentHealth: 0
+  DropItemPoint: {fileID: 0}
+  ItensPrefabs: []
+  TimeToDestroyDelay: 0
 --- !u!114 &5027656796105154529
 MonoBehaviour:
   m_ObjectHideFlags: 0

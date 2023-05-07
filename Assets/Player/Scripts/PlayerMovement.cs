@@ -218,7 +218,7 @@ public class PlayerMovement : MonoBehaviour
             trailRender.emitting = true;
 
             m_Animator.SetBool("Pulo", true);
-
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
         }
         // if he released fall smoothly
         if (jumpInputReleased && m_Rigidbody2D.velocity.y > 0 && !IsTouchingWall)
@@ -235,6 +235,7 @@ public class PlayerMovement : MonoBehaviour
             JumpTimes = 2;
             trailRender.emitting = true;
             m_Animator.SetBool("Pulo", true);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
         }
         if(IsTouchingWall && jumpInput && haveWallJump && !m_Grounded)
         {
@@ -247,6 +248,7 @@ public class PlayerMovement : MonoBehaviour
 
             m_Rigidbody2D.AddForce(force, ForceMode2D.Impulse);
             m_Animator.SetBool("Pulo", true);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
         }
 
     }
