@@ -43,10 +43,10 @@ public class Dash : MonoBehaviour
         facingRight = characterController2D.m_FacingRight;
 
         //Checks the input
-        if (Input.GetButtonDown("Dash") && canDash == true)
+        if (Input.GetButtonDown("Dash") && canDash == true && _isDashing == false)
         {
             //dash to right
-            if (_isDashing == false && facingRight)
+            if (facingRight)
             {
                 // dash starts
                 _isDashing = true;
@@ -56,9 +56,10 @@ public class Dash : MonoBehaviour
 
                 m_Animator.SetBool("Dash", true);
                 estaminaScript.Damage(EstaminaDamage);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Dash, transform.position);
             }
             //dash to left
-            if (_isDashing == false && !facingRight)
+            else
             {
                 // dash starts
                 _isDashing = true;
@@ -67,6 +68,7 @@ public class Dash : MonoBehaviour
                 _dashEnd = new Vector2(_dashStart.x - m_DashDist, _dashStart.y);
                 m_Animator.SetBool("Dash", true);
                 estaminaScript.Damage(EstaminaDamage);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Dash, transform.position);
             }
             trailRender.emitting= true;
         }

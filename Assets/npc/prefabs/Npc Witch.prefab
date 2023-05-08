@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 7854020169226348046}
   - component: {fileID: 7854020169226348041}
   - component: {fileID: 7869436001506505369}
+  - component: {fileID: 8374645391558924145}
   m_Layer: 0
   m_Name: Npc Witch
   m_TagString: Witch
@@ -332,16 +333,48 @@ MonoBehaviour:
   - "O que quer aqui Tartaruga? J\xE1 falei que n\xE3o vou mais ajud\xE1-los com
     seus problemas."
   - 'Sai daqui antes que eu me irrite. '
+  - 
   - "Voc\xEA de novo!?"
   - Hum.
   - "Ok, eu posso te ajudar, mas para isso voc\xEA vai ter que me dar alguma coisa
     em troca"
   - Estou precisando de uns ingredientes especiais para um projeto pessoal.
   - "Se voc\xEA os trouxer para mim eu te ajudo com alguma coisa."
-  typingSpeed: 0.02
+  typingSpeed: 0.04
   textLocation: 0
   StartTyping: 0
   playerDetected: 0
   Cost: 1400000004000000
   IsStore: 1
   StoreBruxa: {fileID: 0}
+--- !u!114 &8374645391558924145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854020169226348019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -481857872
+      Data2: 1088061981
+      Data3: -1912687981
+      Data4: -1921862227
+    Path: "event:/Bruxa/Caldeir\xE3o"
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

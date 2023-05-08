@@ -17,6 +17,7 @@ public class PuzzleRodaManager : MonoBehaviour
         if(CirclesRight == 4 && locked)
         {
             locked= false;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Conclusao, transform.position);
         }
 
         if(!locked && DoOnce == false)

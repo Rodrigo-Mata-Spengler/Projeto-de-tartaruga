@@ -19,6 +19,7 @@ public class ItensInventory : MonoBehaviour
             //int i = Random.Range(0, MaxAmount);
             conchas += 1;
             Destroy(collision.gameObject);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
         }
         if (collision.CompareTag("Coral"))
         {

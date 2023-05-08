@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 5373455301330540758}
   - component: {fileID: 5373455301330540753}
   - component: {fileID: 7869436001575737635}
+  - component: {fileID: 894048688100958955}
   m_Layer: 0
   m_Name: Npc Ferreiro
   m_TagString: Ferreiro
@@ -260,6 +261,37 @@ MonoBehaviour:
   Cost: 0a000000
   IsStore: 1
   StoreFerreiro: {fileID: 0}
+--- !u!114 &894048688100958955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5373455301330541355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2142633123
+      Data2: 1228101853
+      Data3: -580943182
+      Data4: 1017144965
+    Path: event:/Ferreiro/Forjando
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6695516038752398603
 GameObject:
   m_ObjectHideFlags: 0

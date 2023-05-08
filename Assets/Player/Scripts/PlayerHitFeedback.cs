@@ -24,6 +24,7 @@ public class PlayerHitFeedback : MonoBehaviour
         {
             PlayerHealth.enabled= false; //Disables the Player Health script
             StartCoroutine(DisableHitFeedback(secondsToDisable));
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, transform.position);
         }
     }
     private IEnumerator DisableHitFeedback(float seconds)

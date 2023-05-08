@@ -48,10 +48,12 @@ public class CircleButtomScript : MonoBehaviour
                 if(SecondTargetRotation != null && !reverse)
                 {
                     SecondTargetRotation.Rotate(0f, 0f, AmountToRotate, Space.Self);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.Circular, transform.position);
                 }
                 if (SecondTargetRotation != null && reverse)
                 {
                     SecondTargetRotation.Rotate(0f, 0f, -AmountToRotate, Space.Self);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.Circular, transform.position);
                 }
 
 
