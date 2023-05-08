@@ -5,6 +5,11 @@ using UnityEngine;
 enum MoscaStatus {patrulha, alerta, kamikase, tonto, recuperacao, desativado};
 public class MoscaBehavior : MonoBehaviour
 {
+    [Header("Animação")]
+    [SerializeField] private Animator anim;
+    [SerializeField] private SpriteRenderer rend;
+    [SerializeField] private GameObject corpo;
+
     [Header("Status")]
     [SerializeField] private MoscaStatus status = MoscaStatus.desativado;
 
@@ -119,9 +124,17 @@ public class MoscaBehavior : MonoBehaviour
 
     private void MoverMoscaPatrulha()
     {
-        transform.position = Vector3.MoveTowards(transform.position,pontoPatrulha,velocidade*Time.deltaTime);
-    }
+        transform.position = Vector3.MoveTowards(transform.position, pontoPatrulha, velocidade * Time.deltaTime);
 
+        if (transform.position.x - pontoPatrulha.x >= 0)
+        {
+            rend.flipX = false;
+        }
+        else
+        {
+            rend.flipX = true;
+        }
+    }
     //mosca detecta o player
     private void PreparaDeteccao()
     {
