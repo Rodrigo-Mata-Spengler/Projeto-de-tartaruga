@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638190121062858314
+  lastModified: 638190929753594850
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -418,10 +418,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638190121062893851
+  lastModified: 638190929753639940
   FileSizes:
   - Name: Desktop
-    Value: 4116
+    Value: 4174
   Exists: 1
 --- !u!114 &-2730868006265186371
 MonoBehaviour:
@@ -593,10 +593,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Praia.bank
   Name: Praia
   StudioPath: bank:/Praia
-  lastModified: 638190121181868725
+  lastModified: 638190945649667476
   FileSizes:
   - Name: Desktop
-    Value: 1087072
+    Value: 1087936
   Exists: 1
 --- !u!114 &-1536158260704107218
 MonoBehaviour:
@@ -624,7 +624,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 660
 --- !u!114 &-1238135595133504037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +845,7 @@ MonoBehaviour:
   - {fileID: -7437959542684782280}
   StringsBanks:
   - {fileID: -2917927132543349577}
-  cacheTime: 638190121199489486
+  cacheTime: 638190945649667476
   cacheVersion: 131603
 --- !u!114 &40617146194528622
 MonoBehaviour:
@@ -1052,7 +1052,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 5034437557073422735}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1253,7 +1254,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638190121144054695
+  lastModified: 638190885633044630
   FileSizes:
   - Name: Desktop
     Value: 70848
@@ -1534,6 +1535,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5034437557073422735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Praia/Praia_intensidade
+  m_EditorClassIdentifier: 
+  Name: Praia_intensidade
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3136884910
+    data2: 2478730628
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5481367193485044842
 MonoBehaviour:
   m_ObjectHideFlags: 0
