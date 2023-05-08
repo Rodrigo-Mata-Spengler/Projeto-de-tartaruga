@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEditor;
+using FMOD.Studio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -73,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
     private bool canMove = true;
 
     private Estamina estaminaScript;
+
+    private EventInstance PlayerFootstep;
     private void Start()
     {
         m_Rigidbody2D = CharacterController2D.m_Rigidbody2D;
@@ -88,6 +91,8 @@ public class PlayerMovement : MonoBehaviour
         //AtaqueDownHitBox_Animator = AtaqueDownHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
 
         AtaqueMagicoHitBox_Animator = AtaqueMagicoHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+
+        PlayerFootstep = AudioManager.instance.CreateEventInstance(FMODEvents.instance.PlayerFootstep);
     }
 
     private void Update()
@@ -191,7 +196,9 @@ public class PlayerMovement : MonoBehaviour
         if(canMove)
         {
             CharacterController2D.Move(HorizontalMove * Time.fixedDeltaTime, false, jumpVel);
+            
         }
+        UpdateSound();
     }
     IEnumerator StopMove()
     {
@@ -377,6 +384,26 @@ public class PlayerMovement : MonoBehaviour
         m_Animator.SetBool("Ataque normal", false);
 
       
+    }
+
+    private void UpdateSound()
+    {
+        Debug.Log(HorizontalMove);
+        if(HorizontalMove != 0 && m_Grounded)
+        {
+            PLAYBACK_STATE playbackState;
+            PlayerFootstep.getPlaybackState(out playbackState);
+
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                PlayerFootstep.start();
+            }
+
+        }
+        else
+        {
+            PlayerFootstep.stop(STOP_MODE.IMMEDIATE);
+        }
     }
 
     /*public void Crouch()

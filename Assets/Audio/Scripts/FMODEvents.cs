@@ -5,6 +5,9 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Ambience SFX")]
+    [field: SerializeField] public EventReference ambience { get; private set; }
+
     [field: Header("Interface SFX")]
     [field: SerializeField] public EventReference Confirmacao { get; private set; }
     [field: SerializeField] public EventReference Negacao { get; private set; }
