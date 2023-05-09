@@ -695,6 +695,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ea3d63479b4574ba0f1b47158a0118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterVolume: 1
+  musicVolume: 1
+  ambienceVolume: 1
+  SFXVolume: 1
 --- !u!1 &157506204
 GameObject:
   m_ObjectHideFlags: 0
@@ -12758,11 +12762,11 @@ PrefabInstance:
       objectReference: {fileID: 1931810549}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -123.23761
+      value: -125.249146
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -82.15985
+      value: -81.50882
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: orthographic size
@@ -79289,6 +79293,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ambience>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Music>k__BackingField:
     Guid:
       Data1: 0
       Data2: 0
