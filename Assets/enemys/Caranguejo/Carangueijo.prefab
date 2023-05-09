@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 5655022733147463252}
   - component: {fileID: 5655022733147463253}
   - component: {fileID: 1309911131368964659}
+  - component: {fileID: 5892350098832145641}
   m_Layer: 8
   m_Name: Carangueijo
   m_TagString: Caranguejo
@@ -258,8 +259,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3b4687d64a750468849053279f5f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyTag: 7
   MaxHealth: 10
   currentHealth: 0
   DropItemPoint: {fileID: 0}
   ItensPrefabs: []
   TimeToDestroyDelay: 0
+--- !u!95 &5892350098832145641
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790235994253298858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7271a1296ee1f3c4fae5a276f20ae503, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
