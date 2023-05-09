@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638191418825123029
+  lastModified: 638181841796471333
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -170,7 +170,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Save.bank
   Name: Save
   StudioPath: bank:/Save
-  lastModified: 638191418830286873
+  lastModified: 638191298908887410
   FileSizes:
   - Name: Desktop
     Value: 55424
@@ -217,7 +217,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Puzzles.bank
   Name: Puzzles
   StudioPath: bank:/Puzzles
-  lastModified: 638191418828735260
+  lastModified: 638191298908857493
   FileSizes:
   - Name: Desktop
     Value: 78624
@@ -342,7 +342,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Sombra.bank
   Name: Sombra
   StudioPath: bank:/Sombra
-  lastModified: 638191418830718627
+  lastModified: 638191298908917330
   FileSizes:
   - Name: Desktop
     Value: 133568
@@ -362,7 +362,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Mosca.bank
   Name: Mosca
   StudioPath: bank:/Mosca
-  lastModified: 638191418826022443
+  lastModified: 638191298908458562
   FileSizes:
   - Name: Desktop
     Value: 1680192
@@ -382,7 +382,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Fazendeiro.bank
   Name: Fazendeiro
   StudioPath: bank:/Fazendeiro
-  lastModified: 638191418823344766
+  lastModified: 638191298908239149
   FileSizes:
   - Name: Desktop
     Value: 21568
@@ -402,10 +402,34 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Caranguejo.bank
   Name: Caranguejo
   StudioPath: bank:/Caranguejo
-  lastModified: 638191418821722392
+  lastModified: 638191298908219203
   FileSizes:
   - Name: Desktop
     Value: 33440
+  Exists: 1
+--- !u!114 &-3070358858884456431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Praia/Praia_intensidade
+  m_EditorClassIdentifier: 
+  Name: Praia_intensidade
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3136884910
+    data2: 2478730628
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-2992810825293601594
 MonoBehaviour:
@@ -422,7 +446,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Guardi\xE3o.bank"
   Name: "Guardi\xE3o"
   StudioPath: "bank:/Guardi\xE3o"
-  lastModified: 638191418824484299
+  lastModified: 638191298908259117
   FileSizes:
   - Name: Desktop
     Value: 133824
@@ -442,10 +466,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638191418825148022
+  lastModified: 638191298908269073
   FileSizes:
   - Name: Desktop
-    Value: 4284
+    Value: 4174
   Exists: 1
 --- !u!114 &-2730868006265186371
 MonoBehaviour:
@@ -543,7 +567,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Bruxa.bank
   Name: Bruxa
   StudioPath: bank:/Bruxa
-  lastModified: 638191648059476403
+  lastModified: 638191298908219203
   FileSizes:
   - Name: Desktop
     Value: 253056
@@ -617,7 +641,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Praia.bank
   Name: Praia
   StudioPath: bank:/Praia
-  lastModified: 638191418828254872
+  lastModified: 638191298908847520
   FileSizes:
   - Name: Desktop
     Value: 1087936
@@ -772,7 +796,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Planta Carnviora.bank
   Name: Planta Carnviora
   StudioPath: bank:/Planta Carnviora
-  lastModified: 638191418827383352
+  lastModified: 638191298908697920
   FileSizes:
   - Name: Desktop
     Value: 67200
@@ -869,7 +893,7 @@ MonoBehaviour:
   - {fileID: -7437959542684782280}
   StringsBanks:
   - {fileID: -2917927132543349577}
-  cacheTime: 638191648060042006
+  cacheTime: 638191298908967202
   cacheVersion: 131603
 --- !u!114 &40617146194528622
 MonoBehaviour:
@@ -886,7 +910,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Zumbi Tartaruga.bank
   Name: Zumbi Tartaruga
   StudioPath: bank:/Zumbi Tartaruga
-  lastModified: 638191418831478786
+  lastModified: 638191298908967202
   FileSizes:
   - Name: Desktop
     Value: 319968
@@ -1077,7 +1101,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -4820417682133504545}
+  - {fileID: -3070358858884456431}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1123,7 +1147,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Saco de Pancada.bank
   Name: Saco de Pancada
   StudioPath: bank:/Saco de Pancada
-  lastModified: 638191418829990889
+  lastModified: 638191298908877440
   FileSizes:
   - Name: Desktop
     Value: 16416
@@ -1278,7 +1302,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638191418827835084
+  lastModified: 638191298908717871
   FileSizes:
   - Name: Desktop
     Value: 70848
@@ -1433,7 +1457,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Ferreiro.bank
   Name: Ferreiro
   StudioPath: bank:/Ferreiro
-  lastModified: 638191648060042006
+  lastModified: 638191298908249128
   FileSizes:
   - Name: Desktop
     Value: 41408
@@ -1507,7 +1531,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Recurso Coletado.bank
   Name: Recurso Coletado
   StudioPath: bank:/Recurso Coletado
-  lastModified: 638191418829168273
+  lastModified: 638191298908867469
   FileSizes:
   - Name: Desktop
     Value: 21760
@@ -1527,7 +1551,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Interface.bank
   Name: Interface
   StudioPath: bank:/Interface
-  lastModified: 638191418824932812
+  lastModified: 638191298908269073
   FileSizes:
   - Name: Desktop
     Value: 23712
@@ -1574,7 +1598,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Compra.bank
   Name: Compra
   StudioPath: bank:/Compra
-  lastModified: 638191418822155659
+  lastModified: 638191298908229176
   FileSizes:
   - Name: Desktop
     Value: 8352
@@ -1783,7 +1807,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Estalactite.bank
   Name: Estalactite
   StudioPath: bank:/Estalactite
-  lastModified: 638191418822681555
+  lastModified: 638191298908239149
   FileSizes:
   - Name: Desktop
     Value: 12096
@@ -1884,7 +1908,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/M\xFAsicas.bank"
   Name: "M\xFAsicas"
   StudioPath: "bank:/M\xFAsicas"
-  lastModified: 638191418826520744
+  lastModified: 638191298908677975
   FileSizes:
   - Name: Desktop
     Value: 2060640
@@ -1904,7 +1928,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Ouri\xE7o.bank"
   Name: "Ouri\xE7o"
   StudioPath: "bank:/Ouri\xE7o"
-  lastModified: 638191418826930670
+  lastModified: 638191298908687949
   FileSizes:
   - Name: Desktop
     Value: 15840
