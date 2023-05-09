@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum MoscaStatus {patrulha, alerta, kamikase, tonto, recuperacao, desativado};
+enum MoscaStatus {patrulha, alerta, kamikase, tonto, desativado};
 public class MoscaBehavior : MonoBehaviour
 {
     [Header("Animação")]
@@ -70,9 +70,8 @@ public class MoscaBehavior : MonoBehaviour
                 AtaqueMosca();
                 break;
             case MoscaStatus.tonto:
+                anim.SetBool("mosca_tonta", true);
                 MoscaTonta();
-                break;
-            case MoscaStatus.recuperacao:
                 break;
             case MoscaStatus.desativado:
                 break;
@@ -194,6 +193,7 @@ public class MoscaBehavior : MonoBehaviour
         if (tempoTonta < Time.time)
         {
             status = MoscaStatus.alerta;
+            anim.SetBool("mosca_tonta", false);
         }
     }
     

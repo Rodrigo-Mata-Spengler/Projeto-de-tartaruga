@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1218761711}
   - component: {fileID: 1218761712}
   - component: {fileID: 5575662532134880519}
+  - component: {fileID: 5533913427978322459}
   m_Layer: 0
   m_Name: Corpo Mosca
   m_TagString: Untagged
@@ -114,7 +115,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &1218761712
@@ -154,6 +155,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5533913427978322459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218761709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1171594b0369ff44ea81c114a06e7d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  Dano: 2
 --- !u!1 &1595973581
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1fcc11f69898049ad9cfe5472bf664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  rend: {fileID: 0}
+  corpo: {fileID: 0}
   status: 5
   limiteMax: {fileID: 705975697}
   limiteMin: {fileID: 1595973582}
