@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4557233542810772415}
   - component: {fileID: 7800120659309537215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colider Planta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4557233542810772415
 Transform:
   m_ObjectHideFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8249493899416084115}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Drop Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2784796845752651795}
   - component: {fileID: 879482}
   - component: {fileID: 879483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider Ataque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,13 +218,13 @@ GameObject:
   - component: {fileID: 1161638651053236726}
   - component: {fileID: 918626742}
   - component: {fileID: 3580070568532086750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Planta Carnivora
   m_TagString: Planta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5940777665832931495
 Transform:
   m_ObjectHideFlags: 0
@@ -347,5 +347,6 @@ MonoBehaviour:
   MaxHealth: 23
   currentHealth: 0
   DropItemPoint: {fileID: 8249493899416084115}
-  ItensPrefabs: []
-  TimeToDestroyDelay: 0
+  ItensPrefabs:
+  - {fileID: 3558725743607025275, guid: 72d39d21c12c80742a52345f2377fcde, type: 3}
+  TimeToDestroyDelay: 0.3

@@ -85,6 +85,7 @@ public class GuardianBehavior : MonoBehaviour
     private void Awake()
     {
         status = GuardianStatus.desativado;
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.FalaGuardiao, transform.position);
     }
     // Update is called once per frame
     void Update()
@@ -149,7 +150,7 @@ public class GuardianBehavior : MonoBehaviour
         if(EnemyHealth.currentHealth > LifePorcentage*2)
         {
             int i = Random.Range(0, 101);
-            Debug.Log(i);
+         
             /// if close Attack
             if ( PlayerClose && jumped == false && i >= 30 && i <= 100)
             {
@@ -191,7 +192,7 @@ public class GuardianBehavior : MonoBehaviour
                 status = GuardianStatus.Attack;
                 tempoDeAtaque = 0;
                 AttackCollider.enabled = true;
-
+                
                 ActionChosed = false;
             }
 
@@ -233,18 +234,20 @@ public class GuardianBehavior : MonoBehaviour
     public void AttackPlayer()
     {
         tempoDeAtaque += Time.deltaTime;
-
-        if(tempoDeAtaque < DuracaoDeAtaque)
+        
+        if (tempoDeAtaque < DuracaoDeAtaque)
         {
             if (lookingRight)
             {
                 //rb.AddForce(new Vector2(AttackImpulse, transform.position.y), ForceMode2D.Impulse);
                 rb.velocity = new Vector2(AttackImpulse, 0f);
+               // AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
             }
             if (!lookingRight)
             {
                 //rb.AddForce(new Vector2(-AttackImpulse, transform.position.y), ForceMode2D.Impulse);
                 rb.velocity = new Vector2(-AttackImpulse, 0f);
+                //AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
             }
             AttackTrigger.SetActive(true);
             Attacked = true;
@@ -253,7 +256,8 @@ public class GuardianBehavior : MonoBehaviour
         }
         else
         {
-            Attacked= false;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
+            Attacked = false;
             AttackTrigger.SetActive(false);
             tempoTonto = 0;
             status = GuardianStatus.desativado;
@@ -303,7 +307,7 @@ public class GuardianBehavior : MonoBehaviour
             {
                 rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
                 jumped = true;
-                
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.PuloGuardiao, transform.position);
 
             }
         }
@@ -329,6 +333,7 @@ public class GuardianBehavior : MonoBehaviour
             {
                 rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
                 jumped = true;
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.PuloGuardiao, transform.position);
             }
         }
         /// if enemy hit's the ground go to wait time
@@ -357,10 +362,12 @@ public class GuardianBehavior : MonoBehaviour
             if (lookingRight)
             {
                 rb.AddForce(new Vector2(DashImpulse, transform.position.y), ForceMode2D.Impulse);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.DashGuardiao,transform.position);
             }
             if (!lookingRight)
             {
                 rb.AddForce(new Vector2(-DashImpulse, transform.position.y), ForceMode2D.Impulse);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.DashGuardiao, transform.position);
             }
             dashed = true;
         }

@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,6 +47,8 @@ public class MoscaBehavior : MonoBehaviour
     [SerializeField] private float tempoEsperaTonta = 0;
     private float tempoTonta = 0;
 
+    private EventInstance Mosca;
+
     private void Start()
     {
         centroOriginal = transform.position;
@@ -54,6 +57,8 @@ public class MoscaBehavior : MonoBehaviour
         PreparaDeteccao();
 
         status = MoscaStatus.patrulha;
+
+        Mosca = AudioManager.instance.CreateEventInstance(FMODEvents.instance.SomMosca);
     }
 
     private void Update()
@@ -93,6 +98,7 @@ public class MoscaBehavior : MonoBehaviour
             tempoProximoPonto = Time.time + tempoEspera;
             //criar ponto aleatório para masca ir
             CriarPontoPatrulha();
+
         }
         else
         {
@@ -133,6 +139,7 @@ public class MoscaBehavior : MonoBehaviour
         {
             rend.flipX = true;
         }
+
     }
     //mosca detecta o player
     private void PreparaDeteccao()
@@ -172,6 +179,8 @@ public class MoscaBehavior : MonoBehaviour
         if (tempoAtaque < Time.time)
         {
             transform.position = Vector3.MoveTowards(transform.position, miraAtaque, velocidadeAtaque * Time.deltaTime);
+           
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.rasanteMosca, transform.position);
         }
         else
         {
@@ -195,6 +204,7 @@ public class MoscaBehavior : MonoBehaviour
             status = MoscaStatus.alerta;
             anim.SetBool("mosca_tonta", false);
         }
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.TontaMosca, transform.position);
     }
     
 }

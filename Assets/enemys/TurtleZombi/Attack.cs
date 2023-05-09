@@ -13,15 +13,27 @@ public class Attack : BTnode
 
         GameObject AttackHitBoxEnemy = bt.GetComponent<BTZombiTurtle>().AttackHitBoxEnemy;
         float AttackDuration = bt.GetComponent<BTZombiTurtle>().AttackDuration;
+        bool lookinRight = bt.GetComponent<BTZombiTurtle>().lookingRight;
 
         float currentTime = 0f;
 
 
         while (currentTime  < AttackDuration)
         {
+
             bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Bater", true);
             currentTime += Time.deltaTime;
             bt.GetComponent<BTZombiTurtle>().AttackHitBoxEnemy.SetActive(true);
+
+            if (lookinRight)
+            {
+                bt.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, bt.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+            }
+            else
+            {
+                bt.GetComponent<Rigidbody2D>().velocity = new Vector2(-2f, bt.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+            }
+            
 
             Debug.LogWarning(currentTime);
 

@@ -24,7 +24,7 @@ public class PuzzleRodaRayCast : MonoBehaviour
             PuzzleRodaManager.CirclesRight += 1;
      
             hit= true;
-            Debug.Log("aquiii");
+           
         }
         if(rightPosition == false && hit)
         {
