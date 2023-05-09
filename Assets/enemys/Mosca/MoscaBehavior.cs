@@ -29,7 +29,7 @@ public class MoscaBehavior : MonoBehaviour
     private Vector3 centroOriginal;
 
     [Header("Detec��o Player")]
-    [SerializeField] private float raioDetec��o;
+    [SerializeField] private float raioDetecao;
     [SerializeField] private string playerTag;
     private Transform player;
 
@@ -145,7 +145,7 @@ public class MoscaBehavior : MonoBehaviour
     //mosca detecta o player
     private void PreparaDeteccao()
     {
-        GetComponent<CircleCollider2D>().radius = raioDetec��o;
+        GetComponent<CircleCollider2D>().radius = raioDetecao;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
