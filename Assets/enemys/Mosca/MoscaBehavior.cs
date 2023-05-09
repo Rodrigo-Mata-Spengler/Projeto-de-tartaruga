@@ -52,6 +52,7 @@ public class MoscaBehavior : MonoBehaviour
 
         PrepararPatrulha();
         PreparaDeteccao();
+        CriarPontoPatrulha();
 
         status = MoscaStatus.patrulha;
     }
@@ -172,11 +173,21 @@ public class MoscaBehavior : MonoBehaviour
         if (tempoAtaque < Time.time)
         {
             transform.position = Vector3.MoveTowards(transform.position, miraAtaque, velocidadeAtaque * Time.deltaTime);
+            if (transform.position.x - miraAtaque.x >= 0)
+            {
+                rend.flipX = false;
+            }
+            else
+            {
+                rend.flipX = true;
+            }
         }
         else
         {
             miraAtaque = player.position;
         }
+
+        
 
         if (transform.position.Equals(miraAtaque))
         {

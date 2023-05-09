@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2608173420859674862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0008500479, y: 0.66764694, z: 86.901306}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -266,9 +266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1fcc11f69898049ad9cfe5472bf664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  rend: {fileID: 0}
-  corpo: {fileID: 0}
+  anim: {fileID: 5575662532134880519}
+  rend: {fileID: 1218761711}
+  corpo: {fileID: 1218761709}
   status: 5
   limiteMax: {fileID: 705975697}
   limiteMin: {fileID: 1595973582}
