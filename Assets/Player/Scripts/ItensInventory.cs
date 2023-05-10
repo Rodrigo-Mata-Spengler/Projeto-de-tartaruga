@@ -8,6 +8,8 @@ public class ItensInventory : MonoBehaviour
     public int coral; //coral
     public int calcio; //calcium
     public int ossos; // bones
+    [Space]
+    public bool mapa = false;
 
     //[Space]
     //public int MaxAmount = 10;
