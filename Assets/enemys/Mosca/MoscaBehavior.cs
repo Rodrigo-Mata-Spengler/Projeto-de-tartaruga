@@ -28,7 +28,7 @@ public class MoscaBehavior : MonoBehaviour
     [SerializeField] private Vector3 pontoPatrulha;
     private Vector3 centroOriginal;
 
-    [Header("Detec��o Player")]
+    [Header("Detecaoo Player")]
     [SerializeField] private float raioDetecao;
     [SerializeField] private string playerTag;
     private Transform player;
