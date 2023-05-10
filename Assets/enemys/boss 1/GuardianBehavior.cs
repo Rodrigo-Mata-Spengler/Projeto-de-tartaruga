@@ -137,11 +137,16 @@ public class GuardianBehavior : MonoBehaviour
     private void morto()
     {
         PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true; // activated the have magic trident in player movment
+        /*
         PlayerObj.GetComponent<PlayerMovement>().AtaqueHitBox.SetActive(false); // activated the have magic trident in the Attack obj
         PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBox.SetActive(false);
         PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBox.SetActive(false);
-        PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
+        
         PlayerObj.GetComponent<PlayerMovement>().AtaqueMagicoHitBox.SetActive(true);
+        PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBoxMagico.SetActive(true);
+        PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBoxMagico.SetActive(true);
+        */
+        PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
 
     }
     private void PlayerDistance()

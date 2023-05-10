@@ -49,7 +49,7 @@ public class Ataque : MonoBehaviour
     //Draw the box on unity
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Zombi") && !HaveMagicTrident)
+        if (collision.CompareTag("Zombi"))
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
@@ -57,7 +57,7 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoZombi, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Guardiao") && !HaveMagicTrident)
+        if (collision.CompareTag("Guardiao") )
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
@@ -65,7 +65,7 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoGuardiao, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Mosca") && !HaveMagicTrident)
+        if (collision.CompareTag("Mosca") )
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
@@ -73,7 +73,7 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoMosca, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Planta") && !HaveMagicTrident)
+        if (collision.CompareTag("Planta") )
         {
             
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
