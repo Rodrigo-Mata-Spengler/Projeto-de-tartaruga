@@ -198,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
             CharacterController2D.Move(HorizontalMove * Time.fixedDeltaTime, false, jumpVel);
             
         }
-        UpdateSound();
+        //UpdateSound();
     }
     IEnumerator StopMove()
     {
@@ -404,6 +404,11 @@ public class PlayerMovement : MonoBehaviour
         {
             PlayerFootstep.stop(STOP_MODE.IMMEDIATE);
         }
+    }
+
+    public void PlayFootstep()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerFootstep, this.transform.position);
     }
 
     /*public void Crouch()

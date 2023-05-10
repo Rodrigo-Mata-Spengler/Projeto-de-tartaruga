@@ -36,6 +36,7 @@ public class CircleButtomScript : MonoBehaviour
             if(SecondCircleToMove != null)
             {
                 SecondCircleToMove.rotation = Quaternion.SlerpUnclamped(SecondCircleToMove.rotation, SecondTargetRotation.rotation, 0.016f);
+                
             }
             
 

@@ -106,6 +106,7 @@ public class Ouriço : MonoBehaviour
         foreach (var proj in projetil)
         {
             proj.GetComponent<Rigidbody2D>().AddForce(proj.transform.up * forca);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.DisparoOurico, transform.position);
         }
 
     }

@@ -391,7 +391,7 @@ MonoBehaviour:
   ItensPrefabs:
   - {fileID: 8182488497596834137, guid: 95f3c38df6386bb4f9944b39f48f9a35, type: 3}
   - {fileID: 845562266373629971, guid: bd405c68b2fdb344ba6f1679eb3943ae, type: 3}
-  TimeToDestroyDelay: 10
+  TimeToDestroyDelay: 5
 --- !u!114 &1534872629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,6 +440,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.051939964, y: -0.04960513}
-  m_Size: {x: 0.97395515, y: 1.7408836}
+  m_Offset: {x: -0.16364765, y: -0.04960513}
+  m_Size: {x: 1.1496181, y: 1.7408836}
   m_Direction: 0

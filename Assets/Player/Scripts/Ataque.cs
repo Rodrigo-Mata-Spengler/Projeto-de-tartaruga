@@ -67,16 +67,15 @@ public class Ataque : MonoBehaviour
         }
         if (collision.CompareTag("Mosca") && !HaveMagicTrident)
         {
-            //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
-            //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
+            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoMosca, collision.transform.position);
             Detected = true;
         }
         if (collision.CompareTag("Planta") && !HaveMagicTrident)
         {
-            //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
-            //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoPlanta, collision.transform.position);
             Detected = true;
