@@ -150,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
         {
             m_Animator.SetBool("Fall", true);
             m_Animator.SetBool("Pulo", false);
-            StopAllCoroutines();
+            
         }
 
         CheckSurroundings();
@@ -164,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (AtaqueInput && Time.time > NextTimeToAtaque && m_Animator.GetBool("Ataque normal") == false)
         {
-           StopAllCoroutines();
+           
            AttackTimeAmount = 0.3f;
            NextTimeToAtaque = Time.time + 1 / AtaqueRate;
            Attack();
@@ -325,14 +325,15 @@ public class PlayerMovement : MonoBehaviour
                 AtaqueUpHitBoxMagico.SetActive(true);
                 AtaqueUpHitBoxMagico.GetComponent<Ataque>().up = true;
                 AtaqueUpHitBoxMagico_Animator.SetBool("Ataque", true);
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBoxMagico, AtaqueUpHitBoxMagico));
+                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBoxMagico));
             }
             else
             {
                 AtaqueUpHitBox.SetActive(true);
                 AtaqueUpHitBox.GetComponent<Ataque>().up = true;
                 AtaqueUpHitBox_Animator.SetBool("Ataque", true);
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox, AtaqueUpHitBox));
+                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
+                
             }
             AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
             AttackEnd = false;
@@ -350,26 +351,26 @@ public class PlayerMovement : MonoBehaviour
                 AtaqueDownHitBoxMagico.SetActive(true);
                 AtaqueDownHitBoxMagico.GetComponent<Ataque>().down = true;
                 AtaqueDownHitBoxMagico_Animator.SetBool("Ataque", true);
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBoxMagico, AtaqueDownHitBox));
+                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBoxMagico));
+                
             }
             else
             {
                 AtaqueDownHitBox.SetActive(true);
                 AtaqueDownHitBox.GetComponent<Ataque>().down = true;
                 AtaqueDownHitBox_Animator.SetBool("Ataque", true);
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBox, AtaqueDownHitBox));
+                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBox));
+                
 
             }
             AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
             AttackEnd = false;
 
-
-
         }
 
     }
     //disable the current enabled hitbox
-    IEnumerator AttackTime(float AttackDuration, GameObject HitBox, GameObject AtaqueAnimator = null)
+    IEnumerator AttackTime(float AttackDuration, GameObject HitBox)
     {
         yield return new WaitForSeconds(AttackDuration);
         HitBox.GetComponent<Ataque>().Detected = false;
@@ -382,13 +383,17 @@ public class PlayerMovement : MonoBehaviour
         m_Animator.SetBool("Ataque normal", false);
         m_Animator.SetInteger("Ataque normal index", 0);
 
-        AtaqueAnimator.GetComponentInChildren<Animator>().SetBool("Ataque", false);
-        //AtaqueUpHitBoxMagico.GetComponentInChildren<Animator>().SetBool("Ataque", false);
         AtaqueMagicoHitBox_Animator.SetInteger("AtaqueIndex", 0);
         AtaqueHitBox_Animator.SetInteger("AtaqueNormalIndex", 0);
-        
-        
+
+        AtaqueDownHitBox.GetComponentInChildren<Animator>().SetBool("Ataque", false); 
+        AtaqueDownHitBoxMagico.GetComponentInChildren<Animator>().SetBool("Ataque", false);
+
+        AtaqueUpHitBoxMagico.GetComponentInChildren<Animator>().SetBool("Ataque", false);
+        AtaqueUpHitBox.GetComponentInChildren<Animator>().SetBool("Ataque", false);
     }
+          
+ 
 
     private void UpdateSound()
     {

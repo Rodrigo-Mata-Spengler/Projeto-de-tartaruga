@@ -4,14 +4,20 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer, JumpAtEdge ,Dash, CheckPlayerDistance, Norteado, Morto };
+enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer, JumpAtEdge ,Dash, CheckPlayerDistance, Norteado, Morto, Parado };
 public class GuardianBehavior : MonoBehaviour
 {
+
+    public float tempoInicialDelay = 0f;
+    public float tempoDecorridoInicial = 0f;
+
+
+
     private EnemyHealth EnemyHealth;
     private EnemyHitFeedback EnemyHitFeedback;
 
     [Header("Status")]
-    [SerializeField] private GuardianStatus status = GuardianStatus.desativado;
+    [SerializeField] private GuardianStatus status = GuardianStatus.Parado;
 
     [Header("StartFight")]
     public bool StartFight = false;//if player has enter the battle field
@@ -71,6 +77,8 @@ public class GuardianBehavior : MonoBehaviour
 
     private float LifePorcentage;
 
+    private bool DoOnce = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,15 +92,29 @@ public class GuardianBehavior : MonoBehaviour
 
     private void Awake()
     {
-        status = GuardianStatus.desativado;
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.FalaGuardiao, transform.position);
+        
+
     }
     // Update is called once per frame
     void Update()
     {
+        
+        if(tempoDecorridoInicial <= tempoInicialDelay +0.03)
+        {
+            tempoDecorridoInicial += Time.deltaTime;
+        }
+        if (tempoDecorridoInicial >= tempoInicialDelay && DoOnce==false)
+        {
+            status = GuardianStatus.CheckPlayerDistance;
+            DoOnce= true;
+        }
 
         switch (status)
         {
+            case GuardianStatus.Parado:
+              
+                break;
+
             case GuardianStatus.Morto:
                 morto();
                 break;
@@ -406,5 +428,8 @@ public class GuardianBehavior : MonoBehaviour
         }
 
     }
-
+    private void OnEnable()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.FalaGuardiao, transform.position);
+    }
 }
