@@ -26,6 +26,7 @@ public class SaveStatue : MonoBehaviour
             this.GetComponent<SpriteRenderer>().sprite = EstatuaAcessa;
             Vaso1.SetBool("Salvo", true);
             Vaso2.SetBool("Salvo", true);
+            playerGO.GetComponent<Animator>().SetBool("Rezar", true);
             //rend.color = Color.green;
         }
     }
