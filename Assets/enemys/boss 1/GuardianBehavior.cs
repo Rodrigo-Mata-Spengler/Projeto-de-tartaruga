@@ -169,6 +169,7 @@ public class GuardianBehavior : MonoBehaviour
         PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBoxMagico.SetActive(true);
         */
         PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
+        PlayerObj.GetComponent<Dash>().enabled = true;
 
     }
     private void PlayerDistance()

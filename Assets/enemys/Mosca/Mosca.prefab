@@ -212,7 +212,6 @@ GameObject:
   - component: {fileID: 1487975736}
   - component: {fileID: 1487975734}
   - component: {fileID: 2404604398027211925}
-  - component: {fileID: 2585885285700897796}
   - component: {fileID: 1533152684323426111}
   m_Layer: 8
   m_Name: Mosca
@@ -220,7 +219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1787313283712742908
 Transform:
   m_ObjectHideFlags: 0
@@ -277,7 +276,7 @@ MonoBehaviour:
   velocidade: 2
   tempoEspera: 3
   pontoPatrulha: {x: 0, y: 0, z: 0}
-  "raioDetec\xE7\xE3o": 2
+  raioDetecao: 0
   playerTag: Player
   alturaAtaque: 5
   velocidadeAtaque: 10
@@ -304,20 +303,6 @@ MonoBehaviour:
   ItensPrefabs:
   - {fileID: 3558725743607025275, guid: 72d39d21c12c80742a52345f2377fcde, type: 3}
   TimeToDestroyDelay: 0.3
---- !u!114 &2585885285700897796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2608173420859674862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wasHit: 0
-  secondsToDisable: 0.15
 --- !u!114 &1533152684323426111
 MonoBehaviour:
   m_ObjectHideFlags: 0
