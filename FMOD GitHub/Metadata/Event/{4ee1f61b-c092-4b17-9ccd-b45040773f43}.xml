@@ -5,7 +5,7 @@
 			<value>Canhão de Água</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{83a1949d-29d8-4939-9c41-c2743bf703fb}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{2cba8a95-2b5e-432e-be39-a706d3cc3d10}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{d97b9325-b551-4b06-ada1-8ec2d710b7e3}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{de30d810-ead3-479b-98aa-9b31057309c8}">
@@ -69,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{e9fed6fa-cc2e-4b91-b11a-62952e1fa5aa}">
+		<property name="volume">
+			<value>5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{ce64120e-9ff1-4c26-acbc-d99546709a82}</destination>
 		</relationship>
@@ -79,7 +85,11 @@
 			<destination>{de30d810-ead3-479b-98aa-9b31057309c8}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{c9a2632c-7273-459d-88f9-667096e58ff4}" />
+	<object class="MultiSound" id="{c9a2632c-7273-459d-88f9-667096e58ff4}">
+		<relationship name="sounds">
+			<destination>{8e00fae6-f5aa-4879-8bef-2f2f05dd0d34}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{249f38b2-cff8-4527-88fa-1ca9a2926584}">
 		<relationship name="effects">
 			<destination>{c584c3d3-d3da-4c6b-9089-be9752c96230}</destination>
@@ -92,6 +102,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8102fb24-2cb0-4404-8ab7-cc3ddbbdb590}" />
+	<object class="SingleSound" id="{8e00fae6-f5aa-4879-8bef-2f2f05dd0d34}">
+		<relationship name="audioFile">
+			<destination>{a747079b-2859-4c21-a48c-b727461aab57}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{c584c3d3-d3da-4c6b-9089-be9752c96230}" />
 	<object class="MixerBusFader" id="{924d202d-37e4-4c11-849a-38c4c411fe60}" />
 </objects>

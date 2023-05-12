@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 705975697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: limite 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 1218761711}
   - component: {fileID: 1218761712}
   - component: {fileID: 5575662532134880519}
-  m_Layer: 0
+  - component: {fileID: 5533913427978322459}
+  m_Layer: 8
   m_Name: Corpo Mosca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +115,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &1218761712
@@ -154,6 +155,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5533913427978322459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218761709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1171594b0369ff44ea81c114a06e7d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  Dano: 2
 --- !u!1 &1595973581
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1595973582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: limite 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +212,8 @@ GameObject:
   - component: {fileID: 1487975736}
   - component: {fileID: 1487975734}
   - component: {fileID: 2404604398027211925}
-  m_Layer: 0
+  - component: {fileID: 1533152684323426111}
+  m_Layer: 8
   m_Name: Mosca
   m_TagString: Mosca
   m_Icon: {fileID: 0}
@@ -212,7 +228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2608173420859674862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0008500479, y: 0.66764694, z: 86.901306}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -251,13 +267,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1fcc11f69898049ad9cfe5472bf664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 5575662532134880519}
+  rend: {fileID: 1218761711}
+  corpo: {fileID: 1218761709}
   status: 5
   limiteMax: {fileID: 705975697}
   limiteMin: {fileID: 1595973582}
   velocidade: 2
   tempoEspera: 3
   pontoPatrulha: {x: 0, y: 0, z: 0}
-  "raioDetec\xE7\xE3o": 2
+  raioDetecao: 0
   playerTag: Player
   alturaAtaque: 5
   velocidadeAtaque: 10
@@ -281,8 +300,40 @@ MonoBehaviour:
   MaxHealth: 15
   currentHealth: 0
   DropItemPoint: {fileID: 5354023620929546505}
-  ItensPrefabs: []
-  TimeToDestroyDelay: 0
+  ItensPrefabs:
+  - {fileID: 3558725743607025275, guid: 72d39d21c12c80742a52345f2377fcde, type: 3}
+  TimeToDestroyDelay: 0.3
+--- !u!114 &1533152684323426111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2608173420859674862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 497263282
+      Data2: 1259830049
+      Data3: 373503679
+      Data4: -900837527
+    Path: event:/Mosca/Som
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.14
+  OverrideMaxDistance: 8.19
 --- !u!1 &7090008906603646382
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5354023620929546505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DropPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

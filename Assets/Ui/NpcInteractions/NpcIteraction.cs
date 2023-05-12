@@ -99,11 +99,13 @@ public class NpcIteraction : MonoBehaviour
         }
 
         // if player press the esc disable the UI interaction obj
-        if (Input.GetKey(KeyCode.Escape) /* || textLocation == NpcWords.Length*/)
+        /*
+        if (Input.GetKey(KeyCode.Escape)  //|| textLocation == NpcWords.Length)
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
         }
+        */
     }
     //method that run the courotine
     private void ContinueStory()

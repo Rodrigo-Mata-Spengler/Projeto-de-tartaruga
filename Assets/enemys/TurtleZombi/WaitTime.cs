@@ -18,7 +18,6 @@ public class WaitTime : BTnode
         {
             currentTime += Time.deltaTime;
 
-            Debug.LogWarning(currentTime);
             bt.GetComponent<BTZombiTurtle>().lookAt = false;
 
             if (currentTime > WaitTimeToAttack)

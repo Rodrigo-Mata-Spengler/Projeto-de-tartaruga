@@ -24,8 +24,11 @@ public class BTZombiTurtle : MonoBehaviour
     public float WaitTimeToAttack;
     public float AttackDuration;
 
+    private EnemyHealth enemyHealth;
+
     private void Start()
     {
+        enemyHealth= this.GetComponent<EnemyHealth>();
         m_Animator = this.GetComponent<Animator>();
         PlayerTransform = GameObject.FindGameObjectWithTag("Player");
         rb= this.GetComponent<Rigidbody2D>();  
@@ -41,8 +44,11 @@ public class BTZombiTurtle : MonoBehaviour
 
         StartCoroutine(bt.Execute());
     }
- 
-    
+
+    private void Awake()
+    {
+        LookAtPlayer();
+    }
 
     IEnumerator FindTargetsWithDelay(float delay)
     {
@@ -63,6 +69,10 @@ public class BTZombiTurtle : MonoBehaviour
             {
                 lookingRight= true;
             }
+            if(enemyHealth.currentHealth <= 0)
+            {
+                this.GetComponent<BTZombiTurtle>().enabled= false;
+            }
         }
     }
     public void LookAtPlayer()
@@ -71,6 +81,11 @@ public class BTZombiTurtle : MonoBehaviour
         float angle = Mathf.Atan2(0f,look.x)*Mathf.Rad2Deg;
 
         transform.Rotate(0f,angle,0f);
+    }
+
+    public void PlayAttackSound()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueZombi, transform.position);
     }
 
 }

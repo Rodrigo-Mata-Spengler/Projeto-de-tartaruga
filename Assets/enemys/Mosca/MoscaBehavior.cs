@@ -1,11 +1,12 @@
+using FMOD.Studio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum MoscaStatus {patrulha, alerta, kamikase, tonto, recuperacao, desativado};
+enum MoscaStatus {patrulha, alerta, kamikase, tonto, desativado};
 public class MoscaBehavior : MonoBehaviour
 {
-    [Header("Animação")]
+    [Header("Animaï¿½ï¿½o")]
     [SerializeField] private Animator anim;
     [SerializeField] private SpriteRenderer rend;
     [SerializeField] private GameObject corpo;
@@ -14,21 +15,21 @@ public class MoscaBehavior : MonoBehaviour
     [SerializeField] private MoscaStatus status = MoscaStatus.desativado;
 
     [Header("Patrulha")]
-    //define limite de movimentação da mosca
+    //define limite de movimentaï¿½ï¿½o da mosca
     [SerializeField] private Transform limiteMax;
     [SerializeField] private Transform limiteMin;
     private float maxX = 0;
     private float maxY = 0;
     private float minX = 0;
     private float minY = 0;
-    [SerializeField] private float velocidade = 0;//velocidade de movimetnação da mosca
+    [SerializeField] private float velocidade = 0;//velocidade de movimetnaï¿½ï¿½o da mosca
     [SerializeField] private float tempoEspera = 0;//tempo de espera que a mosca faz entre os caminhos
     private float tempoProximoPonto = 0;
     [SerializeField] private Vector3 pontoPatrulha;
     private Vector3 centroOriginal;
 
-    [Header("Detecção Player")]
-    [SerializeField] private float raioDetecção;
+    [Header("Detecaoo Player")]
+    [SerializeField] private float raioDetecao;
     [SerializeField] private string playerTag;
     private Transform player;
 
@@ -46,14 +47,19 @@ public class MoscaBehavior : MonoBehaviour
     [SerializeField] private float tempoEsperaTonta = 0;
     private float tempoTonta = 0;
 
+    private EventInstance Mosca;
+
     private void Start()
     {
         centroOriginal = transform.position;
 
         PrepararPatrulha();
         PreparaDeteccao();
+        CriarPontoPatrulha();
 
         status = MoscaStatus.patrulha;
+
+        Mosca = AudioManager.instance.CreateEventInstance(FMODEvents.instance.SomMosca);
     }
 
     private void Update()
@@ -70,9 +76,8 @@ public class MoscaBehavior : MonoBehaviour
                 AtaqueMosca();
                 break;
             case MoscaStatus.tonto:
+                anim.SetBool("mosca_tonta", true);
                 MoscaTonta();
-                break;
-            case MoscaStatus.recuperacao:
                 break;
             case MoscaStatus.desativado:
                 break;
@@ -92,12 +97,13 @@ public class MoscaBehavior : MonoBehaviour
         if (transform.position.Equals(pontoPatrulha) && tempoProximoPonto<Time.time)
         {
             tempoProximoPonto = Time.time + tempoEspera;
-            //criar ponto aleatório para masca ir
+            //criar ponto aleatï¿½rio para masca ir
             CriarPontoPatrulha();
+
         }
         else
         {
-            //movimentar a mosca até o ponto
+            //movimentar a mosca atï¿½ o ponto
             MoverMoscaPatrulha();
         }
 
@@ -134,11 +140,12 @@ public class MoscaBehavior : MonoBehaviour
         {
             rend.flipX = true;
         }
+
     }
     //mosca detecta o player
     private void PreparaDeteccao()
     {
-        GetComponent<CircleCollider2D>().radius = raioDetecção;
+        GetComponent<CircleCollider2D>().radius = raioDetecao;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -167,17 +174,29 @@ public class MoscaBehavior : MonoBehaviour
         }
     }
 
-    //mosca se atira em direção ao player
+    //mosca se atira em direï¿½ï¿½o ao player
     private void AtaqueMosca()
     {
         if (tempoAtaque < Time.time)
         {
             transform.position = Vector3.MoveTowards(transform.position, miraAtaque, velocidadeAtaque * Time.deltaTime);
+           
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.rasanteMosca, transform.position);
+            if (transform.position.x - miraAtaque.x >= 0)
+            {
+                rend.flipX = false;
+            }
+            else
+            {
+                rend.flipX = true;
+            }
         }
         else
         {
             miraAtaque = player.position;
         }
+
+        
 
         if (transform.position.Equals(miraAtaque))
         {
@@ -194,7 +213,9 @@ public class MoscaBehavior : MonoBehaviour
         if (tempoTonta < Time.time)
         {
             status = MoscaStatus.alerta;
+            anim.SetBool("mosca_tonta", false);
         }
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.TontaMosca, transform.position);
     }
     
 }

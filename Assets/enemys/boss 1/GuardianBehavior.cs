@@ -4,14 +4,20 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer, JumpAtEdge ,Dash, CheckPlayerDistance, Norteado, Morto };
+enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer, JumpAtEdge ,Dash, CheckPlayerDistance, Norteado, Morto, Parado };
 public class GuardianBehavior : MonoBehaviour
 {
+
+    public float tempoInicialDelay = 0f;
+    public float tempoDecorridoInicial = 0f;
+
+
+
     private EnemyHealth EnemyHealth;
     private EnemyHitFeedback EnemyHitFeedback;
 
     [Header("Status")]
-    [SerializeField] private GuardianStatus status = GuardianStatus.desativado;
+    [SerializeField] private GuardianStatus status = GuardianStatus.Parado;
 
     [Header("StartFight")]
     public bool StartFight = false;//if player has enter the battle field
@@ -71,6 +77,8 @@ public class GuardianBehavior : MonoBehaviour
 
     private float LifePorcentage;
 
+    private bool DoOnce = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,14 +92,29 @@ public class GuardianBehavior : MonoBehaviour
 
     private void Awake()
     {
-        status = GuardianStatus.desativado;
+        
+
     }
     // Update is called once per frame
     void Update()
     {
+        
+        if(tempoDecorridoInicial <= tempoInicialDelay +0.03)
+        {
+            tempoDecorridoInicial += Time.deltaTime;
+        }
+        if (tempoDecorridoInicial >= tempoInicialDelay && DoOnce==false)
+        {
+            status = GuardianStatus.CheckPlayerDistance;
+            DoOnce= true;
+        }
 
         switch (status)
         {
+            case GuardianStatus.Parado:
+              
+                break;
+
             case GuardianStatus.Morto:
                 morto();
                 break;
@@ -136,11 +159,17 @@ public class GuardianBehavior : MonoBehaviour
     private void morto()
     {
         PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true; // activated the have magic trident in player movment
+        /*
         PlayerObj.GetComponent<PlayerMovement>().AtaqueHitBox.SetActive(false); // activated the have magic trident in the Attack obj
         PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBox.SetActive(false);
         PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBox.SetActive(false);
-        PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
+        
         PlayerObj.GetComponent<PlayerMovement>().AtaqueMagicoHitBox.SetActive(true);
+        PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBoxMagico.SetActive(true);
+        PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBoxMagico.SetActive(true);
+        */
+        PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
+        PlayerObj.GetComponent<Dash>().enabled = true;
 
     }
     private void PlayerDistance()
@@ -149,7 +178,7 @@ public class GuardianBehavior : MonoBehaviour
         if(EnemyHealth.currentHealth > LifePorcentage*2)
         {
             int i = Random.Range(0, 101);
-            Debug.Log(i);
+         
             /// if close Attack
             if ( PlayerClose && jumped == false && i >= 30 && i <= 100)
             {
@@ -191,7 +220,7 @@ public class GuardianBehavior : MonoBehaviour
                 status = GuardianStatus.Attack;
                 tempoDeAtaque = 0;
                 AttackCollider.enabled = true;
-
+                
                 ActionChosed = false;
             }
 
@@ -233,18 +262,20 @@ public class GuardianBehavior : MonoBehaviour
     public void AttackPlayer()
     {
         tempoDeAtaque += Time.deltaTime;
-
-        if(tempoDeAtaque < DuracaoDeAtaque)
+        
+        if (tempoDeAtaque < DuracaoDeAtaque)
         {
             if (lookingRight)
             {
                 //rb.AddForce(new Vector2(AttackImpulse, transform.position.y), ForceMode2D.Impulse);
                 rb.velocity = new Vector2(AttackImpulse, 0f);
+               // AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
             }
             if (!lookingRight)
             {
                 //rb.AddForce(new Vector2(-AttackImpulse, transform.position.y), ForceMode2D.Impulse);
                 rb.velocity = new Vector2(-AttackImpulse, 0f);
+                //AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
             }
             AttackTrigger.SetActive(true);
             Attacked = true;
@@ -253,7 +284,8 @@ public class GuardianBehavior : MonoBehaviour
         }
         else
         {
-            Attacked= false;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
+            Attacked = false;
             AttackTrigger.SetActive(false);
             tempoTonto = 0;
             status = GuardianStatus.desativado;
@@ -303,7 +335,7 @@ public class GuardianBehavior : MonoBehaviour
             {
                 rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
                 jumped = true;
-                
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.PuloGuardiao, transform.position);
 
             }
         }
@@ -329,6 +361,7 @@ public class GuardianBehavior : MonoBehaviour
             {
                 rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
                 jumped = true;
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.PuloGuardiao, transform.position);
             }
         }
         /// if enemy hit's the ground go to wait time
@@ -357,10 +390,12 @@ public class GuardianBehavior : MonoBehaviour
             if (lookingRight)
             {
                 rb.AddForce(new Vector2(DashImpulse, transform.position.y), ForceMode2D.Impulse);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.DashGuardiao,transform.position);
             }
             if (!lookingRight)
             {
                 rb.AddForce(new Vector2(-DashImpulse, transform.position.y), ForceMode2D.Impulse);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.DashGuardiao, transform.position);
             }
             dashed = true;
         }
@@ -394,5 +429,8 @@ public class GuardianBehavior : MonoBehaviour
         }
 
     }
-
+    private void OnEnable()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.FalaGuardiao, transform.position);
+    }
 }

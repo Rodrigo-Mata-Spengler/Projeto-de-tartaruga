@@ -90,6 +90,7 @@ public class PlantaCarnivora : MonoBehaviour
         {
             proximoAtaque = Time.time + tempDuracaoAtaque;
             colliderAtaque.SetActive(true);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.MordidaPlanta, transform.position);
             atacando = true;
         }
         else if(proximoAtaque < Time.time && atacando ==true)

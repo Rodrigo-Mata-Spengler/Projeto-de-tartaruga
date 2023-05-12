@@ -17,6 +17,13 @@ public class Ataque : MonoBehaviour
     public float EnemyimpulseForce;
     [HideInInspector]public int HitIndex = 0;
 
+    private Health playerHealth;
+
+    private int AttackToGetHeal = 0;
+    private void Start()
+    {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+    }
     private void Update()
     {
         //checks if hit a enemy
@@ -49,7 +56,7 @@ public class Ataque : MonoBehaviour
     //Draw the box on unity
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Zombi") && !HaveMagicTrident)
+        if (collision.CompareTag("Zombi"))
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
@@ -57,7 +64,7 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoZombi, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Guardiao") && !HaveMagicTrident)
+        if (collision.CompareTag("Guardiao") )
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
@@ -65,7 +72,7 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoGuardiao, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Mosca") && !HaveMagicTrident)
+        if (collision.CompareTag("Mosca") )
         {
             //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
@@ -73,15 +80,22 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoMosca, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Planta") && !HaveMagicTrident)
+        if (collision.CompareTag("Planta") )
         {
-            //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
-            //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoPlanta, collision.transform.position);
             Detected = true;
         }
-
+        if (collision.gameObject.layer == 8)
+        {
+            AttackToGetHeal += 1;
+        }
+        if (collision.gameObject.layer == 8 && playerHealth.HealSeaweed <= playerHealth.MaxHealSeaweed && AttackToGetHeal ==3)
+        {
+            playerHealth.HealSeaweed += 1;
+            AttackToGetHeal = 0;
+        }
 
     }
 }
