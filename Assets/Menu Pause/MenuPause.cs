@@ -20,6 +20,9 @@ public class MenuPause : MonoBehaviour
     private bool mortePanel = false;
     private bool doOnce = false;
 
+    [Header("Menu Mapa")]
+    [SerializeField] private GameObject mapa;
+
     [Header("Botão Menu Principal")]
     [SerializeField] private string nomeMenu;
 
@@ -29,6 +32,7 @@ public class MenuPause : MonoBehaviour
     public GameObject OptionsCloseButton;
     public GameObject primeiroItem;
     public GameObject ultimoSave;
+    public GameObject voltarInventario;
 
     private void Start()
     {
@@ -105,6 +109,24 @@ public class MenuPause : MonoBehaviour
     public void SairJogo()
     {
         Application.Quit();
+    }
+
+    public void IrMapa()
+    {
+        InventoryPanel.SetActive(false);
+        mapa.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+
+        EventSystem.current.SetSelectedGameObject(voltarInventario);
+    }
+
+    public void VoltarMenu()
+    {
+        InventoryPanel.SetActive(true);
+        mapa.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        
+        EventSystem.current.SetSelectedGameObject(primeiroItem);
     }
 
     public void PlayerMorreu()
