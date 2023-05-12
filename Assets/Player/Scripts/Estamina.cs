@@ -25,14 +25,25 @@ public class Estamina : MonoBehaviour
     // Do damage
     public void Damage(float GiveEstaminaDamageAmount)
     {
-        CurrentEstamina -= GiveEstaminaDamageAmount;
-        EstaminaSlider.value -= 5;
+        
+        if(CurrentEstamina > 0f)
+        {
+            CurrentEstamina -= GiveEstaminaDamageAmount;
+            EstaminaSlider.value -= 0.12f;
+        }
+        
     }
 
     //give Estamina
     public void GiveHealth(float GiveEstaminaAmount)
     {
-        CurrentEstamina += GiveEstaminaAmount;
-        EstaminaSlider.value += 5;
+        
+        if(CurrentEstamina < MaxEstamina)
+        {
+            CurrentEstamina += GiveEstaminaAmount;
+            EstaminaSlider.value += 0.12f;
+        }
+        
+
     }
 }

@@ -120,21 +120,28 @@ public class Health : MonoBehaviour
     // Do damage
     public void Damage(int GiveDamageAmount)
     {
+        if(currentLife > 0f)
+        {
+            CameraShakeManager.instance.CameraShake(impulseSource);
+            currentLife -= GiveDamageAmount;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
+            PlayerHitFeedbackScript.wasHit = true; //Pass the feedback that the player was hit, so the Health can be disble and enabled after a amount of time
+            DamageEffect.Play();
 
-        CameraShakeManager.instance.CameraShake(impulseSource);
-        currentLife -= GiveDamageAmount;
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
-        PlayerHitFeedbackScript.wasHit= true; //Pass the feedback that the player was hit, so the Health can be disble and enabled after a amount of time
-        DamageEffect.Play();
+            HealthSlider.value -= 207;
+        }
 
-        HealthSlider.value -= 5;
         
     }
 
     //give heath
     public void GiveHealth(int GiveHealthAmount)
     {
-        currentLife += GiveHealthAmount;
-        HealthSlider.value += 5;
+        if(currentLife < maxLife)
+        {
+            currentLife += GiveHealthAmount;
+            HealthSlider.value += 207;
+        }
+
     }
 }
