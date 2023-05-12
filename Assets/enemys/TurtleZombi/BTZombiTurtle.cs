@@ -24,8 +24,11 @@ public class BTZombiTurtle : MonoBehaviour
     public float WaitTimeToAttack;
     public float AttackDuration;
 
+    private EnemyHealth enemyHealth;
+
     private void Start()
     {
+        enemyHealth= this.GetComponent<EnemyHealth>();
         m_Animator = this.GetComponent<Animator>();
         PlayerTransform = GameObject.FindGameObjectWithTag("Player");
         rb= this.GetComponent<Rigidbody2D>();  
@@ -65,6 +68,10 @@ public class BTZombiTurtle : MonoBehaviour
             else
             {
                 lookingRight= true;
+            }
+            if(enemyHealth.currentHealth <= 0)
+            {
+                this.GetComponent<BTZombiTurtle>().enabled= false;
             }
         }
     }

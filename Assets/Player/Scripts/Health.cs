@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine.VFX;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class Health : MonoBehaviour
     [Header("Health")]
     public int maxLife;
     public int currentLife;
-    [SerializeField] private GameObject lifeImages;
+    //[SerializeField] private GameObject lifeImages;
+    [SerializeField] private Slider HealthSlider;
 
     public bool haveArmor = false;
     private CinemachineImpulseSource impulseSource;
@@ -26,25 +28,33 @@ public class Health : MonoBehaviour
     public VisualEffect DamageEffect;
 
     [Header("heal")]
-    public int HealSeaweed;
+    public int MaxHealSeaweed;
+    [HideInInspector]public int HealSeaweed;
 
     public float CurrenTime = 0f;
     public float TimeToHeal = 1.5f;
 
-    [SerializeField] private GameObject[] HealImages;
+    [SerializeField] private TextMeshProUGUI AmountOfSeaweed;
 
+    [Space]
     [SerializeField] private MenuPause pause;
 
-    [SerializeField] private Slider HealthSlider;
+ 
     private void Start()
     {
         currentLife = maxLife;
+
+        HealSeaweed = MaxHealSeaweed;
 
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         impulseSource = GetComponent<CinemachineImpulseSource>();
 
         PlayerHitFeedbackScript = gameObject.GetComponent<PlayerHitFeedback>();
+
+        AmountOfSeaweed.text = HealSeaweed.ToString();
+
+        
     }
 
     private void Update()
@@ -58,7 +68,7 @@ public class Health : MonoBehaviour
                 GiveHealth(1);
                 HealSeaweed -= 1;
                 CurrenTime = 0;
-                HealImages[HealSeaweed].SetActive(false);
+                
 
             }
         }
