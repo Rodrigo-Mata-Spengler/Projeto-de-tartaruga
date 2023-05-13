@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1218761712}
   - component: {fileID: 5575662532134880519}
   - component: {fileID: 5533913427978322459}
+  - component: {fileID: 9087207734802572277}
   m_Layer: 8
   m_Name: Corpo Mosca
   m_TagString: Untagged
@@ -169,6 +170,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   Dano: 2
+--- !u!114 &9087207734802572277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218761709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasHit: 0
+  secondsToDisable: 0.15
 --- !u!1 &1595973581
 GameObject:
   m_ObjectHideFlags: 0

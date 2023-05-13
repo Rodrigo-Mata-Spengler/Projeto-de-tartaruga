@@ -57,9 +57,9 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference Anciao { get; private set; }
 
     [field: Header("Caranguejo SFX")]
-    [field: SerializeField] public EventReference FeedBackMorte { get; private set; }
-    [field: SerializeField] public EventReference FeedBackDano { get; private set; }
-    [field: SerializeField] public EventReference FeedBackPinca { get; private set; }
+    [field: SerializeField] public EventReference FeedBackMorteCaranguejo { get; private set; }
+    [field: SerializeField] public EventReference FeedBackDanoCaranguejo { get; private set; }
+    [field: SerializeField] public EventReference FeedBackPincaCaranguejo { get; private set; }
 
     [field: Header("Guardiao SFX")]
     [field: SerializeField] public EventReference AtaqueGuardiao { get; private set; }

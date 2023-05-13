@@ -17,12 +17,12 @@ public class Ataque : MonoBehaviour
     public float EnemyimpulseForce;
     [HideInInspector]public int HitIndex = 0;
 
-    private Health playerHealth;
+    private Estamina playerEstamina;
 
     private int AttackToGetHeal = 0;
     private void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        playerEstamina = GameObject.FindGameObjectWithTag("Player").GetComponent<Estamina>();
     }
     private void Update()
     {
@@ -75,26 +75,39 @@ public class Ataque : MonoBehaviour
         if (collision.CompareTag("Mosca") )
         {
             //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
-            //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoMosca, collision.transform.position);
             Detected = true;
         }
         if (collision.CompareTag("Planta") )
         {
-            
+            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoPlanta, collision.transform.position);
             Detected = true;
         }
-        if (collision.gameObject.layer == 8)
+        if (collision.CompareTag("Caranguejo"))
         {
-            AttackToGetHeal += 1;
+            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoCaranguejo, collision.transform.position);
+            Detected = true;
         }
-        if (collision.gameObject.layer == 8 && playerHealth.HealSeaweed <= playerHealth.MaxHealSeaweed && AttackToGetHeal ==3)
+
+        if (collision.gameObject.layer == 8  && playerEstamina.enabled == true || playerEstamina.CurrentEstamina <= playerEstamina.MaxEstamina && playerEstamina.enabled == true)
         {
-            playerHealth.HealSeaweed += 1;
-            AttackToGetHeal = 0;
+            if(AttackToGetHeal ==3)
+            {
+                playerEstamina.CurrentEstamina += 1;
+                AttackToGetHeal = 0;
+
+            }
+            else
+            {
+                AttackToGetHeal += 1;
+            }
+
         }
 
     }

@@ -1,0 +1,459 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1426315711129178632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426315711129178639}
+  - component: {fileID: 1426315711129178638}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426315711129178639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426315711129178632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1426315712149230308}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426315711129178638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426315711129178632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ea3d63479b4574ba0f1b47158a0118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterVolume: 1
+  musicVolume: 0
+  ambienceVolume: 0
+  SFXVolume: 1
+--- !u!1 &1426315712149230309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426315712149230308}
+  - component: {fileID: 1426315712149230363}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426315712149230308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426315712149230309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1426315711129178639}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426315712149230363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426315712149230309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e8d80141a871542b35997c018ff5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ambience>k__BackingField:
+    Guid:
+      Data1: -176207269
+      Data2: 1092693503
+      Data3: 557190836
+      Data4: -1234182607
+    Path: event:/Praia/Praia
+  <Music>k__BackingField:
+    Guid:
+      Data1: 555720218
+      Data2: 1239611367
+      Data3: -282923089
+      Data4: -720407115
+    Path: event:/Bioma Verde
+  <Confirmacao>k__BackingField:
+    Guid:
+      Data1: -1999883599
+      Data2: 1287947348
+      Data3: 222720169
+      Data4: 755051551
+    Path: "event:/Interface/Afirma\xE7\xE3o"
+  <Negacao>k__BackingField:
+    Guid:
+      Data1: 1206421747
+      Data2: 1309641660
+      Data3: -197910876
+      Data4: 934723650
+    Path: "event:/Interface/Nega\xE7\xE3o"
+  <PlayerFootstep>k__BackingField:
+    Guid:
+      Data1: 1766456022
+      Data2: 1322139094
+      Data3: 1813850267
+      Data4: 1786508826
+    Path: event:/Protagonista/Passos
+  <AttackSound>k__BackingField:
+    Guid:
+      Data1: 1183795331
+      Data2: 1160673238
+      Data3: 1087878804
+      Data4: 217209066
+    Path: event:/Protagonista/Golpe
+  <DamageFeedback>k__BackingField:
+    Guid:
+      Data1: -853649318
+      Data2: 1330506089
+      Data3: -1148784462
+      Data4: 1450108065
+    Path: event:/Protagonista/Feedback de Dano
+  <Dash>k__BackingField:
+    Guid:
+      Data1: -1255561798
+      Data2: 1322349989
+      Data3: 387457206
+      Data4: 1347290712
+    Path: event:/Protagonista/Dash
+  <Jump>k__BackingField:
+    Guid:
+      Data1: 955402343
+      Data2: 1221021533
+      Data3: -1184461692
+      Data4: -766340230
+    Path: event:/Protagonista/Pulo
+  <ItemGrab>k__BackingField:
+    Guid:
+      Data1: -1818454000
+      Data2: 1313463055
+      Data3: -1618954823
+      Data4: -2111874215
+    Path: event:/Coletar Recurso/Recurso Coletado
+  <Compra>k__BackingField:
+    Guid:
+      Data1: 484390566
+      Data2: 1295504553
+      Data3: 1680364933
+      Data4: -951073734
+    Path: event:/Compra/Compra
+  <Estactite>k__BackingField:
+    Guid:
+      Data1: 740516506
+      Data2: 1194248807
+      Data3: -1144136042
+      Data4: 758609454
+    Path: event:/Estalactite/Pingo
+  <Praia>k__BackingField:
+    Guid:
+      Data1: -176207269
+      Data2: 1092693503
+      Data3: 557190836
+      Data4: -1234182607
+    Path: event:/Praia/Praia
+  <SacoDePancada>k__BackingField:
+    Guid:
+      Data1: 635017466
+      Data2: 1194472176
+      Data3: -375125098
+      Data4: -159842578
+    Path: event:/Saco de Pancada/Feedback de Dano
+  <Save>k__BackingField:
+    Guid:
+      Data1: 375541606
+      Data2: 1123742244
+      Data3: 1189152670
+      Data4: 1870006270
+    Path: event:/Save/Save
+  <SombraGrito>k__BackingField:
+    Guid:
+      Data1: -1777843892
+      Data2: 1157124903
+      Data3: -1940690545
+      Data4: -2097906010
+    Path: event:/Sombra/Grito
+  <SombraAreaIsolada>k__BackingField:
+    Guid:
+      Data1: 1781383893
+      Data2: 1260201223
+      Data3: 379778458
+      Data4: -291249929
+    Path: event:/Sombra/Som Area Isolada
+  <Circular>k__BackingField:
+    Guid:
+      Data1: 173967927
+      Data2: 1101515200
+      Data3: -1970386552
+      Data4: -1183924843
+    Path: event:/Puzzles/Ciruclar
+  <Conclusao>k__BackingField:
+    Guid:
+      Data1: 2016594629
+      Data2: 1200821859
+      Data3: -1863246175
+      Data4: 1817544448
+    Path: "event:/Puzzles/Conclus\xE3o"
+  <EstatuaGeniusA>k__BackingField:
+    Guid:
+      Data1: -107083398
+      Data2: 1229408185
+      Data3: -1965762382
+      Data4: -2137916854
+    Path: event:/Puzzles/Estatua Genius A
+  <EstatuaGeniusB>k__BackingField:
+    Guid:
+      Data1: 266940940
+      Data2: 1090964269
+      Data3: 1147207320
+      Data4: 1792979133
+    Path: event:/Puzzles/Estatua Genius B
+  <EstatuaGeniusC>k__BackingField:
+    Guid:
+      Data1: 122380958
+      Data2: 1301405610
+      Data3: -962908534
+      Data4: -50738936
+    Path: event:/Puzzles/Estatua Genius C
+  <EstatuaGeniusD>k__BackingField:
+    Guid:
+      Data1: -1051063139
+      Data2: 1324632082
+      Data3: -52487753
+      Data4: 911756412
+    Path: event:/Puzzles/Estatua Genius D
+  <Painel>k__BackingField:
+    Guid:
+      Data1: -1890089755
+      Data2: 1210363287
+      Data3: 1399314841
+      Data4: 1821570932
+    Path: event:/Puzzles/Painel
+  <Quadrado>k__BackingField:
+    Guid:
+      Data1: 1742965818
+      Data2: 1284454201
+      Data3: 1338831509
+      Data4: -657834982
+    Path: event:/Puzzles/Quadrado
+  <Ferreiro>k__BackingField:
+    Guid:
+      Data1: 2142633123
+      Data2: 1228101853
+      Data3: -580943182
+      Data4: 1017144965
+    Path: event:/Ferreiro/Forjando
+  <Bruxa>k__BackingField:
+    Guid:
+      Data1: -481857872
+      Data2: 1088061981
+      Data3: -1912687981
+      Data4: -1921862227
+    Path: "event:/Bruxa/Caldeir\xE3o"
+  <Fazendeiro>k__BackingField:
+    Guid:
+      Data1: 940617733
+      Data2: 1262682171
+      Data3: 1928901045
+      Data4: 1782990204
+    Path: event:/Fazendeiro/Carpinando
+  <Anciao>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <FeedBackMorte>k__BackingField:
+    Guid:
+      Data1: -181813854
+      Data2: 1157409161
+      Data3: -1384495459
+      Data4: -1252521537
+    Path: event:/Caranguejo/Feedback de Morte
+  <FeedBackDano>k__BackingField:
+    Guid:
+      Data1: -1417708825
+      Data2: 1323482400
+      Data3: 1123782836
+      Data4: 1760186296
+    Path: event:/Caranguejo/Feedback de Dano
+  <FeedBackPinca>k__BackingField:
+    Guid:
+      Data1: 1832887441
+      Data2: 1267446817
+      Data3: -2065493366
+      Data4: -82777454
+    Path: "event:/Caranguejo/Pin\xE7a"
+  <AtaqueGuardiao>k__BackingField:
+    Guid:
+      Data1: -129664027
+      Data2: 1296986202
+      Data3: -1849474139
+      Data4: -302367844
+    Path: "event:/Guardi\xE3o/Ataque"
+  <FeedBackDanoGuardiao>k__BackingField:
+    Guid:
+      Data1: 1411446542
+      Data2: 1087332110
+      Data3: -483279454
+      Data4: -953563631
+    Path: "event:/Guardi\xE3o/Feedback de Dano"
+  <DashGuardiao>k__BackingField:
+    Guid:
+      Data1: 403063420
+      Data2: 1086593742
+      Data3: -1332735826
+      Data4: -1766075696
+    Path: "event:/Guardi\xE3o/Dash"
+  <FalaGuardiao>k__BackingField:
+    Guid:
+      Data1: 1232596475
+      Data2: 1301962026
+      Data3: -1418501246
+      Data4: -864560435
+    Path: "event:/Guardi\xE3o/Fala"
+  <PuloGuardiao>k__BackingField:
+    Guid:
+      Data1: -774159598
+      Data2: 1267119659
+      Data3: 852265871
+      Data4: 1340692301
+    Path: "event:/Guardi\xE3o/Pulo"
+  <AtaqueZombi>k__BackingField:
+    Guid:
+      Data1: -1031419416
+      Data2: 1201892253
+      Data3: -991048825
+      Data4: 1936778704
+    Path: event:/Zumbi Tartaruga/Mordendo
+  <FeedBackDanoZombi>k__BackingField:
+    Guid:
+      Data1: -359793906
+      Data2: 1120287887
+      Data3: -2058163780
+      Data4: 1112114026
+    Path: event:/Zumbi Tartaruga/Feedback de Dano
+  <FeedBackMorteZombi>k__BackingField:
+    Guid:
+      Data1: -884130286
+      Data2: 1302203230
+      Data3: -1109229904
+      Data4: 1665653742
+    Path: event:/Zumbi Tartaruga/Feedback de Morte
+  <MovimentoZombi>k__BackingField:
+    Guid:
+      Data1: -1905255126
+      Data2: 1079016893
+      Data3: -2053472356
+      Data4: 1776961301
+    Path: event:/Zumbi Tartaruga/Movimento
+  <AcordandoZombi>k__BackingField:
+    Guid:
+      Data1: -580143434
+      Data2: 1295556969
+      Data3: -148784255
+      Data4: 1041432092
+    Path: event:/Zumbi Tartaruga/Acordando
+  <FeedbackMorteMosca>k__BackingField:
+    Guid:
+      Data1: -1723912522
+      Data2: 1298987657
+      Data3: -331938377
+      Data4: -206070579
+    Path: event:/Mosca/Feedback de Morte
+  <FeedBackDanoMosca>k__BackingField:
+    Guid:
+      Data1: -817150009
+      Data2: 1206035288
+      Data3: 333322666
+      Data4: -976945295
+    Path: event:/Mosca/Feedback de Dano
+  <rasanteMosca>k__BackingField:
+    Guid:
+      Data1: -211673068
+      Data2: 1165488598
+      Data3: -970742109
+      Data4: 5297791
+    Path: event:/Mosca/Rasante
+  <SomMosca>k__BackingField:
+    Guid:
+      Data1: 497263282
+      Data2: 1259830049
+      Data3: 373503679
+      Data4: -900837527
+    Path: event:/Mosca/Som
+  <TontaMosca>k__BackingField:
+    Guid:
+      Data1: -1308834727
+      Data2: 1310839569
+      Data3: -1815835250
+      Data4: 1119921373
+    Path: event:/Mosca/Tonta
+  <DisparoOurico>k__BackingField:
+    Guid:
+      Data1: -1386148601
+      Data2: 1083288921
+      Data3: -1186800250
+      Data4: -384900188
+    Path: "event:/Ouri\xE7o/Disparo"
+  <FeedbackMortePlanta>k__BackingField:
+    Guid:
+      Data1: -662816525
+      Data2: 1092967853
+      Data3: -1495951226
+      Data4: -1656671984
+    Path: event:/Planta Carnivora/Feedback de Morte
+  <FeedBackDanoPlanta>k__BackingField:
+    Guid:
+      Data1: 1294306513
+      Data2: 1166089195
+      Data3: 510113970
+      Data4: 1881796766
+    Path: event:/Planta Carnivora/Feedback de Dano
+  <MordidaPlanta>k__BackingField:
+    Guid:
+      Data1: -356129846
+      Data2: 1308167987
+      Data3: 604515730
+      Data4: -639718998
+    Path: event:/Planta Carnivora/Mordida
+  <MordidaErrarPlanta>k__BackingField:
+    Guid:
+      Data1: 1796342687
+      Data2: 1197359748
+      Data3: -1939411043
+      Data4: -1842965213
+    Path: event:/Planta Carnivora/Mordida Errar

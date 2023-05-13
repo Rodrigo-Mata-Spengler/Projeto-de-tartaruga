@@ -42,9 +42,9 @@ public class Health : MonoBehaviour
  
     private void Start()
     {
-        currentLife = maxLife;
+        //currentLife = maxLife;
 
-        HealSeaweed = MaxHealSeaweed;
+        //HealSeaweed = MaxHealSeaweed;
 
         rb = gameObject.GetComponent<Rigidbody2D>();
 
@@ -54,7 +54,7 @@ public class Health : MonoBehaviour
 
         AmountOfSeaweed.text = HealSeaweed.ToString();
 
-        
+        HealthSlider.value = currentLife * 8;
     }
 
     private void Update()
@@ -115,6 +115,13 @@ public class Health : MonoBehaviour
             rb.velocity = new Vector2(transform.position.y, 15f);
 
         }
+        if (collision.gameObject.CompareTag("Alga"))
+        {
+            //int i = Random.Range(0, MaxAmount);
+            HealSeaweed += 1;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
+            Destroy(collision.gameObject,0.3f);
+        }
     }
 
     // Do damage
@@ -128,7 +135,7 @@ public class Health : MonoBehaviour
             PlayerHitFeedbackScript.wasHit = true; //Pass the feedback that the player was hit, so the Health can be disble and enabled after a amount of time
             DamageEffect.Play();
 
-            HealthSlider.value -= 207;
+            HealthSlider.value -= 8;
         }
 
         
@@ -140,7 +147,7 @@ public class Health : MonoBehaviour
         if(currentLife < maxLife)
         {
             currentLife += GiveHealthAmount;
-            HealthSlider.value += 207;
+            HealthSlider.value += 8;
         }
 
     }

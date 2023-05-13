@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 5287758271197617117}
   - component: {fileID: 5287758271197617120}
   - component: {fileID: 5027656796105154529}
+  - component: {fileID: 3612900398682192771}
   m_Layer: 8
   m_Name: boss1
   m_TagString: Guardiao
@@ -276,6 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd21a0bea53b0449ad398558799b77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempoInicialDelay: 0
+  tempoDecorridoInicial: 0
   status: 5
   StartFight: 0
   PlayerClose: 0
@@ -343,6 +346,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.1
+--- !u!95 &3612900398682192771
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484018159787737982}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ab8e5ce8fb3e2b41951556186fe25fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6566133213932611492
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +463,7 @@ GameObject:
   - component: {fileID: 6566133215279601594}
   - component: {fileID: 53501527}
   - component: {fileID: 1547352175}
+  - component: {fileID: 3706386843867023711}
   m_Layer: 8
   m_Name: AtaqueHitBoxEnemy
   m_TagString: Untagged
@@ -556,3 +581,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.11744516, y: 0.2797079}
   m_EdgeRadius: 0
+--- !u!95 &3706386843867023711
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6566133215279601597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb986a74b388aec4bb5f7e1add01d475, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

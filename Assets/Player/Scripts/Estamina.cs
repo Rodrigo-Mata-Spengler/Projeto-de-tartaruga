@@ -10,18 +10,25 @@ public class Estamina : MonoBehaviour
     [SerializeField] private Slider EstaminaSlider;
 
     [Header("Current Estamina")]
+    [Range(0,10)]
     public float CurrentEstamina;
-
+    
 
     private void Start()
     {
-        CurrentEstamina = MaxEstamina;
-        EstaminaSlider.maxValue = MaxEstamina;
-        EstaminaSlider.value = MaxEstamina;
+        //CurrentEstamina = MaxEstamina;
+        //EstaminaSlider.maxValue = MaxEstamina;
+       
     }
 
-
-
+    private void Update()
+    {
+        EstaminaSlider.value = CurrentEstamina;
+    }
+    private void Awake()
+    {
+        EstaminaSlider.value = CurrentEstamina;
+    }
     // Do damage
     public void Damage(float GiveEstaminaDamageAmount)
     {
@@ -29,7 +36,7 @@ public class Estamina : MonoBehaviour
         if(CurrentEstamina > 0f)
         {
             CurrentEstamina -= GiveEstaminaDamageAmount;
-            EstaminaSlider.value -= 0.12f;
+            EstaminaSlider.value -= 1;
         }
         
     }
@@ -41,7 +48,7 @@ public class Estamina : MonoBehaviour
         if(CurrentEstamina < MaxEstamina)
         {
             CurrentEstamina += GiveEstaminaAmount;
-            EstaminaSlider.value += 0.12f;
+            EstaminaSlider.value += 1;
         }
         
 

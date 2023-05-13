@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ItensInventory : MonoBehaviour
@@ -14,32 +15,73 @@ public class ItensInventory : MonoBehaviour
     //[Space]
     //public int MaxAmount = 10;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private TextMeshProUGUI conchasUI;//Shells
+    private TextMeshProUGUI coralUI; //coral
+    private TextMeshProUGUI calcioUI; //calcium
+    private TextMeshProUGUI ossosUI; // bones
+
+    private bool passar = false;
+
+    private void Start()
     {
-        if(collision.CompareTag("Conchas"))
+
+    }
+    private void Update()
+    {
+        if (Input.GetButtonUp("Mapa"))
+        {
+            conchasUI = GameObject.FindGameObjectWithTag("ConchaUI").GetComponentInChildren<TextMeshProUGUI>();
+            coralUI = GameObject.FindGameObjectWithTag("CoralUI").GetComponentInChildren<TextMeshProUGUI>();
+            calcioUI = GameObject.FindGameObjectWithTag("CalcioUI").GetComponentInChildren<TextMeshProUGUI>();
+            ossosUI = GameObject.FindGameObjectWithTag("OssoUI").GetComponentInChildren<TextMeshProUGUI>();
+
+            passar = true;
+
+        }
+        if (passar)
+        {
+            conchasUI.text = conchas.ToString();
+            coralUI.text = coral.ToString();
+            ossosUI.text = ossos.ToString();
+            calcioUI.text = calcio.ToString();
+          
+            passar = false;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Conchas"))
         {
             //int i = Random.Range(0, MaxAmount);
             conchas += 1;
-            Destroy(collision.gameObject);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
+            
+            Destroy(collision.gameObject, 0.05f);
         }
-        if (collision.CompareTag("Coral"))
+        if (collision.gameObject.CompareTag("Coral"))
         {
             //int i = Random.Range(0, MaxAmount);
             coral += 1;
-            Destroy(collision.gameObject);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
+           
+            Destroy(collision.gameObject, 0.05f);
         }
-        if (collision.CompareTag("Ossos"))
+        if (collision.gameObject.CompareTag("Ossos"))
         {
             //int i = Random.Range(0, MaxAmount);
             ossos += 1;
-            Destroy(collision.gameObject);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
+            
+            Destroy(collision.gameObject, 0.05f);
         }
-        if (collision.CompareTag("Calcio"))
+        if (collision.gameObject.CompareTag("Calcio"))
         {
             //int i = Random.Range(0, MaxAmount);
             calcio += 1;
-            Destroy(collision.gameObject);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
+            
+            Destroy(collision.gameObject, 0.05f);
         }
     }
 }

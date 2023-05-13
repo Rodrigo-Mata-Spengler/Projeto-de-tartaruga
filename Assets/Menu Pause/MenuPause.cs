@@ -55,7 +55,7 @@ public class MenuPause : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(PauseFirstButton);
             
         }
-        if(Input.GetKeyDown(KeyCode.I) && mortePanel == false)
+        if(Input.GetButtonDown("Mapa") && mortePanel == false)
         {
             SisPause(InventoryPanel);
             ///clear selected object

@@ -19,11 +19,14 @@ public class EnemyHitFeedback : MonoBehaviour
         if (wasHit)
         {
             StartCoroutine(DisableHitFeedback(secondsToDisable));
+            gameObject.GetComponent<Animator>().SetBool("Dano", true);
         }
     }
     private IEnumerator DisableHitFeedback(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+        gameObject.GetComponent<Animator>().SetBool("Dano", false);
         wasHit = false;
+        StopAllCoroutines();
     }
 }
