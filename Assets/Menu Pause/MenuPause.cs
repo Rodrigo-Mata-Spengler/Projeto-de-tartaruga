@@ -34,6 +34,8 @@ public class MenuPause : MonoBehaviour
     public GameObject ultimoSave;
     public GameObject voltarInventario;
 
+    public bool painelOpen = false;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -69,8 +71,8 @@ public class MenuPause : MonoBehaviour
     private void Pausar(GameObject PanelToDisable)
     {
         Time.timeScale = 0;
-       /// Cursor.lockState = CursorLockMode.None;
-        ///Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
         PanelToDisable.SetActive(true);
         isPaused = true;
         panelOpen = true;
@@ -153,5 +155,12 @@ public class MenuPause : MonoBehaviour
             Time.timeScale = 1;
             SceneManager.LoadScene(data.scenaAtual);
         }
+    }
+
+    public void SelectButton(GameObject buttonToSelected)
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+
+        EventSystem.current.SetSelectedGameObject(buttonToSelected);
     }
 }
