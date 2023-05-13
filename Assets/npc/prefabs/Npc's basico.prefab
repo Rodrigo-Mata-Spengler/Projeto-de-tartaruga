@@ -302,11 +302,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationObj: {fileID: 0}
   conversationText: {fileID: 0}
+  npcNameText: {fileID: 0}
+  NpcName: 
   NpcWords:
   - "Cadete, voc\xEA fez muito bem hoje."
   - "Voc\xEA ir\xE1 se tornar um \xF3timo protetor para nossa vila."
   - "Mas por hoje \xE9 s\xF3, volte para a vila e descanse."
-  typingSpeed: 0.02
+  typingSpeed: 0.04
   textLocation: 0
   StartTyping: 0
   playerDetected: 0

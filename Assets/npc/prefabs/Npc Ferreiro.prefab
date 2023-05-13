@@ -245,16 +245,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationObj: {fileID: 0}
   conversationText: {fileID: 0}
+  npcNameText: {fileID: 0}
+  NpcName: Ferreiro
   NpcWords:
   - 'Cadete, como foi o treinamento?! '
   - Espero que o tridente esteja sendo de bom uso.
-  - "Infelizmente pela falta de min\xE9rio n\xE3o vou conseguir completar sua armadura"
+  - "Infelizmente pela falta de min\xE9rio n\xE3o vou conseguir completar sua armadura."
   - "Se voc\xEA chegar a ach\xE1-los traga os a mim. "
   - "Por\xE9m acho muito dif\xEDcil, j\xE1 vasculhei a vila inteira deis que o \xFAltimo
     acabou e n\xE3o achei nada."
   - "Talvez fora da vila ainda tenha bastante, por\xE9m dizem que \xE9 muito perigoso
     e aqueles que tentaram nunca retornaram."
-  typingSpeed: 0.02
+  typingSpeed: 0.04
   textLocation: 0
   StartTyping: 0
   playerDetected: 0
@@ -289,9 +291,9 @@ MonoBehaviour:
   Preload: 0
   AllowNonRigidbodyDoppler: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.46
+  OverrideMaxDistance: 8.81
 --- !u!1 &6695516038752398603
 GameObject:
   m_ObjectHideFlags: 0

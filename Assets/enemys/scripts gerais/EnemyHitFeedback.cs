@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class EnemyHitFeedback : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class EnemyHitFeedback : MonoBehaviour
     [Header("Hit feedback")]
     public bool wasHit = false;
     public float secondsToDisable;
+
+    public VisualEffect HitEffect;
 
     private void Start()
     {
@@ -20,6 +23,7 @@ public class EnemyHitFeedback : MonoBehaviour
         {
             StartCoroutine(DisableHitFeedback(secondsToDisable));
             gameObject.GetComponent<Animator>().SetBool("Dano", true);
+            HitEffect.Play();
         }
     }
     private IEnumerator DisableHitFeedback(float seconds)

@@ -12,8 +12,10 @@ public class NpcIteraction : MonoBehaviour
     [Header("On UI elements")]
     [SerializeField] GameObject conversationObj; //the obj that contains the text object and pannels
     [SerializeField] TextMeshProUGUI conversationText;// the obj that contains the text component
+    [SerializeField] TextMeshProUGUI npcNameText;
 
     [Header("The text")]
+    [SerializeField] private string NpcName;
     [Space]
     [TextAreaAttribute] //give more space to write
     [SerializeField] private string[] NpcWords;// array of paragraph
@@ -65,6 +67,7 @@ public class NpcIteraction : MonoBehaviour
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false )
         {
+            npcNameText.text = NpcName;
             
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;

@@ -9,8 +9,10 @@ public class Bruxa : MonoBehaviour
     [Header("On UI elements")]
     [SerializeField] GameObject conversationObj; //the obj that contains the text object and pannels
     [SerializeField] TextMeshProUGUI conversationText;// the obj that contains the text component
+    [SerializeField] TextMeshProUGUI npcNameText;
 
     [Header("The text")]
+    [SerializeField] private string NpcName;
     [Space]
     [TextAreaAttribute] //give more space to write
     [SerializeField] private string[] NpcWords;// array of paragraph
@@ -73,7 +75,7 @@ public class Bruxa : MonoBehaviour
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2)
         {
-            
+            npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
@@ -208,7 +210,7 @@ public class Bruxa : MonoBehaviour
 
     //Function when player press yes on the pannel
 
-    public void WitchSell() //if Player have the enough Shells and corals to buy the item
+    public void WitchSell(GameObject NotEnoughMoney) //if Player have the enough Shells and corals to buy the item
     {
         if (PlayerInventory.conchas >= Cost[0] && PlayerInventory.coral >= Cost[1])
         {
@@ -224,11 +226,13 @@ public class Bruxa : MonoBehaviour
         else
         {
             //Display not enough money
+            NotEnoughMoney.SetActive(true);
         }
 
     }
-    public void WitchDontSell() //if Player have the enough Shells and corals to buy the item
+    public void WitchDontSell(GameObject NotEnoughMoney) //if Player have the enough Shells and corals to buy the item
     {
+        NotEnoughMoney.SetActive(false);
         Player.GetComponent<PlayerMovement>().enabled = true;
         inputPressed = false;
         Player.GetComponent<Animator>().enabled = true;

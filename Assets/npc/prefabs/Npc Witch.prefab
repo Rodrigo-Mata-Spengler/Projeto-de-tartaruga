@@ -329,15 +329,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationObj: {fileID: 0}
   conversationText: {fileID: 0}
+  npcNameText: {fileID: 0}
+  NpcName: Bruxa
   NpcWords:
   - "O que quer aqui Tartaruga? J\xE1 falei que n\xE3o vou mais ajud\xE1-los com
     seus problemas."
-  - 'Sai daqui antes que eu me irrite. '
+  - 'Saia daqui antes que eu me irrite. '
   - 
   - "Voc\xEA de novo!?"
   - Hum.
   - "Ok, eu posso te ajudar, mas para isso voc\xEA vai ter que me dar alguma coisa
-    em troca"
+    em troca."
   - Estou precisando de uns ingredientes especiais para um projeto pessoal.
   - "Se voc\xEA os trouxer para mim eu te ajudo com alguma coisa."
   typingSpeed: 0.04
@@ -375,6 +377,6 @@ MonoBehaviour:
   Preload: 0
   AllowNonRigidbodyDoppler: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.4
+  OverrideMaxDistance: 5.3

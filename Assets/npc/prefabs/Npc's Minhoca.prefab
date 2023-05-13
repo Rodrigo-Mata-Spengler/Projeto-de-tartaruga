@@ -328,13 +328,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationObj: {fileID: 0}
   conversationText: {fileID: 0}
+  npcNameText: {fileID: 0}
+  NpcName: Explorador
   NpcWords:
   - 'Obrigado por me salvar. Eu achei que nunca mais ia sair daqui. '
   - "Em todos meus anos de explora\xE7\xE3o eu nunca vi uma criatura daquela antes."
   - "voc\xEA se parece muito com eles, bom sem os ossos \xE9 claro."
   - "Voc\xEA me parece perdido."
-  - Aqui tome, como agradecimento por ter me salvado.
-  - " Eu estava mapeando essa caverna, ela \xE9 muito perigosa, voc\xEA vai precisar."
+  - "Aqui tome, como agradecimento por ter me salvado. Voc\xEA vai precisar."
+  - " Eu estava mapeando essa caverna, por\xE9m ela \xE9 muito perigosa, ent\xE3o
+    vou embora antes que outra coisa aconte\xE7a."
   - "Me desculpe, mas n\xE3o posso levar voc\xEA comigo, voc\xEA n\xE3o iria caber
     nos meus tuneis."
   - Adeus criatura estranha. E obrigado.

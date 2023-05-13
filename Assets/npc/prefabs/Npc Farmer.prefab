@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 4881963360200759346}
   - component: {fileID: 7869436001141976389}
   - component: {fileID: 1070006117310080730}
+  - component: {fileID: 7869436001141976392}
   m_Layer: 0
   m_Name: Npc Farmer
   m_TagString: Farmer
@@ -212,6 +213,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationObj: {fileID: 0}
   conversationText: {fileID: 0}
+  npcNameText: {fileID: 0}
+  NpcName: Fazendeiro
   NpcWords:
   - "Ol\xE1, Jovem."
   - "Est\xE1 interessado nas algas que cultivo?"
@@ -220,8 +223,9 @@ MonoBehaviour:
   - "Essas s\xE3o mais fortes, poderosas..."
   - "Infelizmente falta algo a mais para aperfei\xE7o\xE1-la."
   - Ossos.
-  - "Se voc\xEA achar alguns por a\xED traga para mim e te darei umas algas em troca."
-  typingSpeed: 0.02
+  - "Se voc\xEA achar alguns por a\xED traga-os para mim e te darei umas algas em
+    troca."
+  typingSpeed: 0.04
   textLocation: 0
   StartTyping: 0
   playerDetected: 0
@@ -259,6 +263,18 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &7869436001141976392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4881963360200760264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601277fe9b3a5e4489200ea987482989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4964146057491262748
 GameObject:
   m_ObjectHideFlags: 0

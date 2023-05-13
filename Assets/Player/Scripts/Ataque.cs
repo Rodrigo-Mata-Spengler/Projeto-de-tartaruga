@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Ataque : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class Ataque : MonoBehaviour
     private Estamina playerEstamina;
 
     private int AttackToGetHeal = 0;
+
+    public VisualEffect HitEffect;
+    public VisualEffect HitEffectUp;
+    public VisualEffect HitEffectDown;
     private void Start()
     {
         playerEstamina = GameObject.FindGameObjectWithTag("Player").GetComponent<Estamina>();
@@ -37,18 +42,20 @@ public class Ataque : MonoBehaviour
             if (up)
             {
                 rb.AddForce(transform.up * impulseForce);
-
+                HitEffectUp.Play();
                 up = false;
             }
             if (down)
             {
                 rb.AddForce(transform.up * -impulseForce);
+                HitEffectDown.Play();
                 down = false;
             }
             if (right)
             {
                 rb.AddForce(transform.right * -impulseForce);
                 right = false;
+                HitEffect.Play();
             }
         }
 
@@ -56,6 +63,7 @@ public class Ataque : MonoBehaviour
     //Draw the box on unity
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Zombi"))
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
@@ -92,6 +100,13 @@ public class Ataque : MonoBehaviour
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoCaranguejo, collision.transform.position);
+            Detected = true;
+        }
+        if (collision.CompareTag("ourico"))
+        {
+            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
+            //AudioManager.instance.PlayOneShot(FMODEvents.instance., collision.transform.position);
             Detected = true;
         }
 
