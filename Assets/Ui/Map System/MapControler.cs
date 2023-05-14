@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MapControler : MonoBehaviour
 {
-    [SerializeField] private static bool mapa1 = false;
+    [SerializeField] public static bool mapa1 = false;
     [SerializeField] private AreaStatus mapa1status;
 
-    [SerializeField] private static bool mapa2 = false;
+    [SerializeField] public static bool mapa2 = false;
     [SerializeField] private AreaStatus mapa2status;
 
-    [SerializeField] private static bool mapa3 = false;
+    [SerializeField] public static bool mapa3 = false;
     [SerializeField] private AreaStatus mapa3status;
 
     private void Awake()

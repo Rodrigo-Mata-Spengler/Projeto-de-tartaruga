@@ -42,13 +42,13 @@ public class SaveStatue : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag(player))
         {
             interacao = false;
             playerGO = null;
-            rend.color = Color.white;
+            //rend.color = Color.white;
         }
-    }*/
+    }
 }
