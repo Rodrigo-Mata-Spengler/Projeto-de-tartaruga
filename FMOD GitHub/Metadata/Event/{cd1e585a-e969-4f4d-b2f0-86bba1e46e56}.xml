@@ -5,7 +5,7 @@
 			<value>Feedback de Dano</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{83a1949d-29d8-4939-9c41-c2743bf703fb}</destination>
@@ -84,7 +84,7 @@
 	</object>
 	<object class="MultiSound" id="{25e223fc-aa1f-45d2-86d6-9da52d697a47}">
 		<relationship name="sounds">
-			<destination>{49b3e1ef-f47d-422d-90a6-8a601a4d3344}</destination>
+			<destination>{3f8015cf-d401-47a6-8b54-f732ed5b1459}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{371713a2-73bb-45e7-b00b-781b8e7999c4}">
@@ -99,9 +99,9 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{22407ba7-30bd-4c38-8933-21c411d13ba6}" />
-	<object class="SingleSound" id="{49b3e1ef-f47d-422d-90a6-8a601a4d3344}">
+	<object class="SingleSound" id="{3f8015cf-d401-47a6-8b54-f732ed5b1459}">
 		<relationship name="audioFile">
-			<destination>{181d292e-8ba2-48c9-abdb-0da87703a293}</destination>
+			<destination>{fa9cc718-6b2c-44aa-aee5-29e977a665b7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{6b6ad946-c7c3-46ef-be9a-9542b39063c9}" />
