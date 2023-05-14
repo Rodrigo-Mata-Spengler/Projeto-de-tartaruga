@@ -19539,10 +19539,10 @@ VisualEffect:
       - m_Value: {x: 0.070588194, y: 1.4980392, z: 1.3141252, w: 1}
         m_Name: Color 1
         m_Overridden: 1
-      - m_Value: {x: 0.21226415, y: 0.3289284, z: 0.8490566, w: 1}
+      - m_Value: {x: 0.66502506, y: 1.481643, z: 0.37235, w: 1}
         m_Name: color 3
         m_Overridden: 1
-      - m_Value: {x: 0.5045264, y: 1.7298048, z: 1.7298048, w: 1}
+      - m_Value: {x: 0.5071678, y: 1.7298048, z: 1.2156858, w: 1}
         m_Name: Color2
         m_Overridden: 1
       - m_Value: {x: 0.0042085354, y: 0.0042085354, z: 0.0042085354, w: 1}
@@ -24807,10 +24807,10 @@ VisualEffect:
   m_GameObject: {fileID: 480429711524250506}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 54a6a7723ab99554e999412792dec32d, type: 3}
-  m_InitialEventName: OnPlay
+  m_InitialEventName: 
   m_InitialEventNameOverriden: 1
-  m_StartSeed: 0
-  m_ResetSeedOnPlay: 1
+  m_StartSeed: 130
+  m_ResetSeedOnPlay: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -24821,12 +24821,12 @@ VisualEffect:
       m_Array: []
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 1.0039216, y: 1.3019608, z: 1.3019608, w: 1}
+      - m_Value: {x: 0.6847144, y: 5.7299786, z: 0.3243384, w: 1}
         m_Name: Color 1
         m_Overridden: 1
-      - m_Value: {x: 0.33521718, y: 0.8773585, z: 0.55649936, w: 1}
+      - m_Value: {x: 0, y: 0, z: 0, w: 0}
         m_Name: color 3
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: {x: 0.10857955, y: 0.3773585, z: 0.3773585, w: 1}
         m_Name: Color2
         m_Overridden: 1
@@ -24841,6 +24841,9 @@ VisualEffect:
         m_Overridden: 1
       - m_Value: {x: 0.3573501, y: 2.2271209, z: 2.80586, w: 1}
         m_Name: plarticles
+        m_Overridden: 1
+      - m_Value: {x: 2, y: 1.7400458, z: 0, w: 1}
+        m_Name: color2
         m_Overridden: 1
     m_Uint:
       m_Array: []
@@ -24895,7 +24898,7 @@ VFXRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1888708261
   m_SortingLayer: 5
-  m_SortingOrder: 5
+  m_SortingOrder: 10
 --- !u!1 &1021732541096621103
 GameObject:
   m_ObjectHideFlags: 0
@@ -25925,11 +25928,12 @@ MonoBehaviour:
   DoDamage: 0
   DamageEffect: {fileID: 716577365}
   MaxHealSeaweed: 5
-  HealSeaweed: 6
+  HealSeaweed: 5
   CurrenTime: 0
   TimeToHeal: 1.74
   AmountOfSeaweed: {fileID: 0}
   pause: {fileID: 0}
+  HealEffect: {fileID: 461927069386012012}
 --- !u!96 &2011585483
 TrailRenderer:
   serializedVersion: 2
