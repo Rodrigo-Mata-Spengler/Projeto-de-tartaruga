@@ -395,7 +395,7 @@ public class PlayerMovement : MonoBehaviour
           
  
 
-    private void UpdateSound()
+   /*
     {
         Debug.Log(HorizontalMove);
         if(HorizontalMove != 0 && m_Grounded)
@@ -414,7 +414,7 @@ public class PlayerMovement : MonoBehaviour
             PlayerFootstep.stop(STOP_MODE.IMMEDIATE);
         }
     }
-
+   */
     public void PlayFootstep()
     {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerFootstep, this.transform.position);

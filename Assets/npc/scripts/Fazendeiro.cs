@@ -37,7 +37,7 @@ public class Fazendeiro : MonoBehaviour
 
     public bool IsStore; ///if the npc have a store
     [SerializeField] GameObject StoreFazendeiro;
-    private bool OnStore = false; // Check's if is already on story
+    public bool OnStore = false; // Check's if is already on story
     //[SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
     private bool inputPressed = false;
 
@@ -47,6 +47,8 @@ public class Fazendeiro : MonoBehaviour
     private MenuPause CanvasMenuPause;
 
     private GameObject InputFeedBack;
+
+    public bool hadConversation = false;
     private void Start()
     {
         //get's the trigger component
@@ -72,7 +74,7 @@ public class Fazendeiro : MonoBehaviour
             inputPressed = true;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
@@ -97,9 +99,17 @@ public class Fazendeiro : MonoBehaviour
             ContinueStory();
 
         }
-        //if paragraph were over than disable the UI interaction obj
-        else if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
+        else if(textLocation == NpcWords.Length )
         {
+            textLocation+= 1;
+            hadConversation= true;
+        }
+        //if paragraph were over than disable the UI interaction obj
+        if ( inputPressed && hadConversation)
+        {
+            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
             conversationObj.SetActive(false);
             ///checks if his have a store, if it does display the store panel
             if (IsStore && OnStore == false)
@@ -111,22 +121,19 @@ public class Fazendeiro : MonoBehaviour
                 OnStore = true;
 
             }
-            else
-            {
-                CanvasMenuPause.panelOpen = false;
-                Player.GetComponent<PlayerMovement>().enabled = true;
-                havingConversation = false;
-                Player.GetComponent<Animator>().enabled = true;
-            }
+
         }
 
+        /*
+
         // if player press the esc disable the UI interaction obj
-        if (Input.GetKey(KeyCode.Escape) /* || textLocation == NpcWords.Length*/)
+        if (Input.GetKey(KeyCode.Escape) || textLocation == NpcWords.Length)
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
         }
+        */
     }
     //method that run the courotine
     private void ContinueStory()
@@ -185,6 +192,8 @@ public class Fazendeiro : MonoBehaviour
             //disable the interaction UI
             conversationObj.SetActive(false);
             InputFeedBack.SetActive(false);
+            OnStore = false;
+            StoreFazendeiro.SetActive(false);
         }
 
     }
@@ -213,6 +222,6 @@ public class Fazendeiro : MonoBehaviour
         inputPressed = false;
         Player.GetComponent<Animator>().enabled = true;
         StoreFazendeiro.SetActive(false);
-
+        OnStore = false;
     }
 }

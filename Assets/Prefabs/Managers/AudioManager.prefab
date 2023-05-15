@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0
-  ambienceVolume: 0
+  musicVolume: 1
+  ambienceVolume: 1
   SFXVolume: 1
 --- !u!1 &1426315712149230309
 GameObject:
@@ -102,11 +102,11 @@ MonoBehaviour:
     Path: event:/Praia/Praia
   <Music>k__BackingField:
     Guid:
-      Data1: 555720218
-      Data2: 1239611367
-      Data3: -282923089
-      Data4: -720407115
-    Path: event:/Bioma Verde
+      Data1: 1842435280
+      Data2: 1258363939
+      Data3: 1456805045
+      Data4: -1726794433
+    Path: "event:/M\xFAsicas/Vila"
   <Confirmacao>k__BackingField:
     Guid:
       Data1: -1999883599
@@ -270,11 +270,11 @@ MonoBehaviour:
     Path: event:/Puzzles/Quadrado
   <Ferreiro>k__BackingField:
     Guid:
-      Data1: 2142633123
-      Data2: 1228101853
-      Data3: -580943182
-      Data4: 1017144965
-    Path: event:/Ferreiro/Forjando
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Bruxa>k__BackingField:
     Guid:
       Data1: -481857872
@@ -296,21 +296,21 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  <FeedBackMorte>k__BackingField:
+  <FeedBackMorteCaranguejo>k__BackingField:
     Guid:
       Data1: -181813854
       Data2: 1157409161
       Data3: -1384495459
       Data4: -1252521537
     Path: event:/Caranguejo/Feedback de Morte
-  <FeedBackDano>k__BackingField:
+  <FeedBackDanoCaranguejo>k__BackingField:
     Guid:
       Data1: -1417708825
       Data2: 1323482400
       Data3: 1123782836
       Data4: 1760186296
     Path: event:/Caranguejo/Feedback de Dano
-  <FeedBackPinca>k__BackingField:
+  <FeedBackPincaCaranguejo>k__BackingField:
     Guid:
       Data1: 1832887441
       Data2: 1267446817

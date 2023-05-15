@@ -54,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8866021259192615941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o Duplo"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o Duplo"
+  Guid:
+    Data1: 2106790888
+    Data2: 1210928402
+    Data3: -615455328
+    Data4: 952520560
+  Banks:
+  - {fileID: -4561916992268976363}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8435151688686816498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7560317438637269909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Planta Carnivora/Feedback de Dano
+  m_EditorClassIdentifier: 
+  Path: event:/Planta Carnivora/Feedback de Dano
+  Guid:
+    Data1: 1294306513
+    Data2: 1166089195
+    Data3: 510113970
+    Data4: 1881796766
+  Banks:
+  - {fileID: -570230403866648006}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7475439345053952793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +204,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638196667362312769
+  lastModified: 638197627195570817
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -197,38 +251,11 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Save.bank
   Name: Save
   StudioPath: bank:/Save
-  lastModified: 638192205934673060
+  lastModified: 638191418830286873
   FileSizes:
   - Name: Desktop
     Value: 55424
   Exists: 1
---- !u!114 &-6710231996754913491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Planta Carnivora/Feedback de Dano
-  m_EditorClassIdentifier: 
-  Path: event:/Planta Carnivora/Feedback de Dano
-  Guid:
-    Data1: 1294306513
-    Data2: 1166089195
-    Data3: 510113970
-    Data4: 1881796766
-  Banks:
-  - {fileID: -570230403866648006}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-6414772162641871808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +271,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Puzzles.bank
   Name: Puzzles
   StudioPath: bank:/Puzzles
-  lastModified: 638194827318840308
+  lastModified: 638193333690886054
   FileSizes:
   - Name: Desktop
     Value: 79040
@@ -327,33 +354,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-4584652908535220928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Planta Carnivora/Mordida Errar
-  m_EditorClassIdentifier: 
-  Path: event:/Planta Carnivora/Mordida Errar
-  Guid:
-    Data1: 1796342687
-    Data2: 1197359748
-    Data3: -1939411043
-    Data4: -1842965213
-  Banks:
-  - {fileID: -570230403866648006}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-4561916992268976363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,11 +369,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Sombra.bank
   Name: Sombra
   StudioPath: bank:/Sombra
-  lastModified: 638192205934703517
+  lastModified: 638197627304263102
   FileSizes:
   - Name: Desktop
-    Value: 133568
+    Value: 271008
   Exists: 1
+--- !u!114 &-4253928755015151235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tocha/Fogo Surgindo
+  m_EditorClassIdentifier: 
+  Path: event:/Tocha/Fogo Surgindo
+  Guid:
+    Data1: -86186204
+    Data2: 1244922041
+    Data3: -422522947
+    Data4: 1502443482
+  Banks:
+  - {fileID: 8600806448901766104}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4148505859909150457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,7 +416,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Mosca.bank
   Name: Mosca
   StudioPath: bank:/Mosca
-  lastModified: 638194827318331665
+  lastModified: 638192370435427781
   FileSizes:
   - Name: Desktop
     Value: 1680768
@@ -409,11 +436,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Fazendeiro.bank
   Name: Fazendeiro
   StudioPath: bank:/Fazendeiro
-  lastModified: 638192205933553395
+  lastModified: 638191418823344766
   FileSizes:
   - Name: Desktop
     Value: 21568
   Exists: 1
+--- !u!114 &-3945499806015567851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Tent\xE1culo Ataque"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Tent\xE1culo Ataque"
+  Guid:
+    Data1: 1518555145
+    Data2: 1187182761
+    Data3: 2029290124
+    Data4: 1296844191
+  Banks:
+  - {fileID: -4561916992268976363}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3829444568725286067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,11 +483,65 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Caranguejo.bank
   Name: Caranguejo
   StudioPath: bank:/Caranguejo
-  lastModified: 638192205933513499
+  lastModified: 638191418821722392
   FileSizes:
   - Name: Desktop
     Value: 33440
   Exists: 1
+--- !u!114 &-3690736114436963955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/Tumulu do Sal"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/Tumulu do Sal"
+  Guid:
+    Data1: 777891
+    Data2: 1189178980
+    Data3: -703403869
+    Data4: 1790119742
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3435435377138727181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Tent\xE1culo Voltando"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Tent\xE1culo Voltando"
+  Guid:
+    Data1: 598035846
+    Data2: 1326532977
+    Data3: -2022200129
+    Data4: 2043237299
+  Banks:
+  - {fileID: -4561916992268976363}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2992810825293601594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,11 +557,38 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Guardi\xE3o.bank"
   Name: "Guardi\xE3o"
   StudioPath: "bank:/Guardi\xE3o"
-  lastModified: 638194827318211990
+  lastModified: 638192392788638180
   FileSizes:
   - Name: Desktop
     Value: 134048
   Exists: 1
+--- !u!114 &-2953803586345017615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o"
+  Guid:
+    Data1: -527839649
+    Data2: 1151023713
+    Data3: 1424619394
+    Data4: -527365827
+  Banks:
+  - {fileID: -4561916992268976363}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2917927132543349577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,11 +604,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638196667362332724
+  lastModified: 638197627195661945
   FileSizes:
   - Name: Desktop
-    Value: 4514
+    Value: 5144
   Exists: 1
+--- !u!114 &-2806206104134707749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Ataque Garra
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Ataque Garra
+  Guid:
+    Data1: -1018165390
+    Data2: 1195841987
+    Data3: 41193625
+    Data4: 1883415812
+  Banks:
+  - {fileID: -4561916992268976363}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2730868006265186371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,33 +690,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-2670756358133262479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Planta Carnivora/Mordida
-  m_EditorClassIdentifier: 
-  Path: event:/Planta Carnivora/Mordida
-  Guid:
-    Data1: -356129846
-    Data2: 1308167987
-    Data3: 604515730
-    Data4: -639718998
-  Banks:
-  - {fileID: -570230403866648006}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 530
 --- !u!114 &-2380389172643577725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,7 +705,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Bruxa.bank
   Name: Bruxa
   StudioPath: bank:/Bruxa
-  lastModified: 638192205933503526
+  lastModified: 638191648059476403
   FileSizes:
   - Name: Desktop
     Value: 253056
@@ -671,7 +806,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Praia.bank
   Name: Praia
   StudioPath: bank:/Praia
-  lastModified: 638192205934613222
+  lastModified: 638191418828254872
   FileSizes:
   - Name: Desktop
     Value: 1087936
@@ -728,7 +863,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 4.6
   Length: 2500
 --- !u!114 &-1213924086493418901
 MonoBehaviour:
@@ -784,6 +919,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-602543070047263356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Planta Carnivora/Mordida Errar
+  m_EditorClassIdentifier: 
+  Path: event:/Planta Carnivora/Mordida Errar
+  Guid:
+    Data1: 1796342687
+    Data2: 1197359748
+    Data3: -1939411043
+    Data4: -1842965213
+  Banks:
+  - {fileID: -570230403866648006}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-570230403866648006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,11 +961,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Planta Carnviora.bank
   Name: Planta Carnviora
   StudioPath: bank:/Planta Carnviora
-  lastModified: 638196667363958379
+  lastModified: 638197667284120537
   FileSizes:
   - Name: Desktop
-    Value: 67424
+    Value: 68704
   Exists: 1
+--- !u!114 &-67572687010361725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Planta Carnivora/Feedback de Morte
+  m_EditorClassIdentifier: 
+  Path: event:/Planta Carnivora/Feedback de Morte
+  Guid:
+    Data1: -662816525
+    Data2: 1092967853
+    Data3: -1495951226
+    Data4: -1656671984
+  Banks:
+  - {fileID: -570230403866648006}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,6 +1028,7 @@ MonoBehaviour:
   - {fileID: 4525381008215364756}
   - {fileID: 8692978956279676867}
   - {fileID: -1550074210648515092}
+  - {fileID: 8600806448901766104}
   EditorEvents:
   - {fileID: 8492815524371835197}
   - {fileID: 5625031274756143587}
@@ -862,10 +1052,6 @@ MonoBehaviour:
   - {fileID: -8435151688686816498}
   - {fileID: 3980988550638212277}
   - {fileID: 1145903410244919216}
-  - {fileID: -4584652908535220928}
-  - {fileID: -2670756358133262479}
-  - {fileID: -6710231996754913491}
-  - {fileID: 2816306505997298675}
   - {fileID: -7475439345053952793}
   - {fileID: 1398853299933091246}
   - {fileID: 5553807009752350157}
@@ -896,12 +1082,29 @@ MonoBehaviour:
   - {fileID: 9040049563782096613}
   - {fileID: -2008445175486963992}
   - {fileID: 9095090529591764409}
+  - {fileID: 4887503538777529639}
+  - {fileID: -3690736114436963955}
+  - {fileID: -3945499806015567851}
+  - {fileID: 3800278064361142823}
+  - {fileID: 4522217650067808959}
+  - {fileID: 9102824119454050688}
+  - {fileID: -2953803586345017615}
+  - {fileID: -2806206104134707749}
+  - {fileID: -3435435377138727181}
+  - {fileID: -8866021259192615941}
+  - {fileID: 8878980753941849168}
+  - {fileID: 4724355964429481183}
+  - {fileID: -4253928755015151235}
+  - {fileID: -602543070047263356}
+  - {fileID: 7443312199140397018}
+  - {fileID: -7560317438637269909}
+  - {fileID: -67572687010361725}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7437959542684782280}
   StringsBanks:
   - {fileID: -2917927132543349577}
-  cacheTime: 638196667364048138
+  cacheTime: 638197677951446528
   cacheVersion: 131603
 --- !u!114 &40617146194528622
 MonoBehaviour:
@@ -918,7 +1121,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Zumbi Tartaruga.bank
   Name: Zumbi Tartaruga
   StudioPath: bank:/Zumbi Tartaruga
-  lastModified: 638196667364048138
+  lastModified: 638194348212831122
   FileSizes:
   - Name: Desktop
     Value: 293504
@@ -1155,7 +1358,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Saco de Pancada.bank
   Name: Saco de Pancada
   StudioPath: bank:/Saco de Pancada
-  lastModified: 638192205934653114
+  lastModified: 638191418829990889
   FileSizes:
   - Name: Desktop
     Value: 16416
@@ -1310,10 +1513,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638196667363988303
+  lastModified: 638197627300962427
   FileSizes:
   - Name: Desktop
-    Value: 91424
+    Value: 90976
   Exists: 1
 --- !u!114 &2434989575679113296
 MonoBehaviour:
@@ -1396,33 +1599,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &2816306505997298675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Planta Carnivora/Feedback de Morte
-  m_EditorClassIdentifier: 
-  Path: event:/Planta Carnivora/Feedback de Morte
-  Guid:
-    Data1: -662816525
-    Data2: 1092967853
-    Data3: -1495951226
-    Data4: -1656671984
-  Banks:
-  - {fileID: -570230403866648006}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &3002590132823051922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,7 +1668,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Ferreiro.bank
   Name: Ferreiro
   StudioPath: bank:/Ferreiro
-  lastModified: 638196667362302805
+  lastModified: 638197677951446528
   FileSizes:
   - Name: Desktop
     Value: 41408
@@ -1517,6 +1693,33 @@ MonoBehaviour:
     Data4: -1252521537
   Banks:
   - {fileID: -3829444568725286067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3800278064361142823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Ataque Explosivo
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Ataque Explosivo
+  Guid:
+    Data1: -908479726
+    Data2: 1153351320
+    Data3: -94191974
+    Data4: -303911811
+  Banks:
+  - {fileID: -4561916992268976363}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1593,7 +1796,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Recurso Coletado.bank
   Name: Recurso Coletado
   StudioPath: bank:/Recurso Coletado
-  lastModified: 638192205934643140
+  lastModified: 638191418829168273
   FileSizes:
   - Name: Desktop
     Value: 21760
@@ -1625,6 +1828,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4522217650067808959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Ataque Garras Multiplas
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Ataque Garras Multiplas
+  Guid:
+    Data1: -542367167
+    Data2: 1219397287
+    Data3: 206542982
+    Data4: -993725423
+  Banks:
+  - {fileID: -4561916992268976363}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4525381008215364756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1640,11 +1870,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Interface.bank
   Name: Interface
   StudioPath: bank:/Interface
-  lastModified: 638192205933613482
+  lastModified: 638191418824932812
   FileSizes:
   - Name: Desktop
     Value: 23712
   Exists: 1
+--- !u!114 &4724355964429481183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tocha/Fogo
+  m_EditorClassIdentifier: 
+  Path: event:/Tocha/Fogo
+  Guid:
+    Data1: -1619942129
+    Data2: 1309862977
+    Data3: -1162587776
+    Data4: -2143645093
+  Banks:
+  - {fileID: 8600806448901766104}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4873855773925519550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,6 +1929,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4887503538777529639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/Sombra Theme"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/Sombra Theme"
+  Guid:
+    Data1: 546430545
+    Data2: 1158019176
+    Data3: 1340751748
+    Data4: 1106842950
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 118457
 --- !u!114 &5481367193485044842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1687,7 +1971,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Compra.bank
   Name: Compra
   StudioPath: bank:/Compra
-  lastModified: 638192205933523481
+  lastModified: 638191418822155659
   FileSizes:
   - Name: Desktop
     Value: 8352
@@ -1854,6 +2138,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7443312199140397018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Planta Carnivora/Mordida
+  m_EditorClassIdentifier: 
+  Path: event:/Planta Carnivora/Mordida
+  Guid:
+    Data1: -356129846
+    Data2: 1308167987
+    Data3: 604515730
+    Data4: -639718998
+  Banks:
+  - {fileID: -570230403866648006}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 530
 --- !u!114 &7666938935307396456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1869,7 +2180,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Estalactite.bank
   Name: Estalactite
   StudioPath: bank:/Estalactite
-  lastModified: 638192205933543422
+  lastModified: 638191418822681555
   FileSizes:
   - Name: Desktop
     Value: 12096
@@ -1955,6 +2266,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8600806448901766104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Tocha.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Tocha.bank
+  Name: Tocha
+  StudioPath: bank:/Tocha
+  lastModified: 638197627325393202
+  FileSizes:
+  - Name: Desktop
+    Value: 683520
+  Exists: 1
 --- !u!114 &8692978956279676867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1970,11 +2301,38 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/M\xFAsicas.bank"
   Name: "M\xFAsicas"
   StudioPath: "bank:/M\xFAsicas"
-  lastModified: 638196667363868613
+  lastModified: 638197627257217022
   FileSizes:
   - Name: Desktop
-    Value: 7280896
+    Value: 10456384
   Exists: 1
+--- !u!114 &8878980753941849168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Feedback de Dano
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Feedback de Dano
+  Guid:
+    Data1: -1690933258
+    Data2: 1155568464
+    Data3: -2055299938
+    Data4: -967105088
+  Banks:
+  - {fileID: -4561916992268976363}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8919453739277462266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1990,7 +2348,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Ouri\xE7o.bank"
   Name: "Ouri\xE7o"
   StudioPath: "bank:/Ouri\xE7o"
-  lastModified: 638192205934313404
+  lastModified: 638191418826930670
   FileSizes:
   - Name: Desktop
     Value: 15840
@@ -2015,7 +2373,7 @@ MonoBehaviour:
     Data4: -257525868
   Banks:
   - {fileID: 8692978956279676867}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -2069,6 +2427,33 @@ MonoBehaviour:
     Data4: 1128232768
   Banks:
   - {fileID: 2338504635635784465}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9102824119454050688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Tent\xE1culo Saindo"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Tent\xE1culo Saindo"
+  Guid:
+    Data1: 1625932892
+    Data2: 1180075509
+    Data3: 978887597
+    Data4: 1942690830
+  Banks:
+  - {fileID: -4561916992268976363}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

@@ -80,6 +80,7 @@ public class Health : MonoBehaviour
                 HealEffect.Stop();
                 gameObject.GetComponent<PlayerMovement>().enabled = false;
                 DoOnce = false;
+                AmountOfSeaweed.text = HealSeaweed.ToString();
             }
         }
         if(Input.GetButtonUp("Curar"))
