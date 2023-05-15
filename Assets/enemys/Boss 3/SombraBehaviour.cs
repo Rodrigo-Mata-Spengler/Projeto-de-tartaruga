@@ -75,7 +75,26 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private bool ataque3Voltando = false;//defini se o ataque ja acabou
 
     [Header("Ataque 4")]
-    private bool temp3;
+    //pinça 7
+    [SerializeField] private GameObject pinca7;//O game object da pinça
+    [SerializeField] private Vector3 posInicialPinca7;//posição inicial do ataque
+    [SerializeField] private Vector3 posfinalPinca7;//posição final do ataque
+    //Onda 1
+    [SerializeField] private GameObject Onda1;//O game object da pinça
+    [SerializeField] private Vector3 posInicialOnda1;//posição inicial do ataque
+    [SerializeField] private Vector3 posIntermediariaOnda1;//posição inicial do ataque
+    [SerializeField] private Vector3 posfinalOnda1;//posição final do ataque
+    //Onda 2
+    [SerializeField] private GameObject Onda2;//O game object da pinça
+    [SerializeField] private Vector3 posInicialOnda2;//posição inicial do ataque
+    [SerializeField] private Vector3 posIntermediariaOnda2;//posição inicial do ataque
+    [SerializeField] private Vector3 posfinalOnda2;//posição final do ataque
+    //geral ataque 3
+    [SerializeField] private float velocidadeAtaque4 = 0;
+    [SerializeField] private float velocidadeOndaAtaque4 = 0;
+    private bool ondaAtaque = false;
+    [SerializeField] private float tempoRetornoAtaque4 = 0;//tempo para a pinça começar a voltar
+    private float tempoParaRetornoAtaque4 = 0;
 
     [Header("Ataque 5")]
     private bool temp4;
@@ -91,6 +110,7 @@ public class SombraBehaviour : MonoBehaviour
         SetUpAtaque1();
         SetUpAtaque2();
         SetUpAtaque3();
+        SetUpAtaque4();
     }
     private void Update()
     {
@@ -109,6 +129,7 @@ public class SombraBehaviour : MonoBehaviour
                 Ataque3();
                 break;
             case SombraStatus.ataque4:
+                Ataque4();
                 break;
             case SombraStatus.ataque5:
                 break;
@@ -119,6 +140,7 @@ public class SombraBehaviour : MonoBehaviour
                 SetUpAtaque1();
                 SetUpAtaque2();
                 SetUpAtaque3();
+                SetUpAtaque4();
                 break;
         }
     }
@@ -367,6 +389,39 @@ public class SombraBehaviour : MonoBehaviour
     }
 
     //Metodos relacionados ao Ataque 4
+    private void SetUpAtaque4()
+    {
+        ondaAtaque = false;
+
+        pinca7.transform.position = posInicialPinca7;
+        Onda1.transform.position = posInicialOnda1;
+        Onda2.transform.position = posInicialOnda2;
+    }
+
+    private void Ataque4()
+    {
+        if (ondaAtaque == false)
+        {
+            pinca7.transform.position = Vector3.MoveTowards(pinca7.transform.position, posfinalPinca7, velocidadeAtaque4 * Time.deltaTime);
+            Onda1.transform.position = Vector3.MoveTowards(Onda1.transform.position, posIntermediariaOnda1, velocidadeAtaque4 * Time.deltaTime);
+            Onda2.transform.position = Vector3.MoveTowards(Onda2.transform.position, posIntermediariaOnda2, velocidadeAtaque4 * Time.deltaTime);
+            if (Onda1.transform.position == posIntermediariaOnda1)
+            {
+                tempoParaRetornoAtaque4 = tempoRetornoAtaque4 + Time.time;
+                ondaAtaque = true;
+            }
+        }
+        else
+        {
+            Onda1.transform.position = Vector3.MoveTowards(Onda1.transform.position, posfinalOnda1, velocidadeOndaAtaque4 * Time.deltaTime);
+            Onda2.transform.position = Vector3.MoveTowards(Onda2.transform.position, posfinalOnda2, velocidadeOndaAtaque4 * Time.deltaTime);
+            if (tempoParaRetornoAtaque4 <= Time.time)
+            {
+                pinca7.transform.position = Vector3.MoveTowards(pinca7.transform.position, posInicialPinca7, velocidadeAtaque4 * Time.deltaTime);
+            }
+        }
+        
+    }
 
     //Metodos relacionados ao Ataque 5
 
