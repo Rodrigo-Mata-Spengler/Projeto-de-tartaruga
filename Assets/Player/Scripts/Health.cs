@@ -6,6 +6,7 @@ using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine.VFX;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -129,7 +130,17 @@ public class Health : MonoBehaviour
         if(currentLife <= 0f)
         {
             //Rodrigo Time !!!!!!
-            pause.PlayerMorreu();
+            PlayerData data = SaveSystem.LoadPlayer();
+            if (data != null)
+            {
+
+                Time.timeScale = 1;
+                SceneManager.LoadScene(data.scenaAtual);
+            }
+            else
+            {
+                SceneManager.LoadScene("Cena 1");
+            }
         }
     }
 
