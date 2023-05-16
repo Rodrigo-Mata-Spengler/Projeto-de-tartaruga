@@ -27,6 +27,7 @@ public class SaveStatue : MonoBehaviour
             Vaso1.SetBool("Salvo", true);
             Vaso2.SetBool("Salvo", true);
             playerGO.GetComponent<Animator>().SetBool("Rezar", true);
+            playerGO.GetComponent<Health>().RezarEffect.Play();
             //rend.color = Color.green;
         }
     }
@@ -48,6 +49,7 @@ public class SaveStatue : MonoBehaviour
         {
             interacao = false;
             playerGO = null;
+            playerGO.GetComponent<Health>().RezarEffect.Stop();
             //rend.color = Color.white;
         }
     }

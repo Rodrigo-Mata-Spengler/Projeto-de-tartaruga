@@ -5,6 +5,7 @@ using FMOD.Studio;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
 
     [SerializeField] public bool HaveMagicTrident = false;
     [Space]

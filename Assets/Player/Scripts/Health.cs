@@ -40,6 +40,12 @@ public class Health : MonoBehaviour
     [SerializeField] private MenuPause pause;
 
     public VisualEffect HealEffect;
+    public VisualEffect RezarEffect;
+
+
+    private Animator PlayerAnimator;
+
+    private PlayerMovement PlayerMovment;
 
     private bool DoOnce = false;
     private void Start()
@@ -57,6 +63,10 @@ public class Health : MonoBehaviour
         AmountOfSeaweed.text = HealSeaweed.ToString();
 
         HealthSlider.value = currentLife * 8;
+
+        PlayerAnimator = gameObject.GetComponent<Animator>();
+
+       //PlayerMovment = gameObject.GetComponent<PlayerMovement>();
     }
 
     private void Update()
@@ -64,6 +74,8 @@ public class Health : MonoBehaviour
 
         if(Input.GetAxis("Curar")> 0 && HealSeaweed <= MaxHealSeaweed)
         {
+            
+            PlayerAnimator.SetBool("Curar", true);
             if (DoOnce == false)
             {
                 gameObject.GetComponent<PlayerMovement>().enabled= false;
@@ -81,6 +93,7 @@ public class Health : MonoBehaviour
                 gameObject.GetComponent<PlayerMovement>().enabled = false;
                 DoOnce = false;
                 AmountOfSeaweed.text = HealSeaweed.ToString();
+                
             }
         }
         if(Input.GetButtonUp("Curar"))
@@ -88,6 +101,7 @@ public class Health : MonoBehaviour
             gameObject.GetComponent<PlayerMovement>().enabled = true;
             CurrenTime = 0;
             HealEffect.Stop();
+            PlayerAnimator.SetBool("Curar", false);
         }
         /*
         if(haveArmor)
