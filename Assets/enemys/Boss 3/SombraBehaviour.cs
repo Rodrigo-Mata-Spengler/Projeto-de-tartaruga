@@ -11,7 +11,12 @@ public class SombraBehaviour : MonoBehaviour
 
     [Header("Status")]
     [SerializeField] private SombraStatus status = SombraStatus.idle; //mostra o status da sombra atual
+
+    [Header("Sombra Brain")]
     [SerializeField] private bool livreArbitrio = true;//defini se a sombra pode ou não fazer suas próprias desisões 
+    private int ataque = 0;
+    [SerializeField] private int quantidadeAtaques = 0;
+    private int ataquesAtual = 0;
 
     [Header("idle")]
     [SerializeField] private float tempoIdle = 0;//tempo de duração do idle
@@ -33,8 +38,8 @@ public class SombraBehaviour : MonoBehaviour
     private float tempoProximoOffset = 0;
     //geral ataque 1
     [SerializeField] private float velocidadeAtaque1 = 0;//velocidade do ataque 
-    [SerializeField] private float quantidadeAtaque = 0;//qunatos ataque devem ser
-    private float ataqueAtual = 0;
+    [SerializeField] private float quantidadeAtaque1 = 0;//qunatos ataque devem ser
+    private float ataque1Atual = 0;
 
     [Header("Ataque 2")]
     //pinça 3
@@ -158,6 +163,7 @@ public class SombraBehaviour : MonoBehaviour
         SetUpAtaque5();
         ShutDownAtaque5();
         SetUpAtaque6();
+        ataque1Atual = 0;
     }
     private void Update()
     {
@@ -198,9 +204,56 @@ public class SombraBehaviour : MonoBehaviour
 
     private void SombraBrain()
     {
+
         if (livreArbitrio)
         {
-
+            if (ataquesAtual > quantidadeAtaques)
+            {
+                ataque = 6;
+                ataquesAtual = 0;
+            }
+            else
+            {
+                ataque = Random.Range(0, 6);
+                ataquesAtual++;
+            }
+            
+            switch (ataque)
+            {
+                case 0:
+                    SetUpIdle();
+                    status = SombraStatus.idle;
+                    break;
+                case 1:
+                    SetUpAtaque1();
+                    status = SombraStatus.ataque1;
+                    break;
+                case 2:
+                    SetUpAtaque2();
+                    status = SombraStatus.ataque2;
+                    break;
+                case 3:
+                    SetUpAtaque3();
+                    status = SombraStatus.ataque3;
+                    break;
+                case 4:
+                    SetUpAtaque4();
+                    status = SombraStatus.ataque4;
+                    break;
+                case 5:
+                    SetUpAtaque5();
+                    status = SombraStatus.ataque5;
+                    break;
+                case 6:
+                    SetUpAtaque6();
+                    status = SombraStatus.ataque6;
+                    break;
+            }
+        }
+        else
+        {
+            SetUpIdle();
+            status = SombraStatus.idle;
         }
     }
 
@@ -221,7 +274,7 @@ public class SombraBehaviour : MonoBehaviour
     //Metodos relacionados ao Ataque 1
     private void SetUpAtaque1()
     {
-        ataqueAtual = 0;
+        ataque1Atual = 0;
 
         tempoProximoOffset = tempoOffSet + Time.time;
 
@@ -235,7 +288,7 @@ public class SombraBehaviour : MonoBehaviour
 
     private void Ataque1()
     {
-        if (ataqueAtual != quantidadeAtaque)
+        if (ataque1Atual != quantidadeAtaque1)
         {
             Pinca1Ataque();
 
@@ -247,6 +300,7 @@ public class SombraBehaviour : MonoBehaviour
         else
         {
             Pinca1AtaqueSobe();
+            SombraBrain();
         }
 
         
@@ -298,7 +352,7 @@ public class SombraBehaviour : MonoBehaviour
             {
                 descendoPinca2 = true;
 
-                ataqueAtual++;//conta qunatos ataque foram dados
+                ataque1Atual++;//conta qunatos ataque foram dados
             }
         }
     }
@@ -468,6 +522,11 @@ public class SombraBehaviour : MonoBehaviour
             if (tempoParaRetornoAtaque4 <= Time.time)
             {
                 pinca7.transform.position = Vector3.MoveTowards(pinca7.transform.position, posInicialPinca7, velocidadeAtaque4 * Time.deltaTime);
+                
+            }
+            if (Onda1.transform.position == posfinalOnda1)
+            {
+                SombraBrain();
             }
         }
         
@@ -534,6 +593,7 @@ public class SombraBehaviour : MonoBehaviour
             if (tentaculo1.transform.GetChild(0).transform.position == posInicialTentaculo1)
             {
                 ShutDownAtaque5();
+                SombraBrain();
             }
         }
 
@@ -582,6 +642,12 @@ public class SombraBehaviour : MonoBehaviour
         else
         {
             pinca8.transform.position = Vector3.MoveTowards(pinca8.transform.position, new Vector3(pinca8.transform.position.x, posInicialYPinca8, 0), velocidadeAtaque6 * Time.deltaTime);
+
+            if (pinca8.transform.position == new Vector3(pinca8.transform.position.x, posInicialYPinca8, 0))
+            {
+                SombraBrain();
+            }
+            
         }
 
         
