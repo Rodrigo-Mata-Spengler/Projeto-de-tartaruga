@@ -7,11 +7,6 @@ public class VidaBossSombra : MonoBehaviour
     [Header("Vida do Boss")]
     [SerializeField] public static float vidaAtual = 0;
 
-    private void Update()
-    {
-        Debug.Log(vidaAtual);
-    }
-
     public static void TomarDano(float Dano)
     {
         if (Dano-vidaAtual <= 0)

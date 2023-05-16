@@ -630,10 +630,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638198317937736064
+  lastModified: 638198663290397355
   FileSizes:
   - Name: Desktop
-    Value: 5250
+    Value: 5344
   Exists: 1
 --- !u!114 &-2806206104134707749
 MonoBehaviour:
@@ -756,6 +756,33 @@ MonoBehaviour:
     Data4: 755051551
   Banks:
   - {fileID: 4525381008215364756}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2285755958074769767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Protagonista/Cura Final
+  m_EditorClassIdentifier: 
+  Path: event:/Protagonista/Cura Final
+  Guid:
+    Data1: -1392817633
+    Data2: 1160658669
+    Data3: -1849152072
+    Data4: 2051105903
+  Banks:
+  - {fileID: 2338504635635784465}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1126,12 +1153,14 @@ MonoBehaviour:
   - {fileID: -7560317438637269909}
   - {fileID: -67572687010361725}
   - {fileID: 4252962312809153031}
+  - {fileID: 3480800484321599753}
+  - {fileID: -2285755958074769767}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7437959542684782280}
   StringsBanks:
   - {fileID: -2917927132543349577}
-  cacheTime: 638198317938658668
+  cacheTime: 638198663290427277
   cacheVersion: 131603
 --- !u!114 &40617146194528622
 MonoBehaviour:
@@ -1540,10 +1569,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638197773145211960
+  lastModified: 638198663290427277
   FileSizes:
   - Name: Desktop
-    Value: 90976
+    Value: 136224
   Exists: 1
 --- !u!114 &2434989575679113296
 MonoBehaviour:
@@ -1727,6 +1756,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3480800484321599753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Protagonista/Cura
+  m_EditorClassIdentifier: 
+  Path: event:/Protagonista/Cura
+  Guid:
+    Data1: 128010001
+    Data2: 1163754142
+    Data3: 2035382967
+    Data4: -181813730
+  Banks:
+  - {fileID: 2338504635635784465}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2699
 --- !u!114 &3800278064361142823
 MonoBehaviour:
   m_ObjectHideFlags: 0
