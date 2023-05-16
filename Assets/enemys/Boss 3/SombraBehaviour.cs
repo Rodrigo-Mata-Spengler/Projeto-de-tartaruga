@@ -130,7 +130,7 @@ public class SombraBehaviour : MonoBehaviour
 
     [Header("Ataque 6")]
     //pinca8
-    [SerializeField] private GameObject pinca8;
+    [SerializeField] private GameObject pinca8;//O game object da pinça
     [SerializeField] private Vector3 posInicialPinca8;
     [SerializeField] private float posInicialYPinca8 = 0;
     [SerializeField] private float posIntermediarialYPinca8 = 0;
@@ -358,7 +358,7 @@ public class SombraBehaviour : MonoBehaviour
         }
         else if (ataque2Voltando)
         {
-            pinca3.transform.position = Vector3.MoveTowards(pinca3.transform.position, posInicialPinca3, velocidadeAtaque2 * Time.deltaTime);
+            SombraBrain();
         }
         else if (tempoEsperaProximoAtaque2 <= Time.time)
         {
@@ -385,7 +385,7 @@ public class SombraBehaviour : MonoBehaviour
         }
         else if (ataque2Voltando)
         {
-            pinca4.transform.position = Vector3.MoveTowards(pinca4.transform.position, posInicialPinca4, velocidadeAtaque2 * Time.deltaTime);
+            SombraBrain();
         }
         else if (tempoEsperaProximoAtaque2 <= Time.time)
         {
@@ -425,8 +425,7 @@ public class SombraBehaviour : MonoBehaviour
         }
         else if (ataque3Voltando)
         {
-            pinca5.transform.position = Vector3.MoveTowards(pinca5.transform.position, posInicialPinca5, velocidadePreparoAtaque3 * Time.deltaTime);
-            pinca6.transform.position = Vector3.MoveTowards(pinca6.transform.position, posInicialPinca6, velocidadePreparoAtaque3 * Time.deltaTime);
+            SombraBrain();
         }
         else if (tempoEsperaProximoAtaque3 <= Time.time)
         {
