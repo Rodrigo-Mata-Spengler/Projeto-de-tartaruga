@@ -6,6 +6,9 @@ enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, 
 enum DirecaoAtaque { direita, esquerda, none};
 public class SombraBehaviour : MonoBehaviour
 {
+    [Header("Referencia do Player")]
+    [SerializeField] private GameObject player;
+
     [Header("Status")]
     [SerializeField] private SombraStatus status = SombraStatus.idle; //mostra o status da sombra atual
     [SerializeField] private bool livreArbitrio = true;//defini se a sombra pode ou não fazer suas próprias desisões 
@@ -126,7 +129,22 @@ public class SombraBehaviour : MonoBehaviour
     private bool ctrlAtaque5 = false;
 
     [Header("Ataque 6")]
-    private bool temp5;
+    //pinca8
+    [SerializeField] private GameObject pinca8;
+    [SerializeField] private Vector3 posInicialPinca8;
+    [SerializeField] private float posInicialYPinca8 = 0;
+    [SerializeField] private float posIntermediarialYPinca8 = 0;
+    [SerializeField] private float posFinalYPinca8 = 0;
+    //geral ataque 8
+    [SerializeField] private float velocidadeAtaque6 = 0;
+    [SerializeField] private float velocidadePrepararAtaque6 = 0;
+    [SerializeField] private float tempoMiraAtaque6 = 0;
+    private float tempoProximaMiraAtaque6 = 0;
+    [SerializeField] private float tempoTravadoAtaque6 = 0;
+    private float tempoProximoTravadoAtaque6 = 0;
+    private bool preparaAtaque6 = false;
+    private bool acaoAtaque6 = false;
+    private bool voltarAtaque6 = false;
 
 
 
@@ -139,6 +157,7 @@ public class SombraBehaviour : MonoBehaviour
         SetUpAtaque4();
         SetUpAtaque5();
         ShutDownAtaque5();
+        SetUpAtaque6();
     }
     private void Update()
     {
@@ -163,6 +182,7 @@ public class SombraBehaviour : MonoBehaviour
                 Ataque5();
                 break;
             case SombraStatus.ataque6:
+                Ataque6();
                 break;
             case SombraStatus.teste:
                 SetUpIdle();
@@ -171,6 +191,7 @@ public class SombraBehaviour : MonoBehaviour
                 SetUpAtaque3();
                 SetUpAtaque4();
                 SetUpAtaque5();
+                SetUpAtaque6();
                 break;
         }
     }
@@ -520,5 +541,51 @@ public class SombraBehaviour : MonoBehaviour
     }
 
     //Metodos relacionados ao Ataque 6
+    private void SetUpAtaque6()
+    {
+        preparaAtaque6 = false;
+        acaoAtaque6 = false;
+        voltarAtaque6 = false;
 
+        pinca8.transform.position = posInicialPinca8;
+    }
+
+    private void Ataque6()
+    {
+        if (preparaAtaque6 == false)
+        {
+            pinca8.transform.position = Vector3.MoveTowards(pinca8.transform.position, new Vector3(0, posIntermediarialYPinca8, 0), velocidadePrepararAtaque6 * Time.deltaTime);
+            if (pinca8.transform.position.y != posIntermediarialYPinca8)
+            {
+                preparaAtaque6 = true;
+
+                tempoProximaMiraAtaque6 = tempoMiraAtaque6 + Time.time;
+            }
+        }
+        else if(acaoAtaque6 == false)
+        {
+            pinca8.transform.position = new Vector3(Mathf.Lerp(pinca8.transform.position.x, player.transform.position.x, velocidadePrepararAtaque6 * Time.deltaTime), posIntermediarialYPinca8, 0);
+
+            if (tempoProximaMiraAtaque6 <= Time.time)
+            {
+                acaoAtaque6 = true;
+                tempoProximoTravadoAtaque6 = tempoTravadoAtaque6 + Time.time;
+            }
+        }else if(voltarAtaque6 == false)
+        {
+            pinca8.transform.position = Vector3.MoveTowards(pinca8.transform.position, new Vector3(pinca8.transform.position.x, posFinalYPinca8, 0), velocidadeAtaque6 * Time.deltaTime);
+
+            if (tempoProximoTravadoAtaque6 <= Time.time)
+            {
+                voltarAtaque6 = true;
+            }
+        }
+        else
+        {
+            pinca8.transform.position = Vector3.MoveTowards(pinca8.transform.position, new Vector3(pinca8.transform.position.x, posInicialYPinca8, 0), velocidadeAtaque6 * Time.deltaTime);
+        }
+
+        
+
+    }
 }
