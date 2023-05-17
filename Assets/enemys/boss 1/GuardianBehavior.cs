@@ -18,6 +18,7 @@ public class GuardianBehavior : MonoBehaviour
 
     [Header("Status")]
     [SerializeField] private GuardianStatus status = GuardianStatus.Parado;
+    public static bool terminou = false;
 
     [Header("StartFight")]
     public bool StartFight = false;//if player has enter the battle field
@@ -153,6 +154,7 @@ public class GuardianBehavior : MonoBehaviour
         if(EnemyHealth.currentHealth <= 0)
         {
             status = GuardianStatus.Morto;
+            terminou = true;
         }
        
     }

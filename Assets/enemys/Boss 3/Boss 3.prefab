@@ -310,6 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268190549}
   - component: {fileID: 268190548}
+  - component: {fileID: 6988478676586198469}
   m_Layer: 0
   m_Name: Pata 3
   m_TagString: Untagged
@@ -325,7 +326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268190547}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -29.98, y: -2.49, z: 0}
+  m_LocalPosition: {x: -29.06, y: -2.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -351,6 +352,18 @@ CapsuleCollider2D:
   m_Offset: {x: 2.12, y: -4.82}
   m_Size: {x: 2.17, y: 11.9}
   m_Direction: 0
+--- !u!114 &6988478676586198469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268190547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &315726670
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 413369120}
   - component: {fileID: 413369119}
+  - component: {fileID: 1060126941802626499}
   m_Layer: 0
   m_Name: Pata 2
   m_TagString: Untagged
@@ -570,6 +584,18 @@ CapsuleCollider2D:
   m_Offset: {x: 2.12, y: -4.82}
   m_Size: {x: 2.17, y: 11.9}
   m_Direction: 0
+--- !u!114 &1060126941802626499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413369118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &417674810
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474642951}
   - component: {fileID: 474642952}
+  - component: {fileID: 5168740652458071232}
   m_Layer: 0
   m_Name: Pata 4
   m_TagString: Untagged
@@ -658,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474642950}
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: 35.3, y: -2.49, z: 0}
+  m_LocalPosition: {x: 32.58, y: -2.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -684,6 +711,18 @@ CapsuleCollider2D:
   m_Offset: {x: 2.12, y: -4.82}
   m_Size: {x: 2.17, y: 11.9}
   m_Direction: 0
+--- !u!114 &5168740652458071232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474642950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &484109643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813401577}
   - component: {fileID: 813401576}
+  - component: {fileID: 5596780008953162665}
   m_Layer: 0
   m_Name: Pata 8
   m_TagString: Untagged
@@ -1303,6 +1343,18 @@ CapsuleCollider2D:
   m_Offset: {x: 2.12, y: -4.82}
   m_Size: {x: 2.17, y: 11.9}
   m_Direction: 0
+--- !u!114 &5596780008953162665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813401575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &874045110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1043228775}
   - component: {fileID: 1043228774}
+  - component: {fileID: 354208701107493532}
   m_Layer: 0
   m_Name: Pata 1
   m_TagString: Untagged
@@ -1571,6 +1624,18 @@ CapsuleCollider2D:
   m_Offset: {x: 2.12, y: -4.82}
   m_Size: {x: 2.17, y: 11.9}
   m_Direction: 0
+--- !u!114 &354208701107493532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043228773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1112905044
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315852755}
   - component: {fileID: 1315852754}
+  - component: {fileID: 4074399819705839624}
   m_Layer: 0
   m_Name: Pata 6
   m_TagString: Untagged
@@ -2043,7 +2109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315852753}
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: 34.58, y: 3.08, z: 0}
+  m_LocalPosition: {x: 34.74, y: 3.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2069,6 +2135,18 @@ CapsuleCollider2D:
   m_Offset: {x: 2.12, y: -4.82}
   m_Size: {x: 2.17, y: 11.9}
   m_Direction: 0
+--- !u!114 &4074399819705839624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315852753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1321669778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1340865848}
   - component: {fileID: 1340865847}
+  - component: {fileID: 8975826701194766285}
   m_Layer: 0
   m_Name: Pata 7
   m_TagString: Untagged
@@ -2182,6 +2261,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3.02, y: 7.84}
   m_Direction: 0
+--- !u!114 &8975826701194766285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340865846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425691949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633832184}
   - component: {fileID: 1633832183}
+  - component: {fileID: 8273278710929227437}
   m_Layer: 0
   m_Name: Pata 5
   m_TagString: Untagged
@@ -2587,7 +2679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633832182}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -29.98, y: -2.49, z: 0}
+  m_LocalPosition: {x: -28.62, y: -2.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2613,6 +2705,18 @@ CapsuleCollider2D:
   m_Offset: {x: 2.12, y: -4.82}
   m_Size: {x: 2.17, y: 11.9}
   m_Direction: 0
+--- !u!114 &8273278710929227437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633832182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1683684113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,7 +2775,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1711015276}
   - component: {fileID: 1711015278}
-  - component: {fileID: 1711015277}
   m_Layer: 0
   m_Name: "Cabe\xE7a"
   m_TagString: Untagged
@@ -2746,22 +2849,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &1711015277
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711015275}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 5.570813, y: 4.1}
-  m_Direction: 1
 --- !u!1 &1787200999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,7 +3248,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   status: 0
+  vidaMaxima: 10
   livreArbitrio: 1
+  quantidadeAtaques: 3
   tempoIdle: 5
   pinca1: {fileID: 1043228773}
   posInicialPinca1: {x: -13.63, y: 20.21, z: 0}
@@ -3171,15 +3260,15 @@ MonoBehaviour:
   posFinalPinca2: {x: 8.66, y: 7.88, z: 0}
   tempoOffSet: 1
   velocidadeAtaque1: 20
-  quantidadeAtaque: 6
+  quantidadeAtaque1: 0
   pinca3: {fileID: 268190547}
   posInicialPinca3: {x: -28.91, y: -2.49, z: 0}
   posIntermediariaPinca3: {x: -22.89, y: -2.49, z: 0}
-  posfinalPinca3: {x: 7.39, y: -2.49, z: 0}
+  posfinalPinca3: {x: 27.57, y: -2.49, z: 0}
   pinca4: {fileID: 474642950}
   posInicialPinca4: {x: 32.4, y: -2.49, z: 0}
   posIntermediariaPinca4: {x: 25.06, y: -2.49, z: 0}
-  posfinalPinca4: {x: -4.5, y: -2.49, z: 0}
+  posfinalPinca4: {x: -24.91, y: -2.49, z: 0}
   tempoEsperaAtaque2: 1
   velocidadePreparoAtaque2: 5
   velocidadeAtaque2: 10
@@ -3189,11 +3278,11 @@ MonoBehaviour:
   pinca5: {fileID: 1633832182}
   posInicialPinca5: {x: -28.91, y: -2.49, z: 0}
   posIntermediariaPinca5: {x: -22.89, y: -2.49, z: 0}
-  posfinalPinca5: {x: 7.39, y: -2.49, z: 0}
+  posfinalPinca5: {x: 28.14, y: -2.49, z: 0}
   pinca6: {fileID: 1315852753}
   posInicialPinca6: {x: 32.4, y: 3.08, z: 0}
   posIntermediariaPinca6: {x: 25.06, y: 3.08, z: 0}
-  posfinalPinca6: {x: -4.5, y: 3.08, z: 0}
+  posfinalPinca6: {x: -25.48, y: 3.08, z: 0}
   tempoEsperaAtaque3: 1
   velocidadePreparoAtaque3: 5
   velocidadeAtaque3: 10

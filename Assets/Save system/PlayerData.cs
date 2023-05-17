@@ -30,6 +30,10 @@ public class PlayerData
     public bool mapa2;
     public bool mapa3;
 
+    //Informações de derrota de boss
+    public bool boss1Derrotado;
+    public bool boss2Derrotado;
+
     public PlayerData(GameObject player)
     {
         //captura as informações do player
@@ -59,6 +63,10 @@ public class PlayerData
         mapa1 = MapControler.mapa1;
         mapa2 = MapControler.mapa2;
         mapa3 = MapControler.mapa3;
+
+        //captura as informações dos boses
+        boss1Derrotado = HordaManager.terminou;
+        boss2Derrotado = GuardianBehavior.terminou;
     }
 
 }
