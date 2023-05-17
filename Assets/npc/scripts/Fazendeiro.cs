@@ -47,6 +47,7 @@ public class Fazendeiro : MonoBehaviour
     private MenuPause CanvasMenuPause;
 
     private GameObject InputFeedBack;
+    private GameObject HUD;
 
     public bool hadConversation = false;
     private void Start()
@@ -60,6 +61,7 @@ public class Fazendeiro : MonoBehaviour
         CanvasMenuPause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
 
         InputFeedBack = gameObject.transform.GetChild(0).gameObject;
+        HUD = GameObject.FindGameObjectWithTag("HUD");
     }
 
     private void Update()
@@ -72,6 +74,7 @@ public class Fazendeiro : MonoBehaviour
         if (Input.GetButtonDown("Interacao"))
         {
             inputPressed = true;
+            InputFeedBack.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false)
@@ -81,6 +84,9 @@ public class Fazendeiro : MonoBehaviour
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
             Player.GetComponent<Animator>().enabled = false;
+
+            //disable HUD
+            HUD.SetActive(false);
 
             StartTyping = false;
             StopAllCoroutines();
@@ -119,21 +125,22 @@ public class Fazendeiro : MonoBehaviour
                 EventSystem.current.SetSelectedGameObject(StoreFazendeiro.GetComponent<FazendeiroStore>().SelectedButton);
 
                 OnStore = true;
-
+                HUD.SetActive(true);
             }
 
         }
 
-        /*
-
         // if player press the esc disable the UI interaction obj
-        if (Input.GetKey(KeyCode.Escape) || textLocation == NpcWords.Length)
+        if (Input.GetKey(KeyCode.Escape))
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
+
+            //enable HUD
+            HUD.SetActive(true);
         }
-        */
+        
     }
     //method that run the courotine
     private void ContinueStory()
@@ -194,6 +201,9 @@ public class Fazendeiro : MonoBehaviour
             InputFeedBack.SetActive(false);
             OnStore = false;
             StoreFazendeiro.SetActive(false);
+
+            //enable HUD
+            HUD.SetActive(true);
         }
 
     }
@@ -207,7 +217,9 @@ public class Fazendeiro : MonoBehaviour
 
             Player.GetComponent<PlayerMovement>().enabled = true;
             inputPressed = false;
-            ///give more mana
+            StoreFazendeiro.SetActive(false);
+
+            PlayerHealth.HealthSlider.value = PlayerHealth.maxLife * 8;
         }
         else
         {
@@ -223,5 +235,8 @@ public class Fazendeiro : MonoBehaviour
         Player.GetComponent<Animator>().enabled = true;
         StoreFazendeiro.SetActive(false);
         OnStore = false;
+
+        //enable HUD
+        HUD.SetActive(true);
     }
 }

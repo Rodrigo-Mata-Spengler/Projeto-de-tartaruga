@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     public int maxLife;
     public int currentLife;
     //[SerializeField] private GameObject lifeImages;
-    [SerializeField] private Slider HealthSlider;
+    [SerializeField] public Slider HealthSlider;
 
     public bool haveArmor = false;
     private CinemachineImpulseSource impulseSource;
@@ -158,7 +158,8 @@ public class Health : MonoBehaviour
             //int i = Random.Range(0, MaxAmount);
             HealSeaweed += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
-            Destroy(collision.gameObject,0.3f);
+            Destroy(collision.gameObject);
+            AmountOfSeaweed.text = HealSeaweed.ToString();
         }
     }
 
@@ -185,7 +186,7 @@ public class Health : MonoBehaviour
         if(currentLife < maxLife)
         {
             currentLife += GiveHealthAmount;
-            HealthSlider.value += 8;
+            HealthSlider.value += 8 * currentLife;
         }
 
     }

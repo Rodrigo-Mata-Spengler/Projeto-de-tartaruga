@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LevelChanger : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class LevelChanger : MonoBehaviour
 
     [SerializeField] private GameObject player;
 
+    [SerializeField] private Animator fade;
+
+    [SerializeField] private float transisionTime = 1;
+
     private void Start()
     {
         if (conetion == Conections.activeConetion && Conections.wasConetion)
@@ -19,15 +24,26 @@ public class LevelChanger : MonoBehaviour
 
             Conections.wasConetion = false;
         }
+
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Conections.activeConetion = conetion;
-            SceneManager.LoadScene(targetSceneName);
-            Conections.wasConetion = true;
+            StartCoroutine(LoadLevel(targetSceneName));
         }
+    }
+
+    IEnumerator LoadLevel(string cena)
+    {
+        fade.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transisionTime);
+
+        Conections.activeConetion = conetion;
+        SceneManager.LoadScene(cena);
+        Conections.wasConetion = true;
     }
 }
