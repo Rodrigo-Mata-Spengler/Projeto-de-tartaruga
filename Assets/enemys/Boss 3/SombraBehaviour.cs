@@ -11,6 +11,7 @@ public class SombraBehaviour : MonoBehaviour
 
     [Header("Status")]
     [SerializeField] private SombraStatus status = SombraStatus.idle; //mostra o status da sombra atual
+    [SerializeField] private float vidaMaxima;
 
     [Header("Sombra Brain")]
     [SerializeField] private bool livreArbitrio = true;//defini se a sombra pode ou não fazer suas próprias desisões 
@@ -154,6 +155,10 @@ public class SombraBehaviour : MonoBehaviour
 
 
     //Metodos gerais da Sombra
+    private void Awake()
+    {
+        VidaBossSombra.vidaAtual = vidaMaxima;
+    }
     private void Start()
     {
         SetUpAtaque1();

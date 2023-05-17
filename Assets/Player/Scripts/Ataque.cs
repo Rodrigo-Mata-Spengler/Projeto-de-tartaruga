@@ -72,7 +72,7 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoZombi, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Guardiao") )
+        else if (collision.CompareTag("Guardiao") )
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
@@ -80,7 +80,7 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoGuardiao, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Mosca") )
+        else if (collision.CompareTag("Mosca") )
         {
             //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
@@ -88,25 +88,30 @@ public class Ataque : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoMosca, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Planta") )
+        else if (collision.CompareTag("Planta") )
         {
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoPlanta, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("Caranguejo"))
+        else if (collision.CompareTag("Caranguejo"))
         {
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoCaranguejo, collision.transform.position);
             Detected = true;
         }
-        if (collision.CompareTag("ourico"))
+        else if (collision.CompareTag("ourico"))
         {
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             //AudioManager.instance.PlayOneShot(FMODEvents.instance., collision.transform.position);
+            Detected = true;
+        }
+        else if (collision.CompareTag("Sombra"))
+        {
+            VidaBossSombra.TomarDano(DamageAmount);
             Detected = true;
         }
 
