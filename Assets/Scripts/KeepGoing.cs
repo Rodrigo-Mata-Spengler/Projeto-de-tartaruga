@@ -14,6 +14,7 @@ public class KeepGoing : MonoBehaviour
 
     private void Update()
     {
+        
         GameObject[] outros = GameObject.FindGameObjectsWithTag(tag);
 
         foreach (var outro in outros)
@@ -23,6 +24,7 @@ public class KeepGoing : MonoBehaviour
                 Destroy(outro);
             }
         }
+        
         DontDestroyOnLoad(this.gameObject);
     }
 }

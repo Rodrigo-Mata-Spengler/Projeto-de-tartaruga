@@ -49,7 +49,8 @@ public class SaveStatue : MonoBehaviour
         {
             interacao = false;
             playerGO = null;
-            playerGO.GetComponent<Health>().RezarEffect.Stop();
+            collision.GetComponent<Health>().RezarEffect.Stop();
+            collision.GetComponent<Animator>().SetBool("Rezar", false);
             //rend.color = Color.white;
         }
     }

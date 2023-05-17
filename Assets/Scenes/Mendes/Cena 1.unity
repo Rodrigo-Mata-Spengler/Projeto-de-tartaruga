@@ -72344,11 +72344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426315711129178638, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: musicVolume
-      value: 0
+      value: 0.175
       objectReference: {fileID: 0}
     - target: {fileID: 1426315711129178638, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: ambienceVolume
-      value: 0
+      value: 0.157
       objectReference: {fileID: 0}
     - target: {fileID: 1426315711129178639, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: m_RootOrder
@@ -72404,7 +72404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <ambience>k__BackingField.Path
-      value: "event:/M\xFAsicas/Batalha do Guardi\xE3o"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <Fall>k__BackingField.Guid.Data1
@@ -72448,19 +72448,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <ambience>k__BackingField.Guid.Data1
-      value: -1998857829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <ambience>k__BackingField.Guid.Data2
-      value: 1152744015
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <ambience>k__BackingField.Guid.Data3
-      value: -2099227254
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <ambience>k__BackingField.Guid.Data4
-      value: 1318857727
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <FeedBackDanoPlanta>k__BackingField.Path
@@ -72796,21 +72796,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 362307442}
     m_Modifications:
     - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
-      propertyPath: MaxEstamina
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: EstaminaSlider
       value: 
       objectReference: {fileID: 426329213}
-    - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
-      propertyPath: CurrentEstamina
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: pause
       value: 
@@ -72837,7 +72825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -368.14
+      value: -368.602
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -72897,7 +72885,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 593354619}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593354622}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4387b24403ea841a951c9a438b6e6e, type: 3}
   m_Name: 
@@ -75786,7 +75774,7 @@ PrefabInstance:
       objectReference: {fileID: 717278168}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.606018
+      value: 50.608
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
@@ -78580,26 +78568,6 @@ PrefabInstance:
     - target: {fileID: 1505023965602174972, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6421551468901109883, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6421551468901109883, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6585619674287902575, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6585619674287902575, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6585619674287902575, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7378516780322169434, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_AnchorMax.x

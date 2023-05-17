@@ -73,9 +73,8 @@ public class Health : MonoBehaviour
     private void Update()
     {
 
-        if(Input.GetAxis("Curar")> 0 && HealSeaweed <= MaxHealSeaweed)
+        if(Input.GetAxis("Curar")> 0 && HealSeaweed <= MaxHealSeaweed && currentLife < maxLife && HealSeaweed > 0)
         {
-            
             PlayerAnimator.SetBool("Curar", true);
             if (DoOnce == false)
             {
@@ -85,7 +84,7 @@ public class Health : MonoBehaviour
             }
             
             CurrenTime += Time.deltaTime;
-            if (currentLife < maxLife && HealSeaweed > 0 && CurrenTime >= TimeToHeal)
+            if (CurrenTime >= TimeToHeal)
             {
                 GiveHealth(1);
                 HealSeaweed -= 1;
@@ -186,7 +185,7 @@ public class Health : MonoBehaviour
         if(currentLife < maxLife)
         {
             currentLife += GiveHealthAmount;
-            HealthSlider.value += 8 * currentLife;
+            HealthSlider.value = 8 * currentLife;
         }
 
     }
