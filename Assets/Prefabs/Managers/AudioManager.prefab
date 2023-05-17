@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0.099
-  ambienceVolume: 0
+  musicVolume: 0.138
+  ambienceVolume: 0.115
   SFXVolume: 1
 --- !u!114 &4232391287602610950
 MonoBehaviour:
@@ -110,11 +110,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ambience>k__BackingField:
     Guid:
-      Data1: -1998857829
-      Data2: 1152744015
-      Data3: -2099227254
-      Data4: 1318857727
-    Path: "event:/M\xFAsicas/Batalha do Guardi\xE3o"
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Music>k__BackingField:
     Guid:
       Data1: 1658853866
@@ -171,6 +171,13 @@ MonoBehaviour:
       Data3: -1184461692
       Data4: -766340230
     Path: event:/Protagonista/Pulo
+  <Fall>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <ItemGrab>k__BackingField:
     Guid:
       Data1: -1818454000

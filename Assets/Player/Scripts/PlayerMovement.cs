@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEditor;
 using FMOD.Studio;
+using UnityEngine.VFX;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]private int JumpTimes = 0; 
     [SerializeField] private int JumpReleasedTimes = 0;
+
+    [SerializeField] private VisualEffect FallEffect;
 
     [Header("Ataque")]
  
@@ -80,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 wallJumpDirection; ///the direction that the player will go while on wall
     private int facingDirection;
 
-    private TrailRenderer trailRender;
 
     private bool canMove = true;
 
@@ -89,8 +91,10 @@ public class PlayerMovement : MonoBehaviour
     private EventInstance PlayerFootstep;
     private void Start()
     {
+        jumped = false;
+
         m_Rigidbody2D = CharacterController2D.m_Rigidbody2D;
-        trailRender = this.GetComponent<TrailRenderer>();
+   
 
         m_Animator = this.GetComponent<Animator>();
 
@@ -143,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
             if(jumped)
             {
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.Fall, transform.position);
+                FallEffect.Play();
             }
             jumped = false;
 
@@ -150,8 +155,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             OnAir = true;
-           
-
+            jumped = true;
         }
 
         if(OnAir &&  m_Rigidbody2D.velocity.y > 0)
@@ -259,19 +263,17 @@ public class PlayerMovement : MonoBehaviour
 
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 1;
-            trailRender.emitting = true;
 
             m_Animator.SetBool("Pulo", true);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
 
-            jumped= true;
+            
         }
         // if he released fall smoothly
         if (jumpInputReleased && m_Rigidbody2D.velocity.y > 0 && !IsTouchingWall)
         {
             JumpReleasedTimes += 1;
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_Rigidbody2D.velocity.x / _yVelJumpRealeasedMod);
-            trailRender.emitting = false;
             m_Animator.SetBool("Pulo", false);
         }
         //Do the second jump
@@ -279,17 +281,15 @@ public class PlayerMovement : MonoBehaviour
         {
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 2;
-            trailRender.emitting = true;
             m_Animator.SetBool("Pulo", true);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
 
-            jumped= true;
+            
         }
         if(IsTouchingWall && jumpInput && haveWallJump && !m_Grounded)
         {
             IsWallSliding = false;
             //m_Rigidbody2D.velocity = new Vector2(wallJumpForce * wallJumpDirection.x * -facingDirection, jumpVel);
-            trailRender.emitting = true;
             Vector2 force = new Vector2(wallJumpForce * wallJumpDirection.x *-facingDirection, wallJumpForce * wallJumpDirection.y);
             StartCoroutine(StopMove());
             //m_Rigidbody2D.velocity = Vector2.zero;
@@ -298,13 +298,13 @@ public class PlayerMovement : MonoBehaviour
             m_Animator.SetBool("Pulo", true);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
 
-            jumped = true;
+            
         }
 
     }
     public void Attack()
     {
-        m_Rigidbody2D.velocity = Vector2.one;
+        //m_Rigidbody2D.velocity = Vector2.zero;
         //enables the attack hitbox to right and left
         if (Input.GetAxis("Vertical") == 0)
         {

@@ -11,7 +11,7 @@ public class GuardianBehavior : MonoBehaviour
     public float tempoInicialDelay = 0f;
     public float tempoDecorridoInicial = 0f;
 
-
+    private Animator animator;
 
     private EnemyHealth EnemyHealth;
     private EnemyHitFeedback EnemyHitFeedback;
@@ -80,6 +80,9 @@ public class GuardianBehavior : MonoBehaviour
 
     private bool DoOnce = false;
 
+    private bool norteado1 = false;
+    private bool norteado2 = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,12 +92,12 @@ public class GuardianBehavior : MonoBehaviour
         EnemyHitFeedback = this.GetComponent<EnemyHitFeedback>();
 
         LifePorcentage = EnemyHealth.MaxHealth / 3;
+
+        animator = this.GetComponent<Animator>();
     }
 
     private void Awake()
     {
-        
-
     }
     // Update is called once per frame
     void Update()
@@ -110,6 +113,7 @@ public class GuardianBehavior : MonoBehaviour
             DoOnce= true;
         }
 
+      
         switch (status)
         {
             case GuardianStatus.Parado:
@@ -156,7 +160,7 @@ public class GuardianBehavior : MonoBehaviour
             status = GuardianStatus.Morto;
             terminou = true;
         }
-       
+
     }
     private void morto()
     {
@@ -177,8 +181,19 @@ public class GuardianBehavior : MonoBehaviour
     }
     private void PlayerDistance()
     {
+        if (EnemyHealth.currentHealth <= (EnemyHealth.MaxHealth - LifePorcentage) && norteado1 == false)
+        {
+            status = GuardianStatus.Norteado;
+            norteado1 = true;
+        }
+        if (EnemyHealth.currentHealth <= (EnemyHealth.MaxHealth - (LifePorcentage * 2)) && norteado2 == false)
+        {
+            status = GuardianStatus.Norteado;
+            norteado2 = true;
+        }
+
         ///Check if enemy is not half of life
-        if(EnemyHealth.currentHealth > LifePorcentage*2)
+        else if (EnemyHealth.currentHealth > EnemyHealth.MaxHealth/2)
         {
             int i = Random.Range(0, 101);
          
@@ -236,7 +251,7 @@ public class GuardianBehavior : MonoBehaviour
         tempoNorteado += Time.deltaTime;
         if (tempoNorteado < TempoEsperaNorteado)
         {
-
+          
         }
         if(tempoNorteado > TempoEsperaNorteado || EnemyHitFeedback.wasHit)
         {
@@ -304,8 +319,19 @@ public class GuardianBehavior : MonoBehaviour
         
         if (tempoTonto < TempoEsperaTonto)
         {
-            
+            /*
+            animator.SetBool("AtaqueAntecipa", false);
+            animator.SetBool("Ataque", false);
+            animator.SetBool("DashAntecipa", false);
+            animator.SetBool("Dash", false);
+            animator.SetBool("PuloAntecipa", false);
+            animator.SetBool("pulo", false);
+            animator.SetBool("queda", false);
+            animator.SetBool("dormindo", false);
+            animator.SetBool("acorda", false);
+            */
         }
+
         else if (dash && tempoTonto > TempoEsperaTonto)/// check if enemy have jumped to edge, if have do the dash
         {
             rb.velocity = Vector2.zero;
@@ -329,21 +355,23 @@ public class GuardianBehavior : MonoBehaviour
         TempoPular += Time.deltaTime;
         if (TempoPular < tempoParaPular)/// do nothing while time to jump haven't pass yet
         {
-
+           // animator.SetBool("AtaqueAntecipa", true);
         }
         if(jumped ==false && TempoPular > tempoParaPular)
         {
+            //animator.SetBool("AtaqueAntecipa", false);
             float distanceFromPlayer = PlayerObj.transform.position.x - transform.position.x;
             if(m_Grounded)
             {
                 rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
                 jumped = true;
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.PuloGuardiao, transform.position);
+                //animator.SetBool("pulo", true);
 
             }
         }
         /// if enemy hit's the ground go to wait time
-        if(jumped)
+        if(jumped && m_Grounded)
         {
             tempoTonto = 0;
             status = GuardianStatus.desativado;
