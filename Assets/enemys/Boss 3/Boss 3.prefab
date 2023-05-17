@@ -2109,7 +2109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315852753}
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: 34.58, y: 3.08, z: 0}
+  m_LocalPosition: {x: 34.74, y: 3.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2679,7 +2679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633832182}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -29.98, y: -2.49, z: 0}
+  m_LocalPosition: {x: -28.62, y: -2.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3250,7 +3250,7 @@ MonoBehaviour:
   status: 0
   vidaMaxima: 10
   livreArbitrio: 1
-  quantidadeAtaques: 0
+  quantidadeAtaques: 3
   tempoIdle: 5
   pinca1: {fileID: 1043228773}
   posInicialPinca1: {x: -13.63, y: 20.21, z: 0}
@@ -3278,11 +3278,11 @@ MonoBehaviour:
   pinca5: {fileID: 1633832182}
   posInicialPinca5: {x: -28.91, y: -2.49, z: 0}
   posIntermediariaPinca5: {x: -22.89, y: -2.49, z: 0}
-  posfinalPinca5: {x: 7.39, y: -2.49, z: 0}
+  posfinalPinca5: {x: 28.14, y: -2.49, z: 0}
   pinca6: {fileID: 1315852753}
   posInicialPinca6: {x: 32.4, y: 3.08, z: 0}
   posIntermediariaPinca6: {x: 25.06, y: 3.08, z: 0}
-  posfinalPinca6: {x: -4.5, y: 3.08, z: 0}
+  posfinalPinca6: {x: -25.48, y: 3.08, z: 0}
   tempoEsperaAtaque3: 1
   velocidadePreparoAtaque3: 5
   velocidadeAtaque3: 10
