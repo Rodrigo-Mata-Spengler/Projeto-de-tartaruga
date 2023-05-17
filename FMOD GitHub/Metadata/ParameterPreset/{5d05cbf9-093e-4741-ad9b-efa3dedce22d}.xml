@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{5d05cbf9-093e-4741-ad9b-efa3dedce22d}">
+		<property name="name">
+			<value>Vila-Bioma Verde</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc0edec2-7951-472d-ae96-cb75ce5ff856}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a6c9103b-ba0b-4050-a173-7f101ab33717}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a6c9103b-ba0b-4050-a173-7f101ab33717}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Vila</value>
+			<value>Bioma Verde</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

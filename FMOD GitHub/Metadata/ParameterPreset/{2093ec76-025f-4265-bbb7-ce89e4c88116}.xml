@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{2093ec76-025f-4265-bbb7-ce89e4c88116}">
+		<property name="name">
+			<value>BiomaVerde-Caverna</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc0edec2-7951-472d-ae96-cb75ce5ff856}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{03f9ceed-b9c7-497f-9e0b-f985fd79081a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{03f9ceed-b9c7-497f-9e0b-f985fd79081a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Bioma Verde</value>
+			<value>Caverna</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

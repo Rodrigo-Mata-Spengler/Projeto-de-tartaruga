@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{612daa49-d3d8-408e-8a43-19506fea7816}">
+		<property name="name">
+			<value>TumulodeSal-Caverna</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc0edec2-7951-472d-ae96-cb75ce5ff856}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{19cf9f88-7cd9-4245-8473-c89fb2d470ae}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{19cf9f88-7cd9-4245-8473-c89fb2d470ae}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Tumulo de Sal</value>
+			<value>Caverna</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
