@@ -42,6 +42,7 @@ public class NpcIteraction : MonoBehaviour
 
     private GameObject InputFeedBack;
 
+    private GameObject HUD;
     private void Start()
     {
         //get's the trigger component
@@ -50,6 +51,8 @@ public class NpcIteraction : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
 
         InputFeedBack = gameObject.transform.GetChild(0).gameObject;
+
+        HUD = GameObject.FindGameObjectWithTag("HUD");
     }
     
     private void Update()
@@ -63,6 +66,7 @@ public class NpcIteraction : MonoBehaviour
         if(Input.GetButtonDown("Interacao"))
         {
             inputPressed = true;
+            InputFeedBack.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false )
@@ -72,6 +76,9 @@ public class NpcIteraction : MonoBehaviour
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+
+            //disable HUD
+            HUD.SetActive(false);
 
             StartTyping = false;
             StopAllCoroutines();
@@ -97,6 +104,10 @@ public class NpcIteraction : MonoBehaviour
             //CanvasMenuPause.panelOpen = false;
             Player.GetComponent<PlayerMovement>().enabled = true;
             havingConversation = false;
+
+            //enable HUD
+            HUD.SetActive(true);
+
             StopAllCoroutines();
 
         }
@@ -167,6 +178,9 @@ public class NpcIteraction : MonoBehaviour
             //disable the interaction UI
             conversationObj.SetActive(false);
             InputFeedBack.SetActive(false);
+
+            //enable HUD
+            HUD.SetActive(true);
         }
 
     }

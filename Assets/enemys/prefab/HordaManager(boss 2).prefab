@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6072585401798477961}
   - component: {fileID: 6072585401798477958}
+  - component: {fileID: 5827396070644982549}
   m_Layer: 0
   m_Name: HordaManager(boss 2)
   m_TagString: Untagged
@@ -124,6 +125,19 @@ MonoBehaviour:
   CurrentRound: 0
   StartRoundDeleay: 0.3
   EnemySpawnDelay: 3
+--- !u!114 &5827396070644982549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6072585401798477959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caab2485ccadd6348bc9a6bd87c30725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipo: 1
 --- !u!1 &6072585402154866870
 GameObject:
   m_ObjectHideFlags: 0

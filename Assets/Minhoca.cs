@@ -41,6 +41,7 @@ public class Minhoca : MonoBehaviour
 
     private GameObject InputFeedBack;
 
+    private GameObject HUD;
     private void Start()
     {
         //get's the trigger component
@@ -49,6 +50,8 @@ public class Minhoca : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
 
         InputFeedBack = gameObject.transform.GetChild(0).gameObject;
+
+        HUD = GameObject.FindGameObjectWithTag("HUD");
     }
 
     private void Update()
@@ -62,6 +65,7 @@ public class Minhoca : MonoBehaviour
         if (Input.GetButtonDown("Interacao"))
         {
             inputPressed = true;
+            InputFeedBack.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false)
@@ -70,6 +74,9 @@ public class Minhoca : MonoBehaviour
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+
+            //disable HUD
+            HUD.SetActive(false);
 
             StartTyping = false;
             StopAllCoroutines();
@@ -90,6 +97,10 @@ public class Minhoca : MonoBehaviour
         //if paragraph were over than disable the UI interaction obj
         if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
         {
+
+            //enable HUD
+            HUD.SetActive(true);
+
             conversationObj.SetActive(false);
 
             //CanvasMenuPause.panelOpen = false;
@@ -166,6 +177,9 @@ public class Minhoca : MonoBehaviour
             //disable the interaction UI
             conversationObj.SetActive(false);
             InputFeedBack.SetActive(false);
+
+            //enable HUD
+            HUD.SetActive(true);
         }
 
     }
