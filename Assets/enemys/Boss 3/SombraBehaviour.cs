@@ -108,21 +108,25 @@ public class SombraBehaviour : MonoBehaviour
     [Header("Ataque 5")]
     //tentaculo 1
     [SerializeField] private GameObject tentaculo1;//o Game objevt do tentaculo
+    [SerializeField] private Animator animTentaculo1;//O animador do tentaculo
     [SerializeField] private Vector3 posTentaculo1;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo1;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo1;//poição final do dano do tentaculo
     //tentaculo 2
     [SerializeField] private GameObject tentaculo2;//o Game objevt do tentaculo
+    [SerializeField] private Animator animTentaculo2;//O animador do tentaculo
     [SerializeField] private Vector3 posTentaculo2;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo2;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo2;//poição final do dano do tentaculo
     //tentaculo 3
     [SerializeField] private GameObject tentaculo3;//o Game objevt do tentaculo
+    [SerializeField] private Animator animTentaculo3;//O animador do tentaculo
     [SerializeField] private Vector3 posTentaculo3;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo3;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo3;//poição final do dano do tentaculo
     //tentaculo 4
     [SerializeField] private GameObject tentaculo4;//o Game objevt do tentaculo
+    [SerializeField] private Animator animTentaculo4;//O animador do tentaculo
     [SerializeField] private Vector3 posTentaculo4;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo4;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo4;//poição final do dano do tentaculo
@@ -574,12 +578,16 @@ public class SombraBehaviour : MonoBehaviour
         if (tempoProximaEsperaAtaque5 <= Time.time && ctrlAtaque5 == false)
         {
             tentaculo1.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo1.transform.GetChild(0).transform.position, posFinalTentaculo1, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo1.SetTrigger("Ataque");
 
             tentaculo2.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo2.transform.GetChild(0).transform.position, posFinalTentaculo2, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo2.SetTrigger("Ataque");
 
             tentaculo3.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo3.transform.GetChild(0).transform.position, posFinalTentaculo3, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo3.SetTrigger("Ataque");
 
             tentaculo4.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo4.transform.GetChild(0).transform.position, posFinalTentaculo4, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo4.SetTrigger("Ataque");
 
             if (tentaculo1.transform.GetChild(0).transform.position == posFinalTentaculo1)
             {
@@ -589,12 +597,17 @@ public class SombraBehaviour : MonoBehaviour
         }else if (tempoProximaDuracaoAtaque5 <= Time.time && ctrlAtaque5)
         {
             tentaculo1.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo1.transform.GetChild(0).transform.position, posInicialTentaculo1, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo1.SetTrigger("Desce");
 
             tentaculo2.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo2.transform.GetChild(0).transform.position, posInicialTentaculo2, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo2.SetTrigger("Desce");
 
             tentaculo3.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo3.transform.GetChild(0).transform.position, posInicialTentaculo3, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo3.SetTrigger("Desce");
 
             tentaculo4.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo4.transform.GetChild(0).transform.position, posInicialTentaculo4, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo4.SetTrigger("Desce");
+
             if (tentaculo1.transform.GetChild(0).transform.position == posInicialTentaculo1)
             {
                 ShutDownAtaque5();
