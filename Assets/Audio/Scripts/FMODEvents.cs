@@ -22,6 +22,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference DamageFeedback { get; private set; }
     [field: SerializeField] public EventReference Dash { get; private set; }
     [field: SerializeField] public EventReference Jump { get; private set; }
+    [field: SerializeField] public EventReference Fall { get; private set; }
     [field: SerializeField] public EventReference ItemGrab { get; private set; }
     [field: SerializeField] public EventReference Compra { get; private set; }
 
