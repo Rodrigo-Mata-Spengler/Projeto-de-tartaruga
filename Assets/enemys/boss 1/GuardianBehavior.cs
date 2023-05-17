@@ -170,6 +170,7 @@ public class GuardianBehavior : MonoBehaviour
         */
         PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
         PlayerObj.GetComponent<Dash>().enabled = true;
+        PlayerObj.GetComponent<Estamina>().enabled = true;
 
     }
     private void PlayerDistance()

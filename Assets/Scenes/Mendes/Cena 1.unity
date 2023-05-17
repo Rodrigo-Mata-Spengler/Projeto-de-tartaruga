@@ -2431,6 +2431,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &426329213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1037111707, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+  m_PrefabInstance: {fileID: 1889457351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &432243938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72771,9 +72776,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 362307442}
     m_Modifications:
     - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: MaxEstamina
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: EstaminaSlider
       value: 
-      objectReference: {fileID: 1425896854}
+      objectReference: {fileID: 426329213}
+    - target: {fileID: 1622245416, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: CurrentEstamina
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: pause
       value: 
@@ -72860,7 +72877,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 593354619}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593354622}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4387b24403ea841a951c9a438b6e6e, type: 3}
   m_Name: 
@@ -75749,7 +75766,7 @@ PrefabInstance:
       objectReference: {fileID: 717278168}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.6091
+      value: 50.606964
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
@@ -76326,17 +76343,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1425896854 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1037111709, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
-  m_PrefabInstance: {fileID: 1889457351}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1440042126
 GameObject:
   m_ObjectHideFlags: 0
@@ -78370,6 +78376,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 593354625}
+    - target: {fileID: 1037111707, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037111709, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_Value
+      value: 9.74
+      objectReference: {fileID: 0}
     - target: {fileID: 1505023965602174944, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -78458,12 +78472,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4978230159946044364, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6421551468901109883, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6421551468901109883, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585619674287902575, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585619674287902575, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585619674287902575, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7378516780322169434, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}

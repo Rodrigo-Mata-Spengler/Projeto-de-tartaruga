@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 975788406}
   - component: {fileID: 975788408}
   - component: {fileID: 975788407}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: playerCloseTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.02
+  m_Radius: 3
 --- !u!114 &975788407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 1001878700}
   - component: {fileID: 1001878699}
   - component: {fileID: 1001878698}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AtaqueHitBoxEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802452943}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DropItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

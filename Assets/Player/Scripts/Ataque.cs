@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
+
 public class Ataque : MonoBehaviour
 {
     [HideInInspector]public bool HaveMagicTrident =false;
@@ -13,14 +14,14 @@ public class Ataque : MonoBehaviour
     public float DamageAmount;
 
 
-    [HideInInspector] public bool up, down, right;
+    [HideInInspector]public bool up, down, right;
     public float impulseForce;
     public float EnemyimpulseForce;
     [HideInInspector]public int HitIndex = 0;
 
     private Estamina playerEstamina;
 
-    private int AttackToGetHeal = 0;
+    
 
     public VisualEffect HitEffect;
     public VisualEffect HitEffectUp;
@@ -41,13 +42,13 @@ public class Ataque : MonoBehaviour
 
             if (up)
             {
-                rb.AddForce(transform.up * impulseForce);
+                rb.AddForce(transform.up * -impulseForce);
                 HitEffectUp.Play();
                 up = false;
             }
             if (down)
             {
-                rb.AddForce(transform.up * -impulseForce);
+                rb.AddForce(transform.up * impulseForce);
                 HitEffectDown.Play();
                 down = false;
             }
@@ -110,17 +111,18 @@ public class Ataque : MonoBehaviour
             Detected = true;
         }
 
-        if (collision.gameObject.layer == 8  && playerEstamina.enabled == true || playerEstamina.CurrentEstamina <= playerEstamina.MaxEstamina && playerEstamina.enabled == true)
+        if (collision.gameObject.layer == 8  && playerEstamina.enabled == true && playerEstamina.CurrentEstamina < playerEstamina.MaxEstamina)
         {
-            if(AttackToGetHeal ==3)
+            
+            if(playerEstamina.AttackToGetEstamina >= playerEstamina.amountOfHitToGiveEstamina)
             {
-                playerEstamina.CurrentEstamina += 1;
-                AttackToGetHeal = 0;
+                playerEstamina.GiveEstamina(1);
+                playerEstamina.AttackToGetEstamina = 0;
 
             }
             else
             {
-                AttackToGetHeal += 1;
+                playerEstamina.AttackToGetEstamina += 1;
             }
 
         }

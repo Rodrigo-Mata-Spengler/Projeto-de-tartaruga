@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 845562266373629971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -34.49, y: -1.38, z: -0.0851248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4902275320486569096}
@@ -214,7 +214,7 @@ VisualEffect:
       - m_Value: {x: 0.007761811, y: 0.49416864, z: 0.39843965, w: 1}
         m_Name: ondaColor
         m_Overridden: 1
-      - m_Value: {x: 3.7298915, y: 0.46848878, z: 0.46848878, w: 1}
+      - m_Value: {x: 0.30578914, y: 0.74536103, z: 0.6211342, w: 1}
         m_Name: Centro color
         m_Overridden: 1
       - m_Value: {x: 1, y: 0.81960785, z: 0.39215687, w: 0}
@@ -273,7 +273,7 @@ VFXRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1888708261
   m_SortingLayer: 5
-  m_SortingOrder: 10
+  m_SortingOrder: 0
 --- !u!1 &7796281910596011576
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 7796281910596011576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.009, z: 0}
-  m_LocalScale: {x: 0.03403924, y: 0.034380183, z: 0.7607099}
+  m_LocalScale: {x: 0.09, y: 0.09, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1058287111738462013}

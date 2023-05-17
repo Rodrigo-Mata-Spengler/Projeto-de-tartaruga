@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4448061109165272105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -34.49, y: -1.38, z: -0.0851248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4448061110406163381}
@@ -124,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 4448061110406163380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.004, y: -0.002, z: 0}
-  m_LocalScale: {x: 0.050917868, y: 0.051427856, z: 1.1379138}
+  m_LocalScale: {x: 0.09, y: 0.09, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4448061109165272108}
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 41110adfeb4b4b74481e00e3b5463a7c, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.8893428, a: 0.30588236}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -315,7 +315,7 @@ VisualEffect:
       - m_Value: {x: 0.007761811, y: 0.49416864, z: 0.39843965, w: 1}
         m_Name: ondaColor
         m_Overridden: 1
-      - m_Value: {x: 3.7298915, y: 0.46848878, z: 0.46848878, w: 1}
+      - m_Value: {x: 1.2563239, y: 1.5977163, z: 1.3314303, w: 1}
         m_Name: Centro color
         m_Overridden: 1
       - m_Value: {x: 1, y: 0.81960785, z: 0.39215687, w: 0}
@@ -374,4 +374,4 @@ VFXRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1888708261
   m_SortingLayer: 5
-  m_SortingOrder: 10
+  m_SortingOrder: 0

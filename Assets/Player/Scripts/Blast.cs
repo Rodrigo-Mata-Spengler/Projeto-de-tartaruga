@@ -20,7 +20,7 @@ public class Blast : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetButtonDown("Blast") && Time.time >= NextTimeToFire)
+        if(Input.GetButtonDown("Blast") && Time.time >= NextTimeToFire && estaminaScript.CurrentEstamina > 0)
         {
            
             NextTimeToFire = Time.time + 1f / FireRate;

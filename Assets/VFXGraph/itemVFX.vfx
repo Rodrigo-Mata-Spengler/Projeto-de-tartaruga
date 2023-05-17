@@ -42,7 +42,7 @@ MonoBehaviour:
       x: 1861
       y: -153
       width: 662
-      height: 2172
+      height: 2286
     contents:
     - model: {fileID: 8926484042661614762}
       id: 0
@@ -2819,7 +2819,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614788}
   - {fileID: 8926484042661614799}
   - {fileID: 8926484042661614802}
-  m_UIPosition: {x: 2074, y: 281}
+  m_UIPosition: {x: 2074, y: 204}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3699,7 +3699,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.57
+      m_SerializableObject: 1.15
     m_Space: 2147483647
   m_Property:
     name: A
@@ -3733,7 +3733,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.71
+      m_SerializableObject: 1.38
     m_Space: 2147483647
   m_Property:
     name: B
@@ -4518,7 +4518,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.AnimationCurve, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":3.1136209964752199,"outTangent":3.1136209964752199,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.496490478515625,"value":1.5458831787109376,"inTangent":3.1136209964752199,"outTangent":3.1136209964752199,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
+      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":3.0456626415252687,"outTangent":3.0456626415252687,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":1.362283706665039,"value":4.149056434631348,"inTangent":3.0456626415252687,"outTangent":3.0456626415252687,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
     m_Space: 2147483647
   m_Property:
     name: Size
@@ -4581,7 +4581,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":0.6901960968971252,"time":0.582360565662384},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.4313725531101227,"time":0.0},{"alpha":0.20000000298023225,"time":0.5617609024047852},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: Color
@@ -5345,7 +5345,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.82
+      m_SerializableObject: 0.97
     m_Space: 2147483647
   m_Property:
     name: Delay
