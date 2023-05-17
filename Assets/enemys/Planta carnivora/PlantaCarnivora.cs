@@ -5,6 +5,9 @@ using UnityEngine;
 enum StatusPlanta { dormindo, atacando, esperando};
 public class PlantaCarnivora : MonoBehaviour
 {
+    [Header("Animação")]
+    [SerializeField] private Animator anim;
+
     [Header("Status")]
     [SerializeField] private StatusPlanta status;
 
@@ -31,6 +34,7 @@ public class PlantaCarnivora : MonoBehaviour
         collider.radius = detectionRadius;
         status = StatusPlanta.dormindo;
         colliderAtaque.SetActive(false);
+
     }
 
     private void Update()
@@ -42,6 +46,7 @@ public class PlantaCarnivora : MonoBehaviour
                 break;
             case StatusPlanta.atacando:
                 Ataque();
+                PlayerRunAway();
                 break;
             case StatusPlanta.esperando:
                 PlantaPreparar();
@@ -63,6 +68,14 @@ public class PlantaCarnivora : MonoBehaviour
         if (player)
         {
             status = StatusPlanta.esperando;
+        }
+    }
+
+    private void PlayerRunAway()
+    {
+        if (Vector3.Distance(transform.position, player.transform.position) >= detectionRadius)
+        {
+            status = StatusPlanta.dormindo;
         }
     }
 
@@ -90,8 +103,9 @@ public class PlantaCarnivora : MonoBehaviour
         {
             proximoAtaque = Time.time + tempDuracaoAtaque;
             colliderAtaque.SetActive(true);
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.MordidaPlanta, transform.position);
+            //AudioManager.instance.PlayOneShot(FMODEvents.instance.MordidaPlanta, transform.position);
             atacando = true;
+            anim.SetTrigger("Ataque");
         }
         else if(proximoAtaque < Time.time && atacando ==true)
         {

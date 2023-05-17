@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1426315711129178639}
   - component: {fileID: 1426315711129178638}
+  - component: {fileID: 4232391287602610950}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,9 +47,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 1
-  ambienceVolume: 1
+  musicVolume: 0.099
+  ambienceVolume: 0
   SFXVolume: 1
+--- !u!114 &4232391287602610950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426315711129178632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a985ee282fc7ad47bf1a7eab1eb4f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeAlive: 0
+  tag: Audio
 --- !u!1 &1426315712149230309
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,18 +110,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ambience>k__BackingField:
     Guid:
-      Data1: -176207269
-      Data2: 1092693503
-      Data3: 557190836
-      Data4: -1234182607
-    Path: event:/Praia/Praia
+      Data1: -1998857829
+      Data2: 1152744015
+      Data3: -2099227254
+      Data4: 1318857727
+    Path: "event:/M\xFAsicas/Batalha do Guardi\xE3o"
   <Music>k__BackingField:
     Guid:
-      Data1: 1842435280
-      Data2: 1258363939
-      Data3: 1456805045
-      Data4: -1726794433
-    Path: "event:/M\xFAsicas/Vila"
+      Data1: 1658853866
+      Data2: 1120582191
+      Data3: 1141249931
+      Data4: -1153812407
+    Path: "event:/M\xFAsicas/Chage vilacaverna"
   <Confirmacao>k__BackingField:
     Guid:
       Data1: -1999883599
@@ -431,29 +446,29 @@ MonoBehaviour:
     Path: "event:/Ouri\xE7o/Disparo"
   <FeedbackMortePlanta>k__BackingField:
     Guid:
-      Data1: -662816525
-      Data2: 1092967853
-      Data3: -1495951226
-      Data4: -1656671984
-    Path: event:/Planta Carnivora/Feedback de Morte
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <FeedBackDanoPlanta>k__BackingField:
     Guid:
-      Data1: 1294306513
-      Data2: 1166089195
-      Data3: 510113970
-      Data4: 1881796766
-    Path: event:/Planta Carnivora/Feedback de Dano
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <MordidaPlanta>k__BackingField:
     Guid:
-      Data1: -356129846
-      Data2: 1308167987
-      Data3: 604515730
-      Data4: -639718998
-    Path: event:/Planta Carnivora/Mordida
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <MordidaErrarPlanta>k__BackingField:
     Guid:
-      Data1: 1796342687
-      Data2: 1197359748
-      Data3: -1939411043
-      Data4: -1842965213
-    Path: event:/Planta Carnivora/Mordida Errar
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

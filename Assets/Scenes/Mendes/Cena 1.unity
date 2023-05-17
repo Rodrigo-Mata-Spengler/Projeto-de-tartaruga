@@ -72337,14 +72337,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1426315711129178638, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: musicVolume
-      value: 0.099
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315711129178638, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: ambienceVolume
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1426315711129178639, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -72387,146 +72379,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426315711129178639, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <Music>k__BackingField.Path
-      value: "event:/M\xFAsicas/Chage vilacaverna"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <ambience>k__BackingField.Path
-      value: "event:/M\xFAsicas/Batalha do Guardi\xE3o"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <Music>k__BackingField.Guid.Data1
-      value: 1658853866
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <Music>k__BackingField.Guid.Data2
-      value: 1120582191
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <Music>k__BackingField.Guid.Data3
-      value: 1141249931
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <Music>k__BackingField.Guid.Data4
-      value: -1153812407
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaPlanta>k__BackingField.Path
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <PlayerFootstep>k__BackingField.Path
-      value: event:/Protagonista/Passos
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <ambience>k__BackingField.Guid.Data1
-      value: -1998857829
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <ambience>k__BackingField.Guid.Data2
-      value: 1152744015
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <ambience>k__BackingField.Guid.Data3
-      value: -2099227254
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <ambience>k__BackingField.Guid.Data4
-      value: 1318857727
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedBackDanoPlanta>k__BackingField.Path
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaErrarPlanta>k__BackingField.Path
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedbackMortePlanta>k__BackingField.Path
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaPlanta>k__BackingField.Guid.Data1
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaPlanta>k__BackingField.Guid.Data2
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaPlanta>k__BackingField.Guid.Data3
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaPlanta>k__BackingField.Guid.Data4
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <PlayerFootstep>k__BackingField.Guid.Data1
-      value: 1766456022
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <PlayerFootstep>k__BackingField.Guid.Data2
-      value: 1322139094
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <PlayerFootstep>k__BackingField.Guid.Data3
-      value: 1813850267
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <PlayerFootstep>k__BackingField.Guid.Data4
-      value: 1786508826
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedBackDanoPlanta>k__BackingField.Guid.Data1
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedBackDanoPlanta>k__BackingField.Guid.Data2
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedBackDanoPlanta>k__BackingField.Guid.Data3
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedBackDanoPlanta>k__BackingField.Guid.Data4
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaErrarPlanta>k__BackingField.Guid.Data1
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaErrarPlanta>k__BackingField.Guid.Data2
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaErrarPlanta>k__BackingField.Guid.Data3
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <MordidaErrarPlanta>k__BackingField.Guid.Data4
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedbackMortePlanta>k__BackingField.Guid.Data1
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedbackMortePlanta>k__BackingField.Guid.Data2
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedbackMortePlanta>k__BackingField.Guid.Data3
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
-      propertyPath: <FeedbackMortePlanta>k__BackingField.Guid.Data4
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -75749,11 +75601,11 @@ PrefabInstance:
       objectReference: {fileID: 717278168}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.6091
+      value: 48.54602
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3573914
+      value: 2.357483
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: far clip plane

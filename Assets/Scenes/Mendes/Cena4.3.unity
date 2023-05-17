@@ -2817,22 +2817,26 @@ PrefabInstance:
     - target: {fileID: 252179266, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1321328457}
     - target: {fileID: 1636221942, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: globalShakeForce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.84198
+      value: 43.983704
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.77545166
+      value: 216.99083
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
+      propertyPath: orthographic size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 185684928366850470, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_Name
@@ -2886,6 +2890,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 2097543}
+    - target: {fileID: 185684928551927806, guid: 4c6571932516017488eb84810c9ef171, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8740575979839190081, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -25178,6 +25186,7 @@ GameObject:
   - component: {fileID: 1321328454}
   - component: {fileID: 1321328453}
   - component: {fileID: 1321328452}
+  - component: {fileID: 1321328458}
   m_Layer: 0
   m_Name: walls
   m_TagString: Untagged
@@ -25207,7 +25216,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321328450}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -25259,7 +25268,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321328450}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -25343,38 +25352,101 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
-  - m_Collider: {fileID: 1321328452}
+  - m_Collider: {fileID: 1321328458}
     m_ColliderPaths:
-    - - X: 4260058624
-        Y: 1277755136
-      - X: 2892299776
-        Y: 1277755136
-      - X: 2892299776
-        Y: 941551232
-      - X: 4260058624
-        Y: 941551232
-  - m_Collider: {fileID: 1321328454}
-    m_ColliderPaths:
-    - - X: 4303558144
-        Y: 1850690560
-      - X: 2805574912
-        Y: 1850690560
-      - X: 2805574912
-        Y: 1272278400
-      - X: 4303558144
-        Y: 1272278400
+    - - X: 3344291584
+        Y: 1732374016
+      - X: 2961389824
+        Y: 1731488128
+      - X: 2962771968
+        Y: 1447031552
+      - X: 3103190528
+        Y: 1446943232
+      - X: 3181768448
+        Y: 1503414784
+      - X: 3542328832
+        Y: 1503650560
+      - X: 4026982144
+        Y: 1527777920
+      - X: 4148807424
+        Y: 1658825472
+      - X: 4258517248
+        Y: 1543716992
+      - X: 4506300416
+        Y: 1544750080
+      - X: 4503020544
+        Y: 1771830144
+      - X: 3804684800
+        Y: 1982560000
+      - X: 2920896512
+        Y: 1980188032
+      - X: 3043152384
+        Y: 1743410688
+      - X: 3835774464
+        Y: 1743674496
+      - X: 3836736512
+        Y: 1733109376
   m_CompositePaths:
     m_Paths:
-    - - {x: 426.00583, y: 94.15512}
-      - {x: 426.0059, y: 127.227844}
-      - {x: 430.3558, y: 127.22787}
-      - {x: 430.35577, y: 185.06906}
-      - {x: 280.5575, y: 185.06903}
-      - {x: 280.55753, y: 127.227844}
-      - {x: 289.22998, y: 127.22781}
-      - {x: 289.23, y: 94.15512}
+    - - {x: 310.31906, y: 144.69432}
+      - {x: 318.17685, y: 150.34148}
+      - {x: 354.23288, y: 150.36505}
+      - {x: 402.6982, y: 152.7778}
+      - {x: 414.88077, y: 165.88252}
+      - {x: 425.8517, y: 154.3717}
+      - {x: 450.63004, y: 154.47504}
+      - {x: 450.30206, y: 177.18301}
+      - {x: 380.46848, y: 198.256}
+      - {x: 292.0897, y: 198.01875}
+      - {x: 304.31528, y: 174.34106}
+      - {x: 383.57745, y: 174.36743}
+      - {x: 383.67365, y: 173.31094}
+      - {x: 334.42917, y: 173.2374}
+      - {x: 296.13898, y: 173.14879}
+      - {x: 296.27722, y: 144.70316}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!60 &1321328458
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321328450}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 323.44, y: 138.81}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 10.989166, y: 34.4274}
+      - {x: -27.301025, y: 34.33882}
+      - {x: -27.162811, y: 5.893158}
+      - {x: -13.120941, y: 5.884323}
+      - {x: -5.263153, y: 11.531479}
+      - {x: 30.792877, y: 11.555054}
+      - {x: 79.25821, y: 13.967789}
+      - {x: 91.440735, y: 27.072556}
+      - {x: 102.41171, y: 15.561707}
+      - {x: 127.19003, y: 15.665009}
+      - {x: 126.86203, y: 38.373016}
+      - {x: 57.028473, y: 59.446}
+      - {x: -31.350342, y: 59.2088}
+      - {x: -19.124756, y: 35.531067}
+      - {x: 60.13745, y: 35.55745}
+      - {x: 60.233643, y: 34.500946}
 --- !u!1 &1333363862
 GameObject:
   m_ObjectHideFlags: 0
