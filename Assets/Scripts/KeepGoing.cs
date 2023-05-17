@@ -5,22 +5,23 @@ using UnityEngine;
 public class KeepGoing : MonoBehaviour
 {
     public float timeAlive = 0;
-    public string tag;
+    [SerializeField]private string compareTag;
 
-    void Start()
+    private void Awake()
     {
         timeAlive = Time.time;
-    }
 
-    private void Update()
+        Keep();
+    }
+    private void Keep()
     {
-        GameObject[] outros = GameObject.FindGameObjectsWithTag(tag);
+        GameObject[] outros = GameObject.FindGameObjectsWithTag(compareTag);
 
         foreach (var outro in outros)
         {
             if (timeAlive < outro.GetComponent<KeepGoing>().timeAlive)
             {
-                Destroy(outro);
+                Destroy(outro.gameObject);
             }
         }
         DontDestroyOnLoad(this.gameObject);

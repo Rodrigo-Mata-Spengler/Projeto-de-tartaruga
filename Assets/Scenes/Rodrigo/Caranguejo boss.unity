@@ -2022,17 +2022,93 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1787201001, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.32
+      objectReference: {fileID: 0}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 850441858}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: livreArbitrio
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo1.y
+      value: -4.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo2.y
+      value: -4.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo3.y
+      value: -4.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo4.y
+      value: -4.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: quantidadeAtaque1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: velocidadeAtaque5
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tamanhoColiderFinal
+      value: 8.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo1Final.x
+      value: -8.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo1Final.y
+      value: -2.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo2Final.x
+      value: -4.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo2Final.y
+      value: -2.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo3Final.x
+      value: 4.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo3Final.y
+      value: -2.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo4Final.x
+      value: 8.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: posTentaculo4Final.y
+      value: -2.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tamanhoColiderInicial
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: velocidadePreparoAtaque5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5595021203129023977, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: m_Name
       value: Boss 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242149555371380840, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8643338813153908917, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: m_RootOrder
