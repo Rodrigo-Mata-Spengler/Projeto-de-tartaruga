@@ -110,33 +110,39 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private GameObject tentaculo1;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo1;//O animador do tentaculo
     [SerializeField] private Vector3 posTentaculo1;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posTentaculo1Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo1;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo1;//poição final do dano do tentaculo
     //tentaculo 2
     [SerializeField] private GameObject tentaculo2;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo2;//O animador do tentaculo
     [SerializeField] private Vector3 posTentaculo2;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posTentaculo2Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo2;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo2;//poição final do dano do tentaculo
     //tentaculo 3
     [SerializeField] private GameObject tentaculo3;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo3;//O animador do tentaculo
     [SerializeField] private Vector3 posTentaculo3;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posTentaculo3Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo3;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo3;//poição final do dano do tentaculo
     //tentaculo 4
     [SerializeField] private GameObject tentaculo4;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo4;//O animador do tentaculo
     [SerializeField] private Vector3 posTentaculo4;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posTentaculo4Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo4;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo4;//poição final do dano do tentaculo
     //Geral ataque 5
     [SerializeField] private float velocidadeAtaque5 = 0;
+    [SerializeField] private float velocidadePreparoAtaque5 = 0;
     [SerializeField]private float tempoEsperaAtaque5 = 0;
     private float tempoProximaEsperaAtaque5 = 0;
     [SerializeField] private float tempoDuracaoAtaque5 = 0;
     private float tempoProximaDuracaoAtaque5 = 0;
     private bool ctrlAtaque5 = false;
+    private bool posControle = false;
 
     [Header("Ataque 6")]
     //pinca8
@@ -544,9 +550,8 @@ public class SombraBehaviour : MonoBehaviour
     //Metodos relacionados ao Ataque 5
     private void SetUpAtaque5()
     {
-        tempoProximaEsperaAtaque5 = tempoEsperaAtaque5 + Time.time;
-
         ctrlAtaque5 = false;
+        posControle = false;
 
         tentaculo1.SetActive(true);
         tentaculo1.transform.position = posTentaculo1;
@@ -575,7 +580,24 @@ public class SombraBehaviour : MonoBehaviour
 
     private void Ataque5()
     {
-        if (tempoProximaEsperaAtaque5 <= Time.time && ctrlAtaque5 == false)
+        if (posControle == false)
+        {
+            tentaculo1.transform.position = Vector3.MoveTowards(tentaculo1.transform.position, posTentaculo1Final, velocidadePreparoAtaque5 * Time.deltaTime);
+
+            tentaculo2.transform.position = Vector3.MoveTowards(tentaculo2.transform.position, posTentaculo2Final, velocidadePreparoAtaque5 * Time.deltaTime);
+
+            tentaculo3.transform.position = Vector3.MoveTowards(tentaculo3.transform.position, posTentaculo3Final, velocidadePreparoAtaque5 * Time.deltaTime);
+
+            tentaculo4.transform.position = Vector3.MoveTowards(tentaculo4.transform.position, posTentaculo4Final, velocidadePreparoAtaque5 * Time.deltaTime);
+
+            if (tentaculo1.transform.position == posTentaculo1Final)
+            {
+                posControle = true;
+
+                tempoProximaEsperaAtaque5 = tempoEsperaAtaque5 + Time.time;
+            }
+        }
+        else if (tempoProximaEsperaAtaque5 <= Time.time && ctrlAtaque5 == false)
         {
             tentaculo1.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo1.transform.GetChild(0).transform.position, posFinalTentaculo1, velocidadeAtaque5 * Time.deltaTime);
             animTentaculo1.SetTrigger("Ataque");
