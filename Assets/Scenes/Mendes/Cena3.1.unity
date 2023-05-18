@@ -9682,6 +9682,7 @@ Transform:
   - {fileID: 1105976396}
   - {fileID: 1281476519}
   - {fileID: 1928798199}
+  - {fileID: 1381986273}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13165,6 +13166,68 @@ Transform:
   m_Father: {fileID: 822219530}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1381986272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 786592381}
+    m_Modifications:
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -39.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.74928796
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654431, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_Name
+      value: Enemy(tARTARUGA ESQUELETO) (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+--- !u!4 &1381986273 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+  m_PrefabInstance: {fileID: 1381986272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1399811853
 GameObject:
   m_ObjectHideFlags: 0
@@ -15271,11 +15334,11 @@ PrefabInstance:
       objectReference: {fileID: 1931810549}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -125.24927
+      value: -126.782776
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -81.50879
+      value: -81.31308
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: orthographic size

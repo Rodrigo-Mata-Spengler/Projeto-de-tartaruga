@@ -76918,6 +76918,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4904484122241577177, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
 --- !u!4 &1261471865 stripped
@@ -77034,11 +77038,11 @@ PrefabInstance:
       objectReference: {fileID: 717278168}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.60904
+      value: 49.07831
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3573914
+      value: 2.3574524
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: far clip plane
@@ -80695,6 +80699,10 @@ PrefabInstance:
     - target: {fileID: 167771294725654431, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
       propertyPath: m_Name
       value: Enemy(tARTARUGA ESQUELETO) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904484122241577177, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
