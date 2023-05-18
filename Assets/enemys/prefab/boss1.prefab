@@ -288,12 +288,12 @@ MonoBehaviour:
   jumpHeight: 32.26
   jumped: 0
   TempoPular: 0
-  tempoParaPular: 1
+  tempoParaPular: 0.5
   AttackTrigger: {fileID: 6566133215279601597}
   AttackCollider: {fileID: 1547352175}
   Attacked: 0
   AttackImpulse: 5
-  DuracaoDeAtaque: 1.34
+  DuracaoDeAtaque: 1.4
   tempoDeAtaque: 0
   m_WhatIsGround:
     serializedVersion: 2
@@ -305,7 +305,7 @@ MonoBehaviour:
   - {fileID: 0}
   dash: 0
   CurrentTimeDash: 0
-  TimeToDoDash: 0.81
+  TimeToDoDash: 0.15
   DashImpulse: 10
   OnLandEvent:
     m_PersistentCalls:

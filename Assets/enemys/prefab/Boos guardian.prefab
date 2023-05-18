@@ -248,7 +248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: TempoEsperaTonto
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: tempoInicialDelay
@@ -306,7 +306,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5287758271197617120, guid: f89e47239efa95d4398337cd98148309, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f89e47239efa95d4398337cd98148309, type: 3}
 --- !u!1 &672679174877475091 stripped
 GameObject:
@@ -326,6 +327,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tipo: 0
+--- !u!114 &743534271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672679174877475091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ed24438d268074e86d9ac731d25012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 90
+  currentHealth: 0
+  DropItemPoint: {fileID: 3715050969447028436}
+  ItensPrefabs:
+  - {fileID: 8182488497596834137, guid: 95f3c38df6386bb4f9944b39f48f9a35, type: 3}
+  - {fileID: 845562266373629971, guid: bd405c68b2fdb344ba6f1679eb3943ae, type: 3}
+  TimeToDestroyDelay: 0.75
+  norteado1: 0
+  norteado2: 0
+  tempoNorteado: 0
+  TempoEsperaNorteado: 3
 --- !u!4 &672679174877475095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 484018159787737978, guid: f89e47239efa95d4398337cd98148309, type: 3}
