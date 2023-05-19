@@ -31,6 +31,7 @@ public class SaveStatue : MonoBehaviour
             playerGO.GetComponent<Health>().currentLife = playerGO.GetComponent<Health>().maxLife;
 
             playerGO.GetComponent<Health>().HealthSlider.value = playerGO.GetComponent<Health>().maxLife * 8;
+
             //rend.color = Color.green;
         }
     }
