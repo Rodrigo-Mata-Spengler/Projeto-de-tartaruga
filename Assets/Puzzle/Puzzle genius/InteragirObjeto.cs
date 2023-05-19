@@ -9,11 +9,24 @@ public class InteragirObjeto : MonoBehaviour
 
     [SerializeField] private int numeroBloco;
 
+    [SerializeField] private Sprite apagado;
+
+    [SerializeField] private Sprite aceso;
+
     [SerializeField] private Color cor;
 
     private bool PlayerIn = false;
 
     public bool permitirInteracao = false;
+
+    private SpriteRenderer rend;
+
+    private void Start()
+    {
+        rend = GetComponent<SpriteRenderer>();
+
+        BlocoApagado();
+    }
 
     private void Update()
     {
@@ -21,7 +34,8 @@ public class InteragirObjeto : MonoBehaviour
         {
             ctrl.InteracaoObjeto(numeroBloco);
 
-            this.GetComponent<SpriteRenderer>().color = cor;
+            // this.GetComponent<SpriteRenderer>().color = cor;
+            BlocoAceso();
         }
     }
 
@@ -32,5 +46,15 @@ public class InteragirObjeto : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         PlayerIn = false;
+    }
+
+    public void BlocoApagado()
+    {
+        rend.sprite = apagado;
+    }
+
+    public void BlocoAceso()
+    {
+        rend.sprite = aceso;
     }
 }
