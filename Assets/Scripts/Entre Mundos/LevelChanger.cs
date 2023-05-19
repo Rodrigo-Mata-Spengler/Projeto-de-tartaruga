@@ -46,4 +46,5 @@ public class LevelChanger : MonoBehaviour
         SceneManager.LoadScene(cena);
         Conections.wasConetion = true;
     }
+
 }

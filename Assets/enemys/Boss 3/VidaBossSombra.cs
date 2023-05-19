@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VidaBossSombra : MonoBehaviour
 {
     [Header("Vida do Boss")]
     [SerializeField] public static float vidaAtual = 0;
+
+    [SerializeField] private static string cenaVitoria = "Tela Vitoria temp";
 
     public static void TomarDano(float Dano)
     {
@@ -21,6 +24,6 @@ public class VidaBossSombra : MonoBehaviour
 
     private static void Morreu()
     {
-
+        SceneManager.LoadScene(cenaVitoria);
     }
 }

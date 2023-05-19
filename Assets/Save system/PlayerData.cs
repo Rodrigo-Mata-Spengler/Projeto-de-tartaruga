@@ -9,6 +9,7 @@ public class PlayerData
     public float stamina;
     public int vida;
     public float[] position;
+    public int seaWeed;
 
     //Informações do inventario
     public int conchas;
@@ -43,6 +44,7 @@ public class PlayerData
         position[0] = player.transform.position.x;
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;
+        seaWeed = player.GetComponent<Health>().HealSeaweed;
 
         //captura as informações do inventario
         conchas = player.GetComponent<ItensInventory>().conchas;

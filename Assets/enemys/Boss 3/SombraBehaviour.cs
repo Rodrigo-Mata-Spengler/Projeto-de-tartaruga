@@ -283,11 +283,6 @@ public class SombraBehaviour : MonoBehaviour
                     break;
             }
         }
-        else
-        {
-            //SetUpIdle();
-            //status = SombraStatus.idle;
-        }
     }
 
     private void Desativado()

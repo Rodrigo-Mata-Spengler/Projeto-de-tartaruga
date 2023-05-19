@@ -21,6 +21,7 @@ public class Saveloader : MonoBehaviour
         //defini vida e estamina
         player.GetComponent<Estamina>().CurrentEstamina = data.stamina;
         player.GetComponent<Health>().maxLife = data.vida;
+        player.GetComponent<Health>().HealSeaweed = data.seaWeed;
 
         //defini as informações do inventario
         player.GetComponent<ItensInventory>().conchas = data.conchas;
