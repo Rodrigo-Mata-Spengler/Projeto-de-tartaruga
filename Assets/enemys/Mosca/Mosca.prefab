@@ -419,10 +419,10 @@ MonoBehaviour:
   status: 5
   limiteMax: {fileID: 705975697}
   limiteMin: {fileID: 1595973582}
-  velocidade: 2
+  velocidade: 5
   tempoEspera: 3
   pontoPatrulha: {x: 0, y: 0, z: 0}
-  raioDetecao: 0
+  raioDetecao: 1
   playerTag: Player
   alturaAtaque: 5
   velocidadeAtaque: 10

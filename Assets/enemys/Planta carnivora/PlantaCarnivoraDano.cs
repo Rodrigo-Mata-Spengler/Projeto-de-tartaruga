@@ -12,7 +12,7 @@ public class PlantaCarnivoraDano : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
 
-            collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * impulseForceOnPlayer);
+            collision.transform.GetComponent<Rigidbody2D>().AddForce(collision.transform.right * impulseForceOnPlayer);
             collision.transform.GetComponent<PlayerHitFeedback>().wasHit = true;
             collision.transform.GetComponent<Health>().Damage(damage);
         }
