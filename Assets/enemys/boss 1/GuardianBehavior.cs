@@ -1,3 +1,5 @@
+using Cinemachine;
+using FMOD.Studio;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -8,6 +10,10 @@ enum GuardianStatus { desativado, Attack, DisableAttack, JumpAtPlayer,FallAtPlay
 public class GuardianBehavior : MonoBehaviour
 {
 
+    [SerializeField]private GameObject TridenteFlutuando;
+
+
+    private CinemachineImpulseSource impulseSource;
     public float tempoInicialDelay = 0f;
     public float tempoDecorridoInicial = 0f;
     private Animator animator;
@@ -99,21 +105,28 @@ public class GuardianBehavior : MonoBehaviour
         animator = this.GetComponent<Animator>();
     }
 
+    private void Awake()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
         
-        if(tempoDecorridoInicial <= tempoInicialDelay +0.03)
+        if(tempoDecorridoInicial <= tempoInicialDelay && DoOnce == false)
         {
+            PlayerObj.GetComponent<PlayerMovement>().enabled = false;
             tempoDecorridoInicial += Time.deltaTime;
             animator.SetBool("acorda", true);
         }
         if (tempoDecorridoInicial >= tempoInicialDelay && DoOnce==false)
         {
-            animator.SetBool("acorda", false);
-
+           
+            PlayerObj.GetComponent<PlayerMovement>().enabled = true;
             status = GuardianStatus.CheckPlayerDistance;
-            DoOnce= true;
+            animator.SetBool("acorda", false);
+            DoOnce = true;
         }
 
       
@@ -157,7 +170,7 @@ public class GuardianBehavior : MonoBehaviour
                  break;
 
         }
-         LookAtPlayer();
+ 
 
         if(EnemyHealth.currentHealth <= 0)
         {
@@ -168,8 +181,11 @@ public class GuardianBehavior : MonoBehaviour
     }
     private void morto()
     {
-        PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true; // activated the have magic trident in player movment
+        TridenteFlutuando.SetActive(true);
+
         /*
+        PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true; // activated the have magic trident in player movment
+        
         PlayerObj.GetComponent<PlayerMovement>().AtaqueHitBox.SetActive(false); // activated the have magic trident in the Attack obj
         PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBox.SetActive(false);
         PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBox.SetActive(false);
@@ -177,16 +193,16 @@ public class GuardianBehavior : MonoBehaviour
         PlayerObj.GetComponent<PlayerMovement>().AtaqueMagicoHitBox.SetActive(true);
         PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBoxMagico.SetActive(true);
         PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBoxMagico.SetActive(true);
-        */
+        
         PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
         PlayerObj.GetComponent<Dash>().enabled = true;
         PlayerObj.GetComponent<Estamina>().enabled = true;
-
+        */
     }
 
     private void PlayerDistance()
     {
-      
+
         ///Check if enemy is not half of life
         if (EnemyHealth.currentHealth > EnemyHealth.MaxHealth/2)
         {
@@ -222,7 +238,8 @@ public class GuardianBehavior : MonoBehaviour
                 status = GuardianStatus.Attack;
                 tempoDeAtaque = 0;
                 AttackCollider.enabled = true;
-                animator.SetBool("ataque", true);
+                
+                
          
                 ActionChosed = false;
             }
@@ -274,6 +291,7 @@ public class GuardianBehavior : MonoBehaviour
         
         if (tempoDeAtaque < DuracaoDeAtaque)
         {
+            
             if (lookingRight)
             {
                 //rb.AddForce(new Vector2(AttackImpulse, transform.position.y), ForceMode2D.Impulse);
@@ -307,7 +325,11 @@ public class GuardianBehavior : MonoBehaviour
         ///the enemy will wait a time after conclude a action
         if (m_Grounded)
         {
+            LookAtPlayer();
             tempoTonto += Time.deltaTime;
+            //disableAnimations();
+            animator.SetBool("dash", false);
+            animator.SetBool("queda", false);
         }
         
         if (tempoTonto < TempoEsperaTonto)
@@ -317,10 +339,12 @@ public class GuardianBehavior : MonoBehaviour
         }
         else if (dash && tempoTonto > TempoEsperaTonto)/// check if enemy have jumped to edge, if have do the dash
         {
+            animator.SetBool("queda", false);
+            animator.SetBool("dormindo", false);
             rb.velocity = Vector2.zero;
             TempoPular = 0;
             status = GuardianStatus.Dash;
-            animator.SetBool("Dash", true);
+
             //Dash();
         }
         else
@@ -335,7 +359,7 @@ public class GuardianBehavior : MonoBehaviour
 
     public void JumpAtPlayer()
     {
-        
+        animator.SetBool("pulo", false);
         Look = false;
         TempoPularNoPlayer += Time.deltaTime;
 
@@ -349,8 +373,10 @@ public class GuardianBehavior : MonoBehaviour
 
             if (transform.position.Equals(cordenadaAlturaAtaque))
             {
+                animator.SetBool("queda", true);
                 status = GuardianStatus.FallAtPlayer;
                 tempoAtaque = Time.time + TempoEsperaAtaque;
+                
             }
             else
             {
@@ -369,6 +395,7 @@ public class GuardianBehavior : MonoBehaviour
         }
         else
         {
+            
             miraAtaque = PlayerObj.transform.position;
         }
 
@@ -376,6 +403,7 @@ public class GuardianBehavior : MonoBehaviour
 
         if (transform.position.Equals(miraAtaque) || m_Grounded)
         {
+            TempoPularNoPlayer = 0;
             rb.gravityScale = 3;
             status = GuardianStatus.desativado;
             tempoTonto = 0;
@@ -384,6 +412,7 @@ public class GuardianBehavior : MonoBehaviour
 
     public void JumpAtEdge()
     {
+        
         TempoPular += Time.deltaTime;
         if (TempoPular < tempoParaPular)/// do nothing while time to jumpAtEdge haven't pass yet
         {
@@ -404,10 +433,11 @@ public class GuardianBehavior : MonoBehaviour
         /// if enemy hit's the ground go to wait time
         if (m_Grounded == true && jumped == true)
         {
+            animator.SetBool("pulo", false);
             CurrentTimeDash = 0;
             status = GuardianStatus.desativado;
             tempoTonto = 0;
-            animator.SetBool("pulo", false);
+            animator.SetBool("dormindo", true);
             dash = true;
         }
 
@@ -415,7 +445,7 @@ public class GuardianBehavior : MonoBehaviour
 
     private void Dash()
     {
-        
+        animator.SetBool("dash", true);
         CurrentTimeDash += Time.deltaTime;
         
         if(CurrentTimeDash >= TimeToDoDash)// do nothing while time to dash haven't pass yet
@@ -427,6 +457,7 @@ public class GuardianBehavior : MonoBehaviour
             AttackTrigger.SetActive(true);
             if (lookingRight)
             {
+                
                 rb.AddForce(new Vector2(DashImpulse, transform.position.y), ForceMode2D.Impulse);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.DashGuardiao,transform.position);
                 
@@ -446,7 +477,7 @@ public class GuardianBehavior : MonoBehaviour
             dash = false;
             dashed = false;
             AttackTrigger.SetActive(false);
-            animator.SetBool("Dash", false);
+            //animator.SetBool("Dash", false);
         }
     }
 
@@ -470,15 +501,6 @@ public class GuardianBehavior : MonoBehaviour
             lookingRight = true;
         }
 
-    }
-
-    private void OnEnable()
-    {
-        if(DoOnce == false)
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.FalaGuardiao, transform.position);
-        }
-        
     }
 
 
@@ -506,4 +528,13 @@ public class GuardianBehavior : MonoBehaviour
         Gizmos.DrawWireSphere(miraAtaque, .5f);
 
     }
+
+
+    public void Gritar()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.FalaGuardiao, transform.position);
+        
+    }
+
+
 }

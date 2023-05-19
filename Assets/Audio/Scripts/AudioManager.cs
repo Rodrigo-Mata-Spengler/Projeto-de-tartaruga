@@ -92,7 +92,7 @@ public class AudioManager : MonoBehaviour
         return eventInstance;
     }
 
-    private void CleaUp()
+    public void CleaUp()
     {
         foreach(EventInstance eventInstance in eventInstances)
         {

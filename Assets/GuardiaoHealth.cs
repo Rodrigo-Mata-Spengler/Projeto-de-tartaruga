@@ -26,14 +26,14 @@ public class GuardiaoHealth : MonoBehaviour
 
     private float LifePorcentage;
 
-    [SerializeField]private bool norteado1 = false;
-    [SerializeField] private bool norteado2 = false;
-
     private GuardianBehavior guardianBehavior;
 
     [Header("Norteado")]
     public float tempoNorteado = 0;//current time that is waitting to do a action
     [SerializeField] private float TempoEsperaNorteado = 0; // Amount of time to wait for the next action
+
+    [SerializeField] private bool norteado1 = false;
+    [SerializeField] private bool norteado2 = false;
     private void Start()
     {
         currentHealth = MaxHealth;
@@ -51,12 +51,14 @@ public class GuardiaoHealth : MonoBehaviour
     {
         if (currentHealth <= (MaxHealth - LifePorcentage) && norteado1 == false)
         {
+            disableAnimations();
             guardianBehavior.enabled = false;
             animator.SetBool("cansado", true);
             Norteado1();
         }
         if (currentHealth <= (MaxHealth - (LifePorcentage * 2)) && norteado2 == false)
         {
+            disableAnimations();
             animator.SetBool("cansado", true);
             guardianBehavior.enabled= false;
             
@@ -84,7 +86,7 @@ public class GuardiaoHealth : MonoBehaviour
     {
         ///the enemy will wait a time after conclude a action
         tempoNorteado += Time.deltaTime;
-        if (tempoNorteado > TempoEsperaNorteado /*|| enemyHit.wasHit*/ )
+        if (tempoNorteado > TempoEsperaNorteado /*|| enemyHit.wasHit */)
         {
             guardianBehavior.enabled = true;
             norteado1 = true;
@@ -112,10 +114,20 @@ public class GuardiaoHealth : MonoBehaviour
 
     private void DropItem(GameObject Item)
     {
-        TimeToDestroy = Time.deltaTime + TimeToDestroyDelay;
+        TimeToDestroy = Time.time + TimeToDestroyDelay;
         Instantiate(Item, DropItemPoint.position, DropItemPoint.rotation);
         Droped = true;
         //Debug.Log("Euuuuu");
+    }
+
+    private void disableAnimations()
+    {
+        animator.SetBool("Dash", false);
+        animator.SetBool("pulo", false);
+        animator.SetBool("queda", false);
+        animator.SetBool("ataque", false);
+
+      
     }
 }
 

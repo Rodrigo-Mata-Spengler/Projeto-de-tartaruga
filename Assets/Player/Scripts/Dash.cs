@@ -20,7 +20,6 @@ public class Dash : MonoBehaviour
     private bool Grounded;
     private bool facingRight;
 
-    private TrailRenderer trailRender;//tail effect
 
     [Header("Estamina")]
     public int EstaminaDamage;
@@ -28,7 +27,6 @@ public class Dash : MonoBehaviour
     private void Start()
     {
         characterController2D = this.GetComponent<CharacterController2D>();
-        trailRender = this.GetComponent<TrailRenderer>();
 
         rb = this.GetComponent<Rigidbody2D>();
 
@@ -70,7 +68,6 @@ public class Dash : MonoBehaviour
                 estaminaScript.Damage(EstaminaDamage);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.Dash, transform.position);
             }
-            trailRender.emitting= true;
         }
         //stop the dash
         if (_isDashing)
@@ -91,7 +88,6 @@ public class Dash : MonoBehaviour
                 // dash finished
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.x / _yVelJumpRealeasedMod);
                 transform.position = _dashEnd;
-                trailRender.emitting= false;
                 _isDashing = false;
                 m_Animator.SetBool("Dash", false);
 
