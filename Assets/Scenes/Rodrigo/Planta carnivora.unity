@@ -1934,6 +1934,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5940777664989819160, guid: 9c010087f274fc34d86d22243d7ad626, type: 3}
+      propertyPath: ItensPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940777664989819160, guid: 9c010087f274fc34d86d22243d7ad626, type: 3}
+      propertyPath: ItensPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 4448061109165272105, guid: 403d4decb27133942a068f68115a1376, type: 3}
     - target: {fileID: 5940777665832931492, guid: 9c010087f274fc34d86d22243d7ad626, type: 3}
       propertyPath: m_Name
       value: Planta Carnivora

@@ -181,7 +181,7 @@ public class MoscaBehavior : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, miraAtaque, velocidadeAtaque * Time.deltaTime);
            
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.rasanteMosca, transform.position);
+            //AudioManager.instance.PlayOneShot(FMODEvents.instance.rasanteMosca, transform.position);
             if (transform.position.x - miraAtaque.x >= 0)
             {
                 rend.flipX = false;
