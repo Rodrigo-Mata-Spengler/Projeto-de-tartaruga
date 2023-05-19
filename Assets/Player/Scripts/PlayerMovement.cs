@@ -212,16 +212,33 @@ public class PlayerMovement : MonoBehaviour
     }
     private void CheckWallSliding()
     {
+        if (HaveMagicTrident)
+        {
+            if (IsTouchingWall && !CharacterController2D.m_Grounded && m_Rigidbody2D.velocity.y < 0 && HorizontalMove != 0)
+            {
+                IsWallSliding = true;
+                JumpReleasedTimes = 1;
+            }
+            if (!IsTouchingWall)
+            {
+                IsWallSliding = false;
+            }
+        }
+        else
+        {
+            if (IsTouchingWall && !CharacterController2D.m_Grounded && m_Rigidbody2D.velocity.y < 0 && HorizontalMove != 0)
+            {
+
+                m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -7);
+            }
+            if (!IsTouchingWall)
+            {
+                IsWallSliding = false;
+            }
+            
+        }
         
-        if (IsTouchingWall && !CharacterController2D.m_Grounded && m_Rigidbody2D.velocity.y < 0 && HorizontalMove != 0)
-        {
-            IsWallSliding = true;
-            JumpReleasedTimes = 1;
-        }
-        if(!IsTouchingWall)
-        {
-            IsWallSliding = false;
-        }
+
 
     }
     public void AtivarCheat()

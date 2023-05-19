@@ -203,10 +203,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1487975734, guid: c90954260d9e7d441965c7c30480e910, type: 3}
-      propertyPath: velocidade
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1787313283712742908, guid: c90954260d9e7d441965c7c30480e910, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -565,7 +561,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1888708261
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
