@@ -29,7 +29,7 @@ public class EnemyHitFeedback : MonoBehaviour
     private IEnumerator DisableHitFeedback(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        gameObject.GetComponent<Animator>().SetBool("Dano", false);
+        //gameObject.GetComponent<Animator>().SetBool("Dano", false);
         wasHit = false;
         StopAllCoroutines();
     }
