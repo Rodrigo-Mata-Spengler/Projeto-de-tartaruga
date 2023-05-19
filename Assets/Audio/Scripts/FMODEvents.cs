@@ -7,6 +7,7 @@ public class FMODEvents : MonoBehaviour
 {
     [field: Header("Ambience SFX")]
     [field: SerializeField] public EventReference ambience { get; private set; }
+
     [field: Header("Music SFX")]
     [field: SerializeField] public EventReference Music { get; private set; }
 
@@ -21,6 +22,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference DamageFeedback { get; private set; }
     [field: SerializeField] public EventReference Dash { get; private set; }
     [field: SerializeField] public EventReference Jump { get; private set; }
+    [field: SerializeField] public EventReference Fall { get; private set; }
     [field: SerializeField] public EventReference ItemGrab { get; private set; }
     [field: SerializeField] public EventReference Compra { get; private set; }
 

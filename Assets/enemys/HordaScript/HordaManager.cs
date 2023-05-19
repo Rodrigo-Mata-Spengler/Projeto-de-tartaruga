@@ -18,6 +18,10 @@ public class HordaManager : MonoBehaviour
     public float StartRoundDeleay;
     public float EnemySpawnDelay;
     private bool Spawn = true;
+
+    //Rodrigo Time !!!!!!!!!!!
+    //Importante para o Save
+    public static bool terminou = false;
   
 
     private void Update()
@@ -59,7 +63,7 @@ public class HordaManager : MonoBehaviour
        {
             //Acabou
             Debug.Log("Vitoria");
-
+            terminou = true;
        }
        
     }

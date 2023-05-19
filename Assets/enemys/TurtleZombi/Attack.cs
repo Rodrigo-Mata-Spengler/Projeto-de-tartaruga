@@ -33,9 +33,6 @@ public class Attack : BTnode
             {
                 bt.GetComponent<Rigidbody2D>().velocity = new Vector2(-2f, bt.gameObject.GetComponent<Rigidbody2D>().velocity.y);
             }
-            
-
-            Debug.LogWarning(currentTime);
 
             bt.GetComponent<BTZombiTurtle>().lookAt = false;
             if (currentTime > AttackDuration)

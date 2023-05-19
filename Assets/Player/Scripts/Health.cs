@@ -6,6 +6,7 @@ using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine.VFX;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Health : MonoBehaviour
     public int maxLife;
     public int currentLife;
     //[SerializeField] private GameObject lifeImages;
-    [SerializeField] private Slider HealthSlider;
+    [HideInInspector]public Slider HealthSlider;
 
     public bool haveArmor = false;
     private CinemachineImpulseSource impulseSource;
@@ -29,22 +30,33 @@ public class Health : MonoBehaviour
 
     [Header("heal")]
     public int MaxHealSeaweed;
-    [HideInInspector]public int HealSeaweed;
+    public int HealSeaweed;
 
     public float CurrenTime = 0f;
     public float TimeToHeal = 1.5f;
 
-    [SerializeField] private TextMeshProUGUI AmountOfSeaweed;
+     private TextMeshProUGUI AmountOfSeaweed;
 
     [Space]
-    [SerializeField] private MenuPause pause;
+     private MenuPause pause;
 
- 
+    public VisualEffect HealEffect;
+    public VisualEffect RezarEffect;
+
+
+    private Animator PlayerAnimator;
+
+    private PlayerMovement PlayerMovment;
+
+    private bool DoOnce = false;
     private void Start()
     {
         //currentLife = maxLife;
 
         //HealSeaweed = MaxHealSeaweed;
+        pause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
+        AmountOfSeaweed = GameObject.FindGameObjectWithTag("AlgaText").GetComponent<TextMeshProUGUI>();
+        HealthSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
 
         rb = gameObject.GetComponent<Rigidbody2D>();
 
@@ -55,26 +67,44 @@ public class Health : MonoBehaviour
         AmountOfSeaweed.text = HealSeaweed.ToString();
 
         HealthSlider.value = currentLife * 8;
+
+        PlayerAnimator = gameObject.GetComponent<Animator>();
+
+       //PlayerMovment = gameObject.GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
 
-        if(Input.GetAxis("Curar")> 0)
+        if(Input.GetAxis("Curar")> 0 && HealSeaweed <= MaxHealSeaweed && currentLife < maxLife && HealSeaweed > 0)
         {
+            PlayerAnimator.SetBool("Curar", true);
+            if (DoOnce == false)
+            {
+                gameObject.GetComponent<PlayerMovement>().enabled= false;
+                HealEffect.Play();
+                DoOnce= true;
+            }
+            
             CurrenTime += Time.deltaTime;
-            if (currentLife < maxLife && HealSeaweed > 0 && CurrenTime >= TimeToHeal)
+            if (CurrenTime >= TimeToHeal)
             {
                 GiveHealth(1);
                 HealSeaweed -= 1;
                 CurrenTime = 0;
+                HealEffect.Stop();
+                gameObject.GetComponent<PlayerMovement>().enabled = false;
+                DoOnce = false;
+                AmountOfSeaweed.text = HealSeaweed.ToString();
                 
-
             }
         }
         if(Input.GetButtonUp("Curar"))
         {
+            gameObject.GetComponent<PlayerMovement>().enabled = true;
             CurrenTime = 0;
+            HealEffect.Stop();
+            PlayerAnimator.SetBool("Curar", false);
         }
         /*
         if(haveArmor)
@@ -102,7 +132,17 @@ public class Health : MonoBehaviour
         if(currentLife <= 0f)
         {
             //Rodrigo Time !!!!!!
-            pause.PlayerMorreu();
+            PlayerData data = SaveSystem.LoadPlayer();
+            if (data != null)
+            {
+
+                Time.timeScale = 1;
+                SceneManager.LoadScene(data.scenaAtual);
+            }
+            else
+            {
+                SceneManager.LoadScene("Cena 1");
+            }
         }
     }
 
@@ -120,7 +160,8 @@ public class Health : MonoBehaviour
             //int i = Random.Range(0, MaxAmount);
             HealSeaweed += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
-            Destroy(collision.gameObject,0.3f);
+            Destroy(collision.gameObject);
+            AmountOfSeaweed.text = HealSeaweed.ToString();
         }
     }
 
@@ -147,7 +188,7 @@ public class Health : MonoBehaviour
         if(currentLife < maxLife)
         {
             currentLife += GiveHealthAmount;
-            HealthSlider.value += 8;
+            HealthSlider.value = 8 * currentLife;
         }
 
     }

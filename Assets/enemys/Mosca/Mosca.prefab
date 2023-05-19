@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 1487975734}
   - component: {fileID: 2404604398027211925}
   - component: {fileID: 1533152684323426111}
+  - component: {fileID: 6886859049393902693}
   m_Layer: 8
   m_Name: Mosca
   m_TagString: Mosca
@@ -480,6 +481,21 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 0.14
   OverrideMaxDistance: 8.19
+--- !u!114 &6886859049393902693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2608173420859674862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasHit: 0
+  secondsToDisable: 0.3
+  HitEffect: {fileID: 7589027929329425249}
 --- !u!1 &7090008906603646382
 GameObject:
   m_ObjectHideFlags: 0

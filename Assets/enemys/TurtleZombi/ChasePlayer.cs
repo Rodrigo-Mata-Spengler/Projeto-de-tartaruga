@@ -24,7 +24,6 @@ public class ChasePlayer : BTnode
             {
                 bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Correr", false);
                 status = Status.SUCCESS;
-                Debug.LogWarning("aquii");
                 break;
                 
             }

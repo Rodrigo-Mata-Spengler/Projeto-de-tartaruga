@@ -29,6 +29,14 @@ TagManager:
   - CalcioUI
   - CoralUI
   - ourico
+  - MapaPanel
+  - BlastWall
+  - HUD
+  - Audio
+  - CameraFollow
+  - EstaminaSlider
+  - HealthSlider
+  - AlgaText
   layers:
   - Default
   - TransparentFX
@@ -95,6 +103,9 @@ TagManager:
     locked: 0
   - name: Folhas
     uniqueID: 2048314571
+    locked: 0
+  - name: Player
+    uniqueID: 2317317441
     locked: 0
   - name: Espinho
     uniqueID: 1944044643

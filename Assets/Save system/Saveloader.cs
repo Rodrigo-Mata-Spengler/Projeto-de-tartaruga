@@ -33,5 +33,10 @@ public class Saveloader : MonoBehaviour
         player.GetComponent<PlayerMovement>().haveDoubleJump = data.doubleJump;
         player.GetComponent<Dash>().enabled = data.dash;
         player.GetComponent<Blast>().enabled = data.blast;
+
+        //defini as informações do mapa
+        MapControler.mapa1 = data.mapa1;
+        MapControler.mapa2 = data.mapa2;
+        MapControler.mapa3 = data.mapa3;
     }
 }

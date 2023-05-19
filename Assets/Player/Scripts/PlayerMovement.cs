@@ -2,9 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEditor;
 using FMOD.Studio;
+using UnityEngine.VFX;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
 
     [SerializeField] public bool HaveMagicTrident = false;
     [Space]
@@ -30,9 +32,12 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpInput;
     private bool jumpInputReleased;
     public bool haveDoubleJump = false;
+    private bool jumped = false;
 
     [SerializeField]private int JumpTimes = 0; 
     [SerializeField] private int JumpReleasedTimes = 0;
+
+    [SerializeField] private VisualEffect FallEffect;
 
     [Header("Ataque")]
  
@@ -78,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 wallJumpDirection; ///the direction that the player will go while on wall
     private int facingDirection;
 
-    private TrailRenderer trailRender;
 
     private bool canMove = true;
 
@@ -87,8 +91,10 @@ public class PlayerMovement : MonoBehaviour
     private EventInstance PlayerFootstep;
     private void Start()
     {
+        jumped = false;
+
         m_Rigidbody2D = CharacterController2D.m_Rigidbody2D;
-        trailRender = this.GetComponent<TrailRenderer>();
+   
 
         m_Animator = this.GetComponent<Animator>();
 
@@ -126,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         if(HorizontalMove != 0f)
         {
             moving= true;
+
         }
 
         if (jumpInput || jumpInputReleased)
@@ -138,12 +145,19 @@ public class PlayerMovement : MonoBehaviour
             OnAir = false;
             m_Animator.SetBool("Fall", false);
 
+            if(jumped)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Fall, transform.position);
+                FallEffect.Play();
+                
+            }
+            jumped = false;
+
         }
         else
         {
             OnAir = true;
-           
-
+            jumped = true;
         }
 
         if(OnAir &&  m_Rigidbody2D.velocity.y > 0)
@@ -169,6 +183,7 @@ public class PlayerMovement : MonoBehaviour
            NextTimeToAtaque = Time.time + 1 / AtaqueRate;
            Attack();
            m_Animator.SetInteger("Ataque normal index", 1);
+
 
         }
         else if(AtaqueInput && NextTimeToAtaque > Time.time )
@@ -251,17 +266,17 @@ public class PlayerMovement : MonoBehaviour
 
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 1;
-            trailRender.emitting = true;
 
             m_Animator.SetBool("Pulo", true);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
+
+            
         }
         // if he released fall smoothly
         if (jumpInputReleased && m_Rigidbody2D.velocity.y > 0 && !IsTouchingWall)
         {
             JumpReleasedTimes += 1;
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_Rigidbody2D.velocity.x / _yVelJumpRealeasedMod);
-            trailRender.emitting = false;
             m_Animator.SetBool("Pulo", false);
         }
         //Do the second jump
@@ -269,15 +284,15 @@ public class PlayerMovement : MonoBehaviour
         {
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, jumpVel);
             JumpTimes = 2;
-            trailRender.emitting = true;
             m_Animator.SetBool("Pulo", true);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
+
+            
         }
         if(IsTouchingWall && jumpInput && haveWallJump && !m_Grounded)
         {
             IsWallSliding = false;
             //m_Rigidbody2D.velocity = new Vector2(wallJumpForce * wallJumpDirection.x * -facingDirection, jumpVel);
-            trailRender.emitting = true;
             Vector2 force = new Vector2(wallJumpForce * wallJumpDirection.x *-facingDirection, wallJumpForce * wallJumpDirection.y);
             StartCoroutine(StopMove());
             //m_Rigidbody2D.velocity = Vector2.zero;
@@ -285,19 +300,19 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody2D.AddForce(force, ForceMode2D.Impulse);
             m_Animator.SetBool("Pulo", true);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, this.transform.position);
+
+            
         }
 
     }
     public void Attack()
     {
-        m_Rigidbody2D.velocity = Vector2.one;
+        //m_Rigidbody2D.velocity = Vector2.zero;
         //enables the attack hitbox to right and left
         if (Input.GetAxis("Vertical") == 0)
         {
             m_Animator.SetBool("Ataque normal", true); // player animation
             
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-            AttackEnd = false;
            
             if (HaveMagicTrident)
             {
@@ -305,6 +320,7 @@ public class PlayerMovement : MonoBehaviour
                 AtaqueMagicoHitBox.GetComponent<Ataque>().right = true;
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueMagicoHitBox));
                 AtaqueMagicoHitBox_Animator.SetInteger("AtaqueIndex", 1);
+                
             }
             else
             {
@@ -312,6 +328,8 @@ public class PlayerMovement : MonoBehaviour
                 AtaqueHitBox.GetComponent<Ataque>().right = true;
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueHitBox));
                 AtaqueHitBox_Animator.SetInteger("AtaqueNormalIndex", 1);
+              
+                    
 
             }
             
@@ -335,9 +353,6 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
                 
             }
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-            AttackEnd = false;
-
 
 
 
@@ -363,16 +378,18 @@ public class PlayerMovement : MonoBehaviour
                 
 
             }
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-            AttackEnd = false;
+
 
         }
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
+        AttackEnd = false;
 
     }
     //disable the current enabled hitbox
     IEnumerator AttackTime(float AttackDuration, GameObject HitBox)
     {
         yield return new WaitForSeconds(AttackDuration);
+
         HitBox.GetComponent<Ataque>().Detected = false;
         HitBox.GetComponent<Ataque>().HitIndex = 0;
         HitBox.SetActive(false);
@@ -383,10 +400,11 @@ public class PlayerMovement : MonoBehaviour
         m_Animator.SetBool("Ataque normal", false);
         m_Animator.SetInteger("Ataque normal index", 0);
 
+
         AtaqueMagicoHitBox_Animator.SetInteger("AtaqueIndex", 0);
         AtaqueHitBox_Animator.SetInteger("AtaqueNormalIndex", 0);
 
-        AtaqueDownHitBox.GetComponentInChildren<Animator>().SetBool("Ataque", false); 
+        AtaqueDownHitBox.GetComponentInChildren<Animator>().SetBool("Ataque", false);
         AtaqueDownHitBoxMagico.GetComponentInChildren<Animator>().SetBool("Ataque", false);
 
         AtaqueUpHitBoxMagico.GetComponentInChildren<Animator>().SetBool("Ataque", false);
@@ -395,7 +413,7 @@ public class PlayerMovement : MonoBehaviour
           
  
 
-    private void UpdateSound()
+   /*
     {
         Debug.Log(HorizontalMove);
         if(HorizontalMove != 0 && m_Grounded)
@@ -414,7 +432,7 @@ public class PlayerMovement : MonoBehaviour
             PlayerFootstep.stop(STOP_MODE.IMMEDIATE);
         }
     }
-
+   */
     public void PlayFootstep()
     {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerFootstep, this.transform.position);

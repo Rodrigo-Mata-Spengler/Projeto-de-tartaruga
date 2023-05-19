@@ -37,28 +37,34 @@ public class Bruxa : MonoBehaviour
 
     public bool IsStore; ///if the npc have a store
     [SerializeField] GameObject StoreBruxa;//The blacksmith store panel 
-    private bool OnStore = false; // Check's if is already on story
+    public bool OnStore = false; // Check's if is already on story
     //[SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
     private bool inputPressed = false;
 
     private ItensInventory PlayerInventory; // Variable to get Player Inventory
-    private Health PlayerHealth; // Variable to get Player Health
+    private Estamina PlayerEstamina; // Variable to get Player Health
     private GameObject Player; // Player GameObjet
     private MenuPause CanvasMenuPause;
 
 
     private GameObject InputFeedBack;
+
+    public bool hadConversation = false;
+
+    private GameObject HUD;
     private void Start()
     {
         //get's the trigger component
         trigger = this.GetComponent<BoxCollider2D>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
-        PlayerHealth = Player.GetComponent<Health>();
+        PlayerEstamina = Player.GetComponent<Estamina>();
         PlayerInventory = Player.GetComponent<ItensInventory>();
         CanvasMenuPause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
 
         InputFeedBack = gameObject.transform.GetChild(0).gameObject;
+
+        HUD = GameObject.FindGameObjectWithTag("HUD");
     }
 
     private void Update()
@@ -71,15 +77,19 @@ public class Bruxa : MonoBehaviour
         if (Input.GetButtonDown("Interacao"))
         {
             inputPressed = true;
+            InputFeedBack.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2 && hadConversation == false)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
             Player.GetComponent<Animator>().enabled= false;
+
+            //disable HUD
+            HUD.SetActive(false);
 
             StartTyping = false;
             StopAllCoroutines();
@@ -88,13 +98,17 @@ public class Bruxa : MonoBehaviour
             // Debug.Log("apaguei");
             havingConversation = true;
         }
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Player.GetComponent<PlayerMovement>().HaveMagicTrident)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Player.GetComponent<PlayerMovement>().HaveMagicTrident && hadConversation == false)
         {
+            npcNameText.text = NpcName;
             conversationObj.SetActive(true);
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
             Player.GetComponent<Animator>().enabled = false;
+
+            //disable HUD
+            HUD.SetActive(false);
 
             textLocation = 3;
             StartTyping = false;
@@ -123,9 +137,20 @@ public class Bruxa : MonoBehaviour
             havingConversation = false;
             Player.GetComponent<Animator>().enabled = true;
 
+
+            //enable HUD
+            HUD.SetActive(true);
         }
-        else if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
+        else if (textLocation == NpcWords.Length)
         {
+            textLocation += 1;
+            hadConversation = true;
+        }
+        if (inputPressed && hadConversation)
+        {
+            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
             if (IsStore && OnStore == false)
             {
                 conversationObj.SetActive(false);
@@ -134,18 +159,21 @@ public class Bruxa : MonoBehaviour
                 EventSystem.current.SetSelectedGameObject(StoreBruxa.GetComponent<BruxaStore>().SelectedButton);
 
                 OnStore = true;
-
+                HUD.gameObject.SetActive(true);
             }
         }
-
+        
             // if player press the esc disable the UI interaction obj
-        if (Input.GetKey(KeyCode.Escape) /* || textLocation == NpcWords.Length*/)
+        if (Input.GetKey(KeyCode.Escape))
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
 
+            //enable HUD
+            HUD.gameObject.SetActive(true);
         }
+        
     }
     //method that run the courotine
     private void ContinueStory()
@@ -204,6 +232,12 @@ public class Bruxa : MonoBehaviour
             //disable the interaction UI
             conversationObj.SetActive(false);
             InputFeedBack.SetActive(false);
+
+            OnStore = false;
+            StoreBruxa.SetActive(false);
+
+            //enable HUD
+            HUD.gameObject.SetActive(true);
         }
 
     }
@@ -218,10 +252,18 @@ public class Bruxa : MonoBehaviour
             PlayerInventory.conchas -= Cost[0];
             PlayerInventory.coral -= Cost[1];
 
-            Player.GetComponent<PlayerMovement>().enabled = true;
+            //give more mana
+            PlayerEstamina.MaxEstamina = PlayerEstamina.MaxEstamina * 2;
 
-            inputPressed = false;
+            PlayerEstamina.GiveEstamina(5);
+
+           Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
+            StoreBruxa.SetActive(false);
+            inputPressed = false;
+
+            //enable HUD
+            HUD.SetActive(true);
         }
         else
         {
@@ -237,5 +279,9 @@ public class Bruxa : MonoBehaviour
         inputPressed = false;
         Player.GetComponent<Animator>().enabled = true;
         StoreBruxa.SetActive(false);
+        OnStore = false;
+
+        //enable HUD
+        HUD.gameObject.SetActive(true);
     }
 }

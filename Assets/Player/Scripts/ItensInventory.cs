@@ -22,14 +22,14 @@ public class ItensInventory : MonoBehaviour
     private TextMeshProUGUI ossosUI; // bones
 
     private bool passar = false;
-
+    private bool DoOnceMap = false;
     private void Start()
     {
 
     }
     private void Update()
     {
-        if (Input.GetButtonUp("Mapa"))
+        if (Input.GetButtonUp("Inventario"))
         {
             conchasUI = GameObject.FindGameObjectWithTag("ConchaUI").GetComponentInChildren<TextMeshProUGUI>();
             coralUI = GameObject.FindGameObjectWithTag("CoralUI").GetComponentInChildren<TextMeshProUGUI>();
@@ -48,6 +48,13 @@ public class ItensInventory : MonoBehaviour
           
             passar = false;
         }
+
+        if(mapa && !DoOnceMap)
+        {
+            GameObject.FindGameObjectWithTag("MapaPanel").transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().MapButtonInventario.SetActive(true);
+            DoOnceMap = true;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -57,7 +64,7 @@ public class ItensInventory : MonoBehaviour
             conchas += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
             
-            Destroy(collision.gameObject, 0.05f);
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Coral"))
         {
@@ -65,7 +72,7 @@ public class ItensInventory : MonoBehaviour
             coral += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
            
-            Destroy(collision.gameObject, 0.05f);
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Ossos"))
         {
@@ -73,7 +80,7 @@ public class ItensInventory : MonoBehaviour
             ossos += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
             
-            Destroy(collision.gameObject, 0.05f);
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Calcio"))
         {
@@ -81,7 +88,7 @@ public class ItensInventory : MonoBehaviour
             calcio += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
             
-            Destroy(collision.gameObject, 0.05f);
+            Destroy(collision.gameObject);
         }
     }
 }

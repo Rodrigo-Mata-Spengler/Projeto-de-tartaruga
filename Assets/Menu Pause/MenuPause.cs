@@ -7,13 +7,16 @@ using UnityEngine.EventSystems;
 public class MenuPause : MonoBehaviour
 {
     private bool isPaused = false;
-    
+    private ItensInventory PlayerInventory;
 
     [Header("Menu Pause")]
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject InventoryPanel;
+    [SerializeField] private GameObject OptionsPanel;
+    [SerializeField] private GameObject AudioPanel;
+    [SerializeField] private GameObject ControlsPanel;
 
-    public bool panelOpen = false;
+    [HideInInspector] public bool panelOpen = false;
 
     [Header("Menu Morte")]
     [SerializeField] private GameObject deathPanel;
@@ -26,6 +29,9 @@ public class MenuPause : MonoBehaviour
     [Header("Botão Menu Principal")]
     [SerializeField] private string nomeMenu;
 
+    [Header("Hud GameObject")]
+    [SerializeField] private GameObject HUDPanel;
+
     [Header("UIKeyboard move")]
     public GameObject PauseFirstButton;
     public GameObject OptionsFirstButton;
@@ -33,8 +39,9 @@ public class MenuPause : MonoBehaviour
     public GameObject primeiroItem;
     public GameObject ultimoSave;
     public GameObject voltarInventario;
+    public GameObject MapButtonInventario;
 
-    public bool painelOpen = false;
+    [HideInInspector]public bool painelOpen = false;
 
     private void Start()
     {
@@ -44,11 +51,14 @@ public class MenuPause : MonoBehaviour
         Time.timeScale = 1;
         deathPanel.SetActive(false);
         mortePanel = false;
+
+        PlayerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<ItensInventory>();
     }
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape) && mortePanel == false)
+
+        if (Input.GetKeyDown(KeyCode.Escape) && mortePanel == false )
         {
             SisPause(pausePanel);
             ///clear selected object
@@ -57,7 +67,7 @@ public class MenuPause : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(PauseFirstButton);
             
         }
-        if(Input.GetButtonDown("Mapa") && mortePanel == false)
+        if(Input.GetButtonDown("Inventario") && mortePanel == false )
         {
             SisPause(InventoryPanel);
             ///clear selected object
@@ -66,16 +76,27 @@ public class MenuPause : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(primeiroItem);
             
         }
+        if (Input.GetButtonDown("Mapa") && mortePanel == false && PlayerInventory.mapa == true)
+        {
+            SisPause(mapa);
+            ///clear selected object
+            EventSystem.current.SetSelectedGameObject(null);
+            ///set a new selected object
+            EventSystem.current.SetSelectedGameObject(primeiroItem);
+
+        }
     }
     //ao clicar esc vai ao menu de pause
     private void Pausar(GameObject PanelToDisable)
     {
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = false;
+        Cursor.visible = true;
         PanelToDisable.SetActive(true);
         isPaused = true;
-        panelOpen = true;
+        HUDPanel.SetActive(false);
+
+
     }
 
     //ao clicar esc de novo ou no botão sai do menu de pause
@@ -86,7 +107,13 @@ public class MenuPause : MonoBehaviour
         Cursor.visible = false;
         PanelToDisable.SetActive(false);
         isPaused = false;
-        panelOpen = false;
+
+        HUDPanel.SetActive(true);
+        InventoryPanel.SetActive(false);
+        mapa.SetActive(false);
+        OptionsPanel.SetActive(false);
+        AudioPanel.SetActive(false);
+        ControlsPanel.SetActive(false);
     }
 
     private void SisPause(GameObject Panel)

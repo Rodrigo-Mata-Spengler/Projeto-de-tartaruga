@@ -56,7 +56,11 @@
 			<destination>{8e8b158e-45c1-4b66-a896-be62718fc594}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{8831257d-3768-4789-8f18-912395ca1a50}" />
+	<object class="EventAutomatableProperties" id="{8831257d-3768-4789-8f18-912395ca1a50}">
+		<property name="maximumDistance">
+			<value>4.5999999</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{610d80d8-1a23-4ef3-ab4c-be7a480df4af}" />
 	<object class="GroupTrack" id="{e1b68829-d1b5-4916-8672-7db7baf405da}">
 		<relationship name="modules">
@@ -176,8 +180,8 @@
 	<object class="MixerBusFader" id="{67a56d0c-005d-46f6-8b76-18bb620551d7}" />
 	<object class="MixerBusFader" id="{155207ca-e0d4-4dc0-9251-ff4b2357fd4a}" />
 	<object class="SpatialiserEffect" id="{65722df7-cac8-4e4a-ad7e-98fee4949582}">
-		<property name="distanceRolloffType">
-			<value>2</value>
+		<property name="maximumDistance">
+			<value>4.5999999</value>
 		</property>
 		<property name="soundSize">
 			<value>10000</value>

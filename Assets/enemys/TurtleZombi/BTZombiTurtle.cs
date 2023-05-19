@@ -47,12 +47,12 @@ public class BTZombiTurtle : MonoBehaviour
 
     private void Awake()
     {
-        LookAtPlayer();
+        //LookAtPlayer();
     }
 
     IEnumerator FindTargetsWithDelay(float delay)
     {
-        while (true)
+        while (true && enemyHealth.currentHealth > 0)
         {
             yield return new WaitForSeconds(delay);
 
@@ -69,10 +69,7 @@ public class BTZombiTurtle : MonoBehaviour
             {
                 lookingRight= true;
             }
-            if(enemyHealth.currentHealth <= 0)
-            {
-                this.GetComponent<BTZombiTurtle>().enabled= false;
-            }
+
         }
     }
     public void LookAtPlayer()

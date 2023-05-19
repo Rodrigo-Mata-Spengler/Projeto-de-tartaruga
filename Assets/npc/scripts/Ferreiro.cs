@@ -37,7 +37,7 @@ public class Ferreiro : MonoBehaviour
 
     public bool IsStore; ///if the npc have a store
     [SerializeField] GameObject StoreFerreiro;//The blacksmith store panel 
-    private bool OnStore = false; // Check's if is already on story
+    public bool OnStore = false; // Check's if is already on story
     //[SerializeField] private GameObject StoreButton; /// A button from the store UI panel, to be selected after the panel is enabled
     private bool inputPressed = false;
 
@@ -47,7 +47,9 @@ public class Ferreiro : MonoBehaviour
     private MenuPause CanvasMenuPause;
 
     private GameObject InputFeedBack;
+    public bool hadConversation = false;
 
+    private GameObject HUD;
     private void Start()
     {
         //get's the trigger component
@@ -59,6 +61,8 @@ public class Ferreiro : MonoBehaviour
         CanvasMenuPause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
 
         InputFeedBack = gameObject.transform.GetChild(0).gameObject;
+
+        HUD = GameObject.FindGameObjectWithTag("HUD");
     }
 
     private void Update()
@@ -71,15 +75,19 @@ public class Ferreiro : MonoBehaviour
         if (Input.GetButtonDown("Interacao"))
         {
             inputPressed = true;
+            InputFeedBack.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false )
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
             Player.GetComponent<Animator>().enabled = false;
+
+            //disable HUD
+            HUD.SetActive(false);
 
             StartTyping = false;
             StopAllCoroutines();
@@ -98,9 +106,17 @@ public class Ferreiro : MonoBehaviour
             ContinueStory();
 
         }
-        //if paragraph were over than disable the UI interaction obj
-        else if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
+        else if (textLocation == NpcWords.Length)
         {
+            textLocation += 1;
+            hadConversation = true;
+        }
+        //if paragraph were over than disable the UI interaction obj
+        if (inputPressed && hadConversation)
+        {
+            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
             conversationObj.SetActive(false);
             ///checks if his have a store, if it does display the store panel
             if (IsStore && OnStore == false)
@@ -110,25 +126,23 @@ public class Ferreiro : MonoBehaviour
                 EventSystem.current.SetSelectedGameObject(StoreFerreiro.GetComponent<FerreiroStore>().SelectedButton);
                 
                 OnStore = true;
+                HUD.SetActive(true);
+            }
 
-            }
-            else
-            {
-                CanvasMenuPause.panelOpen = false;
-                Player.GetComponent<PlayerMovement>().enabled = true;
-                havingConversation = false;
-                Player.GetComponent<Animator>().enabled = true;
-            }
         }
-
+        
         // if player press the esc disable the UI interaction obj
-        if (Input.GetKey(KeyCode.Escape) /* || textLocation == NpcWords.Length*/)
+        if (Input.GetKey(KeyCode.Escape))
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
 
+            //enable HUD
+            HUD.SetActive(true);
+
         }
+        
     }
     //method that run the courotine
     private void ContinueStory()
@@ -187,6 +201,9 @@ public class Ferreiro : MonoBehaviour
             //disable the interaction UI
             conversationObj.SetActive(false);
             InputFeedBack.SetActive(false);
+
+            OnStore = false;
+            StoreFerreiro.SetActive(false);
         }
 
     }
@@ -201,10 +218,16 @@ public class Ferreiro : MonoBehaviour
             PlayerHealth.maxLife *= 2;
             PlayerHealth.currentLife = PlayerHealth.maxLife;
             PlayerHealth.haveArmor = true;
+            PlayerHealth.HealthSlider.value = PlayerHealth.currentLife * 8;
 
-            Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<PlayerMovement>().enabled = true; 
+            Player.GetComponent<Animator>().enabled = true;
+            StoreFerreiro.SetActive(false);
             inputPressed = false;
             OnStore = false;
+
+            //enable HUD
+            HUD.SetActive(true);
         }
         else
         {
@@ -219,5 +242,9 @@ public class Ferreiro : MonoBehaviour
         inputPressed = false;
         Player.GetComponent<Animator>().enabled = true;
         StoreFerreiro.SetActive(false);
+        OnStore = false;
+
+        //enable HUD
+        HUD.SetActive(true);
     }
 }

@@ -27,6 +27,10 @@ public class SaveStatue : MonoBehaviour
             Vaso1.SetBool("Salvo", true);
             Vaso2.SetBool("Salvo", true);
             playerGO.GetComponent<Animator>().SetBool("Rezar", true);
+            playerGO.GetComponent<Health>().RezarEffect.Play();
+            playerGO.GetComponent<Health>().currentLife = playerGO.GetComponent<Health>().maxLife;
+
+            playerGO.GetComponent<Health>().HealthSlider.value = playerGO.GetComponent<Health>().maxLife * 8;
             //rend.color = Color.green;
         }
     }
@@ -42,13 +46,15 @@ public class SaveStatue : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag(player))
         {
             interacao = false;
             playerGO = null;
-            rend.color = Color.white;
+            collision.GetComponent<Health>().RezarEffect.Stop();
+            collision.GetComponent<Animator>().SetBool("Rezar", false);
+            //rend.color = Color.white;
         }
-    }*/
+    }
 }

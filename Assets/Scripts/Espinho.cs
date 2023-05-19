@@ -33,10 +33,9 @@ public class Espinho : MonoBehaviour
             
             if (Time.time > TeleportTime)
             {
-               Player.transform.position = new Vector2(TransportPosition.position.x, TransportPosition.position.y);
+               
                 Detected = false;
                 teleported = true;
-                RespawnTime = Time.time + RespawnTimeCoolDown;
 
             }
 
@@ -46,27 +45,26 @@ public class Espinho : MonoBehaviour
         if (teleported)
         {
 
-            if (Time.time > RespawnTime)
-            {
-                animationEspinho.Play("epinhoTelaApagar");
-                teleported= false;
-                Player.GetComponent<PlayerMovement>().enabled = true;
-            }
+            animationEspinho.Play("epinhoTelaApagar");
+            teleported = false;
+            Player.transform.position = new Vector2(TransportPosition.position.x, TransportPosition.position.y);
+            Player.GetComponent<PlayerMovement>().enabled = true;
+
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
             TeleportTime = Time.time + TeleportTimeCoolDown;
             Player = collision.gameObject;
             Player.GetComponent<Health>().Damage(1);
-            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0.5f, 15f);
+            Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 15f);
             Player.GetComponent<PlayerMovement>().enabled = false;
-            Detected= true;
+            Detected = true;
             animationEspinho.Play("espinhoAnimatio");
-  
+
         }
     }
+
 }
