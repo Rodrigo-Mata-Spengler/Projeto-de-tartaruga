@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, teste};
+enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, teste, desativado, ativado};
 enum DirecaoAtaque { direita, esquerda, none};
 public class SombraBehaviour : MonoBehaviour
 {
     [Header("Referencia do Player")]
     [SerializeField] private GameObject player;
+    [SerializeField] private string playerTag;
 
     [Header("Status")]
-    [SerializeField] private SombraStatus status = SombraStatus.idle; //mostra o status da sombra atual
+    [SerializeField] private SombraStatus status = SombraStatus.desativado; //mostra o status da sombra atual
     [SerializeField] private float vidaMaxima;
 
     [Header("Sombra Brain")]
@@ -179,6 +180,8 @@ public class SombraBehaviour : MonoBehaviour
         ShutDownAtaque5();
         SetUpAtaque6();
         ataque1Atual = 0;
+
+        status = SombraStatus.desativado;
     }
     private void Update()
     {
@@ -214,6 +217,21 @@ public class SombraBehaviour : MonoBehaviour
                 SetUpAtaque5();
                 SetUpAtaque6();
                 break;
+            case SombraStatus.desativado:
+                Desativado();
+                break;
+            case SombraStatus.ativado:
+                ativado();
+                break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(playerTag))
+        {
+            status = SombraStatus.ativado;
+            player = collision.gameObject;
         }
     }
 
@@ -267,9 +285,54 @@ public class SombraBehaviour : MonoBehaviour
         }
         else
         {
-            SetUpIdle();
-            status = SombraStatus.idle;
+            //SetUpIdle();
+            //status = SombraStatus.idle;
         }
+    }
+
+    private void Desativado()
+    {
+        pinca1.SetActive(false);
+        pinca2.SetActive(false);
+        pinca3.SetActive(false);
+        pinca4.SetActive(false);
+        pinca5.SetActive(false);
+        pinca6.SetActive(false);
+        pinca7.SetActive(false);
+        pinca8.SetActive(false);
+
+        tentaculo1.SetActive(false);
+        tentaculo2.SetActive(false);
+        tentaculo3.SetActive(false);
+        tentaculo4.SetActive(false);
+
+        Onda1.SetActive(false);
+        Onda2.SetActive(false);
+    }
+
+    private void ativado()
+    {
+        pinca1.SetActive(true);
+        pinca2.SetActive(true);
+        pinca3.SetActive(true);
+        pinca4.SetActive(true);
+        pinca5.SetActive(true);
+        pinca6.SetActive(true);
+        pinca7.SetActive(true);
+        pinca8.SetActive(true);
+
+        tentaculo1.SetActive(true);
+        tentaculo2.SetActive(true);
+        tentaculo3.SetActive(true);
+        tentaculo4.SetActive(true);
+
+        Onda1.SetActive(true);
+        Onda2.SetActive(true);
+
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        SombraBrain();
+
     }
 
     //Metodos relacionados a idle
@@ -582,6 +645,7 @@ public class SombraBehaviour : MonoBehaviour
     {
         if (posControle == false)
         {
+            Debug.Log("teste");
             tentaculo1.transform.position = Vector3.MoveTowards(tentaculo1.transform.position, posTentaculo1Final, velocidadePreparoAtaque5 * Time.deltaTime);
 
             tentaculo2.transform.position = Vector3.MoveTowards(tentaculo2.transform.position, posTentaculo2Final, velocidadePreparoAtaque5 * Time.deltaTime);

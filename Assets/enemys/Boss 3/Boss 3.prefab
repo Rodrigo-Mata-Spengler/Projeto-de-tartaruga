@@ -1667,7 +1667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043228773}
   m_LocalRotation: {x: -0, y: -0, z: 0.19040912, w: 0.98170483}
-  m_LocalPosition: {x: -13.63, y: 20.21, z: 0}
+  m_LocalPosition: {x: -13.63, y: 20.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3463,6 +3463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerTag: 
   status: 0
   vidaMaxima: 10
   livreArbitrio: 0
@@ -3521,24 +3522,29 @@ MonoBehaviour:
   tentaculo1: {fileID: 1787200999}
   animTentaculo1: {fileID: 707133339}
   posTentaculo1: {x: -8.49, y: -2.65, z: 0}
+  posTentaculo1Final: {x: 0, y: 0, z: 0}
   posInicialTentaculo1: {x: -8.49, y: -6.16, z: 0}
   posFinalTentaculo1: {x: -8.49, y: -1.1199999, z: 0}
   tentaculo2: {fileID: 1957773098}
   animTentaculo2: {fileID: 1796218340}
   posTentaculo2: {x: -4.39, y: -2.65, z: 0}
+  posTentaculo2Final: {x: 0, y: 0, z: 0}
   posInicialTentaculo2: {x: -4.39, y: -6.16, z: 0}
   posFinalTentaculo2: {x: -4.39, y: -1.12, z: 0}
   tentaculo3: {fileID: 1570192734}
   animTentaculo3: {fileID: 101815850}
   posTentaculo3: {x: 4.39, y: -2.65, z: 0}
+  posTentaculo3Final: {x: 0, y: 0, z: 0}
   posInicialTentaculo3: {x: 4.39, y: -6.16, z: 0}
   posFinalTentaculo3: {x: 4.39, y: -1.12, z: 0}
   tentaculo4: {fileID: 874045110}
   animTentaculo4: {fileID: 10893629}
   posTentaculo4: {x: 8.49, y: -2.65, z: 0}
+  posTentaculo4Final: {x: 0, y: 0, z: 0}
   posInicialTentaculo4: {x: 8.49, y: -6.16, z: 0}
   posFinalTentaculo4: {x: 8.49, y: -1.12, z: 0}
   velocidadeAtaque5: 5
+  velocidadePreparoAtaque5: 0
   tempoEsperaAtaque5: 2
   tempoDuracaoAtaque5: 5
   pinca8: {fileID: 813401575}
