@@ -75,7 +75,7 @@ public class Ataque : MonoBehaviour
         }
         else if (collision.CompareTag("Guardiao") )
         {
-            collision.transform.GetComponent<Rigidbody2D>().AddForce(collision.transform.right * EnemyimpulseForce);
+            //collision.transform.GetComponent<Rigidbody2D>().AddForce(collision.transform.right * EnemyimpulseForce);
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<GuardiaoHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoGuardiao, collision.transform.position);
