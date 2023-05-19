@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     public int maxLife;
     public int currentLife;
     //[SerializeField] private GameObject lifeImages;
-    [SerializeField] public Slider HealthSlider;
+    [HideInInspector]public Slider HealthSlider;
 
     public bool haveArmor = false;
     private CinemachineImpulseSource impulseSource;
@@ -35,10 +35,10 @@ public class Health : MonoBehaviour
     public float CurrenTime = 0f;
     public float TimeToHeal = 1.5f;
 
-    [SerializeField] private TextMeshProUGUI AmountOfSeaweed;
+     private TextMeshProUGUI AmountOfSeaweed;
 
     [Space]
-    [SerializeField] private MenuPause pause;
+     private MenuPause pause;
 
     public VisualEffect HealEffect;
     public VisualEffect RezarEffect;
@@ -54,6 +54,9 @@ public class Health : MonoBehaviour
         //currentLife = maxLife;
 
         //HealSeaweed = MaxHealSeaweed;
+        pause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
+        AmountOfSeaweed = GameObject.FindGameObjectWithTag("AlgaText").GetComponent<TextMeshProUGUI>();
+        HealthSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
 
         rb = gameObject.GetComponent<Rigidbody2D>();
 

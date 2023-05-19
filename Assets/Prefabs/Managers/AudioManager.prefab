@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0.138
-  ambienceVolume: 0.115
+  musicVolume: 0.184
+  ambienceVolume: 0.168
   SFXVolume: 1
 --- !u!114 &4232391287602610950
 MonoBehaviour:
@@ -110,11 +110,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ambience>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -176207269
+      Data2: 1092693503
+      Data3: 557190836
+      Data4: -1234182607
+    Path: event:/Praia/Praia
   <Music>k__BackingField:
     Guid:
       Data1: 1658853866
@@ -173,11 +173,11 @@ MonoBehaviour:
     Path: event:/Protagonista/Pulo
   <Fall>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1130769165
+      Data2: 1119908183
+      Data3: -490296138
+      Data4: -1562607188
+    Path: event:/Protagonista/Aterissagem
   <ItemGrab>k__BackingField:
     Guid:
       Data1: -1818454000
@@ -292,11 +292,11 @@ MonoBehaviour:
     Path: event:/Puzzles/Quadrado
   <Ferreiro>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 2142633123
+      Data2: 1228101853
+      Data3: -580943182
+      Data4: 1017144965
+    Path: event:/Ferreiro/Forjando
   <Bruxa>k__BackingField:
     Guid:
       Data1: -481857872

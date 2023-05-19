@@ -8,7 +8,7 @@ public class Estamina : MonoBehaviour
 {
     public float MaxEstamina; // the maximum of stamina
 
-    [SerializeField] private GameObject EstaminaSlider;
+    private GameObject EstaminaSlider;
 
     [Header("Current Estamina")]
     [Range(0,10)]
@@ -26,11 +26,12 @@ public class Estamina : MonoBehaviour
 
     private void Update()
     {
+        EstaminaSlider = GameObject.FindGameObjectWithTag("EstaminaSlider");
         EstaminaSlider.GetComponent<Slider>().value = CurrentEstamina;
     }
     private void Awake()
     {
-        EstaminaSlider.GetComponent<Slider>().value = CurrentEstamina;
+        
     }
     // Do damage
     public void Damage(float GiveEstaminaDamageAmount)

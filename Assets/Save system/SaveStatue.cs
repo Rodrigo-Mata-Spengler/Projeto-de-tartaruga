@@ -28,6 +28,9 @@ public class SaveStatue : MonoBehaviour
             Vaso2.SetBool("Salvo", true);
             playerGO.GetComponent<Animator>().SetBool("Rezar", true);
             playerGO.GetComponent<Health>().RezarEffect.Play();
+            playerGO.GetComponent<Health>().currentLife = playerGO.GetComponent<Health>().maxLife;
+
+            playerGO.GetComponent<Health>().HealthSlider.value = playerGO.GetComponent<Health>().maxLife * 8;
             //rend.color = Color.green;
         }
     }

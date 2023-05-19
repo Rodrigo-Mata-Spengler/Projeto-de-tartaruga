@@ -132,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         if(HorizontalMove != 0f)
         {
             moving= true;
+
         }
 
         if (jumpInput || jumpInputReleased)
@@ -148,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.Fall, transform.position);
                 FallEffect.Play();
+                
             }
             jumped = false;
 
@@ -181,6 +183,7 @@ public class PlayerMovement : MonoBehaviour
            NextTimeToAtaque = Time.time + 1 / AtaqueRate;
            Attack();
            m_Animator.SetInteger("Ataque normal index", 1);
+
 
         }
         else if(AtaqueInput && NextTimeToAtaque > Time.time )
@@ -310,8 +313,6 @@ public class PlayerMovement : MonoBehaviour
         {
             m_Animator.SetBool("Ataque normal", true); // player animation
             
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-            AttackEnd = false;
            
             if (HaveMagicTrident)
             {
@@ -319,6 +320,7 @@ public class PlayerMovement : MonoBehaviour
                 AtaqueMagicoHitBox.GetComponent<Ataque>().right = true;
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueMagicoHitBox));
                 AtaqueMagicoHitBox_Animator.SetInteger("AtaqueIndex", 1);
+                
             }
             else
             {
@@ -326,6 +328,8 @@ public class PlayerMovement : MonoBehaviour
                 AtaqueHitBox.GetComponent<Ataque>().right = true;
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueHitBox));
                 AtaqueHitBox_Animator.SetInteger("AtaqueNormalIndex", 1);
+              
+                    
 
             }
             
@@ -349,9 +353,6 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
                 
             }
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-            AttackEnd = false;
-
 
 
 
@@ -377,16 +378,18 @@ public class PlayerMovement : MonoBehaviour
                 
 
             }
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-            AttackEnd = false;
+
 
         }
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
+        AttackEnd = false;
 
     }
     //disable the current enabled hitbox
     IEnumerator AttackTime(float AttackDuration, GameObject HitBox)
     {
         yield return new WaitForSeconds(AttackDuration);
+
         HitBox.GetComponent<Ataque>().Detected = false;
         HitBox.GetComponent<Ataque>().HitIndex = 0;
         HitBox.SetActive(false);
@@ -397,10 +400,11 @@ public class PlayerMovement : MonoBehaviour
         m_Animator.SetBool("Ataque normal", false);
         m_Animator.SetInteger("Ataque normal index", 0);
 
+
         AtaqueMagicoHitBox_Animator.SetInteger("AtaqueIndex", 0);
         AtaqueHitBox_Animator.SetInteger("AtaqueNormalIndex", 0);
 
-        AtaqueDownHitBox.GetComponentInChildren<Animator>().SetBool("Ataque", false); 
+        AtaqueDownHitBox.GetComponentInChildren<Animator>().SetBool("Ataque", false);
         AtaqueDownHitBoxMagico.GetComponentInChildren<Animator>().SetBool("Ataque", false);
 
         AtaqueUpHitBoxMagico.GetComponentInChildren<Animator>().SetBool("Ataque", false);

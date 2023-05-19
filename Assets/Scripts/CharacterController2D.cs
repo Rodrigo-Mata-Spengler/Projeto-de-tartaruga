@@ -24,7 +24,7 @@ public class CharacterController2D : MonoBehaviour
 
     [Header("Camera Stuff")]
     private CameraFollowObject CameraFollowObject;
-    [SerializeField] private GameObject CameraFollowGO;
+    //[SerializeField] private GameObject CameraFollowGO;
     [HideInInspector] public bool turn = true;
 
     private float _fallSpeedYDampingChangeThreshold;
@@ -60,7 +60,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Start()
     {
-        CameraFollowObject = CameraFollowGO.GetComponent<CameraFollowObject>();
+        CameraFollowObject =GameObject.FindGameObjectWithTag("CameraFollow").GetComponent<CameraFollowObject>();
 
         _fallSpeedYDampingChangeThreshold = CameraManager.Instance._fallSpeedYDapingChangeThreshold;
 

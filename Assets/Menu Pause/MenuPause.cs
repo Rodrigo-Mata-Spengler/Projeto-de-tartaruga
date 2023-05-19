@@ -91,7 +91,7 @@ public class MenuPause : MonoBehaviour
     {
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = false;
+        Cursor.visible = true;
         PanelToDisable.SetActive(true);
         isPaused = true;
         HUDPanel.SetActive(false);

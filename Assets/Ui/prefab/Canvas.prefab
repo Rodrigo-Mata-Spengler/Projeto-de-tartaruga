@@ -772,7 +772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &573694090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1375,10 +1375,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Desci\xE7\xE3o de item"
+  m_text: "\tUma alga especial que o fazendeio vem cultivando h\xE1 algum tempo,
+    \xE9 necess\xE1rio um item dif\xEDcil de se encontrar.\n\n\tAo consumir a alga
+    a vida m\xE1xima do player aumentar\xE1."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e100107a273ae7f4ab17185b8b4504f1, type: 2}
+  m_sharedMaterial: {fileID: -4818999122285030000, guid: e100107a273ae7f4ab17185b8b4504f1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1402,8 +1404,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1438,7 +1440,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -264.82544, y: 0, z: -338.1621, w: -395.20126}
+  m_margin: {x: -264.82544, y: -31.217373, z: -257.6542, w: -395.20126}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1510,7 +1512,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Poc\xE3o"
+  m_text: "      \tUma po\xE7\xE3o m\xE1gica que aumenta a quantidade m\xE1xima da
+    mana.\n\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e100107a273ae7f4ab17185b8b4504f1, type: 2}
   m_sharedMaterial: {fileID: -4818999122285030000, guid: e100107a273ae7f4ab17185b8b4504f1, type: 2}
@@ -1537,8 +1540,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1573,7 +1576,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -295.01907, y: -160.27863, z: -271.50153, w: -135.65692}
+  m_margin: {x: -283.9749, y: -194.98885, z: -260.4574, w: -135.65692}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1791,7 +1794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 71e721208d65ecb45871ece1ba8d0c0a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1f73b2cd4369b145a46d44248909ab7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1948,7 +1951,7 @@ GameObject:
   - component: {fileID: 1037111709}
   m_Layer: 5
   m_Name: Mana
-  m_TagString: Untagged
+  m_TagString: EstaminaSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2228,7 +2231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef11c2d35b3677d4bbd796d1d01718b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cdcf6e28966509b4f982c2622bf6fddc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5156,8 +5159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 585.62, y: -0.011566162}
-  m_SizeDelta: {x: 708.03, y: 1008.7}
+  m_AnchoredPosition: {x: 585.62, y: 6.7373}
+  m_SizeDelta: {x: 708.03, y: 1022.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1419463828763539589
 CanvasRenderer:
@@ -5180,7 +5183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.009433985, g: 0.007342488, b: 0.007342488, a: 0.39607844}
+  m_Color: {r: 0.009433985, g: 0.007342488, b: 0.007342488, a: 0.8509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7170,7 +7173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b95cab8e0d27a89468e81a119b596197, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39c9c2bb8ff5b324d9b27a616c31aa8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8395,6 +8398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1505023965926894008}
+  - component: {fileID: 3502394268653788509}
   m_Layer: 5
   m_Name: convesation
   m_TagString: Untagged
@@ -8423,6 +8427,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!111 &3502394268653788509
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505023965926894009}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 9e09e485fd5f6c2449d42978e5285705, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1505023965959920308
 GameObject:
   m_ObjectHideFlags: 0
@@ -8679,7 +8699,7 @@ GameObject:
   - component: {fileID: 1698489600}
   m_Layer: 5
   m_Name: Health
-  m_TagString: Untagged
+  m_TagString: HealthSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9036,9 +9056,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\tArmadura, ap\xF3s adquirir a armadura a vida m\xE1xima do player ir\xE1
-    dobrar. Fazendo com que ele seja capaz de tomar mais dano sem correr risco de
-    vida."
+  m_text: "\tArmadura de c\xE1lcio capaz de dobrar a vida m\xE1xima do player.\n\n\t
+    Fazendo com que ele seja capaz de tomar mais dano sem correr risco de vida."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e100107a273ae7f4ab17185b8b4504f1, type: 2}
   m_sharedMaterial: {fileID: -4818999122285030000, guid: e100107a273ae7f4ab17185b8b4504f1, type: 2}
@@ -9065,8 +9084,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9101,7 +9120,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -295.01907, y: -160.27863, z: -271.50153, w: -135.65692}
+  m_margin: {x: -295.01907, y: -180.78923, z: -241.52472, w: -135.65692}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9133,6 +9152,7 @@ GameObject:
   - component: {fileID: 1505023966318225194}
   - component: {fileID: 1505023966318225192}
   - component: {fileID: 1505023966318225193}
+  - component: {fileID: 7205456867165957214}
   m_Layer: 5
   m_Name: Conversation text
   m_TagString: Untagged
@@ -9197,8 +9217,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293256677
-  m_fontColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
+    rgba: 15066597
+  m_fontColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9251,12 +9271,28 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 37.30789, y: 69.47642, z: 21.645508, w: 42.18116}
+  m_margin: {x: 37.30789, y: 73.04896, z: 21.645508, w: 42.18116}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!111 &7205456867165957214
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505023966318225195}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 87ff8fa322485c94784982eba79fca7c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 87ff8fa322485c94784982eba79fca7c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1505023966365241504
 GameObject:
   m_ObjectHideFlags: 0
@@ -9323,7 +9359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7d6a70d767bac26448b903b90977505a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1401f24fe9e348044b93b0ac7821dab4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10084,7 +10120,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fd725ad9924a3f5498bc6526966e46d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f225209da79522246a48734bb72bc5ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10101,7 +10137,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505023966536795423}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: f411fe25d0bdcdb42b6e95dad718cf16, type: 2}
   m_Animations:
@@ -10938,13 +10974,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505023967054442392}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8235294}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10973,6 +11009,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 87ff8fa322485c94784982eba79fca7c, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 87ff8fa322485c94784982eba79fca7c, type: 2}
+  - {fileID: 7400000, guid: 1b7ee8e4e5a6b814a936c12172dbca0c, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -11843,7 +11880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.009433985, g: 0.007342488, b: 0.007342488, a: 0.39607844}
+  m_Color: {r: 0.009433985, g: 0.007342488, b: 0.007342488, a: 0.8509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12794,7 +12831,7 @@ GameObject:
   - component: {fileID: 6961404383537570114}
   m_Layer: 5
   m_Name: Alga Text
-  m_TagString: Untagged
+  m_TagString: AlgaText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14170,6 +14207,7 @@ GameObject:
   - component: {fileID: 7446519603048190633}
   - component: {fileID: 8675796187694185668}
   - component: {fileID: 5397830616372875126}
+  - component: {fileID: 8571448940209271876}
   m_Layer: 5
   m_Name: NPC name text
   m_TagString: Untagged
@@ -14234,8 +14272,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14294,6 +14332,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!111 &8571448940209271876
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052399647451623397}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 1b7ee8e4e5a6b814a936c12172dbca0c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 1b7ee8e4e5a6b814a936c12172dbca0c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &4153505008081761849
 GameObject:
   m_ObjectHideFlags: 0
@@ -19041,6 +19095,7 @@ GameObject:
   - component: {fileID: 8227355558750007624}
   - component: {fileID: 7965577234119296028}
   - component: {fileID: 7433196292745646713}
+  - component: {fileID: 5827323087119885635}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -19065,8 +19120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.4292603, y: 0}
-  m_SizeDelta: {x: 13.2463, y: 0}
+  m_AnchoredPosition: {x: 2.5969849, y: 0}
+  m_SizeDelta: {x: 5.194, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7965577234119296028
 CanvasRenderer:
@@ -19089,7 +19144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0.9019608}
+  m_Color: {r: 0.007843138, g: 0.007843138, b: 0.007843138, a: 0.8509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19106,6 +19161,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &5827323087119885635
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528573559501155937}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: ce52bfb7e13a38541b4cb8c29c85d83c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7530368841531012776
 GameObject:
   m_ObjectHideFlags: 0
@@ -20011,8 +20082,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 585.62, y: -0.011566162}
-  m_SizeDelta: {x: 708.03, y: 1008.7}
+  m_AnchoredPosition: {x: 583.6879, y: 6.1325}
+  m_SizeDelta: {x: 711.894, y: 1012.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3686370181984611292
 CanvasRenderer:
@@ -20035,7 +20106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.009433985, g: 0.007342488, b: 0.007342488, a: 0.39607844}
+  m_Color: {r: 0.009433985, g: 0.007342488, b: 0.007342488, a: 0.8509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

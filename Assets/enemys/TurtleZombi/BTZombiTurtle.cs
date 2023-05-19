@@ -47,7 +47,7 @@ public class BTZombiTurtle : MonoBehaviour
 
     private void Awake()
     {
-        LookAtPlayer();
+        //LookAtPlayer();
     }
 
     IEnumerator FindTargetsWithDelay(float delay)

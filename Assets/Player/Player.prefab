@@ -14636,7 +14636,7 @@ MonoBehaviour:
   up: 1
   down: 0
   right: 0
-  impulseForce: 300
+  impulseForce: 100
   EnemyimpulseForce: 400
   HitIndex: 0
   HitEffect: {fileID: 7780154456866803322}
@@ -19665,7 +19665,7 @@ MonoBehaviour:
   up: 0
   down: 1
   right: 0
-  impulseForce: 700
+  impulseForce: 900
   EnemyimpulseForce: 400
   HitIndex: 0
   HitEffect: {fileID: 7780154456866803322}
@@ -30560,7 +30560,7 @@ MonoBehaviour:
   up: 0
   down: 1
   right: 0
-  impulseForce: 300
+  impulseForce: 900
   EnemyimpulseForce: 400
   HitIndex: 0
   HitEffect: {fileID: 7780154456866803322}
@@ -30863,7 +30863,6 @@ MonoBehaviour:
   m_Rigidbody2D: {fileID: 0}
   m_FacingRight: 0
   facingDirection: 0
-  CameraFollowGO: {fileID: 0}
   turn: 1
   OnLandEvent:
     m_PersistentCalls:
@@ -30970,7 +30969,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxEstamina: 5
-  EstaminaSlider: {fileID: 0}
   CurrentEstamina: 5
   AttackToGetEstamina: 2
   amountOfHitToGiveEstamina: 0
@@ -30996,8 +30994,6 @@ MonoBehaviour:
   HealSeaweed: 5
   CurrenTime: 0
   TimeToHeal: 1.74
-  AmountOfSeaweed: {fileID: 0}
-  pause: {fileID: 0}
   HealEffect: {fileID: 461927069386012012}
   RezarEffect: {fileID: 3101027598700042464}
 --- !u!114 &2011585474
@@ -31157,9 +31153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e8ef7e42292344eae806cdd6f0fe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conchas: 5
+  conchas: 0
   coral: 0
-  calcio: 10
+  calcio: 0
   ossos: 0
   mapa: 0
 --- !u!114 &764544940252387656
@@ -31529,7 +31525,7 @@ MonoBehaviour:
   up: 1
   down: 0
   right: 0
-  impulseForce: 300
+  impulseForce: 100
   EnemyimpulseForce: 400
   HitIndex: 0
   HitEffect: {fileID: 7780154456866803322}

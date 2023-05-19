@@ -75,7 +75,7 @@ public class NpcIteraction : MonoBehaviour
             
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
 
             //disable HUD
             HUD.SetActive(false);

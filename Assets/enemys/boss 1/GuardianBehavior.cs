@@ -11,6 +11,7 @@ public class GuardianBehavior : MonoBehaviour
 {
 
     [SerializeField]private GameObject TridenteFlutuando;
+    [SerializeField] private GameObject Wall;
 
 
     private CinemachineImpulseSource impulseSource;
@@ -182,7 +183,7 @@ public class GuardianBehavior : MonoBehaviour
     private void morto()
     {
         TridenteFlutuando.SetActive(true);
-
+        Wall.SetActive(false);
         /*
         PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true; // activated the have magic trident in player movment
         
