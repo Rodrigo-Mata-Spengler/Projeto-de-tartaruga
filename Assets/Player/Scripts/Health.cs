@@ -155,7 +155,7 @@ public class Health : MonoBehaviour
             rb.velocity = new Vector2(transform.position.y, 15f);
 
         }
-        if (collision.gameObject.CompareTag("Alga"))
+        if (collision.gameObject.CompareTag("Alga") && HealSeaweed < MaxHealSeaweed)
         {
             //int i = Random.Range(0, MaxAmount);
             HealSeaweed += 1;
@@ -191,5 +191,11 @@ public class Health : MonoBehaviour
             HealthSlider.value = 8 * currentLife;
         }
 
+    }
+
+    public void ResetLife()
+    {
+        currentLife = maxLife;
+        HealthSlider.value = currentLife * 8;
     }
 }
