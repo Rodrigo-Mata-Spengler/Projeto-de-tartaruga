@@ -77,8 +77,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.98, y: 2.03}
+  m_Offset: {x: 0.0074470188, y: 0.11197032}
+  m_Size: {x: 3.3920207, y: 1.8653224}
   m_Direction: 1
 --- !u!114 &1553709279
 MonoBehaviour:
@@ -126,7 +126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5790235994253298858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7272532, y: 0.50652623, z: -2.5443084}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -171,8 +171,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.47, y: 1.55}
+  m_Offset: {x: -0.0000000036764547, y: -0.030840341}
+  m_Size: {x: 1.8566477, y: 1.1703471}
   m_Direction: 1
 --- !u!212 &5655022733147463252
 SpriteRenderer:
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a7aa9d79c0a31844970636347e33335, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d03bce8ea75e12a448e49a393fd46b47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -246,10 +246,12 @@ MonoBehaviour:
   velocidadeQueda: 8
   tempoDeEspera: 2
   mira: {x: 0, y: 0, z: 0}
-  jumpHeight: 8
+  jumpHeight: 6
   jump: 0
   tempoPulo: 1.5
   dano: {fileID: 1553709277}
+  anim: {fileID: 5892350098832145641}
+  chaoOffSet: 0.1
 --- !u!114 &1309911131368964659
 MonoBehaviour:
   m_ObjectHideFlags: 0

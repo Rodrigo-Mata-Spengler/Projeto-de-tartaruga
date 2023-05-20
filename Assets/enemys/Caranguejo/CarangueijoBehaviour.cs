@@ -24,6 +24,7 @@ public class CarangueijoBehaviour : MonoBehaviour
 
     [Header("Pular")]
     [SerializeField] private Vector3 mira;
+    [SerializeField] private float forca = 0;
     [SerializeField] private float jumpHeight = 0;
     public bool jump = false;
     [SerializeField] private float tempoPulo = 0;
@@ -32,9 +33,14 @@ public class CarangueijoBehaviour : MonoBehaviour
     [Header("Dano")]
     [SerializeField] private GameObject dano;
 
+    [Header("Animação")]
+    [SerializeField] private Animator anim;
+    [SerializeField] private float chaoOffSet = 0;
+
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        dano.SetActive(false);
     }
 
     private void Update()
@@ -46,13 +52,36 @@ public class CarangueijoBehaviour : MonoBehaviour
                 break;
             case CarangueijoStatus.caindo:
                 Cair();
+                RayHitAnim();
                 break;
             case CarangueijoStatus.espera:
                 Espera();
+                RayHitAnim();
                 break;
             case CarangueijoStatus.pulando:
                 Pulo();
+                RayHitAnim();
                 break;
+        }
+    }
+
+    //Controla a animação
+    private void RayHitAnim()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(fonte.transform.position, Vector2.down);
+
+        if (hit.collider != null)
+        {
+            Debug.DrawRay(fonte.transform.position, Vector2.down * hit.distance);
+            Debug.Log(hit.distance);
+            if (hit.distance >= chaoOffSet)
+            {
+                anim.SetBool("OnAir", true);
+            }
+            else
+            {
+                anim.SetBool("OnAir", false);
+            }
         }
     }
 
@@ -108,7 +137,7 @@ public class CarangueijoBehaviour : MonoBehaviour
             //transform.position = Vector3.Slerp(transform.position, mira, velocidadePulo * Time.deltaTime);
 
             float distanceFromPlayer = mira.x - transform.position.x;
-            rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(DirecaoAtaque(), jumpHeight), ForceMode2D.Impulse);
             jump = true;
             proximoPulo = tempoPulo + Time.time;
             dano.SetActive(true);
@@ -120,4 +149,19 @@ public class CarangueijoBehaviour : MonoBehaviour
             jump = false;
         }
     }
+
+    private float DirecaoAtaque()
+    {
+        float dist = mira.x - transform.position.x;
+
+        if (dist >= 0)
+        {
+            return forca;
+        }
+        else
+        {
+            return forca * -1;
+        }
+    }
 }
+
