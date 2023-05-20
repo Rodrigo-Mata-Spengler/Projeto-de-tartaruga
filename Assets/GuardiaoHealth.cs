@@ -6,7 +6,7 @@ using UnityEngine.VFX;
 
 public class GuardiaoHealth : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
     private EnemyHitFeedback enemyHit;
 
     public float MaxHealth;
@@ -43,8 +43,6 @@ public class GuardiaoHealth : MonoBehaviour
         LifePorcentage = currentHealth / 3;
 
         guardianBehavior = this.GetComponent<GuardianBehavior>();
-
-        animator = this.GetComponent<Animator>();
 
         enemyHit= this.GetComponent<EnemyHitFeedback>();
     }

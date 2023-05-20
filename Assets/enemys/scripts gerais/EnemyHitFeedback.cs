@@ -22,7 +22,7 @@ public class EnemyHitFeedback : MonoBehaviour
         if (wasHit)
         {
             StartCoroutine(DisableHitFeedback(secondsToDisable));
-            gameObject.GetComponent<Animator>().SetBool("Dano", true);
+           // gameObject.GetComponent<Animator>().SetBool("Dano", true);
             
         }
     }

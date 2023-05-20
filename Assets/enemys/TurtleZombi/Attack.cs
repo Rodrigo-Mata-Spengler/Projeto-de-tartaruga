@@ -34,12 +34,13 @@ public class Attack : BTnode
                 bt.GetComponent<Rigidbody2D>().velocity = new Vector2(-2f, bt.gameObject.GetComponent<Rigidbody2D>().velocity.y);
             }
 
-            bt.GetComponent<BTZombiTurtle>().lookAt = false;
+            
             if (currentTime > AttackDuration)
             {
                 bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Bater", false);
                 bt.GetComponent<BTZombiTurtle>().CloseTrigger.SetActive(true);
                 bt.GetComponent<BTZombiTurtle>().AttackHitBoxEnemy.SetActive(false);
+                bt.GetComponent<BTZombiTurtle>().LookAtPlayer();
                 status = Status.SUCCESS;
                  break;
             }

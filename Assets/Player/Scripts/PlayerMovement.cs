@@ -103,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
         PlayerFootstep = AudioManager.instance.CreateEventInstance(FMODEvents.instance.PlayerFootstep);
 
+
         AtaqueHitBoxEfeito_Animator = AtaqueHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
         AtaqueMagicoHitBoxEfeito_Animator = AtaqueMagicoHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
 
@@ -431,11 +432,6 @@ public class PlayerMovement : MonoBehaviour
             AtaqueMagicoHitBoxEfeito_Animator.SetInteger("AtaqueIndex", 0);
             AtaqueHitBoxEfeito_Animator.SetInteger("AtaqueNormalIndex", 0);
         }
- 
-
-
-
-
 
     }
           

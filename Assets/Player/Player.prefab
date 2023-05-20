@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 652583622}
   - component: {fileID: 652583624}
   - component: {fileID: 652583623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sprite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 665321756}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AtaqueUpHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 716577366}
   - component: {fileID: 716577365}
   - component: {fileID: 716577364}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1386716083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AtaqueDownHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2001907971}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AtaqueHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 707686489419542108}
   - component: {fileID: 461927069386012012}
   - component: {fileID: 8791385983453693163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player Heal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 5380327040237379226}
   - component: {fileID: 1347291802279559857}
   - component: {fileID: 2236694248346467108}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 865165580520654882}
   - component: {fileID: 2015955023180736309}
   - component: {fileID: 2172695394946480141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "spritem\xE1gico"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1050511281766131322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 6103702199640465842}
   - component: {fileID: 5990504131037165935}
   - component: {fileID: 5951844542392746563}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player Fall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 6261506483718482516}
   - component: {fileID: 2835815065892171649}
   - component: {fileID: 8005968064179578100}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "spritem\xE1gico"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +969,7 @@ Animator:
   m_GameObject: {fileID: 2426255829774034842}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 077c0f0ea4d194647bb67082992073fb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5994107627f2bde458cc84b37e74875f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 8342757369642396811}
   - component: {fileID: 3102150812537728963}
   - component: {fileID: 3306456514029797229}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 9025521824417590869}
   - component: {fileID: 2573719359368370144}
   - component: {fileID: 8341849935823842554}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ Animator:
   m_GameObject: {fileID: 2568756076924916618}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4c42d7d397b179c41914d31c7b2beee3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 79d13cb380581204a9f9ae02806af8aa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1201,7 +1201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2329197162020670496}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AtaqueMagicoHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 3404195457028044934}
   - component: {fileID: 9146269693326983378}
   - component: {fileID: 7260046440645044819}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1320,7 +1320,7 @@ GameObject:
   - component: {fileID: 412004985053098126}
   - component: {fileID: 8958219261953347491}
   - component: {fileID: 8694118365821807309}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 5592692986190019694}
   - component: {fileID: 3101027598700042464}
   - component: {fileID: 8029527814107497294}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player RezarEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,7 +1536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264366109345961790}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AtaqueDownHitBoxMagico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1571,7 +1571,7 @@ GameObject:
   - component: {fileID: 6510072346990542332}
   - component: {fileID: 79988709265897733}
   - component: {fileID: 3492201131907500162}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 2819575720374699099}
   - component: {fileID: 364337147957513668}
   - component: {fileID: 313807126700389351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HitMagicoDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2111,8 +2111,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.027168274, y: 0.02266395}
-  m_Size: {x: 1.0381927, y: 1.8777497}
+  m_Offset: {x: 0.04424286, y: -0.0031087399}
+  m_Size: {x: 0.8953705, y: 1.9292951}
   m_Direction: 0
 --- !u!114 &1622245416
 MonoBehaviour:
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6748649182909457857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4387b24403ea841a951c9a438b6e6e, type: 3}
   m_Name: 
@@ -2420,7 +2420,7 @@ GameObject:
   - component: {fileID: 3316377711987645820}
   - component: {fileID: 4715043758058738480}
   - component: {fileID: 1478588318990196719}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "spritem\xE1gico"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2526,7 +2526,7 @@ GameObject:
   - component: {fileID: 4373818277188201877}
   - component: {fileID: 6944632703281784229}
   - component: {fileID: 1537619117881653770}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2610,7 +2610,7 @@ GameObject:
   - component: {fileID: 4584153084488211221}
   - component: {fileID: 8180825417633420890}
   - component: {fileID: 6134336440741483839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HitMagicoUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2726,7 +2726,7 @@ GameObject:
   - component: {fileID: 7869977160726171806}
   - component: {fileID: 8686835377427342008}
   - component: {fileID: 7929317744162251909}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2808,7 +2808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1484461675062348283}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AtaqueUpHitBoxMagico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2843,7 +2843,7 @@ GameObject:
   - component: {fileID: 1066329014442097923}
   - component: {fileID: 7780154456866803322}
   - component: {fileID: 572827308138961406}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HitMagico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
