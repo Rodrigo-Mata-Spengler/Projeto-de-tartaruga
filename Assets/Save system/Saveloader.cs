@@ -6,7 +6,8 @@ public class Saveloader : MonoBehaviour
 {
     private PlayerData data;
     [SerializeField] private GameObject player;
-
+    [SerializeField] private HordaManager boss1;
+    [SerializeField] private GuardianBehavior boss2;
 
 
     private void Awake()
@@ -39,5 +40,9 @@ public class Saveloader : MonoBehaviour
         MapControler.mapa1 = data.mapa1;
         MapControler.mapa2 = data.mapa2;
         MapControler.mapa3 = data.mapa3;
+
+        //defini as informações dos boss
+        HordaManager.terminou = data.boss1Derrotado;
+        GuardianBehavior.terminou = data.boss2Derrotado;
     }
 }
