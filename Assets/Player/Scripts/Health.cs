@@ -152,7 +152,7 @@ public class Health : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             Damage(1);
-            rb.velocity = new Vector2(transform.position.y, 15f);
+            rb.velocity = new Vector2(transform.position.x, 15f);
 
         }
         if (collision.gameObject.CompareTag("Alga") && HealSeaweed < MaxHealSeaweed)

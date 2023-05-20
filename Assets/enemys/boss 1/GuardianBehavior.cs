@@ -183,7 +183,8 @@ public class GuardianBehavior : MonoBehaviour
     private void morto()
     {
         TridenteFlutuando.SetActive(true);
-        Wall.SetActive(false);
+        Wall.GetComponent<Animator>().SetBool("abrindo", true);
+        Wall.GetComponent<BoxCollider2D>().enabled = true;
         /*
         PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true; // activated the have magic trident in player movment
         

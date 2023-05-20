@@ -35,6 +35,7 @@ public class Ataque : MonoBehaviour
         //checks if hit a enemy
         if (Detected)
         {
+            rb.velocity= Vector3.zero;
             if (HitIndex == 0)
             {
                 HitIndex = 1;
