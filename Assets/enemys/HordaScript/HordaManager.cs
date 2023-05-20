@@ -22,25 +22,31 @@ public class HordaManager : MonoBehaviour
     //Rodrigo Time !!!!!!!!!!!
     //Importante para o Save
     public static bool terminou = false;
-  
 
+    public GameObject Wall;
+
+    private void Start()
+    {
+      
+    }
     private void Update()
     {
         if (ZombsInScene.Length == 0)
         {
             StartRoundTime += Time.deltaTime;
         }
-        if (AmountEnemyToSpawnByRound[CurrentRound] > 0 && Spawn)
+        if (AmountEnemyToSpawnByRound[CurrentRound] >= 0 && Spawn)
         {
-            int i = Random.Range(0, SpawnPoints.Count + 1);
-            ZombiPrefab.GetComponent<BTZombiTurtle>().enabled= true;
+            int i = Random.Range(0, SpawnPoints.Count);
+            
             Instantiate(ZombiPrefab, SpawnPoints[i].position, SpawnPoints[i].rotation);
+            ZombiPrefab.GetComponent<BTZombiTurtle>().enabled = true;
             AmountEnemyToSpawnByRound[CurrentRound] -= 1;
 
             Spawn = false;
             EnemySpawnTime = 0f;
         }
-        ZombsInScene = GameObject.FindGameObjectsWithTag("Enemy");
+        ZombsInScene = GameObject.FindGameObjectsWithTag("Zombi");
         if (!Spawn)
         {
             EnemySpawnTime += Time.deltaTime;
@@ -64,7 +70,9 @@ public class HordaManager : MonoBehaviour
             //Acabou
             Debug.Log("Vitoria");
             terminou = true;
-       }
+            Wall.GetComponent<Animator>().SetBool("abrindo", true);
+            Wall.GetComponent<BoxCollider2D>().enabled = true;
+        }
        
     }
 

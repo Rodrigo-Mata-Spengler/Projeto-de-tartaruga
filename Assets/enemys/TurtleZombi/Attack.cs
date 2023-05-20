@@ -40,6 +40,7 @@ public class Attack : BTnode
                 bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Bater", false);
                 bt.GetComponent<BTZombiTurtle>().CloseTrigger.SetActive(true);
                 bt.GetComponent<BTZombiTurtle>().AttackHitBoxEnemy.SetActive(false);
+                bt.GetComponent<BTZombiTurtle>().LookAtPlayer();
                 status = Status.SUCCESS;
                  break;
             }

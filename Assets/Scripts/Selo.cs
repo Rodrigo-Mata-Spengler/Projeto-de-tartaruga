@@ -10,6 +10,10 @@ public class Selo : MonoBehaviour
 
     private GameObject PLayer;
 
+    public bool ComAgua = false;
+    [SerializeField] private GameObject Cilindro;
+    [SerializeField] private GameObject Poca;
+
     public bool Detected = false;
     private void Start()
     {
@@ -24,20 +28,42 @@ public class Selo : MonoBehaviour
             {
                 case Habilidade.WallJump:
                     PLayer.GetComponent<PlayerMovement>().haveWallJump = true;
+                    if (ComAgua)
+                    {
+                        Cilindro.SetActive(false);
+                        Poca.SetActive(true);
+                    }
                     break;
 
                 case Habilidade.Dash:
                     PLayer.GetComponent<Dash>().enabled = true;
+                    if (ComAgua)
+                    {
+                        Cilindro.SetActive(false);
+                        Poca.SetActive(true);
+                    }
                     break;
 
                 case Habilidade.DoubleJump:
                     PLayer.GetComponent<PlayerMovement>().haveDoubleJump = true;
+                    if (ComAgua)
+                    {
+                        Cilindro.SetActive(false);
+                        Poca.SetActive(true);
+                    }
                     break;
 
                 case Habilidade.Blast:
                     PLayer.GetComponent<Blast>().enabled = true;
+                    if (ComAgua)
+                    {
+                        Cilindro.SetActive(false);
+                        Poca.SetActive(true);
+                    }
                     break;
             }
+
+
         }
 
     }

@@ -21,7 +21,7 @@ public class BlastPrefab : MonoBehaviour
     private void Update()
     {
 
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 3f);
     }
 
 
