@@ -86,7 +86,7 @@ public class EnemyHealth : MonoBehaviour
         {
             if (EnemyTag == EnemyTag.Planta)
             {
-                Destroy(transform.parent);
+                Destroy(transform.parent.gameObject);
             }
             Destroy(gameObject);
         }
