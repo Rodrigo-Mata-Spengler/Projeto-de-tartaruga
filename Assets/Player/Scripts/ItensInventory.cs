@@ -56,14 +56,14 @@ public class ItensInventory : MonoBehaviour
             DoOnceMap = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Conchas"))
+        if(collision.gameObject.CompareTag("Conchas"))
         {
             //int i = Random.Range(0, MaxAmount);
             conchas += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
-
+            
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Coral"))
@@ -71,7 +71,7 @@ public class ItensInventory : MonoBehaviour
             //int i = Random.Range(0, MaxAmount);
             coral += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
-
+           
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Ossos"))
@@ -79,7 +79,7 @@ public class ItensInventory : MonoBehaviour
             //int i = Random.Range(0, MaxAmount);
             ossos += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
-
+            
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Calcio"))
@@ -87,7 +87,7 @@ public class ItensInventory : MonoBehaviour
             //int i = Random.Range(0, MaxAmount);
             calcio += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
-
+            
             Destroy(collision.gameObject);
         }
     }

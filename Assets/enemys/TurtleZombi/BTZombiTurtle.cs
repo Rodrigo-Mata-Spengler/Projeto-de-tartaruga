@@ -78,8 +78,6 @@ public class BTZombiTurtle : MonoBehaviour
         float angle = Mathf.Atan2(0f,look.x)*Mathf.Rad2Deg;
 
         transform.Rotate(0f,angle,0f);
-
-        lookAt = true;
     }
 
     public void PlayAttackSound()

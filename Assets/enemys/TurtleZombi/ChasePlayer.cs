@@ -16,7 +16,6 @@ public class ChasePlayer : BTnode
 
         while (!PlayerClose)
         {
-            bt.GetComponent<BTZombiTurtle>().LookAtPlayer();
             bt.GetComponent<BTZombiTurtle>().m_Animator.SetBool("Correr", true);
             bt.GetComponent<BTZombiTurtle>().lookAt = true;
             bt.transform.position = Vector2.MoveTowards(bt.transform.position, Player.transform.position, ChaseSpeed * Time.deltaTime);

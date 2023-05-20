@@ -13,8 +13,6 @@ public class EnemyHitFeedback : MonoBehaviour
 
     public VisualEffect HitEffect;
 
-    private bool stop;
-
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -26,12 +24,6 @@ public class EnemyHitFeedback : MonoBehaviour
             StartCoroutine(DisableHitFeedback(secondsToDisable));
             gameObject.GetComponent<Animator>().SetBool("Dano", true);
             HitEffect.Play();
-            
-        }
-        if(stop)
-        {
-            StopAllCoroutines();
-            stop= false;
         }
     }
     private IEnumerator DisableHitFeedback(float seconds)
@@ -39,8 +31,6 @@ public class EnemyHitFeedback : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         //gameObject.GetComponent<Animator>().SetBool("Dano", false);
         wasHit = false;
-        HitEffect.Stop();
-        stop= true;
-        //StopAllCoroutines();
+        StopAllCoroutines();
     }
 }

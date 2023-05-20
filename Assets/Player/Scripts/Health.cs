@@ -146,7 +146,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.layer == 8)
         {
@@ -162,11 +162,6 @@ public class Health : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
             Destroy(collision.gameObject);
             AmountOfSeaweed.text = HealSeaweed.ToString();
-        }
-        else
-        {
-
-            Destroy(collision.gameObject);
         }
     }
 
