@@ -150,9 +150,9 @@ public class Health : MonoBehaviour
     {
         if(collision.gameObject.layer == 8)
         {
-            rb.velocity = Vector2.zero;
+            //rb.velocity = Vector2.zero;
             Damage(1);
-            rb.velocity = new Vector2(transform.position.x, 15f);
+            //rb.velocity = new Vector2(transform.position.x, 15f);
 
         }
         if (collision.gameObject.CompareTag("Alga") && HealSeaweed < MaxHealSeaweed)
@@ -162,6 +162,10 @@ public class Health : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
             Destroy(collision.gameObject);
             AmountOfSeaweed.text = HealSeaweed.ToString();
+        }
+        else
+        {
+            Destroy(collision.gameObject);
         }
     }
 

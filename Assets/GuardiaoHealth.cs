@@ -2,7 +2,7 @@ using FMOD;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.VFX;
 
 public class GuardiaoHealth : MonoBehaviour
 {
@@ -34,6 +34,8 @@ public class GuardiaoHealth : MonoBehaviour
 
     [SerializeField] private bool norteado1 = false;
     [SerializeField] private bool norteado2 = false;
+
+    public VisualEffect HitEffect;
     private void Start()
     {
         currentHealth = MaxHealth;
@@ -110,6 +112,7 @@ public class GuardiaoHealth : MonoBehaviour
     public void Damage(float damage)
     {
         currentHealth -= damage;
+        HitEffect.Play();
     }
 
     private void DropItem(GameObject Item)

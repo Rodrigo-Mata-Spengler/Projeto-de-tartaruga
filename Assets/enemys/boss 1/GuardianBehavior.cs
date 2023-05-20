@@ -17,7 +17,7 @@ public class GuardianBehavior : MonoBehaviour
     private CinemachineImpulseSource impulseSource;
     public float tempoInicialDelay = 0f;
     public float tempoDecorridoInicial = 0f;
-    private Animator animator;
+    public Animator animator;
     private GuardiaoHealth EnemyHealth;
     private EnemyHitFeedback EnemyHitFeedback;
 
@@ -101,16 +101,7 @@ public class GuardianBehavior : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         EnemyHealth = this.GetComponent<GuardiaoHealth>();
         EnemyHitFeedback = this.GetComponent<EnemyHitFeedback>();
-
-
-        animator = this.GetComponent<Animator>();
     }
-
-    private void Awake()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -510,7 +501,7 @@ public class GuardianBehavior : MonoBehaviour
     {
         if (lookingRight)
         {
-            cordenadaAlturaAtaque = new Vector3(PlayerObj.transform.position.x - distanciaAtaque, PlayerObj.transform.position.y + alturaAtaque, 0);
+            cordenadaAlturaAtaque = new Vector3(PlayerObj.transform.position.x - distanciaAtaque, this.transform.position.y + alturaAtaque, 0);
         }
         else
         {

@@ -11,6 +11,9 @@ public class Selo : MonoBehaviour
     private GameObject PLayer;
 
     public bool Detected = false;
+
+    [SerializeField]private GameObject Ativado;
+    [SerializeField] private GameObject quebrado;
     private void Start()
     {
         PLayer = GameObject.FindGameObjectWithTag("Player");
@@ -38,6 +41,8 @@ public class Selo : MonoBehaviour
                     PLayer.GetComponent<Blast>().enabled = true;
                     break;
             }
+            Ativado.SetActive(false);
+            quebrado.SetActive(true);
         }
 
     }
