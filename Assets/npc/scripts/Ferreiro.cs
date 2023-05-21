@@ -219,6 +219,7 @@ public class Ferreiro : MonoBehaviour
             PlayerHealth.currentLife = PlayerHealth.maxLife;
             PlayerHealth.haveArmor = true;
             PlayerHealth.HealthSlider.value = PlayerHealth.currentLife * 8;
+            Player.GetComponent<PlayerMovement>().HaveArmor = true;
 
             Player.GetComponent<PlayerMovement>().enabled = true; 
             Player.GetComponent<Animator>().enabled = true;

@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] public bool HaveMagicTrident = false;
     [Space]
+    public bool HaveArmor = false;
     private Animator m_Animator;
 
     [Header("Movment")]
@@ -352,8 +353,13 @@ public class PlayerMovement : MonoBehaviour
 
                 AtaqueHitBox.transform.GetChild(1).gameObject.SetActive(true);
                 AtaqueHitBox.transform.GetChild(1).gameObject.GetComponent<Ataque>().right = true;
+                
+
+                if (!HaveArmor)
+                {
+                    AtaqueHitBoxEfeito_Animator.SetInteger("AtaqueNormalIndex", 1);
+                }
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueHitBox));
-                AtaqueHitBoxEfeito_Animator.SetInteger("AtaqueNormalIndex", 1);
 
             }
             
@@ -377,8 +383,15 @@ public class PlayerMovement : MonoBehaviour
 
                 AtaqueUpHitBox.transform.GetChild(1).gameObject.SetActive(true);
                 AtaqueUpHitBox.transform.GetChild(1).gameObject.GetComponent<Ataque>().up = true;
-                AtaqueUpHitBoxEfeito_Animator.SetBool("Ataque", true);
+
+                if (!HaveArmor)
+                {
+                    AtaqueUpHitBoxEfeito_Animator.SetBool("Ataque", true);
+                }
+                    
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
+
+
                 
             }
 
@@ -403,7 +416,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 AtaqueDownHitBox.transform.GetChild(1).gameObject.SetActive(true);
                 AtaqueDownHitBox.transform.GetChild(1).gameObject.GetComponent<Ataque>().down = true;
-                AtaqueDownHitBoxEfeito_Animator.SetBool("Ataque", true);
+
+                if (!HaveArmor)
+                {
+                    AtaqueDownHitBoxEfeito_Animator.SetBool("Ataque", true);
+                }
+
+                
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBox));
             }
 
@@ -441,7 +460,10 @@ public class PlayerMovement : MonoBehaviour
     }
           
  
-
+    public void GiveArmorAnimation()
+    {
+        m_Animator.SetBool("Armadura", true);
+    }
    /*
     {
         Debug.Log(HorizontalMove);
