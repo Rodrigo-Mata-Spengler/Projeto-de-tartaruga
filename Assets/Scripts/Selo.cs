@@ -27,18 +27,22 @@ public class Selo : MonoBehaviour
             {
                 case Habilidade.WallJump:
                     PLayer.GetComponent<PlayerMovement>().haveWallJump = true;
+                    PLayer.GetComponent<Estamina>().enabled = true;
                     break;
 
                 case Habilidade.Dash:
                     PLayer.GetComponent<Dash>().enabled = true;
+                    
                     break;
 
                 case Habilidade.DoubleJump:
                     PLayer.GetComponent<PlayerMovement>().haveDoubleJump = true;
+                    PLayer.GetComponent<Estamina>().enabled = true;
                     break;
 
                 case Habilidade.Blast:
                     PLayer.GetComponent<Blast>().enabled = true;
+                    PLayer.GetComponent<Estamina>().enabled = true;
                     break;
             }
             Ativado.SetActive(false);

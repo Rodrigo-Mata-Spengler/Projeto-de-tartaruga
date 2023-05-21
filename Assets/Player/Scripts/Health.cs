@@ -152,9 +152,14 @@ public class Health : MonoBehaviour
         {
             //rb.velocity = Vector2.zero;
             Damage(1);
-            //rb.velocity = new Vector2(transform.position.x, 15f);
+           //rb.velocity = new Vector2(transform.position.x, 15f);
 
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.CompareTag("Alga") && HealSeaweed < MaxHealSeaweed)
         {
             //int i = Random.Range(0, MaxAmount);
@@ -163,7 +168,7 @@ public class Health : MonoBehaviour
             Destroy(collision.gameObject);
             AmountOfSeaweed.text = HealSeaweed.ToString();
         }
-        else
+        else if (collision.gameObject.CompareTag("Alga") && HealSeaweed == MaxHealSeaweed)
         {
             Destroy(collision.gameObject);
         }

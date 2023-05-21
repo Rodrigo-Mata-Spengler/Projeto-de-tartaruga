@@ -22,8 +22,9 @@ public class HordaManager : MonoBehaviour
     //Rodrigo Time !!!!!!!!!!!
     //Importante para o Save
     public static bool terminou = false;
-  
 
+    [SerializeField]private GameObject Selo;
+    [SerializeField] private GameObject Wall;
     private void Update()
     {
         if (ZombsInScene.Length == 0)
@@ -40,7 +41,7 @@ public class HordaManager : MonoBehaviour
             Spawn = false;
             EnemySpawnTime = 0f;
         }
-        ZombsInScene = GameObject.FindGameObjectsWithTag("Enemy");
+        ZombsInScene = GameObject.FindGameObjectsWithTag("Zombi");
         if (!Spawn)
         {
             EnemySpawnTime += Time.deltaTime;
@@ -61,6 +62,9 @@ public class HordaManager : MonoBehaviour
 
        if(CurrentRound == AmountEnemyToSpawnByRound.Count)
        {
+            Wall.GetComponent<Animator>().SetBool("abrindo", true);
+            Wall.GetComponent<BoxCollider2D>().enabled = true;
+            Selo.SetActive(true);
             //Acabou
             Debug.Log("Vitoria");
             terminou = true;
