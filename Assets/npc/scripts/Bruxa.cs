@@ -146,7 +146,7 @@ public class Bruxa : MonoBehaviour
             textLocation += 1;
             hadConversation = true;
         }
-        if (inputPressed && hadConversation)
+        if (inputPressed && hadConversation && playerDetected)
         {
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
@@ -169,7 +169,7 @@ public class Bruxa : MonoBehaviour
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
-
+            StoreBruxa.SetActive(false);
             //enable HUD
             HUD.gameObject.SetActive(true);
         }

@@ -283,6 +283,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 55424
   Exists: 1
+--- !u!114 &-6708305535215948917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Caixa de Dialogo/Caixa de Dialogo
+  m_EditorClassIdentifier: 
+  Path: event:/Caixa de Dialogo/Caixa de Dialogo
+  Guid:
+    Data1: -687851079
+    Data2: 1181285348
+    Data3: -268475478
+    Data4: -601280379
+  Banks:
+  - {fileID: 6116311271944771259}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6414772162641871808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,10 +685,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638200473981880540
+  lastModified: 638201933304982374
   FileSizes:
   - Name: Desktop
-    Value: 5380
+    Value: 5492
   Exists: 1
 --- !u!114 &-2853720649283485871
 MonoBehaviour:
@@ -1136,6 +1163,7 @@ MonoBehaviour:
   - {fileID: 8692978956279676867}
   - {fileID: -1550074210648515092}
   - {fileID: 8600806448901766104}
+  - {fileID: 6116311271944771259}
   EditorEvents:
   - {fileID: 8492815524371835197}
   - {fileID: 5625031274756143587}
@@ -1210,12 +1238,13 @@ MonoBehaviour:
   - {fileID: -3719907705319471939}
   - {fileID: -8326448085086343532}
   - {fileID: -1890363262711679987}
+  - {fileID: -6708305535215948917}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7437959542684782280}
   StringsBanks:
   - {fileID: -2917927132543349577}
-  cacheTime: 638200480739316514
+  cacheTime: 638201933304982374
   cacheVersion: 131603
 --- !u!114 &40617146194528622
 MonoBehaviour:
@@ -2196,6 +2225,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6116311271944771259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Dialogo.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Dialogo.bank
+  Name: Dialogo
+  StudioPath: bank:/Dialogo
+  lastModified: 638201933304887484
+  FileSizes:
+  - Name: Desktop
+    Value: 5376
+  Exists: 1
 --- !u!114 &6843803553010179858
 MonoBehaviour:
   m_ObjectHideFlags: 0

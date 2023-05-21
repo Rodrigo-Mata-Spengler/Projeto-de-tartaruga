@@ -12,8 +12,13 @@ public class Selo : MonoBehaviour
 
     public bool Detected = false;
 
+    [SerializeField] private GameObject Tridente;
+    [Space]
     [SerializeField]private GameObject Ativado;
     [SerializeField] private GameObject quebrado;
+
+
+    public bool tridente = false;
     private void Start()
     {
         PLayer = GameObject.FindGameObjectWithTag("Player");
@@ -45,8 +50,17 @@ public class Selo : MonoBehaviour
                     PLayer.GetComponent<Estamina>().enabled = true;
                     break;
             }
-            Ativado.SetActive(false);
-            quebrado.SetActive(true);
+            if(!tridente)
+            {
+                Ativado.SetActive(false);
+                quebrado.SetActive(true);
+            }
+            else
+            {
+                Tridente.SetActive(false);
+                GameObject.FindGameObjectWithTag("EstaminaSlider").SetActive(true);
+            }
+
         }
 
     }

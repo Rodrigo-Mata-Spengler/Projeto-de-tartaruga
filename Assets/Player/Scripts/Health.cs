@@ -93,14 +93,15 @@ public class Health : MonoBehaviour
                 HealSeaweed -= 1;
                 CurrenTime = 0;
                 HealEffect.Stop();
-                gameObject.GetComponent<PlayerMovement>().enabled = false;
-                DoOnce = false;
+                //gameObject.GetComponent<PlayerMovement>().enabled = false;
+                
                 AmountOfSeaweed.text = HealSeaweed.ToString();
                 
             }
         }
         if(Input.GetButtonUp("Curar"))
         {
+            DoOnce = false;
             gameObject.GetComponent<PlayerMovement>().enabled = true;
             CurrenTime = 0;
             HealEffect.Stop();
@@ -131,6 +132,8 @@ public class Health : MonoBehaviour
 
         if(currentLife <= 0f)
         {
+            PlayerAnimator.SetTrigger("Morto");
+
             //Rodrigo Time !!!!!!
             PlayerData data = SaveSystem.LoadPlayer();
             if (data != null)

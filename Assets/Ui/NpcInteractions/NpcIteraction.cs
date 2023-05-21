@@ -63,7 +63,7 @@ public class NpcIteraction : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        if(Input.GetButtonDown("Interacao"))
+        if(Input.GetButtonDown("Interacao") && playerDetected)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -113,13 +113,14 @@ public class NpcIteraction : MonoBehaviour
         }
 
         // if player press the esc disable the UI interaction obj
-        /*
-        if (Input.GetKey(KeyCode.Escape)  //|| textLocation == NpcWords.Length)
+        
+        if (Input.GetKey(KeyCode.Escape))
         {
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<Animator>().enabled = true;
         }
-        */
+        
     }
     //method that run the courotine
     private void ContinueStory()
