@@ -54,9 +54,9 @@ public class Health : MonoBehaviour
         //currentLife = maxLife;
 
         //HealSeaweed = MaxHealSeaweed;
-        pause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
-        AmountOfSeaweed = GameObject.FindGameObjectWithTag("AlgaText").GetComponent<TextMeshProUGUI>();
-        HealthSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+        pause = GameObject.FindGameObjectWithTag("Ui Canvas").GetComponent<MenuPause>();
+        //AmountOfSeaweed = GameObject.FindGameObjectWithTag("AlgaText").GetComponent<TextMeshProUGUI>();
+        //HealthSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
 
         rb = gameObject.GetComponent<Rigidbody2D>();
 
@@ -64,9 +64,9 @@ public class Health : MonoBehaviour
 
         PlayerHitFeedbackScript = gameObject.GetComponent<PlayerHitFeedback>();
 
-        AmountOfSeaweed.text = HealSeaweed.ToString();
+        //AmountOfSeaweed.text = HealSeaweed.ToString();
 
-        HealthSlider.value = currentLife * 8;
+        //HealthSlider.value = currentLife * 8;
 
         PlayerAnimator = gameObject.GetComponent<Animator>();
 
@@ -94,8 +94,9 @@ public class Health : MonoBehaviour
                 CurrenTime = 0;
                 HealEffect.Stop();
                 //gameObject.GetComponent<PlayerMovement>().enabled = false;
-                
-                AmountOfSeaweed.text = HealSeaweed.ToString();
+
+                //AmountOfSeaweed.text = HealSeaweed.ToString();
+                HudControler.ChangeSeaWeed(HealSeaweed);
                 
             }
         }
@@ -138,7 +139,7 @@ public class Health : MonoBehaviour
             PlayerData data = SaveSystem.LoadPlayer();
             if (data != null)
             {
-
+                Saveloader.doOnce = true;
                 Time.timeScale = 1;
                 SceneManager.LoadScene(data.scenaAtual);
             }
@@ -169,7 +170,8 @@ public class Health : MonoBehaviour
             HealSeaweed += 1;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ItemGrab, transform.position);
             Destroy(collision.gameObject);
-            AmountOfSeaweed.text = HealSeaweed.ToString();
+            //AmountOfSeaweed.text = HealSeaweed.ToString();
+            HudControler.ChangeSeaWeed(HealSeaweed);
         }
         else if (collision.gameObject.CompareTag("Alga") && HealSeaweed == MaxHealSeaweed)
         {
@@ -188,7 +190,8 @@ public class Health : MonoBehaviour
             PlayerHitFeedbackScript.wasHit = true; //Pass the feedback that the player was hit, so the Health can be disble and enabled after a amount of time
             DamageEffect.Play();
 
-            HealthSlider.value -= 8;
+            //HealthSlider.value -= 8;
+            HudControler.ChangeHealth(currentLife);
         }
 
         
@@ -200,7 +203,8 @@ public class Health : MonoBehaviour
         if(currentLife < maxLife)
         {
             currentLife += GiveHealthAmount;
-            HealthSlider.value = 8 * currentLife;
+            //HealthSlider.value = 8 * currentLife;
+            HudControler.ChangeHealth(currentLife);
         }
 
     }
@@ -208,6 +212,6 @@ public class Health : MonoBehaviour
     public void ResetLife()
     {
         currentLife = maxLife;
-        HealthSlider.value = currentLife * 8;
+        //HealthSlider.value = currentLife * 8;
     }
 }

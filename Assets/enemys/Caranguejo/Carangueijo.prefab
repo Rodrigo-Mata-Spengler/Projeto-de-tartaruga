@@ -246,6 +246,7 @@ MonoBehaviour:
   velocidadeQueda: 8
   tempoDeEspera: 2
   mira: {x: 0, y: 0, z: 0}
+  forca: 3
   jumpHeight: 6
   jump: 0
   tempoPulo: 1.5
@@ -307,7 +308,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.15
-  HitEffect: {fileID: 7476400763277562759}
 --- !u!1 &7227668599023974550
 GameObject:
   m_ObjectHideFlags: 0
