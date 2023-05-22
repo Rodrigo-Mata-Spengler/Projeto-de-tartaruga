@@ -173,6 +173,8 @@ public class GuardianBehavior : MonoBehaviour
         {
             status = GuardianStatus.Morto;
             terminou = true;
+            SaveSystem.SavePlayer(PlayerObj);
+            Iconesalvando.Mostraricone();
         }
 
     }

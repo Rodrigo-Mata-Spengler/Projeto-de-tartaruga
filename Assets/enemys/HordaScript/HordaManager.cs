@@ -25,6 +25,13 @@ public class HordaManager : MonoBehaviour
 
     [SerializeField]private GameObject Selo;
     [SerializeField] private GameObject Wall;
+
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     private void Update()
     {
         if (terminou)
@@ -72,7 +79,10 @@ public class HordaManager : MonoBehaviour
             //Acabou
             Debug.Log("Vitoria");
             terminou = true;
-       }
+
+            SaveSystem.SavePlayer(player);
+            Iconesalvando.Mostraricone();
+        }
        
     }
 

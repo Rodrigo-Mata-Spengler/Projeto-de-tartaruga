@@ -11,6 +11,8 @@ public class Saveloader : MonoBehaviour
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
         data = SaveSystem.LoadPlayer();
 
         //definir localização do player
