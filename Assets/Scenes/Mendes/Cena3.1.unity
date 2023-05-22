@@ -609,6 +609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654427, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 167771294725654431, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
       propertyPath: m_Name
       value: Enemy(tARTARUGA ESQUELETO) (8)
@@ -15852,6 +15856,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654427, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 167771294725654431, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
       propertyPath: m_Name
       value: Enemy(tARTARUGA ESQUELETO) (6)
@@ -16332,6 +16340,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 167771294725654426, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167771294725654427, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 167771294725654431, guid: 836dc98ee9b099e40b649b3b3f885c9f, type: 3}
@@ -18640,11 +18652,11 @@ PrefabInstance:
       objectReference: {fileID: 1931810549}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -124.09302
+      value: -123.31195
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -83.9772
+      value: -83.97385
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: orthographic size
@@ -85777,6 +85789,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7378516780322169434, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100871154660726757, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100871154660726757, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}

@@ -360,7 +360,7 @@ public class PlayerMovement : MonoBehaviour
                     AtaqueHitBoxEfeito_Animator.SetInteger("AtaqueNormalIndex", 1);
                 }
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueHitBox));
-
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
             }
             
         }
@@ -392,7 +392,7 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
 
 
-                
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
             }
 
 
@@ -426,9 +426,9 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBox));
             }
 
-
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
         }
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
+        
         AttackEnd = false;
 
     }
