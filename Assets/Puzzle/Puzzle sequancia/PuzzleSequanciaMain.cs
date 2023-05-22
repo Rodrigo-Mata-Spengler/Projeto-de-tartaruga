@@ -34,7 +34,7 @@ public class PuzzleSequanciaMain : MonoBehaviour
     {
         for (int i = 0; i < blocos.Length; i++)
         {
-            blocos[i].GetComponent<SpriteRenderer>().color = Color.green;
+            blocos[i].GetComponent<PuzzleSequencioa>().Aceto();
             blocos[i].GetComponent<PuzzleSequencioa>().enabled = false;
 
         }

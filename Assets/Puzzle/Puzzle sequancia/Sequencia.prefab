@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 159328995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.76, z: -0.022181703}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2248739461241741282}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 1406662473
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,18 +99,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.12}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.3333333, y: 3.3333333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.72, y: 1.43}
   m_EdgeRadius: 0
 --- !u!114 &159328998
 MonoBehaviour:
@@ -127,6 +127,9 @@ MonoBehaviour:
   state: 0
   playerIn: 0
   coolDown: 0.2
+  aceso: {fileID: 21300000, guid: 2a7fec61b4a2f4c478d15ba68e0ec26d, type: 3}
+  apagado: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
+  acertou: {fileID: 21300000, guid: bd314499409c4034592f788784b6c4d5, type: 3}
   blocoDireita: {fileID: 1844289958}
   blocoEsquerda: {fileID: 0}
 --- !u!1 &931219810
@@ -157,7 +160,7 @@ Transform:
   m_GameObject: {fileID: 931219810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6, y: -1.76, z: -0.022181703}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2248739461241741282}
@@ -204,7 +207,7 @@ SpriteRenderer:
   m_SortingLayerID: 1406662473
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -228,18 +231,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.12}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.3333333, y: 3.3333333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.72, y: 1.43}
   m_EdgeRadius: 0
 --- !u!114 &931219813
 MonoBehaviour:
@@ -256,6 +259,9 @@ MonoBehaviour:
   state: 0
   playerIn: 0
   coolDown: 0.2
+  aceso: {fileID: 21300000, guid: 2a7fec61b4a2f4c478d15ba68e0ec26d, type: 3}
+  apagado: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
+  acertou: {fileID: 21300000, guid: bd314499409c4034592f788784b6c4d5, type: 3}
   blocoDireita: {fileID: 1911726232}
   blocoEsquerda: {fileID: 1725124689}
 --- !u!1 &1725124689
@@ -286,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 1725124689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4, y: -1.76, z: -0.022181703}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2248739461241741282}
@@ -333,7 +339,7 @@ SpriteRenderer:
   m_SortingLayerID: 1406662473
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -357,18 +363,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.12}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.3333333, y: 3.3333333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.72, y: 1.43}
   m_EdgeRadius: 0
 --- !u!114 &1725124692
 MonoBehaviour:
@@ -385,6 +391,9 @@ MonoBehaviour:
   state: 0
   playerIn: 0
   coolDown: 0.2
+  aceso: {fileID: 21300000, guid: 2a7fec61b4a2f4c478d15ba68e0ec26d, type: 3}
+  apagado: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
+  acertou: {fileID: 21300000, guid: bd314499409c4034592f788784b6c4d5, type: 3}
   blocoDireita: {fileID: 931219810}
   blocoEsquerda: {fileID: 1844289958}
 --- !u!1 &1844289958
@@ -415,7 +424,7 @@ Transform:
   m_GameObject: {fileID: 1844289958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: -1.76, z: -0.022181703}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2248739461241741282}
@@ -462,7 +471,7 @@ SpriteRenderer:
   m_SortingLayerID: 1406662473
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -486,18 +495,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.12}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.3333333, y: 3.3333333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.72, y: 1.43}
   m_EdgeRadius: 0
 --- !u!114 &1844289961
 MonoBehaviour:
@@ -514,6 +523,9 @@ MonoBehaviour:
   state: 0
   playerIn: 0
   coolDown: 0.2
+  aceso: {fileID: 21300000, guid: 2a7fec61b4a2f4c478d15ba68e0ec26d, type: 3}
+  apagado: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
+  acertou: {fileID: 21300000, guid: bd314499409c4034592f788784b6c4d5, type: 3}
   blocoDireita: {fileID: 1725124689}
   blocoEsquerda: {fileID: 159328995}
 --- !u!1 &1911726232
@@ -544,7 +556,7 @@ Transform:
   m_GameObject: {fileID: 1911726232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8, y: -1.76, z: -0.022181703}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2248739461241741282}
@@ -591,7 +603,7 @@ SpriteRenderer:
   m_SortingLayerID: 1406662473
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -615,18 +627,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.12}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.3333333, y: 3.3333333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.72, y: 1.43}
   m_EdgeRadius: 0
 --- !u!114 &1911726235
 MonoBehaviour:
@@ -643,6 +655,9 @@ MonoBehaviour:
   state: 0
   playerIn: 0
   coolDown: 0.2
+  aceso: {fileID: 21300000, guid: 2a7fec61b4a2f4c478d15ba68e0ec26d, type: 3}
+  apagado: {fileID: 21300000, guid: c39ae835176d91247b3f531c90d141c9, type: 3}
+  acertou: {fileID: 21300000, guid: bd314499409c4034592f788784b6c4d5, type: 3}
   blocoDireita: {fileID: 0}
   blocoEsquerda: {fileID: 931219810}
 --- !u!1 &5810274940908375676
@@ -700,5 +715,4 @@ MonoBehaviour:
   - {fileID: 1725124689}
   - {fileID: 931219810}
   - {fileID: 1911726232}
-  - {fileID: 0}
   puzzleFeito: 0

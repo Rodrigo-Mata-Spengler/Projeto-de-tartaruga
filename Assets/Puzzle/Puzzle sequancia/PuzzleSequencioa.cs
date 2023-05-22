@@ -9,12 +9,16 @@ public class PuzzleSequencioa : MonoBehaviour
     [SerializeField] private float coolDown = 0;
     private float tempo;
 
+    [SerializeField] private Sprite aceso;
+    [SerializeField] private Sprite apagado;
+    [SerializeField] private Sprite acertou;
+
     [SerializeField] private GameObject blocoDireita;
     [SerializeField] private GameObject blocoEsquerda;
     
     private void Start()
     {
-        GetComponent<SpriteRenderer>().color = Color.white;
+        GetComponent<SpriteRenderer>().sprite = apagado;
         state = false;
     }
 
@@ -44,14 +48,19 @@ public class PuzzleSequencioa : MonoBehaviour
             if (state == false)
             {
                 state = true;
-                GetComponent<SpriteRenderer>().color = Color.red;
+                GetComponent<SpriteRenderer>().sprite = aceso;
             }
             else
             {
-                GetComponent<SpriteRenderer>().color = Color.white;
+                GetComponent<SpriteRenderer>().sprite = apagado;
                 state = false;
             }
         }
+    }
+
+    public void Aceto()
+    {
+        GetComponent<SpriteRenderer>().sprite = acertou;
     }
 
     private void ChangeStates()
