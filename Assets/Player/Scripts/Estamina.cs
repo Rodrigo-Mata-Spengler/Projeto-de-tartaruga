@@ -22,18 +22,8 @@ public class Estamina : MonoBehaviour
         //CurrentEstamina = MaxEstamina;
         //EstaminaSlider.maxValue = MaxEstamina;
         amountOfHitToGiveEstamina = 3;
-        EstaminaSlider = GameObject.FindGameObjectWithTag("EstaminaSlider");
-    }
-
-    private void Update()
-    {
-        
-        
-    }
-    private void Awake()
-    {
-
-        EstaminaSlider.GetComponent<Slider>().value = CurrentEstamina;
+        HudControler.EnableMana(false);
+        //EstaminaSlider = GameObject.FindGameObjectWithTag("EstaminaSlider");
     }
     // Do damage
     public void Damage(float GiveEstaminaDamageAmount)
@@ -42,8 +32,8 @@ public class Estamina : MonoBehaviour
         if(CurrentEstamina > 0f)
         {
             CurrentEstamina -= GiveEstaminaDamageAmount;
-            EstaminaSlider.GetComponent<Slider>().value -= GiveEstaminaDamageAmount;
-
+            //EstaminaSlider.GetComponent<Slider>().value -= GiveEstaminaDamageAmount;
+            HudControler.ChangeMana(GiveEstaminaDamageAmount * -1);
             
         }
         
@@ -56,7 +46,8 @@ public class Estamina : MonoBehaviour
         if(CurrentEstamina < MaxEstamina)
         {
             CurrentEstamina += GiveEstaminaAmount;
-            EstaminaSlider.GetComponent<Slider>().value += GiveEstaminaAmount;
+            //EstaminaSlider.GetComponent<Slider>().value += GiveEstaminaAmount;
+            HudControler.ChangeMana(GiveEstaminaAmount);
             amountOfHitToGiveEstamina = Random.Range(4, 7);
         }
         
@@ -64,6 +55,6 @@ public class Estamina : MonoBehaviour
     }
     private void OnEnable()
     {
-        EstaminaSlider.gameObject.SetActive(true);
+        HudControler.EnableMana(true);
     }
 }

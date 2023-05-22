@@ -7487,6 +7487,7 @@ GameObject:
   - component: {fileID: 1505023965602174946}
   - component: {fileID: 1505023965602174947}
   - component: {fileID: 1177410580}
+  - component: {fileID: 3025227953641105168}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Canvas
@@ -7614,6 +7615,20 @@ MonoBehaviour:
   voltarInventario: {fileID: 4562603515029672381}
   MapButtonInventario: {fileID: 1505023965584723110}
   painelOpen: 0
+--- !u!114 &3025227953641105168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505023965602174972}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a985ee282fc7ad47bf1a7eab1eb4f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeAlive: 0
+  tag: Ui Canvas
 --- !u!1 &1505023965675618172
 GameObject:
   m_ObjectHideFlags: 0
@@ -19852,6 +19867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6971160088116545842}
+  - component: {fileID: 6541235695478087285}
   m_Layer: 5
   m_Name: Hud
   m_TagString: HUD
@@ -19880,6 +19896,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6541235695478087285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927124437996256626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e8f1877b45a5447a456fb61ff3e0b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderVida: {fileID: 1698489600}
+  sliderMana: {fileID: 1037111709}
+  mana: {fileID: 1037111707}
+  seaWeedText: {fileID: 6961404383537570114}
 --- !u!1 &7944710533505250993
 GameObject:
   m_ObjectHideFlags: 0

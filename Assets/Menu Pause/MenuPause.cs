@@ -131,12 +131,14 @@ public class MenuPause : MonoBehaviour
     //clicar no botão voltar ao menu principal volta ao menu principal
     public void IrMenuPrincipal()
     {
+        Saveloader.doOnce = true;
         SceneManager.LoadScene(nomeMenu);
     }
 
     //clicar sair fecha o jogo
     public void SairJogo()
     {
+        Saveloader.doOnce = true;
         Application.Quit();
     }
 
@@ -166,6 +168,8 @@ public class MenuPause : MonoBehaviour
             deathPanel.SetActive(true);
             mortePanel = true;
 
+            Saveloader.doOnce = true;
+
             EventSystem.current.SetSelectedGameObject(null);
 
             EventSystem.current.SetSelectedGameObject(ultimoSave);
@@ -178,7 +182,7 @@ public class MenuPause : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer();
         if (data != null)
         {
-
+            Saveloader.doOnce = true;
             Time.timeScale = 1;
             SceneManager.LoadScene(data.scenaAtual);
         }

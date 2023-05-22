@@ -13,6 +13,7 @@ public class Iconesalvando : MonoBehaviour
     public static void Mostraricone()
     {
         anim.SetTrigger("Salvando");
+        anim.ResetTrigger("Salvando");
     }
 
 
