@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337225006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.06, z: 0}
+  m_LocalPosition: {x: 0, y: -1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,9 +243,10 @@ MonoBehaviour:
   player: {fileID: 0}
   fonte: {fileID: 1337225006}
   chao: {x: 0, y: 0, z: 0}
-  velocidadeQueda: 8
-  tempoDeEspera: 2
+  velocidadeQueda: 16
+  tempoDeEspera: 1
   mira: {x: 0, y: 0, z: 0}
+  forca: 10
   jumpHeight: 6
   jump: 0
   tempoPulo: 1.5
@@ -264,13 +265,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3b4687d64a750468849053279f5f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyTag: 7
-  MaxHealth: 10
+  EnemyTag: 4
+  MaxHealth: 30
   currentHealth: 0
   DropItemPoint: {fileID: 6737306278952565414}
   ItensPrefabs:
   - {fileID: 4448061109165272105, guid: 403d4decb27133942a068f68115a1376, type: 3}
-  - {fileID: 3558725743607025275, guid: 72d39d21c12c80742a52345f2377fcde, type: 3}
+  - {fileID: 8182488497596834137, guid: 95f3c38df6386bb4f9944b39f48f9a35, type: 3}
   TimeToDestroyDelay: 0.15
 --- !u!95 &5892350098832145641
 Animator:
@@ -307,7 +308,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.15
-  HitEffect: {fileID: 7476400763277562759}
 --- !u!1 &7227668599023974550
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7227668599023974550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2388115, y: -1.289058, z: 2.5443084}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
