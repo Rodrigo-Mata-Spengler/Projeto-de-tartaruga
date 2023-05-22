@@ -126,12 +126,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   status: 0
   frequenciaErro: 0.2
-  mainAmarelo: {fileID: 21300000, guid: 40017d9ca4927d24c91b7a2b4b0577d5, type: 3}
-  mainAzul: {fileID: 21300000, guid: 3cf032e0b52342b409a6eb029f34f32a, type: 3}
-  mainRoxo: {fileID: 21300000, guid: eb14875f584866d4fba4c889e630f58a, type: 3}
-  mainVerde: {fileID: 21300000, guid: aae5a9cc3864d8f4699c1566e48af9a6, type: 3}
-  mainAcerto: {fileID: 21300000, guid: 41eb2f73493441b47a8faf9d7af269e0, type: 3}
-  mainErro: {fileID: 21300000, guid: b637bc377b3dadf49acade0480cd0e88, type: 3}
+  mainAmarelo: {fileID: 21300000, guid: 175630c9248bafc40b7f49fddab5c54b, type: 3}
+  mainAzul: {fileID: 21300000, guid: 6d0269dbeb7d88f4a99a793e09228967, type: 3}
+  mainRoxo: {fileID: 21300000, guid: 752eda9e94d682c488537a20f6e8c125, type: 3}
+  mainVerde: {fileID: 21300000, guid: 2555ab2f9bf8f2847b9d03dc5944991d, type: 3}
+  mainAcerto: {fileID: 21300000, guid: 7fbbd7c9c0295d44887fe8bd082b97fd, type: 3}
+  mainErro: {fileID: 21300000, guid: 8a484ae67c41a5940a5c61a59770bf50, type: 3}
   mainApagado: {fileID: 21300000, guid: 96514d070cea70a4ba39878133a74bef, type: 3}
   amarelo: {fileID: 9011725821287228900}
   azul: {fileID: 8422461350006611784}
@@ -271,7 +271,7 @@ MonoBehaviour:
   ctrl: {fileID: 1407249098}
   numeroBloco: 4
   apagado: {fileID: 21300000, guid: afc844b0fa7e9164eaa8834170e3ac8d, type: 3}
-  aceso: {fileID: 21300000, guid: 74b3eea485603ee4081a053295184a3d, type: 3}
+  aceso: {fileID: 21300000, guid: 309b28594577d80498fb70d65a81b4f6, type: 3}
   cor: {r: 1, g: 0, b: 0.80399513, a: 1}
   permitirInteracao: 0
 --- !u!1 &7934747823855285835
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ctrl: {fileID: 1407249098}
   numeroBloco: 2
-  apagado: {fileID: 21300000, guid: 6d0269dbeb7d88f4a99a793e09228967, type: 3}
+  apagado: {fileID: 21300000, guid: 39a0341a51ed07e4ea2fb1fb3f47b28d, type: 3}
   aceso: {fileID: 21300000, guid: ce2af44ea9e92e64cbe8788ab6366cb7, type: 3}
   cor: {r: 1, g: 0, b: 0, a: 1}
   permitirInteracao: 0
@@ -567,7 +567,7 @@ MonoBehaviour:
   ctrl: {fileID: 1407249098}
   numeroBloco: 3
   apagado: {fileID: 21300000, guid: 0d181a776b4b93842b130513a946a9fa, type: 3}
-  aceso: {fileID: 21300000, guid: 981b49ad9968a004e86006ccb7583abf, type: 3}
+  aceso: {fileID: 21300000, guid: 5f954164414e26e439bb707b4e3370ff, type: 3}
   cor: {r: 0.9827944, g: 1, b: 0, a: 1}
   permitirInteracao: 0
 --- !u!1 &9011725821287228900
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ctrl: {fileID: 1407249098}
   numeroBloco: 1
-  apagado: {fileID: 21300000, guid: 175630c9248bafc40b7f49fddab5c54b, type: 3}
+  apagado: {fileID: 21300000, guid: f658999331d5a2a4fadede8538512f07, type: 3}
   aceso: {fileID: 21300000, guid: fc936069bde74b443a6c8f4d124dd939, type: 3}
   cor: {r: 0, g: 0.18928123, b: 1, a: 1}
   permitirInteracao: 0
