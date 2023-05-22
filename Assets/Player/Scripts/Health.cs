@@ -54,7 +54,7 @@ public class Health : MonoBehaviour
         //currentLife = maxLife;
 
         //HealSeaweed = MaxHealSeaweed;
-        pause = GameObject.FindGameObjectWithTag("Ui Canvas").GetComponent<MenuPause>();
+        pause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
         //AmountOfSeaweed = GameObject.FindGameObjectWithTag("AlgaText").GetComponent<TextMeshProUGUI>();
         //HealthSlider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
 
