@@ -45,6 +45,8 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private float velocidadeAtaque1 = 0;//velocidade do ataque 
     [SerializeField] private float quantidadeAtaque1 = 0;//qunatos ataque devem ser
     private float ataque1Atual = 0;
+    [SerializeField] private float esperaAtaque1 = 0;
+    private float esperaproximoAtaque1 = 0;
 
     [Header("Ataque 2")]
     //pinça 3
@@ -155,7 +157,8 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private float posInicialYPinca8 = 0;
     [SerializeField] private float posIntermediarialYPinca8 = 0;
     [SerializeField] private float posFinalYPinca8 = 0;
-    //geral ataque 8
+    //geral ataque 6
+    [SerializeField] private Animator anim_ataque6;
     [SerializeField] private float velocidadeAtaque6 = 0;
     [SerializeField] private float velocidadePrepararAtaque6 = 0;
     [SerializeField] private float tempoMiraAtaque6 = 0;
@@ -214,6 +217,7 @@ public class SombraBehaviour : MonoBehaviour
             case SombraStatus.teste:
                 SetUpIdle();
                 SetUpAtaque1();
+                esperaproximoAtaque1 = esperaAtaque1 + Time.time;
                 SetUpAtaque2();
                 SetUpAtaque3();
                 SetUpAtaque4();
@@ -263,6 +267,7 @@ public class SombraBehaviour : MonoBehaviour
                 case 1:
                     SetUpAtaque1();
                     status = SombraStatus.ataque1;
+                    esperaproximoAtaque1 = esperaAtaque1 + Time.time;
                     break;
                 case 2:
                     SetUpAtaque2();
@@ -352,6 +357,9 @@ public class SombraBehaviour : MonoBehaviour
     {
         ataque1Atual = 0;
 
+        anim_corpo.ResetTrigger("Ataque_subir_Bracos");
+        anim_corpo.ResetTrigger("Ataque_Descendo_bracos");
+
         tempoProximoOffset = tempoOffSet + Time.time;
 
         pinca1.transform.position = posInicialPinca1;
@@ -364,22 +372,28 @@ public class SombraBehaviour : MonoBehaviour
 
     private void Ataque1()
     {
-        if (ataque1Atual != quantidadeAtaque1)
-        {
-            Pinca1Ataque();
+        anim_corpo.SetTrigger("Ataque_subir_Bracos");
+        
 
-            if (tempoProximoOffset <= Time.time)
+        if (esperaproximoAtaque1 <= Time.time)
+        {
+            
+            if (ataque1Atual != quantidadeAtaque1)
             {
-                Pinca2Ataque();
+                
+                Pinca1Ataque();
+
+                if (tempoProximoOffset <= Time.time)
+                {
+                    Pinca2Ataque();
+                }
+            }
+            else
+            {
+                Pinca1AtaqueSobe();
+                SombraBrain();
             }
         }
-        else
-        {
-            Pinca1AtaqueSobe();
-            SombraBrain();
-        }
-
-        
     }
 
     private void Pinca1Ataque()
@@ -407,6 +421,8 @@ public class SombraBehaviour : MonoBehaviour
     private void Pinca1AtaqueSobe()
     {
         pinca1.transform.position = Vector3.MoveTowards(pinca1.transform.position, posInicialPinca1, velocidadeAtaque1 * Time.deltaTime);
+        anim_corpo.ResetTrigger("Ataque_subir_Bracos");
+        anim_corpo.SetTrigger("Ataque_Descendo_bracos");
     }
 
     private void Pinca2Ataque()
@@ -720,6 +736,9 @@ public class SombraBehaviour : MonoBehaviour
     //Metodos relacionados ao Ataque 6
     private void SetUpAtaque6()
     {
+        anim_ataque6.ResetTrigger("atacando");
+        anim_ataque6.ResetTrigger("reset");
+
         preparaAtaque6 = false;
         acaoAtaque6 = false;
         voltarAtaque6 = false;
@@ -741,6 +760,7 @@ public class SombraBehaviour : MonoBehaviour
         }
         else if(acaoAtaque6 == false)
         {
+            
             pinca8.transform.position = new Vector3(Mathf.Lerp(pinca8.transform.position.x, player.transform.position.x, velocidadePrepararAtaque6 * Time.deltaTime), posIntermediarialYPinca8, 0);
 
             if (tempoProximaMiraAtaque6 <= Time.time)
@@ -750,6 +770,7 @@ public class SombraBehaviour : MonoBehaviour
             }
         }else if(voltarAtaque6 == false)
         {
+            anim_ataque6.SetTrigger("atacando");
             pinca8.transform.position = Vector3.MoveTowards(pinca8.transform.position, new Vector3(pinca8.transform.position.x, posFinalYPinca8, 0), velocidadeAtaque6 * Time.deltaTime);
 
             if (tempoProximoTravadoAtaque6 <= Time.time)
@@ -763,6 +784,9 @@ public class SombraBehaviour : MonoBehaviour
 
             if (pinca8.transform.position == new Vector3(pinca8.transform.position.x, posInicialYPinca8, 0))
             {
+                anim_ataque6.SetTrigger("reset");
+                anim_ataque6.ResetTrigger("atacando");
+                anim_ataque6.ResetTrigger("reset");
                 SombraBrain();
             }
             
