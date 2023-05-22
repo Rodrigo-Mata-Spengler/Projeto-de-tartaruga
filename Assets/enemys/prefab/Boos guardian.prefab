@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.95
       objectReference: {fileID: 0}
+    - target: {fileID: 1426846001, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: Wall
+      value: 
+      objectReference: {fileID: 8833623879464749971}
     - target: {fileID: 1547352175, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: m_Size.x
       value: 0.043017656
@@ -529,6 +533,10 @@ PrefabInstance:
       propertyPath: status
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4450079883748624878}
     - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: jumpHeight
       value: 25
@@ -673,7 +681,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ed24438d268074e86d9ac731d25012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 800
+  animator: {fileID: 4450079883748624878}
+  MaxHealth: 400
   currentHealth: 0
   DropItemPoint: {fileID: 3715050969447028436}
   ItensPrefabs:
@@ -700,6 +709,11 @@ MonoBehaviour:
 --- !u!4 &672679174877475095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 484018159787737978, guid: f89e47239efa95d4398337cd98148309, type: 3}
+  m_PrefabInstance: {fileID: 1144554044700979821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4450079883748624878 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3612900398682192771, guid: f89e47239efa95d4398337cd98148309, type: 3}
   m_PrefabInstance: {fileID: 1144554044700979821}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4658534801730091371

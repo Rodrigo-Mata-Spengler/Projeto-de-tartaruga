@@ -13,16 +13,19 @@ public class PlayerHitFeedback : MonoBehaviour
 
     private Health PlayerHealth;
 
+    private Animator animatorPlayer;
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
         PlayerHealth = gameObject.GetComponent<Health>();
+        animatorPlayer = this.GetComponent<Animator>();
     }
     private void Update()
     {
         if (wasHit)
         {
             PlayerHealth.enabled= false; //Disables the Player Health script
+            animatorPlayer.SetTrigger("Dano");
             StartCoroutine(DisableHitFeedback(secondsToDisable));
         }
     }

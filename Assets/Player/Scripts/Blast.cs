@@ -15,17 +15,20 @@ public class Blast : MonoBehaviour
     public int EstaminaDamage;
     private Estamina estaminaScript;
 
-    private bool shooted;
+ 
+    private Animator PlayerAnimator;
     
     private void Start()
     {
         estaminaScript = this.GetComponent<Estamina>();
+        PlayerAnimator = this.GetComponent<Animator>();
     }
     private void Update()
     {
         if (Input.GetButtonDown("Blast") && estaminaScript.CurrentEstamina > 0)
         {
             efeito.SetBool("efeito", true);
+            PlayerAnimator.SetTrigger("Conjura");
         }
         if (Input.GetButtonDown("Blast") && Time.time >= NextTimeToFire && estaminaScript.CurrentEstamina > 0)
         {

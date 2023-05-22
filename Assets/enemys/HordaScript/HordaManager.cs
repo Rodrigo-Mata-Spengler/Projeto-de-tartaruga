@@ -63,7 +63,7 @@ public class HordaManager : MonoBehaviour
        if(CurrentRound == AmountEnemyToSpawnByRound.Count)
        {
             Wall.GetComponent<Animator>().SetBool("abrindo", true);
-            Wall.GetComponent<BoxCollider2D>().enabled = true;
+            Wall.GetComponent<BoxCollider2D>().enabled = false;
             Selo.SetActive(true);
             //Acabou
             Debug.Log("Vitoria");

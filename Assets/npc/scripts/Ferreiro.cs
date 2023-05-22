@@ -112,7 +112,7 @@ public class Ferreiro : MonoBehaviour
             hadConversation = true;
         }
         //if paragraph were over than disable the UI interaction obj
-        if (inputPressed && hadConversation)
+        if (inputPressed && hadConversation && playerDetected)
         {
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
@@ -137,7 +137,7 @@ public class Ferreiro : MonoBehaviour
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
-
+            StoreFerreiro.SetActive(false);
             //enable HUD
             HUD.SetActive(true);
 

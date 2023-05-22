@@ -175,9 +175,15 @@ public class GuardianBehavior : MonoBehaviour
     {
         TridenteFlutuando.SetActive(true);
         Wall.GetComponent<Animator>().SetBool("abrindo", true);
-        Wall.GetComponent<BoxCollider2D>().enabled = true;
+        Wall.GetComponent<BoxCollider2D>().enabled = false;
+    
+
+        PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true;
+        PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
+        
+        PlayerObj.GetComponent<Estamina>().enabled = true;
         /*
-        PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true; // activated the have magic trident in player movment
+        // activated the have magic trident in player movment
         
         PlayerObj.GetComponent<PlayerMovement>().AtaqueHitBox.SetActive(false); // activated the have magic trident in the Attack obj
         PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBox.SetActive(false);
@@ -450,14 +456,14 @@ public class GuardianBehavior : MonoBehaviour
             AttackTrigger.SetActive(true);
             if (lookingRight)
             {
-                
-                rb.AddForce(new Vector2(DashImpulse, transform.position.y), ForceMode2D.Impulse);
+
+                rb.velocity = new Vector2(DashImpulse, 0f);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.DashGuardiao,transform.position);
                 
             }
             if (!lookingRight)
             {
-                rb.AddForce(new Vector2(-DashImpulse, transform.position.y), ForceMode2D.Impulse);
+                rb.velocity = new Vector2(-DashImpulse, 0f);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.DashGuardiao, transform.position);
                 
             }

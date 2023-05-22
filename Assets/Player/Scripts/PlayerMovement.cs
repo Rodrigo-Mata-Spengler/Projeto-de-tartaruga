@@ -220,10 +220,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 IsWallSliding = true;
                 JumpReleasedTimes = 1;
+
+                m_Animator.SetBool("Parede", true);
             }
             if (!IsTouchingWall)
             {
                 IsWallSliding = false;
+                m_Animator.SetBool("Parede", false);
             }
         }
         else
@@ -232,10 +235,12 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -7);
+                m_Animator.SetBool("Parede", true);
             }
             if (!IsTouchingWall)
             {
                 IsWallSliding = false;
+                m_Animator.SetBool("Parede", false);
             }
             
         }
