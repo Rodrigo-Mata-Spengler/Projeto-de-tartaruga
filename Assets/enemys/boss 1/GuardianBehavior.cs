@@ -181,7 +181,6 @@ public class GuardianBehavior : MonoBehaviour
         PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true;
         PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
         
-        PlayerObj.GetComponent<Estamina>().enabled = true;
         /*
         // activated the have magic trident in player movment
         
@@ -376,7 +375,8 @@ public class GuardianBehavior : MonoBehaviour
                 animator.SetTrigger("queda");
                 status = GuardianStatus.FallAtPlayer;
                 tempoAtaque = Time.time + TempoEsperaAtaque;
-                
+                LookAtPlayer();
+
             }
             else
             {
@@ -439,6 +439,7 @@ public class GuardianBehavior : MonoBehaviour
             tempoTonto = 0;
             animator.SetTrigger("dormindo");
             dash = true;
+            LookAtPlayer();
         }
 
     }

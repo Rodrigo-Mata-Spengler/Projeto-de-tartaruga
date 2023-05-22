@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: conversationText
       value: 
       objectReference: {fileID: 120666412}
+    - target: {fileID: 7869436001575737635, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: Cost.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
 --- !u!4 &43928624 stripped
@@ -673,6 +677,10 @@ PrefabInstance:
       propertyPath: conversationText
       value: 
       objectReference: {fileID: 120666412}
+    - target: {fileID: 7869436001141976389, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: Cost.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f16846cb447974749af89925bc122dd3, type: 3}
 --- !u!4 &70744989 stripped
@@ -994,6 +1002,14 @@ PrefabInstance:
       propertyPath: conversationText
       value: 
       objectReference: {fileID: 120666412}
+    - target: {fileID: 7869436001506505369, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
+      propertyPath: Cost.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869436001506505369, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
+      propertyPath: Cost.Array.data[1]
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb2f07158e584a94e96ddd37334e510a, type: 3}
 --- !u!4 &128663252 stripped

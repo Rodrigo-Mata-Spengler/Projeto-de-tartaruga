@@ -59,6 +59,7 @@ public class Selo : MonoBehaviour
             {
                 Tridente.SetActive(false);
                 GameObject.FindGameObjectWithTag("EstaminaSlider").SetActive(true);
+                PLayer.GetComponent<Estamina>().enabled = true;
             }
 
         }

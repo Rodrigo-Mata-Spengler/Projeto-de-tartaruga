@@ -22,16 +22,18 @@ public class Estamina : MonoBehaviour
         //CurrentEstamina = MaxEstamina;
         //EstaminaSlider.maxValue = MaxEstamina;
         amountOfHitToGiveEstamina = 3;
+        EstaminaSlider = GameObject.FindGameObjectWithTag("EstaminaSlider");
     }
 
     private void Update()
     {
-        EstaminaSlider = GameObject.FindGameObjectWithTag("EstaminaSlider");
-        EstaminaSlider.GetComponent<Slider>().value = CurrentEstamina;
+        
+        
     }
     private void Awake()
     {
-        
+
+        EstaminaSlider.GetComponent<Slider>().value = CurrentEstamina;
     }
     // Do damage
     public void Damage(float GiveEstaminaDamageAmount)
