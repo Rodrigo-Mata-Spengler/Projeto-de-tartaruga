@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705975696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.29, y: 2.16, z: 0}
+  m_LocalPosition: {x: -6.29, y: 2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -184,7 +184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.15
-  HitEffect: {fileID: 7589027929329425249}
 --- !u!1 &1595973581
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595973581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3, y: -1.52, z: 0}
+  m_LocalPosition: {x: 8.16, y: -4.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -242,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2389398559943816812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.886078, y: 12.407471, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -420,7 +419,7 @@ MonoBehaviour:
   limiteMax: {fileID: 705975697}
   limiteMin: {fileID: 1595973582}
   velocidade: 5
-  tempoEspera: 3
+  tempoEspera: 0
   pontoPatrulha: {x: 0, y: 0, z: 0}
   raioDetecao: 1
   playerTag: Player
@@ -495,7 +494,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.3
-  HitEffect: {fileID: 7589027929329425249}
 --- !u!1 &7090008906603646382
 GameObject:
   m_ObjectHideFlags: 0
