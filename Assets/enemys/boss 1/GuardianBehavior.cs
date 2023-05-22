@@ -105,6 +105,11 @@ public class GuardianBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (terminou)
+        {
+            Destroy(gameObject);
+        }
         
         if(tempoDecorridoInicial <= tempoInicialDelay && DoOnce == false)
         {

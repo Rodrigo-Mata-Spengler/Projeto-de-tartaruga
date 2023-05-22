@@ -27,6 +27,10 @@ public class HordaManager : MonoBehaviour
     [SerializeField] private GameObject Wall;
     private void Update()
     {
+        if (terminou)
+        {
+            Destroy(gameObject);
+        }
         if (ZombsInScene.Length == 0)
         {
             StartRoundTime += Time.deltaTime;
