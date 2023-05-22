@@ -45,7 +45,7 @@ public class EnemyAttack : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             
-            collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * ImpulseForceOnPlayer);
+            //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * ImpulseForceOnPlayer);
             collision.transform.GetComponent<PlayerHitFeedback>().wasHit = true;
             collision.transform.GetComponent<Health>().Damage(Damage);
             Detected = true;

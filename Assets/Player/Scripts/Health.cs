@@ -154,9 +154,10 @@ public class Health : MonoBehaviour
     {
         if(collision.gameObject.layer == 8)
         {
-            //rb.velocity = Vector2.zero;
+          
             Damage(1);
-           //rb.velocity = new Vector2(transform.position.x, 15f);
+            rb.AddForce(transform.up * 10, ForceMode2D.Impulse);
+            rb.AddForce(transform.right * 3, ForceMode2D.Impulse);
 
         }
 
@@ -192,9 +193,13 @@ public class Health : MonoBehaviour
 
             //HealthSlider.value -= 8;
             HudControler.ChangeHealth(currentLife);
+
+            rb.AddForce(transform.up * 10, ForceMode2D.Impulse);
+            rb.AddForce(transform.right * 3, ForceMode2D.Impulse);
+
         }
 
-        
+
     }
 
     //give heath

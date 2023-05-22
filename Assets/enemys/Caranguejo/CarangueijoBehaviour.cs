@@ -73,7 +73,7 @@ public class CarangueijoBehaviour : MonoBehaviour
         if (hit.collider != null)
         {
             Debug.DrawRay(fonte.transform.position, Vector2.down * hit.distance);
-            Debug.Log(hit.distance);
+           
             if (hit.distance >= chaoOffSet)
             {
                 anim.SetBool("OnAir", true);
