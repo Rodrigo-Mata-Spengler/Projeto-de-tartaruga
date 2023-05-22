@@ -34,6 +34,7 @@ public class PlayerHitFeedback : MonoBehaviour
         if(DoOnce)
         {
             StopAllCoroutines();
+            Debug.Log("aqui");
             DoOnce = false;
         }
     }
