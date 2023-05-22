@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerHitFeedback : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerHitFeedback : MonoBehaviour
     private Health PlayerHealth;
 
     private Animator animatorPlayer;
+
+    public bool DoOnce = false;
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -28,6 +31,11 @@ public class PlayerHitFeedback : MonoBehaviour
             animatorPlayer.SetTrigger("Dano");
             StartCoroutine(DisableHitFeedback(secondsToDisable));
         }
+        if(DoOnce)
+        {
+            StopAllCoroutines();
+            DoOnce = false;
+        }
     }
     private IEnumerator DisableHitFeedback(float seconds)
     {
@@ -35,5 +43,6 @@ public class PlayerHitFeedback : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         wasHit = false;
         PlayerHealth.enabled = true;//Enables the Player Health script
+        DoOnce = true;
     }
 }
