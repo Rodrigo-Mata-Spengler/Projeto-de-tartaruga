@@ -11,6 +11,10 @@ public class PlayerData
     public float[] position;
     public int seaWeed;
 
+    //Informações da Animação do player
+    public bool haveMagicTrident;
+    public bool haveArmor;
+
     //Informações do inventario
     public int conchas;
     public int coral;
@@ -45,6 +49,10 @@ public class PlayerData
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;
         seaWeed = player.GetComponent<Health>().HealSeaweed;
+
+        //Captura As Informações de animação do player
+        haveArmor = player.GetComponent<PlayerMovement>().HaveArmor;
+        haveMagicTrident = player.GetComponent<PlayerMovement>().HaveMagicTrident;
 
         //captura as informações do inventario
         conchas = player.GetComponent<ItensInventory>().conchas;
