@@ -53,7 +53,7 @@ public class Dash : MonoBehaviour
                 _dashEnd = new Vector2(_dashStart.x + m_DashDist, _dashStart.y);
 
                 m_Animator.SetBool("Dash", true);
-                estaminaScript.Damage(EstaminaDamage);
+               // estaminaScript.Damage(EstaminaDamage);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.Dash, transform.position);
             }
             //dash to left
@@ -65,7 +65,7 @@ public class Dash : MonoBehaviour
                 _dashStart = transform.position;
                 _dashEnd = new Vector2(_dashStart.x - m_DashDist, _dashStart.y);
                 m_Animator.SetBool("Dash", true);
-                estaminaScript.Damage(EstaminaDamage);
+               // estaminaScript.Damage(EstaminaDamage);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.Dash, transform.position);
             }
         }
