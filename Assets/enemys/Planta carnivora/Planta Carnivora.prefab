@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2031881540}
   m_Layer: 8
   m_Name: Colider Planta
-  m_TagString: Untagged
+  m_TagString: Planta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.3
-  HitEffect: {fileID: 6107749181722662668}
 --- !u!1 &1563758064290982738
 GameObject:
   m_ObjectHideFlags: 0
