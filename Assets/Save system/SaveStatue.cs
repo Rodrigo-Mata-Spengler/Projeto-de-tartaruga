@@ -29,7 +29,7 @@ public class SaveStatue : MonoBehaviour
             playerGO.GetComponent<Animator>().SetBool("Rezar", true);
             playerGO.GetComponent<Health>().RezarEffect.Play();
             playerGO.GetComponent<Health>().ResetLife();
-            //rend.color = Color.green;
+            Iconesalvando.Mostraricone();
         }
     }
 
