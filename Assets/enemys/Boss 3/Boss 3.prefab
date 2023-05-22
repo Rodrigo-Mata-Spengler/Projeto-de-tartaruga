@@ -2913,6 +2913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711015276}
   - component: {fileID: 1711015278}
+  - component: {fileID: 7083902968262013102}
   m_Layer: 0
   m_Name: "Cabe\xE7a"
   m_TagString: Untagged
@@ -2987,6 +2988,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7083902968262013102
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711015275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7a6da66925ff1b4aa3f125365cf127f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1787200999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3468,6 +3490,7 @@ MonoBehaviour:
   vidaMaxima: 10
   livreArbitrio: 0
   quantidadeAtaques: 3
+  anim_corpo: {fileID: 7083902968262013102}
   tempoIdle: 5
   pinca1: {fileID: 1043228773}
   posInicialPinca1: {x: -13.63, y: 20.21, z: 0}

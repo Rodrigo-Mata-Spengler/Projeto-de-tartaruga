@@ -20,6 +20,9 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private int quantidadeAtaques = 0;
     private int ataquesAtual = 0;
 
+    [Header("Cabeça Sombra")]
+    [SerializeField] private Animator anim_corpo;
+
     [Header("idle")]
     [SerializeField] private float tempoIdle = 0;//tempo de duração do idle
     private float tempoProximoIdle = 0;
@@ -611,6 +614,9 @@ public class SombraBehaviour : MonoBehaviour
         ctrlAtaque5 = false;
         posControle = false;
 
+        anim_corpo.ResetTrigger("Ataque_Tentaculo_descendo");
+        anim_corpo.ResetTrigger("Ataque_tentaculo_Subindo");
+
         tentaculo1.SetActive(true);
         tentaculo1.transform.position = posTentaculo1;
         tentaculo1.transform.GetChild(0).transform.position = posInicialTentaculo1;
@@ -640,7 +646,8 @@ public class SombraBehaviour : MonoBehaviour
     {
         if (posControle == false)
         {
-            Debug.Log("teste");
+            anim_corpo.SetTrigger("Ataque_Tentaculo_descendo");
+
             tentaculo1.transform.position = Vector3.MoveTowards(tentaculo1.transform.position, posTentaculo1Final, velocidadePreparoAtaque5 * Time.deltaTime);
 
             tentaculo2.transform.position = Vector3.MoveTowards(tentaculo2.transform.position, posTentaculo2Final, velocidadePreparoAtaque5 * Time.deltaTime);
@@ -679,18 +686,30 @@ public class SombraBehaviour : MonoBehaviour
         {
             tentaculo1.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo1.transform.GetChild(0).transform.position, posInicialTentaculo1, velocidadeAtaque5 * Time.deltaTime);
             animTentaculo1.SetTrigger("Desce");
+            animTentaculo1.ResetTrigger("Ataque");
 
             tentaculo2.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo2.transform.GetChild(0).transform.position, posInicialTentaculo2, velocidadeAtaque5 * Time.deltaTime);
             animTentaculo2.SetTrigger("Desce");
+            animTentaculo2.ResetTrigger("Ataque");
 
             tentaculo3.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo3.transform.GetChild(0).transform.position, posInicialTentaculo3, velocidadeAtaque5 * Time.deltaTime);
             animTentaculo3.SetTrigger("Desce");
+            animTentaculo3.ResetTrigger("Ataque");
 
             tentaculo4.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo4.transform.GetChild(0).transform.position, posInicialTentaculo4, velocidadeAtaque5 * Time.deltaTime);
             animTentaculo4.SetTrigger("Desce");
+            animTentaculo4.ResetTrigger("Ataque");
 
             if (tentaculo1.transform.GetChild(0).transform.position == posInicialTentaculo1)
             {
+                anim_corpo.SetTrigger("Ataque_tentaculo_Subindo");
+                anim_corpo.ResetTrigger("Ataque_Tentaculo_descendo");
+
+                animTentaculo1.ResetTrigger("Desce");
+                animTentaculo2.ResetTrigger("Desce");
+                animTentaculo3.ResetTrigger("Desce");
+                animTentaculo4.ResetTrigger("Desce");
+
                 ShutDownAtaque5();
                 SombraBrain();
             }

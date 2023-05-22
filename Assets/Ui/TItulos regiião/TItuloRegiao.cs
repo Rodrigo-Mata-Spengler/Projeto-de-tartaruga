@@ -93,6 +93,13 @@ public class TItuloRegiao : MonoBehaviour
                     regiao = Regiao.cavernaDeMusgo;
                 }
                 break;
+            case "Cena4.2 esquerda":
+                if (regiao != Regiao.cavernaDeMusgo)
+                {
+                    ShowName();
+                    regiao = Regiao.cavernaDeMusgo;
+                }
+                break;
             case "Cena4.3":
                 if (regiao != Regiao.cavernaDeMusgo)
                 {
@@ -147,6 +154,9 @@ public class TItuloRegiao : MonoBehaviour
                 Show(cavernaDeMusgo);
                 break;
             case "Cena4.2":
+                Show(cavernaDeMusgo);
+                break;
+            case "Cena4.2 esquerda":
                 Show(cavernaDeMusgo);
                 break;
             case "Cena4.3":
