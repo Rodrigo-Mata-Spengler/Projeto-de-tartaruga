@@ -210,6 +210,7 @@ public class GuardianBehavior : MonoBehaviour
             /// if close Attack
             if ( PlayerClose && jumped == false && i >= 30 && i <= 100)
             {
+                LookAtPlayer();
                 status = GuardianStatus.Attack;
                 tempoDeAtaque = 0;
                 AttackCollider.enabled = true;
@@ -218,6 +219,7 @@ public class GuardianBehavior : MonoBehaviour
             /// jump at player
             else
             {
+                LookAtPlayer();
                 CriaCordenadaAtaque();
                 rb.gravityScale = 0;
                 status = GuardianStatus.JumpAtPlayer;
@@ -234,6 +236,7 @@ public class GuardianBehavior : MonoBehaviour
 
             if (i >= 31 && i < 61 && PlayerClose)
             {
+                LookAtPlayer();
                 status = GuardianStatus.Attack;
                 tempoDeAtaque = 0;
                 AttackCollider.enabled = true;
@@ -244,6 +247,7 @@ public class GuardianBehavior : MonoBehaviour
             }
             if (i >= 80 && i < 100)
             {
+                LookAtPlayer();
                 EdgeIndex = Random.Range(0, 2);
                 Debug.Log(EdgeIndex);
                 status = GuardianStatus.JumpAtEdge;///do the dash
@@ -253,6 +257,7 @@ public class GuardianBehavior : MonoBehaviour
             }
             else
             {
+                LookAtPlayer();
                 CriaCordenadaAtaque();
                 rb.gravityScale = 0;
                 status = GuardianStatus.JumpAtPlayer;
@@ -324,7 +329,7 @@ public class GuardianBehavior : MonoBehaviour
         ///the enemy will wait a time after conclude a action
         if (m_Grounded)
         {
-            LookAtPlayer();
+            
             tempoTonto += Time.deltaTime;
             //disableAnimations();
         }
@@ -440,6 +445,7 @@ public class GuardianBehavior : MonoBehaviour
 
     private void Dash()
     {
+        LookAtPlayer();
         animator.SetTrigger("dash");
         CurrentTimeDash += Time.deltaTime;
         
