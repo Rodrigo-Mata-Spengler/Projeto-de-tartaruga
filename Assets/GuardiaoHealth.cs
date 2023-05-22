@@ -51,14 +51,12 @@ public class GuardiaoHealth : MonoBehaviour
     {
         if (currentHealth <= (MaxHealth - LifePorcentage) && norteado1 == false)
         {
-            disableAnimations();
             guardianBehavior.enabled = false;
             animator.SetBool("cansado", true);
             Norteado1();
         }
         if (currentHealth <= (MaxHealth - (LifePorcentage * 2)) && norteado2 == false)
         {
-            disableAnimations();
             animator.SetBool("cansado", true);
             guardianBehavior.enabled= false;
             
@@ -121,14 +119,5 @@ public class GuardiaoHealth : MonoBehaviour
         //Debug.Log("Euuuuu");
     }
 
-    private void disableAnimations()
-    {
-        animator.SetBool("Dash", false);
-        animator.SetBool("pulo", false);
-        animator.SetBool("queda", false);
-        animator.SetBool("ataque", false);
-
-      
-    }
 }
 

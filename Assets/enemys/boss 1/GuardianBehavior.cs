@@ -213,7 +213,7 @@ public class GuardianBehavior : MonoBehaviour
                 status = GuardianStatus.Attack;
                 tempoDeAtaque = 0;
                 AttackCollider.enabled = true;
-                animator.SetBool("ataque", true);
+                animator.SetTrigger("ataque");
             }
             /// jump at player
             else
@@ -222,7 +222,7 @@ public class GuardianBehavior : MonoBehaviour
                 rb.gravityScale = 0;
                 status = GuardianStatus.JumpAtPlayer;
                 TempoPular = 0;
-                animator.SetBool("pulo", true);
+                animator.SetTrigger("pulo");
             }
         }
         else //if enemy is half of life
@@ -249,7 +249,7 @@ public class GuardianBehavior : MonoBehaviour
                 status = GuardianStatus.JumpAtEdge;///do the dash
                 TempoPular = 0;
                 ActionChosed = true;
-                animator.SetBool("pulo", true);
+                animator.SetTrigger("pulo");
             }
             else
             {
@@ -258,7 +258,7 @@ public class GuardianBehavior : MonoBehaviour
                 status = GuardianStatus.JumpAtPlayer;
                 TempoPular = 0;
                 ActionChosed = true;
-                animator.SetBool("pulo", true);
+                animator.SetTrigger("pulo");
             }
 
         }
@@ -310,11 +310,11 @@ public class GuardianBehavior : MonoBehaviour
         }
         else
         {
+            animator.SetTrigger("dormindo");
             AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
             Attacked = false;
             AttackTrigger.SetActive(false);
             tempoTonto = 0;
-            animator.SetBool("ataque", false);
             status = GuardianStatus.desativado;
         }
     }
@@ -327,8 +327,6 @@ public class GuardianBehavior : MonoBehaviour
             LookAtPlayer();
             tempoTonto += Time.deltaTime;
             //disableAnimations();
-            animator.SetBool("dash", false);
-            animator.SetBool("queda", false);
         }
         
         if (tempoTonto < TempoEsperaTonto)
@@ -338,8 +336,6 @@ public class GuardianBehavior : MonoBehaviour
         }
         else if (dash && tempoTonto > TempoEsperaTonto)/// check if enemy have jumped to edge, if have do the dash
         {
-            animator.SetBool("queda", false);
-            animator.SetBool("dormindo", false);
             rb.velocity = Vector2.zero;
             TempoPular = 0;
             status = GuardianStatus.Dash;
@@ -358,7 +354,7 @@ public class GuardianBehavior : MonoBehaviour
 
     public void JumpAtPlayer()
     {
-        animator.SetBool("pulo", false);
+        
         Look = false;
         TempoPularNoPlayer += Time.deltaTime;
 
@@ -372,7 +368,7 @@ public class GuardianBehavior : MonoBehaviour
 
             if (transform.position.Equals(cordenadaAlturaAtaque))
             {
-                animator.SetBool("queda", true);
+                animator.SetTrigger("queda");
                 status = GuardianStatus.FallAtPlayer;
                 tempoAtaque = Time.time + TempoEsperaAtaque;
                 
@@ -432,11 +428,11 @@ public class GuardianBehavior : MonoBehaviour
         /// if enemy hit's the ground go to wait time
         if (m_Grounded == true && jumped == true)
         {
-            animator.SetBool("pulo", false);
+            
             CurrentTimeDash = 0;
             status = GuardianStatus.desativado;
             tempoTonto = 0;
-            animator.SetBool("dormindo", true);
+            animator.SetTrigger("dormindo");
             dash = true;
         }
 
@@ -444,7 +440,7 @@ public class GuardianBehavior : MonoBehaviour
 
     private void Dash()
     {
-        animator.SetBool("dash", true);
+        animator.SetTrigger("dash");
         CurrentTimeDash += Time.deltaTime;
         
         if(CurrentTimeDash >= TimeToDoDash)// do nothing while time to dash haven't pass yet
