@@ -44,6 +44,8 @@ public class CameraFollowObject : MonoBehaviour
     private CharacterController2D characterController2D;
     private void Start()
     {
+        PlayerObj = GameObject.FindGameObjectWithTag("Player");
+
         PlayerMovmentScript = PlayerObj.GetComponent<PlayerMovement>();
         characterController2D = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController2D>();
     }

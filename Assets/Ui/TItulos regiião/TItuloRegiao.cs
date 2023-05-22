@@ -166,7 +166,6 @@ public class TItuloRegiao : MonoBehaviour
 
     private void Show(string nomeDisplay)
     {
-        Debug.Log("entrei");
         text.text = nomeDisplay;
         anim.SetTrigger("Mostra");
     }

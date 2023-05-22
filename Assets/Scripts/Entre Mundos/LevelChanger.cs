@@ -18,8 +18,17 @@ public class LevelChanger : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+        {
+            Debug.Log("Player não encontrado");
+        }
+
         if (conetion == Conections.activeConetion && Conections.wasConetion)
         {
+
+            Debug.Log("Player teleportado");
             player.transform.position = spawnPoint.position;
 
             Conections.wasConetion = false;
@@ -40,11 +49,12 @@ public class LevelChanger : MonoBehaviour
     {
         fade.SetTrigger("Start");
 
+        Conections.activeConetion = conetion;
+        Conections.wasConetion = true;
         yield return new WaitForSeconds(transisionTime);
 
-        Conections.activeConetion = conetion;
         SceneManager.LoadScene(cena);
-        Conections.wasConetion = true;
+        
     }
 
 }
