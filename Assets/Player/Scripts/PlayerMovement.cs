@@ -113,6 +113,15 @@ public class PlayerMovement : MonoBehaviour
 
         AtaqueDownHitBoxEfeito_Animator = AtaqueDownHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
         AtaqueDownHitBoxMagicoEfeito_Animator = AtaqueDownHitBoxMagico.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+
+        if (HaveArmor)
+        {
+            m_Animator.SetBool("Armadura",true);
+        }
+        else if (HaveMagicTrident)
+        {
+            m_Animator.SetBool("Magico", true);
+        }
     }
 
     private void Update()

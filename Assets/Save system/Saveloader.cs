@@ -23,6 +23,10 @@ public class Saveloader : MonoBehaviour
         player.GetComponent<Health>().maxLife = data.vida;
         player.GetComponent<Health>().HealSeaweed = data.seaWeed;
 
+        //defini se tem armadura ou magia
+        player.GetComponent<PlayerMovement>().HaveArmor = data.haveArmor;
+        player.GetComponent<PlayerMovement>().HaveMagicTrident = data.haveMagicTrident;
+
         //defini as informações do inventario
         player.GetComponent<ItensInventory>().conchas = data.conchas;
         player.GetComponent<ItensInventory>().coral = data.coral;
