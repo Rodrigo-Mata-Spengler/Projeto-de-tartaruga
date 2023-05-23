@@ -8,7 +8,7 @@ public class Estamina : MonoBehaviour
 {
     public float MaxEstamina; // the maximum of stamina
 
-    private GameObject EstaminaSlider;
+    public bool hasEstamina = false;
 
     [Header("Current Estamina")]
     [Range(0,10)]
@@ -24,6 +24,11 @@ public class Estamina : MonoBehaviour
         amountOfHitToGiveEstamina = 3;
         HudControler.EnableMana(false);
         //EstaminaSlider = GameObject.FindGameObjectWithTag("EstaminaSlider");
+
+        if (hasEstamina)
+        {
+            HudControler.EnableMana(true);
+        }
     }
     // Do damage
     public void Damage(float GiveEstaminaDamageAmount)
@@ -56,5 +61,11 @@ public class Estamina : MonoBehaviour
     private void OnEnable()
     {
         HudControler.EnableMana(true);
+    }
+
+    public void EnableMana()
+    {
+        HudControler.EnableMana(true);
+        hasEstamina = true;
     }
 }

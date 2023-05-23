@@ -19,6 +19,7 @@ public class Tridente : MonoBehaviour
         if (Input.GetButtonDown("Interacao") && Detected)
         {
             Canvas.GetComponent<MenuPause>().Mana.SetActive(true);
+            PlayerObj.GetComponent<Estamina>().EnableMana();
             PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true;
             PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
 

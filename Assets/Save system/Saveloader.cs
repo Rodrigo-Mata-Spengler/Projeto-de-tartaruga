@@ -24,6 +24,7 @@ public class Saveloader : MonoBehaviour
 
             //defini vida e estamina
             player.GetComponent<Estamina>().CurrentEstamina = data.stamina;
+            player.GetComponent<Estamina>().hasEstamina = data.hasEstamina;
             player.GetComponent<Health>().ResetLife();
             player.GetComponent<Health>().HealSeaweed = data.seaWeed;
 

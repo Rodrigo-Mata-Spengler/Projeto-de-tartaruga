@@ -392,7 +392,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021795255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.104, y: 0.393, z: 0}
+  m_LocalPosition: {x: 0.104, y: 0.446, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -760,6 +760,37 @@ Transform:
   - {fileID: 6103702199640465842}
   m_Father: {fileID: 6748649182909457861}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1890473164549547493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1741756884555963385}
+  m_Layer: 3
+  m_Name: WallCheckForDash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1741756884555963385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890473164549547493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.104, y: 0.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6748649182909457861}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2000467648498415631
 GameObject:
@@ -1920,6 +1951,8 @@ Transform:
   - {fileID: 2021795256}
   - {fileID: 360808140}
   - {fileID: 1050511281766131322}
+  - {fileID: 1741756884555963385}
+  - {fileID: 2270701344110261645}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1964,15 +1997,15 @@ SpriteRenderer:
   m_SortingLayerID: -1888708261
   m_SortingLayer: 5
   m_SortingOrder: 3
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -64538747, guid: 00795a063573d7b4e89b10182581c96b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.1904764, y: 4.1904764}
+  m_Size: {x: 13.043478, y: 13.043478}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &6748649182909457862
@@ -2070,15 +2103,19 @@ MonoBehaviour:
   AtaqueInput: 0
   haveWallJump: 0
   wallCheck: {fileID: 2021795256}
-  WallCheckDistance: 0.55
+  WallCheckDistance: 1.2
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 64
   IsTouchingWall: 0
+  IsTouchingWall2: 0
   IsWallSliding: 0
   WallSlideSpeed: 2.49
   wallJumpForce: 10
   wallJumpDirection: {x: 1, y: 1.8}
+  WallChecksDash:
+  - {fileID: 1741756884555963385}
+  - {fileID: 2270701344110261645}
 --- !u!95 &1622245420
 Animator:
   serializedVersion: 5
@@ -2171,7 +2208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashTime: 0.25
   m_DashDist: 7
+  _isDashing: 0
   canDash: 0
+  StopDash: 0
   _yVelJumpRealeasedMod: 3.05
   EstaminaDamage: 1
 --- !u!114 &1622245426
@@ -2849,6 +2888,37 @@ Transform:
   - {fileID: 3404195457028044934}
   m_Father: {fileID: 6748649182909457861}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9021302537262335442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2270701344110261645}
+  m_Layer: 3
+  m_Name: WallCheckForDash2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2270701344110261645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021302537262335442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.104, y: -0.805, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6748649182909457861}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9100177985073589601
 GameObject:

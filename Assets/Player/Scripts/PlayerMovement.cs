@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEditor;
 using FMOD.Studio;
 using UnityEngine.VFX;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
     public bool crouch = false;
     public bool OnAir = false;
-
 
     [Header("jump")]
     public float _yVelJumpRealeasedMod = 2f; //variable to smooth when falling
@@ -78,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
     public float WallCheckDistance;/// the size of the ray
     public LayerMask WhatIsGround;
     public bool IsTouchingWall = false;
+    public bool IsTouchingWall2 = false;
     public bool IsWallSliding;
     public float WallSlideSpeed;///the speed the the player will slide down while grabbing the wall and not moving 
     [Space]
@@ -85,6 +86,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 wallJumpDirection; ///the direction that the player will go while on wall
     private int facingDirection;
 
+    [Space]
+
+    [Header("Dash")]
+    [SerializeField] private Transform[] WallChecksDash;
 
     private bool canMove = true;
 
@@ -96,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
         jumped = false;
 
         m_Rigidbody2D = CharacterController2D.m_Rigidbody2D;
-   
 
         m_Animator = this.GetComponent<Animator>();
 
@@ -222,6 +226,20 @@ public class PlayerMovement : MonoBehaviour
         /// Creates the raycast for the walljump
         IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, WallCheckDistance, WhatIsGround);
 
+        RaycastHit2D hitWallTop = Physics2D.Raycast(WallChecksDash[0].position, transform.right, 6, WhatIsGround);
+        RaycastHit2D hitWallDown = Physics2D.Raycast(WallChecksDash[1].position, transform.right, 6, WhatIsGround);
+
+        if (hitWallTop.collider != null || hitWallDown.collider != null)
+        {
+            float distance = Mathf.Abs(hitWallDown.point.x - transform.position.x);
+            gameObject.GetComponent<Dash>().m_DashDist = (distance - 0.5f);
+            gameObject.GetComponent<Dash>().dashTime = 0.09f;
+        }
+        else
+        {
+            gameObject.GetComponent<Dash>().m_DashDist = 7;
+            gameObject.GetComponent<Dash>().dashTime = 0.1f;
+        }
     }
     private void CheckWallSliding()
     {
@@ -255,9 +273,6 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
-        
-
-
     }
     public void AtivarCheat()
     {
