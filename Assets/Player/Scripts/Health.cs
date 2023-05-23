@@ -55,6 +55,10 @@ public class Health : MonoBehaviour
     private float respawn = 0;
     private bool Restart = false;
 
+    [Header("Morte")]
+    [SerializeField] private float timeToDeath = 0;
+    private float timeTimeToDeath = 0;
+    private bool doOnceMorte = true;
 
     private void Start()
     {
@@ -156,22 +160,34 @@ public class Health : MonoBehaviour
             }
             */
             //Rodrigo Time !!!!!!
-            PlayerData data = SaveSystem.LoadPlayer();
-            if (data != null )
+            if (doOnceMorte)
             {
-                Saveloader.doOnce = true;
-                Time.timeScale = 1;
-                SceneManager.LoadScene(data.scenaAtual);
-                //PlayerAnimator.ResetTrigger("Morto");
+                doOnceMorte = false;
+                timeTimeToDeath = timeToDeath + Time.time;
+                PlayerAnimator.SetTrigger("Morto");
             }
-            else
+
+            if (timeTimeToDeath <= Time.time)
             {
-                ResetLife();
-                Destroy(gameObject);
-                SceneManager.LoadScene("Cena 1");
-                
-                //PlayerAnimator.ResetTrigger("Morto");
+                doOnceMorte = true;
+                PlayerData data = SaveSystem.LoadPlayer();
+                if (data != null)
+                {
+                    Saveloader.doOnce = true;
+                    Time.timeScale = 1;
+                    SceneManager.LoadScene(data.scenaAtual);
+                    //PlayerAnimator.ResetTrigger("Morto");
+                }
+                else
+                {
+                    ResetLife();
+                    Destroy(gameObject);
+                    SceneManager.LoadScene("Cena 1");
+
+                    //PlayerAnimator.ResetTrigger("Morto");
+                }
             }
+            
 
         }
     }
