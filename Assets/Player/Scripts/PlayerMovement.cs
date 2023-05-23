@@ -156,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
         {
             OnAir = false;
             m_Animator.SetBool("Fall", false);
+            m_Animator.ResetTrigger("Dano");
 
             if(jumped)
             {

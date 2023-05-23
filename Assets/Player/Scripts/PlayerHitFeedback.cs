@@ -45,5 +45,6 @@ public class PlayerHitFeedback : MonoBehaviour
         wasHit = false;
         PlayerHealth.enabled = true;//Enables the Player Health script
         DoOnce = true;
+        animatorPlayer.ResetTrigger("Dano");
     }
 }

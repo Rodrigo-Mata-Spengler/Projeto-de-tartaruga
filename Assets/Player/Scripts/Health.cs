@@ -49,6 +49,13 @@ public class Health : MonoBehaviour
     private PlayerMovement PlayerMovment;
 
     private bool DoOnce = false;
+
+    [Space]
+    [SerializeField] private float respawnDelay;
+    private float respawn = 0;
+    private bool Restart = false;
+
+
     private void Start()
     {
         //currentLife = maxLife;
@@ -70,7 +77,8 @@ public class Health : MonoBehaviour
 
         PlayerAnimator = gameObject.GetComponent<Animator>();
 
-       //PlayerMovment = gameObject.GetComponent<PlayerMovement>();
+        //PlayerMovment = gameObject.GetComponent<PlayerMovement>();
+
     }
 
     private void Update()
@@ -78,6 +86,7 @@ public class Health : MonoBehaviour
 
         if(Input.GetAxis("Curar")> 0 && HealSeaweed <= MaxHealSeaweed && currentLife < maxLife && HealSeaweed > 0)
         {
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
             PlayerAnimator.SetBool("Curar", true);
             if (DoOnce == false)
             {
@@ -133,20 +142,30 @@ public class Health : MonoBehaviour
 
         if(currentLife <= 0f)
         {
-            PlayerAnimator.SetTrigger("Morto");
+            respawn += Time.deltaTime;
+            //PlayerAnimator.SetTrigger("Morto");
 
+            /*
+            if(respawn >= respawnDelay)
+            {
+                Restart = true;
+            }
+            */
             //Rodrigo Time !!!!!!
             PlayerData data = SaveSystem.LoadPlayer();
-            if (data != null)
+            if (data != null )
             {
                 Saveloader.doOnce = true;
                 Time.timeScale = 1;
                 SceneManager.LoadScene(data.scenaAtual);
+                //PlayerAnimator.ResetTrigger("Morto");
             }
             else
             {
                 SceneManager.LoadScene("Cena 1");
+                //PlayerAnimator.ResetTrigger("Morto");
             }
+
         }
     }
 
