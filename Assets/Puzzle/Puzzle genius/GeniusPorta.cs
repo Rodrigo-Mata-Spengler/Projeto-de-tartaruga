@@ -5,12 +5,20 @@ using UnityEngine;
 public class GeniusPorta : MonoBehaviour
 {
     [SerializeField] private GeniusControler puzzle;
+    private Animator PortaAbrindo;
 
+    public void AlertObservers(string message)
+    {
+        if (message.Equals("Abriu"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
     private void Update()
     {
         if (puzzle.jogoFinalizado)
         {
-            Destroy(gameObject);
+            PortaAbrindo.SetBool("Abriu", true);
         }
     }
 }
