@@ -9,9 +9,11 @@ public class Dash : MonoBehaviour
     public float dashTime = 0.1f;//Time of the dash
     public float m_DashDist;//the distance of dash
     private float _currentDashTime = 0f;//time when player is dashing
-    private bool _isDashing = false;
+    [HideInInspector]public bool _isDashing = false;
     public bool canDash;
     private Vector2 _dashStart, _dashEnd;
+
+    [HideInInspector] public bool StopDash;
 
     private Rigidbody2D rb;
     public float _yVelJumpRealeasedMod = 2f;//variable to smooth the fall after dash
@@ -19,7 +21,7 @@ public class Dash : MonoBehaviour
     private CharacterController2D characterController2D;
     private bool Grounded;
     private bool facingRight;
-
+    private PlayerMovement playerMovement;
 
     [Header("Estamina")]
     public int EstaminaDamage;
@@ -33,6 +35,7 @@ public class Dash : MonoBehaviour
         m_Animator = this.GetComponent<Animator>();
 
         estaminaScript = this.GetComponent<Estamina>();
+        playerMovement= this.GetComponent<PlayerMovement>();
     }
 
     void Update()
@@ -41,7 +44,7 @@ public class Dash : MonoBehaviour
         facingRight = characterController2D.m_FacingRight;
 
         //Checks the input
-        if (Input.GetButtonDown("Dash") && canDash == true && _isDashing == false)
+        if (Input.GetButtonDown("Dash") && canDash == true && _isDashing == false && !playerMovement.IsTouchingWall)
         {
             //dash to right
             if (facingRight)
@@ -55,10 +58,13 @@ public class Dash : MonoBehaviour
                 m_Animator.SetBool("Dash", true);
                // estaminaScript.Damage(EstaminaDamage);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.Dash, transform.position);
+
+                
             }
             //dash to left
             else
             {
+              
                 // dash starts
                 _isDashing = true;
                 _currentDashTime = 0;
@@ -83,7 +89,8 @@ public class Dash : MonoBehaviour
             // updating position
             transform.position = Vector2.Lerp(_dashStart, _dashEnd, perc);
 
-            if (_currentDashTime >= dashTime)
+
+            if (_currentDashTime >= dashTime )
             {
                 // dash finished
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.x / _yVelJumpRealeasedMod);
@@ -91,6 +98,7 @@ public class Dash : MonoBehaviour
                 _isDashing = false;
                 m_Animator.SetBool("Dash", false);
 
+                StopDash = false;
             }
 
         }
