@@ -244,7 +244,7 @@ MonoBehaviour:
   fonte: {fileID: 1337225006}
   chao: {x: 0, y: 0, z: 0}
   velocidadeQueda: 12
-  tempoDeEspera: 2
+  tempoDeEspera: 1
   mira: {x: 0, y: 0, z: 0}
   forca: 6
   jumpHeight: 6
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyTag: 4
-  MaxHealth: 10
+  MaxHealth: 30
   currentHealth: 0
   DropItemPoint: {fileID: 6737306278952565414}
   ItensPrefabs:
