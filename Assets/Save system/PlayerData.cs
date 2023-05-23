@@ -7,6 +7,7 @@ public class PlayerData
 {
     //Informações do player
     public float stamina;
+    public bool hasEstamina;
     public int vida;
     public float[] position;
     public int seaWeed;
@@ -43,6 +44,7 @@ public class PlayerData
     {
         //captura as informações do player
         stamina = player.GetComponent<Estamina>().CurrentEstamina;
+        hasEstamina = player.GetComponent<Estamina>().hasEstamina;
         vida = player.GetComponent<Health>().maxLife;
         position = new float[3];
         position[0] = player.transform.position.x;

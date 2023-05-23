@@ -2891,11 +2891,11 @@ PrefabInstance:
       objectReference: {fileID: 12508245}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -142.12976
+      value: -142.12793
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.9956665
+      value: -5.995575
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: orthographic size
@@ -120084,6 +120084,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1407249098, guid: 7fb16390a8d6eb64ba46ba0245510357, type: 3}
+      propertyPath: tempoSequencia
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407249098, guid: 7fb16390a8d6eb64ba46ba0245510357, type: 3}
+      propertyPath: quantidadesPiscado
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1407249098, guid: 7fb16390a8d6eb64ba46ba0245510357, type: 3}
       propertyPath: sequencia.Array.size
       value: 6

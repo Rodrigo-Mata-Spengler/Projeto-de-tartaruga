@@ -11,6 +11,7 @@ public class HudControler : MonoBehaviour
 
     public static float manaAtual = 0;
     [SerializeField] private Slider sliderMana;
+    public static bool hasMana = false;
     private static GameObject manaSliderGO;
     [SerializeField] private GameObject mana;
 
@@ -21,18 +22,25 @@ public class HudControler : MonoBehaviour
 
     private void Start()
     {
+        manaSliderGO = mana;
+
+        manaSliderGO.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
 
         sliderVida.value = player.GetComponent<Health>().currentLife * 8;
         sliderMana.value = player.GetComponent<Estamina>().CurrentEstamina;
+        if (player.GetComponent<Estamina>().hasEstamina)
+        {
+            hasMana = true;
+            manaSliderGO.SetActive(true);
+        }
         seaWeedText.text = player.GetComponent<Health>().HealSeaweed.ToString();
         seaweedAtual = player.GetComponent<Health>().HealSeaweed;
-
-        manaSliderGO = mana;
     }
     private void Update()
     {
         sliderVida.value = player.GetComponent<Health>().currentLife * 8;
+        manaSliderGO.SetActive(hasMana);
         sliderMana.value = player.GetComponent<Estamina>().CurrentEstamina;
         seaWeedText.text = seaweedAtual.ToString();
     }

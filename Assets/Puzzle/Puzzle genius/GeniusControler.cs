@@ -8,6 +8,8 @@ public class GeniusControler : MonoBehaviour
     [Header("interação")]
     [SerializeField] private PuzzleGenius status = PuzzleGenius.desativado;
     private bool playerIn = false;
+    [SerializeField] private int quantidadesPiscado = 0;
+    private int quantidadeAtual = 0;
 
     [SerializeField] private float frequenciaErro = 0;
     private float frequenciaProximoErro = 0;
@@ -278,11 +280,13 @@ public class GeniusControler : MonoBehaviour
 
     private void ErrouPiscando()
     {
+        
         if (piscandovermelho)
         {
             rend.sprite = mainErro;
             if (frequenciaProximoErro <= Time.time)
             {
+                quantidadeAtual++;
                 frequenciaProximoErro = frequenciaErro + Time.time;
                 piscandovermelho = false;
             }
@@ -296,6 +300,12 @@ public class GeniusControler : MonoBehaviour
                 frequenciaProximoErro = frequenciaErro + Time.time;
                 piscandovermelho = true;
             }
+        }
+        if (quantidadeAtual == quantidadesPiscado)
+        {
+            rend.sprite = mainApagado;
+            quantidadeAtual = 0;
+            status = PuzzleGenius.desativado;
         }
     }
 }
