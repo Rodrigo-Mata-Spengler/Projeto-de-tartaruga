@@ -54,13 +54,17 @@ public class Selo : MonoBehaviour
                     break;
             }
 
-
+            Ativado.SetActive(false);
+            quebrado.SetActive(true);
+            PLayer.GetComponent<Health>().RezarEffect.Play();
+            PLayer.GetComponent<Animator>().SetBool("Rezar", true);
         }
         
+
         if(quebrado == true)
         {
-            Poca_E.SetBool("caiu", true);
-            Poca_D.SetBool("caiu", true);
+            Poca_E.SetBool("Caiu", true);
+            Poca_D.SetBool("Caiu", true);
         }
 
     }
@@ -78,6 +82,8 @@ public class Selo : MonoBehaviour
             if (collision.CompareTag("Player"))
             {
                 Detected = false;
+                collision.GetComponent<Health>().RezarEffect.Stop();
+                collision.GetComponent<Animator>().SetBool("Rezar", false);
             }
 
         }

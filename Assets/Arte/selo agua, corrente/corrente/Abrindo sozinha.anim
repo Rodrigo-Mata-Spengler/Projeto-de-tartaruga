@@ -32,7 +32,7 @@ AnimationClip:
     - time: 1
       value: {fileID: -1765621931, guid: b501601914c35ef47a8046cfe917b6b2, type: 3}
     - time: 1.2
-      value: {fileID: -1765621931, guid: b501601914c35ef47a8046cfe917b6b2, type: 3}
+      value: {fileID: 0}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -58,7 +58,7 @@ AnimationClip:
     - {fileID: -545249116, guid: b501601914c35ef47a8046cfe917b6b2, type: 3}
     - {fileID: 927208343, guid: b501601914c35ef47a8046cfe917b6b2, type: 3}
     - {fileID: -1765621931, guid: b501601914c35ef47a8046cfe917b6b2, type: 3}
-    - {fileID: -1765621931, guid: b501601914c35ef47a8046cfe917b6b2, type: 3}
+    - {fileID: 0}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -86,7 +86,7 @@ AnimationClip:
   m_Events:
   - time: 1.2
     functionName: AlertObservers
-    data: Abriu
+    data: terminou
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
