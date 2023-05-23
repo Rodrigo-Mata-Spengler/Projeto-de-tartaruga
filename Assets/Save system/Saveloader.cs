@@ -24,7 +24,7 @@ public class Saveloader : MonoBehaviour
 
             //defini vida e estamina
             player.GetComponent<Estamina>().CurrentEstamina = data.stamina;
-            player.GetComponent<Health>().maxLife = data.vida;
+            player.GetComponent<Health>().ResetLife();
             player.GetComponent<Health>().HealSeaweed = data.seaWeed;
 
             //defini se tem armadura ou magia
@@ -49,8 +49,8 @@ public class Saveloader : MonoBehaviour
             MapControler.mapa3 = data.mapa3;
 
             //defini as informações dos boses
-            HordaManager.terminou = data.boss1Derrotado;
-            GuardianBehavior.terminou = data.boss2Derrotado;
+            HordaManager.terminou = data.boss2Derrotado;
+            GuardianBehavior.terminou = data.boss1Derrotado;
 
             doOnce = false;
         }

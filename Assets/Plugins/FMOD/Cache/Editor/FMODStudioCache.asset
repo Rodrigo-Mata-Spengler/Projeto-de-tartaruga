@@ -81,6 +81,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8696102670189402219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/chage Tumulocaverna"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/chage Tumulocaverna"
+  Guid:
+    Data1: 1187793398
+    Data2: 1335364331
+    Data3: -847408985
+    Data4: -645840635
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1456444660461569985}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8435151688686816498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +163,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2699
+--- !u!114 &-8315119251275693888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chage Cavernaguardiao/CavernaGuardiao
+  m_EditorClassIdentifier: 
+  Name: CavernaGuardiao
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1731552655
+    data2: 1092451444
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Caverna
+  - Guardiao
+  Exists: 1
 --- !u!114 &-8293563031562540793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,10 +285,30 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638196673495989266
+  lastModified: 638196667362312769
   FileSizes:
   - Name: Desktop
     Value: 1486
+  Exists: 1
+--- !u!114 &-7159142601432711190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: "bank:/Introdu\xE7\xE3o.bank"
+  m_EditorClassIdentifier: 
+  Path: "FMOD GitHub/Build/Desktop/Introdu\xE7\xE3o.bank"
+  Name: "Introdu\xE7\xE3o"
+  StudioPath: "bank:/Introdu\xE7\xE3o"
+  lastModified: 638204501055280083
+  FileSizes:
+  - Name: Desktop
+    Value: 1012736
   Exists: 1
 --- !u!114 &-7056211531567628440
 MonoBehaviour:
@@ -278,7 +352,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Save.bank
   Name: Save
   StudioPath: bank:/Save
-  lastModified: 638191694424336194
+  lastModified: 638192205934673060
   FileSizes:
   - Name: Desktop
     Value: 55424
@@ -325,7 +399,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Puzzles.bank
   Name: Puzzles
   StudioPath: bank:/Puzzles
-  lastModified: 638202908639095701
+  lastModified: 638204501056442061
   FileSizes:
   - Name: Desktop
     Value: 64608
@@ -354,6 +428,34 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5434667133506801105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/chage Cavernaguardiao"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/chage Cavernaguardiao"
+  Guid:
+    Data1: -2013830550
+    Data2: 1121605969
+    Data3: 564825513
+    Data4: 65805136
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8315119251275693888}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -408,6 +510,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4614801934098273868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/chage Vilacaverna"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/chage Vilacaverna"
+  Guid:
+    Data1: 1658853866
+    Data2: 1120582191
+    Data3: 1141249931
+    Data4: -1153812407
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8948647240951385286}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4561916992268976363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,11 +553,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Sombra.bank
   Name: Sombra
   StudioPath: bank:/Sombra
-  lastModified: 638197760385575159
+  lastModified: 638200822572067813
   FileSizes:
   - Name: Desktop
     Value: 271008
   Exists: 1
+--- !u!114 &-4429506098174723073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Cinem\xE1tica/Introdu\xE7\xE3o"
+  m_EditorClassIdentifier: 
+  Path: "event:/Cinem\xE1tica/Introdu\xE7\xE3o"
+  Guid:
+    Data1: 356010862
+    Data2: 1273962235
+    Data3: 895006084
+    Data4: 2030572233
+  Banks:
+  - {fileID: -7159142601432711190}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4253928755015151235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,7 +627,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Mosca.bank
   Name: Mosca
   StudioPath: bank:/Mosca
-  lastModified: 638192586551544346
+  lastModified: 638194827318331665
   FileSizes:
   - Name: Desktop
     Value: 1680768
@@ -490,7 +647,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Fazendeiro.bank
   Name: Fazendeiro
   StudioPath: bank:/Fazendeiro
-  lastModified: 638191694422947545
+  lastModified: 638192205933553395
   FileSizes:
   - Name: Desktop
     Value: 21568
@@ -537,7 +694,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Caranguejo.bank
   Name: Caranguejo
   StudioPath: bank:/Caranguejo
-  lastModified: 638191694422887498
+  lastModified: 638192205933513499
   FileSizes:
   - Name: Desktop
     Value: 33440
@@ -563,33 +720,6 @@ MonoBehaviour:
   Banks:
   - {fileID: -2992810825293601594}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3690736114436963955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Tumulu do Sal"
-  m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Tumulu do Sal"
-  Guid:
-    Data1: 777891
-    Data2: 1189178980
-    Data3: -703403869
-    Data4: 1790119742
-  Banks:
-  - {fileID: 8692978956279676867}
-  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -638,7 +768,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Guardi\xE3o.bank"
   Name: "Guardi\xE3o"
   StudioPath: "bank:/Guardi\xE3o"
-  lastModified: 638202908639045689
+  lastModified: 638203437992508459
   FileSizes:
   - Name: Desktop
     Value: 217664
@@ -685,36 +815,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638202908639055694
+  lastModified: 638204501055300059
   FileSizes:
   - Name: Desktop
-    Value: 5492
-  Exists: 1
---- !u!114 &-2853720649283485871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Chage vilacaverna/area
-  m_EditorClassIdentifier: 
-  Name: area
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 4198762818
-    data2: 2676175778
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - vila
-  - caverna
+    Value: 6084
   Exists: 1
 --- !u!114 &-2806206104134707749
 MonoBehaviour:
@@ -812,7 +916,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Bruxa.bank
   Name: Bruxa
   StudioPath: bank:/Bruxa
-  lastModified: 638191694422857507
+  lastModified: 638192205933503526
   FileSizes:
   - Name: Desktop
     Value: 253056
@@ -940,7 +1044,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Praia.bank
   Name: Praia
   StudioPath: bank:/Praia
-  lastModified: 638191694424150465
+  lastModified: 638192205934613222
   FileSizes:
   - Name: Desktop
     Value: 1087936
@@ -1026,6 +1130,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1114356395480754258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/chage VerdeCaverna"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/chage VerdeCaverna"
+  Guid:
+    Data1: -1825735891
+    Data2: 1266648274
+    Data3: 832520894
+    Data4: -177729479
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -998272829898662601}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-998272829898662601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chage VerdeCaverna/VerdeCaverna
+  m_EditorClassIdentifier: 
+  Name: VerdeCaverna
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1257060188
+    data2: 2349038558
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Verde
+  - Caverna
+  Exists: 1
+--- !u!114 &-797901940769598614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/caverna"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/caverna"
+  Guid:
+    Data1: -530549880
+    Data2: 1270160703
+    Data3: 776391855
+    Data4: -716936118
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-670045063888694211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,11 +1280,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Planta Carnviora.bank
   Name: Planta Carnviora
   StudioPath: bank:/Planta Carnviora
-  lastModified: 638197760385525073
+  lastModified: 638200822572017944
   FileSizes:
   - Name: Desktop
     Value: 68704
   Exists: 1
+--- !u!114 &-541871658142754209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/Tumulo do Sal"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/Tumulo do Sal"
+  Guid:
+    Data1: 777891
+    Data2: 1189178980
+    Data3: -703403869
+    Data4: 1790119742
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-67572687010361725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,6 +1376,7 @@ MonoBehaviour:
   - {fileID: -1550074210648515092}
   - {fileID: 8600806448901766104}
   - {fileID: 6116311271944771259}
+  - {fileID: -7159142601432711190}
   EditorEvents:
   - {fileID: 8492815524371835197}
   - {fileID: 5625031274756143587}
@@ -1211,14 +1424,12 @@ MonoBehaviour:
   - {fileID: -2730868006265186371}
   - {fileID: -1874909261584806990}
   - {fileID: -8293563031562540793}
-  - {fileID: 4385570827420884669}
   - {fileID: 2675666989416870523}
   - {fileID: 3893853416396587313}
   - {fileID: 9040049563782096613}
   - {fileID: -2008445175486963992}
   - {fileID: 9095090529591764409}
   - {fileID: 4887503538777529639}
-  - {fileID: -3690736114436963955}
   - {fileID: -3945499806015567851}
   - {fileID: 3800278064361142823}
   - {fileID: 4522217650067808959}
@@ -1234,17 +1445,25 @@ MonoBehaviour:
   - {fileID: 7443312199140397018}
   - {fileID: -7560317438637269909}
   - {fileID: -67572687010361725}
-  - {fileID: 1140360816585001562}
   - {fileID: -3719907705319471939}
   - {fileID: -8326448085086343532}
   - {fileID: -1890363262711679987}
   - {fileID: -6708305535215948917}
+  - {fileID: -4429506098174723073}
+  - {fileID: -1114356395480754258}
+  - {fileID: 6776777016150900212}
+  - {fileID: -5434667133506801105}
+  - {fileID: -797901940769598614}
+  - {fileID: -541871658142754209}
+  - {fileID: 2820549028989596417}
+  - {fileID: -4614801934098273868}
+  - {fileID: -8696102670189402219}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7437959542684782280}
   StringsBanks:
   - {fileID: -2917927132543349577}
-  cacheTime: 638202908639095701
+  cacheTime: 638204501056442061
   cacheVersion: 131603
 --- !u!114 &40617146194528622
 MonoBehaviour:
@@ -1261,7 +1480,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Zumbi Tartaruga.bank
   Name: Zumbi Tartaruga
   StudioPath: bank:/Zumbi Tartaruga
-  lastModified: 638196673496719505
+  lastModified: 638196667364048138
   FileSizes:
   - Name: Desktop
     Value: 293504
@@ -1498,39 +1717,11 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Saco de Pancada.bank
   Name: Saco de Pancada
   StudioPath: bank:/Saco de Pancada
-  lastModified: 638191694424260939
+  lastModified: 638192205934653114
   FileSizes:
   - Name: Desktop
     Value: 16416
   Exists: 1
---- !u!114 &1140360816585001562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Chage vilacaverna"
-  m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Chage vilacaverna"
-  Guid:
-    Data1: 1658853866
-    Data2: 1120582191
-    Data3: 1141249931
-    Data4: -1153812407
-  Banks:
-  - {fileID: 8692978956279676867}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -2853720649283485871}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1145903410244919216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,6 +1776,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1456444660461569985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chage Tumulocaverna/TumuloCaverna
+  m_EditorClassIdentifier: 
+  Name: TumuloCaverna
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3438985059
+    data2: 1586970891
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Tumulo
+  - Caverna
+  Exists: 1
 --- !u!114 &1834693765437214014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1681,7 +1898,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638202908639075690
+  lastModified: 638203437992528405
   FileSizes:
   - Name: Desktop
     Value: 136224
@@ -1713,6 +1930,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 932
+--- !u!114 &2666802246040735138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chage Vilaverde/VilaVerde
+  m_EditorClassIdentifier: 
+  Name: VilaVerde
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 818093482
+    data2: 4103076408
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Vila
+  - Verde
+  Exists: 1
 --- !u!114 &2675666989416870523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,6 +2007,34 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2820549028989596417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/chage Tumulosombra"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/chage Tumulosombra"
+  Guid:
+    Data1: 480710355
+    Data2: 1156257458
+    Data3: 583040669
+    Data4: -1610974812
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3775618259292688321}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1836,7 +2107,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Ferreiro.bank
   Name: Ferreiro
   StudioPath: bank:/Ferreiro
-  lastModified: 638197760384354790
+  lastModified: 638200822571259970
   FileSizes:
   - Name: Desktop
     Value: 41408
@@ -1868,6 +2139,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3775618259292688321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chage Tumulosombra/TumuloSombra
+  m_EditorClassIdentifier: 
+  Name: TumuloSombra
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3742560138
+    data2: 3941157385
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Tumulo
+  - Sombra
+  Exists: 1
 --- !u!114 &3800278064361142823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1964,38 +2261,11 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Recurso Coletado.bank
   Name: Recurso Coletado
   StudioPath: bank:/Recurso Coletado
-  lastModified: 638191694424241086
+  lastModified: 638192205934643140
   FileSizes:
   - Name: Desktop
     Value: 21760
   Exists: 1
---- !u!114 &4385570827420884669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Caverna"
-  m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Caverna"
-  Guid:
-    Data1: -530549880
-    Data2: 1270160703
-    Data3: 776391855
-    Data4: -716936118
-  Banks:
-  - {fileID: 8692978956279676867}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &4522217650067808959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2038,7 +2308,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Interface.bank
   Name: Interface
   StudioPath: bank:/Interface
-  lastModified: 638191694423027538
+  lastModified: 638192205933613482
   FileSizes:
   - Name: Desktop
     Value: 23712
@@ -2139,7 +2409,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Compra.bank
   Name: Compra
   StudioPath: bank:/Compra
-  lastModified: 638191694422907512
+  lastModified: 638192205933523481
   FileSizes:
   - Name: Desktop
     Value: 8352
@@ -2240,11 +2510,39 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Dialogo.bank
   Name: Dialogo
   StudioPath: bank:/Dialogo
-  lastModified: 638202908639005680
+  lastModified: 638204501055220248
   FileSizes:
   - Name: Desktop
     Value: 5376
   Exists: 1
+--- !u!114 &6776777016150900212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/chage Vilaverde"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/chage Vilaverde"
+  Guid:
+    Data1: -1221577657
+    Data2: 1118120350
+    Data3: -850860631
+    Data4: -1015046526
+  Banks:
+  - {fileID: 8692978956279676867}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2666802246040735138}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6843803553010179858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2368,7 +2666,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Estalactite.bank
   Name: Estalactite
   StudioPath: bank:/Estalactite
-  lastModified: 638191694422927502
+  lastModified: 638192205933543422
   FileSizes:
   - Name: Desktop
     Value: 12096
@@ -2469,7 +2767,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Tocha.bank
   Name: Tocha
   StudioPath: bank:/Tocha
-  lastModified: 638197760385615084
+  lastModified: 638200822572097748
   FileSizes:
   - Name: Desktop
     Value: 683520
@@ -2489,10 +2787,10 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/M\xFAsicas.bank"
   Name: "M\xFAsicas"
   StudioPath: "bank:/M\xFAsicas"
-  lastModified: 638198790211635713
+  lastModified: 638204501056422111
   FileSizes:
   - Name: Desktop
-    Value: 10460416
+    Value: 10477920
   Exists: 1
 --- !u!114 &8878980753941849168
 MonoBehaviour:
@@ -2536,10 +2834,36 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Ouri\xE7o.bank"
   Name: "Ouri\xE7o"
   StudioPath: "bank:/Ouri\xE7o"
-  lastModified: 638191694423767701
+  lastModified: 638192205934313404
   FileSizes:
   - Name: Desktop
     Value: 15840
+  Exists: 1
+--- !u!114 &8948647240951385286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chage Vilacaverna/area
+  m_EditorClassIdentifier: 
+  Name: area
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4198762818
+    data2: 2676175778
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - vila
+  - caverna
   Exists: 1
 --- !u!114 &9040049563782096613
 MonoBehaviour:
