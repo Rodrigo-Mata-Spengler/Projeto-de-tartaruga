@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{47124636-ff06-41f9-ad8a-187d868673ac}">
+		<property name="name">
+			<value>VerdeCaverna</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc0edec2-7951-472d-ae96-cb75ce5ff856}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{475eee43-8b03-42b7-8322-54f996dfd526}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{475eee43-8b03-42b7-8322-54f996dfd526}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Verde</value>
+			<value>Caverna</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
