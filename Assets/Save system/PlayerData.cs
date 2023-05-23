@@ -75,8 +75,8 @@ public class PlayerData
         mapa3 = MapControler.mapa3;
 
         //captura as informações dos boses
-        boss1Derrotado = HordaManager.terminou;
-        boss2Derrotado = GuardianBehavior.terminou;
+        boss1Derrotado = GuardianBehavior.terminou;
+        boss2Derrotado = HordaManager.terminou;
     }
 
 }

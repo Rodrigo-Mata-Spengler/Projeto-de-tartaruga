@@ -166,7 +166,10 @@ public class Health : MonoBehaviour
             }
             else
             {
+                ResetLife();
+                Destroy(gameObject);
                 SceneManager.LoadScene("Cena 1");
+                
                 //PlayerAnimator.ResetTrigger("Morto");
             }
 
