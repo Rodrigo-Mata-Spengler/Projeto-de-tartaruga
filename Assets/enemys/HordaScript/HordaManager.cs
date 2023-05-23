@@ -45,7 +45,7 @@ public class HordaManager : MonoBehaviour
         if (AmountEnemyToSpawnByRound[CurrentRound] > 0 && Spawn)
         {
             int i = Random.Range(0, SpawnPoints.Count + 1);
-            ZombiPrefab.GetComponent<BTZombiTurtle>().enabled= true;
+            ZombiPrefab.GetComponent<BTZombiTurtle>().enabled = true;
             Instantiate(ZombiPrefab, SpawnPoints[i].position, SpawnPoints[i].rotation);
             AmountEnemyToSpawnByRound[CurrentRound] -= 1;
 
@@ -63,16 +63,16 @@ public class HordaManager : MonoBehaviour
             EnemySpawnTime = 0f;
         }
 
-       if (StartRoundTime >= StartRoundDeleay && CurrentRound < AmountEnemyToSpawnByRound.Count)
-       {
+        if (StartRoundTime >= StartRoundDeleay && CurrentRound < AmountEnemyToSpawnByRound.Count)
+        {
             Spawn = true;
-           CurrentRound += 1;
+            CurrentRound += 1;
             StartRoundTime = 0;
-          
-       }
 
-       if(CurrentRound == AmountEnemyToSpawnByRound.Count)
-       {
+        }
+
+        if (CurrentRound == AmountEnemyToSpawnByRound.Count)
+        {
             Wall.GetComponent<Animator>().SetBool("abrindo", true);
             Wall.GetComponent<BoxCollider2D>().enabled = false;
             Selo.SetActive(true);
@@ -83,7 +83,6 @@ public class HordaManager : MonoBehaviour
             SaveSystem.SavePlayer(player);
             Iconesalvando.Mostraricone();
         }
-       
-    }
 
+    }
 }

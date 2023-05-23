@@ -17,8 +17,11 @@ public class Selo : MonoBehaviour
     [SerializeField]private GameObject Ativado;
     [SerializeField] private GameObject quebrado;
 
-
     public bool tridente = false;
+
+    public Animator Poca_E;
+    public Animator Poca_D;
+
     private void Start()
     {
         PLayer = GameObject.FindGameObjectWithTag("Player");
@@ -51,12 +54,22 @@ public class Selo : MonoBehaviour
                     break;
             }
 
+            Ativado.SetActive(false);
+            quebrado.SetActive(true);
+            PLayer.GetComponent<Health>().RezarEffect.Play();
+            PLayer.GetComponent<Animator>().SetBool("Rezar", true);
+        }
+        
 
+        if(quebrado == true)
+        {
+            Poca_E.SetBool("Caiu", true);
+            Poca_D.SetBool("Caiu", true);
         }
 
     }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Player"))
             {
@@ -69,6 +82,8 @@ public class Selo : MonoBehaviour
             if (collision.CompareTag("Player"))
             {
                 Detected = false;
+                collision.GetComponent<Health>().RezarEffect.Stop();
+                collision.GetComponent<Animator>().SetBool("Rezar", false);
             }
 
         }
