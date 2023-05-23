@@ -22,9 +22,22 @@ public class CircleButtomScript : MonoBehaviour
     public bool rotates = false;
     public bool reverse = false;
 
+    public Sprite BotaoAceso;
+    public Sprite BotaoApagado;
+
     private void Update()
     {
-        if(PlayerDetected && Input.GetButtonDown("Interacao") && !rotates)
+        if (Input.GetButtonDown("Interacao"))
+        {
+            this.GetComponent<SpriteRenderer>().sprite = BotaoAceso;
+        }
+        else
+        {
+            this.GetComponent<SpriteRenderer>().sprite = BotaoApagado;
+        }
+            
+
+        if (PlayerDetected && Input.GetButtonDown("Interacao") && !rotates)
         {
             //CircleToMove.Rotate(0f, 0f, AmountToRotate, Space.Self);
             rotates= true;

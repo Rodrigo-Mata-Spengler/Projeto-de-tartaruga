@@ -5,7 +5,7 @@ using UnityEngine;
 public class GeniusPorta : MonoBehaviour
 {
     [SerializeField] private GeniusControler puzzle;
-    private Animator PortaAbrindo;
+    public Animator PortaAbrindo;
 
     public void AlertObservers(string message)
     {
