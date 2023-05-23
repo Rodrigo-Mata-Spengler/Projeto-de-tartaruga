@@ -1,8 +1,8 @@
 
 public enum MusicArea
 {
-    Area1 = 0,
-    Area2 = 1,
+    Vila = 0,
+    Caverna = 1,
 
     vila = 0,
     caverna = 1,

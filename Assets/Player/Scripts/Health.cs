@@ -84,9 +84,13 @@ public class Health : MonoBehaviour
     private void Update()
     {
 
-        if(Input.GetAxis("Curar")> 0 && HealSeaweed <= MaxHealSeaweed && currentLife < maxLife && HealSeaweed > 0)
+        if (Input.GetAxis("Curar") > 0)
         {
             gameObject.GetComponent<PlayerMovement>().enabled = false;
+        }
+        if (Input.GetAxis("Curar")> 0 && HealSeaweed <= MaxHealSeaweed && currentLife < maxLife && HealSeaweed > 0)
+        {
+            
             PlayerAnimator.SetBool("Curar", true);
             if (DoOnce == false)
             {
@@ -202,8 +206,9 @@ public class Health : MonoBehaviour
     // Do damage
     public void Damage(int GiveDamageAmount)
     {
-        if(currentLife > 0f)
+        if(currentLife > 0f && this.GetComponent<Health>().enabled == true)
         {
+            rb.velocity = Vector2.one;
             CameraShakeManager.instance.CameraShake(impulseSource);
             currentLife -= GiveDamageAmount;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
@@ -214,7 +219,7 @@ public class Health : MonoBehaviour
             HudControler.ChangeHealth(currentLife);
 
             rb.AddForce(transform.up * 10, ForceMode2D.Impulse);
-            rb.AddForce(transform.right * 3, ForceMode2D.Impulse);
+            //rb.AddForce(transform.right * 3, ForceMode2D.Impulse);
 
         }
 

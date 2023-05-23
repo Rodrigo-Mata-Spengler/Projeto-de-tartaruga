@@ -22,26 +22,17 @@ public class CircleButtomScript : MonoBehaviour
     public bool rotates = false;
     public bool reverse = false;
 
-    public Sprite BotaoAceso;
+    public Sprite BotaoAcesso;
     public Sprite BotaoApagado;
 
     private void Update()
     {
-        if (Input.GetButtonDown("Interacao"))
-        {
-            this.GetComponent<SpriteRenderer>().sprite = BotaoAceso;
-        }
-        else
-        {
-            this.GetComponent<SpriteRenderer>().sprite = BotaoApagado;
-        }
-            
-
         if (PlayerDetected && Input.GetButtonDown("Interacao") && !rotates)
         {
             //CircleToMove.Rotate(0f, 0f, AmountToRotate, Space.Self);
             rotates= true;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Circular, transform.position);
+            gameObject.GetComponent<SpriteRenderer>().sprite = BotaoAcesso;
         }
         if (rotates)
         {
@@ -62,13 +53,14 @@ public class CircleButtomScript : MonoBehaviour
                 if(SecondTargetRotation != null && !reverse)
                 {
                     SecondTargetRotation.Rotate(0f, 0f, AmountToRotate, Space.Self);
-                    
+
+
                 }
                 if (SecondTargetRotation != null && reverse)
                 {
                     SecondTargetRotation.Rotate(0f, 0f, -AmountToRotate, Space.Self);
                 }
-
+                gameObject.GetComponent<SpriteRenderer>().sprite = BotaoApagado;
 
                 timeCount = 0;
                 rotates = false;

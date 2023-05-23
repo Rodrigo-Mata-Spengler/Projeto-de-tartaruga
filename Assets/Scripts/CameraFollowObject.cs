@@ -41,16 +41,17 @@ public class CameraFollowObject : MonoBehaviour
 
     private float currentY;
 
-    private CharacterController2D characterController2D;
     private void Start()
+    {
+
+
+    }
+    private void Awake()
     {
         PlayerObj = GameObject.FindGameObjectWithTag("Player");
 
         PlayerMovmentScript = PlayerObj.GetComponent<PlayerMovement>();
-        characterController2D = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController2D>();
-    }
-    private void Awake()
-    {
+
         PlayerCharacterController = PlayerObj.GetComponent<CharacterController2D>();
 
         _isFacingRight = PlayerCharacterController.m_FacingRight;
@@ -99,7 +100,7 @@ public class CameraFollowObject : MonoBehaviour
     public void CallTurn()
     {
         //smooth when falling
-        LeanTween.rotateY(gameObject, DetermineEndRotation(), FlipYRotationTime).setEaseInOutSine();
+        LeanTween.rotateY(this.gameObject, DetermineEndRotation(), FlipYRotationTime).setEaseInOutSine();
     }
 
     private float DetermineEndRotation()
@@ -167,7 +168,7 @@ public class CameraFollowObject : MonoBehaviour
             LookedUpOrDown = false;
             PlayerMovmentScript.enabled = true;
             //enables the camera to lerp in a forwarder distance in the horizontal  
-            characterController2D.turn = true;
+            PlayerCharacterController.turn = true;
         }
         
     }

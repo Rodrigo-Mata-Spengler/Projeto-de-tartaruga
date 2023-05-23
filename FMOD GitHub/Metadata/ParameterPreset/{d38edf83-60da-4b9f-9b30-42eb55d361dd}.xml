@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d38edf83-60da-4b9f-9b30-42eb55d361dd}">
+		<property name="name">
+			<value>TumuloSombra</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc0edec2-7951-472d-ae96-cb75ce5ff856}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5b2b0438-9258-4df7-bae4-7d144fc537ae}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5b2b0438-9258-4df7-bae4-7d144fc537ae}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Tumulo</value>
+			<value>Sombra</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
