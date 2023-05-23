@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{6cfc62c1-7a5e-4484-9841-6d558fb93a5e}">
+		<property name="name">
+			<value>CavernaGuardiao</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc0edec2-7951-472d-ae96-cb75ce5ff856}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{987f058b-48b9-4adc-a11b-c8a26c61f7ce}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{987f058b-48b9-4adc-a11b-c8a26c61f7ce}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Caverna</value>
+			<value>Guardiao</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
