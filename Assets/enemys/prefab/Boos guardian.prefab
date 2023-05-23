@@ -267,16 +267,15 @@ GameObject:
   m_Component:
   - component: {fileID: 8417824736672114239}
   - component: {fileID: 122272939542118545}
-  - component: {fileID: 6038418259353708209}
   - component: {fileID: 8268225935956182283}
-  - component: {fileID: 1883291637759138392}
+  - component: {fileID: 6511680181007076427}
   m_Layer: 8
   m_Name: Tridente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8417824736672114239
 Transform:
   m_ObjectHideFlags: 0
@@ -285,8 +284,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7142458451593467871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 194.55, y: -1.17, z: -0.05903387}
-  m_LocalScale: {x: 0.93488413, y: 0.93488413, z: 0.93488413}
+  m_LocalPosition: {x: 191.06, y: -3.82, z: -0.05903387}
+  m_LocalScale: {x: 0.4026132, y: 0.4026132, z: 0.4026132}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3084456316168892138}
@@ -344,24 +343,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6038418259353708209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7142458451593467871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c69b8b05d2323e449a82c7ae88740e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  status: 4
-  Detected: 0
-  Tridente: {fileID: 7142458451593467871}
-  Ativado: {fileID: 0}
-  quebrado: {fileID: 0}
-  tridente: 1
 --- !u!61 &8268225935956182283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -388,24 +369,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.6577272, y: 10}
   m_EdgeRadius: 0
---- !u!114 &1883291637759138392
+--- !u!114 &6511680181007076427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7142458451593467871}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c69b8b05d2323e449a82c7ae88740e5, type: 3}
+  m_Script: {fileID: 11500000, guid: c10af70b0b6427a4b80e4c155899485a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: 1
   Detected: 0
-  Tridente: {fileID: 0}
-  Ativado: {fileID: 0}
-  quebrado: {fileID: 0}
-  tridente: 0
 --- !u!1001 &1144554044700979821
 PrefabInstance:
   m_ObjectHideFlags: 0

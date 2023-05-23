@@ -41,6 +41,10 @@ public class MenuPause : MonoBehaviour
     public GameObject voltarInventario;
     public GameObject MapButtonInventario;
 
+    [Header("HUD")]
+    [SerializeField] public GameObject Mana;
+
+
     [HideInInspector]public bool painelOpen = false;
 
     private void Start()

@@ -12,7 +12,7 @@ public class Selo : MonoBehaviour
 
     public bool Detected = false;
 
-    [SerializeField] private GameObject Tridente;
+  
     [Space]
     [SerializeField]private GameObject Ativado;
     [SerializeField] private GameObject quebrado;
@@ -50,17 +50,7 @@ public class Selo : MonoBehaviour
                     PLayer.GetComponent<Estamina>().enabled = true;
                     break;
             }
-            if(!tridente)
-            {
-                Ativado.SetActive(false);
-                quebrado.SetActive(true);
-            }
-            else
-            {
-                Tridente.SetActive(false);
-                GameObject.FindGameObjectWithTag("EstaminaSlider").SetActive(true);
-                PLayer.GetComponent<Estamina>().enabled = true;
-            }
+
 
         }
 

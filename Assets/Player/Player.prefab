@@ -2156,6 +2156,7 @@ MonoBehaviour:
   TimeToHeal: 1.74
   HealEffect: {fileID: 461927069386012012}
   RezarEffect: {fileID: 3101027598700042464}
+  respawnDelay: 0
 --- !u!114 &2011585474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2186,7 +2187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wasHit: 0
-  secondsToDisable: 0.7
+  secondsToDisable: 2
   DoOnce: 0
 --- !u!114 &8033661058447654777
 MonoBehaviour:

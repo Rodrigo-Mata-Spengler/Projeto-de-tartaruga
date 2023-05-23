@@ -175,6 +175,7 @@ public class GuardianBehavior : MonoBehaviour
             terminou = true;
             SaveSystem.SavePlayer(PlayerObj);
             Iconesalvando.Mostraricone();
+            
         }
 
     }
@@ -183,26 +184,8 @@ public class GuardianBehavior : MonoBehaviour
         TridenteFlutuando.SetActive(true);
         Wall.GetComponent<Animator>().SetBool("abrindo", true);
         Wall.GetComponent<BoxCollider2D>().enabled = false;
-    
-
-        PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true;
-        PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
-        
-        /*
-        // activated the have magic trident in player movment
-        
-        PlayerObj.GetComponent<PlayerMovement>().AtaqueHitBox.SetActive(false); // activated the have magic trident in the Attack obj
-        PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBox.SetActive(false);
-        PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBox.SetActive(false);
-        
-        PlayerObj.GetComponent<PlayerMovement>().AtaqueMagicoHitBox.SetActive(true);
-        PlayerObj.GetComponent<PlayerMovement>().AtaqueUpHitBoxMagico.SetActive(true);
-        PlayerObj.GetComponent<PlayerMovement>().AtaqueDownHitBoxMagico.SetActive(true);
-        
-        PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
-        PlayerObj.GetComponent<Dash>().enabled = true;
-        PlayerObj.GetComponent<Estamina>().enabled = true;
-        */
+   
+       
     }
 
     private void PlayerDistance()

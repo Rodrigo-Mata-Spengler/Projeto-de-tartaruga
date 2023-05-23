@@ -60,7 +60,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Start()
     {
-        CameraFollowObject =GameObject.FindGameObjectWithTag("CameraFollow").GetComponent<CameraFollowObject>();
+        CameraFollowObject = GameObject.FindGameObjectWithTag("CameraFollow").GetComponent<CameraFollowObject>();
 
         _fallSpeedYDampingChangeThreshold = CameraManager.Instance._fallSpeedYDapingChangeThreshold;
 
@@ -69,6 +69,11 @@ public class CharacterController2D : MonoBehaviour
 
     private void Update()
     {
+        if(CameraFollowObject == null)
+        {
+            CameraFollowObject = GameObject.FindGameObjectWithTag("CameraFollow").GetComponent<CameraFollowObject>();
+        }
+
         AttackEnd = gameObject.GetComponent<PlayerMovement>().AttackEnd;
         //if we are falling past a certain speed threshold
         if (m_Rigidbody2D.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)

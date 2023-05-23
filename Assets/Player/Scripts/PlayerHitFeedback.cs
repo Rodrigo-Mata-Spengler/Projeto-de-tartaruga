@@ -17,6 +17,8 @@ public class PlayerHitFeedback : MonoBehaviour
     private Animator animatorPlayer;
 
     public bool DoOnce = false;
+
+
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -31,12 +33,7 @@ public class PlayerHitFeedback : MonoBehaviour
             animatorPlayer.SetTrigger("Dano");
             StartCoroutine(DisableHitFeedback(secondsToDisable));
         }
-        if(DoOnce)
-        {
-            StopAllCoroutines();
-            Debug.Log("aqui");
-            DoOnce = false;
-        }
+
     }
     private IEnumerator DisableHitFeedback(float seconds)
     {
