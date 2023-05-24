@@ -208,12 +208,12 @@ public class PlayerMovement : MonoBehaviour
         {
             float distance = Mathf.Abs(hitWallDown.point.x - transform.position.x);
             gameObject.GetComponent<Dash>().m_DashDist = (distance - 0.5f);
-            gameObject.GetComponent<Dash>().dashTime = 0.09f;
+            gameObject.GetComponent<Dash>().dashTime = 0.15f;
         }
         else
         {
             gameObject.GetComponent<Dash>().m_DashDist = 7;
-            gameObject.GetComponent<Dash>().dashTime = 0.1f;
+            gameObject.GetComponent<Dash>().dashTime = 0.25f;
         }
     }
     private void CheckWallSliding()

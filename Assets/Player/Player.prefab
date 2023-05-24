@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003948e474aa3f84cb15880a7f97d834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HaveMagicTrident: 0
+  HaveMagicTrident: 1
   HaveArmor: 0
   CharacterController2D: {fileID: 6748649182909457867}
   m_Rigidbody2D: {fileID: 0}
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b693594e52517f740a4291ea3f7c10d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashTime: 0.25
+  dashTime: 0.4
   m_DashDist: 7
   _isDashing: 0
   canDash: 0
