@@ -12,7 +12,7 @@ public class Ataque : MonoBehaviour
     public Rigidbody2D rb;
 
     public float DamageAmount;
-
+    public float DamageMagicTridentAmount;
 
     [HideInInspector]public bool up, down, right;
     public float impulseForce;
@@ -21,17 +21,23 @@ public class Ataque : MonoBehaviour
 
     private Estamina playerEstamina;
 
-    
-
     public VisualEffect HitEffect;
     public VisualEffect HitEffectUp;
     public VisualEffect HitEffectDown;
+
+    private bool DoOnce=false;
     private void Start()
     {
         playerEstamina = GameObject.FindGameObjectWithTag("Player").GetComponent<Estamina>();
     }
     private void Update()
     {
+        if(HaveMagicTrident && !DoOnce)
+        {
+            DamageAmount = DamageMagicTridentAmount;
+            DoOnce = true;
+        }
+
         //checks if hit a enemy
         if (Detected)
         {

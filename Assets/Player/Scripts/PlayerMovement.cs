@@ -42,32 +42,16 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Ataque")]
 
-    private bool rightAttack = false;
     public GameObject AtaqueHitBox;
-    private Animator AtaqueHitBoxEfeito_Animator;
-
-    public GameObject AtaqueMagicoHitBox;
-    private Animator AtaqueMagicoHitBoxEfeito_Animator;
-    [Space]
-
     public GameObject AtaqueUpHitBox;
-    private Animator AtaqueUpHitBoxEfeito_Animator;
-
-    public GameObject AtaqueUpHitBoxMagico;
-    private Animator AtaqueUpHitBoxMagicoEfeito_Animator;
-    [Space]
-
     public GameObject AtaqueDownHitBox;
-    private Animator AtaqueDownHitBoxEfeito_Animator;
-
-    public GameObject AtaqueDownHitBoxMagico;
-    private Animator AtaqueDownHitBoxMagicoEfeito_Animator;
 
     public float AttackTimeAmount;///The time that the attack will be enabled
     public bool AttackEnd = true;
     [Space]
     public float AtaqueRate = 15f;
     public float NextTimeToAtaque = 0f;
+    private bool rightAttack = false;
 
     [HideInInspector] public bool moving = false; // variable to player lookUporDown
     [HideInInspector] public bool AtaqueInput;
@@ -109,22 +93,21 @@ public class PlayerMovement : MonoBehaviour
         PlayerFootstep = AudioManager.instance.CreateEventInstance(FMODEvents.instance.PlayerFootstep);
 
 
-        AtaqueHitBoxEfeito_Animator = AtaqueHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
-        AtaqueMagicoHitBoxEfeito_Animator = AtaqueMagicoHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
-
-        AtaqueUpHitBoxEfeito_Animator = AtaqueUpHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
-        AtaqueUpHitBoxMagicoEfeito_Animator = AtaqueUpHitBoxMagico.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
-
-        AtaqueDownHitBoxEfeito_Animator = AtaqueDownHitBox.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
-        AtaqueDownHitBoxMagicoEfeito_Animator = AtaqueDownHitBoxMagico.gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
-
         if (HaveArmor)
         {
             m_Animator.SetBool("Armadura",true);
+
+            AtaqueHitBox.GetComponent<Ataque>().HaveMagicTrident = true;
+            AtaqueUpHitBox.GetComponent<Ataque>().HaveMagicTrident = true;
+            AtaqueDownHitBox.GetComponent<Ataque>().HaveMagicTrident = true;
         }
         else if (HaveMagicTrident)
         {
             m_Animator.SetBool("Magico", true);
+
+            AtaqueHitBox.GetComponent<Ataque>().HaveMagicTrident = true;
+            AtaqueUpHitBox.GetComponent<Ataque>().HaveMagicTrident= true;
+            AtaqueDownHitBox.GetComponent<Ataque>().HaveMagicTrident = true;
         }
     }
 
@@ -207,14 +190,6 @@ public class PlayerMovement : MonoBehaviour
         {
 
             m_Animator.SetInteger("Ataque normal index", 2);
-            if (!HaveMagicTrident)
-            {
-                AtaqueHitBoxEfeito_Animator.SetInteger("AtaqueNormalIndex", 2);
-            }
-            else
-            {
-                AtaqueMagicoHitBoxEfeito_Animator.SetInteger("AtaqueIndex", 2);
-            }
             AttackTimeAmount = 0.5f;
         }
 
@@ -226,8 +201,8 @@ public class PlayerMovement : MonoBehaviour
         /// Creates the raycast for the walljump
         IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, WallCheckDistance, WhatIsGround);
 
-        RaycastHit2D hitWallTop = Physics2D.Raycast(WallChecksDash[0].position, transform.right, 6, WhatIsGround);
-        RaycastHit2D hitWallDown = Physics2D.Raycast(WallChecksDash[1].position, transform.right, 6, WhatIsGround);
+        RaycastHit2D hitWallTop = Physics2D.Raycast(WallChecksDash[0].position, transform.right, 7, WhatIsGround);
+        RaycastHit2D hitWallDown = Physics2D.Raycast(WallChecksDash[1].position, transform.right, 7, WhatIsGround);
 
         if (hitWallTop.collider != null || hitWallDown.collider != null)
         {
@@ -363,63 +338,23 @@ public class PlayerMovement : MonoBehaviour
         {
             rightAttack = true;
             m_Animator.SetBool("Ataque normal", true); // player animation
-            
-            if (HaveMagicTrident)
-            {
 
-                AtaqueMagicoHitBox.transform.GetChild(1).gameObject.SetActive(true);
-                AtaqueMagicoHitBox.transform.GetChild(1).gameObject.GetComponent<Ataque>().right = true;
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueMagicoHitBox));
-                AtaqueMagicoHitBoxEfeito_Animator.SetInteger("AtaqueIndex", 1);
-                
-            }
-            else
-            {
 
-                AtaqueHitBox.transform.GetChild(1).gameObject.SetActive(true);
-                AtaqueHitBox.transform.GetChild(1).gameObject.GetComponent<Ataque>().right = true;
-                
+            AtaqueHitBox.SetActive(true);
 
-                if (!HaveArmor)
-                {
-                    AtaqueHitBoxEfeito_Animator.SetInteger("AtaqueNormalIndex", 1);
-                }
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueHitBox));
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-            }
-            
+            StartCoroutine(AttackTime(AttackTimeAmount, AtaqueHitBox));
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
+
         }
         //enables the up hitBox
         if (Input.GetAxis("Vertical") > 0) 
         {
             rightAttack = false;
             m_Animator.SetBool("Ataque cima", true); // player animation
-            if (HaveMagicTrident)
-            {
 
-                
-                AtaqueUpHitBoxMagico.transform.GetChild(1).gameObject.SetActive(true);
-                AtaqueUpHitBoxMagico.transform.GetChild(1).gameObject.GetComponent<Ataque>().up = true;
-                AtaqueUpHitBoxMagicoEfeito_Animator.SetBool("Ataque", true);
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBoxMagico));
-            }
-            else
-            {
-
-                AtaqueUpHitBox.transform.GetChild(1).gameObject.SetActive(true);
-                AtaqueUpHitBox.transform.GetChild(1).gameObject.GetComponent<Ataque>().up = true;
-
-                if (!HaveArmor)
-                {
-                    AtaqueUpHitBoxEfeito_Animator.SetBool("Ataque", true);
-                }
-                    
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
-
-
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-            }
-
+            AtaqueUpHitBox.SetActive(true);
+            StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
 
 
         }
@@ -428,28 +363,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rightAttack = false;
             m_Animator.SetBool("Ataque baixo", true); // player animation
-            if (HaveMagicTrident)
-            {
-
-                AtaqueDownHitBoxMagico.transform.GetChild(1).gameObject.SetActive(true);
-                AtaqueDownHitBoxMagico.transform.GetChild(1).gameObject.GetComponent<Ataque>().down = true;
-                AtaqueDownHitBoxMagicoEfeito_Animator.SetBool("Ataque", true);
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBoxMagico));
-                
-            }
-            else
-            {
-                AtaqueDownHitBox.transform.GetChild(1).gameObject.SetActive(true);
-                AtaqueDownHitBox.transform.GetChild(1).gameObject.GetComponent<Ataque>().down = true;
-
-                if (!HaveArmor)
-                {
-                    AtaqueDownHitBoxEfeito_Animator.SetBool("Ataque", true);
-                }
-
-                
-                StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBox));
-            }
+            AtaqueDownHitBox.SetActive(true);
+            StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBox));
 
             AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
         }
@@ -462,9 +377,9 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(AttackDuration);
 
-        HitBox.transform.GetChild(1).GetComponent<Ataque>().Detected = false;
-        HitBox.transform.GetChild(1).GetComponent<Ataque>().HitIndex = 0;
-        HitBox.transform.GetChild(1).gameObject.SetActive(false);
+        HitBox.GetComponent<Ataque>().Detected = false;
+        HitBox.GetComponent<Ataque>().HitIndex = 0;
+        HitBox.SetActive(false);
         AttackEnd = true;
 
         m_Animator.SetBool("Ataque baixo", false);
@@ -472,15 +387,7 @@ public class PlayerMovement : MonoBehaviour
         m_Animator.SetBool("Ataque normal", false);
         m_Animator.SetInteger("Ataque normal index", 0);
 
-        if (!rightAttack)
-        {
-            HitBox.transform.GetChild(0).GetComponent<Animator>().SetBool("Ataque", false);
-        }
-        if (rightAttack)
-        {
-            AtaqueMagicoHitBoxEfeito_Animator.SetInteger("AtaqueIndex", 0);
-            AtaqueHitBoxEfeito_Animator.SetInteger("AtaqueNormalIndex", 0);
-        }
+
 
     }
           
