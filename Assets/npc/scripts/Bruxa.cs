@@ -78,6 +78,11 @@ public class Bruxa : MonoBehaviour
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
+            //disable HUD
+            HUD.SetActive(false);
+
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2 && hadConversation == false)
@@ -85,8 +90,7 @@ public class Bruxa : MonoBehaviour
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
-            Player.GetComponent<Animator>().enabled= false;
+
 
             //disable HUD
             HUD.SetActive(false);
@@ -104,8 +108,7 @@ public class Bruxa : MonoBehaviour
             conversationObj.SetActive(true);
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
-            Player.GetComponent<Animator>().enabled = false;
+
 
             //disable HUD
             HUD.SetActive(false);
@@ -166,9 +169,11 @@ public class Bruxa : MonoBehaviour
             // if player press the esc disable the UI interaction obj
         if (Input.GetKey(KeyCode.Escape))
         {
-            conversationObj.SetActive(false);
+            inputPressed = false;
+            OnStore = false;
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
+            conversationObj.SetActive(false);
             StoreBruxa.SetActive(false);
             //enable HUD
             HUD.gameObject.SetActive(true);
