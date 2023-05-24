@@ -591,6 +591,9 @@ public class SombraBehaviour : MonoBehaviour
     {
         ondaAtaque = false;
 
+        anim_corpo.ResetTrigger("Ataque_sismico_subir");
+        anim_corpo.ResetTrigger("Ataque_sismico_descer");
+
         anim_Onda1.ResetTrigger("OnFloor");
         anim_Onda2.ResetTrigger("OnFloor");
 
@@ -603,6 +606,7 @@ public class SombraBehaviour : MonoBehaviour
     {
         if (ondaAtaque == false)
         {
+            anim_corpo.SetTrigger("Ataque_sismico_subir");
             pinca7.transform.position = Vector3.MoveTowards(pinca7.transform.position, posfinalPinca7, velocidadeAtaque4 * Time.deltaTime);
             Onda1.transform.position = Vector3.MoveTowards(Onda1.transform.position, posIntermediariaOnda1, velocidadeAtaque4 * Time.deltaTime);
             Onda2.transform.position = Vector3.MoveTowards(Onda2.transform.position, posIntermediariaOnda2, velocidadeAtaque4 * Time.deltaTime);
@@ -621,7 +625,8 @@ public class SombraBehaviour : MonoBehaviour
             if (tempoParaRetornoAtaque4 <= Time.time)
             {
                 pinca7.transform.position = Vector3.MoveTowards(pinca7.transform.position, posInicialPinca7, velocidadeAtaque4 * Time.deltaTime);
-                
+                anim_corpo.ResetTrigger("Ataque_sismico_subir");
+                anim_corpo.SetTrigger("Ataque_sismico_descer");
             }
             if (Onda1.transform.position == posfinalOnda1)
             {
