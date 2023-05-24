@@ -6,7 +6,7 @@ public class Dash : MonoBehaviour
 {
     private Animator m_Animator;
 
-    public float dashTime = 0.1f;//Time of the dash
+    public float dashTime = 0.25f;//Time of the dash
     public float m_DashDist;//the distance of dash
     private float _currentDashTime = 0f;//time when player is dashing
     [HideInInspector]public bool _isDashing = false;
