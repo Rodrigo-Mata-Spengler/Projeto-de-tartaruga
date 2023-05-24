@@ -54,11 +54,13 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posInicialPinca3;//posição inicial do ataque
     [SerializeField] private Vector3 posIntermediariaPinca3;//posição de espera do ataque
     [SerializeField] private Vector3 posfinalPinca3;//posição final do ataque
+    [SerializeField] private Animator anim_pinca3;
     //Pinça 4
     [SerializeField] private GameObject pinca4;//O game object da pinça
     [SerializeField] private Vector3 posInicialPinca4;//posição inicial do ataque
     [SerializeField] private Vector3 posIntermediariaPinca4;//posição de espera do ataque
     [SerializeField] private Vector3 posfinalPinca4;//posição final do ataque
+    [SerializeField] private Animator anim_pinca4;
     //tempo de espera na posição intermediaria antes do ataque
     [SerializeField] private float tempoEsperaAtaque2 = 0;
     private float tempoEsperaProximoAtaque2 = 0;
@@ -75,11 +77,13 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posInicialPinca5;//posição inicial do ataque
     [SerializeField] private Vector3 posIntermediariaPinca5;//posição de espera do ataque
     [SerializeField] private Vector3 posfinalPinca5;//posição final do ataque
+    [SerializeField] private Animator anim_pinca5;
     //pinça 6
     [SerializeField] private GameObject pinca6;//O game object da pinça
     [SerializeField] private Vector3 posInicialPinca6;//posição inicial do ataque
     [SerializeField] private Vector3 posIntermediariaPinca6;//posição de espera do ataque
     [SerializeField] private Vector3 posfinalPinca6;//posição final do ataque
+    [SerializeField] private Animator anim_pinca6;
     //tempo de espera na posição intermediaria antes do ataque
     [SerializeField] private float tempoEsperaAtaque3 = 0;
     private float tempoEsperaProximoAtaque3 = 0;
@@ -457,6 +461,11 @@ public class SombraBehaviour : MonoBehaviour
         ataque2Preparado = true;
         ataque2Voltando = false;
 
+        anim_pinca3.SetBool("movendo", false);
+        anim_pinca4.SetBool("movendo", false);
+
+        anim_corpo.SetBool("ataque_horizontal_esquerda",false);
+
         DefinirDiracaoAtaque2();
 
         pinca3.transform.position = posInicialPinca3;
@@ -495,6 +504,8 @@ public class SombraBehaviour : MonoBehaviour
     {
         if (ataque2Preparado)
         {
+            anim_corpo.SetBool("ataque_horizontal_esquerda", true);
+
             pinca3.transform.position = Vector3.MoveTowards(pinca3.transform.position, posIntermediariaPinca3, velocidadePreparoAtaque2 * Time.deltaTime);
             tempoEsperaProximoAtaque2 = tempoEsperaAtaque2 + Time.time;
 
@@ -506,10 +517,16 @@ public class SombraBehaviour : MonoBehaviour
         }
         else if (ataque2Voltando)
         {
+            anim_pinca3.SetBool("movendo", false);
+
+            anim_corpo.SetBool("ataque_horizontal_esquerda", false);
+
             SombraBrain();
         }
         else if (tempoEsperaProximoAtaque2 <= Time.time)
         {
+            anim_pinca3.SetBool("movendo", true);
+
             pinca3.transform.position = Vector3.MoveTowards(pinca3.transform.position, posfinalPinca3, velocidadeAtaque2 * Time.deltaTime);
             if (pinca3.transform.position == posfinalPinca3)
             {
@@ -533,10 +550,14 @@ public class SombraBehaviour : MonoBehaviour
         }
         else if (ataque2Voltando)
         {
+            anim_pinca4.SetBool("movendo", false);
+
             SombraBrain();
         }
         else if (tempoEsperaProximoAtaque2 <= Time.time)
         {
+            anim_pinca4.SetBool("movendo", true);
+
             pinca4.transform.position = Vector3.MoveTowards(pinca4.transform.position, posfinalPinca4, velocidadeAtaque2 * Time.deltaTime);
             if (pinca4.transform.position == posfinalPinca4)
             {
@@ -548,19 +569,28 @@ public class SombraBehaviour : MonoBehaviour
     //Metodos relacionados ao Ataque 3
     private void SetUpAtaque3()
     {
+        anim_corpo.ResetTrigger("Ataque_simultanio_duplo_sobe");
+        anim_corpo.ResetTrigger("Ataque_simultanio_duplo_desce");
+
         ataque3Preparado = true;
         ataque3Voltando = false;
+
+        anim_pinca3.SetBool("movendo", false);
+        anim_pinca4.SetBool("movendo", false);
 
         DefinirDiracaoAtaque2();
 
         pinca5.transform.position = posInicialPinca5;
         pinca6.transform.position = posInicialPinca6;
+
+        
     }
 
     private void Ataque3()
     {
         if (ataque3Preparado)
         {
+            anim_corpo.SetTrigger("Ataque_simultanio_duplo_sobe");
             pinca5.transform.position = Vector3.MoveTowards(pinca5.transform.position, posIntermediariaPinca5, velocidadePreparoAtaque3 * Time.deltaTime);
             pinca6.transform.position = Vector3.MoveTowards(pinca6.transform.position, posIntermediariaPinca6, velocidadePreparoAtaque3 * Time.deltaTime);
             tempoEsperaProximoAtaque3 = tempoEsperaAtaque3 + Time.time;
@@ -573,10 +603,19 @@ public class SombraBehaviour : MonoBehaviour
         }
         else if (ataque3Voltando)
         {
+            anim_corpo.ResetTrigger("Ataque_simultanio_duplo_sobe");
+            anim_corpo.SetTrigger("Ataque_simultanio_duplo_desce");
+
+            anim_pinca3.SetBool("movendo", false);
+            anim_pinca4.SetBool("movendo", false);
+
             SombraBrain();
         }
         else if (tempoEsperaProximoAtaque3 <= Time.time)
         {
+            anim_pinca3.SetBool("movendo", true);
+            anim_pinca4.SetBool("movendo", true);
+
             pinca5.transform.position = Vector3.MoveTowards(pinca5.transform.position, posfinalPinca5, velocidadePreparoAtaque3 * Time.deltaTime);
             pinca6.transform.position = Vector3.MoveTowards(pinca6.transform.position, posfinalPinca6, velocidadePreparoAtaque3 * Time.deltaTime);
             if (pinca5.transform.position == posfinalPinca5)
