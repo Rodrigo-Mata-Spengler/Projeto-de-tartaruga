@@ -8,6 +8,7 @@ public class MenuPause : MonoBehaviour
 {
     private bool isPaused = false;
     private ItensInventory PlayerInventory;
+    private GameObject Player;
 
     [Header("Menu Pause")]
     [SerializeField] private GameObject pausePanel;
@@ -45,7 +46,8 @@ public class MenuPause : MonoBehaviour
     [SerializeField] public GameObject Mana;
 
 
-    [HideInInspector]public bool painelOpen = false;
+    [HideInInspector]public bool OnConversation = false;
+
 
     private void Start()
     {
@@ -57,12 +59,14 @@ public class MenuPause : MonoBehaviour
         mortePanel = false;
 
         PlayerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<ItensInventory>();
+
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
     private void Update()
     {
 
 
-        if (Input.GetKeyDown(KeyCode.Escape) && mortePanel == false )
+        if (Input.GetKeyDown(KeyCode.Escape) && mortePanel == false)
         {
             SisPause(pausePanel);
             ///clear selected object
@@ -118,6 +122,7 @@ public class MenuPause : MonoBehaviour
         OptionsPanel.SetActive(false);
         AudioPanel.SetActive(false);
         ControlsPanel.SetActive(false);
+
     }
 
     private void SisPause(GameObject Panel)

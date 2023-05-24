@@ -2166,6 +2166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxEstamina: 5
+  hasEstamina: 0
   CurrentEstamina: 5
   AttackToGetEstamina: 2
   amountOfHitToGiveEstamina: 0
@@ -2194,6 +2195,7 @@ MonoBehaviour:
   HealEffect: {fileID: 461927069386012012}
   RezarEffect: {fileID: 3101027598700042464}
   respawnDelay: 0
+  timeToDeath: 1
 --- !u!114 &2011585474
 MonoBehaviour:
   m_ObjectHideFlags: 0

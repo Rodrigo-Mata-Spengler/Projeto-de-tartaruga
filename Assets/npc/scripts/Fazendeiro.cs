@@ -75,6 +75,12 @@ public class Fazendeiro : MonoBehaviour
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
+
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
+
+            //disable HUD
+            HUD.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false)
@@ -82,11 +88,7 @@ public class Fazendeiro : MonoBehaviour
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
-            Player.GetComponent<Animator>().enabled = false;
 
-            //disable HUD
-            HUD.SetActive(false);
 
             StartTyping = false;
             StopAllCoroutines();
@@ -133,9 +135,11 @@ public class Fazendeiro : MonoBehaviour
         // if player press the esc disable the UI interaction obj
         if (Input.GetKey(KeyCode.Escape))
         {
-            conversationObj.SetActive(false);
+            inputPressed = false;
+            OnStore = false;
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
+            conversationObj.SetActive(false);
             StoreFazendeiro.SetActive(false);
             //enable HUD
             HUD.SetActive(true);
@@ -220,6 +224,7 @@ public class Fazendeiro : MonoBehaviour
             StoreFazendeiro.SetActive(false);
 
             PlayerHealth.HealthSlider.value = PlayerHealth.maxLife * 8;
+  
         }
         else
         {
@@ -238,5 +243,6 @@ public class Fazendeiro : MonoBehaviour
 
         //enable HUD
         HUD.SetActive(true);
+  
     }
 }

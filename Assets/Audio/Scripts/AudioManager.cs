@@ -53,6 +53,11 @@ public class AudioManager : MonoBehaviour
     }
     private void Update()
     {
+
+        if(instance == null)
+        {
+            instance = this;
+        }
         masterBus.setVolume(masterVolume);
         musicBus.setVolume(musicVolume);
         ambienceBus.setVolume(ambienceVolume);

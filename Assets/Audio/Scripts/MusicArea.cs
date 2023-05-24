@@ -3,7 +3,9 @@ public enum MusicArea
 {
     Vila = 0,
     Caverna = 1,
+    Guardiao = 2,
+    Tumulo = 3,
+    Verde = 4,
+    Abismo = 5,
 
-    vila = 0,
-    caverna = 1,
 }

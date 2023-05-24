@@ -67,6 +67,7 @@ public class NpcIteraction : MonoBehaviour
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
+            HUD.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false )
@@ -78,7 +79,7 @@ public class NpcIteraction : MonoBehaviour
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
 
             //disable HUD
-            HUD.SetActive(false);
+            
 
             StartTyping = false;
             StopAllCoroutines();
@@ -119,6 +120,8 @@ public class NpcIteraction : MonoBehaviour
             conversationObj.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
+
+            HUD.SetActive(true);
         }
         
     }
