@@ -146,6 +146,27 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posTentaculo4Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo4;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo4;//poição final do dano do tentaculo
+    //tentaculo 5
+    [SerializeField] private GameObject tentaculo5;//o Game objevt do tentaculo
+    [SerializeField] private Animator animTentaculo5;//O animador do tentaculo
+    [SerializeField] private Vector3 posTentaculo5;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posTentaculo5Final;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posInicialTentaculo5;//poição inicial do dano do tentaculo
+    [SerializeField] private Vector3 posFinalTentaculo5;//poição final do dano do tentaculo
+    //tentaculo 6
+    [SerializeField] private GameObject tentaculo6;//o Game objevt do tentaculo
+    [SerializeField] private Animator animTentaculo6;//O animador do tentaculo
+    [SerializeField] private Vector3 posTentaculo6;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posTentaculo6Final;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posInicialTentaculo6;//poição inicial do dano do tentaculo
+    [SerializeField] private Vector3 posFinalTentaculo6;//poição final do dano do tentaculo
+    //tentaculo 7
+    [SerializeField] private GameObject tentaculo7;//o Game objevt do tentaculo
+    [SerializeField] private Animator animTentaculo7;//O animador do tentaculo
+    [SerializeField] private Vector3 posTentaculo7;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posTentaculo7Final;//posição inicial do tentaculo
+    [SerializeField] private Vector3 posInicialTentaculo7;//poição inicial do dano do tentaculo
+    [SerializeField] private Vector3 posFinalTentaculo7;//poição final do dano do tentaculo
     //Geral ataque 5
     [SerializeField] private float velocidadeAtaque5 = 0;
     [SerializeField] private float velocidadePreparoAtaque5 = 0;
@@ -314,6 +335,9 @@ public class SombraBehaviour : MonoBehaviour
         tentaculo2.SetActive(false);
         tentaculo3.SetActive(false);
         tentaculo4.SetActive(false);
+        tentaculo5.SetActive(false);
+        tentaculo6.SetActive(false);
+        tentaculo7.SetActive(false);
 
         Onda1.SetActive(false);
         Onda2.SetActive(false);
@@ -334,6 +358,9 @@ public class SombraBehaviour : MonoBehaviour
         tentaculo2.SetActive(true);
         tentaculo3.SetActive(true);
         tentaculo4.SetActive(true);
+        tentaculo5.SetActive(true);
+        tentaculo6.SetActive(true);
+        tentaculo7.SetActive(true);
 
         Onda1.SetActive(true);
         Onda2.SetActive(true);
@@ -616,8 +643,8 @@ public class SombraBehaviour : MonoBehaviour
             anim_pinca3.SetBool("movendo", true);
             anim_pinca4.SetBool("movendo", true);
 
-            pinca5.transform.position = Vector3.MoveTowards(pinca5.transform.position, posfinalPinca5, velocidadePreparoAtaque3 * Time.deltaTime);
-            pinca6.transform.position = Vector3.MoveTowards(pinca6.transform.position, posfinalPinca6, velocidadePreparoAtaque3 * Time.deltaTime);
+            pinca5.transform.position = Vector3.MoveTowards(pinca5.transform.position, posfinalPinca5, velocidadeAtaque3 * Time.deltaTime);
+            pinca6.transform.position = Vector3.MoveTowards(pinca6.transform.position, posfinalPinca6, velocidadeAtaque3 * Time.deltaTime);
             if (pinca5.transform.position == posfinalPinca5)
             {
                 ataque3Voltando = true;
@@ -699,6 +726,18 @@ public class SombraBehaviour : MonoBehaviour
         tentaculo4.SetActive(true);
         tentaculo4.transform.position = posTentaculo4;
         tentaculo4.transform.GetChild(0).transform.position = posInicialTentaculo4;
+
+        tentaculo5.SetActive(true);
+        tentaculo5.transform.position = posTentaculo5;
+        tentaculo5.transform.GetChild(0).transform.position = posInicialTentaculo5;
+
+        tentaculo6.SetActive(true);
+        tentaculo6.transform.position = posTentaculo6;
+        tentaculo6.transform.GetChild(0).transform.position = posInicialTentaculo6;
+
+        tentaculo7.SetActive(true);
+        tentaculo7.transform.position = posTentaculo7;
+        tentaculo7.transform.GetChild(0).transform.position = posInicialTentaculo7;
     }
 
     private void ShutDownAtaque5()
@@ -707,6 +746,9 @@ public class SombraBehaviour : MonoBehaviour
         tentaculo2.SetActive(false);
         tentaculo3.SetActive(false);
         tentaculo4.SetActive(false);
+        tentaculo5.SetActive(false);
+        tentaculo6.SetActive(false);
+        tentaculo7.SetActive(false);
     }
 
     private void Ataque5()
@@ -722,6 +764,12 @@ public class SombraBehaviour : MonoBehaviour
             tentaculo3.transform.position = Vector3.MoveTowards(tentaculo3.transform.position, posTentaculo3Final, velocidadePreparoAtaque5 * Time.deltaTime);
 
             tentaculo4.transform.position = Vector3.MoveTowards(tentaculo4.transform.position, posTentaculo4Final, velocidadePreparoAtaque5 * Time.deltaTime);
+
+            tentaculo5.transform.position = Vector3.MoveTowards(tentaculo5.transform.position, posTentaculo5Final, velocidadePreparoAtaque5 * Time.deltaTime);
+
+            tentaculo6.transform.position = Vector3.MoveTowards(tentaculo6.transform.position, posTentaculo6Final, velocidadePreparoAtaque5 * Time.deltaTime);
+
+            tentaculo7.transform.position = Vector3.MoveTowards(tentaculo7.transform.position, posTentaculo7Final, velocidadePreparoAtaque5 * Time.deltaTime);
 
             if (tentaculo1.transform.position == posTentaculo1Final)
             {
@@ -743,6 +791,15 @@ public class SombraBehaviour : MonoBehaviour
 
             tentaculo4.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo4.transform.GetChild(0).transform.position, posFinalTentaculo4, velocidadeAtaque5 * Time.deltaTime);
             animTentaculo4.SetTrigger("Ataque");
+
+            tentaculo5.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo5.transform.GetChild(0).transform.position, posFinalTentaculo5, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo5.SetTrigger("Ataque");
+
+            tentaculo6.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo6.transform.GetChild(0).transform.position, posFinalTentaculo6, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo6.SetTrigger("Ataque");
+
+            tentaculo7.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo7.transform.GetChild(0).transform.position, posFinalTentaculo7, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo7.SetTrigger("Ataque");
 
             if (tentaculo1.transform.GetChild(0).transform.position == posFinalTentaculo1)
             {
@@ -767,6 +824,18 @@ public class SombraBehaviour : MonoBehaviour
             animTentaculo4.SetTrigger("Desce");
             animTentaculo4.ResetTrigger("Ataque");
 
+            tentaculo5.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo5.transform.GetChild(0).transform.position, posInicialTentaculo5, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo5.SetTrigger("Desce");
+            animTentaculo5.ResetTrigger("Ataque");
+
+            tentaculo6.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo6.transform.GetChild(0).transform.position, posInicialTentaculo6, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo6.SetTrigger("Desce");
+            animTentaculo6.ResetTrigger("Ataque");
+
+            tentaculo7.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo7.transform.GetChild(0).transform.position, posInicialTentaculo7, velocidadeAtaque5 * Time.deltaTime);
+            animTentaculo7.SetTrigger("Desce");
+            animTentaculo7.ResetTrigger("Ataque");
+
             if (tentaculo1.transform.GetChild(0).transform.position == posInicialTentaculo1)
             {
                 anim_corpo.SetTrigger("Ataque_tentaculo_Subindo");
@@ -776,6 +845,9 @@ public class SombraBehaviour : MonoBehaviour
                 animTentaculo2.ResetTrigger("Desce");
                 animTentaculo3.ResetTrigger("Desce");
                 animTentaculo4.ResetTrigger("Desce");
+                animTentaculo5.ResetTrigger("Desce");
+                animTentaculo6.ResetTrigger("Desce");
+                animTentaculo7.ResetTrigger("Desce");
 
                 ShutDownAtaque5();
                 SombraBrain();
