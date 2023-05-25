@@ -11,7 +11,8 @@ public class EnemyHitFeedback : MonoBehaviour
     public bool wasHit = false;
     public float secondsToDisable;
 
-    
+    public float ForceUp;
+    public float ForceRight;
 
     private void Start()
     {
@@ -21,17 +22,13 @@ public class EnemyHitFeedback : MonoBehaviour
     {
         if (wasHit)
         {
-            StartCoroutine(DisableHitFeedback(secondsToDisable));
-           // gameObject.GetComponent<Animator>().SetBool("Dano", true);
-            
+            rb.AddForce(transform.right * ForceRight, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * ForceUp, ForceMode2D.Impulse);
+            wasHit = false;
+            Debug.Log("Aquii");
         }
     }
-    private IEnumerator DisableHitFeedback(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        //gameObject.GetComponent<Animator>().SetBool("Dano", false);
-        wasHit = false;
+
         
-        
-    }
+   
 }

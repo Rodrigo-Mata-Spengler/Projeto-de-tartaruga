@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8417824736672114239
 Transform:
   m_ObjectHideFlags: 0
@@ -514,9 +514,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5027656796105154529, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: ForceUp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027656796105154529, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: HitEffect
       value: 
       objectReference: {fileID: 6831584278055165197}
+    - target: {fileID: 5027656796105154529, guid: f89e47239efa95d4398337cd98148309, type: 3}
+      propertyPath: ForceRight
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5027656796105154529, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: secondsToDisable
       value: 1
@@ -571,7 +579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: distanciaAtaque
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5287758271197617117, guid: f89e47239efa95d4398337cd98148309, type: 3}
       propertyPath: TempoEsperaTonto

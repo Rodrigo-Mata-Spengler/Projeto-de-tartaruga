@@ -6,7 +6,7 @@ using UnityEngine.VFX;
 
 public class Ataque : MonoBehaviour
 {
-    [HideInInspector]public bool HaveMagicTrident =false;
+    public bool HaveMagicTrident =false;
 
     public bool Detected = false; // detecte if a enemy was inside
     public Rigidbody2D rb;
@@ -14,9 +14,8 @@ public class Ataque : MonoBehaviour
     public float DamageAmount;
     public float DamageMagicTridentAmount;
 
-    [HideInInspector]public bool up, down, right;
+    public bool up, down, right;
     public float impulseForce;
-    public float EnemyimpulseForce;
     [HideInInspector]public int HitIndex = 0;
 
     private Estamina playerEstamina;
@@ -41,30 +40,34 @@ public class Ataque : MonoBehaviour
         //checks if hit a enemy
         if (Detected)
         {
-           
+
             if (HitIndex == 0)
             {
+                rb.velocity = Vector3.zero;
+                if (up)
+                {
+                    rb.AddForce(transform.up * -impulseForce, ForceMode2D.Impulse);
+                    HitEffectUp.Play();
+                }
+                if (down)
+                {
+                    rb.AddForce(transform.up * impulseForce, ForceMode2D.Impulse);
+                    HitEffectDown.Play();
+                }
+                if (right)
+                {
+                    rb.AddForce(transform.right * -impulseForce, ForceMode2D.Impulse);
+
+                    HitEffect.Play();
+                }
                 HitIndex = 1;
             }
 
-            if (up)
-            {
-                rb.AddForce(transform.up * -impulseForce);
-                HitEffectUp.Play();
-                up = false;
-            }
-            if (down)
-            {
-                rb.AddForce(transform.up * impulseForce);
-                HitEffectDown.Play();
-                down = false;
-            }
-            if (right)
-            {
-                rb.AddForce(transform.right * -impulseForce);
-                right = false;
-                HitEffect.Play();
-            }
+
+        }
+        else
+        {
+            HitIndex = 0;
         }
 
     }
@@ -74,7 +77,7 @@ public class Ataque : MonoBehaviour
 
         if (collision.CompareTag("Zombi"))
         {
-            collision.transform.GetComponent<Rigidbody2D>().AddForce(collision.transform.right * EnemyimpulseForce);
+
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoZombi, collision.transform.position);
@@ -82,7 +85,7 @@ public class Ataque : MonoBehaviour
         }
         else if (collision.CompareTag("Guardiao") )
         {
-            //collision.transform.GetComponent<Rigidbody2D>().AddForce(collision.transform.right * EnemyimpulseForce);
+            
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<GuardiaoHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoGuardiao, collision.transform.position);
