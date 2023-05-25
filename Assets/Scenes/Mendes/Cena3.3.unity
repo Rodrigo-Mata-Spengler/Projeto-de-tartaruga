@@ -4043,6 +4043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Selo
       objectReference: {fileID: 0}
+    - target: {fileID: 494893871864631671, guid: 6753358bcbdf171448f615123d40b3b4, type: 3}
+      propertyPath: status
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6753358bcbdf171448f615123d40b3b4, type: 3}
 --- !u!1 &356100960
@@ -118820,7 +118824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1608438881
 MonoBehaviour:
   m_ObjectHideFlags: 0

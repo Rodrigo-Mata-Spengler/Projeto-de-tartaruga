@@ -1,6 +1,100 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9003095158858383991
+--- !u!114 &-9057153243577214404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Protagonista/Dash
+  m_EditorClassIdentifier: 
+  Path: event:/Protagonista/Dash
+  Guid:
+    Data1: -1255561798
+    Data2: 1322349989
+    Data3: 387457206
+    Data4: 1347290712
+  Banks:
+  - {fileID: 1175608730412097030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8981179519507938224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Tocha.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Tocha.bank
+  Name: Tocha
+  StudioPath: bank:/Tocha
+  lastModified: 638197760385615084
+  FileSizes:
+  - Name: Desktop
+    Value: 683520
+  Exists: 1
+--- !u!114 &-8767740370344900704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o"
+  Guid:
+    Data1: -527839649
+    Data2: 1151023713
+    Data3: 1424619394
+    Data4: -527365827
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8617423351322670671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: "bank:/Introdu\xE7\xE3o.bank"
+  m_EditorClassIdentifier: 
+  Path: "FMOD GitHub/Build/Desktop/Introdu\xE7\xE3o.bank"
+  Name: "Introdu\xE7\xE3o"
+  StudioPath: "bank:/Introdu\xE7\xE3o"
+  lastModified: 638206325252100572
+  FileSizes:
+  - Name: Desktop
+    Value: 962464
+  Exists: 1
+--- !u!114 &-8404404444735198181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19,7 +113,7 @@ MonoBehaviour:
     Data3: -2053472356
     Data4: 1776961301
   Banks:
-  - {fileID: 40617146194528622}
+  - {fileID: 1996724662678084450}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -27,196 +121,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-8890289683536176841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Interface/Nega\xE7\xE3o"
-  m_EditorClassIdentifier: 
-  Path: "event:/Interface/Nega\xE7\xE3o"
-  Guid:
-    Data1: 1206421747
-    Data2: 1309641660
-    Data3: -197910876
-    Data4: 934723650
-  Banks:
-  - {fileID: 4525381008215364756}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8866021259192615941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Ataque Bra\xE7o Duplo"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Ataque Bra\xE7o Duplo"
-  Guid:
-    Data1: 2106790888
-    Data2: 1210928402
-    Data3: -615455328
-    Data4: 952520560
-  Banks:
-  - {fileID: -4561916992268976363}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8435151688686816498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Mosca/Feedback de Morte
-  m_EditorClassIdentifier: 
-  Path: event:/Mosca/Feedback de Morte
-  Guid:
-    Data1: -1723912522
-    Data2: 1298987657
-    Data3: -331938377
-    Data4: -206070579
-  Banks:
-  - {fileID: -4148505859909150457}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8326448085086343532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Cura
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Cura
-  Guid:
-    Data1: 128010001
-    Data2: 1163754142
-    Data3: 2035382967
-    Data4: -181813730
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2699
---- !u!114 &-8293563031562540793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Bioma Verde"
-  m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Bioma Verde"
-  Guid:
-    Data1: 555720218
-    Data2: 1239611367
-    Data3: -282923089
-    Data4: -720407115
-  Banks:
-  - {fileID: 8692978956279676867}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7560317438637269909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Planta Carnivora/Feedback de Dano
-  m_EditorClassIdentifier: 
-  Path: event:/Planta Carnivora/Feedback de Dano
-  Guid:
-    Data1: 1294306513
-    Data2: 1166089195
-    Data3: 510113970
-    Data4: 1881796766
-  Banks:
-  - {fileID: -570230403866648006}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7475439345053952793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Pulo
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Pulo
-  Guid:
-    Data1: 955402343
-    Data2: 1221021533
-    Data3: -1184461692
-    Data4: -766340230
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7437959542684782280
+--- !u!114 &-8203484357986439593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,32 +136,12 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638204751776847090
+  lastModified: 638196673495989266
   FileSizes:
   - Name: Desktop
     Value: 1486
   Exists: 1
---- !u!114 &-7159142601432711190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: "bank:/Introdu\xE7\xE3o.bank"
-  m_EditorClassIdentifier: 
-  Path: "FMOD GitHub/Build/Desktop/Introdu\xE7\xE3o.bank"
-  Name: "Introdu\xE7\xE3o"
-  StudioPath: "bank:/Introdu\xE7\xE3o"
-  lastModified: 638206312182783921
-  FileSizes:
-  - Name: Desktop
-    Value: 962464
-  Exists: 1
---- !u!114 &-7056211531567628440
+--- !u!114 &-8117999963347937370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,24 +151,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Mosca/Som
+  m_Name: "event:/M\xFAsicas/Tumulo do Sal"
   m_EditorClassIdentifier: 
-  Path: event:/Mosca/Som
+  Path: "event:/M\xFAsicas/Tumulo do Sal"
   Guid:
-    Data1: 497263282
-    Data2: 1259830049
-    Data3: 373503679
-    Data4: -900837527
+    Data1: 777891
+    Data2: 1189178980
+    Data3: -703403869
+    Data4: 1790119742
   Banks:
-  - {fileID: -4148505859909150457}
+  - {fileID: 6423632512016787140}
   IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 45204
---- !u!114 &-6982189161153319412
+  Length: 0
+--- !u!114 &-7899445572221156426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Coletar Recurso/Recurso Coletado
+  m_EditorClassIdentifier: 
+  Path: event:/Coletar Recurso/Recurso Coletado
+  Guid:
+    Data1: -1818454000
+    Data2: 1313463055
+    Data3: -1618954823
+    Data4: -2111874215
+  Banks:
+  - {fileID: -3712267982104115432}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7860848472918789896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,17 +205,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Save.bank
+  m_Name: bank:/Mosca.bank
   m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Save.bank
-  Name: Save
-  StudioPath: bank:/Save
-  lastModified: 638191418830286873
+  Path: FMOD GitHub/Build/Desktop/Mosca.bank
+  Name: Mosca
+  StudioPath: bank:/Mosca
+  lastModified: 638192586551544346
   FileSizes:
   - Name: Desktop
-    Value: 55424
+    Value: 1680768
   Exists: 1
---- !u!114 &-6708305535215948917
+--- !u!114 &-7633605199404510735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Estalactite.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Estalactite.bank
+  Name: Estalactite
+  StudioPath: bank:/Estalactite
+  lastModified: 638191694422927502
+  FileSizes:
+  - Name: Desktop
+    Value: 12096
+  Exists: 1
+--- !u!114 &-7625414878095451024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,7 +254,7 @@ MonoBehaviour:
     Data3: -268475478
     Data4: -601280379
   Banks:
-  - {fileID: 6116311271944771259}
+  - {fileID: -4878137018501127185}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -330,27 +262,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6414772162641871808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Puzzles.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Puzzles.bank
-  Name: Puzzles
-  StudioPath: bank:/Puzzles
-  lastModified: 638204751783040358
-  FileSizes:
-  - Name: Desktop
-    Value: 64608
-  Exists: 1
---- !u!114 &-5702096861306230656
+--- !u!114 &-7491261911352491366
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,16 +272,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Puzzles/Painel
+  m_Name: event:/Protagonista/Golpe
   m_EditorClassIdentifier: 
-  Path: event:/Puzzles/Painel
+  Path: event:/Protagonista/Golpe
   Guid:
-    Data1: -1890089755
-    Data2: 1210363287
-    Data3: 1399314841
-    Data4: 1821570932
+    Data1: 1183795331
+    Data2: 1160673238
+    Data3: 1087878804
+    Data4: 217209066
   Banks:
-  - {fileID: -6414772162641871808}
+  - {fileID: 1175608730412097030}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -377,7 +289,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5209490137650767064
+--- !u!114 &-7383394116604165740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -387,16 +299,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fazendeiro/Carpinando
+  m_Name: event:/Tocha/Fogo
   m_EditorClassIdentifier: 
-  Path: event:/Fazendeiro/Carpinando
+  Path: event:/Tocha/Fogo
   Guid:
-    Data1: 940617733
-    Data2: 1262682171
-    Data3: 1928901045
-    Data4: 1782990204
+    Data1: -1619942129
+    Data2: 1309862977
+    Data3: -1162587776
+    Data4: -2143645093
   Banks:
-  - {fileID: -4097067564881831790}
+  - {fileID: -8981179519507938224}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6907328281665220044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Zumbi Tartaruga/Feedback de Morte
+  m_EditorClassIdentifier: 
+  Path: event:/Zumbi Tartaruga/Feedback de Morte
+  Guid:
+    Data1: -884130286
+    Data2: 1302203230
+    Data3: -1109229904
+    Data4: 1665653742
+  Banks:
+  - {fileID: 1996724662678084450}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -404,7 +343,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4820417682133504545
+--- !u!114 &-6813563544699161203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tocha/Fogo Surgindo
+  m_EditorClassIdentifier: 
+  Path: event:/Tocha/Fogo Surgindo
+  Guid:
+    Data1: -86186204
+    Data2: 1244922041
+    Data3: -422522947
+    Data4: 1502443482
+  Banks:
+  - {fileID: -8981179519507938224}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6190828491003278308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -428,27 +394,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-4561916992268976363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Sombra.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Sombra.bank
-  Name: Sombra
-  StudioPath: bank:/Sombra
-  lastModified: 638197627304263102
-  FileSizes:
-  - Name: Desktop
-    Value: 271008
-  Exists: 1
---- !u!114 &-4429506098174723073
+--- !u!114 &-6131659792627149090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -458,569 +404,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Cinem\xE1tica/Introdu\xE7\xE3o"
+  m_Name: event:/Sombra/Som Area Isolada
   m_EditorClassIdentifier: 
-  Path: "event:/Cinem\xE1tica/Introdu\xE7\xE3o"
+  Path: event:/Sombra/Som Area Isolada
   Guid:
-    Data1: 356010862
-    Data2: 1273962235
-    Data3: 895006084
-    Data4: 2030572233
+    Data1: 1781383893
+    Data2: 1260201223
+    Data3: 379778458
+    Data4: -291249929
   Banks:
-  - {fileID: -7159142601432711190}
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5831913072486173362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mosca/Som
+  m_EditorClassIdentifier: 
+  Path: event:/Mosca/Som
+  Guid:
+    Data1: 497263282
+    Data2: 1259830049
+    Data3: 373503679
+    Data4: -900837527
+  Banks:
+  - {fileID: -7860848472918789896}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4253928755015151235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tocha/Fogo Surgindo
-  m_EditorClassIdentifier: 
-  Path: event:/Tocha/Fogo Surgindo
-  Guid:
-    Data1: -86186204
-    Data2: 1244922041
-    Data3: -422522947
-    Data4: 1502443482
-  Banks:
-  - {fileID: 8600806448901766104}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4148505859909150457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Mosca.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Mosca.bank
-  Name: Mosca
-  StudioPath: bank:/Mosca
-  lastModified: 638192370435427781
-  FileSizes:
-  - Name: Desktop
-    Value: 1680768
-  Exists: 1
---- !u!114 &-4097067564881831790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Fazendeiro.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Fazendeiro.bank
-  Name: Fazendeiro
-  StudioPath: bank:/Fazendeiro
-  lastModified: 638191418823344766
-  FileSizes:
-  - Name: Desktop
-    Value: 21568
-  Exists: 1
---- !u!114 &-3945499806015567851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Tent\xE1culo Ataque"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Tent\xE1culo Ataque"
-  Guid:
-    Data1: 1518555145
-    Data2: 1187182761
-    Data3: 2029290124
-    Data4: 1296844191
-  Banks:
-  - {fileID: -4561916992268976363}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3829444568725286067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Caranguejo.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Caranguejo.bank
-  Name: Caranguejo
-  StudioPath: bank:/Caranguejo
-  lastModified: 638191418821722392
-  FileSizes:
-  - Name: Desktop
-    Value: 33440
-  Exists: 1
---- !u!114 &-3719907705319471939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Guardi\xE3o/Morte"
-  m_EditorClassIdentifier: 
-  Path: "event:/Guardi\xE3o/Morte"
-  Guid:
-    Data1: -331894152
-    Data2: 1128913165
-    Data3: 1533094287
-    Data4: -1235890237
-  Banks:
-  - {fileID: -2992810825293601594}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3435435377138727181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Tent\xE1culo Voltando"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Tent\xE1culo Voltando"
-  Guid:
-    Data1: 598035846
-    Data2: 1326532977
-    Data3: -2022200129
-    Data4: 2043237299
-  Banks:
-  - {fileID: -4561916992268976363}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2992810825293601594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: "bank:/Guardi\xE3o.bank"
-  m_EditorClassIdentifier: 
-  Path: "FMOD GitHub/Build/Desktop/Guardi\xE3o.bank"
-  Name: "Guardi\xE3o"
-  StudioPath: "bank:/Guardi\xE3o"
-  lastModified: 638206332163862053
-  FileSizes:
-  - Name: Desktop
-    Value: 262464
-  Exists: 1
---- !u!114 &-2953803586345017615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Ataque Bra\xE7o"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Ataque Bra\xE7o"
-  Guid:
-    Data1: -527839649
-    Data2: 1151023713
-    Data3: 1424619394
-    Data4: -527365827
-  Banks:
-  - {fileID: -4561916992268976363}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2917927132543349577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638206332163937018
-  FileSizes:
-  - Name: Desktop
-    Value: 5748
-  Exists: 1
---- !u!114 &-2806206104134707749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sombra/Ataque Garra
-  m_EditorClassIdentifier: 
-  Path: event:/Sombra/Ataque Garra
-  Guid:
-    Data1: -1018165390
-    Data2: 1195841987
-    Data3: 41193625
-    Data4: 1883415812
-  Banks:
-  - {fileID: -4561916992268976363}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2730868006265186371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Zumbi Tartaruga/Acordando
-  m_EditorClassIdentifier: 
-  Path: event:/Zumbi Tartaruga/Acordando
-  Guid:
-    Data1: -580143434
-    Data2: 1295556969
-    Data3: -148784255
-    Data4: 1041432092
-  Banks:
-  - {fileID: 40617146194528622}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2684611584402282862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Guardi\xE3o/Fala"
-  m_EditorClassIdentifier: 
-  Path: "event:/Guardi\xE3o/Fala"
-  Guid:
-    Data1: 1232596475
-    Data2: 1301962026
-    Data3: -1418501246
-    Data4: -864560435
-  Banks:
-  - {fileID: -2992810825293601594}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2380389172643577725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Bruxa.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Bruxa.bank
-  Name: Bruxa
-  StudioPath: bank:/Bruxa
-  lastModified: 638191648059476403
-  FileSizes:
-  - Name: Desktop
-    Value: 253056
-  Exists: 1
---- !u!114 &-2309287939662305756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Interface/Afirma\xE7\xE3o"
-  m_EditorClassIdentifier: 
-  Path: "event:/Interface/Afirma\xE7\xE3o"
-  Guid:
-    Data1: -1999883599
-    Data2: 1287947348
-    Data3: 222720169
-    Data4: 755051551
-  Banks:
-  - {fileID: 4525381008215364756}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2008445175486963992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Aterissagem
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Aterissagem
-  Guid:
-    Data1: 1130769165
-    Data2: 1119908183
-    Data3: -490296138
-    Data4: -1562607188
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1958595996488201729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Caverna"
-  m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Caverna"
-  Guid:
-    Data1: -530549880
-    Data2: 1270160703
-    Data3: 776391855
-    Data4: -716936118
-  Banks:
-  - {fileID: 8692978956279676867}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1890363262711679987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Cura Final
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Cura Final
-  Guid:
-    Data1: -1392817633
-    Data2: 1160658669
-    Data3: -1849152072
-    Data4: 2051105903
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1874909261584806990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Zumbi Tartaruga/Mordendo
-  m_EditorClassIdentifier: 
-  Path: event:/Zumbi Tartaruga/Mordendo
-  Guid:
-    Data1: -1031419416
-    Data2: 1201892253
-    Data3: -991048825
-    Data4: 1936778704
-  Banks:
-  - {fileID: 40617146194528622}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1550074210648515092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Praia.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Praia.bank
-  Name: Praia
-  StudioPath: bank:/Praia
-  lastModified: 638191418828254872
-  FileSizes:
-  - Name: Desktop
-    Value: 1087936
-  Exists: 1
---- !u!114 &-1536158260704107218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Passos
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Passos
-  Guid:
-    Data1: 1766456022
-    Data2: 1322139094
-    Data3: 1813850267
-    Data4: 1786508826
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 320
---- !u!114 &-1238135595133504037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ferreiro/Forjando
-  m_EditorClassIdentifier: 
-  Path: event:/Ferreiro/Forjando
-  Guid:
-    Data1: 2142633123
-    Data2: 1228101853
-    Data3: -580943182
-    Data4: 1017144965
-  Banks:
-  - {fileID: 3344723469903204485}
-  IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 4.6
-  Length: 2500
---- !u!114 &-1213924086493418901
+  MaxDistance: 20
+  Length: 45204
+--- !u!114 &-5689257817365727975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1030,16 +458,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Puzzles/Conclus\xE3o"
+  m_Name: event:/Save/Save
   m_EditorClassIdentifier: 
-  Path: "event:/Puzzles/Conclus\xE3o"
+  Path: event:/Save/Save
   Guid:
-    Data1: 2016594629
-    Data2: 1200821859
-    Data3: -1863246175
-    Data4: 1817544448
+    Data1: 375541606
+    Data2: 1123742244
+    Data3: 1189152670
+    Data4: 1870006270
   Banks:
-  - {fileID: -6414772162641871808}
+  - {fileID: 4893009569495568204}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1047,7 +475,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-670045063888694211
+--- !u!114 &-5661446987681930056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1066,7 +494,7 @@ MonoBehaviour:
     Data3: 852265871
     Data4: 1340692301
   Banks:
-  - {fileID: -2992810825293601594}
+  - {fileID: -5589901718289206581}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1074,7 +502,135 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-602543070047263356
+--- !u!114 &-5639809895078256825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Protagonista/Passos
+  m_EditorClassIdentifier: 
+  Path: event:/Protagonista/Passos
+  Guid:
+    Data1: 1766456022
+    Data2: 1322139094
+    Data3: 1813850267
+    Data4: 1786508826
+  Banks:
+  - {fileID: 1175608730412097030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 320
+--- !u!114 &-5589901718289206581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: "bank:/Guardi\xE3o.bank"
+  m_EditorClassIdentifier: 
+  Path: "FMOD GitHub/Build/Desktop/Guardi\xE3o.bank"
+  Name: "Guardi\xE3o"
+  StudioPath: "bank:/Guardi\xE3o"
+  lastModified: 638206325252030555
+  FileSizes:
+  - Name: Desktop
+    Value: 262464
+  Exists: 1
+--- !u!114 &-5563532846018627442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Ataque Tridente"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Ataque Tridente"
+  Guid:
+    Data1: -1352485260
+    Data2: 1322887985
+    Data3: 1878015413
+    Data4: -1518853411
+  Banks:
+  - {fileID: -5589901718289206581}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5544238385884290863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mosca/Tonta
+  m_EditorClassIdentifier: 
+  Path: event:/Mosca/Tonta
+  Guid:
+    Data1: -1308834727
+    Data2: 1310839569
+    Data3: -1815835250
+    Data4: 1119921373
+  Banks:
+  - {fileID: -7860848472918789896}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5428410562854155219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Caranguejo/Feedback de Dano
+  m_EditorClassIdentifier: 
+  Path: event:/Caranguejo/Feedback de Dano
+  Guid:
+    Data1: -1417708825
+    Data2: 1323482400
+    Data3: 1123782836
+    Data4: 1760186296
+  Banks:
+  - {fileID: 6694923835231294438}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5042959074264518508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1093,7 +649,7 @@ MonoBehaviour:
     Data3: -1939411043
     Data4: -1842965213
   Banks:
-  - {fileID: -570230403866648006}
+  - {fileID: 5890511873601658633}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1101,7 +657,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-570230403866648006
+--- !u!114 &-4994956805024338359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1111,17 +667,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Planta Carnviora.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Planta Carnviora.bank
-  Name: Planta Carnviora
-  StudioPath: bank:/Planta Carnviora
-  lastModified: 638197667284120537
+  Path: FMOD GitHub/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638206325252110575
   FileSizes:
   - Name: Desktop
-    Value: 68704
+    Value: 5748
   Exists: 1
---- !u!114 &-541871658142754209
+--- !u!114 &-4878137018501127185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Dialogo.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Dialogo.bank
+  Name: Dialogo
+  StudioPath: bank:/Dialogo
+  lastModified: 638204524903935915
+  FileSizes:
+  - Name: Desktop
+    Value: 5376
+  Exists: 1
+--- !u!114 &-4748840255016768102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1131,16 +707,198 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Tumulo do Sal"
+  m_Name: event:/Protagonista/Cura
   m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Tumulo do Sal"
+  Path: event:/Protagonista/Cura
   Guid:
-    Data1: 777891
-    Data2: 1189178980
-    Data3: -703403869
-    Data4: 1790119742
+    Data1: 128010001
+    Data2: 1163754142
+    Data3: 2035382967
+    Data4: -181813730
   Banks:
-  - {fileID: 8692978956279676867}
+  - {fileID: 1175608730412097030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2699
+--- !u!114 &-4231473311885502251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/Sombra Theme"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/Sombra Theme"
+  Guid:
+    Data1: 546430545
+    Data2: 1158019176
+    Data3: 1340751748
+    Data4: 1106842950
+  Banks:
+  - {fileID: 6423632512016787140}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 118457
+--- !u!114 &-4005677093598725548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Dash"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Dash"
+  Guid:
+    Data1: 403063420
+    Data2: 1086593742
+    Data3: -1332735826
+    Data4: -1766075696
+  Banks:
+  - {fileID: -5589901718289206581}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3937708347257149660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Ouri\xE7o/Disparo"
+  m_EditorClassIdentifier: 
+  Path: "event:/Ouri\xE7o/Disparo"
+  Guid:
+    Data1: -1386148601
+    Data2: 1083288921
+    Data3: -1186800250
+    Data4: -384900188
+  Banks:
+  - {fileID: 2452486241714745080}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3794189623080288788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Bruxa/Caldeir\xE3o"
+  m_EditorClassIdentifier: 
+  Path: "event:/Bruxa/Caldeir\xE3o"
+  Guid:
+    Data1: -481857872
+    Data2: 1088061981
+    Data3: -1912687981
+    Data4: -1921862227
+  Banks:
+  - {fileID: 2385955660420348410}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 35878
+--- !u!114 &-3712267982104115432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Recurso Coletado.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Recurso Coletado.bank
+  Name: Recurso Coletado
+  StudioPath: bank:/Recurso Coletado
+  lastModified: 638191694424241086
+  FileSizes:
+  - Name: Desktop
+    Value: 21760
+  Exists: 1
+--- !u!114 &-3507052677741193909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Compra/Compra
+  m_EditorClassIdentifier: 
+  Path: event:/Compra/Compra
+  Guid:
+    Data1: 484390566
+    Data2: 1295504553
+    Data3: 1680364933
+    Data4: -951073734
+  Banks:
+  - {fileID: -660928944711117073}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3201730149359649774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Cinem\xE1tica/Introdu\xE7\xE3o"
+  m_EditorClassIdentifier: 
+  Path: "event:/Cinem\xE1tica/Introdu\xE7\xE3o"
+  Guid:
+    Data1: 356010862
+    Data2: 1273962235
+    Data3: 895006084
+    Data4: 2030572233
+  Banks:
+  - {fileID: -8617423351322670671}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1148,7 +906,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-67572687010361725
+--- !u!114 &-2812815246563681368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1158,16 +916,346 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Planta Carnivora/Feedback de Morte
+  m_Name: event:/Puzzles/Painel
   m_EditorClassIdentifier: 
-  Path: event:/Planta Carnivora/Feedback de Morte
+  Path: event:/Puzzles/Painel
   Guid:
-    Data1: -662816525
-    Data2: 1092967853
-    Data3: -1495951226
-    Data4: -1656671984
+    Data1: -1890089755
+    Data2: 1210363287
+    Data3: 1399314841
+    Data4: 1821570932
   Banks:
-  - {fileID: -570230403866648006}
+  - {fileID: -1377398051893091558}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2518088957926762417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Estatua Genius C
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Estatua Genius C
+  Guid:
+    Data1: 122380958
+    Data2: 1301405610
+    Data3: -962908534
+    Data4: -50738936
+  Banks:
+  - {fileID: -1377398051893091558}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2373730070781988951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Estalactite/Pingo
+  m_EditorClassIdentifier: 
+  Path: event:/Estalactite/Pingo
+  Guid:
+    Data1: 740516506
+    Data2: 1194248807
+    Data3: -1144136042
+    Data4: 758609454
+  Banks:
+  - {fileID: -7633605199404510735}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1876944366476983455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ferreiro.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Ferreiro.bank
+  Name: Ferreiro
+  StudioPath: bank:/Ferreiro
+  lastModified: 638197760384354790
+  FileSizes:
+  - Name: Desktop
+    Value: 41408
+  Exists: 1
+--- !u!114 &-1563861269983680896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Pulo e Descida"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Pulo e Descida"
+  Guid:
+    Data1: 1070550185
+    Data2: 1223357741
+    Data3: -2097985886
+    Data4: -1386034129
+  Banks:
+  - {fileID: -5589901718289206581}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1377398051893091558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Puzzles.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Puzzles.bank
+  Name: Puzzles
+  StudioPath: bank:/Puzzles
+  lastModified: 638204524904986138
+  FileSizes:
+  - Name: Desktop
+    Value: 64608
+  Exists: 1
+--- !u!114 &-1152610393260925288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mosca/Feedback de Dano
+  m_EditorClassIdentifier: 
+  Path: event:/Mosca/Feedback de Dano
+  Guid:
+    Data1: -817150009
+    Data2: 1206035288
+    Data3: 333322666
+    Data4: -976945295
+  Banks:
+  - {fileID: -7860848472918789896}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1054126221110739305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Saco de Pancada/Feedback de Dano
+  m_EditorClassIdentifier: 
+  Path: event:/Saco de Pancada/Feedback de Dano
+  Guid:
+    Data1: 635017466
+    Data2: 1194472176
+    Data3: -375125098
+    Data4: -159842578
+  Banks:
+  - {fileID: 6893737700871174398}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-917204810447550681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Tent\xE1culo Saindo"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Tent\xE1culo Saindo"
+  Guid:
+    Data1: 1625932892
+    Data2: 1180075509
+    Data3: 978887597
+    Data4: 1942690830
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-782787932103585068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mosca/Feedback de Morte
+  m_EditorClassIdentifier: 
+  Path: event:/Mosca/Feedback de Morte
+  Guid:
+    Data1: -1723912522
+    Data2: 1298987657
+    Data3: -331938377
+    Data4: -206070579
+  Banks:
+  - {fileID: -7860848472918789896}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-664049590731879183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Quadrado
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Quadrado
+  Guid:
+    Data1: 1742965818
+    Data2: 1284454201
+    Data3: 1338831509
+    Data4: -657834982
+  Banks:
+  - {fileID: -1377398051893091558}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-660928944711117073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Compra.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Compra.bank
+  Name: Compra
+  StudioPath: bank:/Compra
+  lastModified: 638191694422907512
+  FileSizes:
+  - Name: Desktop
+    Value: 8352
+  Exists: 1
+--- !u!114 &-656672833102881873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Ataque Garra
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Ataque Garra
+  Guid:
+    Data1: -1018165390
+    Data2: 1195841987
+    Data3: 41193625
+    Data4: 1883415812
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-544797475202849791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Interface/Nega\xE7\xE3o"
+  m_EditorClassIdentifier: 
+  Path: "event:/Interface/Nega\xE7\xE3o"
+  Guid:
+    Data1: 1206421747
+    Data2: 1309641660
+    Data3: -197910876
+    Data4: 934723650
+  Banks:
+  - {fileID: 668182939113617931}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1188,456 +1276,118 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2917927132543349577}
-  - {fileID: -2380389172643577725}
-  - {fileID: -3829444568725286067}
-  - {fileID: 5481367193485044842}
-  - {fileID: 7666938935307396456}
-  - {fileID: -4097067564881831790}
-  - {fileID: -2992810825293601594}
-  - {fileID: -7437959542684782280}
-  - {fileID: -4148505859909150457}
-  - {fileID: 8919453739277462266}
-  - {fileID: -570230403866648006}
-  - {fileID: 2338504635635784465}
-  - {fileID: -6414772162641871808}
-  - {fileID: 4358311895950201407}
-  - {fileID: 1052200488579844943}
-  - {fileID: -6982189161153319412}
-  - {fileID: -4561916992268976363}
-  - {fileID: 40617146194528622}
-  - {fileID: 3344723469903204485}
-  - {fileID: 4525381008215364756}
-  - {fileID: 8692978956279676867}
-  - {fileID: -1550074210648515092}
-  - {fileID: 8600806448901766104}
-  - {fileID: 6116311271944771259}
-  - {fileID: -7159142601432711190}
+  - {fileID: -4994956805024338359}
+  - {fileID: 2385955660420348410}
+  - {fileID: 6694923835231294438}
+  - {fileID: -660928944711117073}
+  - {fileID: -4878137018501127185}
+  - {fileID: -7633605199404510735}
+  - {fileID: 8246316103331177489}
+  - {fileID: -1876944366476983455}
+  - {fileID: -5589901718289206581}
+  - {fileID: 668182939113617931}
+  - {fileID: -8617423351322670671}
+  - {fileID: -8203484357986439593}
+  - {fileID: -7860848472918789896}
+  - {fileID: 6423632512016787140}
+  - {fileID: 2452486241714745080}
+  - {fileID: 5890511873601658633}
+  - {fileID: 1175608730412097030}
+  - {fileID: 7411753520670454323}
+  - {fileID: -1377398051893091558}
+  - {fileID: -3712267982104115432}
+  - {fileID: 6893737700871174398}
+  - {fileID: 4893009569495568204}
+  - {fileID: 7424298038131044863}
+  - {fileID: -8981179519507938224}
+  - {fileID: 1996724662678084450}
   EditorEvents:
-  - {fileID: 8492815524371835197}
-  - {fileID: 5625031274756143587}
-  - {fileID: 3011460991657678837}
-  - {fileID: 3455996456417859814}
-  - {fileID: 7070588172913838588}
-  - {fileID: 8175621788837878297}
-  - {fileID: 6843803553010179858}
-  - {fileID: -5209490137650767064}
-  - {fileID: -1238135595133504037}
-  - {fileID: 379270663498668302}
-  - {fileID: -670045063888694211}
-  - {fileID: 1834693765437214014}
-  - {fileID: 144528383305222442}
-  - {fileID: -2684611584402282862}
-  - {fileID: -2309287939662305756}
-  - {fileID: -8890289683536176841}
-  - {fileID: 3002590132823051922}
-  - {fileID: 6003197647859103716}
-  - {fileID: -7056211531567628440}
-  - {fileID: -8435151688686816498}
-  - {fileID: 3980988550638212277}
-  - {fileID: 1145903410244919216}
-  - {fileID: -7475439345053952793}
-  - {fileID: 1398853299933091246}
-  - {fileID: 5553807009752350157}
-  - {fileID: -1536158260704107218}
-  - {fileID: 622500236372598024}
-  - {fileID: 419156950238484833}
-  - {fileID: 2434989575679113296}
-  - {fileID: 796248673264490472}
-  - {fileID: 176623087323591570}
-  - {fileID: 361116701693523278}
-  - {fileID: 9042421458657153011}
-  - {fileID: -1213924086493418901}
-  - {fileID: -5702096861306230656}
-  - {fileID: 352291251611339327}
-  - {fileID: 7150016935749290151}
-  - {fileID: 4873855773925519550}
-  - {fileID: 2110500187150091910}
-  - {fileID: 2776117882125582066}
-  - {fileID: 8579552100693661289}
-  - {fileID: 2249161451703907727}
-  - {fileID: -9003095158858383991}
-  - {fileID: -2730868006265186371}
-  - {fileID: -1874909261584806990}
-  - {fileID: -8293563031562540793}
-  - {fileID: 2675666989416870523}
-  - {fileID: 3893853416396587313}
-  - {fileID: 9040049563782096613}
-  - {fileID: -2008445175486963992}
-  - {fileID: 9095090529591764409}
-  - {fileID: 4887503538777529639}
-  - {fileID: -3945499806015567851}
-  - {fileID: 3800278064361142823}
-  - {fileID: 4522217650067808959}
-  - {fileID: 9102824119454050688}
-  - {fileID: -2953803586345017615}
-  - {fileID: -2806206104134707749}
-  - {fileID: -3435435377138727181}
-  - {fileID: -8866021259192615941}
-  - {fileID: 8878980753941849168}
-  - {fileID: 4724355964429481183}
-  - {fileID: -4253928755015151235}
-  - {fileID: -602543070047263356}
-  - {fileID: 7443312199140397018}
-  - {fileID: -7560317438637269909}
-  - {fileID: -67572687010361725}
-  - {fileID: -3719907705319471939}
-  - {fileID: -8326448085086343532}
-  - {fileID: -1890363262711679987}
-  - {fileID: -6708305535215948917}
-  - {fileID: -4429506098174723073}
-  - {fileID: -541871658142754209}
-  - {fileID: -1958595996488201729}
-  - {fileID: 6989272175558855450}
-  - {fileID: 6375429362902521809}
-  - {fileID: 6587969149993274288}
-  - {fileID: 9080409980634760547}
+  - {fileID: -3794189623080288788}
+  - {fileID: 3007771240278246631}
+  - {fileID: 2585132721785436281}
+  - {fileID: -5428410562854155219}
+  - {fileID: -3507052677741193909}
+  - {fileID: -7625414878095451024}
+  - {fileID: -2373730070781988951}
+  - {fileID: 8230136266051850936}
+  - {fileID: 8100710746945729513}
+  - {fileID: 450533150208586934}
+  - {fileID: -5661446987681930056}
+  - {fileID: 3369061084559671427}
+  - {fileID: -5563532846018627442}
+  - {fileID: 1135246934001241550}
+  - {fileID: -4005677093598725548}
+  - {fileID: -1563861269983680896}
+  - {fileID: 8356969049906910782}
+  - {fileID: 828126216807910912}
+  - {fileID: 5019335369251206797}
+  - {fileID: -544797475202849791}
+  - {fileID: -3201730149359649774}
+  - {fileID: 7559114845393131453}
+  - {fileID: -5544238385884290863}
+  - {fileID: -5831913072486173362}
+  - {fileID: -782787932103585068}
+  - {fileID: -1152610393260925288}
+  - {fileID: 5697397762667630032}
+  - {fileID: -4231473311885502251}
+  - {fileID: 6550751395421758007}
+  - {fileID: 565964267378306998}
+  - {fileID: -8117999963347937370}
+  - {fileID: 1405570132701684571}
+  - {fileID: 8559961751166289387}
+  - {fileID: 2251870157715134583}
+  - {fileID: -3937708347257149660}
+  - {fileID: -5042959074264518508}
+  - {fileID: 1683024082142975856}
+  - {fileID: 682720288382615256}
+  - {fileID: 5909611237231461880}
+  - {fileID: 8979440987913201853}
+  - {fileID: -4748840255016768102}
+  - {fileID: 1197144736914395910}
+  - {fileID: 200826725975594555}
+  - {fileID: 1405889224039823257}
+  - {fileID: 628839760710966693}
+  - {fileID: -7491261911352491366}
+  - {fileID: -9057153243577214404}
+  - {fileID: -5639809895078256825}
+  - {fileID: 5640985820898808012}
+  - {fileID: 6376258240555570144}
+  - {fileID: 1628396157517403525}
+  - {fileID: -664049590731879183}
+  - {fileID: 799504734677585372}
+  - {fileID: 7632076308579946380}
+  - {fileID: -2518088957926762417}
+  - {fileID: 722812454213143489}
+  - {fileID: -2812815246563681368}
+  - {fileID: -7899445572221156426}
+  - {fileID: -1054126221110739305}
+  - {fileID: -5689257817365727975}
+  - {fileID: 5291132521556099881}
+  - {fileID: 2213111297980258718}
+  - {fileID: 2980166738323566348}
+  - {fileID: 190900324589402369}
+  - {fileID: -917204810447550681}
+  - {fileID: -8767740370344900704}
+  - {fileID: -656672833102881873}
+  - {fileID: 3840108469515287871}
+  - {fileID: -6131659792627149090}
+  - {fileID: 2385261942353169707}
+  - {fileID: 3184758442173600029}
+  - {fileID: -7383394116604165740}
+  - {fileID: -6813563544699161203}
+  - {fileID: 8201730894388590366}
+  - {fileID: -6907328281665220044}
+  - {fileID: -8404404444735198181}
+  - {fileID: 4809772309524997818}
+  - {fileID: 5853283519590440606}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -7437959542684782280}
+  - {fileID: -8203484357986439593}
   StringsBanks:
-  - {fileID: -2917927132543349577}
-  cacheTime: 638206332163937018
+  - {fileID: -4994956805024338359}
+  cacheTime: 638206325252110575
   cacheVersion: 131603
---- !u!114 &40617146194528622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Zumbi Tartaruga.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Zumbi Tartaruga.bank
-  Name: Zumbi Tartaruga
-  StudioPath: bank:/Zumbi Tartaruga
-  lastModified: 638194348212831122
-  FileSizes:
-  - Name: Desktop
-    Value: 293504
-  Exists: 1
---- !u!114 &144528383305222442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Guardi\xE3o/Ataque"
-  m_EditorClassIdentifier: 
-  Path: "event:/Guardi\xE3o/Ataque"
-  Guid:
-    Data1: -129664027
-    Data2: 1296986202
-    Data3: -1849474139
-    Data4: -302367844
-  Banks:
-  - {fileID: -2992810825293601594}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1839
---- !u!114 &176623087323591570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Puzzles/Estatua Genius A
-  m_EditorClassIdentifier: 
-  Path: event:/Puzzles/Estatua Genius A
-  Guid:
-    Data1: -107083398
-    Data2: 1229408185
-    Data3: -1965762382
-    Data4: -2137916854
-  Banks:
-  - {fileID: -6414772162641871808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &352291251611339327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Coletar Recurso/Recurso Coletado
-  m_EditorClassIdentifier: 
-  Path: event:/Coletar Recurso/Recurso Coletado
-  Guid:
-    Data1: -1818454000
-    Data2: 1313463055
-    Data3: -1618954823
-    Data4: -2111874215
-  Banks:
-  - {fileID: 4358311895950201407}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &361116701693523278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Puzzles/Estatua Genius D
-  m_EditorClassIdentifier: 
-  Path: event:/Puzzles/Estatua Genius D
-  Guid:
-    Data1: -1051063139
-    Data2: 1324632082
-    Data3: -52487753
-    Data4: 911756412
-  Banks:
-  - {fileID: -6414772162641871808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &379270663498668302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Guardi\xE3o/Feedback de Dano"
-  m_EditorClassIdentifier: 
-  Path: "event:/Guardi\xE3o/Feedback de Dano"
-  Guid:
-    Data1: 1411446542
-    Data2: 1087332110
-    Data3: -483279454
-    Data4: -953563631
-  Banks:
-  - {fileID: -2992810825293601594}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &419156950238484833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Puzzles/Estatua Genius B
-  m_EditorClassIdentifier: 
-  Path: event:/Puzzles/Estatua Genius B
-  Guid:
-    Data1: 266940940
-    Data2: 1090964269
-    Data3: 1147207320
-    Data4: 1792979133
-  Banks:
-  - {fileID: -6414772162641871808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &622500236372598024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Praia/Praia
-  m_EditorClassIdentifier: 
-  Path: event:/Praia/Praia
-  Guid:
-    Data1: -176207269
-    Data2: 1092693503
-    Data3: 557190836
-    Data4: -1234182607
-  Banks:
-  - {fileID: -1550074210648515092}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -4820417682133504545}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &796248673264490472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Puzzles/Quadrado
-  m_EditorClassIdentifier: 
-  Path: event:/Puzzles/Quadrado
-  Guid:
-    Data1: 1742965818
-    Data2: 1284454201
-    Data3: 1338831509
-    Data4: -657834982
-  Banks:
-  - {fileID: -6414772162641871808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1052200488579844943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Saco de Pancada.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Saco de Pancada.bank
-  Name: Saco de Pancada
-  StudioPath: bank:/Saco de Pancada
-  lastModified: 638191418829990889
-  FileSizes:
-  - Name: Desktop
-    Value: 16416
-  Exists: 1
---- !u!114 &1145903410244919216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Ouri\xE7o/Disparo"
-  m_EditorClassIdentifier: 
-  Path: "event:/Ouri\xE7o/Disparo"
-  Guid:
-    Data1: -1386148601
-    Data2: 1083288921
-    Data3: -1186800250
-    Data4: -384900188
-  Banks:
-  - {fileID: 8919453739277462266}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1398853299933091246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Golpe
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Golpe
-  Guid:
-    Data1: 1183795331
-    Data2: 1160673238
-    Data3: 1087878804
-    Data4: 217209066
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1834693765437214014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Guardi\xE3o/Dash"
-  m_EditorClassIdentifier: 
-  Path: "event:/Guardi\xE3o/Dash"
-  Guid:
-    Data1: 403063420
-    Data2: 1086593742
-    Data3: -1332735826
-    Data4: -1766075696
-  Banks:
-  - {fileID: -2992810825293601594}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2110500187150091910
+--- !u!114 &190900324589402369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1656,7 +1406,7 @@ MonoBehaviour:
     Data3: -1940690545
     Data4: -2097906010
   Banks:
-  - {fileID: -4561916992268976363}
+  - {fileID: 7424298038131044863}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1664,7 +1414,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &2249161451703907727
+--- !u!114 &200826725975594555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1674,16 +1424,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Zumbi Tartaruga/Feedback de Morte
+  m_Name: event:/Protagonista/Cura Final
   m_EditorClassIdentifier: 
-  Path: event:/Zumbi Tartaruga/Feedback de Morte
+  Path: event:/Protagonista/Cura Final
   Guid:
-    Data1: -884130286
-    Data2: 1302203230
-    Data3: -1109229904
-    Data4: 1665653742
+    Data1: -1392817633
+    Data2: 1160658669
+    Data3: -1849152072
+    Data4: 2051105903
   Banks:
-  - {fileID: 40617146194528622}
+  - {fileID: 1175608730412097030}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1691,27 +1441,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &2338504635635784465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Player.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Player.bank
-  Name: Player
-  StudioPath: bank:/Player
-  lastModified: 638204751780838910
-  FileSizes:
-  - Name: Desktop
-    Value: 135936
-  Exists: 1
---- !u!114 &2434989575679113296
+--- !u!114 &450533150208586934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1721,24 +1451,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Puzzles/Ciruclar
+  m_Name: "event:/Guardi\xE3o/Feedback de Dano"
   m_EditorClassIdentifier: 
-  Path: event:/Puzzles/Ciruclar
+  Path: "event:/Guardi\xE3o/Feedback de Dano"
   Guid:
-    Data1: 173967927
-    Data2: 1101515200
-    Data3: -1970386552
-    Data4: -1183924843
+    Data1: 1411446542
+    Data2: 1087332110
+    Data3: -483279454
+    Data4: -953563631
   Banks:
-  - {fileID: -6414772162641871808}
+  - {fileID: -5589901718289206581}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 932
---- !u!114 &2675666989416870523
+  Length: 0
+--- !u!114 &565964267378306998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1757,7 +1487,7 @@ MonoBehaviour:
     Data3: -2099227254
     Data4: 1318857727
   Banks:
-  - {fileID: 8692978956279676867}
+  - {fileID: 6423632512016787140}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1765,7 +1495,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &2776117882125582066
+--- !u!114 &628839760710966693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1775,16 +1505,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sombra/Som Area Isolada
+  m_Name: event:/Protagonista/Pulo
   m_EditorClassIdentifier: 
-  Path: event:/Sombra/Som Area Isolada
+  Path: event:/Protagonista/Pulo
   Guid:
-    Data1: 1781383893
-    Data2: 1260201223
-    Data3: 379778458
-    Data4: -291249929
+    Data1: 955402343
+    Data2: 1221021533
+    Data3: -1184461692
+    Data4: -766340230
   Banks:
-  - {fileID: -4561916992268976363}
+  - {fileID: 1175608730412097030}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1792,61 +1522,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3002590132823051922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Mosca/Rasante
-  m_EditorClassIdentifier: 
-  Path: event:/Mosca/Rasante
-  Guid:
-    Data1: -211673068
-    Data2: 1165488598
-    Data3: -970742109
-    Data4: 5297791
-  Banks:
-  - {fileID: -4148505859909150457}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 800
---- !u!114 &3011460991657678837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Caranguejo/Pin\xE7a"
-  m_EditorClassIdentifier: 
-  Path: "event:/Caranguejo/Pin\xE7a"
-  Guid:
-    Data1: 1832887441
-    Data2: 1267446817
-    Data3: -2065493366
-    Data4: -82777454
-  Banks:
-  - {fileID: -3829444568725286067}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3344723469903204485
+--- !u!114 &668182939113617931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1856,17 +1532,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ferreiro.bank
+  m_Name: bank:/Interface.bank
   m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Ferreiro.bank
-  Name: Ferreiro
-  StudioPath: bank:/Ferreiro
-  lastModified: 638197677951446528
+  Path: FMOD GitHub/Build/Desktop/Interface.bank
+  Name: Interface
+  StudioPath: bank:/Interface
+  lastModified: 638191694423027538
   FileSizes:
   - Name: Desktop
-    Value: 41408
+    Value: 23712
   Exists: 1
---- !u!114 &3455996456417859814
+--- !u!114 &682720288382615256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1876,16 +1552,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Caranguejo/Feedback de Morte
+  m_Name: event:/Planta Carnivora/Feedback de Dano
   m_EditorClassIdentifier: 
-  Path: event:/Caranguejo/Feedback de Morte
+  Path: event:/Planta Carnivora/Feedback de Dano
   Guid:
-    Data1: -181813854
-    Data2: 1157409161
-    Data3: -1384495459
-    Data4: -1252521537
+    Data1: 1294306513
+    Data2: 1166089195
+    Data3: 510113970
+    Data4: 1881796766
   Banks:
-  - {fileID: -3829444568725286067}
+  - {fileID: 5890511873601658633}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1893,7 +1569,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3800278064361142823
+--- !u!114 &722812454213143489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1903,16 +1579,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sombra/Ataque Explosivo
+  m_Name: "event:/Puzzles/Conclus\xE3o"
   m_EditorClassIdentifier: 
-  Path: event:/Sombra/Ataque Explosivo
+  Path: "event:/Puzzles/Conclus\xE3o"
   Guid:
-    Data1: -908479726
-    Data2: 1153351320
-    Data3: -94191974
-    Data4: -303911811
+    Data1: 2016594629
+    Data2: 1200821859
+    Data3: -1863246175
+    Data4: 1817544448
   Banks:
-  - {fileID: -4561916992268976363}
+  - {fileID: -1377398051893091558}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1920,7 +1596,135 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3893853416396587313
+--- !u!114 &799504734677585372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Estatua Genius A
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Estatua Genius A
+  Guid:
+    Data1: -107083398
+    Data2: 1229408185
+    Data3: -1965762382
+    Data4: -2137916854
+  Banks:
+  - {fileID: -1377398051893091558}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &828126216807910912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Fala"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Fala"
+  Guid:
+    Data1: 1232596475
+    Data2: 1301962026
+    Data3: -1418501246
+    Data4: -864560435
+  Banks:
+  - {fileID: -5589901718289206581}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1135246934001241550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Morte"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Morte"
+  Guid:
+    Data1: -331894152
+    Data2: 1128913165
+    Data3: 1533094287
+    Data4: -1235890237
+  Banks:
+  - {fileID: -5589901718289206581}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1175608730412097030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Player.bank
+  Name: Player
+  StudioPath: bank:/Player
+  lastModified: 638204524904966243
+  FileSizes:
+  - Name: Desktop
+    Value: 135936
+  Exists: 1
+--- !u!114 &1197144736914395910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Protagonista/Canh\xE3o de \xC1gua"
+  m_EditorClassIdentifier: 
+  Path: "event:/Protagonista/Canh\xE3o de \xC1gua"
+  Guid:
+    Data1: 1323431451
+    Data2: 1259847826
+    Data3: 1354026396
+    Data4: 1128232768
+  Banks:
+  - {fileID: 1175608730412097030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1405570132701684571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1939,7 +1743,7 @@ MonoBehaviour:
     Data3: 1456805045
     Data4: -1726794433
   Banks:
-  - {fileID: 8692978956279676867}
+  - {fileID: 6423632512016787140}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1947,7 +1751,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3980988550638212277
+--- !u!114 &1405889224039823257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1957,16 +1761,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Mosca/Feedback de Dano
+  m_Name: event:/Protagonista/Feedback de Dano
   m_EditorClassIdentifier: 
-  Path: event:/Mosca/Feedback de Dano
+  Path: event:/Protagonista/Feedback de Dano
   Guid:
-    Data1: -817150009
-    Data2: 1206035288
-    Data3: 333322666
-    Data4: -976945295
+    Data1: -853649318
+    Data2: 1330506089
+    Data3: -1148784462
+    Data4: 1450108065
   Banks:
-  - {fileID: -4148505859909150457}
+  - {fileID: 1175608730412097030}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1974,27 +1778,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4358311895950201407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Recurso Coletado.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Recurso Coletado.bank
-  Name: Recurso Coletado
-  StudioPath: bank:/Recurso Coletado
-  lastModified: 638191418829168273
-  FileSizes:
-  - Name: Desktop
-    Value: 21760
-  Exists: 1
---- !u!114 &4522217650067808959
+--- !u!114 &1628396157517403525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2004,409 +1788,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sombra/Ataque Garras Multiplas
+  m_Name: event:/Puzzles/Ciruclar
   m_EditorClassIdentifier: 
-  Path: event:/Sombra/Ataque Garras Multiplas
+  Path: event:/Puzzles/Ciruclar
   Guid:
-    Data1: -542367167
-    Data2: 1219397287
-    Data3: 206542982
-    Data4: -993725423
+    Data1: 173967927
+    Data2: 1101515200
+    Data3: -1970386552
+    Data4: -1183924843
   Banks:
-  - {fileID: -4561916992268976363}
+  - {fileID: -1377398051893091558}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &4525381008215364756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Interface.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Interface.bank
-  Name: Interface
-  StudioPath: bank:/Interface
-  lastModified: 638191418824932812
-  FileSizes:
-  - Name: Desktop
-    Value: 23712
-  Exists: 1
---- !u!114 &4724355964429481183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tocha/Fogo
-  m_EditorClassIdentifier: 
-  Path: event:/Tocha/Fogo
-  Guid:
-    Data1: -1619942129
-    Data2: 1309862977
-    Data3: -1162587776
-    Data4: -2143645093
-  Banks:
-  - {fileID: 8600806448901766104}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4873855773925519550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Save/Save
-  m_EditorClassIdentifier: 
-  Path: event:/Save/Save
-  Guid:
-    Data1: 375541606
-    Data2: 1123742244
-    Data3: 1189152670
-    Data4: 1870006270
-  Banks:
-  - {fileID: -6982189161153319412}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4887503538777529639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Sombra Theme"
-  m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Sombra Theme"
-  Guid:
-    Data1: 546430545
-    Data2: 1158019176
-    Data3: 1340751748
-    Data4: 1106842950
-  Banks:
-  - {fileID: 8692978956279676867}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 118457
---- !u!114 &5481367193485044842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Compra.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Compra.bank
-  Name: Compra
-  StudioPath: bank:/Compra
-  lastModified: 638191418822155659
-  FileSizes:
-  - Name: Desktop
-    Value: 8352
-  Exists: 1
---- !u!114 &5553807009752350157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Dash
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Dash
-  Guid:
-    Data1: -1255561798
-    Data2: 1322349989
-    Data3: 387457206
-    Data4: 1347290712
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5625031274756143587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Bruxa/Caldeir\xE3o"
-  m_EditorClassIdentifier: 
-  Path: "event:/Bruxa/Caldeir\xE3o"
-  Guid:
-    Data1: -481857872
-    Data2: 1088061981
-    Data3: -1912687981
-    Data4: -1921862227
-  Banks:
-  - {fileID: -2380389172643577725}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 35878
---- !u!114 &6003197647859103716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Mosca/Tonta
-  m_EditorClassIdentifier: 
-  Path: event:/Mosca/Tonta
-  Guid:
-    Data1: -1308834727
-    Data2: 1310839569
-    Data3: -1815835250
-    Data4: 1119921373
-  Banks:
-  - {fileID: -4148505859909150457}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6116311271944771259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Dialogo.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Dialogo.bank
-  Name: Dialogo
-  StudioPath: bank:/Dialogo
-  lastModified: 638204751745292650
-  FileSizes:
-  - Name: Desktop
-    Value: 5376
-  Exists: 1
---- !u!114 &6375429362902521809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Guardi\xE3o/Tridente Ecoando"
-  m_EditorClassIdentifier: 
-  Path: "event:/Guardi\xE3o/Tridente Ecoando"
-  Guid:
-    Data1: -467120589
-    Data2: 1125716236
-    Data3: -197449822
-    Data4: -486856645
-  Banks:
-  - {fileID: -2992810825293601594}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6587969149993274288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Guardi\xE3o/Ataque Tridente"
-  m_EditorClassIdentifier: 
-  Path: "event:/Guardi\xE3o/Ataque Tridente"
-  Guid:
-    Data1: -1352485260
-    Data2: 1322887985
-    Data3: 1878015413
-    Data4: -1518853411
-  Banks:
-  - {fileID: -2992810825293601594}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6843803553010179858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Estalactite/Pingo
-  m_EditorClassIdentifier: 
-  Path: event:/Estalactite/Pingo
-  Guid:
-    Data1: 740516506
-    Data2: 1194248807
-    Data3: -1144136042
-    Data4: 758609454
-  Banks:
-  - {fileID: 7666938935307396456}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6989272175558855450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Chage vilacaverna"
-  m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Chage vilacaverna"
-  Guid:
-    Data1: 1658853866
-    Data2: 1120582191
-    Data3: 1141249931
-    Data4: -1153812407
-  Banks:
-  - {fileID: 8692978956279676867}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 7583458523535508044}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7070588172913838588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Caranguejo/Feedback de Dano
-  m_EditorClassIdentifier: 
-  Path: event:/Caranguejo/Feedback de Dano
-  Guid:
-    Data1: -1417708825
-    Data2: 1323482400
-    Data3: 1123782836
-    Data4: 1760186296
-  Banks:
-  - {fileID: -3829444568725286067}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7150016935749290151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Saco de Pancada/Feedback de Dano
-  m_EditorClassIdentifier: 
-  Path: event:/Saco de Pancada/Feedback de Dano
-  Guid:
-    Data1: 635017466
-    Data2: 1194472176
-    Data3: -375125098
-    Data4: -159842578
-  Banks:
-  - {fileID: 1052200488579844943}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7443312199140397018
+  Length: 932
+--- !u!114 &1683024082142975856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2425,7 +1824,7 @@ MonoBehaviour:
     Data3: 604515730
     Data4: -639718998
   Banks:
-  - {fileID: -570230403866648006}
+  - {fileID: 5890511873601658633}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2433,7 +1832,775 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 530
---- !u!114 &7583458523535508044
+--- !u!114 &1996724662678084450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Zumbi Tartaruga.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Zumbi Tartaruga.bank
+  Name: Zumbi Tartaruga
+  StudioPath: bank:/Zumbi Tartaruga
+  lastModified: 638196673496719505
+  FileSizes:
+  - Name: Desktop
+    Value: 293504
+  Exists: 1
+--- !u!114 &2213111297980258718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Ataque Explosivo
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Ataque Explosivo
+  Guid:
+    Data1: -908479726
+    Data2: 1153351320
+    Data3: -94191974
+    Data4: -303911811
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2251870157715134583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/Menu"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/Menu"
+  Guid:
+    Data1: 610656234
+    Data2: 1243817706
+    Data3: 335654037
+    Data4: -257525868
+  Banks:
+  - {fileID: 6423632512016787140}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 68545
+--- !u!114 &2385261942353169707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o Duplo"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o Duplo"
+  Guid:
+    Data1: 2106790888
+    Data2: 1210928402
+    Data3: -615455328
+    Data4: 952520560
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2385955660420348410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Bruxa.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Bruxa.bank
+  Name: Bruxa
+  StudioPath: bank:/Bruxa
+  lastModified: 638191694422857507
+  FileSizes:
+  - Name: Desktop
+    Value: 253056
+  Exists: 1
+--- !u!114 &2452486241714745080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: "bank:/Ouri\xE7o.bank"
+  m_EditorClassIdentifier: 
+  Path: "FMOD GitHub/Build/Desktop/Ouri\xE7o.bank"
+  Name: "Ouri\xE7o"
+  StudioPath: "bank:/Ouri\xE7o"
+  lastModified: 638191694423767701
+  FileSizes:
+  - Name: Desktop
+    Value: 15840
+  Exists: 1
+--- !u!114 &2585132721785436281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Caranguejo/Feedback de Morte
+  m_EditorClassIdentifier: 
+  Path: event:/Caranguejo/Feedback de Morte
+  Guid:
+    Data1: -181813854
+    Data2: 1157409161
+    Data3: -1384495459
+    Data4: -1252521537
+  Banks:
+  - {fileID: 6694923835231294438}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2980166738323566348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Ataque Garras Multiplas
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Ataque Garras Multiplas
+  Guid:
+    Data1: -542367167
+    Data2: 1219397287
+    Data3: 206542982
+    Data4: -993725423
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3007771240278246631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Caranguejo/Pin\xE7a"
+  m_EditorClassIdentifier: 
+  Path: "event:/Caranguejo/Pin\xE7a"
+  Guid:
+    Data1: 1832887441
+    Data2: 1267446817
+    Data3: -2065493366
+    Data4: -82777454
+  Banks:
+  - {fileID: 6694923835231294438}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3184758442173600029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Feedback de Dano
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Feedback de Dano
+  Guid:
+    Data1: -1690933258
+    Data2: 1155568464
+    Data3: -2055299938
+    Data4: -967105088
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3369061084559671427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Tridente Ecoando"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Tridente Ecoando"
+  Guid:
+    Data1: -467120589
+    Data2: 1125716236
+    Data3: -197449822
+    Data4: -486856645
+  Banks:
+  - {fileID: -5589901718289206581}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3840108469515287871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Tent\xE1culo Voltando"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Tent\xE1culo Voltando"
+  Guid:
+    Data1: 598035846
+    Data2: 1326532977
+    Data3: -2022200129
+    Data4: 2043237299
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4809772309524997818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Zumbi Tartaruga/Acordando
+  m_EditorClassIdentifier: 
+  Path: event:/Zumbi Tartaruga/Acordando
+  Guid:
+    Data1: -580143434
+    Data2: 1295556969
+    Data3: -148784255
+    Data4: 1041432092
+  Banks:
+  - {fileID: 1996724662678084450}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4893009569495568204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Save.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Save.bank
+  Name: Save
+  StudioPath: bank:/Save
+  lastModified: 638191694424336194
+  FileSizes:
+  - Name: Desktop
+    Value: 55424
+  Exists: 1
+--- !u!114 &5019335369251206797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Interface/Afirma\xE7\xE3o"
+  m_EditorClassIdentifier: 
+  Path: "event:/Interface/Afirma\xE7\xE3o"
+  Guid:
+    Data1: -1999883599
+    Data2: 1287947348
+    Data3: 222720169
+    Data4: 755051551
+  Banks:
+  - {fileID: 668182939113617931}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5291132521556099881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Tent\xE1culo Ataque"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Tent\xE1culo Ataque"
+  Guid:
+    Data1: 1518555145
+    Data2: 1187182761
+    Data3: 2029290124
+    Data4: 1296844191
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5640985820898808012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Praia/Praia
+  m_EditorClassIdentifier: 
+  Path: event:/Praia/Praia
+  Guid:
+    Data1: -176207269
+    Data2: 1092693503
+    Data3: 557190836
+    Data4: -1234182607
+  Banks:
+  - {fileID: 7411753520670454323}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6190828491003278308}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5697397762667630032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/Bioma Verde"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/Bioma Verde"
+  Guid:
+    Data1: 555720218
+    Data2: 1239611367
+    Data3: -282923089
+    Data4: -720407115
+  Banks:
+  - {fileID: 6423632512016787140}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5853283519590440606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Zumbi Tartaruga/Mordendo
+  m_EditorClassIdentifier: 
+  Path: event:/Zumbi Tartaruga/Mordendo
+  Guid:
+    Data1: -1031419416
+    Data2: 1201892253
+    Data3: -991048825
+    Data4: 1936778704
+  Banks:
+  - {fileID: 1996724662678084450}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5890511873601658633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Planta Carnviora.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Planta Carnviora.bank
+  Name: Planta Carnviora
+  StudioPath: bank:/Planta Carnviora
+  lastModified: 638197760385525073
+  FileSizes:
+  - Name: Desktop
+    Value: 68704
+  Exists: 1
+--- !u!114 &5909611237231461880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Planta Carnivora/Feedback de Morte
+  m_EditorClassIdentifier: 
+  Path: event:/Planta Carnivora/Feedback de Morte
+  Guid:
+    Data1: -662816525
+    Data2: 1092967853
+    Data3: -1495951226
+    Data4: -1656671984
+  Banks:
+  - {fileID: 5890511873601658633}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6376258240555570144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Estatua Genius B
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Estatua Genius B
+  Guid:
+    Data1: 266940940
+    Data2: 1090964269
+    Data3: 1147207320
+    Data4: 1792979133
+  Banks:
+  - {fileID: -1377398051893091558}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6423632512016787140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: "bank:/M\xFAsicas.bank"
+  m_EditorClassIdentifier: 
+  Path: "FMOD GitHub/Build/Desktop/M\xFAsicas.bank"
+  Name: "M\xFAsicas"
+  StudioPath: "bank:/M\xFAsicas"
+  lastModified: 638204818792595730
+  FileSizes:
+  - Name: Desktop
+    Value: 10466240
+  Exists: 1
+--- !u!114 &6550751395421758007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/Caverna"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/Caverna"
+  Guid:
+    Data1: -530549880
+    Data2: 1270160703
+    Data3: 776391855
+    Data4: -716936118
+  Banks:
+  - {fileID: 6423632512016787140}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6694923835231294438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Caranguejo.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Caranguejo.bank
+  Name: Caranguejo
+  StudioPath: bank:/Caranguejo
+  lastModified: 638191694422887498
+  FileSizes:
+  - Name: Desktop
+    Value: 33440
+  Exists: 1
+--- !u!114 &6893737700871174398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Saco de Pancada.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Saco de Pancada.bank
+  Name: Saco de Pancada
+  StudioPath: bank:/Saco de Pancada
+  lastModified: 638191694424260939
+  FileSizes:
+  - Name: Desktop
+    Value: 16416
+  Exists: 1
+--- !u!114 &7411753520670454323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Praia.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Praia.bank
+  Name: Praia
+  StudioPath: bank:/Praia
+  lastModified: 638191694424150465
+  FileSizes:
+  - Name: Desktop
+    Value: 1087936
+  Exists: 1
+--- !u!114 &7424298038131044863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sombra.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Sombra.bank
+  Name: Sombra
+  StudioPath: bank:/Sombra
+  lastModified: 638197760385575159
+  FileSizes:
+  - Name: Desktop
+    Value: 271008
+  Exists: 1
+--- !u!114 &7559114845393131453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mosca/Rasante
+  m_EditorClassIdentifier: 
+  Path: event:/Mosca/Rasante
+  Guid:
+    Data1: -211673068
+    Data2: 1165488598
+    Data3: -970742109
+    Data4: 5297791
+  Banks:
+  - {fileID: -7860848472918789896}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
+--- !u!114 &7632076308579946380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Puzzles/Estatua Genius D
+  m_EditorClassIdentifier: 
+  Path: event:/Puzzles/Estatua Genius D
+  Guid:
+    Data1: -1051063139
+    Data2: 1324632082
+    Data3: -52487753
+    Data4: 911756412
+  Banks:
+  - {fileID: -1377398051893091558}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8100710746945729513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ferreiro/Forjando
+  m_EditorClassIdentifier: 
+  Path: event:/Ferreiro/Forjando
+  Guid:
+    Data1: 2142633123
+    Data2: 1228101853
+    Data3: -580943182
+    Data4: 1017144965
+  Banks:
+  - {fileID: -1876944366476983455}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 4.6
+  Length: 2500
+--- !u!114 &8140531155436493847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2463,81 +2630,7 @@ MonoBehaviour:
   - Verde
   - Abismo
   Exists: 1
---- !u!114 &7666938935307396456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Estalactite.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Estalactite.bank
-  Name: Estalactite
-  StudioPath: bank:/Estalactite
-  lastModified: 638191418822681555
-  FileSizes:
-  - Name: Desktop
-    Value: 12096
-  Exists: 1
---- !u!114 &8175621788837878297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Compra/Compra
-  m_EditorClassIdentifier: 
-  Path: event:/Compra/Compra
-  Guid:
-    Data1: 484390566
-    Data2: 1295504553
-    Data3: 1680364933
-    Data4: -951073734
-  Banks:
-  - {fileID: 5481367193485044842}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &8492815524371835197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Feedback de Dano
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Feedback de Dano
-  Guid:
-    Data1: -853649318
-    Data2: 1330506089
-    Data3: -1148784462
-    Data4: 1450108065
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &8579552100693661289
+--- !u!114 &8201730894388590366
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2556,7 +2649,7 @@ MonoBehaviour:
     Data3: -2058163780
     Data4: 1112114026
   Banks:
-  - {fileID: 40617146194528622}
+  - {fileID: 1996724662678084450}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2564,47 +2657,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8600806448901766104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Tocha.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD GitHub/Build/Desktop/Tocha.bank
-  Name: Tocha
-  StudioPath: bank:/Tocha
-  lastModified: 638197627325393202
-  FileSizes:
-  - Name: Desktop
-    Value: 683520
-  Exists: 1
---- !u!114 &8692978956279676867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: "bank:/M\xFAsicas.bank"
-  m_EditorClassIdentifier: 
-  Path: "FMOD GitHub/Build/Desktop/M\xFAsicas.bank"
-  Name: "M\xFAsicas"
-  StudioPath: "bank:/M\xFAsicas"
-  lastModified: 638204751778539382
-  FileSizes:
-  - Name: Desktop
-    Value: 10466240
-  Exists: 1
---- !u!114 &8878980753941849168
+--- !u!114 &8230136266051850936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2614,16 +2667,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sombra/Feedback de Dano
+  m_Name: event:/Fazendeiro/Carpinando
   m_EditorClassIdentifier: 
-  Path: event:/Sombra/Feedback de Dano
+  Path: event:/Fazendeiro/Carpinando
   Guid:
-    Data1: -1690933258
-    Data2: 1155568464
-    Data3: -2055299938
-    Data4: -967105088
+    Data1: 940617733
+    Data2: 1262682171
+    Data3: 1928901045
+    Data4: 1782990204
   Banks:
-  - {fileID: -4561916992268976363}
+  - {fileID: 8246316103331177489}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2631,7 +2684,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8919453739277462266
+--- !u!114 &8246316103331177489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2641,17 +2694,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: "bank:/Ouri\xE7o.bank"
+  m_Name: bank:/Fazendeiro.bank
   m_EditorClassIdentifier: 
-  Path: "FMOD GitHub/Build/Desktop/Ouri\xE7o.bank"
-  Name: "Ouri\xE7o"
-  StudioPath: "bank:/Ouri\xE7o"
-  lastModified: 638191418826930670
+  Path: FMOD GitHub/Build/Desktop/Fazendeiro.bank
+  Name: Fazendeiro
+  StudioPath: bank:/Fazendeiro
+  lastModified: 638191694422947545
   FileSizes:
   - Name: Desktop
-    Value: 15840
+    Value: 21568
   Exists: 1
---- !u!114 &9040049563782096613
+--- !u!114 &8356969049906910782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2661,51 +2714,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/M\xFAsicas/Menu"
+  m_Name: "event:/Guardi\xE3o/Ataque"
   m_EditorClassIdentifier: 
-  Path: "event:/M\xFAsicas/Menu"
+  Path: "event:/Guardi\xE3o/Ataque"
   Guid:
-    Data1: 610656234
-    Data2: 1243817706
-    Data3: 335654037
-    Data4: -257525868
+    Data1: -129664027
+    Data2: 1296986202
+    Data3: -1849474139
+    Data4: -302367844
   Banks:
-  - {fileID: 8692978956279676867}
+  - {fileID: -5589901718289206581}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1839
+--- !u!114 &8559961751166289387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/M\xFAsicas/Chage vilacaverna"
+  m_EditorClassIdentifier: 
+  Path: "event:/M\xFAsicas/Chage vilacaverna"
+  Guid:
+    Data1: 1658853866
+    Data2: 1120582191
+    Data3: 1141249931
+    Data4: -1153812407
+  Banks:
+  - {fileID: 6423632512016787140}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 68545
---- !u!114 &9042421458657153011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Puzzles/Estatua Genius C
-  m_EditorClassIdentifier: 
-  Path: event:/Puzzles/Estatua Genius C
-  Guid:
-    Data1: 122380958
-    Data2: 1301405610
-    Data3: -962908534
-    Data4: -50738936
-  Banks:
-  - {fileID: -6414772162641871808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 8140531155436493847}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &9080409980634760547
+--- !u!114 &8979440987913201853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2715,70 +2769,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Guardi\xE3o/Pulo e Descida"
+  m_Name: event:/Protagonista/Aterissagem
   m_EditorClassIdentifier: 
-  Path: "event:/Guardi\xE3o/Pulo e Descida"
+  Path: event:/Protagonista/Aterissagem
   Guid:
-    Data1: 1070550185
-    Data2: 1223357741
-    Data3: -2097985886
-    Data4: -1386034129
+    Data1: 1130769165
+    Data2: 1119908183
+    Data3: -490296138
+    Data4: -1562607188
   Banks:
-  - {fileID: -2992810825293601594}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &9095090529591764409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Protagonista/Canh\xE3o de \xC1gua"
-  m_EditorClassIdentifier: 
-  Path: "event:/Protagonista/Canh\xE3o de \xC1gua"
-  Guid:
-    Data1: 1323431451
-    Data2: 1259847826
-    Data3: 1354026396
-    Data4: 1128232768
-  Banks:
-  - {fileID: 2338504635635784465}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &9102824119454050688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Tent\xE1culo Saindo"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Tent\xE1culo Saindo"
-  Guid:
-    Data1: 1625932892
-    Data2: 1180075509
-    Data3: 978887597
-    Data4: 1942690830
-  Banks:
-  - {fileID: -4561916992268976363}
+  - {fileID: 1175608730412097030}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
