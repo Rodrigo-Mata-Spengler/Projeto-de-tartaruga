@@ -11,7 +11,6 @@ public class ItensInventory : MonoBehaviour
     public int ossos; // bones
     [Space]
     public bool mapa = false;
-
     //[Space]
     //public int MaxAmount = 10;
 
@@ -25,7 +24,7 @@ public class ItensInventory : MonoBehaviour
     private bool DoOnceMap = false;
     private void Start()
     {
-
+       
     }
     private void Update()
     {
@@ -51,7 +50,6 @@ public class ItensInventory : MonoBehaviour
 
         if(mapa && !DoOnceMap)
         {
-            GameObject.FindGameObjectWithTag("MapaPanel").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().MapButtonInventario.SetActive(true);
             DoOnceMap = true;
         }

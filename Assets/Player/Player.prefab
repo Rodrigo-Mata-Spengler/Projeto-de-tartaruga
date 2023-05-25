@@ -111,8 +111,7 @@ MonoBehaviour:
   up: 1
   down: 0
   right: 0
-  impulseForce: 100
-  EnemyimpulseForce: 400
+  impulseForce: 5
   HitIndex: 0
   HitEffect: {fileID: 7780154456866803322}
   HitEffectUp: {fileID: 8180825417633420890}
@@ -301,8 +300,7 @@ MonoBehaviour:
   up: 0
   down: 1
   right: 0
-  impulseForce: 500
-  EnemyimpulseForce: 400
+  impulseForce: 15
   HitIndex: 0
   HitEffect: {fileID: 7780154456866803322}
   HitEffectUp: {fileID: 8180825417633420890}
@@ -386,8 +384,7 @@ MonoBehaviour:
   up: 0
   down: 0
   right: 1
-  impulseForce: 300
-  EnemyimpulseForce: 400
+  impulseForce: 20
   HitIndex: 0
   HitEffect: {fileID: 7780154456866803322}
   HitEffectUp: {fileID: 8180825417633420890}
@@ -1197,7 +1194,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1295,7 +1292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003948e474aa3f84cb15880a7f97d834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HaveMagicTrident: 1
+  HaveMagicTrident: 0
   HaveArmor: 0
   CharacterController2D: {fileID: 6748649182909457867}
   m_Rigidbody2D: {fileID: 0}
@@ -1446,7 +1443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wasHit: 0
-  secondsToDisable: 2
+  secondsToDisable: 1
   DoOnce: 0
 --- !u!114 &8033661058447654777
 MonoBehaviour:
@@ -1578,7 +1575,7 @@ MonoBehaviour:
   coral: 0
   calcio: 0
   ossos: 0
-  mapa: 0
+  mapa: 1
 --- !u!114 &764544940252387656
 MonoBehaviour:
   m_ObjectHideFlags: 0

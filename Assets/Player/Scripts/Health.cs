@@ -198,8 +198,6 @@ public class Health : MonoBehaviour
         {
           
             Damage(1);
-            rb.AddForce(transform.up * 10, ForceMode2D.Impulse);
-            rb.AddForce(transform.right * 3, ForceMode2D.Impulse);
 
         }
 
@@ -227,7 +225,7 @@ public class Health : MonoBehaviour
     {
         if(currentLife > 0f && this.GetComponent<Health>().enabled == true)
         {
-            rb.velocity = Vector2.one;
+            rb.velocity = Vector2.zero;
             CameraShakeManager.instance.CameraShake(impulseSource);
             currentLife -= GiveDamageAmount;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.DamageFeedback, this.transform.position);
@@ -237,8 +235,8 @@ public class Health : MonoBehaviour
             //HealthSlider.value -= 8;
             HudControler.ChangeHealth(currentLife);
 
-            rb.AddForce(transform.up * 10, ForceMode2D.Impulse);
-            //rb.AddForce(transform.right * 3, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * 15, ForceMode2D.Impulse);
+            rb.AddForce(transform.right * 3, ForceMode2D.Impulse);
 
         }
 
