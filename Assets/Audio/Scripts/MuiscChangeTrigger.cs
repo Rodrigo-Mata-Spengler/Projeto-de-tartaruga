@@ -12,7 +12,7 @@ public class MuiscChangeTrigger : MonoBehaviour
         if(collision.tag.Equals("Player"))
         {
             AudioManager.instance.SetMusicArea(area);
-            Debug.Log("Aquii");
+       
         }
     }
 }
