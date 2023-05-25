@@ -59,9 +59,11 @@ public class Selo : MonoBehaviour
             PLayer.GetComponent<Health>().RezarEffect.Play();
             PLayer.GetComponent<Animator>().SetBool("Rezar", true);
         }
-        
 
-        if(quebrado == true)
+        SaveSystem.SavePlayer(PLayer);
+        Iconesalvando.Mostraricone();
+
+        if (quebrado == true)
         {
             Poca_E.SetBool("Caiu", true);
             Poca_D.SetBool("Caiu", true);
@@ -73,6 +75,7 @@ public class Selo : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
+                PLayer = collision.gameObject;
                 Detected = true;
             }
 
@@ -81,6 +84,8 @@ public class Selo : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
+
+                PLayer = null;
                 Detected = false;
                 collision.GetComponent<Health>().RezarEffect.Stop();
                 collision.GetComponent<Animator>().SetBool("Rezar", false);

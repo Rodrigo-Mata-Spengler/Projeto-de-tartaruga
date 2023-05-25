@@ -10,6 +10,12 @@ public class VidaBossSombra : MonoBehaviour
 
     [SerializeField] private static string cenaVitoria = "Tela Vitoria temp";
 
+    //[SerializeField] private GameObject tileFinal;
+
+    private void Start()
+    {
+        //tileFinal.SetActive(false);
+    }
     public static void TomarDano(float Dano)
     {
         if (Dano-vidaAtual <= 0)
@@ -25,5 +31,9 @@ public class VidaBossSombra : MonoBehaviour
     private static void Morreu()
     {
         SceneManager.LoadScene(cenaVitoria);
+        //ativar quando tiver o chão
+        /*
+        tileFinal.SetActive(true);
+         */
     }
 }
