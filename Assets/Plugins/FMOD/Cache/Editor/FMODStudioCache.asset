@@ -251,10 +251,10 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Introdu\xE7\xE3o.bank"
   Name: "Introdu\xE7\xE3o"
   StudioPath: "bank:/Introdu\xE7\xE3o"
-  lastModified: 638204751776686744
+  lastModified: 638206312182783921
   FileSizes:
   - Name: Desktop
-    Value: 1012736
+    Value: 962464
   Exists: 1
 --- !u!114 &-7056211531567628440
 MonoBehaviour:
@@ -658,10 +658,10 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Guardi\xE3o.bank"
   Name: "Guardi\xE3o"
   StudioPath: "bank:/Guardi\xE3o"
-  lastModified: 638204751747148138
+  lastModified: 638206332163862053
   FileSizes:
   - Name: Desktop
-    Value: 217664
+    Value: 262464
   Exists: 1
 --- !u!114 &-2953803586345017615
 MonoBehaviour:
@@ -705,10 +705,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638204751776891288
+  lastModified: 638206332163937018
   FileSizes:
   - Name: Desktop
-    Value: 5598
+    Value: 5748
   Exists: 1
 --- !u!114 &-2806206104134707749
 MonoBehaviour:
@@ -1289,12 +1289,15 @@ MonoBehaviour:
   - {fileID: -541871658142754209}
   - {fileID: -1958595996488201729}
   - {fileID: 6989272175558855450}
+  - {fileID: 6375429362902521809}
+  - {fileID: 6587969149993274288}
+  - {fileID: 9080409980634760547}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7437959542684782280}
   StringsBanks:
   - {fileID: -2917927132543349577}
-  cacheTime: 638204751783040358
+  cacheTime: 638206332163937018
   cacheVersion: 131603
 --- !u!114 &40617146194528622
 MonoBehaviour:
@@ -2240,6 +2243,60 @@ MonoBehaviour:
   - Name: Desktop
     Value: 5376
   Exists: 1
+--- !u!114 &6375429362902521809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Tridente Ecoando"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Tridente Ecoando"
+  Guid:
+    Data1: -467120589
+    Data2: 1125716236
+    Data3: -197449822
+    Data4: -486856645
+  Banks:
+  - {fileID: -2992810825293601594}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6587969149993274288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Ataque Tridente"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Ataque Tridente"
+  Guid:
+    Data1: -1352485260
+    Data2: 1322887985
+    Data3: 1878015413
+    Data4: -1518853411
+  Banks:
+  - {fileID: -2992810825293601594}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6843803553010179858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2641,6 +2698,33 @@ MonoBehaviour:
     Data4: -50738936
   Banks:
   - {fileID: -6414772162641871808}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9080409980634760547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Guardi\xE3o/Pulo e Descida"
+  m_EditorClassIdentifier: 
+  Path: "event:/Guardi\xE3o/Pulo e Descida"
+  Guid:
+    Data1: 1070550185
+    Data2: 1223357741
+    Data3: -2097985886
+    Data4: -1386034129
+  Banks:
+  - {fileID: -2992810825293601594}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
