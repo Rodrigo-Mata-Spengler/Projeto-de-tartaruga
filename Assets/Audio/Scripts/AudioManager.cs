@@ -69,6 +69,13 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
 
+    public void StopSound(EventReference eventReference)
+    {
+        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+        eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+
     private void InitializeAmbience(EventReference ambienceEventReference)
     {
         AmbienceEventInstance = CreateEventInstance(ambienceEventReference);

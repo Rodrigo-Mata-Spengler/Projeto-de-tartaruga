@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0.184
-  ambienceVolume: 0.168
+  musicVolume: 0
+  ambienceVolume: 0
   SFXVolume: 1
 --- !u!114 &4232391287602610950
 MonoBehaviour:
@@ -157,6 +157,20 @@ MonoBehaviour:
       Data3: -1148784462
       Data4: 1450108065
     Path: event:/Protagonista/Feedback de Dano
+  <Cura>k__BackingField:
+    Guid:
+      Data1: 128010001
+      Data2: 1163754142
+      Data3: 2035382967
+      Data4: -181813730
+    Path: event:/Protagonista/Cura
+  <Blast>k__BackingField:
+    Guid:
+      Data1: 1323431451
+      Data2: 1259847826
+      Data3: 1354026396
+      Data4: 1128232768
+    Path: "event:/Protagonista/Canh\xE3o de \xC1gua"
   <Dash>k__BackingField:
     Guid:
       Data1: -1255561798

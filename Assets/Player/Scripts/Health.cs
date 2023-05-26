@@ -90,7 +90,8 @@ public class Health : MonoBehaviour
 
         if (Input.GetAxis("Curar") > 0)
         {
-            gameObject.GetComponent<PlayerMovement>().enabled = false;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 100;
+            
         }
         if (Input.GetAxis("Curar")> 0 && HealSeaweed <= MaxHealSeaweed && currentLife < maxLife && HealSeaweed > 0)
         {
@@ -98,9 +99,10 @@ public class Health : MonoBehaviour
             PlayerAnimator.SetBool("Curar", true);
             if (DoOnce == false)
             {
-                gameObject.GetComponent<PlayerMovement>().enabled= false;
+               
                 HealEffect.Play();
                 DoOnce= true;
+              
             }
             
             CurrenTime += Time.deltaTime;
@@ -120,10 +122,11 @@ public class Health : MonoBehaviour
         if(Input.GetButtonUp("Curar"))
         {
             DoOnce = false;
-            gameObject.GetComponent<PlayerMovement>().enabled = true;
             CurrenTime = 0;
             HealEffect.Stop();
             PlayerAnimator.SetBool("Curar", false);
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
+
         }
         /*
         if(haveArmor)

@@ -168,6 +168,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8090160272118040832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Protagonista/Golpe Agua
+  m_EditorClassIdentifier: 
+  Path: event:/Protagonista/Golpe Agua
+  Guid:
+    Data1: 1411050497
+    Data2: 1341000418
+    Data3: -1600629337
+    Data4: 1265144770
+  Banks:
+  - {fileID: 1175608730412097030}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7899445572221156426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,10 +699,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638207068723744188
+  lastModified: 638207175904191663
   FileSizes:
   - Name: Desktop
-    Value: 5942
+    Value: 5988
   Exists: 1
 --- !u!114 &-4878137018501127185
 MonoBehaviour:
@@ -1411,12 +1438,13 @@ MonoBehaviour:
   - {fileID: -2501152997413682946}
   - {fileID: -7430612704775213403}
   - {fileID: 8867280018728905975}
+  - {fileID: -8090160272118040832}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8203484357986439593}
   StringsBanks:
   - {fileID: -4994956805024338359}
-  cacheTime: 638207068723899214
+  cacheTime: 638207175904303847
   cacheVersion: 131603
 --- !u!114 &190900324589402369
 MonoBehaviour:
@@ -1723,10 +1751,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638204751780838910
+  lastModified: 638207175904303847
   FileSizes:
   - Name: Desktop
-    Value: 135936
+    Value: 146400
   Exists: 1
 --- !u!114 &1197144736914395910
 MonoBehaviour:
