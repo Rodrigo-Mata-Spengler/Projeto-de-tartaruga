@@ -71,7 +71,7 @@ public class Fazendeiro : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao"))
+        if (Input.GetButtonDown("Interacao") && playerDetected)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);

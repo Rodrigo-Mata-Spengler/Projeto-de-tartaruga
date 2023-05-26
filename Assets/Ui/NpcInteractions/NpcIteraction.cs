@@ -68,6 +68,9 @@ public class NpcIteraction : MonoBehaviour
             inputPressed = true;
             InputFeedBack.SetActive(false);
             HUD.SetActive(false);
+
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false )
@@ -104,6 +107,7 @@ public class NpcIteraction : MonoBehaviour
             ///checks if his have a store, if it does display the store panel
             //CanvasMenuPause.panelOpen = false;
             Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<Animator>().enabled = true;
             havingConversation = false;
 
             //enable HUD

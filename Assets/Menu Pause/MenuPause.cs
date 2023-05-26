@@ -103,8 +103,6 @@ public class MenuPause : MonoBehaviour
         PanelToDisable.SetActive(true);
         isPaused = true;
         HUDPanel.SetActive(false);
-
-
     }
 
     //ao clicar esc de novo ou no botão sai do menu de pause

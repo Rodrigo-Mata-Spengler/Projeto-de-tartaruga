@@ -60,6 +60,8 @@ public class GuardianBehavior : MonoBehaviour
     [SerializeField] private float TempoEsperaAtaque = 0;
     private float tempoAtaque = 0;
 
+    private float AlturaChao;
+
 
     [Space]
     [Header("Attack")]
@@ -93,8 +95,10 @@ public class GuardianBehavior : MonoBehaviour
     [SerializeField] private float TempoEsperaTonto = 0; // Amount of time to wait for the next action
 
     [Space]
-    private bool DoOnce = false;
+    [SerializeField]private bool awake = false;
+    [SerializeField] private bool DoOnce = false;
     // Start is called before the first frame update
+
     void Start()
     {
         PlayerObj = GameObject.FindGameObjectWithTag("Player");
@@ -110,27 +114,12 @@ public class GuardianBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        if(tempoDecorridoInicial <= tempoInicialDelay && DoOnce == false)
-        {
-            PlayerObj.GetComponent<PlayerMovement>().enabled = false;
-            tempoDecorridoInicial += Time.deltaTime;
-            animator.SetBool("acorda", true);
-        }
-        if (tempoDecorridoInicial >= tempoInicialDelay && DoOnce==false)
-        {
-           
-            PlayerObj.GetComponent<PlayerMovement>().enabled = true;
-            status = GuardianStatus.CheckPlayerDistance;
-            animator.SetBool("acorda", false);
-            DoOnce = true;
-        }
 
-      
+
         switch (status)
         {
             case GuardianStatus.Parado:
-              
+                Acorda();
                 break;
 
             case GuardianStatus.Morto:
@@ -176,6 +165,31 @@ public class GuardianBehavior : MonoBehaviour
             SaveSystem.SavePlayer(PlayerObj);
             Iconesalvando.Mostraricone();
             
+        }
+
+    }
+    private void Acorda()
+    {
+
+        tempoDecorridoInicial += Time.deltaTime;
+
+        if (tempoDecorridoInicial >= tempoInicialDelay)
+        {
+            PlayerObj.GetComponent<Rigidbody2D>().gravityScale = 3;
+            PlayerObj.GetComponent<PlayerMovement>().enabled = true;
+            status = GuardianStatus.CheckPlayerDistance;
+            DoOnce = true;
+            awake = false;
+        }
+        else
+        {
+            PlayerObj.GetComponent<Rigidbody2D>().gravityScale = 100;
+
+            if (DoOnce == false)
+            {
+                animator.SetTrigger("acorda");
+                DoOnce = true;
+            }
         }
 
     }
@@ -225,13 +239,14 @@ public class GuardianBehavior : MonoBehaviour
 
             if (i >= 31 && i < 61 && PlayerClose)
             {
+                
                 LookAtPlayer();
                 status = GuardianStatus.Attack;
                 tempoDeAtaque = 0;
                 AttackCollider.enabled = true;
-                
-                
-         
+                animator.SetTrigger("ataque");
+
+
                 ActionChosed = false;
             }
             if (i >= 80 && i < 100)
@@ -304,7 +319,7 @@ public class GuardianBehavior : MonoBehaviour
         }
         else
         {
-            animator.SetTrigger("dormindo");
+            //animator.SetTrigger("dormindo");
             //AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
             Attacked = false;
             AttackTrigger.SetActive(false);
@@ -342,7 +357,7 @@ public class GuardianBehavior : MonoBehaviour
             TempoPular = 0;
             jumped = false;
             status = GuardianStatus.CheckPlayerDistance;
-            
+            animator.SetTrigger("dormindo");
         }
     }
 
@@ -352,10 +367,10 @@ public class GuardianBehavior : MonoBehaviour
         Look = false;
         TempoPularNoPlayer += Time.deltaTime;
 
-        if (TempoPularNoPlayer < tempoParaPularNoPlayer)/// do nothing while time to jump haven't pass yet
+        if (TempoPularNoPlayer <= tempoParaPularNoPlayer)/// do nothing while time to jump haven't pass yet
         {
             // animator.SetBool("AtaqueAntecipa", true);
-            
+            AlturaChao = gameObject.transform.position.y;
         }
         else
         {
@@ -386,7 +401,7 @@ public class GuardianBehavior : MonoBehaviour
         else
         {
             
-            miraAtaque = PlayerObj.transform.position;
+            miraAtaque = new Vector3 (PlayerObj.transform.position.x, AlturaChao);
         }
 
 
@@ -504,7 +519,7 @@ public class GuardianBehavior : MonoBehaviour
         }
         else
         {
-            cordenadaAlturaAtaque = new Vector3(PlayerObj.transform.position.x + distanciaAtaque, PlayerObj.transform.position.y + alturaAtaque, 0);
+            cordenadaAlturaAtaque = new Vector3(PlayerObj.transform.position.x + distanciaAtaque, this.transform.position.y + alturaAtaque, 0);
         }
         
     }
@@ -520,6 +535,8 @@ public class GuardianBehavior : MonoBehaviour
         Gizmos.DrawWireSphere(miraAtaque, .5f);
 
     }
+
+
 
 
     public void Gritar()
@@ -544,6 +561,11 @@ public class GuardianBehavior : MonoBehaviour
 
     }
 
+    public void Subida()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.SubidaGuardiao, transform.position);
+
+    }
 
 
 }

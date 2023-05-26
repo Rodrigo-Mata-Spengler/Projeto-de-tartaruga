@@ -14,6 +14,10 @@ public class StartBattle : MonoBehaviour
         {
             Wall.SetActive(true);
             Boss.enabled = true;
+
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            collision.gameObject.GetComponent<PlayerMovement>().enabled = false;
+
             this.gameObject.SetActive(false);
         }
 

@@ -68,6 +68,10 @@ public class Minhoca : MonoBehaviour
             InputFeedBack.SetActive(false);
             //disable HUD
             HUD.SetActive(false);
+
+
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
         if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false)
@@ -107,6 +111,7 @@ public class Minhoca : MonoBehaviour
             //CanvasMenuPause.panelOpen = false;
             Player.GetComponent<ItensInventory>().mapa = true;
             Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<Animator>().enabled = true;
             havingConversation = false;
             StopAllCoroutines();
 
