@@ -101,7 +101,7 @@ public class Ataque : MonoBehaviour
         }
         else if (collision.CompareTag("Planta") )
         {
-            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoPlanta, collision.transform.position);
             Detected = true;

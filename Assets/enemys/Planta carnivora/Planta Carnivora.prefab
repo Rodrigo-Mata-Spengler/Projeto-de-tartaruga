@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7800120659309537215}
   - component: {fileID: 5940777664989819160}
   - component: {fileID: 2031881540}
+  - component: {fileID: 7393565782270214387}
   m_Layer: 8
   m_Name: Colider Planta
   m_TagString: Planta
@@ -83,6 +84,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.3
+  ForceUp: 0
+  ForceRight: 0
+--- !u!50 &7393565782270214387
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332333154243101387}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1563758064290982738
 GameObject:
   m_ObjectHideFlags: 0
