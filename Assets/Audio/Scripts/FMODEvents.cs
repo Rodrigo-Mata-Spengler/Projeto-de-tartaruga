@@ -64,11 +64,14 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference FeedBackPincaCaranguejo { get; private set; }
 
     [field: Header("Guardiao SFX")]
-    [field: SerializeField] public EventReference AtaqueGuardiao { get; private set; }
+    [field: SerializeField] public EventReference Ataque1Guardiao { get; private set; }
+    [field: SerializeField] public EventReference Ataque2Guardiao { get; private set; }
+    [field: SerializeField] public EventReference AtaqueChão { get; private set; }
     [field: SerializeField] public EventReference FeedBackDanoGuardiao { get; private set; }
     [field: SerializeField] public EventReference DashGuardiao{ get; private set; }
     [field: SerializeField] public EventReference FalaGuardiao { get; private set; }
-    [field: SerializeField] public EventReference PuloGuardiao { get; private set; }
+    [field: SerializeField] public EventReference SubidaGuardiao { get; private set; }
+    [field: SerializeField] public EventReference DescidaGuardiao { get; private set; }
 
     [field: Header("ZumbiTurtle SFX")]
     [field: SerializeField] public EventReference AtaqueZombi { get; private set; }
