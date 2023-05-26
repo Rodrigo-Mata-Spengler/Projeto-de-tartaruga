@@ -305,7 +305,7 @@ public class GuardianBehavior : MonoBehaviour
         else
         {
             animator.SetTrigger("dormindo");
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
+            //AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueGuardiao, transform.position);
             Attacked = false;
             AttackTrigger.SetActive(false);
             tempoTonto = 0;
@@ -416,7 +416,7 @@ public class GuardianBehavior : MonoBehaviour
             {
                 rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
                 jumped = true;
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.PuloGuardiao, transform.position);
+               // AudioManager.instance.PlayOneShot(FMODEvents.instance.PuloGuardiao, transform.position);
               
             }
         }
@@ -527,6 +527,23 @@ public class GuardianBehavior : MonoBehaviour
         AudioManager.instance.PlayOneShot(FMODEvents.instance.FalaGuardiao, transform.position);
         
     }
+    public void Ataque1()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.Ataque1Guardiao, transform.position);
+
+    }
+    public void Ataque2()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.Ataque2Guardiao, transform.position);
+
+    }
+
+    public void Chão()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.AtaqueChão, transform.position);
+
+    }
+
 
 
 }
