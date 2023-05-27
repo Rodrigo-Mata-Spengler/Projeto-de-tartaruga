@@ -5,7 +5,7 @@
 			<value>Tentáculo Ataque</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2eca3bdc-1fcd-4bf3-a29d-0dc80bd6a946}</destination>
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{09c1b6f8-6909-4007-a71a-54b29f8062da}">
+		<property name="volume">
+			<value>-4</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{2955c584-02a8-4e80-9625-cee697206555}</destination>
 		</relationship>
@@ -84,7 +87,7 @@
 	</object>
 	<object class="MultiSound" id="{51b1b71d-ce7b-4a81-9269-bc782db86bf7}">
 		<relationship name="sounds">
-			<destination>{c8e919b6-14bf-4b72-b01e-889d0ad6cfee}</destination>
+			<destination>{8fbbd036-36c1-486d-a5f5-e13c05ee78ce}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{13d8bcbf-844c-43b0-9569-2b0a401be339}">
@@ -99,11 +102,22 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ac86403f-7397-4e47-a5c1-7ad0060a9c58}" />
-	<object class="SingleSound" id="{c8e919b6-14bf-4b72-b01e-889d0ad6cfee}">
-		<relationship name="audioFile">
-			<destination>{8f0fa1a4-1857-414e-a0eb-608b620d3281}</destination>
+	<object class="MultiSound" id="{8fbbd036-36c1-486d-a5f5-e13c05ee78ce}">
+		<relationship name="sounds">
+			<destination>{b86641b7-7c91-4db2-924d-6f5edc0b5304}</destination>
+			<destination>{41a218db-bb36-48cf-aa8f-8097936ff5c5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{656f5bc4-bc46-46fa-8f9e-877938ff699a}" />
 	<object class="MixerBusFader" id="{fd02146c-2f7f-4e41-be05-f819b8d31ace}" />
+	<object class="SingleSound" id="{b86641b7-7c91-4db2-924d-6f5edc0b5304}">
+		<relationship name="audioFile">
+			<destination>{8b8dff8e-5434-47dd-8b77-c3fdbc0b4abc}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{41a218db-bb36-48cf-aa8f-8097936ff5c5}">
+		<relationship name="audioFile">
+			<destination>{5574624b-6da3-4ede-8fdb-84511e6dbd10}</destination>
+		</relationship>
+	</object>
 </objects>
