@@ -25,6 +25,10 @@ public class SombraBehaviour : MonoBehaviour
     [Header("Cabeça Sombra")]
     [SerializeField] private Animator anim_corpo;
 
+    [Header("Grito")]
+    [SerializeField] private float tempo_Grito = 0;//tempo para a animação do grito acontecer
+    private float tempo_Para_Grito = 0;
+
     [Header("idle")]
     [SerializeField] private float tempoIdle = 0;//tempo de duração do idle
     private float tempoProximoIdle = 0;
@@ -214,6 +218,7 @@ public class SombraBehaviour : MonoBehaviour
         SetUpAtaque5();
         ShutDownAtaque5();
         SetUpAtaque6();
+        SetUpGrito();
         ataque1Atual = 0;
 
         vidaProximoGrito = vidaMaxima - vidaParaGrito;
@@ -246,6 +251,7 @@ public class SombraBehaviour : MonoBehaviour
                 Ataque6();
                 break;
             case SombraStatus.teste:
+                SetUpGrito();
                 SetUpIdle();
                 SetUpAtaque1();
                 esperaproximoAtaque1 = esperaAtaque1 + Time.time;
@@ -389,12 +395,20 @@ public class SombraBehaviour : MonoBehaviour
     //metodo para grito
     private void SetUpGrito()
     {
+        anim_corpo.ResetTrigger("Smobra_Grito");
 
+        tempo_Para_Grito = tempo_Grito + Time.time;
     }
 
     private void Grito()
     {
-        SombraBrain();
+        anim_corpo.SetTrigger("Smobra_Grito");
+        if (tempo_Para_Grito <= Time.time)
+        {
+            anim_corpo.ResetTrigger("Smobra_Grito");
+
+            SombraBrain();
+        }
     }
 
     //Metodos relacionados a idle

@@ -9,6 +9,10 @@ public class TituloBoss : MonoBehaviour
     [SerializeField]private TItuloRegiao titulo;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        titulo.Show(nome);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            titulo.Show(nome);
+        }
+        
     }
 }
