@@ -395,17 +395,18 @@ public class SombraBehaviour : MonoBehaviour
     //metodo para grito
     private void SetUpGrito()
     {
-        anim_corpo.ResetTrigger("Smobra_Grito");
+        anim_corpo.SetBool("Sombra_Grito", false);
 
         tempo_Para_Grito = tempo_Grito + Time.time;
     }
 
     private void Grito()
     {
-        anim_corpo.SetTrigger("Smobra_Grito");
+        anim_corpo.SetBool("Sombra_Grito", true);
+
         if (tempo_Para_Grito <= Time.time)
         {
-            anim_corpo.ResetTrigger("Smobra_Grito");
+            anim_corpo.SetBool("Sombra_Grito", false);
 
             SombraBrain();
         }
