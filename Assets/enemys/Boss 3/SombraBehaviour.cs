@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, grito,teste, desativado, ativado};
+enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, grito, acordar,teste, desativado, ativado};
 enum DirecaoAtaque { direita, esquerda, none};
 public class SombraBehaviour : MonoBehaviour
 {
@@ -24,6 +24,12 @@ public class SombraBehaviour : MonoBehaviour
 
     [Header("Cabeça Sombra")]
     [SerializeField] private Animator anim_corpo;
+
+    [Header("Acordar")]
+    [SerializeField] private float tempo_fadeOut = 0;//fade out para aprensentar sombra ao player
+    private float tempo_Para_FadeOut = 0;
+    [SerializeField] private float velocidade_FadeOut = 0;
+    [SerializeField] private SpriteRenderer renderer_acordar;
 
     [Header("Grito")]
     [SerializeField] private float tempo_Grito = 0;//tempo para a animação do grito acontecer
@@ -207,6 +213,8 @@ public class SombraBehaviour : MonoBehaviour
     //Metodos gerais da Sombra
     private void Awake()
     {
+        SetUpAcordar();
+
         VidaBossSombra.vidaAtual = vidaMaxima;
     }
     private void Start()
@@ -270,6 +278,9 @@ public class SombraBehaviour : MonoBehaviour
             case SombraStatus.grito:
                 //a cada 1/6 de vida o boss da um grito de dor
                 Grito();
+                break;
+            case SombraStatus.acordar:
+                Acordar();
                 break;
         }
     }
@@ -388,11 +399,31 @@ public class SombraBehaviour : MonoBehaviour
 
         GetComponent<BoxCollider2D>().enabled = false;
 
-        SombraBrain();
+        SetUpAcordar();
+        status = SombraStatus.acordar;
 
     }
 
-    //metodo para grito
+    //Metodos para acordar
+    private void SetUpAcordar()
+    {
+        tempo_Para_FadeOut = tempo_fadeOut + Time.time;
+
+        renderer_acordar.color = new Color(0,0,0,255);
+    }
+    private void Acordar()
+    {
+        renderer_acordar.color = new Color(0, 0, 0, Mathf.Lerp(renderer_acordar.color.a, 0, velocidade_FadeOut * Time.deltaTime));
+
+        if(tempo_Para_FadeOut <= Time.time)
+        {
+            SetUpGrito();
+
+            status = SombraStatus.grito;
+        }
+    }
+
+    //Metodo para grito
     private void SetUpGrito()
     {
         anim_corpo.SetBool("Sombra_Grito", false);

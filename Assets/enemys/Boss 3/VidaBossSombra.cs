@@ -18,13 +18,13 @@ public class VidaBossSombra : MonoBehaviour
     }
     public static void TomarDano(float Dano)
     {
-        if (Dano-vidaAtual <= 0)
+        if ((vidaAtual - Dano) <= 0)
         {
             Morreu();
         }
         else
         {
-            vidaAtual = Dano - vidaAtual;
+            vidaAtual = vidaAtual - Dano;
         }
     }
 
