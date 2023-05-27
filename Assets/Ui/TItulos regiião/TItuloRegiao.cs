@@ -174,7 +174,7 @@ public class TItuloRegiao : MonoBehaviour
         }
     }
 
-    private void Show(string nomeDisplay)
+    public void Show(string nomeDisplay)
     {
         text.text = nomeDisplay;
         anim.SetTrigger("Mostra");
