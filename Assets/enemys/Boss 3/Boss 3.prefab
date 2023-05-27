@@ -665,7 +665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675842064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 14.330001, z: 0}
+  m_LocalPosition: {x: 0, y: 11.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -764,7 +764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736810463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -847,7 +847,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 12, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1801,7 +1801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571117634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2906,7 +2906,8 @@ MonoBehaviour:
   playerTag: Player
   status: 8
   vidaMaxima: 1500
-  livreArbitrio: 0
+  vidaParaGrito: 250
+  livreArbitrio: 1
   quantidadeAtaques: 3
   anim_corpo: {fileID: 7083902968262013102}
   tempoIdle: 5
@@ -2956,13 +2957,13 @@ MonoBehaviour:
   posfinalPinca7: {x: -132.33829, y: 231.29231, z: 0}
   Onda1: {fileID: 675842064}
   posInicialOnda1: {x: -132.33829, y: 238.46231, z: 0}
-  posIntermediariaOnda1: {x: -132.33829, y: 222.9423, z: 0}
-  posfinalOnda1: {x: -152.4383, y: 222.9423, z: 0}
+  posIntermediariaOnda1: {x: -132.33829, y: 223, z: 0}
+  posfinalOnda1: {x: -152.4383, y: 223, z: 0}
   anim_Onda1: {fileID: 1779488341940029482}
   Onda2: {fileID: 1437460786}
   posInicialOnda2: {x: -132.33829, y: 238.46231, z: 0}
-  posIntermediariaOnda2: {x: -132.33829, y: 222.9423, z: 0}
-  posfinalOnda2: {x: -108.33829, y: 222.9423, z: 0}
+  posIntermediariaOnda2: {x: -132.33829, y: 223, z: 0}
+  posfinalOnda2: {x: -108.33829, y: 223, z: 0}
   anim_Onda2: {fileID: 4578270362235174619}
   velocidadeAtaque4: 15
   velocidadeOndaAtaque4: 10

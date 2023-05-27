@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, teste, desativado, ativado};
+enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, grito,teste, desativado, ativado};
 enum DirecaoAtaque { direita, esquerda, none};
 public class SombraBehaviour : MonoBehaviour
 {
@@ -13,6 +13,8 @@ public class SombraBehaviour : MonoBehaviour
     [Header("Status")]
     [SerializeField] private SombraStatus status = SombraStatus.desativado; //mostra o status da sombra atual
     [SerializeField] private float vidaMaxima;
+    [SerializeField] private float vidaParaGrito = 0;
+    private float vidaProximoGrito = 0;
 
     [Header("Sombra Brain")]
     [SerializeField] private bool livreArbitrio = true;//defini se a sombra pode ou não fazer suas próprias desisões 
@@ -214,6 +216,8 @@ public class SombraBehaviour : MonoBehaviour
         SetUpAtaque6();
         ataque1Atual = 0;
 
+        vidaProximoGrito = vidaMaxima - vidaParaGrito;
+
         status = SombraStatus.desativado;
     }
     private void Update()
@@ -257,6 +261,10 @@ public class SombraBehaviour : MonoBehaviour
             case SombraStatus.ativado:
                 ativado();
                 break;
+            case SombraStatus.grito:
+                //a cada 1/6 de vida o boss da um grito de dor
+                Grito();
+                break;
         }
     }
 
@@ -271,7 +279,6 @@ public class SombraBehaviour : MonoBehaviour
 
     private void SombraBrain()
     {
-
         if (livreArbitrio)
         {
             if (ataquesAtual > quantidadeAtaques)
@@ -279,12 +286,16 @@ public class SombraBehaviour : MonoBehaviour
                 ataque = 6;
                 ataquesAtual = 0;
             }
+            else if(VidaBossSombra.vidaAtual <= vidaProximoGrito){
+                vidaProximoGrito = VidaBossSombra.vidaAtual - vidaParaGrito;
+                ataque = 7;
+            }
             else
             {
                 ataque = Random.Range(0, 6);
                 ataquesAtual++;
             }
-            
+
             switch (ataque)
             {
                 case 0:
@@ -315,6 +326,10 @@ public class SombraBehaviour : MonoBehaviour
                 case 6:
                     SetUpAtaque6();
                     status = SombraStatus.ataque6;
+                    break;
+                case 7:
+                    SetUpGrito();
+                    status = SombraStatus.grito;
                     break;
             }
         }
@@ -371,6 +386,17 @@ public class SombraBehaviour : MonoBehaviour
 
     }
 
+    //metodo para grito
+    private void SetUpGrito()
+    {
+
+    }
+
+    private void Grito()
+    {
+        SombraBrain();
+    }
+
     //Metodos relacionados a idle
     private void SetUpIdle() //Prepara o tempo do idle
     {
@@ -424,6 +450,7 @@ public class SombraBehaviour : MonoBehaviour
             else
             {
                 Pinca1AtaqueSobe();
+
                 SombraBrain();
             }
         }
@@ -850,6 +877,7 @@ public class SombraBehaviour : MonoBehaviour
                 animTentaculo7.ResetTrigger("Desce");
 
                 ShutDownAtaque5();
+
                 SombraBrain();
             }
         }
@@ -910,6 +938,7 @@ public class SombraBehaviour : MonoBehaviour
                 anim_ataque6.SetTrigger("reset");
                 anim_ataque6.ResetTrigger("atacando");
                 anim_ataque6.ResetTrigger("reset");
+
                 SombraBrain();
             }
             
