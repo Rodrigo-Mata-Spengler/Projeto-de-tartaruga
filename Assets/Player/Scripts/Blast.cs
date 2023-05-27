@@ -46,6 +46,6 @@ public class Blast : MonoBehaviour
     {
         Instantiate(BlastPrefab, ShootPoint.position, ShootPoint.rotation);
         estaminaScript.Damage(EstaminaDamage);
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.Blast, transform.position);
+        //AudioManager.instance.PlayOneShot(FMODEvents.instance.Blast, transform.position);
     }
 }
