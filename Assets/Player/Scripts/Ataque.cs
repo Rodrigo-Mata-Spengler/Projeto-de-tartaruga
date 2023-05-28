@@ -77,7 +77,7 @@ public class Ataque : MonoBehaviour
 
         if (collision.CompareTag("Zombi"))
         {
-
+            collision.transform.GetComponent<EnemyHitFeedback>().Direction = gameObject.transform.right;
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoZombi, collision.transform.position);
@@ -85,7 +85,7 @@ public class Ataque : MonoBehaviour
         }
         else if (collision.CompareTag("Guardiao") )
         {
-            
+            collision.transform.GetComponent<EnemyHitFeedback>().Direction = gameObject.transform.right;
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<GuardiaoHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoGuardiao, collision.transform.position);
@@ -94,6 +94,7 @@ public class Ataque : MonoBehaviour
         else if (collision.CompareTag("Mosca") )
         {
             //collision.transform.GetComponent<Rigidbody2D>().AddForce(this.transform.right * EnemyimpulseForce);
+            collision.transform.GetComponent<EnemyHitFeedback>().Direction = gameObject.transform.right;
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoMosca, collision.transform.position);
@@ -101,13 +102,15 @@ public class Ataque : MonoBehaviour
         }
         else if (collision.CompareTag("Planta") )
         {
-            //collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
+            collision.transform.GetComponent<EnemyHitFeedback>().Direction = gameObject.transform.right;
+            collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoPlanta, collision.transform.position);
             Detected = true;
         }
         else if (collision.CompareTag("Caranguejo"))
         {
+            collision.transform.GetComponent<EnemyHitFeedback>().Direction = gameObject.transform.right;
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoCaranguejo, collision.transform.position);
@@ -115,6 +118,7 @@ public class Ataque : MonoBehaviour
         }
         else if (collision.CompareTag("ourico"))
         {
+            collision.transform.GetComponent<EnemyHitFeedback>().Direction = gameObject.transform.right;
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
             collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
             //AudioManager.instance.PlayOneShot(FMODEvents.instance., collision.transform.position);

@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossBehaviourScript: {fileID: 5287758271197617117}
+  Wall: {fileID: 0}
 --- !u!1 &1426845998
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boss: {fileID: 5287758271197617117}
+  Wall: {fileID: 0}
 --- !u!61 &1426846000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -277,8 +279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd21a0bea53b0449ad398558799b77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TridenteFlutuando: {fileID: 0}
+  Wall: {fileID: 0}
   tempoInicialDelay: 1.1
   tempoDecorridoInicial: 0
+  animator: {fileID: 0}
   status: 5
   StartFight: 0
   PlayerClose: 0
@@ -320,6 +325,8 @@ MonoBehaviour:
       m_Calls: []
   tempoTonto: 0
   TempoEsperaTonto: 3
+  awake: 0
+  DoOnce: 0
 --- !u!114 &5287758271197617120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyTag: 7
-  MaxHealth: 800
+  MaxHealth: 500
   currentHealth: 0
   DropItemPoint: {fileID: 0}
   ItensPrefabs: []
@@ -352,7 +359,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wasHit: 0
   secondsToDisable: 0.1
-  HitEffect: {fileID: 0}
+  ForceUp: 0
+  ForceRight: 0
 --- !u!95 &3612900398682192771
 Animator:
   serializedVersion: 5

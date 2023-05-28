@@ -16,4 +16,14 @@ public class ItemForce : MonoBehaviour
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(3f, forceY);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+
+    }
 }

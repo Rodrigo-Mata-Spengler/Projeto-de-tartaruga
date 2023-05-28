@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 665321756}
   - component: {fileID: 6565754116776033972}
   - component: {fileID: 6134558014479816440}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: AtaqueUpHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 1386716083}
   - component: {fileID: 2402718334223444697}
   - component: {fileID: 103912923152717056}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: AtaqueDownHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 2001907971}
   - component: {fileID: 5304235042762577062}
   - component: {fileID: 5436229156012946483}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: AtaqueHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,6 +580,37 @@ VFXRenderer:
   m_SortingLayerID: -1888708261
   m_SortingLayer: 5
   m_SortingOrder: 10
+--- !u!1 &671605485646300401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6006240260735578313}
+  m_Layer: 3
+  m_Name: WallCheckForDash 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6006240260735578313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671605485646300401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.104, y: -0.303, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6748649182909457861}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211774907847006289
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890473164549547493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.104, y: 0.78, z: 0}
+  m_LocalPosition: {x: 0.104, y: 0.917, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1171,6 +1202,8 @@ Transform:
   - {fileID: 1050511281766131322}
   - {fileID: 1741756884555963385}
   - {fileID: 2270701344110261645}
+  - {fileID: 8765519372832756544}
+  - {fileID: 6006240260735578313}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1331,6 +1364,8 @@ MonoBehaviour:
   WallChecksDash:
   - {fileID: 1741756884555963385}
   - {fileID: 2270701344110261645}
+  - {fileID: 8765519372832756544}
+  - {fileID: 6006240260735578313}
 --- !u!95 &1622245420
 Animator:
   serializedVersion: 5
@@ -1397,8 +1432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959a9c8d7489f6247a357a8057351a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 5
-  currentLife: 5
+  maxLife: 3
+  currentLife: 3
   HealthSlider: {fileID: 0}
   haveArmor: 0
   DoDamage: 0
@@ -1683,6 +1718,37 @@ Transform:
   m_Father: {fileID: 6748649182909457861}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7060577433763580998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8765519372832756544}
+  m_Layer: 3
+  m_Name: WallCheckForDash 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8765519372832756544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060577433763580998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.104, y: 0.224, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6748649182909457861}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8455527499433592249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +1889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9021302537262335442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.104, y: -0.805, z: 0}
+  m_LocalPosition: {x: 0.104, y: -0.853, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

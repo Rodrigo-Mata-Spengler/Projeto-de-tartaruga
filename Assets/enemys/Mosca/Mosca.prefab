@@ -204,10 +204,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AddForce: 1
   wasHit: 0
   secondsToDisable: 0
   ForceUp: 0
   ForceRight: 0
+  Direction: {x: 0, y: 0}
 --- !u!1 &1595973581
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +306,7 @@ VisualEffect:
       - m_Value: {x: 0.011792451, y: 0.41225052, z: 0.5, w: 1}
         m_Name: color1.2
         m_Overridden: 1
-      - m_Value: {x: 0.4647104, y: 6.8856816, z: 0, w: 0.59607846}
+      - m_Value: {x: 7.198234, y: 3.6330712, z: 3.6330712, w: 0.59607846}
         m_Name: folinha
         m_Overridden: 1
     m_Uint:
@@ -516,10 +518,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AddForce: 0
   wasHit: 0
   secondsToDisable: 0.3
   ForceUp: 0
   ForceRight: 0
+  Direction: {x: 0, y: 0}
 --- !u!1 &7090008906603646382
 GameObject:
   m_ObjectHideFlags: 0

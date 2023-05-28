@@ -203,8 +203,10 @@ public class PlayerMovement : MonoBehaviour
 
         RaycastHit2D hitWallTop = Physics2D.Raycast(WallChecksDash[0].position, transform.right, 7, WhatIsGround);
         RaycastHit2D hitWallDown = Physics2D.Raycast(WallChecksDash[1].position, transform.right, 7, WhatIsGround);
+        RaycastHit2D hitWallCenter1 = Physics2D.Raycast(WallChecksDash[2].position, transform.right, 7, WhatIsGround);
+        RaycastHit2D hitWallCenter2 = Physics2D.Raycast(WallChecksDash[3].position, transform.right, 7, WhatIsGround);
 
-        if (hitWallTop.collider != null || hitWallDown.collider != null)
+        if (hitWallTop.collider != null || hitWallDown.collider != null || hitWallCenter1.collider != null|| hitWallCenter2.collider != null)
         {
             float distance = Mathf.Abs(hitWallDown.point.x - transform.position.x);
             gameObject.GetComponent<Dash>().m_DashDist = (distance - 0.5f);
