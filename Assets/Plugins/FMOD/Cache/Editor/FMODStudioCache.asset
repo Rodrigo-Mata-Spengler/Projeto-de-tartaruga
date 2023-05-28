@@ -42,38 +42,11 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Tocha.bank
   Name: Tocha
   StudioPath: bank:/Tocha
-  lastModified: 638200822572097748
+  lastModified: 638197627325393202
   FileSizes:
   - Name: Desktop
     Value: 683520
   Exists: 1
---- !u!114 &-8767740370344900704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Ataque Bra\xE7o"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Ataque Bra\xE7o"
-  Guid:
-    Data1: -527839649
-    Data2: 1151023713
-    Data3: 1424619394
-    Data4: -527365827
-  Banks:
-  - {fileID: 7424298038131044863}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8617423351322670671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +62,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Introdu\xE7\xE3o.bank"
   Name: "Introdu\xE7\xE3o"
   StudioPath: "bank:/Introdu\xE7\xE3o"
-  lastModified: 638207828048731952
+  lastModified: 638206312182783921
   FileSizes:
   - Name: Desktop
     Value: 962464
@@ -121,6 +94,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8218237623420787317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sombra/Ataque Garra/Golpe Garra
+  m_EditorClassIdentifier: 
+  Path: event:/Sombra/Ataque Garra/Golpe Garra
+  Guid:
+    Data1: 927856909
+    Data2: 1332213415
+    Data3: -533534838
+    Data4: -768269986
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8203484357986439593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638196667362312769
+  lastModified: 638204751776847090
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -237,11 +237,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Mosca.bank
   Name: Mosca
   StudioPath: bank:/Mosca
-  lastModified: 638194827318331665
+  lastModified: 638192370435427781
   FileSizes:
   - Name: Desktop
     Value: 1680768
   Exists: 1
+--- !u!114 &-7799460768505569495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra"
+  Guid:
+    Data1: -756017764
+    Data2: 1195339333
+    Data3: -546555755
+    Data4: 235229679
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7633605199404510735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +284,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Estalactite.bank
   Name: Estalactite
   StudioPath: bank:/Estalactite
-  lastModified: 638192205933543422
+  lastModified: 638191418822681555
   FileSizes:
   - Name: Desktop
     Value: 12096
@@ -571,7 +598,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Guardi\xE3o.bank"
   Name: "Guardi\xE3o"
   StudioPath: "bank:/Guardi\xE3o"
-  lastModified: 638207828048692058
+  lastModified: 638207068723678236
   FileSizes:
   - Name: Desktop
     Value: 252864
@@ -699,10 +726,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638207828048731952
+  lastModified: 638208718871268228
   FileSizes:
   - Name: Desktop
-    Value: 5988
+    Value: 6252
   Exists: 1
 --- !u!114 &-4878137018501127185
 MonoBehaviour:
@@ -719,7 +746,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Dialogo.bank
   Name: Dialogo
   StudioPath: bank:/Dialogo
-  lastModified: 638205187632050750
+  lastModified: 638204751745292650
   FileSizes:
   - Name: Desktop
     Value: 5376
@@ -874,7 +901,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Recurso Coletado.bank
   Name: Recurso Coletado
   StudioPath: bank:/Recurso Coletado
-  lastModified: 638192205934643140
+  lastModified: 638191418829168273
   FileSizes:
   - Name: Desktop
     Value: 21760
@@ -1083,11 +1110,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Ferreiro.bank
   Name: Ferreiro
   StudioPath: bank:/Ferreiro
-  lastModified: 638200822571259970
+  lastModified: 638197677951446528
   FileSizes:
   - Name: Desktop
     Value: 41408
   Exists: 1
+--- !u!114 &-1509904894945460037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Garras M\xFAltiplas/Garra M\xFAltipla"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Garras M\xFAltiplas/Garra M\xFAltipla"
+  Guid:
+    Data1: -409991302
+    Data2: 1238557372
+    Data3: -1914026584
+    Data4: 1946379737
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1377398051893091558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,7 +1157,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Puzzles.bank
   Name: Puzzles
   StudioPath: bank:/Puzzles
-  lastModified: 638205187633097948
+  lastModified: 638204751783040358
   FileSizes:
   - Name: Desktop
     Value: 64608
@@ -1216,6 +1270,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-768061421938441447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o/Antecipa\xE7\xE3o Esquerda"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o/Antecipa\xE7\xE3o Esquerda"
+  Guid:
+    Data1: 186209465
+    Data2: 1219338908
+    Data3: 920175521
+    Data4: -61183808
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-664049590731879183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1258,38 +1339,11 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Compra.bank
   Name: Compra
   StudioPath: bank:/Compra
-  lastModified: 638192205933523481
+  lastModified: 638191418822155659
   FileSizes:
   - Name: Desktop
     Value: 8352
   Exists: 1
---- !u!114 &-656672833102881873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sombra/Ataque Garra
-  m_EditorClassIdentifier: 
-  Path: event:/Sombra/Ataque Garra
-  Guid:
-    Data1: -1018165390
-    Data2: 1195841987
-    Data3: 41193625
-    Data4: 1883415812
-  Banks:
-  - {fileID: 7424298038131044863}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-544797475202849791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,15 +1469,10 @@ MonoBehaviour:
   - {fileID: -1054126221110739305}
   - {fileID: -5689257817365727975}
   - {fileID: 5291132521556099881}
-  - {fileID: 2213111297980258718}
-  - {fileID: 2980166738323566348}
   - {fileID: 190900324589402369}
   - {fileID: -917204810447550681}
-  - {fileID: -8767740370344900704}
-  - {fileID: -656672833102881873}
   - {fileID: 3840108469515287871}
   - {fileID: -6131659792627149090}
-  - {fileID: 2385261942353169707}
   - {fileID: 3184758442173600029}
   - {fileID: -7383394116604165740}
   - {fileID: -6813563544699161203}
@@ -1439,12 +1488,20 @@ MonoBehaviour:
   - {fileID: -7430612704775213403}
   - {fileID: 8867280018728905975}
   - {fileID: -8090160272118040832}
+  - {fileID: -8218237623420787317}
+  - {fileID: 946712926249269888}
+  - {fileID: 1453084121633587148}
+  - {fileID: -1509904894945460037}
+  - {fileID: -7799460768505569495}
+  - {fileID: 4935506788662710809}
+  - {fileID: -768061421938441447}
+  - {fileID: 8455572285920768795}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8203484357986439593}
   StringsBanks:
   - {fileID: -4994956805024338359}
-  cacheTime: 638207828048761869
+  cacheTime: 638208718871320237
   cacheVersion: 131603
 --- !u!114 &190900324589402369
 MonoBehaviour:
@@ -1596,7 +1653,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Interface.bank
   Name: Interface
   StudioPath: bank:/Interface
-  lastModified: 638192205933613482
+  lastModified: 638191418824932812
   FileSizes:
   - Name: Desktop
     Value: 23712
@@ -1709,6 +1766,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &946712926249269888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o Duplo/Antecipa\xE7\xE3o Direita"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o Duplo/Antecipa\xE7\xE3o Direita"
+  Guid:
+    Data1: -496760548
+    Data2: 1101404831
+    Data3: 2027493795
+    Data4: 1630042757
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1135246934001241550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,7 +1835,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638207828048751898
+  lastModified: 638207175904303847
   FileSizes:
   - Name: Desktop
     Value: 146400
@@ -1837,6 +1921,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1453084121633587148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Explosivo/Explos\xE3o"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Explosivo/Explos\xE3o"
+  Guid:
+    Data1: 705512515
+    Data2: 1231260718
+    Data3: -105013358
+    Data4: -1622255234
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1628396157517403525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,38 +2017,11 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Zumbi Tartaruga.bank
   Name: Zumbi Tartaruga
   StudioPath: bank:/Zumbi Tartaruga
-  lastModified: 638196667364048138
+  lastModified: 638194348212831122
   FileSizes:
   - Name: Desktop
     Value: 293504
   Exists: 1
---- !u!114 &2213111297980258718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sombra/Ataque Explosivo
-  m_EditorClassIdentifier: 
-  Path: event:/Sombra/Ataque Explosivo
-  Guid:
-    Data1: -908479726
-    Data2: 1153351320
-    Data3: -94191974
-    Data4: -303911811
-  Banks:
-  - {fileID: 7424298038131044863}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &2251870157715134583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1965,33 +2049,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 68545
---- !u!114 &2385261942353169707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Ataque Bra\xE7o Duplo"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Ataque Bra\xE7o Duplo"
-  Guid:
-    Data1: 2106790888
-    Data2: 1210928402
-    Data3: -615455328
-    Data4: 952520560
-  Banks:
-  - {fileID: 7424298038131044863}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &2385955660420348410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2007,7 +2064,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Bruxa.bank
   Name: Bruxa
   StudioPath: bank:/Bruxa
-  lastModified: 638192205933503526
+  lastModified: 638191648059476403
   FileSizes:
   - Name: Desktop
     Value: 253056
@@ -2027,7 +2084,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Ouri\xE7o.bank"
   Name: "Ouri\xE7o"
   StudioPath: "bank:/Ouri\xE7o"
-  lastModified: 638192205934313404
+  lastModified: 638191418826930670
   FileSizes:
   - Name: Desktop
     Value: 15840
@@ -2052,33 +2109,6 @@ MonoBehaviour:
     Data4: -1252521537
   Banks:
   - {fileID: 6694923835231294438}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2980166738323566348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sombra/Ataque Garras Multiplas
-  m_EditorClassIdentifier: 
-  Path: event:/Sombra/Ataque Garras Multiplas
-  Guid:
-    Data1: -542367167
-    Data2: 1219397287
-    Data3: 206542982
-    Data4: -993725423
-  Banks:
-  - {fileID: 7424298038131044863}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2263,11 +2293,38 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Save.bank
   Name: Save
   StudioPath: bank:/Save
-  lastModified: 638192205934673060
+  lastModified: 638191418830286873
   FileSizes:
   - Name: Desktop
     Value: 55424
   Exists: 1
+--- !u!114 &4935506788662710809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Garra/Antecipa\xE7\xE3o Garra"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Garra/Antecipa\xE7\xE3o Garra"
+  Guid:
+    Data1: -1859667274
+    Data2: 1264424180
+    Data3: -2075815775
+    Data4: 331445830
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5019335369251206797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2419,7 +2476,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Planta Carnviora.bank
   Name: Planta Carnviora
   StudioPath: bank:/Planta Carnviora
-  lastModified: 638200822572017944
+  lastModified: 638197667284120537
   FileSizes:
   - Name: Desktop
     Value: 68704
@@ -2493,7 +2550,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/M\xFAsicas.bank"
   Name: "M\xFAsicas"
   StudioPath: "bank:/M\xFAsicas"
-  lastModified: 638205187633058054
+  lastModified: 638204751778539382
   FileSizes:
   - Name: Desktop
     Value: 10466240
@@ -2540,7 +2597,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Caranguejo.bank
   Name: Caranguejo
   StudioPath: bank:/Caranguejo
-  lastModified: 638192205933513499
+  lastModified: 638191418821722392
   FileSizes:
   - Name: Desktop
     Value: 33440
@@ -2560,7 +2617,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Saco de Pancada.bank
   Name: Saco de Pancada
   StudioPath: bank:/Saco de Pancada
-  lastModified: 638192205934653114
+  lastModified: 638191418829990889
   FileSizes:
   - Name: Desktop
     Value: 16416
@@ -2580,7 +2637,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Praia.bank
   Name: Praia
   StudioPath: bank:/Praia
-  lastModified: 638192205934613222
+  lastModified: 638191418828254872
   FileSizes:
   - Name: Desktop
     Value: 1087936
@@ -2627,10 +2684,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Sombra.bank
   Name: Sombra
   StudioPath: bank:/Sombra
-  lastModified: 638207828048761869
+  lastModified: 638208718871320237
   FileSizes:
   - Name: Desktop
-    Value: 315456
+    Value: 295808
   Exists: 1
 --- !u!114 &7559114845393131453
 MonoBehaviour:
@@ -2812,7 +2869,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Fazendeiro.bank
   Name: Fazendeiro
   StudioPath: bank:/Fazendeiro
-  lastModified: 638192205933553395
+  lastModified: 638191418823344766
   FileSizes:
   - Name: Desktop
     Value: 21568
@@ -2844,6 +2901,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1839
+--- !u!114 &8455572285920768795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Explosivo/Antecipa\xE7\xE3o Soco"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Explosivo/Antecipa\xE7\xE3o Soco"
+  Guid:
+    Data1: 2078182118
+    Data2: 1318375365
+    Data3: 1632257416
+    Data4: 243998730
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8559961751166289387
 MonoBehaviour:
   m_ObjectHideFlags: 0

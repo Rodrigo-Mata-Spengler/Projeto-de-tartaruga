@@ -343,7 +343,7 @@ public class PlayerMovement : MonoBehaviour
             AtaqueHitBox.SetActive(true);
 
             StartCoroutine(AttackTime(AttackTimeAmount, AtaqueHitBox));
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
+            
 
         }
         //enables the up hitBox
@@ -354,7 +354,7 @@ public class PlayerMovement : MonoBehaviour
 
             AtaqueUpHitBox.SetActive(true);
             StartCoroutine(AttackTime(AttackTimeAmount, AtaqueUpHitBox));
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
+            
 
 
         }
@@ -366,6 +366,15 @@ public class PlayerMovement : MonoBehaviour
             AtaqueDownHitBox.SetActive(true);
             StartCoroutine(AttackTime(AttackTimeAmount, AtaqueDownHitBox));
 
+            
+        }
+
+        if (HaveMagicTrident)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSoundWater, this.transform.position);
+        }
+        else
+        {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
         }
         

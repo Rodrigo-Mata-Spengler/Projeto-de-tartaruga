@@ -19,8 +19,11 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference PlayerFootstep { get; private set; }
     [field: SerializeField] public EventReference AttackSound { get; private set; }
+    [field: SerializeField] public EventReference AttackSoundWater { get; private set; }
     [field: SerializeField] public EventReference DamageFeedback { get; private set; }
     [field: SerializeField] public EventReference Dash { get; private set; }
+
+    [field: SerializeField] public EventReference Blast { get; private set; }
     [field: SerializeField] public EventReference Jump { get; private set; }
     [field: SerializeField] public EventReference Fall { get; private set; }
     [field: SerializeField] public EventReference ItemGrab { get; private set; }
