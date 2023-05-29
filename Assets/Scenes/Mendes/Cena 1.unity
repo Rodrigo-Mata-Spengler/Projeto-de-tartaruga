@@ -63103,6 +63103,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6748649182909457866, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: WallSlideSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748649182909457866, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: WallCheckDistance
+      value: 0.58
+      objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457867, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_CrouchDisableCollider
       value: 
@@ -68287,7 +68295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.605988
+      value: 50.608
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
