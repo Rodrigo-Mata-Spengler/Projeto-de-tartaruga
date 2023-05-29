@@ -63,6 +63,11 @@ public class CarangueijoBehaviour : MonoBehaviour
                 RayHitAnim();
                 break;
         }
+
+        if (GetComponent<EnemyHealth>().currentHealth <= 0)
+        {
+            anim.SetTrigger("Morte");
+        }
     }
 
     //Controla a animação
