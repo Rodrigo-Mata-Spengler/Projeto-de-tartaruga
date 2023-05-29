@@ -1,9 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
-
-public class LevelChanger : MonoBehaviour
+public class LevelChangereIntera : MonoBehaviour
 {
     [SerializeField] private Conections conetion;
 
@@ -31,7 +31,7 @@ public class LevelChanger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (Input.GetButton("Interacao"))
         {
             StartCoroutine(LoadLevel(targetSceneName));
         }
@@ -46,7 +46,6 @@ public class LevelChanger : MonoBehaviour
         yield return new WaitForSeconds(transisionTime);
 
         SceneManager.LoadScene(cena);
-        
-    }
 
+    }
 }
