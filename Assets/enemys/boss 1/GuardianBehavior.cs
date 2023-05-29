@@ -164,7 +164,7 @@ public class GuardianBehavior : MonoBehaviour
             terminou = true;
             SaveSystem.SavePlayer(PlayerObj);
             Iconesalvando.Mostraricone();
-            
+            animator.SetTrigger("morte");
         }
 
     }
@@ -198,8 +198,6 @@ public class GuardianBehavior : MonoBehaviour
         TridenteFlutuando.SetActive(true);
         Wall.GetComponent<Animator>().SetBool("abrindo", true);
         Wall.GetComponent<BoxCollider2D>().enabled = false;
-   
-       
     }
 
     private void PlayerDistance()

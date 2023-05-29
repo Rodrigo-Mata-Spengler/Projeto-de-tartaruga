@@ -53,6 +53,11 @@ public class PlantaCarnivora : MonoBehaviour
                 PlantaAtaque();
                 break;
         }
+
+        if (GetComponent<EnemyHealth>().currentHealth <= 0)
+        {
+            anim.SetTrigger("morte");
+        }
     }
 
     //procura pelo player

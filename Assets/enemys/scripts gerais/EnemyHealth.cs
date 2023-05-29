@@ -57,6 +57,7 @@ public class EnemyHealth : MonoBehaviour
                 case EnemyTag.Zombi:
                     itemDropNumber = Random.Range(0, ItensPrefabs.Length);
                     DropItem(ItensPrefabs[itemDropNumber]);
+                    GetComponent<Animator>().SetTrigger("Morte");
                     AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackMorteZombi, this.transform.position);
                     break;
 
