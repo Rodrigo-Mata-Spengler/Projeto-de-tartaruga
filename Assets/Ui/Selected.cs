@@ -8,6 +8,8 @@ public class Selected : MonoBehaviour, ISelectHandler, IDeselectHandler
     public Item itemScript;
 
     //Do this when the selectable UI object is selected.
+
+   
     public void OnSelect(BaseEventData eventData)
     {
         Debug.Log(this.gameObject.name + " was selected");

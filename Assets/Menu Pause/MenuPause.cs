@@ -66,7 +66,7 @@ public class MenuPause : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown(KeyCode.Escape) && mortePanel == false)
+        if (Input.GetButtonDown("escape") && mortePanel == false)
         {
             MapButtonInventario.SetActive(true);SisPause(pausePanel);
             ///clear selected object

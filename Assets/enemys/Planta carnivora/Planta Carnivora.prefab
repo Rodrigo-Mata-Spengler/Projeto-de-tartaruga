@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4557233542810772415}
   - component: {fileID: 7800120659309537215}
   - component: {fileID: 5940777664989819160}
-  - component: {fileID: 2031881540}
   - component: {fileID: 7393565782270214387}
   m_Layer: 8
   m_Name: Colider Planta
@@ -70,22 +69,6 @@ MonoBehaviour:
   ItensPrefabs:
   - {fileID: 4448061109165272105, guid: 403d4decb27133942a068f68115a1376, type: 3}
   TimeToDestroyDelay: 0.15
---- !u!114 &2031881540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332333154243101387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wasHit: 0
-  secondsToDisable: 0.3
-  ForceUp: 0
-  ForceRight: 0
 --- !u!50 &7393565782270214387
 Rigidbody2D:
   serializedVersion: 4
@@ -352,6 +335,7 @@ GameObject:
   - component: {fileID: 1161638651053236726}
   - component: {fileID: 918626742}
   - component: {fileID: 2730510994692931171}
+  - component: {fileID: 1674983170}
   m_Layer: 8
   m_Name: Planta Carnivora
   m_TagString: Planta
@@ -488,3 +472,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1674983170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5940777665832931492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5545c1c0e078e4cad50392282ff6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddForce: 0
+  wasHit: 0
+  secondsToDisable: 0.3
+  ForceUp: 0
+  ForceRight: 0
+  Direction: {x: 0, y: 0}
