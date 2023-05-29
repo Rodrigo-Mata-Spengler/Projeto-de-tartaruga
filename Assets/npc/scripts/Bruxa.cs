@@ -17,10 +17,15 @@ public class Bruxa : MonoBehaviour
     [TextAreaAttribute] //give more space to write
     [SerializeField] private string[] NpcWords;// array of paragraph
 
+    [Space]
+    [TextAreaAttribute] //give more space to write
+    [SerializeField] private string AfterFinishedText;
+    [SerializeField]private bool Sold = false;
+
     [Header("Typing")]
     [Space]
     [SerializeField] private float typingSpeed = 0.02f;// the typing speed
-    private bool endText = true;
+   
     public int textLocation = 0;// get whi  ch one of the paragraphs or enabled
     public bool StartTyping;
 
@@ -74,7 +79,7 @@ public class Bruxa : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao") && playerDetected)
+        if (Input.GetButtonDown("Interacao") && playerDetected && !Sold)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -85,15 +90,12 @@ public class Bruxa : MonoBehaviour
             Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2 && hadConversation == false)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2 && hadConversation == false && !Sold)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-
-            //disable HUD
-            HUD.SetActive(false);
 
             StartTyping = false;
             StopAllCoroutines();
@@ -102,16 +104,13 @@ public class Bruxa : MonoBehaviour
             // Debug.Log("apaguei");
             havingConversation = true;
         }
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Player.GetComponent<PlayerMovement>().HaveMagicTrident && hadConversation == false)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Player.GetComponent<PlayerMovement>().HaveMagicTrident && hadConversation == false && !Sold)
         {
             npcNameText.text = NpcName;
             conversationObj.SetActive(true);
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-
-            //disable HUD
-            HUD.SetActive(false);
 
             textLocation = 3;
             StartTyping = false;
@@ -120,6 +119,17 @@ public class Bruxa : MonoBehaviour
             ContinueStory();
             // Debug.Log("apaguei");
             havingConversation = true;
+        }
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Sold)
+        {
+            HUD.SetActive(false);
+
+            npcNameText.text = NpcName;
+            StartTyping = false;
+            StopAllCoroutines();
+            conversationObj.SetActive(true);
+            ContinueStory();
+           
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
         if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
@@ -183,8 +193,14 @@ public class Bruxa : MonoBehaviour
     //method that run the courotine
     private void ContinueStory()
     {
-        StartCoroutine(DisplayLine(NpcWords[textLocation]));
-
+        if (Sold)
+        {
+            StartCoroutine(DisplayLine(AfterFinishedText));
+        }
+        else
+        {
+            StartCoroutine(DisplayLine(NpcWords[textLocation]));
+        }
     }
 
     //separate the string into chars and write one by one
@@ -242,7 +258,7 @@ public class Bruxa : MonoBehaviour
             StoreBruxa.SetActive(false);
 
             //enable HUD
-            HUD.gameObject.SetActive(true);
+            HUD.SetActive(true);
         }
 
     }
@@ -269,6 +285,8 @@ public class Bruxa : MonoBehaviour
 
             //enable HUD
             HUD.SetActive(true);
+
+            Sold = true;
         }
         else
         {

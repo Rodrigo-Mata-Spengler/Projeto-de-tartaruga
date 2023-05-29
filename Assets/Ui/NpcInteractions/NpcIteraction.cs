@@ -20,6 +20,11 @@ public class NpcIteraction : MonoBehaviour
     [TextAreaAttribute] //give more space to write
     [SerializeField] private string[] NpcWords;// array of paragraph
 
+    [Space]
+    [TextAreaAttribute] //give more space to write
+    [SerializeField] private string AfterFinishedText;
+    [SerializeField]private bool conversationEnded = false;
+
     [Header("Typing")]
     [Space]
     [SerializeField]private float typingSpeed = 0.04f;// the typing speed
@@ -63,7 +68,7 @@ public class NpcIteraction : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        if(Input.GetButtonDown("Interacao") && playerDetected)
+        if(Input.GetButtonDown("Interacao") && playerDetected && !conversationEnded)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -73,13 +78,13 @@ public class NpcIteraction : MonoBehaviour
             Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false )
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && !conversationEnded)
         {
             npcNameText.text = NpcName;
             
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+
 
             //disable HUD
             
@@ -91,14 +96,25 @@ public class NpcIteraction : MonoBehaviour
            // Debug.Log("apaguei");
             havingConversation = true;
         }
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && conversationEnded)
+        {
+            HUD.SetActive(false);
+
+            npcNameText.text = NpcName;
+
+            StartTyping = false;
+            StopAllCoroutines();
+            conversationObj.SetActive(true);
+            ContinueStory();
+        }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
+        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true )
         {
             StopAllCoroutines();
             StartTyping = false;
             textLocation += 1;
             ContinueStory();
-            Debug.Log("aquiii");
+           
         }
         //if paragraph were over than disable the UI interaction obj
         if (havingConversation && textLocation >= NpcWords.Length && inputPressed)
@@ -112,7 +128,7 @@ public class NpcIteraction : MonoBehaviour
 
             //enable HUD
             HUD.SetActive(true);
-
+            conversationEnded = true;
             StopAllCoroutines();
 
         }
@@ -132,7 +148,17 @@ public class NpcIteraction : MonoBehaviour
     //method that run the courotine
     private void ContinueStory()
     {
-        StartCoroutine(DisplayLine(NpcWords[textLocation]));
+        
+
+        if (conversationEnded)
+        {
+            StartCoroutine(DisplayLine(AfterFinishedText));
+            
+        }
+        else
+        {
+            StartCoroutine(DisplayLine(NpcWords[textLocation]));
+        }
 
     }
 

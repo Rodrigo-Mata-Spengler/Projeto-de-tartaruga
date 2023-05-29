@@ -19,6 +19,7 @@ public class Minhoca : MonoBehaviour
     [TextAreaAttribute] //give more space to write
     [SerializeField] private string[] NpcWords;// array of paragraph
 
+
     [Header("Typing")]
     [Space]
     [SerializeField] private float typingSpeed = 0.04f;// the typing speed

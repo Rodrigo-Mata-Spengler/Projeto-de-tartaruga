@@ -17,6 +17,12 @@ public class Ferreiro : MonoBehaviour
     [TextAreaAttribute] //give more space to write
     [SerializeField] private string[] NpcWords;// array of paragraph
 
+    [Space]
+    [TextAreaAttribute] //give more space to write
+    [SerializeField] private string AfterFinishedText;
+    [SerializeField]private bool Sold = false;
+
+
     [Header("Typing")]
     [Space]
     [SerializeField] private float typingSpeed = 0.04f;// the typing speed
@@ -44,7 +50,7 @@ public class Ferreiro : MonoBehaviour
     private ItensInventory PlayerInventory; // Variable to get Player Inventory
     private Health PlayerHealth; // Variable to get Player Health
     private GameObject Player; // Player GameObjet
-    private MenuPause CanvasMenuPause;
+   // private MenuPause CanvasMenuPause;
 
     private GameObject InputFeedBack;
     public bool hadConversation = false;
@@ -58,7 +64,7 @@ public class Ferreiro : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         PlayerHealth = Player.GetComponent<Health>();
         PlayerInventory = Player.GetComponent<ItensInventory>();
-        CanvasMenuPause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
+        //CanvasMenuPause = GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>();
 
         InputFeedBack = gameObject.transform.GetChild(0).gameObject;
 
@@ -72,7 +78,7 @@ public class Ferreiro : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao") && playerDetected)
+        if (Input.GetButtonDown("Interacao") && playerDetected && !Sold)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -84,7 +90,7 @@ public class Ferreiro : MonoBehaviour
             Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false && !Sold)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
@@ -99,6 +105,17 @@ public class Ferreiro : MonoBehaviour
             ContinueStory();
             // Debug.Log("apaguei");
             havingConversation = true;
+        }
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Sold)
+        {
+            HUD.SetActive(false);
+
+            npcNameText.text = NpcName;
+            StartTyping = false;
+            StopAllCoroutines();
+            conversationObj.SetActive(true);
+            ContinueStory();
+
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
         if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
@@ -153,7 +170,14 @@ public class Ferreiro : MonoBehaviour
     //method that run the courotine
     private void ContinueStory()
     {
-        StartCoroutine(DisplayLine(NpcWords[textLocation]));
+        if (Sold)
+        {
+            StartCoroutine(DisplayLine(AfterFinishedText));
+        }
+        else
+        {
+            StartCoroutine(DisplayLine(NpcWords[textLocation]));
+        }
 
     }
 
@@ -222,20 +246,24 @@ public class Ferreiro : MonoBehaviour
             ///ativar animação de armadura
             PlayerInventory.calcio -= Cost[0];
             PlayerHealth.maxLife *= 2;
-            PlayerHealth.currentLife = PlayerHealth.maxLife;
+            
             PlayerHealth.haveArmor = true;
-            PlayerHealth.HealthSlider.value = PlayerHealth.currentLife * 8;
             Player.GetComponent<PlayerMovement>().HaveArmor = true;
 
             Player.GetComponent<PlayerMovement>().enabled = true; 
             Player.GetComponent<Animator>().enabled = true;
+            Player.GetComponent<Animator>().SetBool("Armadura", true);
             StoreFerreiro.SetActive(false);
             inputPressed = false;
             OnStore = false;
 
+            //Reset Players life
+            PlayerHealth.ResetLife();
+
             //enable HUD
             HUD.SetActive(true);
-    
+
+            Sold = true;
         }
         else
         {

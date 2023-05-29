@@ -17,6 +17,12 @@ public class Fazendeiro : MonoBehaviour
     [TextAreaAttribute] //give more space to write
     [SerializeField] private string[] NpcWords;// array of paragraph
 
+    [Space]
+    [TextAreaAttribute] //give more space to write
+    [SerializeField] private string AfterFinishedText;
+
+
+
     [Header("Typing")]
     [Space]
     [SerializeField] private float typingSpeed = 0.04f;// the typing speed
@@ -50,6 +56,8 @@ public class Fazendeiro : MonoBehaviour
     private GameObject HUD;
 
     public bool hadConversation = false;
+
+    [SerializeField]private int TimesSold = 0;
     private void Start()
     {
         //get's the trigger component
@@ -71,7 +79,7 @@ public class Fazendeiro : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao") && playerDetected)
+        if (Input.GetButtonDown("Interacao") && playerDetected && TimesSold <2)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -83,7 +91,7 @@ public class Fazendeiro : MonoBehaviour
             HUD.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false)
+        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false && TimesSold < 2)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
@@ -96,6 +104,18 @@ public class Fazendeiro : MonoBehaviour
             ContinueStory();
             // Debug.Log("apaguei");
             havingConversation = true;
+        }
+        if(playerDetected && Input.GetButtonDown("Interacao") && TimesSold >= 2)
+        {
+            HUD.SetActive(false);
+
+            npcNameText.text = NpcName;
+
+            StartTyping = false;
+            StopAllCoroutines();
+            conversationObj.SetActive(true);
+            ContinueStory();
+            // Debug.Log("apaguei");
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
         if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
@@ -149,7 +169,14 @@ public class Fazendeiro : MonoBehaviour
     //method that run the courotine
     private void ContinueStory()
     {
-        StartCoroutine(DisplayLine(NpcWords[textLocation]));
+        if (TimesSold >=2)
+        {
+            StartCoroutine(DisplayLine(AfterFinishedText));
+        }
+        else
+        {
+            StartCoroutine(DisplayLine(NpcWords[textLocation]));
+        }
 
     }
 
@@ -206,6 +233,7 @@ public class Fazendeiro : MonoBehaviour
             OnStore = false;
             StoreFazendeiro.SetActive(false);
 
+
             //enable HUD
             HUD.SetActive(true);
         }
@@ -213,18 +241,21 @@ public class Fazendeiro : MonoBehaviour
     }
     public void FarmerSell(GameObject NotEnoughMoney) //if Player have the enough bones to buy the item
     {
-        if (PlayerInventory.ossos >= Cost[0])
+        if (PlayerInventory.ossos >= Cost[0] && TimesSold < 2)
         {
             PlayerInventory.ossos -= Cost[0];
             PlayerHealth.maxLife += 1;
-            PlayerHealth.currentLife = PlayerHealth.maxLife;
+            PlayerHealth.ResetLife();
 
             Player.GetComponent<PlayerMovement>().enabled = true;
             inputPressed = false;
             StoreFazendeiro.SetActive(false);
 
-            PlayerHealth.HealthSlider.value = PlayerHealth.maxLife * 8;
-  
+
+            Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<Animator>().enabled = true;
+            //PlayerHealth.HealthSlider.value = PlayerHealth.maxLife * 8;
+            TimesSold += 1;
         }
         else
         {
