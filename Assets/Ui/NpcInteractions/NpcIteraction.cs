@@ -62,13 +62,16 @@ public class NpcIteraction : MonoBehaviour
     
     private void Update()
     {
-
-        NextLineAndStop();
+        if (playerDetected)
+        {
+            NextLineAndStop();
+        }
+        
     }
 
     private void NextLineAndStop()
     {
-        if(Input.GetButtonDown("Interacao") && playerDetected && !conversationEnded)
+        if(Input.GetButtonDown("Interacao")  && !conversationEnded)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -78,7 +81,7 @@ public class NpcIteraction : MonoBehaviour
             Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && !conversationEnded)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false && !conversationEnded)
         {
             npcNameText.text = NpcName;
             
@@ -96,7 +99,7 @@ public class NpcIteraction : MonoBehaviour
            // Debug.Log("apaguei");
             havingConversation = true;
         }
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && conversationEnded)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false && conversationEnded)
         {
             HUD.SetActive(false);
 

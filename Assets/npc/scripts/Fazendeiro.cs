@@ -74,12 +74,16 @@ public class Fazendeiro : MonoBehaviour
 
     private void Update()
     {
-        NextLineAndStop();
+        if (playerDetected)
+        {
+            NextLineAndStop();
+        }
+        
     }
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao") && playerDetected && TimesSold <2)
+        if (Input.GetButtonDown("Interacao")  && TimesSold <2)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -91,7 +95,7 @@ public class Fazendeiro : MonoBehaviour
             HUD.SetActive(false);
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false && TimesSold < 2)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false && TimesSold < 2)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
@@ -105,7 +109,7 @@ public class Fazendeiro : MonoBehaviour
             // Debug.Log("apaguei");
             havingConversation = true;
         }
-        if(playerDetected && Input.GetButtonDown("Interacao") && TimesSold >= 2)
+        if(Input.GetButtonDown("Interacao") && TimesSold >= 2)
         {
             HUD.SetActive(false);
 
@@ -118,7 +122,7 @@ public class Fazendeiro : MonoBehaviour
             // Debug.Log("apaguei");
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
+        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
         {
             conversationObj.SetActive(true);
             StopAllCoroutines();
@@ -133,7 +137,7 @@ public class Fazendeiro : MonoBehaviour
             hadConversation= true;
         }
         //if paragraph were over than disable the UI interaction obj
-        if (inputPressed && hadConversation && playerDetected)
+        if (inputPressed && hadConversation)
         {
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player

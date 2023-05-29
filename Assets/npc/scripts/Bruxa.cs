@@ -74,12 +74,16 @@ public class Bruxa : MonoBehaviour
 
     private void Update()
     {
-        NextLineAndStop();
+        if (playerDetected)
+        {
+            NextLineAndStop();
+        }
+        
     }
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao") && playerDetected && !Sold)
+        if (Input.GetButtonDown("Interacao") && !Sold)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -90,7 +94,7 @@ public class Bruxa : MonoBehaviour
             Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2 && hadConversation == false && !Sold)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false && textLocation < 2 && hadConversation == false && !Sold)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
@@ -104,7 +108,7 @@ public class Bruxa : MonoBehaviour
             // Debug.Log("apaguei");
             havingConversation = true;
         }
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Player.GetComponent<PlayerMovement>().HaveMagicTrident && hadConversation == false && !Sold)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false && Player.GetComponent<PlayerMovement>().HaveMagicTrident && hadConversation == false && !Sold)
         {
             npcNameText.text = NpcName;
             conversationObj.SetActive(true);
@@ -120,7 +124,7 @@ public class Bruxa : MonoBehaviour
             // Debug.Log("apaguei");
             havingConversation = true;
         }
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Sold)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false && Sold)
         {
             HUD.SetActive(false);
 
@@ -132,7 +136,7 @@ public class Bruxa : MonoBehaviour
            
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
+        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
         {
             StopAllCoroutines();
             StartTyping = false;

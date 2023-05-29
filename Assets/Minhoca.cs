@@ -57,13 +57,16 @@ public class Minhoca : MonoBehaviour
 
     private void Update()
     {
-
-        NextLineAndStop();
+        if (playerDetected)
+        {
+            NextLineAndStop();
+        }
+        
     }
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao") && playerDetected)
+        if (Input.GetButtonDown("Interacao"))
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -75,7 +78,7 @@ public class Minhoca : MonoBehaviour
             Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled

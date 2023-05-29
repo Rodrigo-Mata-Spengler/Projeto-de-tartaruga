@@ -73,12 +73,16 @@ public class Ferreiro : MonoBehaviour
 
     private void Update()
     {
-        NextLineAndStop();
+        if(playerDetected)
+        {
+            NextLineAndStop();
+        }
+        
     }
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao") && playerDetected && !Sold)
+        if (Input.GetButtonDown("Interacao") && !Sold)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -90,7 +94,7 @@ public class Ferreiro : MonoBehaviour
             Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false && !Sold)
+        if ( Input.GetButtonDown("Interacao") && havingConversation == false && hadConversation == false && !Sold)
         {
             npcNameText.text = NpcName;
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
@@ -106,7 +110,7 @@ public class Ferreiro : MonoBehaviour
             // Debug.Log("apaguei");
             havingConversation = true;
         }
-        if (playerDetected && Input.GetButtonDown("Interacao") && havingConversation == false && Sold)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false && Sold)
         {
             HUD.SetActive(false);
 
@@ -118,7 +122,7 @@ public class Ferreiro : MonoBehaviour
 
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (playerDetected && Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
+        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
         {
             conversationObj.SetActive(true);
             StopAllCoroutines();
@@ -133,7 +137,7 @@ public class Ferreiro : MonoBehaviour
             hadConversation = true;
         }
         //if paragraph were over than disable the UI interaction obj
-        if (inputPressed && hadConversation && playerDetected)
+        if (inputPressed && hadConversation )
         {
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player

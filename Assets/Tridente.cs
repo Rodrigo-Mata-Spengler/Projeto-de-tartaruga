@@ -21,6 +21,7 @@ public class Tridente : MonoBehaviour
             Canvas.GetComponent<MenuPause>().Mana.SetActive(true);
             PlayerObj.GetComponent<Estamina>().EnableMana();
             PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true;
+            PlayerObj.GetComponent<Dash>().enabled = true;
             PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
 
             Destroy(this.gameObject);

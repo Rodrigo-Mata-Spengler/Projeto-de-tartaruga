@@ -150,6 +150,13 @@ MonoBehaviour:
       Data3: 1087878804
       Data4: 217209066
     Path: event:/Protagonista/Golpe
+  <AttackSoundWater>k__BackingField:
+    Guid:
+      Data1: 1411050497
+      Data2: 1341000418
+      Data3: -1600629337
+      Data4: 1265144770
+    Path: event:/Protagonista/Golpe Agua
   <DamageFeedback>k__BackingField:
     Guid:
       Data1: -853649318
@@ -157,20 +164,6 @@ MonoBehaviour:
       Data3: -1148784462
       Data4: 1450108065
     Path: event:/Protagonista/Feedback de Dano
-  <Cura>k__BackingField:
-    Guid:
-      Data1: 128010001
-      Data2: 1163754142
-      Data3: 2035382967
-      Data4: -181813730
-    Path: event:/Protagonista/Cura
-  <Blast>k__BackingField:
-    Guid:
-      Data1: 1323431451
-      Data2: 1259847826
-      Data3: 1354026396
-      Data4: 1128232768
-    Path: "event:/Protagonista/Canh\xE3o de \xC1gua"
   <Dash>k__BackingField:
     Guid:
       Data1: -1255561798
@@ -178,6 +171,13 @@ MonoBehaviour:
       Data3: 387457206
       Data4: 1347290712
     Path: event:/Protagonista/Dash
+  <Blast>k__BackingField:
+    Guid:
+      Data1: 1323431451
+      Data2: 1259847826
+      Data3: 1354026396
+      Data4: 1128232768
+    Path: "event:/Protagonista/Canh\xE3o de \xC1gua"
   <Jump>k__BackingField:
     Guid:
       Data1: 955402343
@@ -488,25 +488,25 @@ MonoBehaviour:
     Path: "event:/Ouri\xE7o/Disparo"
   <FeedbackMortePlanta>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -662816525
+      Data2: 1092967853
+      Data3: -1495951226
+      Data4: -1656671984
+    Path: event:/Planta Carnivora/Feedback de Morte
   <FeedBackDanoPlanta>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1294306513
+      Data2: 1166089195
+      Data3: 510113970
+      Data4: 1881796766
+    Path: event:/Planta Carnivora/Feedback de Dano
   <MordidaPlanta>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -356129846
+      Data2: 1308167987
+      Data3: 604515730
+      Data4: -639718998
+    Path: event:/Planta Carnivora/Mordida
   <MordidaErrarPlanta>k__BackingField:
     Guid:
       Data1: 0
