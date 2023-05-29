@@ -471,9 +471,6 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: Ataque normal
     m_EventTreshold: 0
   - m_ConditionMode: 6
@@ -1370,9 +1367,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Ataque normal
     m_EventTreshold: 0
@@ -2316,9 +2310,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: Run
     m_EventTreshold: 30
@@ -3151,9 +3142,6 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: Dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -3178,9 +3166,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Ataque baixo
     m_EventTreshold: 0
@@ -3490,9 +3475,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Ataque normal
     m_EventTreshold: 0
@@ -4188,9 +4170,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Dash
     m_EventTreshold: 0
@@ -5542,9 +5521,6 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: Ataque normal
     m_EventTreshold: 0
   - m_ConditionMode: 6
@@ -6008,9 +5984,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Magico
-    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Ataque baixo
     m_EventTreshold: 0

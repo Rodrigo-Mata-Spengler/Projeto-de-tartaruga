@@ -100,7 +100,26 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference FeedBackDanoPlanta { get; private set; }
     [field: SerializeField] public EventReference MordidaPlanta { get; private set; }
     [field: SerializeField] public EventReference MordidaErrarPlanta { get; private set; }
-    
+
+   
+    [field: Header("Sombra SFX")]
+    [field: SerializeField] public EventReference Grito { get; private set; }
+    [field: SerializeField] public EventReference Morrendo { get; private set; }
+    [field: SerializeField] public EventReference SomAreaIsolada { get; private set; }
+    [field: SerializeField] public EventReference FeedBackDanoSombra { get; private set; }
+    [field: SerializeField] public EventReference TentaculoAtaque { get; private set; }
+    [field: SerializeField] public EventReference TentaculoSaindo { get; private set; }
+    [field: SerializeField] public EventReference TentaculoVoltando{ get; private set; }
+    [field: SerializeField] public EventReference GarraMúltipla { get; private set; }
+    [field: SerializeField] public EventReference AntecipaçãoGarra{ get; private set; }
+    [field: SerializeField] public EventReference GolpeGarra{ get; private set; }
+    [field: SerializeField] public EventReference Explosão { get; private set; }
+    [field: SerializeField] public EventReference AntecipacaoSoco { get; private set; }
+
+    [field: SerializeField] public EventReference AntecipacaoEsquerda { get; private set; }
+    [field: SerializeField] public EventReference AntecipacaoDireita { get; private set; }
+    [field: SerializeField] public EventReference AtaqueGarra { get; private set; }
+
 
     public static FMODEvents instance { get; private set; }
 

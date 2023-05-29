@@ -200,26 +200,48 @@ public class PlayerMovement : MonoBehaviour
     {
         /// Creates the raycast for the walljump
         IsTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, WallCheckDistance, WhatIsGround);
+      
 
-        RaycastHit2D hitWallTop = Physics2D.Raycast(WallChecksDash[0].position, transform.right, 7, WhatIsGround);
-        RaycastHit2D hitWallDown = Physics2D.Raycast(WallChecksDash[1].position, transform.right, 7, WhatIsGround);
-        RaycastHit2D hitWallCenter1 = Physics2D.Raycast(WallChecksDash[2].position, transform.right, 7, WhatIsGround);
-        RaycastHit2D hitWallCenter2 = Physics2D.Raycast(WallChecksDash[3].position, transform.right, 7, WhatIsGround);
-
-        if (hitWallTop.collider != null || hitWallDown.collider != null || hitWallCenter1.collider != null|| hitWallCenter2.collider != null)
+        if (gameObject.GetComponent<Dash>().canDash)
         {
-            float distance = Mathf.Abs(hitWallDown.point.x - transform.position.x);
-            gameObject.GetComponent<Dash>().m_DashDist = (distance - 0.5f);
-            gameObject.GetComponent<Dash>().dashTime = 0.15f;
+            foreach (Transform WallCheck in WallChecksDash)
+            {
+                RaycastHit2D hitWall = Physics2D.Raycast(WallCheck.position, transform.right, 7, WhatIsGround);
+
+                if (hitWall.collider != null)
+                {
+                    float distance = Mathf.Abs(hitWall.point.x - transform.position.x);
+                    gameObject.GetComponent<Dash>().m_DashDist = (distance - 0.5f);
+                    gameObject.GetComponent<Dash>().dashTime = 0.15f;
+                }
+                else
+                {
+                    gameObject.GetComponent<Dash>().m_DashDist = 7;
+                    gameObject.GetComponent<Dash>().dashTime = 0.25f;
+                }
+            }
+        }
+
+
+    }
+    
+    private void CheckWallSliding()
+    {
+        if (IsTouchingWall && !CharacterController2D.m_Grounded && m_Rigidbody2D.velocity.y <= 0)
+        {
+            
+            IsWallSliding = true;
+            JumpReleasedTimes = 1;
+
+            m_Animator.SetBool("Parede", true);
         }
         else
         {
-            gameObject.GetComponent<Dash>().m_DashDist = 7;
-            gameObject.GetComponent<Dash>().dashTime = 0.25f;
+            IsWallSliding = false;
+            m_Animator.SetBool("Parede", false);
         }
-    }
-    private void CheckWallSliding()
-    {
+
+        /*
         if (HaveMagicTrident)
         {
             if (IsTouchingWall && !CharacterController2D.m_Grounded && m_Rigidbody2D.velocity.y < 0 && HorizontalMove != 0)
@@ -250,6 +272,7 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
+        */
     }
     public void AtivarCheat()
     {
