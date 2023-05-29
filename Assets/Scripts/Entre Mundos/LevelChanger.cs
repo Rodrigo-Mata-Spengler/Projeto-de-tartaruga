@@ -2,9 +2,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+enum InteraMode { colisao, interacao}
 public class LevelChanger : MonoBehaviour
 {
     [SerializeField] private Conections conetion;
+
+    [SerializeField] private InteraMode modo = InteraMode.colisao;
+
+    [SerializeField] private GameObject fInteracao;
 
     [SerializeField] private string targetSceneName;
 
@@ -18,17 +23,12 @@ public class LevelChanger : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        fInteracao.SetActive(false);
 
-        if (player == null)
-        {
-            Debug.Log("Player não encontrado");
-        }
+        player = GameObject.FindGameObjectWithTag("Player");
 
         if (conetion == Conections.activeConetion && Conections.wasConetion)
         {
-
-            Debug.Log("Player teleportado");
             player.transform.position = spawnPoint.position;
 
             Conections.wasConetion = false;
@@ -39,11 +39,25 @@ public class LevelChanger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        switch (modo)
         {
-            StartCoroutine(LoadLevel(targetSceneName));
+            case InteraMode.colisao:
+                if (collision.gameObject.CompareTag("Player"))
+                {
+                    StartCoroutine(LoadLevel(targetSceneName));
+                }
+                break;
+            case InteraMode.interacao:
+                if (Input.GetButton("Interacao"))
+                {
+                    fInteracao.SetActive(true);
+                    StartCoroutine(LoadLevel(targetSceneName));
+                }
+                break;
         }
     }
+   
+    
 
     IEnumerator LoadLevel(string cena)
     {

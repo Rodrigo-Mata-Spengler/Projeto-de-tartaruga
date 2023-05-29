@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-enum EnemyTag { Zombi, Guardiao, Planta, Mosca, Caranguejo,Ourico,Sombra, Enemy}
+enum EnemyTag { Zombi, Guardiao, Planta, Mosca, Caranguejo,Ourico,Sombra, Enemy};
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private EnemyTag EnemyTag = EnemyTag.Enemy;
