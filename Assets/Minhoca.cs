@@ -119,6 +119,8 @@ public class Minhoca : MonoBehaviour
             havingConversation = false;
             StopAllCoroutines();
 
+            Destroy(gameObject);
+
         }
 
         // if player press the esc disable the UI interaction obj
