@@ -4675,7 +4675,7 @@ Transform:
   - {fileID: 70744989}
   - {fileID: 43928624}
   - {fileID: 128663252}
-  - {fileID: 589087131}
+  - {fileID: 7869436000869793467}
   m_Father: {fileID: 1096972946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5298,138 +5298,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1001 &589087130
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 534874569}
-    m_Modifications:
-    - target: {fileID: 6374330168111400686, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705309, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_Name
-      value: Npc's basico
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705888, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_SortingLayer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705888, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1888708261
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -429.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -388.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.1333656
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: NpcName
-      value: "Anci\xE3o"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: StoreWitch
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: StoreFarmer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: npcNameText
-      value: 
-      objectReference: {fileID: 1089499853}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: StoreFerreiro
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: conversationObj
-      value: 
-      objectReference: {fileID: 120666413}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: conversationText
-      value: 
-      objectReference: {fileID: 120666412}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: AfterFinishedText
-      value: "Tolos! todos voc\xEAs, um dia v\xE3o se arrepender por n\xE3o me ouvir."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: NpcWords.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: NpcWords.Array.data[0]
-      value: "Caros habitantes, O dia da nossa destrui\xE7\xE3o est\xE1 cada vez
-        mais pr\xF3ximo."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: NpcWords.Array.data[1]
-      value: "A for\xE7a que nos protegia est\xE1 na beira do colapso."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: NpcWords.Array.data[2]
-      value: "\xC9 s\xF3 quest\xE3o de tempo at\xE9 que nossa vila seja invadida
-        e destru\xEDda."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: NpcWords.Array.data[3]
-      value: "Pensem em seus familiares amigos, \xE9 isso que querem para eles?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869436001391705894, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-      propertyPath: NpcWords.Array.data[4]
-      value: Devemos fazer algo imediatamente antes que seja tarde demais.
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e9200136ee847bc429b3e14287084bde, type: 3}
---- !u!4 &589087131 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7869436001391705889, guid: e9200136ee847bc429b3e14287084bde, type: 3}
-  m_PrefabInstance: {fileID: 589087130}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &608076821
 GameObject:
   m_ObjectHideFlags: 0
@@ -130671,3 +130539,77 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &4180776203754338623
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 534874569}
+    m_Modifications:
+    - target: {fileID: 2972160240178856779, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: npcNameText
+      value: 
+      objectReference: {fileID: 1089499853}
+    - target: {fileID: 2972160240178856779, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: conversationObj
+      value: 
+      objectReference: {fileID: 120666413}
+    - target: {fileID: 2972160240178856779, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: conversationText
+      value: 
+      objectReference: {fileID: 120666412}
+    - target: {fileID: 6282736534440199288, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_Name
+      value: "Anci\xE3o"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -429.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -388.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1333656
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+--- !u!4 &7869436000869793467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6282736534440200068, guid: 6f792095b91882041bdbda152f9d13d1, type: 3}
+  m_PrefabInstance: {fileID: 4180776203754338623}
+  m_PrefabAsset: {fileID: 0}
