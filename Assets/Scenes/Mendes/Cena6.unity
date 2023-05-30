@@ -6082,7 +6082,7 @@ PrefabInstance:
       objectReference: {fileID: 2034975688}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: livreArbitrio
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: velocidadeAtaque5
@@ -69860,6 +69860,286 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraMorrendo>k__BackingField.Path
+      value: event:/Sombra/Morrendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraExplos\xE3o>k__BackingField.Path"
+      value: "event:/Sombra/Ataque Explosivo/Explos\xE3o"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraGolpeGarra>k__BackingField.Path
+      value: event:/Sombra/Ataque Garra/Golpe Garra
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarra>k__BackingField.Path
+      value: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraGarraM\xFAltipla>k__BackingField.Path"
+      value: "event:/Sombra/Ataque Garras M\xFAltiplas/Garra M\xFAltipla"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraMorrendo>k__BackingField.Guid.Data1
+      value: -200278838
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraMorrendo>k__BackingField.Guid.Data2
+      value: 1182191373
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraMorrendo>k__BackingField.Guid.Data3
+      value: 2146881716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraMorrendo>k__BackingField.Guid.Data4
+      value: 1762289073
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraSomAreaIsolada>k__BackingField.Path
+      value: event:/Sombra/Som Area Isolada
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoSoco>k__BackingField.Path
+      value: "event:/Sombra/Ataque Explosivo/Antecipa\xE7\xE3o Soco"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraExplos\xE3o>k__BackingField.Guid.Data1"
+      value: 705512515
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraExplos\xE3o>k__BackingField.Guid.Data2"
+      value: 1231260718
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraExplos\xE3o>k__BackingField.Guid.Data3"
+      value: -105013358
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraExplos\xE3o>k__BackingField.Guid.Data4"
+      value: -1622255234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoAtaque>k__BackingField.Path
+      value: "event:/Sombra/Tent\xE1culo Ataque"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoSaindo>k__BackingField.Path
+      value: "event:/Sombra/Tent\xE1culo Saindo"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraGolpeGarra>k__BackingField.Guid.Data1
+      value: 927856909
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraGolpeGarra>k__BackingField.Guid.Data2
+      value: 1332213415
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraGolpeGarra>k__BackingField.Guid.Data3
+      value: -533534838
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraGolpeGarra>k__BackingField.Guid.Data4
+      value: -768269986
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarra>k__BackingField.Guid.Data1
+      value: -1431055872
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarra>k__BackingField.Guid.Data2
+      value: 1293319696
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarra>k__BackingField.Guid.Data3
+      value: 1609263747
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarra>k__BackingField.Guid.Data4
+      value: 818680337
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoVoltando>k__BackingField.Path
+      value: "event:/Sombra/Tent\xE1culo Voltando"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoDireita>k__BackingField.Path
+      value: "event:/Sombra/Ataque Bra\xE7o Duplo/Antecipa\xE7\xE3o Direita"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraAntecipa\xE7\xE3oGarra>k__BackingField.Path"
+      value: "event:/Sombra/Ataque Garra/Antecipa\xE7\xE3o Garra"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraFeedBackDanoSombra>k__BackingField.Path
+      value: event:/Sombra/Feedback de Dano
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoEsquerda>k__BackingField.Path
+      value: "event:/Sombra/Ataque Bra\xE7o Duplo/Antecipa\xE7\xE3o Esquerda"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraGarraM\xFAltipla>k__BackingField.Guid.Data1"
+      value: -409991302
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraGarraM\xFAltipla>k__BackingField.Guid.Data2"
+      value: 1238557372
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraGarraM\xFAltipla>k__BackingField.Guid.Data3"
+      value: -1914026584
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraGarraM\xFAltipla>k__BackingField.Guid.Data4"
+      value: 1946379737
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraSomAreaIsolada>k__BackingField.Guid.Data1
+      value: 1781383893
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraSomAreaIsolada>k__BackingField.Guid.Data2
+      value: 1260201223
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraSomAreaIsolada>k__BackingField.Guid.Data3
+      value: 379778458
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraSomAreaIsolada>k__BackingField.Guid.Data4
+      value: -291249929
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoSoco>k__BackingField.Guid.Data1
+      value: 2078182118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoSoco>k__BackingField.Guid.Data2
+      value: 1318375365
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoSoco>k__BackingField.Guid.Data3
+      value: 1632257416
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoSoco>k__BackingField.Guid.Data4
+      value: 243998730
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoAtaque>k__BackingField.Guid.Data1
+      value: 1518555145
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoAtaque>k__BackingField.Guid.Data2
+      value: 1187182761
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoAtaque>k__BackingField.Guid.Data3
+      value: 2029290124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoAtaque>k__BackingField.Guid.Data4
+      value: 1296844191
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoSaindo>k__BackingField.Guid.Data1
+      value: 1625932892
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoSaindo>k__BackingField.Guid.Data2
+      value: 1180075509
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoSaindo>k__BackingField.Guid.Data3
+      value: 978887597
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoSaindo>k__BackingField.Guid.Data4
+      value: 1942690830
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoVoltando>k__BackingField.Guid.Data1
+      value: 598035846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoVoltando>k__BackingField.Guid.Data2
+      value: 1326532977
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoVoltando>k__BackingField.Guid.Data3
+      value: -2022200129
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraTentaculoVoltando>k__BackingField.Guid.Data4
+      value: 2043237299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoDireita>k__BackingField.Guid.Data1
+      value: -496760548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoDireita>k__BackingField.Guid.Data2
+      value: 1101404831
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoDireita>k__BackingField.Guid.Data3
+      value: 2027493795
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoDireita>k__BackingField.Guid.Data4
+      value: 1630042757
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraAntecipa\xE7\xE3oGarra>k__BackingField.Guid.Data1"
+      value: -1859667274
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraAntecipa\xE7\xE3oGarra>k__BackingField.Guid.Data2"
+      value: 1264424180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraAntecipa\xE7\xE3oGarra>k__BackingField.Guid.Data3"
+      value: -2075815775
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: "<SombraAntecipa\xE7\xE3oGarra>k__BackingField.Guid.Data4"
+      value: 331445830
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraFeedBackDanoSombra>k__BackingField.Guid.Data1
+      value: -1690933258
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraFeedBackDanoSombra>k__BackingField.Guid.Data2
+      value: 1155568464
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraFeedBackDanoSombra>k__BackingField.Guid.Data3
+      value: -2055299938
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraFeedBackDanoSombra>k__BackingField.Guid.Data4
+      value: -967105088
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoEsquerda>k__BackingField.Guid.Data1
+      value: 1068015468
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoEsquerda>k__BackingField.Guid.Data2
+      value: 1107079062
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoEsquerda>k__BackingField.Guid.Data3
+      value: -1150551423
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAntecipacaoEsquerda>k__BackingField.Guid.Data4
+      value: 778577821
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
 --- !u!114 &1064057004
@@ -72280,7 +72560,7 @@ PrefabInstance:
       objectReference: {fileID: 460886753}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -114.01294
+      value: -114.01306
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
@@ -76675,11 +76955,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -140.9
+      value: -147.82
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 288.3
+      value: 287.76
       objectReference: {fileID: 0}
     - target: {fileID: 6748649182909457861, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: m_LocalPosition.z
