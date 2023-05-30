@@ -36,4 +36,9 @@ public class VidaBossSombra : MonoBehaviour
         tileFinal.SetActive(true);
          */
     }
+
+    private void Update()
+    {
+        Debug.Log("vida sombra:"+vidaAtual);
+    }
 }

@@ -34,6 +34,7 @@ public class SombraBehaviour : MonoBehaviour
     [Header("Grito")]
     [SerializeField] private float tempo_Grito = 0;//tempo para a animação do grito acontecer
     private float tempo_Para_Grito = 0;
+    private bool doOnce_audio_grito = true;
 
     [Header("idle")]
     [SerializeField] private float tempoIdle = 0;//tempo de duração do idle
@@ -59,6 +60,8 @@ public class SombraBehaviour : MonoBehaviour
     private float ataque1Atual = 0;
     [SerializeField] private float esperaAtaque1 = 0;
     private float esperaproximoAtaque1 = 0;
+    private bool doOnce_ataque1_pinca1 = true;
+    private bool doOnce_ataque1_pinca2 = true;
 
     [Header("Ataque 2")]
     //pinça 3
@@ -82,6 +85,8 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private bool ataque2Preparado = true;//defini se o ataque esta preparado
     [SerializeField] private bool ataque2Voltando = false;//defini se o ataque ja acabou
     [SerializeField] private DirecaoAtaque direcao = DirecaoAtaque.none;
+    private bool doOnce_ataque2_antecipacao = true;
+    private bool doOnce_ataque2_ataque = true;
 
     [Header("Ataque 3")]
     //pinça 5
@@ -104,6 +109,8 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private float velocidadeAtaque3 = 0;
     [SerializeField] private bool ataque3Preparado = true;//defini se o ataque esta preparado
     [SerializeField] private bool ataque3Voltando = false;//defini se o ataque ja acabou
+    private bool doOnce_ataque3_antecipacao = true;
+    private bool doOnce_ataque3_ataque = true;
 
     [Header("Ataque 4")]
     //pinça 7
@@ -128,6 +135,8 @@ public class SombraBehaviour : MonoBehaviour
     private bool ondaAtaque = false;
     [SerializeField] private float tempoRetornoAtaque4 = 0;//tempo para a pinça começar a voltar
     private float tempoParaRetornoAtaque4 = 0;
+    private bool doOnce_Ataque4_garra = true;
+    private bool doOnce_ataque4_Onda = true;
 
     [Header("Ataque 5")]
     //tentaculo 1
@@ -188,6 +197,9 @@ public class SombraBehaviour : MonoBehaviour
     private float tempoProximaDuracaoAtaque5 = 0;
     private bool ctrlAtaque5 = false;
     private bool posControle = false;
+    private bool doOnce_Ataque5_Ataque = true;
+    private bool doOnce_Ataque5_Saindo = true;
+    private bool doOnce_Ataque5_Voltando = true;
 
     [Header("Ataque 6")]
     //pinca8
@@ -207,7 +219,7 @@ public class SombraBehaviour : MonoBehaviour
     private bool preparaAtaque6 = false;
     private bool acaoAtaque6 = false;
     private bool voltarAtaque6 = false;
-
+    private bool doOnce_Ataque6_Ataque = true;
 
 
     //Metodos gerais da Sombra
@@ -226,6 +238,7 @@ public class SombraBehaviour : MonoBehaviour
         SetUpAtaque5();
         ShutDownAtaque5();
         SetUpAtaque6();
+        ShutDownAtaque6();
         SetUpGrito();
         ataque1Atual = 0;
 
@@ -384,7 +397,6 @@ public class SombraBehaviour : MonoBehaviour
         pinca5.SetActive(true);
         pinca6.SetActive(true);
         pinca7.SetActive(true);
-        pinca8.SetActive(true);
 
         tentaculo1.SetActive(true);
         tentaculo2.SetActive(true);
@@ -429,11 +441,20 @@ public class SombraBehaviour : MonoBehaviour
         anim_corpo.SetBool("Sombra_Grito", false);
 
         tempo_Para_Grito = tempo_Grito + Time.time;
+
+        doOnce_audio_grito = true;
     }
 
     private void Grito()
     {
         anim_corpo.SetBool("Sombra_Grito", true);
+
+        if (doOnce_audio_grito)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Grito, this.transform.position);
+
+            doOnce_audio_grito = false;
+        }
 
         if (tempo_Para_Grito <= Time.time)
         {
@@ -458,6 +479,7 @@ public class SombraBehaviour : MonoBehaviour
     }
 
     //Metodos relacionados ao Ataque 1
+    //sem som ainda
     private void SetUpAtaque1()
     {
         ataque1Atual = 0;
@@ -473,12 +495,14 @@ public class SombraBehaviour : MonoBehaviour
         pinca2.transform.position = posInicialPinca2;
         descendoPinca2 = true;
 
+        doOnce_ataque1_pinca1 = true;
+        doOnce_ataque1_pinca2 = true;
     }
 
     private void Ataque1()
     {
         anim_corpo.SetTrigger("Ataque_subir_Bracos");
-        
+
 
         if (esperaproximoAtaque1 <= Time.time)
         {
@@ -490,6 +514,7 @@ public class SombraBehaviour : MonoBehaviour
 
                 if (tempoProximoOffset <= Time.time)
                 {
+                    
                     Pinca2Ataque();
                 }
             }
@@ -510,6 +535,13 @@ public class SombraBehaviour : MonoBehaviour
 
             if (pinca1.transform.position == posFinalPinca1)
             {
+                if (doOnce_ataque1_pinca1)
+                {
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraGarraMúltipla, this.transform.position);
+
+                    doOnce_ataque1_pinca1 = false;
+                }
+
                 descendoPinca1 = false;
             }
         }
@@ -520,6 +552,8 @@ public class SombraBehaviour : MonoBehaviour
             if (pinca1.transform.position == posInicialPinca1)
             {
                 descendoPinca1 = true;
+
+                doOnce_ataque1_pinca1 = true;
             }
         }
     }
@@ -539,6 +573,13 @@ public class SombraBehaviour : MonoBehaviour
 
             if (pinca2.transform.position == posFinalPinca2)
             {
+                if (doOnce_ataque1_pinca2)
+                {
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraGarraMúltipla, this.transform.position);
+
+                    doOnce_ataque1_pinca2 = false;
+                }
+
                 descendoPinca2 = false;
             }
         }
@@ -549,6 +590,8 @@ public class SombraBehaviour : MonoBehaviour
             if (pinca2.transform.position == posInicialPinca2)
             {
                 descendoPinca2 = true;
+
+                doOnce_ataque1_pinca2 = false;
 
                 ataque1Atual++;//conta qunatos ataque foram dados
             }
@@ -570,6 +613,9 @@ public class SombraBehaviour : MonoBehaviour
 
         pinca3.transform.position = posInicialPinca3;
         pinca4.transform.position = posInicialPinca4;
+
+        doOnce_ataque2_antecipacao = true;
+        doOnce_ataque2_ataque = true;
     }
 
     private void DefinirDiracaoAtaque2()
@@ -609,6 +655,13 @@ public class SombraBehaviour : MonoBehaviour
             pinca3.transform.position = Vector3.MoveTowards(pinca3.transform.position, posIntermediariaPinca3, velocidadePreparoAtaque2 * Time.deltaTime);
             tempoEsperaProximoAtaque2 = tempoEsperaAtaque2 + Time.time;
 
+            if (doOnce_ataque2_antecipacao)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAntecipacaoEsquerda, this.transform.position);
+
+                doOnce_ataque2_antecipacao = false;
+            }
+
             if (pinca3.transform.position == posIntermediariaPinca3)
             {
                 ataque2Preparado = false;
@@ -628,6 +681,14 @@ public class SombraBehaviour : MonoBehaviour
             anim_pinca3.SetBool("movendo", true);
 
             pinca3.transform.position = Vector3.MoveTowards(pinca3.transform.position, posfinalPinca3, velocidadeAtaque2 * Time.deltaTime);
+
+            if (doOnce_ataque2_ataque)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAtaqueGarraEsquerda, this.transform.position);
+
+                doOnce_ataque2_ataque = false;
+            }
+
             if (pinca3.transform.position == posfinalPinca3)
             {
                 ataque2Voltando = true;
@@ -641,6 +702,13 @@ public class SombraBehaviour : MonoBehaviour
         {
             pinca4.transform.position = Vector3.MoveTowards(pinca4.transform.position, posIntermediariaPinca4, velocidadePreparoAtaque2 * Time.deltaTime);
             tempoEsperaProximoAtaque2 = tempoEsperaAtaque2 + Time.time;
+
+            if (doOnce_ataque2_antecipacao)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAntecipacaoDireita, this.transform.position);
+
+                doOnce_ataque2_antecipacao = false;
+            }
 
             if (pinca4.transform.position == posIntermediariaPinca4)
             {
@@ -659,6 +727,14 @@ public class SombraBehaviour : MonoBehaviour
             anim_pinca4.SetBool("movendo", true);
 
             pinca4.transform.position = Vector3.MoveTowards(pinca4.transform.position, posfinalPinca4, velocidadeAtaque2 * Time.deltaTime);
+
+            if (doOnce_ataque2_ataque)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAtaqueGarraDireita, this.transform.position);
+
+                doOnce_ataque2_ataque = false;
+            }
+
             if (pinca4.transform.position == posfinalPinca4)
             {
                 ataque2Voltando = true;
@@ -683,7 +759,8 @@ public class SombraBehaviour : MonoBehaviour
         pinca5.transform.position = posInicialPinca5;
         pinca6.transform.position = posInicialPinca6;
 
-        
+        doOnce_ataque3_antecipacao = true;
+        doOnce_ataque3_ataque = true;
     }
 
     private void Ataque3()
@@ -694,6 +771,14 @@ public class SombraBehaviour : MonoBehaviour
             pinca5.transform.position = Vector3.MoveTowards(pinca5.transform.position, posIntermediariaPinca5, velocidadePreparoAtaque3 * Time.deltaTime);
             pinca6.transform.position = Vector3.MoveTowards(pinca6.transform.position, posIntermediariaPinca6, velocidadePreparoAtaque3 * Time.deltaTime);
             tempoEsperaProximoAtaque3 = tempoEsperaAtaque3 + Time.time;
+
+            if (doOnce_ataque3_antecipacao)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAntecipacaoDireita, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAntecipacaoEsquerda, this.transform.position);
+
+                doOnce_ataque3_antecipacao = false;
+            }
 
             if (pinca5.transform.position == posIntermediariaPinca5)
             {
@@ -718,6 +803,15 @@ public class SombraBehaviour : MonoBehaviour
 
             pinca5.transform.position = Vector3.MoveTowards(pinca5.transform.position, posfinalPinca5, velocidadeAtaque3 * Time.deltaTime);
             pinca6.transform.position = Vector3.MoveTowards(pinca6.transform.position, posfinalPinca6, velocidadeAtaque3 * Time.deltaTime);
+
+            if (doOnce_ataque3_ataque)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAtaqueGarraDireita, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAtaqueGarraEsquerda, this.transform.position); //falta arrumar este som
+
+                doOnce_ataque3_ataque = false;
+            }
+
             if (pinca5.transform.position == posfinalPinca5)
             {
                 ataque3Voltando = true;
@@ -725,7 +819,7 @@ public class SombraBehaviour : MonoBehaviour
         }
     }
 
-    //Metodos relacionados ao Ataque 4
+    //Metodos relacionados ao Ataque 4 
     private void SetUpAtaque4()
     {
         ondaAtaque = false;
@@ -739,6 +833,9 @@ public class SombraBehaviour : MonoBehaviour
         pinca7.transform.position = posInicialPinca7;
         Onda1.transform.position = posInicialOnda1;
         Onda2.transform.position = posInicialOnda2;
+
+        doOnce_Ataque4_garra = true;
+        doOnce_ataque4_Onda = true;
     }
 
     private void Ataque4()
@@ -749,6 +846,14 @@ public class SombraBehaviour : MonoBehaviour
             pinca7.transform.position = Vector3.MoveTowards(pinca7.transform.position, posfinalPinca7, velocidadeAtaque4 * Time.deltaTime);
             Onda1.transform.position = Vector3.MoveTowards(Onda1.transform.position, posIntermediariaOnda1, velocidadeAtaque4 * Time.deltaTime);
             Onda2.transform.position = Vector3.MoveTowards(Onda2.transform.position, posIntermediariaOnda2, velocidadeAtaque4 * Time.deltaTime);
+
+            if (doOnce_Ataque4_garra)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraAntecipacaoSoco, this.transform.position);
+
+                doOnce_Ataque4_garra = false;
+            }
+
             if (Onda1.transform.position == posIntermediariaOnda1)
             {
                 tempoParaRetornoAtaque4 = tempoRetornoAtaque4 + Time.time;
@@ -761,6 +866,14 @@ public class SombraBehaviour : MonoBehaviour
         {
             Onda1.transform.position = Vector3.MoveTowards(Onda1.transform.position, posfinalOnda1, velocidadeOndaAtaque4 * Time.deltaTime);
             Onda2.transform.position = Vector3.MoveTowards(Onda2.transform.position, posfinalOnda2, velocidadeOndaAtaque4 * Time.deltaTime);
+
+            if (doOnce_ataque4_Onda)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraExplosão, this.transform.position);
+
+                doOnce_ataque4_Onda = false;
+            }
+
             if (tempoParaRetornoAtaque4 <= Time.time)
             {
                 pinca7.transform.position = Vector3.MoveTowards(pinca7.transform.position, posInicialPinca7, velocidadeAtaque4 * Time.deltaTime);
@@ -811,6 +924,10 @@ public class SombraBehaviour : MonoBehaviour
         tentaculo7.SetActive(true);
         tentaculo7.transform.position = posTentaculo7;
         tentaculo7.transform.GetChild(0).transform.position = posInicialTentaculo7;
+
+        doOnce_Ataque5_Ataque = true;
+        doOnce_Ataque5_Saindo = true;
+        doOnce_Ataque5_Voltando = true;
     }
 
     private void ShutDownAtaque5()
@@ -844,6 +961,19 @@ public class SombraBehaviour : MonoBehaviour
 
             tentaculo7.transform.position = Vector3.MoveTowards(tentaculo7.transform.position, posTentaculo7Final, velocidadePreparoAtaque5 * Time.deltaTime);
 
+            if (doOnce_Ataque5_Saindo)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoSaindo, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoSaindo, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoSaindo, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoSaindo, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoSaindo, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoSaindo, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoSaindo, this.transform.position);
+
+                doOnce_Ataque5_Saindo = false;
+            }
+
             if (tentaculo1.transform.position == posTentaculo1Final)
             {
                 posControle = true;
@@ -873,6 +1003,20 @@ public class SombraBehaviour : MonoBehaviour
 
             tentaculo7.transform.GetChild(0).transform.position = Vector3.MoveTowards(tentaculo7.transform.GetChild(0).transform.position, posFinalTentaculo7, velocidadeAtaque5 * Time.deltaTime);
             animTentaculo7.SetTrigger("Ataque");
+
+            if (doOnce_Ataque5_Ataque)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoAtaque, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoAtaque, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoAtaque, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoAtaque, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoAtaque, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoAtaque, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoAtaque, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoAtaque, this.transform.position);
+
+                doOnce_Ataque5_Ataque = false;
+            }
 
             if (tentaculo1.transform.GetChild(0).transform.position == posFinalTentaculo1)
             {
@@ -909,6 +1053,19 @@ public class SombraBehaviour : MonoBehaviour
             animTentaculo7.SetTrigger("Desce");
             animTentaculo7.ResetTrigger("Ataque");
 
+            if (doOnce_Ataque5_Voltando)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoVoltando, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoVoltando, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoVoltando, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoVoltando, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoVoltando, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoVoltando, this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraTentaculoVoltando, this.transform.position);
+
+                doOnce_Ataque5_Voltando = false;
+            }
+
             if (tentaculo1.transform.GetChild(0).transform.position == posInicialTentaculo1)
             {
                 anim_corpo.SetTrigger("Ataque_tentaculo_Subindo");
@@ -936,11 +1093,20 @@ public class SombraBehaviour : MonoBehaviour
         anim_ataque6.ResetTrigger("atacando");
         anim_ataque6.ResetTrigger("reset");
 
+        pinca8.SetActive(true);
+
         preparaAtaque6 = false;
         acaoAtaque6 = false;
         voltarAtaque6 = false;
 
         pinca8.transform.position = posInicialPinca8;
+
+        doOnce_Ataque6_Ataque = true;
+    }
+
+    private void ShutDownAtaque6()
+    {
+        pinca8.SetActive(false);
     }
 
     private void Ataque6()
@@ -970,6 +1136,13 @@ public class SombraBehaviour : MonoBehaviour
             anim_ataque6.SetTrigger("atacando");
             pinca8.transform.position = Vector3.MoveTowards(pinca8.transform.position, new Vector3(pinca8.transform.position.x, posFinalYPinca8, 0), velocidadeAtaque6 * Time.deltaTime);
 
+            if (doOnce_Ataque6_Ataque)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraGolpeGarra, this.transform.position);
+
+                doOnce_Ataque6_Ataque = false;
+            }
+
             if (tempoProximoTravadoAtaque6 <= Time.time)
             {
                 voltarAtaque6 = true;
@@ -985,12 +1158,11 @@ public class SombraBehaviour : MonoBehaviour
                 anim_ataque6.ResetTrigger("atacando");
                 anim_ataque6.ResetTrigger("reset");
 
+                ShutDownAtaque6();
+
                 SombraBrain();
             }
             
         }
-
-        
-
     }
 }

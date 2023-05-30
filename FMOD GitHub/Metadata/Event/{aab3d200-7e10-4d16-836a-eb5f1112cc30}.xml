@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{aab3d200-7e10-4d16-836a-eb5f1112cc30}">
 		<property name="name">
-			<value>Ataque Garra</value>
+			<value>Ataque Garra Direita</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -103,6 +103,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{9f2a1670-2314-4ebf-9b19-e6a9d71a26e2}" />
 	<object class="SingleSound" id="{ac4b137b-473e-43d2-a407-2ef166ec621e}">
+		<property name="volume">
+			<value>-11</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{344a4f29-a66b-411d-8b5c-c532a7714848}</destination>
 		</relationship>
