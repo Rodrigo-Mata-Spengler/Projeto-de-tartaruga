@@ -887,6 +887,7 @@ GameObject:
   - component: {fileID: 5596780008953162665}
   - component: {fileID: 583416441241118286}
   - component: {fileID: 8125644874967360450}
+  - component: {fileID: 6647560633428816157}
   m_Layer: 0
   m_Name: Pata 8
   m_TagString: Sombra
@@ -1011,6 +1012,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6647560633428816157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813401575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9f284c7f1607f42b364695876d766d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &874045110
 GameObject:
   m_ObjectHideFlags: 0

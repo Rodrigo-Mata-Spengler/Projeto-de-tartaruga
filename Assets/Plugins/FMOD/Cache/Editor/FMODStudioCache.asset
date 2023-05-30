@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9151546903997602304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Garras M\xFAltiplas/Ataque 1"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Garras M\xFAltiplas/Ataque 1"
+  Guid:
+    Data1: -409991302
+    Data2: 1238557372
+    Data3: -1914026584
+    Data4: 1946379737
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-9057153243577214404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +74,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 683520
   Exists: 1
+--- !u!114 &-8878126024541169763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra Direita"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra Direita"
+  Guid:
+    Data1: -756017764
+    Data2: 1195339333
+    Data3: -546555755
+    Data4: 235229679
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8617423351322670671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,33 +296,6 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1680768
   Exists: 1
---- !u!114 &-7799460768505569495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra"
-  Guid:
-    Data1: -756017764
-    Data2: 1195339333
-    Data3: -546555755
-    Data4: 235229679
-  Banks:
-  - {fileID: 7424298038131044863}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-7633605199404510735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +684,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5434257461249722090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra Direita"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra Direita"
+  Guid:
+    Data1: -1431055872
+    Data2: 1293319696
+    Data3: 1609263747
+    Data4: 818680337
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5428410562854155219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,10 +780,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638210578355239422
+  lastModified: 638210634447414710
   FileSizes:
   - Name: Desktop
-    Value: 6356
+    Value: 6518
   Exists: 1
 --- !u!114 &-4878137018501127185
 MonoBehaviour:
@@ -778,6 +832,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2699
+--- !u!114 &-4252555675027653287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra Esquerda"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra Esquerda"
+  Guid:
+    Data1: 1844889323
+    Data2: 1329195766
+    Data3: -2000053082
+    Data4: -673343987
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4231473311885502251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,7 +1196,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 41408
   Exists: 1
---- !u!114 &-1509904894945460037
+--- !u!114 &-1516492674370372509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1125,14 +1206,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Ataque Garras M\xFAltiplas/Garra M\xFAltipla"
+  m_Name: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra Esquerda"
   m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Ataque Garras M\xFAltiplas/Garra M\xFAltipla"
+  Path: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra Esquerda"
   Guid:
-    Data1: -409991302
-    Data2: 1238557372
-    Data3: -1914026584
-    Data4: 1946379737
+    Data1: -1833868918
+    Data2: 1251020897
+    Data3: -1506299238
+    Data4: -1428363815
   Banks:
   - {fileID: 7424298038131044863}
   IsStream: 0
@@ -1518,19 +1599,22 @@ MonoBehaviour:
   - {fileID: -8218237623420787317}
   - {fileID: 946712926249269888}
   - {fileID: 1453084121633587148}
-  - {fileID: -1509904894945460037}
-  - {fileID: -7799460768505569495}
   - {fileID: 4935506788662710809}
   - {fileID: -768061421938441447}
   - {fileID: 8455572285920768795}
-  - {fileID: 850777298900321365}
   - {fileID: -974920526523757960}
+  - {fileID: -5434257461249722090}
+  - {fileID: 4877199036727849745}
+  - {fileID: -1516492674370372509}
+  - {fileID: -8878126024541169763}
+  - {fileID: -4252555675027653287}
+  - {fileID: -9151546903997602304}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8203484357986439593}
   StringsBanks:
   - {fileID: -4994956805024338359}
-  cacheTime: 638210578355279319
+  cacheTime: 638210634447434656
   cacheVersion: 131603
 --- !u!114 &190900324589402369
 MonoBehaviour:
@@ -1788,33 +1872,6 @@ MonoBehaviour:
     Data4: -864560435
   Banks:
   - {fileID: -5589901718289206581}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &850777298900321365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra"
-  m_EditorClassIdentifier: 
-  Path: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra"
-  Guid:
-    Data1: -1431055872
-    Data2: 1293319696
-    Data3: 1609263747
-    Data4: 818680337
-  Banks:
-  - {fileID: 7424298038131044863}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2334,6 +2391,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4877199036727849745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sombra/Ataque Bra\xE7o/Antecipa\xE7\xE3o Direita"
+  m_EditorClassIdentifier: 
+  Path: "event:/Sombra/Ataque Bra\xE7o/Antecipa\xE7\xE3o Direita"
+  Guid:
+    Data1: 1575155047
+    Data2: 1250866486
+    Data3: 422784140
+    Data4: -1573216223
+  Banks:
+  - {fileID: 7424298038131044863}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4893009569495568204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2740,10 +2824,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Sombra.bank
   Name: Sombra
   StudioPath: bank:/Sombra
-  lastModified: 638210578355279319
+  lastModified: 638210634447434656
   FileSizes:
   - Name: Desktop
-    Value: 297696
+    Value: 306176
   Exists: 1
 --- !u!114 &7559114845393131453
 MonoBehaviour:

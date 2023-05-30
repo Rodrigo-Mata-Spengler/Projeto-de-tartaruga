@@ -69874,11 +69874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <SombraAtaqueGarra>k__BackingField.Path
-      value: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra"
+      value: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra Direita"
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: "<SombraGarraM\xFAltipla>k__BackingField.Path"
-      value: "event:/Sombra/Ataque Garras M\xFAltiplas/Garra M\xFAltipla"
+      value: "event:/Sombra/Ataque Garras M\xFAltiplas/Ataque 1"
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <SombraMorrendo>k__BackingField.Guid.Data1
@@ -69973,12 +69973,20 @@ PrefabInstance:
       value: "event:/Sombra/Ataque Garra/Antecipa\xE7\xE3o Garra"
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraDireita>k__BackingField.Path
+      value: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra Direita"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <SombraFeedBackDanoSombra>k__BackingField.Path
       value: event:/Sombra/Feedback de Dano
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <SombraAntecipacaoEsquerda>k__BackingField.Path
       value: "event:/Sombra/Ataque Bra\xE7o Duplo/Antecipa\xE7\xE3o Esquerda"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraEsquerda>k__BackingField.Path
+      value: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra Esquerda"
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: "<SombraGarraM\xFAltipla>k__BackingField.Guid.Data1"
@@ -70109,6 +70117,22 @@ PrefabInstance:
       value: 331445830
       objectReference: {fileID: 0}
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraDireita>k__BackingField.Guid.Data1
+      value: -756017764
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraDireita>k__BackingField.Guid.Data2
+      value: 1195339333
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraDireita>k__BackingField.Guid.Data3
+      value: -546555755
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraDireita>k__BackingField.Guid.Data4
+      value: 235229679
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <SombraFeedBackDanoSombra>k__BackingField.Guid.Data1
       value: -1690933258
       objectReference: {fileID: 0}
@@ -70139,6 +70163,22 @@ PrefabInstance:
     - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: <SombraAntecipacaoEsquerda>k__BackingField.Guid.Data4
       value: 778577821
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraEsquerda>k__BackingField.Guid.Data1
+      value: 1844889323
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraEsquerda>k__BackingField.Guid.Data2
+      value: 1329195766
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraEsquerda>k__BackingField.Guid.Data3
+      value: -2000053082
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <SombraAtaqueGarraEsquerda>k__BackingField.Guid.Data4
+      value: -673343987
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
@@ -76937,6 +76977,10 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 9978579}
+    - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1622245417, guid: b1f2a7360645ab34a8071584aca5b4c6, type: 3}
       propertyPath: HealthSlider
       value: 

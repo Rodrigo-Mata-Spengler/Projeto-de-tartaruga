@@ -117,7 +117,8 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference SombraAntecipacaoSoco { get; private set; }
     [field: SerializeField] public EventReference SombraAntecipacaoEsquerda { get; private set; }
     [field: SerializeField] public EventReference SombraAntecipacaoDireita { get; private set; }
-    [field: SerializeField] public EventReference SombraAtaqueGarra { get; private set; }
+    [field: SerializeField] public EventReference SombraAtaqueGarraDireita { get; private set; }
+    [field: SerializeField] public EventReference SombraAtaqueGarraEsquerda { get; private set; }
 
 
     public static FMODEvents instance { get; private set; }
