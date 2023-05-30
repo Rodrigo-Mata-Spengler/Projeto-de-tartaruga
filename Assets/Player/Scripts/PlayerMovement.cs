@@ -183,14 +183,15 @@ public class PlayerMovement : MonoBehaviour
            NextTimeToAtaque = Time.time + 1 / AtaqueRate;
            Attack();
            m_Animator.SetInteger("Ataque normal index", 1);
-
+           AttackSound();
 
         }
         else if(AtaqueInput && NextTimeToAtaque > Time.time )
         {
-
+            
             m_Animator.SetInteger("Ataque normal index", 2);
             AttackTimeAmount = 0.5f;
+            AttackSound();
         }
 
         // Debug.LogWarning(jump);
@@ -394,14 +395,7 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if (HaveMagicTrident)
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSoundWater, this.transform.position);
-        }
-        else
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
-        }
+
         
         AttackEnd = false;
 
@@ -425,6 +419,17 @@ public class PlayerMovement : MonoBehaviour
 
     }
           
+    private  void AttackSound()
+    {
+        if (HaveMagicTrident)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSoundWater, this.transform.position);
+        }
+        else
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.AttackSound, this.transform.position);
+        }
+    }
  
     public void GiveArmorAnimation()
     {
