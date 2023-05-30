@@ -104,21 +104,20 @@ public class FMODEvents : MonoBehaviour
    
     [field: Header("Sombra SFX")]
     [field: SerializeField] public EventReference Grito { get; private set; }
-    [field: SerializeField] public EventReference Morrendo { get; private set; }
-    [field: SerializeField] public EventReference SomAreaIsolada { get; private set; }
-    [field: SerializeField] public EventReference FeedBackDanoSombra { get; private set; }
-    [field: SerializeField] public EventReference TentaculoAtaque { get; private set; }
-    [field: SerializeField] public EventReference TentaculoSaindo { get; private set; }
-    [field: SerializeField] public EventReference TentaculoVoltando{ get; private set; }
-    [field: SerializeField] public EventReference GarraMúltipla { get; private set; }
-    [field: SerializeField] public EventReference AntecipaçãoGarra{ get; private set; }
-    [field: SerializeField] public EventReference GolpeGarra{ get; private set; }
-    [field: SerializeField] public EventReference Explosão { get; private set; }
-    [field: SerializeField] public EventReference AntecipacaoSoco { get; private set; }
-
-    [field: SerializeField] public EventReference AntecipacaoEsquerda { get; private set; }
-    [field: SerializeField] public EventReference AntecipacaoDireita { get; private set; }
-    [field: SerializeField] public EventReference AtaqueGarra { get; private set; }
+    [field: SerializeField] public EventReference SombraMorrendo { get; private set; }
+    [field: SerializeField] public EventReference SombraSomAreaIsolada { get; private set; }
+    [field: SerializeField] public EventReference SombraFeedBackDanoSombra { get; private set; }
+    [field: SerializeField] public EventReference SombraTentaculoAtaque { get; private set; }
+    [field: SerializeField] public EventReference SombraTentaculoSaindo { get; private set; }
+    [field: SerializeField] public EventReference SombraTentaculoVoltando { get; private set; }
+    [field: SerializeField] public EventReference SombraGarraMúltipla { get; private set; }
+    [field: SerializeField] public EventReference SombraAntecipaçãoGarra { get; private set; }
+    [field: SerializeField] public EventReference SombraGolpeGarra { get; private set; }
+    [field: SerializeField] public EventReference SombraExplosão { get; private set; }
+    [field: SerializeField] public EventReference SombraAntecipacaoSoco { get; private set; }
+    [field: SerializeField] public EventReference SombraAntecipacaoEsquerda { get; private set; }
+    [field: SerializeField] public EventReference SombraAntecipacaoDireita { get; private set; }
+    [field: SerializeField] public EventReference SombraAtaqueGarra { get; private set; }
 
 
     public static FMODEvents instance { get; private set; }
