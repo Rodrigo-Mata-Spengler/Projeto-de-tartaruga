@@ -10,6 +10,10 @@ public class MenuPause : MonoBehaviour
     private ItensInventory PlayerInventory;
     private GameObject Player;
 
+
+    [Header("Area")]
+    [SerializeField] private MusicArea MusicAreaToGoTo;
+
     [Header("Menu Pause")]
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject InventoryPanel;
@@ -61,10 +65,11 @@ public class MenuPause : MonoBehaviour
         PlayerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<ItensInventory>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
+
+      
     }
     private void Update()
     {
-
 
         if (Input.GetButtonDown("escape") && mortePanel == false)
         {
@@ -138,6 +143,7 @@ public class MenuPause : MonoBehaviour
     //clicar no botão voltar ao menu principal volta ao menu principal
     public void IrMenuPrincipal()
     {
+        
         Saveloader.doOnce = true;
         SceneManager.LoadScene(nomeMenu);
     }
@@ -160,6 +166,7 @@ public class MenuPause : MonoBehaviour
 
     public void VoltarMenu()
     {
+        
         InventoryPanel.SetActive(true);
         mapa.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
@@ -200,5 +207,16 @@ public class MenuPause : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(buttonToSelected);
+    }
+
+    
+    public void GoMainMenuMusic()
+    {
+        
+        //AudioManager.instance.InitializeMusic(FMODEvents.instance.MusicMenu);
+    }
+    public void MudarMusica()
+    {
+        AudioManager.instance.SetMusicArea(MusicAreaToGoTo);
     }
 }

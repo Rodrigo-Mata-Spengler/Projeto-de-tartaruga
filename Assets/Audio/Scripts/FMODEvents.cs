@@ -10,6 +10,7 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Music SFX")]
     [field: SerializeField] public EventReference Music { get; private set; }
+ 
 
     [field: Header("Interface SFX")]
     [field: SerializeField] public EventReference Confirmacao { get; private set; }

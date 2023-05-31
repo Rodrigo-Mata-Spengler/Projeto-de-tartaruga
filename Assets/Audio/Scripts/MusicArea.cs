@@ -7,5 +7,7 @@ public enum MusicArea
     Tumulo = 3,
     Verde = 4,
     Abismo = 5,
+    Menu = 6,
+    Cinematica=7,
 
 }

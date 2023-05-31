@@ -62563,8 +62563,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <MusicMenu>k__BackingField.Path
+      value: "event:/M\xFAsicas/Menu"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <MusicMenu>k__BackingField.Guid.Data1
+      value: 610656234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <MusicMenu>k__BackingField.Guid.Data2
+      value: 1243817706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <MusicMenu>k__BackingField.Guid.Data3
+      value: 335654037
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426315712149230363, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: <MusicMenu>k__BackingField.Guid.Data4
+      value: -257525868
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+--- !u!1 &540396594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1426315711129178632, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+  m_PrefabInstance: {fileID: 540396593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &556235175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68295,7 +68320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.610046
+      value: 50.608
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
@@ -71348,6 +71373,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 593354625}
+    - target: {fileID: 1505023965407851866, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505023965407851866, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505023965407851866, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 540396594}
+    - target: {fileID: 1505023965407851866, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505023965407851866, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MenuPause, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1505023965602174944, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_Pivot.x
       value: 0

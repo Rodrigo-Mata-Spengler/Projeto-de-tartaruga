@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1426315711129178632, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
+      propertyPath: m_TagString
+      value: Audio
+      objectReference: {fileID: 0}
     - target: {fileID: 1426315711129178638, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: musicVolume
       value: 1
@@ -228,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232391287602610950, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
@@ -382,6 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   video: {fileID: 1255617706}
   proximaScena: Cena 1
+  MusicAreaToGoTo: 0
 --- !u!328 &1255617706
 VideoPlayer:
   m_ObjectHideFlags: 0

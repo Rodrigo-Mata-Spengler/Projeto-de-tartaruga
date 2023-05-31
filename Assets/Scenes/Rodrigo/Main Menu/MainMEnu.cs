@@ -15,6 +15,10 @@ public class MainMEnu : MonoBehaviour
     [SerializeField] private string cenaInicio;
 
     private string path;
+
+    [Header("Area")]
+    [SerializeField] private MusicArea MusicAreaToGoTo;
+    [SerializeField] private MusicArea CinematicMusic;
     private void Start()
     {
         TemUmSave();
@@ -58,5 +62,14 @@ public class MainMEnu : MonoBehaviour
     public void SairDoJogo()
     {
         Application.Quit();
+    }
+
+    public void MusicaCinematica()
+    {
+        AudioManager.instance.SetMusicArea(CinematicMusic);
+    }
+    public void MudarMusica()
+    {
+        AudioManager.instance.SetMusicArea(MusicAreaToGoTo);
     }
 }

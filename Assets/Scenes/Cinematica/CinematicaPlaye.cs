@@ -12,16 +12,21 @@ public class CinematicaPlaye : MonoBehaviour
 
     private bool ctrl = false;
 
+
+    [Header("Area")]
+    [SerializeField] private MusicArea MusicAreaToGoTo;
     private void Update()
     {
         if (Input.anyKeyDown)
         {
+            MudarMusica();
             video.Pause();
             SceneManager.LoadScene(proximaScena);
         }
 
         if (!video.isPlaying && ctrl)
         {
+            MudarMusica();
             SceneManager.LoadScene(proximaScena);
         }
     }
@@ -33,5 +38,10 @@ public class CinematicaPlaye : MonoBehaviour
         {
             ctrl = true;
         }
+    }
+
+    public void MudarMusica()
+    {
+        AudioManager.instance.SetMusicArea(MusicAreaToGoTo);
     }
 }
