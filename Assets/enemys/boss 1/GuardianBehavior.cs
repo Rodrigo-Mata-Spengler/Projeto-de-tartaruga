@@ -175,16 +175,18 @@ public class GuardianBehavior : MonoBehaviour
 
         if (tempoDecorridoInicial >= tempoInicialDelay)
         {
-            PlayerObj.GetComponent<Rigidbody2D>().gravityScale = 3;
+            
             PlayerObj.GetComponent<PlayerMovement>().enabled = true;
+            PlayerObj.GetComponent<Animator>().enabled = true;
             status = GuardianStatus.CheckPlayerDistance;
             DoOnce = true;
             awake = false;
         }
         else
         {
-            PlayerObj.GetComponent<Rigidbody2D>().gravityScale = 100;
-
+            PlayerObj.GetComponent<PlayerMovement>().enabled = false;
+            PlayerObj.GetComponent<Rigidbody2D>().velocity = new Vector2(1f, -1.5f);
+            PlayerObj.GetComponent<Animator>().enabled = false;
             if (DoOnce == false)
             {
                 animator.SetTrigger("acorda");
