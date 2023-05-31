@@ -10,11 +10,17 @@ public class VidaBossSombra : MonoBehaviour
 
     [SerializeField] private static string cenaVitoria = "Tela Vitoria temp";
 
+    [SerializeField] private static Transform cabeca;
+
+    [SerializeField] private Transform cabecaRef;
+
     //[SerializeField] private GameObject tileFinal;
 
     private void Start()
     {
         //tileFinal.SetActive(false);
+
+        cabeca = cabecaRef;
     }
     public static void TomarDano(float Dano)
     {
@@ -24,6 +30,7 @@ public class VidaBossSombra : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraFeedBackDanoSombra, cabeca.position);
             vidaAtual = vidaAtual - Dano;
         }
     }

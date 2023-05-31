@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: {fileID: 0}
+  cabecaRef: {fileID: 1711015276}
 --- !u!95 &5539706296573358907
 Animator:
   serializedVersion: 5
@@ -263,6 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: {fileID: 0}
+  cabecaRef: {fileID: 1711015276}
 --- !u!212 &9026873862285198511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -442,6 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: {fileID: 0}
+  cabecaRef: {fileID: 1711015276}
 --- !u!212 &2618813317677992783
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -939,6 +945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: {fileID: 0}
+  cabecaRef: {fileID: 1711015276}
 --- !u!212 &583416441241118286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1035,7 +1043,6 @@ GameObject:
   - component: {fileID: 874045112}
   - component: {fileID: 874045111}
   - component: {fileID: 10893629}
-  - component: {fileID: 4348430340433493329}
   m_Layer: 0
   m_Name: Tentaculo 4
   m_TagString: Untagged
@@ -1132,22 +1139,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &4348430340433493329
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874045110}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.56, y: 1.8}
-  m_Direction: 0
 --- !u!1 &945421183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: {fileID: 0}
+  cabecaRef: {fileID: 1711015276}
 --- !u!212 &3908562027473171992
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1578,6 +1571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: {fileID: 0}
+  cabecaRef: {fileID: 1711015276}
 --- !u!212 &8768643543357853252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1673,7 +1668,6 @@ GameObject:
   - component: {fileID: 1570192736}
   - component: {fileID: 1570192735}
   - component: {fileID: 101815850}
-  - component: {fileID: 2155934225611382034}
   m_Layer: 0
   m_Name: Tentaculo 3
   m_TagString: Untagged
@@ -1770,22 +1764,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &2155934225611382034
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570192734}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.56, y: 1.8}
-  m_Direction: 0
 --- !u!1 &1571117634
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,7 +2082,6 @@ GameObject:
   - component: {fileID: 1787201001}
   - component: {fileID: 1787201000}
   - component: {fileID: 707133339}
-  - component: {fileID: 6242149555371380840}
   m_Layer: 0
   m_Name: Tentaculo 1
   m_TagString: Untagged
@@ -2201,22 +2178,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &6242149555371380840
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787200999}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.56, y: 1.8}
-  m_Direction: 0
 --- !u!1 &1957773098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,7 +2189,6 @@ GameObject:
   - component: {fileID: 1957773100}
   - component: {fileID: 1957773099}
   - component: {fileID: 1796218340}
-  - component: {fileID: 2910242235117958765}
   m_Layer: 0
   m_Name: Tentaculo 2
   m_TagString: Untagged
@@ -2325,22 +2285,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &2910242235117958765
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957773098}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.56, y: 1.8}
-  m_Direction: 0
 --- !u!1 &1133701285839780761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,7 +2296,6 @@ GameObject:
   - component: {fileID: 2016304126583312792}
   - component: {fileID: 5401000107054002383}
   - component: {fileID: 989046703924623170}
-  - component: {fileID: 5046879195052627813}
   m_Layer: 0
   m_Name: Tentaculo 6
   m_TagString: Untagged
@@ -2449,22 +2392,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &5046879195052627813
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133701285839780761}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.56, y: 1.8}
-  m_Direction: 0
 --- !u!1 &1156943189273545525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,7 +2466,6 @@ GameObject:
   - component: {fileID: 80747022507100360}
   - component: {fileID: 2074704910481880361}
   - component: {fileID: 4907019801730534977}
-  - component: {fileID: 1251044179769723826}
   m_Layer: 0
   m_Name: Tentaculo 5
   m_TagString: Untagged
@@ -2636,22 +2562,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &1251044179769723826
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393514098102706558}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.56, y: 1.8}
-  m_Direction: 0
 --- !u!1 &3347346983009685619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,6 +2689,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: {fileID: 0}
+  cabecaRef: {fileID: 1711015276}
 --- !u!212 &1555214759977145564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3420,6 +3332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: {fileID: 0}
+  cabecaRef: {fileID: 1711015276}
 --- !u!95 &8445507800330933977
 Animator:
   serializedVersion: 5
@@ -3504,7 +3418,6 @@ GameObject:
   - component: {fileID: 5411300200417809868}
   - component: {fileID: 9141638632883135201}
   - component: {fileID: 8939625670663118166}
-  - component: {fileID: 9107982163073647362}
   m_Layer: 0
   m_Name: Tentaculo 7
   m_TagString: Untagged
@@ -3601,19 +3514,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &9107982163073647362
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404853009075182656}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.56, y: 1.8}
-  m_Direction: 0
