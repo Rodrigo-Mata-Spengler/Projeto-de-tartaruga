@@ -71,6 +71,11 @@ public class BTZombiTurtle : MonoBehaviour
             }
 
         }
+
+        if(enemyHealth.currentHealth <= 0)
+        {
+            gameObject.GetComponent<BTZombiTurtle>().enabled = false;
+        }
     }
     public void LookAtPlayer()
     {

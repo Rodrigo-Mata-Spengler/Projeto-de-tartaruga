@@ -104,7 +104,7 @@ public class Ataque : MonoBehaviour
         {
             collision.transform.GetComponent<EnemyHitFeedback>().Direction = gameObject.transform.right;
             collision.transform.GetComponent<EnemyHitFeedback>().wasHit = true;
-            collision.transform.GetComponent<EnemyHealth>().Damage(DamageAmount);
+            collision.transform.GetChild(1).GetComponent<EnemyHealth>().Damage(DamageAmount);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.FeedBackDanoPlanta, collision.transform.position);
             Detected = true;
         }
