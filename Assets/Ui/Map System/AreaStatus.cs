@@ -8,6 +8,7 @@ enum StatusMapa { naoDescoberto, descoberto, emArea};
 public class AreaStatus : MonoBehaviour
 {
     [SerializeField] private string nomeCena;
+    [SerializeField] private string nomeCenaSecundaria;
     [SerializeField] public bool descoberto = false;
     [SerializeField] private StatusMapa status = StatusMapa.naoDescoberto;
     [SerializeField] private Color corNaoAtivo = Color.gray;
@@ -19,7 +20,7 @@ public class AreaStatus : MonoBehaviour
     
     private void VerificarCena()
     {
-        if (SceneManager.GetActiveScene().name == nomeCena)
+        if (SceneManager.GetActiveScene().name == nomeCena || SceneManager.GetActiveScene().name == nomeCenaSecundaria)
         {
             if (descoberto == false)
             {

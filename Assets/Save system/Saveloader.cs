@@ -47,7 +47,15 @@ public class Saveloader : MonoBehaviour
             //defini as informações do mapa
             MapControler.mapa1 = data.mapa1;
             MapControler.mapa2 = data.mapa2;
-            MapControler.mapa3 = data.mapa3;
+            MapControler.mapa3_1 = data.mapa3_1;
+            MapControler.mapa3_2 = data.mapa3_2;
+            MapControler.mapa3_3 = data.mapa3_3;
+            MapControler.mapa4_1 = data.mapa4_1;
+            MapControler.mapa4_2 = data.mapa4_2;
+            MapControler.mapa4_3 = data.mapa4_3;
+            MapControler.mapa4_4 = data.mapa4_4;
+            MapControler.mapa5 = data.mapa5;
+            MapControler.mapa6 = data.mapa6;
 
             //defini as informações dos boses
             HordaManager.terminou = data.boss2Derrotado;

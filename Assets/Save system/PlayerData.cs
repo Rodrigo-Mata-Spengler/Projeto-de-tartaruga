@@ -34,7 +34,15 @@ public class PlayerData
     //Informaçãoes de Mapa
     public bool mapa1;
     public bool mapa2;
-    public bool mapa3;
+    public bool mapa3_1;
+    public bool mapa3_2;
+    public bool mapa3_3;
+    public bool mapa4_1;
+    public bool mapa4_2;
+    public bool mapa4_3;
+    public bool mapa4_4;
+    public bool mapa5;
+    public bool mapa6;
 
     //Informações de derrota de boss
     public bool boss1Derrotado;
@@ -74,7 +82,15 @@ public class PlayerData
         //captura as informaçôes do mapa
         mapa1 = MapControler.mapa1;
         mapa2 = MapControler.mapa2;
-        mapa3 = MapControler.mapa3;
+        mapa3_1 = MapControler.mapa3_1;
+        mapa3_2 = MapControler.mapa3_2;
+        mapa3_3 = MapControler.mapa3_3;
+        mapa4_1 = MapControler.mapa4_1;
+        mapa4_2 = MapControler.mapa4_2;
+        mapa4_3 = MapControler.mapa4_3;
+        mapa4_4 = MapControler.mapa4_4;
+        mapa5 = MapControler.mapa5;
+        mapa6 = MapControler.mapa6;
 
         //captura as informações dos boses
         boss1Derrotado = GuardianBehavior.terminou;
