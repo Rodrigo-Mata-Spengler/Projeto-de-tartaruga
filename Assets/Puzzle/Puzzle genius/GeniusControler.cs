@@ -49,6 +49,10 @@ public class GeniusControler : MonoBehaviour
 
     [SerializeField] public bool jogoFinalizado = false;
 
+    private bool doOnce_1 = true;
+    private bool doOnce_2 = true;
+    private bool doOnce_3 = true;
+
     private void Start()
     {
         sequencia = new int[tamanhoSequencia];
@@ -64,7 +68,13 @@ public class GeniusControler : MonoBehaviour
         {
             CriarSequencia();
 
-            //this.GetComponent<SpriteRenderer>().color = Color.green;
+            if (doOnce_1)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.EstatuaGeniusA, this.transform.position);
+
+                doOnce_1 = false;
+            }
+
             status = PuzzleGenius.mostrandoPadrao;
         }
 
@@ -82,6 +92,7 @@ public class GeniusControler : MonoBehaviour
             case PuzzleGenius.esperandoInput:
                 StopCoroutine(PlaySequencia());
                 PermitirInteracao();
+                doOnce_3 = false;
                 break;
             case PuzzleGenius.errou:
                 ErrouPiscando();
@@ -140,6 +151,14 @@ public class GeniusControler : MonoBehaviour
                     rend.sprite = mainVerde;
                     break;
             }
+
+            if (doOnce_3)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.EstatuaGeniusA, this.transform.position);
+
+                doOnce_3 = false;
+            }
+
             sequenciaSuporte++;
             yield return new WaitForSeconds(tempoSequencia);
 
@@ -264,6 +283,12 @@ public class GeniusControler : MonoBehaviour
             verde.GetComponent<InteragirObjeto>().BlocoAceso();
 
             jogoFinalizado = true;
+
+            if (doOnce_2)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Conclusao, this.transform.position);
+                doOnce_2 = false;
+            }
         }
         else
         {
@@ -306,6 +331,8 @@ public class GeniusControler : MonoBehaviour
             rend.sprite = mainApagado;
             quantidadeAtual = 0;
             status = PuzzleGenius.desativado;
+
+            doOnce_1 = true;
         }
     }
 }
