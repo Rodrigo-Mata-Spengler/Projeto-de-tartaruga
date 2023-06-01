@@ -424,6 +424,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7048171047542619616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiente/Ambiente
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiente/Ambiente
+  Guid:
+    Data1: 177341957
+    Data2: 1094048726
+    Data3: 2076675457
+    Data4: 386508675
+  Banks:
+  - {fileID: -3922009092598161671}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 138867
 --- !u!114 &-6907328281665220044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,10 +807,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638211408760259621
+  lastModified: 638211522159085901
   FileSizes:
   - Name: Desktop
-    Value: 6518
+    Value: 6604
   Exists: 1
 --- !u!114 &-4878137018501127185
 MonoBehaviour:
@@ -940,6 +967,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3922009092598161671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambiente.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD GitHub/Build/Desktop/Ambiente.bank
+  Name: Ambiente
+  StudioPath: bank:/Ambiente
+  lastModified: 638211522159085901
+  FileSizes:
+  - Name: Desktop
+    Value: 1567360
+  Exists: 1
 --- !u!114 &-3794189623080288788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,6 +1564,7 @@ MonoBehaviour:
   - {fileID: 7424298038131044863}
   - {fileID: -8981179519507938224}
   - {fileID: 1996724662678084450}
+  - {fileID: -3922009092598161671}
   EditorEvents:
   - {fileID: -3794189623080288788}
   - {fileID: 3007771240278246631}
@@ -1609,12 +1657,13 @@ MonoBehaviour:
   - {fileID: -8878126024541169763}
   - {fileID: -4252555675027653287}
   - {fileID: -9151546903997602304}
+  - {fileID: -7048171047542619616}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8203484357986439593}
   StringsBanks:
   - {fileID: -4994956805024338359}
-  cacheTime: 638211439596038332
+  cacheTime: 638211522159085901
   cacheVersion: 131603
 --- !u!114 &190900324589402369
 MonoBehaviour:

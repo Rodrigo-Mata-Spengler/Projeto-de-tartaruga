@@ -278,11 +278,13 @@ public class Bruxa : MonoBehaviour
             PlayerInventory.coral -= Cost[1];
 
             //give more mana
-            PlayerEstamina.MaxEstamina = PlayerEstamina.MaxEstamina * 2;
+            PlayerEstamina.MaxEstamina = PlayerEstamina.MaxEstamina = 4;
+            PlayerEstamina.CurrentEstamina = PlayerEstamina.MaxEstamina;
 
-            PlayerEstamina.GiveEstamina(5);
+            PlayerEstamina.hasEstamina2 = true;
+            PlayerEstamina.hasEstamina = false;
 
-           Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<Animator>().enabled = true;
             StoreBruxa.SetActive(false);
             inputPressed = false;
