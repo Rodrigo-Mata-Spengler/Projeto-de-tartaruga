@@ -82,6 +82,11 @@ public class MoscaBehavior : MonoBehaviour
             case MoscaStatus.desativado:
                 break;
         }
+
+        if (GetComponent<EnemyHealth>().currentHealth <= 0)
+        {
+            anim.SetTrigger("Morte");
+        }
     }
 
     //mosca em patrulha (andando de um lado para o outro)

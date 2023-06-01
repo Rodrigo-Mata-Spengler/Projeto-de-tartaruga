@@ -109,15 +109,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 32894e0ac6225574fb61caa2665f7727, type: 3}
+  m_Sprite: {fileID: -1241125996, guid: 2b0035e62d30f5349aeda4c0cf48062a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &1218761712
@@ -206,7 +206,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddForce: 1
   wasHit: 0
-  secondsToDisable: 0
   ForceUp: 0
   ForceRight: 0
   Direction: {x: 0, y: 0}
@@ -475,6 +474,7 @@ MonoBehaviour:
   - {fileID: 845562266373629971, guid: bd405c68b2fdb344ba6f1679eb3943ae, type: 3}
   - {fileID: 4448061109165272105, guid: 403d4decb27133942a068f68115a1376, type: 3}
   TimeToDestroyDelay: 0.3
+  tempoParaMorte: 0
 --- !u!114 &1533152684323426111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,7 +520,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddForce: 0
   wasHit: 0
-  secondsToDisable: 0.3
   ForceUp: 0
   ForceRight: 0
   Direction: {x: 0, y: 0}
