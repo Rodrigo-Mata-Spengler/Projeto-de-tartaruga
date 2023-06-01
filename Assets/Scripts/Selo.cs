@@ -8,6 +8,8 @@ public class Selo : MonoBehaviour
     [Header("Status")]
     [SerializeField] private Habilidade status = Habilidade.Nada;
 
+    [SerializeField] private HabilidadesPlayer habiPlayer;
+
     private GameObject PLayer;
 
     public bool Detected = false;
@@ -40,12 +42,13 @@ public class Selo : MonoBehaviour
 
                 case Habilidade.Dash:
                     PLayer.GetComponent<Dash>().enabled = true;
-                    
+                    habiPlayer.ShowHabilidade(0);
                     break;
 
                 case Habilidade.DoubleJump:
                     PLayer.GetComponent<PlayerMovement>().haveDoubleJump = true;
                     PLayer.GetComponent<Estamina>().enabled = true;
+                    habiPlayer.ShowHabilidade(2);
                     break;
 
                 case Habilidade.Blast:
