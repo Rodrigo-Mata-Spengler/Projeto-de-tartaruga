@@ -22,12 +22,12 @@ public class EnemyHealth : MonoBehaviour
     private float TimeToDestroy = 0f;
     private bool Droped = false;
 
+    [SerializeField] private float tempoParaMorte = 0f;
+
     private int itemDropNumber; // the position of a item drop in the array
     private void Start()
     {
-        currentHealth = MaxHealth;
-
-        
+        currentHealth = MaxHealth;  
     }
     
     private void Update()
@@ -76,20 +76,16 @@ public class EnemyHealth : MonoBehaviour
                     itemDropNumber = Random.Range(0, ItensPrefabs.Length);
                     DropItem(ItensPrefabs[itemDropNumber]);
                     break;
-            }
-
-               
-
-            
+            }  
         }
 
         if(Droped && Time.time > TimeToDestroy)
         {
             if (EnemyTag == EnemyTag.Planta)
             {
-                Destroy(transform.parent.gameObject);
+                Destroy(transform.parent.gameObject, tempoParaMorte);
             }
-            Destroy(gameObject);
+            Destroy(gameObject, tempoParaMorte);
         }
 
     }

@@ -54,7 +54,7 @@ public class PlantaCarnivora : MonoBehaviour
                 break;
         }
 
-        if (GetComponent<EnemyHealth>().currentHealth <= 0)
+        if (transform.GetChild(1).GetComponent<EnemyHealth>().currentHealth <= 0)
         {
             anim.SetTrigger("morte");
         }
