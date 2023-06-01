@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 7854020169226348041}
   - component: {fileID: 7869436001506505369}
   - component: {fileID: 8374645391558924145}
+  - component: {fileID: 1925259129}
   m_Layer: 0
   m_Name: Npc Witch
   m_TagString: Witch
@@ -230,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 7854020169226348019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -397.77, y: -378.64, z: 3.1333656}
-  m_LocalScale: {x: 5.6757, y: 5.6757, z: 5.6757}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2727332054079043670}
@@ -275,11 +276,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1406662473
-  m_SortingLayer: -1
+  m_SortingLayerID: -1888708261
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
-  m_Color: {r: 0.34756187, g: 0.9150943, b: 0.22877358, a: 1}
+  m_Sprite: {fileID: 2117314457, guid: cc81a3bd66a0cef4d9e9ae82212a675b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -306,7 +307,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 4, y: 4.0039067}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -342,13 +343,17 @@ MonoBehaviour:
     em troca."
   - Estou precisando de uns ingredientes especiais para um projeto pessoal.
   - "Se voc\xEA os trouxer para mim eu te ajudo com alguma coisa."
+  AfterFinishedText: ...
+  Sold: 0
   typingSpeed: 0.04
   textLocation: 0
   StartTyping: 0
   playerDetected: 0
-  Cost: 1400000004000000
+  Cost: 0600000014000000
   IsStore: 1
   StoreBruxa: {fileID: 0}
+  OnStore: 0
+  hadConversation: 0
 --- !u!114 &8374645391558924145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,3 +385,24 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 0.4
   OverrideMaxDistance: 5.3
+--- !u!95 &1925259129
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854020169226348019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4de1dbe5fc9230a419138e82a2576175, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
