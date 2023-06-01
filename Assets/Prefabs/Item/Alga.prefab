@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4448061109165272107}
   - component: {fileID: 4448061109165272106}
   - component: {fileID: 5944263120814127350}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Alga
   m_TagString: Alga
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4448061109165272105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -34.49, y: -1.38, z: -0.0851248}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.479115, y: 0.479115, z: 0.479115}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4448061110406163381}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4448061110406163381}
   - component: {fileID: 4448061110406163383}
   - component: {fileID: 4448061110406163382}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4448061110801136598}
   - component: {fileID: 4448061110801136599}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 6153198011673902573}
   - component: {fileID: 5744028836281519892}
   - component: {fileID: 8060153918487263819}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: itemVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
