@@ -46,6 +46,7 @@ public class MoscaBehavior : MonoBehaviour
     [Header("Mosca Tonta")]
     [SerializeField] private float tempoEsperaTonta = 0;
     private float tempoTonta = 0;
+    private bool moscatontabool = true;
 
     private EventInstance Mosca;
 
@@ -58,8 +59,6 @@ public class MoscaBehavior : MonoBehaviour
         CriarPontoPatrulha();
 
         status = MoscaStatus.patrulha;
-
-        Mosca = AudioManager.instance.CreateEventInstance(FMODEvents.instance.SomMosca);
     }
 
     private void Update()
@@ -74,6 +73,7 @@ public class MoscaBehavior : MonoBehaviour
                 break;
             case MoscaStatus.kamikase:
                 AtaqueMosca();
+                moscatontabool = true;
                 break;
             case MoscaStatus.tonto:
                 anim.SetBool("mosca_tonta", true);
@@ -220,7 +220,13 @@ public class MoscaBehavior : MonoBehaviour
             status = MoscaStatus.alerta;
             anim.SetBool("mosca_tonta", false);
         }
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.TontaMosca, transform.position);
+
+        if (moscatontabool)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.TontaMosca, transform.position);
+            moscatontabool = false;
+        }
     }
+        
     
 }
