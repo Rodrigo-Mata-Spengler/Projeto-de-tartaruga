@@ -19803,7 +19803,7 @@ PrefabInstance:
       objectReference: {fileID: 1931810549}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -125.239685
+      value: -125.23871
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20553,6 +20553,25 @@ PrefabInstance:
       propertyPath: conversationText
       value: 
       objectReference: {fileID: 2130716923}
+    - target: {fileID: 2320176207893085793, guid: 2f7dead28585d8f47b26ff216fffddb9, type: 3}
+      propertyPath: NpcWords.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320176207893085793, guid: 2f7dead28585d8f47b26ff216fffddb9, type: 3}
+      propertyPath: NpcWords.Array.data[0]
+      value: O dia da vida era o momento mais sagrado para nossa tribo, novas vidas
+        florescendo de ovos por todos os lados
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320176207893085793, guid: 2f7dead28585d8f47b26ff216fffddb9, type: 3}
+      propertyPath: NpcWords.Array.data[1]
+      value: agora as pequenas nascem e morrem sem sequer ouvir o quebrar das ondas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320176207893085793, guid: 2f7dead28585d8f47b26ff216fffddb9, type: 3}
+      propertyPath: NpcWords.Array.data[2]
+      value: "haver\xE1 talvez um dia em que elas ouvir\xE3o novamente, sentir\xE3o
+        a areia dourada em seus p\xE9s, caminhar\xE3o at\xE9 as ondas e mergulhar
+        infinitamente na imensid\xE3o azul"
+      objectReference: {fileID: 0}
     - target: {fileID: 3738937184821887230, guid: 2f7dead28585d8f47b26ff216fffddb9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -80692,6 +80711,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 594280103285562218, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594280103285562218, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594280103285562218, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594280103285562218, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1505023965602174944, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -80779,6 +80814,22 @@ PrefabInstance:
     - target: {fileID: 1505023965602174972, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115329832914531754, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115329832914531754, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115329832914531754, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115329832914531754, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8100871154660726757, guid: 04a4fc5d2b7d29745aabea8fb2bf5b2b, type: 3}
       propertyPath: m_AnchorMax.x
