@@ -28,6 +28,9 @@ public class HabilidadesPlayer : MonoBehaviour
     [SerializeField] private string texto_Pulo_Duplo;
     [SerializeField] private GameObject button_Pulo_Duplo;
 
+    public bool teste1 = false;
+    public int teste2;
+
     public void ShowHabilidade(int id)
     {
         button_Dash.SetActive(false);
@@ -54,4 +57,15 @@ public class HabilidadesPlayer : MonoBehaviour
         }
         anim_panel.SetTrigger("Show");
     }
+
+    private void Update()
+    {
+        if (teste1)
+        {
+            ShowHabilidade(teste2);
+
+            teste1 = false;
+        }
+    }
+
 }
