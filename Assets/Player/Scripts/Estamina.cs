@@ -16,6 +16,8 @@ public class Estamina : MonoBehaviour
 
     public int AttackToGetEstamina = 0;
 
+    public bool manaInfinita = false;
+
    [HideInInspector] public int amountOfHitToGiveEstamina = 0;
     private void Start()
     {
@@ -71,5 +73,13 @@ public class Estamina : MonoBehaviour
     {
         HudControler.EnableMana(true);
         hasEstamina = true;
+    }
+
+    private void Update()
+    {
+        if (manaInfinita)
+        {
+            CurrentEstamina = 10;
+        }
     }
 }

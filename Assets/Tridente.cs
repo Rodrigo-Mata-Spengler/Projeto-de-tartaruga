@@ -7,6 +7,8 @@ public class Tridente : MonoBehaviour
     public bool Detected = false;
     private GameObject Canvas;
 
+    [SerializeField] private HabilidadesPlayer haboPlayer;
+
     private GameObject PlayerObj;
     private void Start()
     {
@@ -23,6 +25,8 @@ public class Tridente : MonoBehaviour
             PlayerObj.GetComponent<PlayerMovement>().HaveMagicTrident = true;
             PlayerObj.GetComponent<Dash>().enabled = true;
             PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
+
+            haboPlayer.ShowHabilidade(1);
 
             Destroy(this.gameObject);
         }

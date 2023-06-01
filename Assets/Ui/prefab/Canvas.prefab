@@ -761,7 +761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &573694090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -888,42 +888,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: AtivarCheat
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7002881335624832508
 MonoBehaviour:
@@ -3769,13 +3733,14 @@ GameObject:
   - component: {fileID: 3755552055517442942}
   - component: {fileID: 1393084835024607483}
   - component: {fileID: 742209980589334335}
+  - component: {fileID: 7840948533860495874}
   m_Layer: 5
   m_Name: HabilidadePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1376838596228149837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3860,6 +3825,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7840948533860495874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190528721140449072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25a57726e792f14981771327ca92939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  painel: {fileID: 190528721140449072}
+  imagem_Habilidade: {fileID: 4829564301462172439}
+  texto_Habilidade: {fileID: 6271550133646031830}
+  button_habilidade: {fileID: 7019443880607709413}
+  anim_panel: {fileID: 742209980589334335}
+  imagem_Dash: {fileID: 21300000, guid: d6fe9c6d4b7d0404990caf94466e2189, type: 3}
+  texto_Dash: "Impulso M\xE1gico, com o novo tridente de o impulso para percorrer
+    distancias maiores e mais r\xE1pido"
+  button_Dash: {fileID: 0}
+  imagem_Magia: {fileID: 21300000, guid: 233ac4cbeedb8154499f0ed846f12a1b, type: 3}
+  texto_Magia: "Conjura\xE7\xE3o de agua, use o poder do mar para conjurar um tridente
+    de \xE1gua capaz de dar dano aos inimigos e abrir caminhos"
+  button_Magia: {fileID: 0}
+  imagem_Pulo_Duplo: {fileID: 21300000, guid: f5d60d19245620c41a37fe5400b777cb, type: 3}
+  texto_Pulo_Duplo: "Caminhada da \xE1gua, quando no ar pule mais uma vez, como se
+    estivesse no fundo do mar para alcan\xE7ar alturas maiores."
+  button_Pulo_Duplo: {fileID: 0}
 --- !u!1 &239057331038383905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4291,9 +4285,9 @@ RectTransform:
   m_Father: {fileID: 7933668681118398075}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -810}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1107.4482, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8342377418407357613
@@ -14263,7 +14257,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 140}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4401246461709408031
 CanvasRenderer:
@@ -14293,7 +14287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d6fe9c6d4b7d0404990caf94466e2189, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19238,9 +19232,9 @@ RectTransform:
   m_Father: {fileID: 7933668681118398075}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -270}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1107.448, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9036033949664637311
@@ -19356,7 +19350,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -24123,7 +24117,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

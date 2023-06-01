@@ -15,6 +15,8 @@ public class PuzzleSequencioa : MonoBehaviour
 
     [SerializeField] private GameObject blocoDireita;
     [SerializeField] private GameObject blocoEsquerda;
+
+    private bool doOnce = false;
     
     private void Start()
     {
@@ -37,6 +39,15 @@ public class PuzzleSequencioa : MonoBehaviour
         {
             ChangeState();
             ChangeStates();
+
+
+            if (doOnce)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.EstatuaGeniusA, this.transform.position);
+
+                doOnce = false;
+            }
+            
         }
     }
 
@@ -56,6 +67,7 @@ public class PuzzleSequencioa : MonoBehaviour
                 state = false;
             }
         }
+        doOnce = false;
     }
 
     public void Aceto()

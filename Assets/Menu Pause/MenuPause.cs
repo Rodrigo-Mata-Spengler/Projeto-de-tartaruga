@@ -226,4 +226,18 @@ public class MenuPause : MonoBehaviour
     {
         AudioManager.instance.SetMusicArea(MusicAreaToGoTo);
     }
+
+    public void GiveCheat()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        player.GetComponent<Health>().enabled = false;
+        player.GetComponent<Blast>().enabled = true;
+        player.GetComponent<Dash>().enabled = true;
+        player.GetComponent<Estamina>().manaInfinita = true;
+        player.GetComponent<PlayerMovement>().haveDoubleJump = true;
+
+        player.transform.GetChild(2).gameObject.GetComponent<Ataque>().DamageAmount = 50;
+        player.transform.GetChild(2).gameObject.GetComponent<Ataque>().DamageMagicTridentAmount = 50;
+    }
 }

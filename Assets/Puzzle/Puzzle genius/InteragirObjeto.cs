@@ -13,13 +13,14 @@ public class InteragirObjeto : MonoBehaviour
 
     [SerializeField] private Sprite aceso;
 
-    [SerializeField] private Color cor;
-
     private bool PlayerIn = false;
 
     public bool permitirInteracao = false;
 
     private SpriteRenderer rend;
+
+    [SerializeField] private int som = 0;
+    private bool doOnce = true;
 
     private void Start()
     {
@@ -34,8 +35,28 @@ public class InteragirObjeto : MonoBehaviour
         {
             ctrl.InteracaoObjeto(numeroBloco);
 
-            // this.GetComponent<SpriteRenderer>().color = cor;
             BlocoAceso();
+
+            if (doOnce)
+            {
+                switch (som)
+                {
+                    case 0:
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.EstatuaGeniusA, this.transform.position);
+                        break;
+                    case 1:
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.EstatuaGeniusB, this.transform.position);
+                        break;
+                    case 2:
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.EstatuaGeniusC, this.transform.position);
+                        break;
+                    case 3:
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.EstatuaGeniusD, this.transform.position);
+                        break;
+                }
+
+                doOnce = false;
+            } 
         }
     }
 
@@ -51,6 +72,8 @@ public class InteragirObjeto : MonoBehaviour
     public void BlocoApagado()
     {
         rend.sprite = apagado;
+
+        doOnce = true;
     }
 
     public void BlocoAceso()
