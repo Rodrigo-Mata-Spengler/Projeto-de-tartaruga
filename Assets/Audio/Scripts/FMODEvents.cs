@@ -121,6 +121,10 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference SombraAtaqueGarraDireita { get; private set; }
     [field: SerializeField] public EventReference SombraAtaqueGarraEsquerda { get; private set; }
 
+    [field: Header("tocha SFX")]
+    [field: SerializeField] public EventReference TochaAcende { get; private set; }
+    [field: SerializeField] public EventReference TochaApaga { get; private set; }
+
 
     public static FMODEvents instance { get; private set; }
 
