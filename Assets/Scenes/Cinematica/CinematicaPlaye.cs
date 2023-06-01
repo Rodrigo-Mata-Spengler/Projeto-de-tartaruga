@@ -17,12 +17,12 @@ public class CinematicaPlaye : MonoBehaviour
     [SerializeField] private MusicArea MusicAreaToGoTo;
     private void Update()
     {
-        if (Input.anyKeyDown)
+       /* if (Input.anyKeyDown)
         {
             MudarMusica();
             video.Pause();
             SceneManager.LoadScene(proximaScena);
-        }
+        }*/
 
         if (!video.isPlaying && ctrl)
         {

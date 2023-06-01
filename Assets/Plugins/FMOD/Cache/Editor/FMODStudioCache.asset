@@ -424,33 +424,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7118671544166320460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Protagonista/Pulo Duplo
-  m_EditorClassIdentifier: 
-  Path: event:/Protagonista/Pulo Duplo
-  Guid:
-    Data1: 600346370
-    Data2: 1165205870
-    Data3: 876387203
-    Data4: -1609903206
-  Banks:
-  - {fileID: 1175608730412097030}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-7048171047542619616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,10 +807,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638212171717257789
+  lastModified: 638212298872764723
   FileSizes:
   - Name: Desktop
-    Value: 6652
+    Value: 6604
   Exists: 1
 --- !u!114 &-4878137018501127185
 MonoBehaviour:
@@ -1685,13 +1658,12 @@ MonoBehaviour:
   - {fileID: -4252555675027653287}
   - {fileID: -9151546903997602304}
   - {fileID: -7048171047542619616}
-  - {fileID: -7118671544166320460}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8203484357986439593}
   StringsBanks:
   - {fileID: -4994956805024338359}
-  cacheTime: 638212241701790148
+  cacheTime: 638212298873858314
   cacheVersion: 131603
 --- !u!114 &190900324589402369
 MonoBehaviour:
@@ -2025,10 +1997,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638212171717637274
+  lastModified: 638212298873858314
   FileSizes:
   - Name: Desktop
-    Value: 145440
+    Value: 142112
   Exists: 1
 --- !u!114 &1197144736914395910
 MonoBehaviour:
@@ -2767,10 +2739,10 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/M\xFAsicas.bank"
   Name: "M\xFAsicas"
   StudioPath: "bank:/M\xFAsicas"
-  lastModified: 638212241701790148
+  lastModified: 638212298873758625
   FileSizes:
   - Name: Desktop
-    Value: 11021600
+    Value: 11837728
   Exists: 1
 --- !u!114 &6550751395421758007
 MonoBehaviour:
