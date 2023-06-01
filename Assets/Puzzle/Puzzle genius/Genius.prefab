@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b8659efa0970e409028b3bd6071070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f: {fileID: 6267810737833102432, guid: 1e2384d78f188cd4f93c063f754c0f17, type: 3}
+  f: {fileID: 8244052161180774483}
   tag: Player
 --- !u!1 &8850688959442770269
 GameObject:
@@ -841,6 +841,11 @@ PrefabInstance:
 --- !u!4 &5781412690231853341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8406190112301907246, guid: 1e2384d78f188cd4f93c063f754c0f17, type: 3}
+  m_PrefabInstance: {fileID: 2635588107119066163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8244052161180774483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6267810737833102432, guid: 1e2384d78f188cd4f93c063f754c0f17, type: 3}
   m_PrefabInstance: {fileID: 2635588107119066163}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3559286481589313036
