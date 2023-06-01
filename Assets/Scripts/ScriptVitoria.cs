@@ -5,11 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class ScriptVitoria : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField] private Animator anim_fade_white;
+
+    [SerializeField] private float tempo_espera = 0;
+    private float tempo_para_espera = 0;
+
+    private bool ctrl = false;
+
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (tempo_para_espera <= Time.time && ctrl)
         {
             SceneManager.LoadScene("Tela Vitoria temp");
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            tempo_para_espera = tempo_espera + Time.time;
+            anim_fade_white.SetTrigger("fade");
+            ctrl = true;
+        }
+    }
+
+
+
 }
