@@ -380,8 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1171594b0369ff44ea81c114a06e7d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTag: 
-  Dano: 0
+  playerTag: Player
+  Dano: 1
 --- !u!1 &474642950
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  Dano: 2
+  Dano: 1
 --- !u!1 &576649777
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  Dano: 2
+  Dano: 1
 --- !u!212 &736810465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1506,8 +1506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1171594b0369ff44ea81c114a06e7d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTag: 
-  Dano: 0
+  playerTag: Player
+  Dano: 1
 --- !u!1 &1340865846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,7 +1828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  Dano: 2
+  Dano: 1
 --- !u!212 &1571117636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2933,9 +2933,9 @@ MonoBehaviour:
   posInicialPinca2: {x: -121.09829, y: 247.0323, z: 0}
   posFinalPinca2: {x: -128.14828, y: 229.5323, z: 0}
   tempoOffSet: 0.5
-  velocidadeAtaque1: 60
+  velocidadeAtaque1: 50
   quantidadeAtaque1: 6
-  esperaAtaque1: 0
+  esperaAtaque1: 2
   pinca3: {fileID: 268190547}
   posInicialPinca3: {x: -149.61829, y: 222.4423, z: 0}
   posIntermediariaPinca3: {x: -144.87828, y: 222.4423, z: 0}
@@ -2987,45 +2987,45 @@ MonoBehaviour:
   animTentaculo1: {fileID: 707133339}
   posTentaculo1: {x: -140.8383, y: 219.91231, z: 0}
   posTentaculo1Final: {x: -140.8383, y: 221.48232, z: 0}
-  posInicialTentaculo1: {x: -140.8383, y: 217.9723, z: 0}
+  posInicialTentaculo1: {x: -140.8383, y: 215.9, z: 0}
   posFinalTentaculo1: {x: -140.8383, y: 223.01231, z: 0}
   tentaculo2: {fileID: 1957773098}
   animTentaculo2: {fileID: 1796218340}
   posTentaculo2: {x: -138.0883, y: 219.9123, z: 0}
   posTentaculo2Final: {x: -138.0883, y: 221.4823, z: 0}
-  posInicialTentaculo2: {x: -138.0883, y: 217.9723, z: 0}
+  posInicialTentaculo2: {x: -138.0883, y: 215.9, z: 0}
   posFinalTentaculo2: {x: -138.0883, y: 223.0123, z: 0}
   tentaculo3: {fileID: 1570192734}
   animTentaculo3: {fileID: 101815850}
   posTentaculo3: {x: -135.3383, y: 219.9123, z: 0}
   posTentaculo3Final: {x: -135.3383, y: 221.4823, z: 0}
-  posInicialTentaculo3: {x: -135.3383, y: 217.9723, z: 0}
+  posInicialTentaculo3: {x: -135.3383, y: 215.9, z: 0}
   posFinalTentaculo3: {x: -135.3383, y: 223.0123, z: 0}
   tentaculo4: {fileID: 874045110}
   animTentaculo4: {fileID: 10893629}
   posTentaculo4: {x: -132.5883, y: 219.91231, z: 0}
   posTentaculo4Final: {x: -132.5883, y: 221.48232, z: 0}
-  posInicialTentaculo4: {x: -132.5883, y: 217.9723, z: 0}
+  posInicialTentaculo4: {x: -132.5883, y: 215.9, z: 0}
   posFinalTentaculo4: {x: -132.5883, y: 223.0123, z: 0}
   tentaculo5: {fileID: 1393514098102706558}
   animTentaculo5: {fileID: 4907019801730534977}
   posTentaculo5: {x: -129.8383, y: 219.9123, z: 0}
   posTentaculo5Final: {x: -129.8383, y: 221.4823, z: 0}
-  posInicialTentaculo5: {x: -129.8383, y: 217.9723, z: 0}
+  posInicialTentaculo5: {x: -129.8383, y: 215.9, z: 0}
   posFinalTentaculo5: {x: -129.8383, y: 223.0123, z: 0}
   tentaculo6: {fileID: 1133701285839780761}
   animTentaculo6: {fileID: 989046703924623170}
   posTentaculo6: {x: -127.0883, y: 219.9123, z: 0}
   posTentaculo6Final: {x: -127.0883, y: 221.4823, z: 0}
-  posInicialTentaculo6: {x: -127.0883, y: 217.9723, z: 0}
+  posInicialTentaculo6: {x: -127.0883, y: 215.9, z: 0}
   posFinalTentaculo6: {x: -127.0883, y: 223.0123, z: 0}
   tentaculo7: {fileID: 8404853009075182656}
   animTentaculo7: {fileID: 8939625670663118166}
   posTentaculo7: {x: -124.3383, y: 219.9123, z: 0}
   posTentaculo7Final: {x: -124.3383, y: 221.4823, z: 0}
-  posInicialTentaculo7: {x: -124.3383, y: 217.9723, z: 0}
+  posInicialTentaculo7: {x: -124.3383, y: 215.9, z: 0}
   posFinalTentaculo7: {x: -124.3383, y: 223.0123, z: 0}
-  velocidadeAtaque5: 5
+  velocidadeAtaque5: 16
   velocidadePreparoAtaque5: 2
   tempoEsperaAtaque5: 1.5
   tempoDuracaoAtaque5: 1.5

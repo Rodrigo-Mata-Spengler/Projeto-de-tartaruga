@@ -1510,6 +1510,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1029020297}
     m_Modifications:
+    - target: {fileID: 985417169920358755, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 985417169920358755, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 985417169920358755, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1099819544390734267, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1668,6 +1680,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Npc Ferreiro
       objectReference: {fileID: 0}
+    - target: {fileID: 7867988748576573957, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_Color.a
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867988748576573957, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingLayer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867988748576573957, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867988748576573957, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1442851843
+      objectReference: {fileID: 0}
     - target: {fileID: 7869436001575737635, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: npcNameText
       value: 
@@ -1691,6 +1719,18 @@ PrefabInstance:
     - target: {fileID: 7869436001575737635, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: Cost.Array.data[0]
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557734890138351980, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633004065549714117, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633004065549714117, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
@@ -7865,6 +7905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f31fd1a5cc62c6040b3b0eeefcea6f67, type: 3}
+--- !u!95 &693824823 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5598826424677453773, guid: f31fd1a5cc62c6040b3b0eeefcea6f67, type: 3}
+  m_PrefabInstance: {fileID: 693824822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &697151017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8385,7 +8430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07720947
+      value: 0.076934814
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: orthographic size
@@ -8530,12 +8575,16 @@ PrefabInstance:
       value: "NextScene Intera\xE7\xE3o"
       objectReference: {fileID: 0}
     - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 693824823}
+    - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: conetion
       value: 
       objectReference: {fileID: 11400000, guid: 6a41b769ef90afe489bb918362a507f4, type: 2}
     - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: targetSceneName
-      value: Cena 2
+      value: Cena2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}

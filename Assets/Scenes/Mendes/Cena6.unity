@@ -6021,22 +6021,6 @@ PrefabInstance:
       propertyPath: titulo
       value: 
       objectReference: {fileID: 2029407163}
-    - target: {fileID: 874045110, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1570192734, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787200999, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957773098, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 107558238979907934, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: tileFinal
       value: 
@@ -6049,14 +6033,6 @@ PrefabInstance:
       propertyPath: tileFinal
       value: 
       objectReference: {fileID: 1420075250}
-    - target: {fileID: 1133701285839780761, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1393514098102706558, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1526652149823234837, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: tileFinal
       value: 
@@ -6067,55 +6043,11 @@ PrefabInstance:
       objectReference: {fileID: 2034975688}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: vidaMaxima
-      value: 1500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: esperaAtaque1
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: livreArbitrio
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: velocidadeAtaque1
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: velocidadeAtaque5
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: posInicialTentaculo1.y
-      value: 215.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: posInicialTentaculo2.y
-      value: 215.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: posInicialTentaculo3.y
-      value: 215.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: posInicialTentaculo4.y
-      value: 215.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: posInicialTentaculo5.y
-      value: 215.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: posInicialTentaculo6.y
-      value: 215.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: posInicialTentaculo7.y
-      value: 215.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5065642458161801565, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: vidaParaGrito
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5168740652458071232, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: tileFinal
@@ -6133,10 +6065,6 @@ PrefabInstance:
       propertyPath: tileFinal
       value: 
       objectReference: {fileID: 1420075250}
-    - target: {fileID: 8404853009075182656, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8643338813153908917, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -72816,7 +72744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377818589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 610.51, y: 276.12, z: 0}
+  m_LocalPosition: {x: 661.5, y: 307.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72836,7 +72764,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.5258904, y: -1.5497339}
+  m_Offset: {x: 0.30575562, y: 0.6978884}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -72847,7 +72775,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 27.252495, y: 2.4405322}
+  m_Size: {x: 3.4920654, y: 11.559412}
   m_EdgeRadius: 0
 --- !u!114 &1377818592
 MonoBehaviour:
