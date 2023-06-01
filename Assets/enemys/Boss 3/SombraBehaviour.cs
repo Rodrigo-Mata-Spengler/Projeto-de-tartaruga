@@ -46,11 +46,13 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posInicialPinca1;//posição inicial do ataque
     [SerializeField] private Vector3 posFinalPinca1;//posição final do ataque
     private bool descendoPinca1;//controle de direção 
+    [Space]
     //Pinca 2 :
     [SerializeField] private GameObject pinca2;//O game object da pinça
     [SerializeField] private Vector3 posInicialPinca2;//posição inicial do ataque
     [SerializeField] private Vector3 posFinalPinca2;//posição final do ataque
     private bool descendoPinca2;//controle de direção 
+    [Space]
     //Espera para alternar o o ataque da pinça 2
     [SerializeField] private float tempoOffSet = 0;//OffSet de tempo entre as duas pinças
     private float tempoProximoOffset = 0;
@@ -70,15 +72,18 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posIntermediariaPinca3;//posição de espera do ataque
     [SerializeField] private Vector3 posfinalPinca3;//posição final do ataque
     [SerializeField] private Animator anim_pinca3;
+    [Space]
     //Pinça 4
     [SerializeField] private GameObject pinca4;//O game object da pinça
     [SerializeField] private Vector3 posInicialPinca4;//posição inicial do ataque
     [SerializeField] private Vector3 posIntermediariaPinca4;//posição de espera do ataque
     [SerializeField] private Vector3 posfinalPinca4;//posição final do ataque
     [SerializeField] private Animator anim_pinca4;
+    [Space]
     //tempo de espera na posição intermediaria antes do ataque
     [SerializeField] private float tempoEsperaAtaque2 = 0;
     private float tempoEsperaProximoAtaque2 = 0;
+    [Space]
     //geral ataque 2
     [SerializeField] private float velocidadePreparoAtaque2 = 0;
     [SerializeField] private float velocidadeAtaque2 = 0;
@@ -95,16 +100,19 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posIntermediariaPinca5;//posição de espera do ataque
     [SerializeField] private Vector3 posfinalPinca5;//posição final do ataque
     [SerializeField] private Animator anim_pinca5;
+    [Space]
     //pinça 6
     [SerializeField] private GameObject pinca6;//O game object da pinça
     [SerializeField] private Vector3 posInicialPinca6;//posição inicial do ataque
     [SerializeField] private Vector3 posIntermediariaPinca6;//posição de espera do ataque
     [SerializeField] private Vector3 posfinalPinca6;//posição final do ataque
     [SerializeField] private Animator anim_pinca6;
+    [Space]
     //tempo de espera na posição intermediaria antes do ataque
     [SerializeField] private float tempoEsperaAtaque3 = 0;
     private float tempoEsperaProximoAtaque3 = 0;
     //geral ataque 3
+    [Space]
     [SerializeField] private float velocidadePreparoAtaque3 = 0;
     [SerializeField] private float velocidadeAtaque3 = 0;
     [SerializeField] private bool ataque3Preparado = true;//defini se o ataque esta preparado
@@ -118,17 +126,20 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posInicialPinca7;//posição inicial do ataque
     [SerializeField] private Vector3 posfinalPinca7;//posição final do ataque
     //Onda 1
+    [Space]
     [SerializeField] private GameObject Onda1;//O game object da pinça
     [SerializeField] private Vector3 posInicialOnda1;//posição inicial do ataque
     [SerializeField] private Vector3 posIntermediariaOnda1;//posição inicial do ataque
     [SerializeField] private Vector3 posfinalOnda1;//posição final do ataque
     [SerializeField] private Animator anim_Onda1;//animador da onda 1
     //Onda 2
+    [Space]
     [SerializeField] private GameObject Onda2;//O game object da pinça
     [SerializeField] private Vector3 posInicialOnda2;//posição inicial do ataque
     [SerializeField] private Vector3 posIntermediariaOnda2;//posição inicial do ataque
     [SerializeField] private Vector3 posfinalOnda2;//posição final do ataque
     [SerializeField] private Animator anim_Onda2;//animador da onda 2
+    [Space]
     //geral ataque 4
     [SerializeField] private float velocidadeAtaque4 = 0;
     [SerializeField] private float velocidadeOndaAtaque4 = 0;
@@ -146,6 +157,7 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posTentaculo1Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo1;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo1;//poição final do dano do tentaculo
+    [Space]
     //tentaculo 2
     [SerializeField] private GameObject tentaculo2;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo2;//O animador do tentaculo
@@ -153,6 +165,7 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posTentaculo2Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo2;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo2;//poição final do dano do tentaculo
+    [Space]
     //tentaculo 3
     [SerializeField] private GameObject tentaculo3;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo3;//O animador do tentaculo
@@ -160,6 +173,7 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posTentaculo3Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo3;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo3;//poição final do dano do tentaculo
+    [Space]
     //tentaculo 4
     [SerializeField] private GameObject tentaculo4;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo4;//O animador do tentaculo
@@ -167,6 +181,7 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posTentaculo4Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo4;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo4;//poição final do dano do tentaculo
+    [Space]
     //tentaculo 5
     [SerializeField] private GameObject tentaculo5;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo5;//O animador do tentaculo
@@ -174,6 +189,7 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posTentaculo5Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo5;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo5;//poição final do dano do tentaculo
+    [Space]
     //tentaculo 6
     [SerializeField] private GameObject tentaculo6;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo6;//O animador do tentaculo
@@ -181,6 +197,7 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posTentaculo6Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo6;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo6;//poição final do dano do tentaculo
+    [Space]
     //tentaculo 7
     [SerializeField] private GameObject tentaculo7;//o Game objevt do tentaculo
     [SerializeField] private Animator animTentaculo7;//O animador do tentaculo
@@ -188,6 +205,7 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private Vector3 posTentaculo7Final;//posição inicial do tentaculo
     [SerializeField] private Vector3 posInicialTentaculo7;//poição inicial do dano do tentaculo
     [SerializeField] private Vector3 posFinalTentaculo7;//poição final do dano do tentaculo
+    [Space]
     //Geral ataque 5
     [SerializeField] private float velocidadeAtaque5 = 0;
     [SerializeField] private float velocidadePreparoAtaque5 = 0;
@@ -208,6 +226,7 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private float posInicialYPinca8 = 0;
     [SerializeField] private float posIntermediarialYPinca8 = 0;
     [SerializeField] private float posFinalYPinca8 = 0;
+    [Space]
     //geral ataque 6
     [SerializeField] private Animator anim_ataque6;
     [SerializeField] private float velocidadeAtaque6 = 0;

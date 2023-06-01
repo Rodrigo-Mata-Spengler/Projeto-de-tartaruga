@@ -6037,6 +6037,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 107558238979907934, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tileFinal
+      value: 
+      objectReference: {fileID: 1420075250}
+    - target: {fileID: 354208701107493532, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tileFinal
+      value: 
+      objectReference: {fileID: 1420075250}
+    - target: {fileID: 1060126941802626499, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tileFinal
+      value: 
+      objectReference: {fileID: 1420075250}
     - target: {fileID: 1133701285839780761, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6045,13 +6057,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1526652149823234837, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tileFinal
+      value: 
+      objectReference: {fileID: 1420075250}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2034975688}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: vidaMaxima
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: esperaAtaque1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: livreArbitrio
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: velocidadeAtaque1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2070186047514142680, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: velocidadeAtaque5
@@ -6089,10 +6117,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5168740652458071232, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tileFinal
+      value: 
+      objectReference: {fileID: 1420075250}
     - target: {fileID: 5595021203129023977, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: m_Name
       value: Boss 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5596780008953162665, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tileFinal
+      value: 
+      objectReference: {fileID: 1420075250}
+    - target: {fileID: 6988478676586198469, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tileFinal
+      value: 
+      objectReference: {fileID: 1420075250}
     - target: {fileID: 8404853009075182656, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6141,6 +6181,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8975826701194766285, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
+      propertyPath: tileFinal
+      value: 
+      objectReference: {fileID: 1420075250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3786b45b8680aef48b40a1c93cb3c9f5, type: 3}
 --- !u!1 &759268710
@@ -72746,6 +72790,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1377818589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377818590}
+  - component: {fileID: 1377818591}
+  - component: {fileID: 1377818592}
+  m_Layer: 6
+  m_Name: "colider vit\xF3ria"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1377818590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377818589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 610.51, y: 276.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1420075251}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1377818591
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377818589}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.5258904, y: -1.5497339}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 27.252495, y: 2.4405322}
+  m_EdgeRadius: 0
+--- !u!114 &1377818592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377818589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5383dd098fcc35e4693eb340ce382cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1379750844
 GameObject:
   m_ObjectHideFlags: 0
@@ -73378,13 +73493,14 @@ GameObject:
   - component: {fileID: 1420075251}
   - component: {fileID: 1420075253}
   - component: {fileID: 1420075252}
-  m_Layer: 0
-  m_Name: ChaoCai
+  - component: {fileID: 1420075254}
+  m_Layer: 6
+  m_Name: Plataforma aparece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1420075251
 Transform:
   m_ObjectHideFlags: 0
@@ -73396,7 +73512,8 @@ Transform:
   m_LocalPosition: {x: 0.24, y: 0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1377818590}
   m_Father: {fileID: 937683414}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74071,6 +74188,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1420075254
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420075250}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
 --- !u!1 &1435401008
 GameObject:
   m_ObjectHideFlags: 0
@@ -74082,8 +74215,10 @@ GameObject:
   - component: {fileID: 1435401009}
   - component: {fileID: 1435401011}
   - component: {fileID: 1435401010}
-  m_Layer: 0
-  m_Name: Plataforma aparece
+  - component: {fileID: 1435401013}
+  - component: {fileID: 1435401012}
+  m_Layer: 6
+  m_Name: ChaoCai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78135,6 +78270,36 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1435401012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435401008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70fdf3d590c21a4d8a3c28f651e7675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  tempoAntesDestroicao: 2
+--- !u!19719996 &1435401013
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435401008}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
 --- !u!1 &1467023060
 GameObject:
   m_ObjectHideFlags: 0

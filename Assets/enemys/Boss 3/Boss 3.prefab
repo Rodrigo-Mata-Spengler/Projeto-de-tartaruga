@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 0}
   cabecaRef: {fileID: 1711015276}
+  tileFinal: {fileID: 0}
 --- !u!95 &5539706296573358907
 Animator:
   serializedVersion: 5
@@ -265,8 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 0}
   cabecaRef: {fileID: 1711015276}
+  tileFinal: {fileID: 0}
 --- !u!212 &9026873862285198511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -446,8 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 0}
   cabecaRef: {fileID: 1711015276}
+  tileFinal: {fileID: 0}
 --- !u!212 &2618813317677992783
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -722,7 +722,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.86, y: 0.09}
@@ -740,8 +740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1171594b0369ff44ea81c114a06e7d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTag: 
-  Dano: 0
+  playerTag: Player
+  Dano: 1
 --- !u!1 &736810463
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,8 +945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 0}
   cabecaRef: {fileID: 1711015276}
+  tileFinal: {fileID: 0}
 --- !u!212 &583416441241118286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1265,8 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 0}
   cabecaRef: {fileID: 1711015276}
+  tileFinal: {fileID: 0}
 --- !u!212 &3908562027473171992
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1362,7 +1362,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.11, y: 0.42}
@@ -1380,8 +1380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1171594b0369ff44ea81c114a06e7d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTag: 
-  Dano: 0
+  playerTag: Player
+  Dano: 1
 --- !u!1 &1199620318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,8 +1571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 0}
   cabecaRef: {fileID: 1711015276}
+  tileFinal: {fileID: 0}
 --- !u!212 &8768643543357853252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1613,7 +1613,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2c5afaf36f599fb42bc5277fd917b0a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2689,8 +2689,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 0}
   cabecaRef: {fileID: 1711015276}
+  tileFinal: {fileID: 0}
 --- !u!212 &1555214759977145564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3140,8 +3140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1171594b0369ff44ea81c114a06e7d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTag: 
-  Dano: 0
+  playerTag: Player
+  Dano: 1
 --- !u!1 &6376018671627682772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,7 +3185,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.86, y: 0.09}
@@ -3203,8 +3203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1171594b0369ff44ea81c114a06e7d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTag: 
-  Dano: 0
+  playerTag: Player
+  Dano: 1
 --- !u!1 &7630415950893855398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,8 +3332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3bdc2ce012ff54691e6c1c12949fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 0}
   cabecaRef: {fileID: 1711015276}
+  tileFinal: {fileID: 0}
 --- !u!95 &8445507800330933977
 Animator:
   serializedVersion: 5
