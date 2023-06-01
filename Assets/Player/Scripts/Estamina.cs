@@ -9,9 +9,9 @@ public class Estamina : MonoBehaviour
     public float MaxEstamina; // the maximum of stamina
 
     public bool hasEstamina = false;
+    public bool hasEstamina2 = false;
 
     [Header("Current Estamina")]
-    [Range(0,10)]
     public float CurrentEstamina;
 
     public int AttackToGetEstamina = 0;
@@ -28,6 +28,10 @@ public class Estamina : MonoBehaviour
         if (hasEstamina)
         {
             HudControler.EnableMana(true);
+        }
+        if (hasEstamina2)
+        {
+            HudControler.EnableMana2(true);
         }
     }
     // Do damage

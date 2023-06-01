@@ -20328,6 +20328,26 @@ PrefabInstance:
       propertyPath: conversationText
       value: 
       objectReference: {fileID: 2130716923}
+    - target: {fileID: 5406425557997787363, guid: 443f78a2c2ac4a24cbc76436fedbc823, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089630733858222448, guid: 443f78a2c2ac4a24cbc76436fedbc823, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089630733858222448, guid: 443f78a2c2ac4a24cbc76436fedbc823, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089630733858222448, guid: 443f78a2c2ac4a24cbc76436fedbc823, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089630733858222448, guid: 443f78a2c2ac4a24cbc76436fedbc823, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9098549687451148588, guid: 443f78a2c2ac4a24cbc76436fedbc823, type: 3}
       propertyPath: m_RootOrder
       value: 1
