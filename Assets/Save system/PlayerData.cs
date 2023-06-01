@@ -32,6 +32,7 @@ public class PlayerData
     public string scenaAtual;
 
     //Informaçãoes de Mapa
+    public bool mapa;
     public bool mapa1;
     public bool mapa2;
     public bool mapa3_1;
@@ -80,6 +81,7 @@ public class PlayerData
         scenaAtual = player.GetComponent<ScenaAtual>().scenaAtual;
 
         //captura as informaçôes do mapa
+        mapa = player.GetComponent<ItensInventory>().mapa;
         mapa1 = MapControler.mapa1;
         mapa2 = MapControler.mapa2;
         mapa3_1 = MapControler.mapa3_1;

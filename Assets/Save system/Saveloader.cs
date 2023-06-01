@@ -45,6 +45,7 @@ public class Saveloader : MonoBehaviour
             player.GetComponent<Blast>().enabled = data.blast;
 
             //defini as informações do mapa
+            player.GetComponent<ItensInventory>().mapa = data.mapa;
             MapControler.mapa1 = data.mapa1;
             MapControler.mapa2 = data.mapa2;
             MapControler.mapa3_1 = data.mapa3_1;

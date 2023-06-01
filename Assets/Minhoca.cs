@@ -57,6 +57,11 @@ public class Minhoca : MonoBehaviour
 
     private void Update()
     {
+        if (Player.GetComponent<ItensInventory>().mapa == true)
+        {
+            Destroy(gameObject);
+        }
+
         if (playerDetected)
         {
             NextLineAndStop();
