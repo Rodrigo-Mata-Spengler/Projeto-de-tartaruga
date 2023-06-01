@@ -12,6 +12,8 @@ public class SaveStatue : MonoBehaviour
     public Animator Vaso1;
     public Animator Vaso2;
 
+    private bool doOnce = true;
+
     private void Start()
     {
         interacao = false;
@@ -30,6 +32,14 @@ public class SaveStatue : MonoBehaviour
             playerGO.GetComponent<Health>().RezarEffect.Play();
             playerGO.GetComponent<Health>().ResetLife();
             Iconesalvando.Mostraricone();
+
+            if (doOnce)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Save, this.transform.position);
+
+                doOnce = false;
+            }
+            
         }
     }
 
@@ -52,7 +62,7 @@ public class SaveStatue : MonoBehaviour
             playerGO = null;
             collision.GetComponent<Health>().RezarEffect.Stop();
             collision.GetComponent<Animator>().SetBool("Rezar", false);
-            //rend.color = Color.white;
+            doOnce = true;
         }
     }
 }

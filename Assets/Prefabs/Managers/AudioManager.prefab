@@ -521,101 +521,108 @@ MonoBehaviour:
       Data3: -1940690545
       Data4: -2097906010
     Path: event:/Sombra/Grito
-  <Morrendo>k__BackingField:
+  <SombraMorrendo>k__BackingField:
     Guid:
       Data1: -200278838
       Data2: 1182191373
       Data3: 2146881716
       Data4: 1762289073
     Path: event:/Sombra/Morrendo
-  <SomAreaIsolada>k__BackingField:
+  <SombraSomAreaIsolada>k__BackingField:
     Guid:
       Data1: 1781383893
       Data2: 1260201223
       Data3: 379778458
       Data4: -291249929
     Path: event:/Sombra/Som Area Isolada
-  <FeedBackDanoSombra>k__BackingField:
+  <SombraFeedBackDanoSombra>k__BackingField:
     Guid:
       Data1: -1690933258
       Data2: 1155568464
       Data3: -2055299938
       Data4: -967105088
     Path: event:/Sombra/Feedback de Dano
-  <TentaculoAtaque>k__BackingField:
+  <SombraTentaculoAtaque>k__BackingField:
     Guid:
       Data1: 1518555145
       Data2: 1187182761
       Data3: 2029290124
       Data4: 1296844191
     Path: "event:/Sombra/Tent\xE1culo Ataque"
-  <TentaculoSaindo>k__BackingField:
+  <SombraTentaculoSaindo>k__BackingField:
     Guid:
       Data1: 1625932892
       Data2: 1180075509
       Data3: 978887597
       Data4: 1942690830
     Path: "event:/Sombra/Tent\xE1culo Saindo"
-  <TentaculoVoltando>k__BackingField:
+  <SombraTentaculoVoltando>k__BackingField:
     Guid:
       Data1: 598035846
       Data2: 1326532977
       Data3: -2022200129
       Data4: 2043237299
     Path: "event:/Sombra/Tent\xE1culo Voltando"
-  "<GarraM\xFAltipla>k__BackingField":
+  "<SombraGarraM\xFAltipla>k__BackingField":
     Guid:
       Data1: -409991302
       Data2: 1238557372
       Data3: -1914026584
       Data4: 1946379737
-    Path: "event:/Sombra/Ataque Garras M\xFAltiplas/Garra M\xFAltipla"
-  "<Antecipa\xE7\xE3oGarra>k__BackingField":
+    Path: "event:/Sombra/Ataque Garras M\xFAltiplas/Ataque 1"
+  "<SombraAntecipa\xE7\xE3oGarra>k__BackingField":
     Guid:
       Data1: -1859667274
       Data2: 1264424180
       Data3: -2075815775
       Data4: 331445830
     Path: "event:/Sombra/Ataque Garra/Antecipa\xE7\xE3o Garra"
-  <GolpeGarra>k__BackingField:
+  <SombraGolpeGarra>k__BackingField:
     Guid:
       Data1: 927856909
       Data2: 1332213415
       Data3: -533534838
       Data4: -768269986
     Path: event:/Sombra/Ataque Garra/Golpe Garra
-  "<Explos\xE3o>k__BackingField":
+  "<SombraExplos\xE3o>k__BackingField":
     Guid:
       Data1: 705512515
       Data2: 1231260718
       Data3: -105013358
       Data4: -1622255234
     Path: "event:/Sombra/Ataque Explosivo/Explos\xE3o"
-  <AntecipacaoSoco>k__BackingField:
+  <SombraAntecipacaoSoco>k__BackingField:
     Guid:
       Data1: 2078182118
       Data2: 1318375365
       Data3: 1632257416
       Data4: 243998730
     Path: "event:/Sombra/Ataque Explosivo/Antecipa\xE7\xE3o Soco"
-  <AntecipacaoEsquerda>k__BackingField:
+  <SombraAntecipacaoEsquerda>k__BackingField:
     Guid:
-      Data1: 186209465
-      Data2: 1219338908
-      Data3: 920175521
-      Data4: -61183808
-    Path: "event:/Sombra/Ataque Bra\xE7o/Antecipa\xE7\xE3o Esquerda"
-  <AntecipacaoDireita>k__BackingField:
+      Data1: 1068015468
+      Data2: 1107079062
+      Data3: -1150551423
+      Data4: 778577821
+    Path: "event:/Sombra/Ataque Bra\xE7o Duplo/Antecipa\xE7\xE3o Esquerda"
+  <SombraAntecipacaoDireita>k__BackingField:
     Guid:
       Data1: -496760548
       Data2: 1101404831
       Data3: 2027493795
       Data4: 1630042757
     Path: "event:/Sombra/Ataque Bra\xE7o Duplo/Antecipa\xE7\xE3o Direita"
-  <AtaqueGarra>k__BackingField:
+  <SombraAtaqueGarraDireita>k__BackingField:
     Guid:
-      Data1: -1431055872
-      Data2: 1293319696
-      Data3: 1609263747
-      Data4: 818680337
-    Path: "event:/Sombra/Ataque Bra\xE7o Duplo/Ataque Garra"
+      Data1: -756017764
+      Data2: 1195339333
+      Data3: -546555755
+      Data4: 235229679
+    Path: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra Direita"
+  <SombraAtaqueGarraEsquerda>k__BackingField:
+    Guid:
+      Data1: 1844889323
+      Data2: 1329195766
+      Data3: -2000053082
+      Data4: -673343987
+    Path: "event:/Sombra/Ataque Bra\xE7o/Ataque Garra Esquerda"

@@ -26,7 +26,7 @@ public class Tridente : MonoBehaviour
             PlayerObj.GetComponent<Dash>().enabled = true;
             PlayerObj.GetComponent<Animator>().SetBool("Magico", true);
 
-            haboPlayer.ShowHabilidade(1);
+            haboPlayer.ShowHabilidade(0);
 
             Destroy(this.gameObject);
         }

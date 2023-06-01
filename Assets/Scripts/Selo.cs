@@ -54,6 +54,7 @@ public class Selo : MonoBehaviour
                 case Habilidade.Blast:
                     PLayer.GetComponent<Blast>().enabled = true;
                     PLayer.GetComponent<Estamina>().enabled = true;
+                    habiPlayer.ShowHabilidade(1);
                     break;
             }
 

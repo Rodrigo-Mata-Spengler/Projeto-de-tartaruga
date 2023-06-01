@@ -12,6 +12,7 @@ public class PlayerCloseTriggerSimpleZombie : MonoBehaviour
         {
             BTzombieTurtleBehaviour.enabled = true;
             BTzombieTurtleBehaviour.PlayerClose = true;
+            BTzombieTurtleBehaviour.m_Animator.SetTrigger("Acordar");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

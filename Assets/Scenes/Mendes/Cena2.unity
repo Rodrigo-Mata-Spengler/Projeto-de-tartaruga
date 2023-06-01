@@ -878,6 +878,7 @@ GameObject:
   - component: {fileID: 72855158}
   - component: {fileID: 72855160}
   - component: {fileID: 72855159}
+  - component: {fileID: 72855161}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -973,6 +974,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &72855161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72855157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &94775411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2227,6 +2240,7 @@ GameObject:
   - component: {fileID: 237754529}
   - component: {fileID: 237754531}
   - component: {fileID: 237754530}
+  - component: {fileID: 237754532}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -2322,6 +2336,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &237754532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237754528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &241596197
 GameObject:
   m_ObjectHideFlags: 0
@@ -5193,6 +5219,7 @@ GameObject:
   - component: {fileID: 588479804}
   - component: {fileID: 588479806}
   - component: {fileID: 588479805}
+  - component: {fileID: 588479807}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -5288,6 +5315,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &588479807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588479803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &608076821
 GameObject:
   m_ObjectHideFlags: 0
@@ -6568,6 +6607,7 @@ GameObject:
   - component: {fileID: 723392393}
   - component: {fileID: 723392395}
   - component: {fileID: 723392394}
+  - component: {fileID: 723392396}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -6663,6 +6703,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &723392396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723392392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &732816734
 GameObject:
   m_ObjectHideFlags: 0
@@ -10351,6 +10403,7 @@ GameObject:
   - component: {fileID: 1120576702}
   - component: {fileID: 1120576704}
   - component: {fileID: 1120576703}
+  - component: {fileID: 1120576705}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -10366,7 +10419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120576701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.92, y: 1.47, z: 0}
+  m_LocalPosition: {x: 2.92, y: 1.52, z: 0}
   m_LocalScale: {x: 0.44316, y: 0.44316, z: 0.44316}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10446,6 +10499,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1120576705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120576701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1128670393
 GameObject:
   m_ObjectHideFlags: 0
@@ -11351,6 +11416,7 @@ GameObject:
   - component: {fileID: 1206895060}
   - component: {fileID: 1206895062}
   - component: {fileID: 1206895061}
+  - component: {fileID: 1206895063}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -11446,6 +11512,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1206895063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206895059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1219934372
 GameObject:
   m_ObjectHideFlags: 0
@@ -17479,6 +17557,7 @@ GameObject:
   - component: {fileID: 1603760123}
   - component: {fileID: 1603760125}
   - component: {fileID: 1603760124}
+  - component: {fileID: 1603760126}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -17574,6 +17653,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1603760126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603760122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1625522268
 GameObject:
   m_ObjectHideFlags: 0
@@ -17834,6 +17925,7 @@ GameObject:
   - component: {fileID: 1657570910}
   - component: {fileID: 1657570912}
   - component: {fileID: 1657570911}
+  - component: {fileID: 1657570913}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -17929,6 +18021,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1657570913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657570909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1663314749
 GameObject:
   m_ObjectHideFlags: 0
@@ -24848,6 +24952,7 @@ GameObject:
   - component: {fileID: 1758315600}
   - component: {fileID: 1758315602}
   - component: {fileID: 1758315601}
+  - component: {fileID: 1758315603}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -24943,6 +25048,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1758315603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758315599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1764683468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25047,6 +25164,7 @@ GameObject:
   - component: {fileID: 1777182055}
   - component: {fileID: 1777182057}
   - component: {fileID: 1777182056}
+  - component: {fileID: 1777182058}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -25142,6 +25260,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1777182058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777182054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1779937523
 GameObject:
   m_ObjectHideFlags: 0
@@ -25523,6 +25653,7 @@ GameObject:
   - component: {fileID: 1816369803}
   - component: {fileID: 1816369805}
   - component: {fileID: 1816369804}
+  - component: {fileID: 1816369806}
   m_Layer: 0
   m_Name: Fogo
   m_TagString: Untagged
@@ -25618,6 +25749,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1816369806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816369802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded65f0fc1690024eb204a75e59b8d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1832626027
 GameObject:
   m_ObjectHideFlags: 0
