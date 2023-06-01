@@ -54,7 +54,7 @@ public class PlantaCarnivora : MonoBehaviour
                 break;
         }
 
-        if (GetComponent<EnemyHealth>().currentHealth <= 0)
+        if (transform.GetChild(1).GetComponent<EnemyHealth>().currentHealth <= 0)
         {
             anim.SetTrigger("morte");
         }
@@ -108,7 +108,7 @@ public class PlantaCarnivora : MonoBehaviour
         {
             proximoAtaque = Time.time + tempDuracaoAtaque;
             colliderAtaque.SetActive(true);
-            //AudioManager.instance.PlayOneShot(FMODEvents.instance.MordidaPlanta, transform.position);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.MordidaPlanta, transform.position);
             atacando = true;
             anim.SetTrigger("Ataque");
         }

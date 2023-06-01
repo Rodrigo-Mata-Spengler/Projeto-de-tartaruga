@@ -85,8 +85,6 @@ public class Minhoca : MonoBehaviour
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
 
-
-
             StartTyping = false;
             StopAllCoroutines();
             conversationObj.SetActive(true);

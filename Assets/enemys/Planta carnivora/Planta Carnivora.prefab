@@ -69,6 +69,7 @@ MonoBehaviour:
   ItensPrefabs:
   - {fileID: 4448061109165272105, guid: 403d4decb27133942a068f68115a1376, type: 3}
   TimeToDestroyDelay: 0.15
+  tempoParaMorte: 1
 --- !u!50 &7393565782270214387
 Rigidbody2D:
   serializedVersion: 4
@@ -486,7 +487,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddForce: 0
   wasHit: 0
-  secondsToDisable: 0.3
   ForceUp: 0
   ForceRight: 0
   Direction: {x: 0, y: 0}
