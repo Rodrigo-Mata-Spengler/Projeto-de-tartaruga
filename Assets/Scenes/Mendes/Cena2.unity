@@ -4067,7 +4067,7 @@ GameObject:
   - component: {fileID: 461038459}
   - component: {fileID: 461038458}
   - component: {fileID: 461038460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CASA BRUXA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24434,6 +24434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "NextScene Intera\xE7\xE3o"
       objectReference: {fileID: 0}
+    - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 988236078}
     - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: conetion
       value: 
