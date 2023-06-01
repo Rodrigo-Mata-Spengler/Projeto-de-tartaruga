@@ -176,6 +176,7 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -WallSlideSpeed);
 
         }
+
         if (AtaqueInput && Time.time > NextTimeToAtaque && m_Animator.GetBool("Ataque normal") == false)
         {
            
@@ -183,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
            NextTimeToAtaque = Time.time + 1 / AtaqueRate;
            Attack();
            m_Animator.SetInteger("Ataque normal index", 1);
-           AttackSound();
+           //AttackSound();
 
         }
         else if(AtaqueInput && NextTimeToAtaque > Time.time )
@@ -191,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
             
             m_Animator.SetInteger("Ataque normal index", 2);
             AttackTimeAmount = 0.5f;
-            AttackSound();
+            //AttackSound();
         }
 
         // Debug.LogWarning(jump);
@@ -419,7 +420,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
           
-    private  void AttackSound()
+    public void AttackSound()
     {
         if (HaveMagicTrident)
         {

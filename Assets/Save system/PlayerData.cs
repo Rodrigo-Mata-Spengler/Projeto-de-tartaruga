@@ -8,6 +8,7 @@ public class PlayerData
     //Informações do player
     public float stamina;
     public bool hasEstamina;
+    public bool hasEstamina2;
     public int vida;
     public float[] position;
     public int seaWeed;
@@ -32,6 +33,7 @@ public class PlayerData
     public string scenaAtual;
 
     //Informaçãoes de Mapa
+    public bool mapa;
     public bool mapa1;
     public bool mapa2;
     public bool mapa3_1;
@@ -53,6 +55,7 @@ public class PlayerData
         //captura as informações do player
         stamina = player.GetComponent<Estamina>().CurrentEstamina;
         hasEstamina = player.GetComponent<Estamina>().hasEstamina;
+        hasEstamina2 = player.GetComponent<Estamina>().hasEstamina2;
         vida = player.GetComponent<Health>().maxLife;
         position = new float[3];
         position[0] = player.transform.position.x;
@@ -80,6 +83,7 @@ public class PlayerData
         scenaAtual = player.GetComponent<ScenaAtual>().scenaAtual;
 
         //captura as informaçôes do mapa
+        mapa = player.GetComponent<ItensInventory>().mapa;
         mapa1 = MapControler.mapa1;
         mapa2 = MapControler.mapa2;
         mapa3_1 = MapControler.mapa3_1;

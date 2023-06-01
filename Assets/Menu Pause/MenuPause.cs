@@ -30,6 +30,7 @@ public class MenuPause : MonoBehaviour
 
     [Header("Menu Mapa")]
     [SerializeField] private GameObject mapa;
+    [SerializeField] public bool hasMapa = false;
 
     [Header("Botão Menu Principal")]
     [SerializeField] private string nomeMenu;
@@ -66,6 +67,12 @@ public class MenuPause : MonoBehaviour
 
         Player = GameObject.FindGameObjectWithTag("Player");
 
+        hasMapa = Player.GetComponent<ItensInventory>().mapa;
+
+        if (hasMapa)
+        {
+            MapButtonInventario.SetActive(true);
+        }
       
     }
     private void Update()

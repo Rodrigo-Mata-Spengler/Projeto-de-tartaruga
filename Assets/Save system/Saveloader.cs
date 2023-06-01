@@ -25,6 +25,7 @@ public class Saveloader : MonoBehaviour
             //defini vida e estamina
             player.GetComponent<Estamina>().CurrentEstamina = data.stamina;
             player.GetComponent<Estamina>().hasEstamina = data.hasEstamina;
+            player.GetComponent<Estamina>().hasEstamina2 = data.hasEstamina2;
             player.GetComponent<Health>().ResetLife();
             player.GetComponent<Health>().HealSeaweed = data.seaWeed;
 
@@ -45,6 +46,7 @@ public class Saveloader : MonoBehaviour
             player.GetComponent<Blast>().enabled = data.blast;
 
             //defini as informações do mapa
+            player.GetComponent<ItensInventory>().mapa = data.mapa;
             MapControler.mapa1 = data.mapa1;
             MapControler.mapa2 = data.mapa2;
             MapControler.mapa3_1 = data.mapa3_1;
