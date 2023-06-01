@@ -17,6 +17,8 @@ public class LevelChangereIntera : MonoBehaviour
 
     [SerializeField] private float transisionTime = 1;
 
+    private bool interacao = false;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -29,12 +31,22 @@ public class LevelChangereIntera : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (Input.GetButton("Interacao"))
+        if (Input.GetButtonDown("Interacao") && interacao)
         {
             StartCoroutine(LoadLevel(targetSceneName));
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        interacao = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        interacao = false;
     }
 
     IEnumerator LoadLevel(string cena)

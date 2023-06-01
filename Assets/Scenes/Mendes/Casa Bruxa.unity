@@ -7868,7 +7868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666232, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07720947
+      value: 0.076934814
       objectReference: {fileID: 0}
     - target: {fileID: 185684926705666233, guid: 4c6571932516017488eb84810c9ef171, type: 3}
       propertyPath: orthographic size
@@ -8050,6 +8050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "NextScene Intera\xE7\xE3o"
       objectReference: {fileID: 0}
+    - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1859936330}
     - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: conetion
       value: 
@@ -9862,6 +9866,11 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+--- !u!95 &1859936330 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5598826424677453773, guid: f31fd1a5cc62c6040b3b0eeefcea6f67, type: 3}
+  m_PrefabInstance: {fileID: 693824822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1955106394
 GameObject:
   m_ObjectHideFlags: 0
