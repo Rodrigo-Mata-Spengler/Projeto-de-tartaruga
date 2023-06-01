@@ -174,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1448027639451957437, guid: 1e5cf97ae9b05a44aadcd9bcb4f0536e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1448027639451957437, guid: 1e5cf97ae9b05a44aadcd9bcb4f0536e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1510,6 +1510,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1029020297}
     m_Modifications:
+    - target: {fileID: 985417169920358755, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 985417169920358755, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 985417169920358755, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1099819544390734267, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1668,6 +1680,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Npc Ferreiro
       objectReference: {fileID: 0}
+    - target: {fileID: 7867988748576573957, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_Color.a
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867988748576573957, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingLayer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867988748576573957, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867988748576573957, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1442851843
+      objectReference: {fileID: 0}
     - target: {fileID: 7869436001575737635, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: npcNameText
       value: 
@@ -1691,6 +1719,18 @@ PrefabInstance:
     - target: {fileID: 7869436001575737635, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
       propertyPath: Cost.Array.data[0]
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557734890138351980, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633004065549714117, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633004065549714117, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c1712a8df575284a931b87c6a172480, type: 3}
@@ -8404,7 +8444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6564692625409614386, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6564692625409614386, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9737,7 +9777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426315711129178639, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1426315711129178639, guid: 534db232db5f2274fb52ff8f679555e1, type: 3}
       propertyPath: m_LocalPosition.x
