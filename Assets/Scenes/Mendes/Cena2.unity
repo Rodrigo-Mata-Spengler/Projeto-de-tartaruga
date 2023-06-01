@@ -829,7 +829,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4964146057491262748, guid: f16846cb447974749af89925bc122dd3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812502051801345030, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812502051801345030, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812502051801345030, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812502051801345030, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.069
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812502051801345030, guid: f16846cb447974749af89925bc122dd3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.054
       objectReference: {fileID: 0}
     - target: {fileID: 7869436001141976389, guid: f16846cb447974749af89925bc122dd3, type: 3}
       propertyPath: npcNameText
@@ -865,6 +885,11 @@ Transform:
 --- !u!1 &70744990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4881963360200760264, guid: f16846cb447974749af89925bc122dd3, type: 3}
+  m_PrefabInstance: {fileID: 70744988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &70744991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4964146057491262748, guid: f16846cb447974749af89925bc122dd3, type: 3}
   m_PrefabInstance: {fileID: 70744988}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &72855157
@@ -4253,7 +4278,7 @@ GameObject:
   - component: {fileID: 461038459}
   - component: {fileID: 461038458}
   - component: {fileID: 461038460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CASA BRUXA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14557,6 +14582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "NextScene Intera\xE7\xE3o (1)"
       objectReference: {fileID: 0}
+    - target: {fileID: 6727838417939099173, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: tag
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: fade
       value: 
@@ -18292,6 +18321,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1657303564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70744990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b8659efa0970e409028b3bd6071070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  f: {fileID: 70744991}
+  tag: Player
 --- !u!1 &1657570909
 GameObject:
   m_ObjectHideFlags: 0
@@ -24748,6 +24791,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 696427760658326617, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168634925143201047, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168634925143201047, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168634925143201047, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168634925143201047, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6564692625409614384, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: m_Size.x
       value: 1.7985666
@@ -24812,6 +24875,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: "NextScene Intera\xE7\xE3o"
       objectReference: {fileID: 0}
+    - target: {fileID: 6727838417939099173, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: tag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656690222783792757, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: m_Color.a
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 988236078}
     - target: {fileID: 8734357200934847678, guid: 3ee581ff39bce6349be166f498fe96d1, type: 3}
       propertyPath: conetion
       value: 

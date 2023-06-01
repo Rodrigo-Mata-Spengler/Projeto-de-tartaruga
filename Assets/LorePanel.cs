@@ -8,6 +8,7 @@ public class LorePanel : MonoBehaviour
     [Header("On UI elements")]
     [SerializeField] GameObject conversationObj; //the obj that contains the text object and pannels
     [SerializeField] TextMeshProUGUI conversationText;// the obj that contains the text component
+    [SerializeField] TextMeshProUGUI nameText;// the obj that contains the text component
 
 
     [Header("The text")]
@@ -79,7 +80,7 @@ public class LorePanel : MonoBehaviour
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             //Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
 
-
+            nameText = null;
 
             StartTyping = false;
             StopAllCoroutines();
