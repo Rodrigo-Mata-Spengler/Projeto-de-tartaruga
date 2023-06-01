@@ -14,7 +14,9 @@ public class VidaBossSombra : MonoBehaviour
 
     [SerializeField] private Transform cabecaRef;
 
-    //[SerializeField] private GameObject tileFinal;
+    [SerializeField] private GameObject tileFinal;
+
+    private static bool morreu = false;
 
     private void Start()
     {
@@ -26,7 +28,7 @@ public class VidaBossSombra : MonoBehaviour
     {
         if ((vidaAtual - Dano) <= 0)
         {
-            Morreu();
+            morreu = true;
         }
         else
         {
@@ -35,17 +37,15 @@ public class VidaBossSombra : MonoBehaviour
         }
     }
 
-    private static void Morreu()
-    {
-        SceneManager.LoadScene(cenaVitoria);
-        //ativar quando tiver o chão
-        /*
-        tileFinal.SetActive(true);
-         */
-    }
-
     private void Update()
     {
         Debug.Log("vida sombra:"+vidaAtual);
+
+        if (morreu)
+        {
+            tileFinal.SetActive(true);
+
+            Destroy(transform.parent.gameObject);
+        }
     }
 }
