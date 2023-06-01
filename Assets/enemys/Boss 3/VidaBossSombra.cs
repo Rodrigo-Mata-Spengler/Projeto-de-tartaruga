@@ -28,6 +28,8 @@ public class VidaBossSombra : MonoBehaviour
     {
         if ((vidaAtual - Dano) <= 0)
         {
+            vidaAtual = vidaAtual - Dano;
+
             morreu = true;
         }
         else
@@ -40,12 +42,10 @@ public class VidaBossSombra : MonoBehaviour
     private void Update()
     {
         Debug.Log("vida sombra:"+vidaAtual);
+    }
 
-        if (morreu)
-        {
-            tileFinal.SetActive(true);
-
-            Destroy(transform.parent.gameObject);
-        }
+    public float GetVidaAtual()
+    {
+        return vidaAtual;
     }
 }

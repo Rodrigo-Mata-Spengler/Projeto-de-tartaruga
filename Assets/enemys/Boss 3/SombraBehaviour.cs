@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, grito, acordar,teste, desativado, ativado};
+enum SombraStatus { idle, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, grito, acordar, morte, teste, desativado, ativado};
 enum DirecaoAtaque { direita, esquerda, none};
 public class SombraBehaviour : MonoBehaviour
 {
@@ -29,7 +29,14 @@ public class SombraBehaviour : MonoBehaviour
     [SerializeField] private float tempo_fadeOut = 0;//fade out para aprensentar sombra ao player
     private float tempo_Para_FadeOut = 0;
     [SerializeField] private float velocidade_FadeOut = 0;
-    [SerializeField] private SpriteRenderer renderer_acordar;
+    [SerializeField] private Animator tela_Preta;
+
+    [Header("Morer")]
+    [SerializeField] private float tempo_FadeIn = 0;
+    private float tempo_para_FadeIn = 0;
+    [SerializeField] private float velocidade_Fadein = 0;
+    [SerializeField] private GameObject tilesetFinal;
+
 
     [Header("Grito")]
     [SerializeField] private float tempo_Grito = 0;//tempo para a animação do grito acontecer
@@ -240,7 +247,6 @@ public class SombraBehaviour : MonoBehaviour
     private bool voltarAtaque6 = false;
     private bool doOnce_Ataque6_Ataque = true;
 
-
     //Metodos gerais da Sombra
     private void Awake()
     {
@@ -264,6 +270,8 @@ public class SombraBehaviour : MonoBehaviour
         vidaProximoGrito = vidaMaxima - vidaParaGrito;
 
         status = SombraStatus.desativado;
+
+        tilesetFinal.SetActive(false);
     }
     private void Update()
     {
@@ -300,6 +308,7 @@ public class SombraBehaviour : MonoBehaviour
                 SetUpAtaque4();
                 SetUpAtaque5();
                 SetUpAtaque6();
+                SetUpMorte();
                 break;
             case SombraStatus.desativado:
                 Desativado();
@@ -314,7 +323,10 @@ public class SombraBehaviour : MonoBehaviour
             case SombraStatus.acordar:
                 Acordar();
                 break;
-        }
+            case SombraStatus.morte:
+                Morte();
+                break;
+        }  
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -328,6 +340,14 @@ public class SombraBehaviour : MonoBehaviour
 
     private void SombraBrain()
     {
+        if (pinca1.GetComponent<VidaBossSombra>().GetVidaAtual() <= 0)
+        {
+            livreArbitrio = false;
+            SetUpMorte();
+            status = SombraStatus.morte;
+            Desativado();
+        }
+
         if (livreArbitrio)
         {
             if (ataquesAtual > quantidadeAtaques)
@@ -435,16 +455,36 @@ public class SombraBehaviour : MonoBehaviour
 
     }
 
+    //metodos para morte
+   private void SetUpMorte()
+    {
+        tempo_para_FadeIn = tempo_FadeIn + Time.time;
+
+        SetUpGrito();
+    }
+
+    private void Morte()
+    {
+        tela_Preta.SetBool("FadeIn", true);
+
+        if (tempo_para_FadeIn <= Time.time)
+        {
+            Debug.Log("morreu");
+            gameObject.GetComponent<SombraBehaviour>().enabled = false;
+            tilesetFinal.SetActive(true);
+        }
+
+        GritoMorte();
+    }
+
     //Metodos para acordar
     private void SetUpAcordar()
     {
         tempo_Para_FadeOut = tempo_fadeOut + Time.time;
-
-        renderer_acordar.color = new Color(0,0,0,255);
     }
     private void Acordar()
     {
-        renderer_acordar.color = new Color(0, 0, 0, Mathf.Lerp(renderer_acordar.color.a, 0, velocidade_FadeOut * Time.deltaTime));
+        tela_Preta.SetBool("fadeOut",true);
 
         if(tempo_Para_FadeOut <= Time.time)
         {
@@ -480,6 +520,23 @@ public class SombraBehaviour : MonoBehaviour
             anim_corpo.SetBool("Sombra_Grito", false);
 
             SombraBrain();
+        }
+    }
+
+    private void GritoMorte()
+    {
+        anim_corpo.SetBool("Sombra_Grito", true);
+
+        if (doOnce_audio_grito)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.SombraMorrendo, this.transform.position);
+
+            doOnce_audio_grito = false;
+        }
+
+        if (tempo_Para_Grito <= Time.time)
+        {
+            anim_corpo.SetBool("Sombra_Grito", false);
         }
     }
 

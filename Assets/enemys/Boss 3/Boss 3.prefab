@@ -2774,6 +2774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60095499163492098}
   - component: {fileID: 2183575883544906786}
+  - component: {fileID: 8224551224447696124}
   m_Layer: 0
   m_Name: Tela Preta
   m_TagString: Untagged
@@ -2848,6 +2849,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8224551224447696124
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065642458161801565}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f2a1f0c79735764d9bee8d45ef56887, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5595021203129023977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,7 +2945,9 @@ MonoBehaviour:
   anim_corpo: {fileID: 7083902968262013102}
   tempo_fadeOut: 5
   velocidade_FadeOut: 2
-  renderer_acordar: {fileID: 2183575883544906786}
+  tela_Preta: {fileID: 8224551224447696124}
+  tempo_FadeIn: 5
+  velocidade_Fadein: 2
   tempo_Grito: 3
   tempoIdle: 5
   pinca1: {fileID: 1043228773}
