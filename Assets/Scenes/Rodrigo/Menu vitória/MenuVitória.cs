@@ -8,28 +8,18 @@ using System.IO;
 public class MenuVitória : MonoBehaviour
 {
     [Header("Scenas novo jogo")]
-    [SerializeField] private string cenaInicio;
     [SerializeField] private string Menu;
-
-    private string path;
-    private void Start()
+    public bool voltar_menu = false;
+    private void Update()
     {
-        path = Application.persistentDataPath + "/PlayerData.cpd";
-    }
-
-    public void NovoSave()
-    {
-        File.Delete(path);
-        SceneManager.LoadScene(cenaInicio);
+        if (voltar_menu)
+        {
+            VoltarMenu();
+        }
     }
 
     public void VoltarMenu()
     {
         SceneManager.LoadScene(Menu);
-    }
-
-    public void SairDoJogo()
-    {
-        Application.Quit();
     }
 }

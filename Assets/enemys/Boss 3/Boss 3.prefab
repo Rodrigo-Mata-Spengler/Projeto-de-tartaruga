@@ -2938,8 +2938,8 @@ MonoBehaviour:
   player: {fileID: 0}
   playerTag: Player
   status: 10
-  vidaMaxima: 1500
-  vidaParaGrito: 250
+  vidaMaxima: 1000
+  vidaParaGrito: 200
   livreArbitrio: 1
   quantidadeAtaques: 3
   anim_corpo: {fileID: 7083902968262013102}
@@ -2948,6 +2948,7 @@ MonoBehaviour:
   tela_Preta: {fileID: 8224551224447696124}
   tempo_FadeIn: 5
   velocidade_Fadein: 2
+  tilesetFinal: {fileID: 0}
   tempo_Grito: 3
   tempoIdle: 5
   pinca1: {fileID: 1043228773}
