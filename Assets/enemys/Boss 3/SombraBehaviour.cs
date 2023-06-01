@@ -1189,6 +1189,7 @@ public class SombraBehaviour : MonoBehaviour
     {
         if (preparaAtaque6 == false)
         {
+            anim_corpo.SetTrigger("Ataque_sismico_subir");
             pinca8.transform.position = Vector3.MoveTowards(pinca8.transform.position, new Vector3(0, posIntermediarialYPinca8, 0), velocidadePrepararAtaque6 * Time.deltaTime);
             if (pinca8.transform.position.y != posIntermediarialYPinca8)
             {
@@ -1233,6 +1234,9 @@ public class SombraBehaviour : MonoBehaviour
                 anim_ataque6.SetTrigger("reset");
                 anim_ataque6.ResetTrigger("atacando");
                 anim_ataque6.ResetTrigger("reset");
+
+                anim_corpo.ResetTrigger("Ataque_sismico_subir");
+                anim_corpo.SetTrigger("Ataque_sismico_descer");
 
                 ShutDownAtaque6();
 
