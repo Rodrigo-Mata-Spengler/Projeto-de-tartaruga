@@ -80,6 +80,8 @@ public class HordaManager : MonoBehaviour
             Debug.Log("Vitoria");
             terminou = true;
 
+            player.GetComponent<Estamina>().CurrentEstamina = 4;
+
             SaveSystem.SavePlayer(player);
             Iconesalvando.Mostraricone();
         }
