@@ -83,6 +83,7 @@ public class MenuPause : MonoBehaviour
 
         if (Input.GetButtonDown("escape") && mortePanel == false)
         {
+
             MapButtonInventario.SetActive(true);SisPause(pausePanel);
             ///clear selected object
             EventSystem.current.SetSelectedGameObject(null);
@@ -182,7 +183,10 @@ public class MenuPause : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         
         EventSystem.current.SetSelectedGameObject(primeiroItem);
+        AudioManager.instance.SetMusicArea(MusicAreaToGoTo);
+
     }
+
 
     public void PlayerMorreu()
     {
@@ -239,6 +243,8 @@ public class MenuPause : MonoBehaviour
         player.GetComponent<Dash>().enabled = true;
         player.GetComponent<Estamina>().manaInfinita = true;
         player.GetComponent<PlayerMovement>().haveDoubleJump = true;
+        player.GetComponent<PlayerMovement>().HaveArmor = true;
+
 
         player.transform.GetChild(2).gameObject.GetComponent<Ataque>().DamageAmount = 50;
         player.transform.GetChild(2).gameObject.GetComponent<Ataque>().DamageMagicTridentAmount = 50;

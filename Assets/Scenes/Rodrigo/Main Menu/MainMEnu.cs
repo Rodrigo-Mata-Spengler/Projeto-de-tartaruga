@@ -19,6 +19,8 @@ public class MainMEnu : MonoBehaviour
     [Header("Area")]
     [SerializeField] private MusicArea MusicAreaToGoTo;
     [SerializeField] private MusicArea CinematicMusic;
+
+    public GameObject ContinuarApagado;
     private void Start()
     {
         TemUmSave();
@@ -35,10 +37,12 @@ public class MainMEnu : MonoBehaviour
         if (File.Exists(path))
         {
             continuarJogo.interactable = true;
+            ContinuarApagado.SetActive(false);
         }
         else
         {
             continuarJogo.interactable = false;
+            ContinuarApagado.SetActive(true);
         }
     }
 

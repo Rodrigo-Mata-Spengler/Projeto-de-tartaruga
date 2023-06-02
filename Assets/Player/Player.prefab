@@ -491,7 +491,7 @@ VisualEffect:
   m_InitialEventName: 
   m_InitialEventNameOverriden: 1
   m_StartSeed: 130
-  m_ResetSeedOnPlay: 0
+  m_ResetSeedOnPlay: 1
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -1351,14 +1351,14 @@ MonoBehaviour:
   AtaqueInput: 0
   haveWallJump: 0
   wallCheck: {fileID: 2021795256}
-  WallCheckDistance: 1.2
+  WallCheckDistance: 0.58
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 64
   IsTouchingWall: 0
   IsTouchingWall2: 0
   IsWallSliding: 0
-  WallSlideSpeed: 10
+  WallSlideSpeed: 9
   wallJumpForce: 10
   wallJumpDirection: {x: 1, y: 1.8}
   WallChecksDash:
@@ -1420,6 +1420,7 @@ MonoBehaviour:
   hasEstamina2: 0
   CurrentEstamina: 10
   AttackToGetEstamina: 2
+  manaInfinita: 0
   amountOfHitToGiveEstamina: 0
 --- !u!114 &1622245417
 MonoBehaviour:

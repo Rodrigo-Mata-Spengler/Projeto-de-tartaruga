@@ -67,7 +67,7 @@ public class Anciao : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        if (!conversationEnded)
+        if (Input.GetButtonDown("Interacao") && !conversationEnded)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -77,7 +77,7 @@ public class Anciao : MonoBehaviour
             Player.GetComponent<Animator>().enabled = false;
         }
         //if player wasn't in a conversation, close to the npc and press the button to interact. Will display the interaction UI obj and the start the coroutine
-        if ( havingConversation == false && !conversationEnded)
+        if (Input.GetButtonDown("Interacao") && havingConversation == false && !conversationEnded)
         {
             npcNameText.text = NpcName;
 

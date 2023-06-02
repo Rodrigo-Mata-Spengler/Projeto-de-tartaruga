@@ -84,6 +84,25 @@ public class Bruxa : MonoBehaviour
 
     private void NextLineAndStop()
     {
+
+
+        if (inputPressed && hadConversation == true)
+        {
+            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
+            Player.GetComponent<Animator>().enabled = false;
+            if (IsStore && OnStore == false)
+            {
+                conversationObj.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(null);
+                StoreBruxa.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(StoreBruxa.GetComponent<BruxaStore>().SelectedButton);
+
+                OnStore = true;
+                HUD.gameObject.SetActive(true);
+            }
+        }
+
         if (Input.GetButtonDown("Interacao") && !Sold && !firstConversation)
         {
             inputPressed = true;
@@ -138,7 +157,7 @@ public class Bruxa : MonoBehaviour
            
         }
         //if player press the interaction button and the paragraph was over, go to the next paragraph
-        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true)
+        if (Input.GetButtonDown("Interacao") && textLocation < NpcWords.Length && nextFrase == true && havingConversation)
         {
             StopAllCoroutines();
             StartTyping = false;
@@ -160,27 +179,12 @@ public class Bruxa : MonoBehaviour
             //enable HUD
             HUD.SetActive(true);
         }
-        else if (textLocation == NpcWords.Length)
+        if (textLocation == NpcWords.Length)
         {
             textLocation += 1;
             hadConversation = true;
         }
-        if (inputPressed && hadConversation && playerDetected)
-        {
-            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            Player.GetComponent<PlayerMovement>().enabled = false; //freeze the player
-            Player.GetComponent<Animator>().enabled = false;
-            if (IsStore && OnStore == false)
-            {
-                conversationObj.SetActive(false);
-                EventSystem.current.SetSelectedGameObject(null);
-                StoreBruxa.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(StoreBruxa.GetComponent<BruxaStore>().SelectedButton);
 
-                OnStore = true;
-                HUD.gameObject.SetActive(true);
-            }
-        }
         
             // if player press the esc disable the UI interaction obj
         if (Input.GetKey(KeyCode.Escape))

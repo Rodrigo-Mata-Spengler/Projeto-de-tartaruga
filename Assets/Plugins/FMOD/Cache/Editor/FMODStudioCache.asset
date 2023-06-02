@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Tocha.bank
   Name: Tocha
   StudioPath: bank:/Tocha
-  lastModified: 638212370501202304
+  lastModified: 638213113786362673
   FileSizes:
   - Name: Desktop
     Value: 663552
@@ -116,7 +116,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/Introdu\xE7\xE3o.bank"
   Name: "Introdu\xE7\xE3o"
   StudioPath: "bank:/Introdu\xE7\xE3o"
-  lastModified: 638212370500377827
+  lastModified: 638213113614900987
   FileSizes:
   - Name: Desktop
     Value: 1049536
@@ -190,7 +190,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638211408760220216
+  lastModified: 638213113615060131
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -807,7 +807,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638212370500387798
+  lastModified: 638213113615095761
   FileSizes:
   - Name: Desktop
     Value: 6604
@@ -982,7 +982,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Ambiente.bank
   Name: Ambiente
   StudioPath: bank:/Ambiente
-  lastModified: 638211522159085901
+  lastModified: 638213113581608003
   FileSizes:
   - Name: Desktop
     Value: 1567360
@@ -1663,7 +1663,7 @@ MonoBehaviour:
   - {fileID: -8203484357986439593}
   StringsBanks:
   - {fileID: -4994956805024338359}
-  cacheTime: 638212370501202304
+  cacheTime: 638213113786362673
   cacheVersion: 131603
 --- !u!114 &190900324589402369
 MonoBehaviour:
@@ -1997,7 +1997,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638212370501142453
+  lastModified: 638213113768304119
   FileSizes:
   - Name: Desktop
     Value: 142112
@@ -2482,7 +2482,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Save.bank
   Name: Save
   StudioPath: bank:/Save
-  lastModified: 638212370501152421
+  lastModified: 638213113770888385
   FileSizes:
   - Name: Desktop
     Value: 54848
@@ -2665,7 +2665,7 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Planta Carnviora.bank
   Name: Planta Carnviora
   StudioPath: bank:/Planta Carnviora
-  lastModified: 638211688407296545
+  lastModified: 638213113765349416
   FileSizes:
   - Name: Desktop
     Value: 68704
@@ -2739,7 +2739,7 @@ MonoBehaviour:
   Path: "FMOD GitHub/Build/Desktop/M\xFAsicas.bank"
   Name: "M\xFAsicas"
   StudioPath: "bank:/M\xFAsicas"
-  lastModified: 638212370501119585
+  lastModified: 638213113763686941
   FileSizes:
   - Name: Desktop
     Value: 12794272
@@ -3039,12 +3039,12 @@ MonoBehaviour:
   Banks:
   - {fileID: 8246316103331177489}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 495
 --- !u!114 &8246316103331177489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3060,10 +3060,10 @@ MonoBehaviour:
   Path: FMOD GitHub/Build/Desktop/Fazendeiro.bank
   Name: Fazendeiro
   StudioPath: bank:/Fazendeiro
-  lastModified: 638191418823344766
+  lastModified: 638213113582800118
   FileSizes:
   - Name: Desktop
-    Value: 21568
+    Value: 22208
   Exists: 1
 --- !u!114 &8356969049906910782
 MonoBehaviour:
