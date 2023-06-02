@@ -7986,6 +7986,8 @@ MonoBehaviour:
   voltarInventario: {fileID: 4562603515029672381}
   MapButtonInventario: {fileID: 1505023965584723110}
   Mana: {fileID: 1037111707}
+  MapaItem: {fileID: 5075039453881726941}
+  PocaoItem: {fileID: 4387682674506986963}
   OnConversation: 0
 --- !u!114 &3025227953641105168
 MonoBehaviour:
@@ -9063,7 +9065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1505023966012604932
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15979,7 +15981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7723156921670975010
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17644,7 +17646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2041835046107743160
 RectTransform:
   m_ObjectHideFlags: 0

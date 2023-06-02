@@ -52,6 +52,7 @@ public class ItensInventory : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().MapButtonInventario.SetActive(true);
             GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().hasMapa = true;
+            GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().MapaItem.SetActive(true);
 
             DoOnceMap = true;
         }

@@ -50,6 +50,9 @@ public class MenuPause : MonoBehaviour
     [Header("HUD")]
     [SerializeField] public GameObject Mana;
 
+    [Header("Inventory")]
+    public GameObject MapaItem;
+    public GameObject PocaoItem;
 
     [HideInInspector]public bool OnConversation = false;
 

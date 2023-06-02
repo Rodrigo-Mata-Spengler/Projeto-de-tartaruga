@@ -30,10 +30,12 @@ public class Estamina : MonoBehaviour
         if (hasEstamina)
         {
             HudControler.EnableMana(true);
+            GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().PocaoItem.SetActive(true);
         }
         if (hasEstamina2)
         {
             HudControler.EnableMana2(true);
+            GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().PocaoItem.SetActive(true);
         }
     }
     // Do damage
@@ -72,6 +74,7 @@ public class Estamina : MonoBehaviour
     public void EnableMana()
     {
         HudControler.EnableMana(true);
+        ameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().PocaoItem.SetActive(true);
         hasEstamina = true;
     }
 
