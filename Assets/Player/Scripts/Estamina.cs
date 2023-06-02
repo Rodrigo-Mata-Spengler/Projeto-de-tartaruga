@@ -74,7 +74,7 @@ public class Estamina : MonoBehaviour
     public void EnableMana()
     {
         HudControler.EnableMana(true);
-        ameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().PocaoItem.SetActive(true);
+        GameObject.FindGameObjectWithTag("Canvas").GetComponent<MenuPause>().PocaoItem.SetActive(true);
         hasEstamina = true;
     }
 
