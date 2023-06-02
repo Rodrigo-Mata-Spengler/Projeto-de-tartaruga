@@ -28,6 +28,7 @@ public class CinematicaPlaye : MonoBehaviour
         {
             MudarMusica();
             SceneManager.LoadScene(proximaScena);
+            GameObject.FindGameObjectWithTag("Audio").SetActive(true);
         }
     }
 

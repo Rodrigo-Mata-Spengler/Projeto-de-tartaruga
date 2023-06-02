@@ -55,6 +55,7 @@ public class Bruxa : MonoBehaviour
     private GameObject InputFeedBack;
 
     public bool hadConversation = false;
+    private bool firstConversation = false;
 
     private GameObject HUD;
     private void Start()
@@ -83,7 +84,7 @@ public class Bruxa : MonoBehaviour
 
     private void NextLineAndStop()
     {
-        if (Input.GetButtonDown("Interacao") && !Sold)
+        if (Input.GetButtonDown("Interacao") && !Sold && !firstConversation)
         {
             inputPressed = true;
             InputFeedBack.SetActive(false);
@@ -100,6 +101,7 @@ public class Bruxa : MonoBehaviour
             //CanvasMenuPause.panelOpen = true;// set true the variable that cheks if a panel is enabled
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
+            firstConversation = true;
 
             StartTyping = false;
             StopAllCoroutines();
