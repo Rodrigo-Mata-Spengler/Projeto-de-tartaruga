@@ -21,8 +21,14 @@ public class MainMEnu : MonoBehaviour
     [SerializeField] private MusicArea CinematicMusic;
     private void Start()
     {
-        TemUmSave();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player)
+        {
+            Destroy(player);
+        }
+
         path = Application.persistentDataPath + "/PlayerData.cpd";
+        TemUmSave();
     }
 
     private void Update()
@@ -44,7 +50,9 @@ public class MainMEnu : MonoBehaviour
 
     public void NovoSave()
     {
-        File.Delete(path);
+        SaveSystem.DeleteSaveData();
+        
+
         SceneManager.LoadScene(cenaInicio);
     }
 

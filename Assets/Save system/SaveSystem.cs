@@ -37,4 +37,18 @@ public class SaveSystem
             return null;
         }
     }
+
+    public static void DeleteSaveData()
+    {
+        string path = Application.persistentDataPath + "/PlayerData.cpd";
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        else
+        {
+            Debug.LogError("Save file not found in "+ path);
+        }
+    }
 }
